@@ -75,5 +75,5 @@ This project is licensed under the MIT License — see the [LICENSE](LICENSE) fi
 ## 🙋‍♂️ Author
 
 Made with ❤️ by **nexageapps.com**  
-GitHub: [nexageapps](https://github.com/nexageapps)
+GitHub: [nexageapps](https://github.com/nexageapps)  
 Linkedin Profile: https://www.linkedin.com/in/karthik-arjun-a5b4a258/

@@ -8,11 +8,11 @@ It starts with fundamental Python skills and gradually introduces simple machine
 
 ## 📖 Lessons Covered
 
-| 📒 Lesson | 📄 Notebook | 📋 Description |
+|📒Lesson | 📄 Notebook | 📋 Description |
 |-----------|-------------|----------------|
-| **Basic \| L1** | `Basic_L1_-_Arithmetic.ipynb` | Basic arithmetic operations in Python. |
-| **Basic \| L2** | `Basic_L2_-_Straight_line_Pattern_with_graph.ipynb` | Drawing a straight-line pattern and plotting it as a graph. |
-| **Basic \| L3** | `Basic_L3_-_Binary_Classification.ipynb` | Predicting if a student passes based on study hours (binary classification). |
+| **Basic - L1** | `Basic_L1_-_Arithmetic.ipynb` | Basic arithmetic operations in Python. |
+| **Basic - L2** | `Basic_L2_-_Straight_line_Pattern_with_graph.ipynb` | Drawing a straight-line pattern and plotting it as a graph. |
+| **Basic - L3** | `Basic_L3_-_Binary_Classification.ipynb` | Predicting if a student passes based on study hours (binary classification). |
 
 ---
 

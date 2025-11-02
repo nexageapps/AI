@@ -7,12 +7,12 @@ It starts with fundamental Python skills and gradually introduces simple machine
 
 ## 📖 Lessons Covered
 
-| 📒Lesson        | 📄 Notebook                                         | 📋 Description                                                               |
-| --------------- | --------------------------------------------------- | ---------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------ |
-| **Basic \| L1** | `Basic_L1_-_Arithmetic.ipynb`                       | Basic arithmetic operations in Python.                                       |
-| **Basic \| L2** | `Basic_L2_-_Straight_line_Pattern_with_graph.ipynb` | Drawing a straight-line pattern and plotting it as a graph.                  |
-| **Basic \| L3** | `Basic_L3_-_Binary_Classification.ipynb`            | Predicting if a student passes based on study hours (binary classification). |
-| **Basic \| L4** | `Basic                                              | L4 - Byte Pair Encoding [BPE].ipynb`                                         | Introduction to Byte Pair Encoding (BPE) - a tokenization algorithm used in NLP models like GPT. |
+| 📒Lesson        | 📄 Notebook                                         | 📋 Description                                                                                   |
+| --------------- | --------------------------------------------------- | ------------------------------------------------------------------------------------------------ |
+| **Basic \| L1** | `Basic_L1_-_Arithmetic.ipynb`                       | Basic arithmetic operations in Python.                                                           |
+| **Basic \| L2** | `Basic_L2_-_Straight_line_Pattern_with_graph.ipynb` | Drawing a straight-line pattern and plotting it as a graph.                                      |
+| **Basic \| L3** | `Basic_L3_-_Binary_Classification.ipynb`            | Predicting if a student passes based on study hours (binary classification).                     |
+| **Basic \| L4** | `Basic \| L4 - Byte Pair Encoding [BPE].ipynb`      | Introduction to Byte Pair Encoding (BPE) - a tokenization algorithm used in NLP models like GPT. |
 
 ---
 
@@ -77,5 +77,6 @@ This project is licensed under the MIT License — see the [LICENSE](LICENSE) fi
 ## 🙋‍♂️ Author
 
 Made with ❤️ by **nexageapps.com**  
+🎓 Master's Student in Artificial Intelligence at the **University of Auckland**  
 GitHub: [nexageapps](https://github.com/nexageapps)  
-Linkedin Profile: https://www.linkedin.com/in/karthik-arjun-a5b4a258/
+LinkedIn: [Karthik Arjun](https://www.linkedin.com/in/karthik-arjun-a5b4a258/)

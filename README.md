@@ -15,7 +15,7 @@ Repository language composition: Jupyter Notebook (100%)
 
 | Lesson | Notebook | Description |
 | ------ | -------- | ----------- |
-| Basic (L1) | [Basic_L1_-_Arithmetic.ipynb](Basic_L1_-_Arithmetic.ipynb) | Basic arithmetic operations and Python fundamentals. |
+| Basic (L1) | [Basic_L1_-_Arithmetic.ipynb](Basic | L1 - Arithmetic.ipynb) | Basic arithmetic operations and Python fundamentals. |
 | Basic (L2) | [Basic_L2_-_Straight_line_Pattern_with_graph.ipynb](Basic_L2_-_Straight_line_Pattern_with_graph.ipynb) | Draw patterns and plot a straight-line graph using Matplotlib. |
 | Basic (L3) | [Basic_L3_-_Binary_Classification.ipynb](Basic_L3_-_Binary_Classification.ipynb) | Binary classification example: predict pass/fail from study hours. |
 | Basic (L4) | [Basic L4 - Byte Pair Encoding [BPE].ipynb](Basic_L4_-_Byte_Pair_Encoding.ipynb) | Introduction to Byte Pair Encoding (BPE) tokenization used in NLP. |

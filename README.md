@@ -1,82 +1,76 @@
 # AI Learning — Beginner Python Notebooks (Google Colab)
 
-This repository documents my journey in learning **Python programming** and **basic AI concepts**, implemented in **Google Colab notebooks**.  
-It starts with fundamental Python skills and gradually introduces simple machine learning tasks.
+Welcome! This repository documents a hands-on learning path for Python and introductory AI concepts using Jupyter notebooks (Google Colab-ready). The notebooks progress from basic Python and arithmetic up through simple machine learning and an introduction to NLP tokenization.
+
+Repository language composition: Jupyter Notebook (100%)
 
 ---
 
-## 📖 Lessons Covered
+## What you’ll find here
 
-| 📒Lesson        | 📄 Notebook                                         | 📋 Description                                                                                   |
-| --------------- | --------------------------------------------------- | ------------------------------------------------------------------------------------------------ |
-| **Basic \| L1** | `Basic_L1_-_Arithmetic.ipynb`                       | Basic arithmetic operations in Python.                                                           |
-| **Basic \| L2** | `Basic_L2_-_Straight_line_Pattern_with_graph.ipynb` | Drawing a straight-line pattern and plotting it as a graph.                                      |
-| **Basic \| L3** | `Basic_L3_-_Binary_Classification.ipynb`            | Predicting if a student passes based on study hours (binary classification).                     |
-| **Basic \| L4** | `Basic \| L4 - Byte Pair Encoding [BPE].ipynb`      | Introduction to Byte Pair Encoding (BPE) - a tokenization algorithm used in NLP models like GPT. |
+- Colab-ready Jupyter notebooks with step-by-step explanations and runnable code cells.
+- Beginner-friendly examples covering: Python basics, simple plotting, a binary classification example, and an introduction to Byte Pair Encoding (BPE) tokenization.
 
----
+## Notebooks (Lessons)
 
-## 🚀 How to Use
-
-### Run on Google Colab
-
-You can open any notebook directly in Google Colab:
-
-1️⃣ Click the notebook file in the repository on GitHub.  
-2️⃣ Click the **"Open in Colab"** button (or right-click the file URL and open it in Colab).  
-3️⃣ Run the cells step by step.
-
-Alternatively:
-
-📌 Paste the notebook URL into Colab:  
-[https://colab.research.google.com/github/nexageapps/AI/blob/main/](https://colab.research.google.com/github/nexageapps/AI/blob/main/)
-
-and navigate to the file you want to open.
+| Lesson | Notebook | Description |
+| ------ | -------- | ----------- |
+| Basic (L1) | [Basic_L1_-_Arithmetic.ipynb](Basic_L1_-_Arithmetic.ipynb) | Basic arithmetic operations and Python fundamentals. |
+| Basic (L2) | [Basic_L2_-_Straight_line_Pattern_with_graph.ipynb](Basic_L2_-_Straight_line_Pattern_with_graph.ipynb) | Draw patterns and plot a straight-line graph using Matplotlib. |
+| Basic (L3) | [Basic_L3_-_Binary_Classification.ipynb](Basic_L3_-_Binary_Classification.ipynb) | Binary classification example: predict pass/fail from study hours. |
+| Basic (L4) | [Basic | L4 - Byte Pair Encoding [BPE].ipynb](Basic | L4 - Byte Pair Encoding [BPE].ipynb) | Introduction to Byte Pair Encoding (BPE) tokenization used in NLP. |
 
 ---
 
-## 🛠️ Requirements
+## Run these notebooks in Google Colab
 
-- Google account
+Open any notebook directly in Colab using this pattern:
+
+https://colab.research.google.com/github/nexageapps/AI/blob/main/<path-to-notebook.ipynb>
+
+Or click any notebook file in this repository and choose "Open in Colab" (if available). Colab runs in the cloud — no local install required.
+
+## Requirements
+
+- Google account (to save/run notebooks in Colab)
 - Internet connection
-- No local installation required!  
-  (Colab runs on the cloud, no need to install Python or Jupyter.)
 
----
-
-## 📈 Roadmap
+## Roadmap
 
 - [x] L1 — Arithmetic
 - [x] L2 — Straight-line graph
 - [x] L3 — Binary classification
 - [x] L4 — Byte Pair Encoding (BPE)
-- [ ] L5 — Data visualization
+- [ ] L5 — Data visualization (expanded)
 - [ ] L6 — Machine learning with real datasets
-- [ ] Advanced AI examples
+- [ ] Advanced AI examples (deep learning, transformers)
+
+If you have ideas or a lesson to contribute, open an issue or submit a pull request.
 
 ---
 
-## 🤝 Contributing
+## Contributing
 
-If you’d like to contribute:
+Contributions are welcome! Suggested workflow:
 
-1. Fork this repository
-2. Create a new branch (`git checkout -b feature-name`)
-3. Commit your changes (`git commit -m 'Add feature'`)
-4. Push to your branch (`git push origin feature-name`)
-5. Open a Pull Request
+1. Fork the repository
+2. Create a branch: git checkout -b feature/your-feature
+3. Add or edit notebooks and commit your changes
+4. Push your branch and open a pull request
+
+For small suggestions, you can also open issues to discuss changes before implementing them.
 
 ---
 
-## 📄 License
+## License
 
 This project is licensed under the MIT License — see the [LICENSE](LICENSE) file for details.
 
 ---
 
-## 🙋‍♂️ Author
+## Author
 
-Made with ❤️ by **nexageapps.com**  
-🎓 Master's Student in Artificial Intelligence at the **University of Auckland**  
-GitHub: [nexageapps](https://github.com/nexageapps)  
-LinkedIn: [Karthik Arjun](https://www.linkedin.com/in/karthik-arjun-a5b4a258/)
+Made with ❤️ by **nexageapps.com**
+
+- GitHub: [nexageapps](https://github.com/nexageapps)
+- LinkedIn: [Karthik Arjun](https://www.linkedin.com/in/karthik-arjun-a5b4a258/)

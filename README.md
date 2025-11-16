@@ -15,10 +15,11 @@ Repository language composition: Jupyter Notebook (100%)
 
 | Lesson | Notebook | Description |
 | ------ | -------- | ----------- |
-| Basic (L1) | [Basic_L1_-_Arithmetic.ipynb](Basic | L1 - Arithmetic.ipynb) | Basic arithmetic operations and Python fundamentals. |
-| Basic (L2) | [Basic_L2_-_Straight_line_Pattern_with_graph.ipynb](Basic_L2_-_Straight_line_Pattern_with_graph.ipynb) | Draw patterns and plot a straight-line graph using Matplotlib. |
-| Basic (L3) | [Basic_L3_-_Binary_Classification.ipynb](Basic_L3_-_Binary_Classification.ipynb) | Binary classification example: predict pass/fail from study hours. |
-| Basic (L4) | [Basic L4 - Byte Pair Encoding [BPE].ipynb](Basic_L4_-_Byte_Pair_Encoding.ipynb) | Introduction to Byte Pair Encoding (BPE) tokenization used in NLP. |
+| Basic (L1) | [Basic \| L1 - Arithmetic.ipynb](Basic%20%7C%20L1%20-%20Arithmetic.ipynb) | Basic arithmetic operations and Python fundamentals. |
+| Basic (L2) | [Basic \| L2 - Straight_line_Pattern_with_graph.ipynb](Basic%20%7C%20L2%20-%20Straight_line_Pattern_with_graph.ipynb) | Draw patterns and plot a straight-line graph using Matplotlib. |
+| Basic (L3) | [Basic \| L3 - Binary Classification.ipynb](Basic%20%7C%20L3%20-%20Binary%20Classification.ipynb) | Binary classification example: predict pass/fail from study hours. |
+| Basic (L4) | [Basic \| L4 - Byte Pair Encoding \[BPE\].ipynb](Basic%20%7C%20L4%20-%20Byte%20Pair%20Encoding%20%5BBPE%5D.ipynb) | Introduction to Byte Pair Encoding (BPE) tokenization used in NLP. |
+| Basic (L4A) | [Basic \| L4A - BPE with tiktoken.ipynb](Basic%20%7C%20L4A%20-%20BPE%20with%20tiktoken.ipynb) | Byte Pair Encoding using the tiktoken library. |
 
 ---
 

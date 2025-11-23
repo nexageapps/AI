@@ -1,77 +1,120 @@
-# AI Learning — Beginner Python Notebooks (Google Colab)
+# AI
 
-Welcome! This repository documents a hands-on learning path for Python and introductory AI concepts using Jupyter notebooks (Google Colab-ready). The notebooks progress from basic Python and arithmetic up through simple machine learning and an introduction to NLP tokenization.
+Artificial Intelligence - GenAI, ML, DL, and NLP
 
-Repository language composition: Jupyter Notebook (100%)
+## Table of Contents
 
----
+- [About](#about)
+- [Contents](#contents)
+- [Getting Started](#getting-started)
+  - [Requirements](#requirements)
+  - [Create a virtual environment](#create-a-virtual-environment)
+  - [Install dependencies](#install-dependencies)
+  - [Run notebooks](#run-notebooks)
+- [Usage](#usage)
+- [Structure](#structure)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contact](#contact)
 
-## What you’ll find here
+## About
 
-- Colab-ready Jupyter notebooks with step-by-step explanations and runnable code cells.
-- Beginner-friendly examples covering: Python basics, simple plotting, a binary classification example, and an introduction to Byte Pair Encoding (BPE) tokenization.
+This repository collects Jupyter notebooks and supporting materials related to Artificial Intelligence, including Generative AI, Machine Learning, Deep Learning, and Natural Language Processing. The notebooks are intended for exploration, learning, and reference.
 
-## Notebooks (Lessons)
+Language composition: Jupyter Notebook (100%).
 
-| Lesson | Notebook | Description |
-| ------ | -------- | ----------- |
-| Basic (L1) | [Basic \| L1 - Arithmetic.ipynb](Basic%20%7C%20L1%20-%20Arithmetic.ipynb) | Basic arithmetic operations and Python fundamentals. |
-| Basic (L2) | [Basic \| L2 - Straight_line_Pattern_with_graph.ipynb](Basic%20%7C%20L2%20-%20Straight_line_Pattern_with_graph.ipynb) | Draw patterns and plot a straight-line graph using Matplotlib. |
-| Basic (L3) | [Basic \| L3 - Binary Classification.ipynb](Basic%20%7C%20L3%20-%20Binary%20Classification.ipynb) | Binary classification example: predict pass/fail from study hours. |
-| Basic (L4) | [Basic \| L4 - Byte Pair Encoding \[BPE\].ipynb](Basic%20%7C%20L4%20-%20Byte%20Pair%20Encoding%20%5BBPE%5D.ipynb) | Introduction to Byte Pair Encoding (BPE) tokenization used in NLP. |
-| Basic (L4A) | [Basic \| L4A - BPE with tiktoken.ipynb](Basic%20%7C%20L4A%20-%20BPE%20with%20tiktoken.ipynb) | Byte Pair Encoding using the tiktoken library. |
+## Contents
 
----
+- Notebooks demonstrating experiments, models, and examples in GenAI, ML, DL, and NLP.
+- Supporting datasets and utility code (where applicable).
 
-## Run these notebooks in Google Colab
+## Getting Started
 
-Open any notebook directly in Colab using this pattern:
+These instructions will get you a copy of the project up and running on your local machine for development and learning purposes.
 
-https://colab.research.google.com/github/nexageapps/AI/blob/main/<path-to-notebook.ipynb>
+### Requirements
 
-Or click any notebook file in this repository and choose "Open in Colab" (if available). Colab runs in the cloud — no local install required.
+- Python 3.8+ (recommended)
+- Jupyter / JupyterLab
+- pip or conda
 
-## Requirements
+### Create a virtual environment
 
-- Google account (to save/run notebooks in Colab)
-- Internet connection
+Using venv:
 
-## Roadmap
+python -m venv .venv
+source .venv/bin/activate   # macOS / Linux
+.venv\Scripts\activate     # Windows
 
-- [x] L1 — Arithmetic
-- [x] L2 — Straight-line graph
-- [x] L3 — Binary classification
-- [x] L4 — Byte Pair Encoding (BPE)
-- [ ] L5 — Data visualization (expanded)
-- [ ] L6 — Machine learning with real datasets
-- [ ] Advanced AI examples (deep learning, transformers)
+Or using conda:
 
-If you have ideas or a lesson to contribute, open an issue or submit a pull request.
+conda create -n ai-notebooks python=3.10
+conda activate ai-notebooks
 
----
+### Install dependencies
+
+Dependencies vary per notebook. A common pattern is:
+
+pip install -r requirements.txt
+
+If a requirements.txt is not present, install commonly used packages:
+
+pip install jupyterlab numpy pandas scikit-learn matplotlib seaborn torch tensorflow transformers
+
+### Run notebooks
+
+Start JupyterLab or Jupyter Notebook in the repository root:
+
+jupyter lab
+# or
+jupyter notebook
+
+Open the notebook you want to run and follow the instructions in the notebook cells. Some notebooks expect datasets to be available in a data/ directory or require API keys / large model weights; check the top of each notebook for specific setup details.
+
+## Usage
+
+- Use these notebooks to learn concepts, reproduce experiments, or prototype models.
+- Prefer running notebooks in a virtual environment and pinning package versions when sharing results.
+- Consider converting heavy training notebooks to run on GPU resources or cloud notebooks if required.
+
+## Structure
+
+This repository primarily contains Jupyter notebooks (.ipynb). Organize notebooks by topic (for example, `genai/`, `ml/`, `dl/`, `nlp/`) when adding new content to keep the repo discoverable.
+
+Suggested layout:
+
+- notebooks/
+  - genai/
+  - ml/
+  - dl/
+  - nlp/
+- data/ (for small example datasets)
+- scripts/ (helper scripts)
+- requirements.txt
 
 ## Contributing
 
-Contributions are welcome! Suggested workflow:
+Contributions are welcome. To contribute:
 
-1. Fork the repository
-2. Create a branch: git checkout -b feature/your-feature
-3. Add or edit notebooks and commit your changes
-4. Push your branch and open a pull request
+1. Fork the repository.
+2. Create a branch for your change: `git checkout -b feature/my-notebook`.
+3. Add or update notebooks and supporting files.
+4. Keep notebooks clean: clear unnecessary large outputs and use relative paths for data.
+5. Add or update tests / README notes when applicable.
+6. Open a pull request describing your changes.
 
-For small suggestions, you can also open issues to discuss changes before implementing them.
-
----
+Please follow common open-source etiquette: provide clear commit messages, a concise PR description, and any reproduction steps.
 
 ## License
 
-This project is licensed under the MIT License — see the [LICENSE](LICENSE) file for details.
+If you have a preferred license, add a LICENSE file to the repository. If none is present, consider using a permissive license such as MIT.
+
+## Contact
+
+For questions or collaboration, open an issue or reach out to the repository owner.
+
 
 ---
 
-## Author
-
-Made with ❤️ by **nexageapps.com**
-
-- GitHub: [nexageapps](https://github.com/nexageapps)
-- LinkedIn: [Karthik Arjun](https://www.linkedin.com/in/karthik-arjun-a5b4a258/)
+Notes:
+- This README is a general starting point. If you want specific badges, environment files (requirements.txt, environment.yml), CI, or example notebooks added to the README, tell me which ones and I will update the file accordingly.

@@ -234,13 +234,15 @@ Week 7-8:   B14 (Assignments 7-10) → B15 (NLP projects)
 
 ```mermaid
 graph LR
-    A[B01-B03<br/>Foundation] --> B[B04-B05<br/>Neural Nets]
-    B --> C[B06-B07<br/>Data & Eval]
-    C --> D[B09 CNNs<br/>⭐ Deep Dive]
-    D --> E[B11 Vision<br/>Transformers]
-    E --> F[B14-B15<br/>CV Projects]
+    A["B01-B03<br/>Foundation"] --> B["B04-B05<br/>Neural Nets"]
+    B --> C["B06-B07<br/>Data & Eval"]
+    C --> D["⭐ B09<br/>CNNs<br/>Deep Dive"]
+    D --> E["B11<br/>Vision<br/>Transformers"]
+    E --> F["B14-B15<br/>CV Projects"]
     
-    style D fill:#98FB98
+    style D fill:#98FB98,stroke:#228b22,stroke-width:3px,color:#000
+    style A fill:#e8f5e9,stroke:#4caf50,stroke-width:2px,color:#000
+    style F fill:#fff9c4,stroke:#fbc02d,stroke-width:2px,color:#000
 ```
 
 ```
@@ -264,14 +266,15 @@ Week 7-8:   B14 (Assignment 6) → B15 (CV projects)
 
 ```mermaid
 graph LR
-    A[B01-B05<br/>Quick Review] -.->|Skim| B[B09 CNNs]
-    B --> C[B10 RNNs]
-    C --> D[B11 Transformers]
-    D --> E[B12 BPE]
-    E --> F[B13 Mini LLM]
-    F --> G[B14-B15<br/>Projects]
+    A["B01-B05<br/>Quick Review"] -.->|"Skim"| B["B09<br/>CNNs"]
+    B --> C["B10<br/>RNNs"]
+    C --> D["B11<br/>Transformers"]
+    D --> E["B12<br/>BPE"]
+    E --> F["B13<br/>Mini LLM"]
+    F --> G["B14-B15<br/>Projects"]
     
-    style A fill:#D3D3D3
+    style A fill:#f5f5f5,stroke:#9e9e9e,stroke-width:2px,color:#000,stroke-dasharray: 5 5
+    style G fill:#fff9c4,stroke:#fbc02d,stroke-width:2px,color:#000
 ```
 
 ```

@@ -145,35 +145,51 @@ graph TB
 
 ### Learning Path Explanation
 
+**How to Navigate:**
+
+The diagram flows from top to bottom, organized into clear stages. Each stage builds upon the previous one, ensuring you have the necessary foundation before advancing.
+
+**Stage Breakdown:**
+
+**1. Foundation (B1-B3)** - Start Here
+- Master the absolute basics: tensors, linear models, and binary classification
+- Duration: ~2-3 hours
+- Prerequisites: Basic Python knowledge
+
+**2. Core Machine Learning (B4-B7)** - Essential Skills
+- Build strong ML fundamentals with multi-class problems, neural networks, data preprocessing, and evaluation
+- Duration: ~6-8 hours
+- Prerequisites: Complete Foundation stage
+
+**3. Deep Learning (B9-B11)** - Advanced Neural Networks
+- Dive into CNNs for images, RNNs for sequences, and Transformers for modern AI
+- Note: B9 and B10 can be learned in parallel, both converge at B11
+- Duration: ~8-10 hours
+- Prerequisites: Complete Core ML stage
+
+**4. NLP Specialization (B12-B13)** - Build Language Models
+- Learn tokenization techniques and build your own GPT-style language model
+- Duration: ~4-6 hours
+- Prerequisites: Complete Deep Learning stage
+
+**5. Intermediate Level** - Advanced Techniques (Coming Soon)
+- Transfer learning, advanced optimization, complex architectures, hyperparameter tuning
+- Prerequisites: Complete all Basic level lessons
+
+**6. Advanced Level** - Production Systems (Coming Soon)
+- Fine-tune LLMs, build RAG systems, multi-modal AI, MLOps deployment
+- Prerequisites: Complete Intermediate level
+
+**7. Expert Level** - Research & Innovation (Coming Soon)
+- Implement research papers, design novel architectures, contribute to open-source
+- Prerequisites: Complete Advanced level
+
 **Color Guide:**
-- Blue: Your entry point into AI
-- Peach: Basic Level - Foundation concepts (B1-B13)
-- Light Blue: Intermediate Level - Advanced techniques
-- Purple: Advanced Level - Production systems
-- Gold: Expert Level - Research and innovation
-
-**Progression Path:**
-
-1. **Basic Level (Start Here)** - Complete all lessons sequentially
-   - **Foundation** (B1-B3): Tensors, linear models, binary classification
-   - **Core ML** (B4-B7): Multi-class classification, neural networks, data preprocessing, model evaluation
-   - **Deep Learning** (B9-B11): CNNs for images, RNNs for sequences, Transformers with attention
-   - **NLP Specialization** (B12-B13): Tokenization (BPE), building mini language model
-
-2. **Intermediate Level** - Build on fundamentals
-   - Transfer learning and fine-tuning techniques
-   - Advanced optimization and regularization
-   - Complex architectures and hyperparameter tuning
-
-3. **Advanced Level** - Production-ready systems
-   - Fine-tuning large language models
-   - RAG systems and multi-modal AI
-   - MLOps, deployment, and monitoring
-
-4. **Expert Level** - Contribute to the field
-   - Research paper implementation
-   - Novel architecture design
-   - Open-source contributions
+- 🔵 Blue: Your starting point
+- 🟡 Peach: Basic Level - Foundation concepts (B1-B13)
+- 🔵 Light Blue: Intermediate Level - Advanced techniques
+- 🟣 Purple: Advanced Level - Production systems
+- 🟡 Gold: Expert Level - Research and innovation
 
 ## Repository Structure
 
@@ -181,7 +197,7 @@ This repository is organized into four progressive levels:
 
 ```
 AI/
-├── Basic/           # Foundation lessons (L1-L12)
+├── Basic/           # Foundation lessons (B1-B13) ✅ Available Now
 ├── Intermediate/    # Advanced topics (Coming Soon)
 ├── Advanced/        # Production-ready systems (Coming Soon)
 ├── Expert/          # Research-oriented topics (Coming Soon)
@@ -394,7 +410,7 @@ Contributions are welcome! To contribute:
 1. Fork the repository
 2. Create a feature branch: `git checkout -b feature/new-tutorial`
 3. Add your notebook to the appropriate level folder (Basic, Intermediate, Advanced, or Expert)
-4. Follow the naming convention: `LX - Topic.ipynb`
+4. Follow the naming convention: `BX - Topic.ipynb` (for Basic level)
 5. Include:
    - Author information and LinkedIn profile
    - Clear comments and explanations

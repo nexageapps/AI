@@ -60,29 +60,29 @@ This is not just another AI tutorial collection - it's a **carefully designed cu
 graph TB
     Start([START YOUR AI JOURNEY]):::startNode
     
-    subgraph Foundation["FOUNDATION (B1-B3)"]
-        B1["B1: Arithmetic Operations<br/>Master tensor operations & TensorFlow basics"]:::basic
-        B2["B2: Linear Regression<br/>Learn gradient descent & loss functions"]:::basic
-        B3["B3: Binary Classification<br/>Understand decision boundaries & sigmoid"]:::basic
+    subgraph Foundation["FOUNDATION (B01-B03)"]
+        B01["B01: Arithmetic Operations<br/>Master tensor operations & TensorFlow basics"]:::basic
+        B02["B02: Linear Regression<br/>Learn gradient descent & loss functions"]:::basic
+        B03["B03: Binary Classification<br/>Understand decision boundaries & sigmoid"]:::basic
         
-        B1 --> B2 --> B3
+        B01 --> B02 --> B03
     end
     
-    subgraph CoreML["CORE MACHINE LEARNING (B4-B7)"]
-        B4["B4: Multi-Class Classification<br/>Softmax & categorical cross-entropy"]:::basic
-        B5["B5: Neural Network Fundamentals<br/>MLPs, activation functions, backpropagation"]:::basic
-        B6["B6: Data Preprocessing<br/>Feature engineering, scaling, encoding"]:::basic
-        B7["B7: Model Evaluation<br/>Metrics, cross-validation, imbalanced data"]:::basic
+    subgraph CoreML["CORE MACHINE LEARNING (B04-B07)"]
+        B04["B04: Multi-Class Classification<br/>Softmax & categorical cross-entropy"]:::basic
+        B05["B05: Neural Network Fundamentals<br/>MLPs, activation functions, backpropagation"]:::basic
+        B06["B06: Data Preprocessing<br/>Feature engineering, scaling, encoding"]:::basic
+        B07["B07: Model Evaluation<br/>Metrics, cross-validation, imbalanced data"]:::basic
         
-        B4 --> B5 --> B6 --> B7
+        B04 --> B05 --> B06 --> B07
     end
     
-    subgraph DeepLearning["DEEP LEARNING (B9-B11)"]
-        B9["B9: Convolutional Neural Networks<br/>CNNs for computer vision & image processing"]:::basic
+    subgraph DeepLearning["DEEP LEARNING (B09-B11)"]
+        B09["B09: Convolutional Neural Networks<br/>CNNs for computer vision & image processing"]:::basic
         B10["B10: Recurrent Neural Networks<br/>RNNs, LSTMs, GRUs for sequential data"]:::basic
         B11["B11: Attention & Transformers<br/>Self-attention mechanism & modern NLP"]:::basic
         
-        B9 --> B11
+        B09 --> B11
         B10 --> B11
     end
     
@@ -124,10 +124,10 @@ graph TB
         E2 --> E3
     end
     
-    Start --> B1
-    B3 --> B4
-    B7 --> B9
-    B7 --> B10
+    Start --> B01
+    B03 --> B04
+    B07 --> B09
+    B07 --> B10
     B11 --> B12
     B13 --> I1
     B13 --> I2
@@ -208,14 +208,14 @@ AI/
 
 Foundation lessons covering fundamental AI/ML concepts. [View all Basic lessons →](./Basic/)
 
-1. **B1 - Arithmetic** - TensorFlow basics and tensor operations
-2. **B2 - Linear Regression** - Linear regression fundamentals
-3. **B3 - Binary Classification** - Two-class classification problems
-4. **B4 - Multi-Class Classification** - Multiple category classification
-5. **B5 - Neural Network Fundamentals** - Deep dive into NN architecture
-6. **B6 - Data Preprocessing and Feature Engineering** - Data preparation techniques
-7. **B7 - Model Evaluation and Performance Metrics** - Measuring model performance
-8. **B9 - Convolutional Neural Networks** - CNNs for image processing
+1. **B01 - Arithmetic** - TensorFlow basics and tensor operations
+2. **B02 - Linear Regression** - Linear regression fundamentals
+3. **B03 - Binary Classification** - Two-class classification problems
+4. **B04 - Multi-Class Classification** - Multiple category classification
+5. **B05 - Neural Network Fundamentals** - Deep dive into NN architecture
+6. **B06 - Data Preprocessing and Feature Engineering** - Data preparation techniques
+7. **B07 - Model Evaluation and Performance Metrics** - Measuring model performance
+8. **B09 - Convolutional Neural Networks** - CNNs for image processing
 9. **B10 - Recurrent Neural Networks** - RNNs for sequential data
 10. **B11 - Attention and Transformers** - Modern attention mechanisms
 11. **B12 - Byte Pair Encoding (BPE)** - Tokenization for NLP
@@ -330,7 +330,7 @@ Each notebook includes:
 
 1. Clone the repository
 2. Navigate to the `Basic/` folder
-3. Open `B1 - Arithmetic.ipynb` in Jupyter or Google Colab
+3. Open `B01 - Arithmetic.ipynb` in Jupyter or Google Colab
 4. Follow the lessons sequentially
 
 ## Structure
@@ -338,14 +338,14 @@ Each notebook includes:
 ```
 AI/
 ├── Basic/
-│   ├── B1 - Arithmetic.ipynb
-│   ├── B2 - Linear Regression.ipynb
-│   ├── B3 - Binary Classification.ipynb
-│   ├── B4 - Multi-Class Classification.ipynb
-│   ├── B5 - Neural Network Fundamentals.ipynb
-│   ├── B6 - Data Preprocessing and Feature Engineering.ipynb
-│   ├── B7 - Model Evaluation and Performance Metrics.ipynb
-│   ├── B9 - Convolutional Neural Networks.ipynb
+│   ├── B01 - Arithmetic.ipynb
+│   ├── B02 - Linear Regression.ipynb
+│   ├── B03 - Binary Classification.ipynb
+│   ├── B04 - Multi-Class Classification.ipynb
+│   ├── B05 - Neural Network Fundamentals.ipynb
+│   ├── B06 - Data Preprocessing and Feature Engineering.ipynb
+│   ├── B07 - Model Evaluation and Performance Metrics.ipynb
+│   ├── B09 - Convolutional Neural Networks.ipynb
 │   ├── B10 - Recurrent Neural Networks.ipynb
 │   ├── B11 - Attention and Transformers.ipynb
 │   ├── B12 - Byte Pair Encoding (BPE).ipynb

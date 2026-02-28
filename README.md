@@ -24,7 +24,7 @@ Hi! I'm a **Master of Artificial Intelligence (MAI)** student at the **Universit
 
 ### For University of Auckland MAI Students
 
-**This repository will significantly help you succeed in your MAI program at UoA!**
+**This repository will significantly help you succeed in your MAI program at the University of Auckland!**
 
 Every lesson is carefully aligned with your coursework to provide:
 - **Practical implementations** of concepts taught in lectures
@@ -33,21 +33,21 @@ Every lesson is carefully aligned with your coursework to provide:
 - **Portfolio projects** to showcase your skills to employers
 
 Check out the comprehensive **[MAI Student Guide](./MAI_STUDENT_GUIDE.md)** for:
-- Direct mapping to UoA courses (COMPSCI 713, 714, 761, 762, 703, COMPSYS 721)
+- Direct mapping to University of Auckland courses (COMPSCI 713, 714, 761, 762, 703, COMPSYS 721)
 - Week-by-week study strategies for each semester
 - Assignment preparation tips and templates
 - Research project ideas aligned with your dissertation
 - Exam preparation strategies
 - Success stories from fellow MAI students
 
-**How this helps MAI students:**
+**How this helps University of Auckland MAI students:**
 - **Before lectures**: Build intuition with practical examples
 - **During semester**: Reinforce concepts with hands-on coding
 - **For assignments**: Reference implementations and patterns
 - **For exams**: Review and practice all concepts
 - **For dissertation**: Capstone projects as starting points
 
-**Not a UoA student?** The content is still valuable for any AI/ML learner at any university or self-study program!
+**Not a University of Auckland student?** The content is still valuable for any AI/ML learner at any university or self-study program!
 
 ## Mission
 
@@ -265,8 +265,7 @@ AI/
 ├── Intermediate/       # [COMING SOON]
 ├── Advanced/           # [COMING SOON]
 ├── Expert/             # [COMING SOON]
-├── MAI_STUDENT_GUIDE.md # Guide for UoA MAI Students
-└── archive/            # Historical documentation
+└── MAI_STUDENT_GUIDE.md # Guide for UoA MAI Students
 ```
 
 ### Basic Level (Available Now - 15 Lessons)
@@ -504,12 +503,6 @@ This repository is **specifically designed to help MAI students at the Universit
 | COMPSCI 703 | B11-B13, B15 | Generalising AI |
 | COMPSYS 721 | B09-B13 | Deep Learning |
 
-**Success Stories from MAI Students:**
-
-> "This repo helped me ace COMPSCI 762. I used the notebooks to prepare for lectures and completed all B14 assignments. When exam time came, I had already implemented everything from scratch multiple times." - MAI Student, 2025
-
-> "My capstone project from B15 got published! I started with the Multi-Modal AI project, extended it for my dissertation, and we submitted to a conference." - MAI Graduate, 2025
-
 **Study Schedule Recommendation for MAI Students:**
 - **Before Semester 1**: Complete B01-B07 (build strong foundations)
 - **During Semester 1**: B09-B13 + Course assignments (complement lectures)
@@ -552,8 +545,7 @@ AI/
 │   └── README.md (Coming Soon)
 ├── Expert/
 │   └── README.md (Coming Soon)
-├── archive/
-│   └── PROGRESS_SUMMARY.md
+├── MAI_STUDENT_GUIDE.md
 └── README.md
 ```
 

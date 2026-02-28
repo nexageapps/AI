@@ -2,6 +2,10 @@
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/)
 [![Hugging Face](https://img.shields.io/badge/🤗%20Hugging%20Face-nexageapps-yellow)](https://huggingface.co/spaces/nexageapps)
+[![Sponsored by nexageapps](https://img.shields.io/badge/Sponsored%20by-nexageapps-blue?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNMTIgMkw0IDdWMTdMMTIgMjJMMjAgMTdWN0wxMiAyWiIgZmlsbD0id2hpdGUiLz48L3N2Zz4=)](https://nexageapps.com)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](http://makeapullrequest.com)
+[![GitHub Stars](https://img.shields.io/github/stars/nexageapps/AI?style=social)](https://github.com/nexageapps/AI)
 
 **Complete foundation in Artificial Intelligence and Machine Learning through 15 hands-on lessons**
 
@@ -321,22 +325,29 @@ graph TD
 
 ```mermaid
 graph TD
-    A[Raw Data] --> B[B06: Data Preprocessing<br/>Clean, Scale, Encode]
-    B --> C[B06: Feature Engineering<br/>Select, Transform]
-    C --> D[Split Data<br/>Train/Val/Test]
-    D --> E[B02-B05: Choose Model<br/>Linear/NN/CNN/RNN]
-    E --> F[B02: Train Model<br/>Gradient Descent]
-    F --> G[B07: Evaluate<br/>Metrics & Validation]
-    G --> H{Good Performance?}
-    H -->|No| I[Tune Hyperparameters]
+    A["Raw Data"] --> B["B06: Data Preprocessing<br/>Clean, Scale, Encode"]
+    B --> C["B06: Feature Engineering<br/>Select, Transform"]
+    C --> D["Split Data<br/>Train/Val/Test"]
+    D --> E["B02-B05: Choose Model<br/>Linear/NN/CNN/RNN"]
+    E --> F["B02: Train Model<br/>Gradient Descent"]
+    F --> G["B07: Evaluate<br/>Metrics & Validation"]
+    G --> H{"Good Performance?"}
+    H -->|"No"| I["Tune Hyperparameters"]
     I --> F
-    H -->|Yes| J[B15: Deploy Model]
-    J --> K[Monitor & Update]
+    H -->|"Yes"| J["B15: Deploy Model"]
+    J --> K["Monitor & Update"]
     
-    style B fill:#87CEEB
-    style C fill:#87CEEB
-    style G fill:#FFD700
-    style J fill:#90EE90
+    style A fill:#fafafa,stroke:#757575,stroke-width:2px,color:#000
+    style B fill:#e1f5fe,stroke:#0277bd,stroke-width:2px,color:#000
+    style C fill:#e1f5fe,stroke:#0277bd,stroke-width:2px,color:#000
+    style D fill:#f3e5f5,stroke:#7b1fa2,stroke-width:2px,color:#000
+    style E fill:#fff3e0,stroke:#e65100,stroke-width:2px,color:#000
+    style F fill:#ffebee,stroke:#c62828,stroke-width:2px,color:#000
+    style G fill:#fff9c4,stroke:#f57f17,stroke-width:3px,color:#000
+    style H fill:#e3f2fd,stroke:#1976d2,stroke-width:2px,color:#000
+    style I fill:#fce4ec,stroke:#c2185b,stroke-width:2px,color:#000
+    style J fill:#e8f5e9,stroke:#2e7d32,stroke-width:3px,color:#000
+    style K fill:#e0f2f1,stroke:#00695c,stroke-width:2px,color:#000
 ```
 
 ---

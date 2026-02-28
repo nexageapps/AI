@@ -58,9 +58,9 @@ This is not just another AI tutorial collection - it's a **carefully designed cu
 
 ```mermaid
 graph TB
-    Start([🚀 START YOUR AI JOURNEY]):::startNode
+    Start([START YOUR AI JOURNEY]):::startNode
     
-    subgraph Foundation["📚 FOUNDATION (B1-B3)"]
+    subgraph Foundation["FOUNDATION (B1-B3)"]
         B1["B1: Arithmetic Operations<br/>Master tensor operations & TensorFlow basics"]:::basic
         B2["B2: Linear Regression<br/>Learn gradient descent & loss functions"]:::basic
         B3["B3: Binary Classification<br/>Understand decision boundaries & sigmoid"]:::basic
@@ -68,7 +68,7 @@ graph TB
         B1 --> B2 --> B3
     end
     
-    subgraph CoreML["🎯 CORE MACHINE LEARNING (B4-B7)"]
+    subgraph CoreML["CORE MACHINE LEARNING (B4-B7)"]
         B4["B4: Multi-Class Classification<br/>Softmax & categorical cross-entropy"]:::basic
         B5["B5: Neural Network Fundamentals<br/>MLPs, activation functions, backpropagation"]:::basic
         B6["B6: Data Preprocessing<br/>Feature engineering, scaling, encoding"]:::basic
@@ -77,7 +77,7 @@ graph TB
         B4 --> B5 --> B6 --> B7
     end
     
-    subgraph DeepLearning["🧠 DEEP LEARNING (B9-B11)"]
+    subgraph DeepLearning["DEEP LEARNING (B9-B11)"]
         B9["B9: Convolutional Neural Networks<br/>CNNs for computer vision & image processing"]:::basic
         B10["B10: Recurrent Neural Networks<br/>RNNs, LSTMs, GRUs for sequential data"]:::basic
         B11["B11: Attention & Transformers<br/>Self-attention mechanism & modern NLP"]:::basic
@@ -86,14 +86,14 @@ graph TB
         B10 --> B11
     end
     
-    subgraph NLP["💬 NLP SPECIALIZATION (B12-B13)"]
+    subgraph NLP["NLP SPECIALIZATION (B12-B13)"]
         B12["B12: Byte Pair Encoding<br/>Tokenization techniques for language models"]:::basic
         B13["B13: Build Mini Language Model<br/>Create your own GPT-style model from scratch"]:::basic
         
         B12 --> B13
     end
     
-    subgraph Intermediate["🔧 INTERMEDIATE LEVEL"]
+    subgraph Intermediate["INTERMEDIATE LEVEL"]
         I1["Transfer Learning<br/>& Fine-tuning"]:::intermediate
         I2["Advanced Optimization<br/>& Regularization"]:::intermediate
         I3["Advanced Architectures<br/>ResNet, BERT, etc."]:::intermediate
@@ -104,7 +104,7 @@ graph TB
         I3 --> I4
     end
     
-    subgraph Advanced["🚀 ADVANCED LEVEL"]
+    subgraph Advanced["ADVANCED LEVEL"]
         A1["Fine-tuning LLMs<br/>GPT, LLaMA, etc."]:::advanced
         A2["RAG Systems<br/>Retrieval-Augmented Generation"]:::advanced
         A3["Multi-Modal AI<br/>Vision + Language Models"]:::advanced
@@ -115,7 +115,7 @@ graph TB
         A3 --> A4
     end
     
-    subgraph Expert["⭐ EXPERT LEVEL"]
+    subgraph Expert["EXPERT LEVEL"]
         E1["Research Papers<br/>Implementation"]:::expert
         E2["Novel Architectures<br/>Design & Experimentation"]:::expert
         E3["Open Source<br/>Contribution"]:::expert
@@ -185,11 +185,11 @@ The diagram flows from top to bottom, organized into clear stages. Each stage bu
 - Prerequisites: Complete Advanced level
 
 **Color Guide:**
-- 🔵 Blue: Your starting point
-- 🟡 Peach: Basic Level - Foundation concepts (B1-B13)
-- 🔵 Light Blue: Intermediate Level - Advanced techniques
-- 🟣 Purple: Advanced Level - Production systems
-- 🟡 Gold: Expert Level - Research and innovation
+- Blue: Your starting point
+- Peach: Basic Level - Foundation concepts (B1-B13)
+- Light Blue: Intermediate Level - Advanced techniques
+- Purple: Advanced Level - Production systems
+- Gold: Expert Level - Research and innovation
 
 ## Repository Structure
 

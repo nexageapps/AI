@@ -1,5 +1,8 @@
 # Basic Level - Foundation in AI/ML
 
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/)
+[![Hugging Face](https://img.shields.io/badge/🤗%20Hugging%20Face-nexageapps-yellow)](https://huggingface.co/spaces/nexageapps)
+
 **Complete foundation in Artificial Intelligence and Machine Learning through 15 hands-on lessons**
 
 This folder contains all fundamental concepts you need to master before advancing to intermediate topics. Each lesson builds progressively on previous concepts with clear explanations, visualizations, and practical implementations.

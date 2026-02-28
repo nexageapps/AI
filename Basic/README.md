@@ -141,7 +141,7 @@ Choose the path that matches your goals:
 
 ```mermaid
 graph TD
-    A["🌱 Start<br/>B01 Arithmetic"] --> B["B02<br/>Linear Regression"]
+    A["Start<br/>B01 Arithmetic"] --> B["B02<br/>Linear Regression"]
     B --> C["B03<br/>Binary Classification"]
     C --> D{"Choose Your Path"}
     D -->|"Complete Path"| E["B04 Multi-Class"]
@@ -163,7 +163,7 @@ graph TD
     O --> P["B12<br/>BPE Tokenization"]
     P --> Q["B13<br/>Mini Language Model"]
     Q --> R["B14<br/>Assignments"]
-    R --> S["🎯 B15<br/>Capstone Projects"]
+    R --> S["B15<br/>Capstone Projects"]
     
     style A fill:#90EE90,stroke:#2d5016,stroke-width:3px,color:#000
     style S fill:#FFD700,stroke:#b8860b,stroke-width:3px,color:#000
@@ -205,8 +205,8 @@ graph LR
     A["B01-B03<br/>Foundation"] --> B["B04-B05<br/>Neural Nets"]
     B --> C["B06-B07<br/>Data & Eval"]
     C --> D["B10<br/>RNNs"]
-    D --> E["⭐ B11<br/>Transformers<br/>Deep Dive"]
-    E --> F["⭐ B12<br/>BPE<br/>Deep Dive"]
+    D --> E["B11<br/>Transformers<br/>Deep Dive"]
+    E --> F["B12<br/>BPE<br/>Deep Dive"]
     F --> G["B13<br/>Mini LLM"]
     G --> H["B14-B15<br/>NLP Projects"]
     
@@ -239,7 +239,7 @@ Week 7-8:   B14 (Assignments 7-10) → B15 (NLP projects)
 graph LR
     A["B01-B03<br/>Foundation"] --> B["B04-B05<br/>Neural Nets"]
     B --> C["B06-B07<br/>Data & Eval"]
-    C --> D["⭐ B09<br/>CNNs<br/>Deep Dive"]
+    C --> D["B09<br/>CNNs<br/>Deep Dive"]
     D --> E["B11<br/>Vision<br/>Transformers"]
     E --> F["B14-B15<br/>CV Projects"]
     
@@ -298,20 +298,21 @@ Week 4:     B14 → B15 (Projects)
 
 ```mermaid
 graph TD
-    A[B02: Linear Regression<br/>Single Layer] --> B[B05: Multi-Layer Perceptron<br/>Fully Connected]
-    B --> C{Data Type?}
-    C -->|Images| D[B09: CNN<br/>Convolutional Layers]
-    C -->|Sequences| E[B10: RNN/LSTM<br/>Recurrent Connections]
-    D --> F[B11: Transformers<br/>Attention Mechanism]
+    A["B02: Linear Regression<br/>Single Layer"] --> B["B05: Multi-Layer Perceptron<br/>Fully Connected"]
+    B --> C{"Data Type?"}
+    C -->|"Images"| D["B09: CNN<br/>Convolutional Layers"]
+    C -->|"Sequences"| E["B10: RNN/LSTM<br/>Recurrent Connections"]
+    D --> F["B11: Transformers<br/>Attention Mechanism"]
     E --> F
-    F --> G[B13: Mini GPT<br/>Decoder-Only Transformer]
+    F --> G["B13: Mini GPT<br/>Decoder-Only Transformer"]
     
-    style A fill:#E6E6FA
-    style B fill:#E6E6FA
-    style D fill:#FFE4B5
-    style E fill:#FFE4B5
-    style F fill:#FFB6C1
-    style G fill:#90EE90
+    style A fill:#e8eaf6,stroke:#3f51b5,stroke-width:2px,color:#000
+    style B fill:#e8eaf6,stroke:#3f51b5,stroke-width:2px,color:#000
+    style D fill:#fff3e0,stroke:#ff9800,stroke-width:2px,color:#000
+    style E fill:#fff3e0,stroke:#ff9800,stroke-width:2px,color:#000
+    style F fill:#f3e5f5,stroke:#9c27b0,stroke-width:2px,color:#000
+    style G fill:#e8f5e9,stroke:#4caf50,stroke-width:3px,color:#000
+    style C fill:#e3f2fd,stroke:#2196f3,stroke-width:2px,color:#000
 ```
 
 ---

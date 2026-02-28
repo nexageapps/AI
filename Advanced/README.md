@@ -2,7 +2,7 @@
 
 Specialized topics for building production-ready AI systems. Complete Intermediate level first.
 
-## Coming Soon
+## Coming Soon 
 
 Advanced lessons will cover:
 - Fine-tuning Large Language Models

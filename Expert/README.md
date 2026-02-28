@@ -2,7 +2,7 @@
 
 Research-oriented topics and cutting-edge techniques. For those ready to contribute to the field.
 
-## Coming Soon
+## Coming Soon 
 
 Expert lessons will cover:
 - Novel Architecture Design

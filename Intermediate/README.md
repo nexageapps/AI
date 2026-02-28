@@ -2,7 +2,7 @@
 
 Advanced topics building on basic concepts. Complete the Basic level before starting here.
 
-## Coming Soon
+## Coming Soon 
 
 Intermediate lessons will cover:
 - Transfer Learning and Fine-tuning

@@ -134,6 +134,40 @@ This folder contains all fundamental concepts you need to master before advancin
 
 Choose the path that matches your goals:
 
+### Overall Learning Flow
+
+```mermaid
+graph TD
+    A[Start: B01 Arithmetic] --> B[B02 Linear Regression]
+    B --> C[B03 Binary Classification]
+    C --> D{Choose Your Path}
+    D -->|Complete Path| E[B04 Multi-Class]
+    D -->|NLP Focus| F[Skip to B10]
+    D -->|CV Focus| G[Skip to B09]
+    D -->|Fast Track| H[Skim B04-B05]
+    
+    E --> I[B05 Neural Networks]
+    I --> J[B06 Data Preprocessing]
+    J --> K[B07 Model Evaluation]
+    K --> L{Specialization}
+    
+    L -->|Computer Vision| M[B09 CNNs]
+    L -->|Sequential Data| N[B10 RNNs]
+    L -->|Both| M
+    M --> N
+    
+    N --> O[B11 Transformers]
+    O --> P[B12 BPE Tokenization]
+    P --> Q[B13 Mini Language Model]
+    Q --> R[B14 Assignments]
+    R --> S[B15 Capstone Projects]
+    
+    style A fill:#90EE90
+    style S fill:#FFD700
+    style D fill:#87CEEB
+    style L fill:#87CEEB
+```
+
 ### Path 1: Complete Beginner (Recommended)
 **Goal:** Master all fundamentals systematically
 
@@ -160,6 +194,20 @@ Week 12+:   B14 → B15 (Projects)
 
 **Timeline:** 6-8 weeks
 
+```mermaid
+graph LR
+    A[B01-B03<br/>Foundation] --> B[B04-B05<br/>Neural Nets]
+    B --> C[B06-B07<br/>Data & Eval]
+    C --> D[B10 RNNs]
+    D --> E[B11 Transformers<br/>⭐ Deep Dive]
+    E --> F[B12 BPE<br/>⭐ Deep Dive]
+    F --> G[B13 Mini LLM]
+    G --> H[B14-B15<br/>NLP Projects]
+    
+    style E fill:#FFB6C1
+    style F fill:#FFB6C1
+```
+
 ```
 Week 1:     B01 → B02 → B03 (Quick foundation)
 Week 2:     B04 → B05 (Neural networks)
@@ -178,6 +226,17 @@ Week 7-8:   B14 (Assignments 7-10) → B15 (NLP projects)
 **Goal:** Specialize in Image Processing
 
 **Timeline:** 6-8 weeks
+
+```mermaid
+graph LR
+    A[B01-B03<br/>Foundation] --> B[B04-B05<br/>Neural Nets]
+    B --> C[B06-B07<br/>Data & Eval]
+    C --> D[B09 CNNs<br/>⭐ Deep Dive]
+    D --> E[B11 Vision<br/>Transformers]
+    E --> F[B14-B15<br/>CV Projects]
+    
+    style D fill:#98FB98
+```
 
 ```
 Week 1:     B01 → B02 → B03 (Quick foundation)
@@ -198,6 +257,18 @@ Week 7-8:   B14 (Assignment 6) → B15 (CV projects)
 
 **Timeline:** 3-4 weeks
 
+```mermaid
+graph LR
+    A[B01-B05<br/>Quick Review] -.->|Skim| B[B09 CNNs]
+    B --> C[B10 RNNs]
+    C --> D[B11 Transformers]
+    D --> E[B12 BPE]
+    E --> F[B13 Mini LLM]
+    F --> G[B14-B15<br/>Projects]
+    
+    style A fill:#D3D3D3
+```
+
 ```
 Week 1:     Skim B01-B05 (Review basics)
 Week 2:     B09 → B10 → B11 (Deep learning)
@@ -209,6 +280,52 @@ Week 4:     B14 → B15 (Projects)
 - Focus on new concepts
 - Skip familiar topics
 - Jump to advanced assignments
+
+---
+
+### Neural Network Architecture Evolution
+
+```mermaid
+graph TD
+    A[B02: Linear Regression<br/>Single Layer] --> B[B05: Multi-Layer Perceptron<br/>Fully Connected]
+    B --> C{Data Type?}
+    C -->|Images| D[B09: CNN<br/>Convolutional Layers]
+    C -->|Sequences| E[B10: RNN/LSTM<br/>Recurrent Connections]
+    D --> F[B11: Transformers<br/>Attention Mechanism]
+    E --> F
+    F --> G[B13: Mini GPT<br/>Decoder-Only Transformer]
+    
+    style A fill:#E6E6FA
+    style B fill:#E6E6FA
+    style D fill:#FFE4B5
+    style E fill:#FFE4B5
+    style F fill:#FFB6C1
+    style G fill:#90EE90
+```
+
+---
+
+### Machine Learning Workflow
+
+```mermaid
+graph TD
+    A[Raw Data] --> B[B06: Data Preprocessing<br/>Clean, Scale, Encode]
+    B --> C[B06: Feature Engineering<br/>Select, Transform]
+    C --> D[Split Data<br/>Train/Val/Test]
+    D --> E[B02-B05: Choose Model<br/>Linear/NN/CNN/RNN]
+    E --> F[B02: Train Model<br/>Gradient Descent]
+    F --> G[B07: Evaluate<br/>Metrics & Validation]
+    G --> H{Good Performance?}
+    H -->|No| I[Tune Hyperparameters]
+    I --> F
+    H -->|Yes| J[B15: Deploy Model]
+    J --> K[Monitor & Update]
+    
+    style B fill:#87CEEB
+    style C fill:#87CEEB
+    style G fill:#FFD700
+    style J fill:#90EE90
+```
 
 ---
 
@@ -255,6 +372,28 @@ jupyter lab
 ---
 
 ## How to Use These Lessons
+
+### Learning Process Flow
+
+```mermaid
+graph TD
+    A[📚 Before Starting] --> B[Read Prerequisites<br/>Set Time Aside<br/>Prepare Environment]
+    B --> C[📖 While Learning]
+    C --> D[Read Carefully<br/>Run Every Cell<br/>Modify Code]
+    D --> E[Add Comments<br/>Study Visualizations<br/>Predict Outputs]
+    E --> F[✅ After Completing]
+    F --> G[Summarize Key Concepts<br/>Complete Assignments<br/>Teach Others]
+    G --> H[Connect to Real-World<br/>Review Periodically]
+    H --> I{Understood?}
+    I -->|Yes| J[Next Lesson]
+    I -->|No| K[Review & Practice]
+    K --> C
+    
+    style A fill:#87CEEB
+    style C fill:#FFE4B5
+    style F fill:#90EE90
+    style I fill:#FFB6C1
+```
 
 ### Before Starting a Lesson
 
@@ -364,6 +503,28 @@ jupyter lab
 
 ## Common Challenges & Solutions
 
+### Troubleshooting Decision Tree
+
+```mermaid
+graph TD
+    A[Having Issues?] --> B{What Type?}
+    B -->|Math| C[Focus on Intuition First<br/>Use Visualizations<br/>Khan Academy Review]
+    B -->|Code| D{Error Type?}
+    B -->|Conceptual| E[Re-read Explanations<br/>Watch Videos<br/>Discuss with Peers]
+    B -->|Motivation| F[Join Study Group<br/>Adjust Pace<br/>Take Breaks]
+    
+    D -->|Shape Error| G[Check Tensor Dimensions<br/>Use print statements<br/>Review B01]
+    D -->|Loss Not Decreasing| H[Check Learning Rate<br/>Verify Data Preprocessing<br/>Review B02]
+    D -->|Overfitting| I[Add Regularization<br/>More Data<br/>Review B07]
+    D -->|Other| J[Read Error Message<br/>Search Online<br/>Ask ChatGPT]
+    
+    style A fill:#FFB6C1
+    style B fill:#87CEEB
+    style C fill:#90EE90
+    style E fill:#90EE90
+    style F fill:#90EE90
+```
+
 ### Challenge 1: "The math is overwhelming"
 **Solution:**
 - Focus on intuition first (this repo emphasizes understanding)
@@ -417,6 +578,28 @@ jupyter lab
 
 ## Progress Tracking
 
+### Learning Journey Map
+
+```mermaid
+graph LR
+    A[🌱 Foundation<br/>B01-B03] --> B[🎯 Core ML<br/>B04-B07]
+    B --> C[🧠 Deep Learning<br/>B09-B11]
+    C --> D[💬 NLP<br/>B12-B13]
+    D --> E[🚀 Projects<br/>B14-B15]
+    
+    A -.->|3-4 hrs| A1[✓ Tensors<br/>✓ Regression<br/>✓ Classification]
+    B -.->|8-10 hrs| B1[✓ Multi-class<br/>✓ Neural Nets<br/>✓ Data Prep<br/>✓ Evaluation]
+    C -.->|10-12 hrs| C1[✓ CNNs<br/>✓ RNNs<br/>✓ Transformers]
+    D -.->|6-8 hrs| D1[✓ Tokenization<br/>✓ Language Model]
+    E -.->|2-6 weeks| E1[✓ Assignments<br/>✓ Portfolio]
+    
+    style A fill:#90EE90
+    style B fill:#87CEEB
+    style C fill:#FFB6C1
+    style D fill:#FFD700
+    style E fill:#FF6347
+```
+
 ### Checklist: Foundation Stage
 - [ ] B01: Understand tensors and basic operations
 - [ ] B02: Implement linear regression from scratch
@@ -462,6 +645,26 @@ After each stage, ask yourself:
 5. Have I applied this to a real problem?
 
 If you answer "no" to any question, review that section.
+
+### Skill Development Timeline
+
+```mermaid
+gantt
+    title Your AI/ML Learning Journey (8-12 Weeks)
+    dateFormat  YYYY-MM-DD
+    section Foundation
+    B01-B03 Basics           :done, foundation, 2026-03-01, 2w
+    section Core ML
+    B04-B05 Neural Networks  :active, coreml1, after foundation, 2w
+    B06-B07 Data & Eval      :coreml2, after coreml1, 2w
+    section Deep Learning
+    B09-B10 CNNs & RNNs      :dl1, after coreml2, 2w
+    B11 Transformers         :dl2, after dl1, 1w
+    section NLP
+    B12-B13 Tokenization & LLM :nlp, after dl2, 2w
+    section Projects
+    B14-B15 Portfolio        :projects, after nlp, 3w
+```
 
 ---
 

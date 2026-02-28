@@ -5,14 +5,14 @@
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-## 🎯 Mission
+## Mission
 
 This repository provides a **structured, hands-on learning path** for Master's students in AI to deeply understand Artificial Intelligence concepts - from basic arithmetic operations to building complete language models. Each lesson builds progressively on previous concepts with clear explanations, visualizations, and practical implementations.
 
-## 📚 Table of Contents
+## Table of Contents
 
 - [About](#about)
-- [Learning Path](#learning-path)
+- [Learning Path Diagram](#learning-path-diagram)
 - [Getting Started](#getting-started)
 - [Prerequisites](#prerequisites)
 - [Installation](#installation)
@@ -21,19 +21,113 @@ This repository provides a **structured, hands-on learning path** for Master's s
 - [Author](#author)
 - [License](#license)
 
-## 🌟 About
+## About
 
 This is not just another AI tutorial collection - it's a **carefully designed curriculum** that:
 
-- ✅ **Builds progressively** from fundamentals to advanced concepts
-- ✅ **Includes hands-on code** with detailed explanations
-- ✅ **Provides visualizations** to understand complex concepts
-- ✅ **Covers real-world applications** at each level
-- ✅ **Culminates in building** a mini language model (GPT-style)
+- **Builds progressively** from fundamentals to advanced concepts
+- **Includes hands-on code** with detailed explanations
+- **Provides visualizations** to understand complex concepts
+- **Covers real-world applications** at each level
+- **Culminates in building** a mini language model (GPT-style)
 
 **Target Audience:** Master's students in AI, self-learners, and anyone wanting to deeply understand AI/ML concepts.
 
 **Language:** Jupyter Notebooks (100%) - All runnable in Google Colab!
+
+## Learning Path Diagram
+
+```mermaid
+graph TD
+    Start([Start Your AI Journey]) --> L1[L1: Arithmetic<br/>Tensor Operations & TensorFlow Basics]
+    
+    L1 --> L2[L2: Linear Patterns<br/>Straight Line with Graphs]
+    
+    L2 --> Classification{Classification<br/>Branch}
+    
+    Classification --> L3[L3: Binary Classification<br/>Two-Class Problems]
+    Classification --> L5[L5: Multi-Class Classification<br/>Multiple Categories]
+    
+    L3 --> L6[L6: Neural Network Fundamentals<br/>Deep Dive into Architecture]
+    L5 --> L6
+    
+    L6 --> Advanced{Advanced<br/>Architectures}
+    
+    Advanced --> L7[L7: CNNs<br/>Convolutional Neural Networks<br/>Image Processing]
+    Advanced --> L8[L8: RNNs<br/>Recurrent Neural Networks<br/>Sequential Data]
+    
+    L7 --> L9[L9: Attention & Transformers<br/>Self-Attention Mechanism]
+    L8 --> L9
+    
+    L9 --> L4[L4: Byte Pair Encoding<br/>Tokenization for NLP]
+    
+    L4 --> L10[L10: Mini Language Model<br/>Build Your Own GPT]
+    
+    L10 --> L11[L11: Data Preprocessing<br/>Feature Engineering]
+    
+    L11 --> NextLevel{Ready for<br/>Next Level?}
+    
+    NextLevel -->|Yes| Advanced_Path[Advanced Topics]
+    NextLevel -->|Review| L1
+    
+    Advanced_Path --> AP1[Fine-tuning LLMs]
+    Advanced_Path --> AP2[RAG Systems]
+    Advanced_Path --> AP3[Multi-Modal Models]
+    Advanced_Path --> AP4[Production Deployment]
+    
+    AP1 --> Expert[Expert Level]
+    AP2 --> Expert
+    AP3 --> Expert
+    AP4 --> Expert
+    
+    Expert --> Research[Research & Innovation]
+    
+    style Start fill:#e1f5ff
+    style L1 fill:#fff4e1
+    style L2 fill:#fff4e1
+    style L3 fill:#ffe1f5
+    style L5 fill:#ffe1f5
+    style L6 fill:#f5e1ff
+    style L7 fill:#e1ffe1
+    style L8 fill:#e1ffe1
+    style L9 fill:#ffe1e1
+    style L4 fill:#fff4e1
+    style L10 fill:#ffd700
+    style L11 fill:#ffd700
+    style Advanced_Path fill:#87ceeb
+    style Expert fill:#90ee90
+    style Research fill:#ff69b4
+```
+
+### Learning Path Explanation
+
+**Foundation Level (L1-L2):**
+- Start with basic tensor operations and linear patterns
+- Build intuition for how neural networks learn
+
+**Classification Level (L3, L5-L6):**
+- Master binary and multi-class classification
+- Deep dive into neural network architecture and training
+
+**Advanced Architectures (L7-L9):**
+- Learn specialized architectures: CNNs for images, RNNs for sequences
+- Understand the revolutionary Attention mechanism and Transformers
+
+**Language Models (L4, L10-L11):**
+- Master tokenization with Byte Pair Encoding
+- Build a complete mini language model (GPT-style)
+- Learn data preprocessing and feature engineering
+
+**Next Level (Advanced Topics):**
+- Fine-tuning large language models
+- Retrieval-Augmented Generation (RAG) systems
+- Multi-modal models (text, image, audio)
+- Production deployment and MLOps
+
+**Expert Level:**
+- Research and innovation in AI
+- Contributing to open-source AI projects
+- Publishing papers and building novel architectures
 
 ## Contents
 

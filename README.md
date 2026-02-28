@@ -13,27 +13,47 @@
 Hi! I'm a **Master of Artificial Intelligence (MAI)** student at the **University of Auckland**, and this is my open-source learning journey. I created this repository to document everything I'm learning and to help fellow students, researchers, and AI enthusiasts learn alongside me.
 
 **Why this repository exists:**
-- 🎓 Learn AI concepts from scratch with a fellow student's perspective
-- 🤝 Build a community of learners who support each other
-- 💻 Share practical implementations, not just theory
-- 🌍 Make quality AI education accessible to everyone, everywhere
-- 🚀 Learn by doing - every concept comes with runnable code
-- 📚 Complement your university coursework with hands-on practice
+- Learn AI concepts from scratch with a fellow student's perspective
+- Build a community of learners who support each other
+- Share practical implementations, not just theory
+- Make quality AI education accessible to everyone, everywhere
+- Learn by doing - every concept comes with runnable code
+- Complement your university coursework with hands-on practice
 
 **This is not just a tutorial - it's a learning companion.** Whether you're a master's student like me, a self-learner, or a professional looking to upskill, you're welcome to learn with me.
 
-### 🎯 For University of Auckland MAI Students
-This repository is specifically designed to complement your MAI coursework! Check out the **[MAI Student Guide](./MAI_STUDENT_GUIDE.md)** for:
-- Direct mapping to UoA courses (COMPSCI 713, 714, 761, 762, 703, COMPSYS 721, etc.)
-- Study strategies for each semester
-- Assignment preparation tips
-- Research project ideas aligned with your dissertation
+### For University of Auckland MAI Students
 
-**Not a UoA student?** No worries! The content is valuable for any AI/ML learner.
+**This repository will significantly help you succeed in your MAI program at UoA!**
+
+Every lesson is carefully aligned with your coursework to provide:
+- **Practical implementations** of concepts taught in lectures
+- **Hands-on practice** before assignments and exams
+- **Reference code** for your projects and dissertation
+- **Portfolio projects** to showcase your skills to employers
+
+Check out the comprehensive **[MAI Student Guide](./MAI_STUDENT_GUIDE.md)** for:
+- Direct mapping to UoA courses (COMPSCI 713, 714, 761, 762, 703, COMPSYS 721)
+- Week-by-week study strategies for each semester
+- Assignment preparation tips and templates
+- Research project ideas aligned with your dissertation
+- Exam preparation strategies
+- Success stories from fellow MAI students
+
+**How this helps MAI students:**
+- **Before lectures**: Build intuition with practical examples
+- **During semester**: Reinforce concepts with hands-on coding
+- **For assignments**: Reference implementations and patterns
+- **For exams**: Review and practice all concepts
+- **For dissertation**: Capstone projects as starting points
+
+**Not a UoA student?** The content is still valuable for any AI/ML learner at any university or self-study program!
 
 ## Mission
 
 This repository provides a **structured, hands-on learning path** to deeply understand Artificial Intelligence concepts - from basic arithmetic operations to building complete language models. Each lesson builds progressively on previous concepts with clear explanations, visualizations, and practical implementations that you can run immediately.
+
+**Specifically designed to help Master of Artificial Intelligence (MAI) students at the University of Auckland** succeed in their coursework by providing practical implementations that complement theoretical lectures. The content directly aligns with core MAI courses including COMPSCI 713, 714, 761, 762, 703, and COMPSYS 721.
 
 ## Table of Contents
 
@@ -54,18 +74,18 @@ This repository provides a **structured, hands-on learning path** to deeply unde
 
 This is not just another AI tutorial collection - it's a **carefully designed curriculum** created by a student who understands the challenges of learning AI:
 
-✨ **Key Features:**
+**Key Features:**
 
-- 🎓 **Student Perspective**: Written by someone currently learning, not just teaching - I understand the struggles!
-- 📈 **Builds Progressively**: From fundamentals to advanced concepts, no gaps or confusing jumps
-- 💻 **100% Hands-On**: Every concept comes with runnable code - learn by doing, not just reading
-- 📊 **Visual Learning**: Comprehensive visualizations to understand complex concepts intuitively
-- 🌐 **Real-World Focus**: Practical applications at each level, not just toy examples
-- 🏆 **Academic Rigor**: Meets the standards of a top university program (University of Auckland MAI)
-- 🚀 **Culminates in Building**: Create your own mini language model (GPT-style) from scratch
-- 💰 **Completely Free**: Quality education shouldn't have a price tag
-- 🔄 **Active Development**: Regular updates as I learn new concepts in my master's program
-- 🤝 **Community-Driven**: Open to contributions, feedback, and collaboration
+- **Student Perspective**: Written by someone currently learning, not just teaching - I understand the struggles!
+- **Builds Progressively**: From fundamentals to advanced concepts, no gaps or confusing jumps
+- **100% Hands-On**: Every concept comes with runnable code - learn by doing, not just reading
+- **Visual Learning**: Comprehensive visualizations to understand complex concepts intuitively
+- **Real-World Focus**: Practical applications at each level, not just toy examples
+- **Academic Rigor**: Meets the standards of a top university program (University of Auckland MAI)
+- **Culminates in Building**: Create your own mini language model (GPT-style) from scratch
+- **Completely Free**: Quality education shouldn't have a price tag
+- **Active Development**: Regular updates as I learn new concepts in my master's program
+- **Community-Driven**: Open to contributions, feedback, and collaboration
 
 **What You'll Build:**
 - Linear regression models from scratch
@@ -78,9 +98,19 @@ This is not just another AI tutorial collection - it's a **carefully designed cu
 - A mini GPT-style language model
 - Portfolio-worthy capstone projects
 
-**Target Audience:** Master's students in AI, undergraduate students, self-learners, bootcamp graduates, career switchers, and anyone wanting to deeply understand AI/ML concepts.
+**Primary Audience:** Master of Artificial Intelligence (MAI) students at the University of Auckland - this repository is built specifically to help you excel in your program.
+
+**Also Valuable For:** Master's students in AI at other universities, undergraduate students, self-learners, bootcamp graduates, career switchers, and anyone wanting to deeply understand AI/ML concepts.
 
 **Language:** Jupyter Notebooks (100%) - All runnable in Google Colab with zero setup!
+
+**Why MAI Students Love This Repository:**
+- Directly complements UoA course content
+- Saves hours of implementation time
+- Provides tested, working code examples
+- Helps achieve better grades through practice
+- Builds portfolio for job applications
+- Created by a fellow MAI student who understands your challenges
 
 ## Learning Path Diagram
 
@@ -231,45 +261,45 @@ This repository is organized into four progressive levels, with the Basic level 
 
 ```
 AI/
-├── Basic/              # ✅ 15 Complete Lessons (B01-B15)
-├── Intermediate/       # 🔜 Coming Soon
-├── Advanced/           # 🔜 Coming Soon  
-├── Expert/             # 🔜 Coming Soon
-├── MAI_STUDENT_GUIDE.md # 🎓 Guide for UoA MAI Students
-└── archive/            # 📚 Historical documentation
+├── Basic/              # [COMPLETE] 15 Lessons (B01-B15)
+├── Intermediate/       # [COMING SOON]
+├── Advanced/           # [COMING SOON]
+├── Expert/             # [COMING SOON]
+├── MAI_STUDENT_GUIDE.md # Guide for UoA MAI Students
+└── archive/            # Historical documentation
 ```
 
-### 📚 Basic Level (Available Now - 15 Lessons)
+### Basic Level (Available Now - 15 Lessons)
 
 Foundation lessons covering fundamental AI/ML concepts. **[View all Basic lessons →](./Basic/)**
 
-**Foundation (B01-B03)** - Start Here 🚀
+**Foundation (B01-B03)** - Start Here
 1. **B01 - Arithmetic** - TensorFlow basics and tensor operations
 2. **B02 - Linear Regression** - Linear regression fundamentals  
 3. **B03 - Binary Classification** - Two-class classification problems
 
-**Core Machine Learning (B04-B07)** - Essential Skills 💪
+**Core Machine Learning (B04-B07)** - Essential Skills
 4. **B04 - Multi-Class Classification** - Multiple category classification
 5. **B05 - Neural Network Fundamentals** - Deep dive into NN architecture
 6. **B06 - Data Preprocessing and Feature Engineering** - Data preparation techniques
 7. **B07 - Model Evaluation and Performance Metrics** - Measuring model performance
 
-**Deep Learning (B09-B11)** - Advanced Neural Networks 🧠
+**Deep Learning (B09-B11)** - Advanced Neural Networks
 9. **B09 - Convolutional Neural Networks** - CNNs for image processing
 10. **B10 - Recurrent Neural Networks** - RNNs for sequential data
 11. **B11 - Attention and Transformers** - Modern attention mechanisms
 
-**NLP Specialization (B12-B13)** - Build Language Models 🤖
+**NLP Specialization (B12-B13)** - Build Language Models
 12. **B12 - Byte Pair Encoding (BPE)** - Tokenization for NLP
 13. **B13 - Building a Mini Language Model** - Create your own GPT-style model
 
-**Practice & Portfolio (B14-B15)** - Apply Your Skills 🎯
+**Practice & Portfolio (B14-B15)** - Apply Your Skills
 14. **B14 - Practical Projects and Assignments** - 10 hands-on assignments to reinforce learning
 15. **B15 - Capstone Projects and Portfolio Building** - 5 portfolio-worthy projects
 
 **Total Learning Time:** ~40-60 hours for complete mastery
 
-### 🔜 Intermediate Level (Coming Soon)
+### Intermediate Level (Coming Soon)
 
 Advanced topics building on basic concepts:
 - Transfer Learning and Fine-tuning
@@ -281,7 +311,7 @@ Advanced topics building on basic concepts:
 
 **[View Intermediate roadmap →](./Intermediate/)**
 
-### 🔜 Advanced Level (Coming Soon)
+### Advanced Level (Coming Soon)
 
 Production-ready AI systems:
 - Fine-tuning Large Language Models (GPT, LLaMA, Mistral)
@@ -293,7 +323,7 @@ Production-ready AI systems:
 
 **[View Advanced roadmap →](./Advanced/)**
 
-### 🔜 Expert Level (Coming Soon)
+### Expert Level (Coming Soon)
 
 Research-oriented topics:
 - Novel Architecture Design and Experimentation
@@ -367,7 +397,7 @@ Open the desired notebook and run the cells sequentially. All notebooks are self
 
 These notebooks are designed for learning and experimentation. Here's how to get the most out of them:
 
-### 📚 Learning Paths
+### Learning Paths
 
 **For Complete Beginners:**
 1. Start with Basic/B01 and progress sequentially
@@ -394,7 +424,7 @@ These notebooks are designed for learning and experimentation. Here's how to get
 3. Explore B11 for Vision Transformers
 4. Build image recognition projects from B15
 
-### 💡 Study Tips
+### Study Tips
 
 **Before Starting a Lesson:**
 - Read the lesson overview
@@ -416,7 +446,7 @@ These notebooks are designed for learning and experimentation. Here's how to get
 - Connect it to real-world applications
 - Review after 1 day, 1 week, 1 month (spaced repetition)
 
-### 🎯 Best Practices
+### Best Practices
 
 - **Consistency > Intensity**: 1 hour daily beats 7 hours on Sunday
 - **Active Learning**: Implement variations, don't just run code
@@ -425,7 +455,7 @@ These notebooks are designed for learning and experimentation. Here's how to get
 - **Join Communities**: Discuss with other learners
 - **Teach Others**: Best way to solidify understanding
 
-### 📝 Each Notebook Includes
+### Each Notebook Includes
 
 - Clear learning objectives
 - Author information and LinkedIn profile
@@ -436,7 +466,7 @@ These notebooks are designed for learning and experimentation. Here's how to get
 - Detailed code comments
 - Practice exercises (in B14)
 
-### 🚀 Progression Tracking
+### Progression Tracking
 
 Track your progress:
 - [ ] B01-B03: Foundation (Week 1)
@@ -446,22 +476,22 @@ Track your progress:
 - [ ] B14: Complete 5 assignments (Week 9-10)
 - [ ] B15: Build 1 capstone project (Week 11-16)
 
-## For MAI Students
+## For MAI Students at University of Auckland
 
-### 🎓 University of Auckland Integration
+### How This Repository Helps Your MAI Journey
 
-This repository is specifically designed to complement your MAI coursework at the University of Auckland!
+This repository is **specifically designed to help MAI students at the University of Auckland succeed** in their coursework and beyond. As a fellow MAI student, I created this to address the exact challenges we face in the program.
 
-**📖 [Complete MAI Student Guide](./MAI_STUDENT_GUIDE.md)** - Your essential companion for success
+**[Complete MAI Student Guide](./MAI_STUDENT_GUIDE.md)** - Your essential companion for success
 
 **What's Inside the Guide:**
-- 📚 Direct course mappings (COMPSCI 713, 714, 761, 762, 703, COMPSYS 721)
-- 📅 Semester-by-semester study strategies
-- 📝 Assignment preparation tips and templates
-- 🔬 Research project ideas for your dissertation
-- 🎯 Exam preparation strategies
-- 🤝 Study group formation tips
-- 💼 Career preparation advice
+- Direct course mappings (COMPSCI 713, 714, 761, 762, 703, COMPSYS 721)
+- Semester-by-semester study strategies
+- Assignment preparation tips and templates
+- Research project ideas for your dissertation
+- Exam preparation strategies
+- Study group formation tips
+- Career preparation advice
 
 **Quick Course Alignment:**
 
@@ -480,13 +510,21 @@ This repository is specifically designed to complement your MAI coursework at th
 
 > "My capstone project from B15 got published! I started with the Multi-Modal AI project, extended it for my dissertation, and we submitted to a conference." - MAI Graduate, 2025
 
-**Study Schedule Recommendation:**
-- **Before Semester 1**: Complete B01-B07
-- **During Semester 1**: B09-B13 + Course assignments
-- **Semester Break**: B14 practice assignments
-- **Semester 2**: B15 capstone + Dissertation work
+**Study Schedule Recommendation for MAI Students:**
+- **Before Semester 1**: Complete B01-B07 (build strong foundations)
+- **During Semester 1**: B09-B13 + Course assignments (complement lectures)
+- **Semester Break**: B14 practice assignments (reinforce learning)
+- **Semester 2**: B15 capstone + Dissertation work (build portfolio)
 
-**Not a UoA student?** The content is still valuable for any AI/ML program!
+**Benefits for MAI Students:**
+- **Better Understanding**: Practical implementations clarify theoretical concepts
+- **Higher Grades**: Practice before assignments leads to better performance
+- **Time Savings**: Reference implementations save hours of debugging
+- **Exam Preparation**: Complete review of all concepts with working code
+- **Career Ready**: Portfolio projects impress employers
+- **Research Foundation**: Capstone projects can evolve into dissertation topics
+
+**Not a UoA MAI student?** The content is still valuable for any AI/ML program at any university!
 
 ## Structure
 
@@ -592,37 +630,37 @@ Contributions are welcome! To contribute:
 
 ## Community & Support
 
-### 🤝 Join the Learning Community
+### Join the Learning Community
 
 This is a collaborative learning space! Here's how you can participate:
 
 **Get Help:**
-- 🐛 **Found a bug?** [Open an issue](https://github.com/nexageapps/AI/issues)
-- 💡 **Have an idea?** [Start a discussion](https://github.com/nexageapps/AI/discussions)
-- ❓ **Have questions?** Connect with me on [LinkedIn](https://www.linkedin.com/in/karthik-arjun-a5b4a258/)
-- 📧 **Email**: For collaboration inquiries
+- **Found a bug?** [Open an issue](https://github.com/nexageapps/AI/issues)
+- **Have an idea?** [Start a discussion](https://github.com/nexageapps/AI/discussions)
+- **Have questions?** Connect with me on [LinkedIn](https://www.linkedin.com/in/karthik-arjun-a5b4a258/)
+- **Email**: For collaboration inquiries
 
 **Contribute:**
-- 🔧 **Want to contribute?** Submit a pull request
-- 📝 **Improve documentation**: Fix typos, add examples
-- 🎨 **Add visualizations**: Make concepts clearer
-- 🚀 **Share projects**: Add your capstone projects
+- **Want to contribute?** Submit a pull request
+- **Improve documentation**: Fix typos, add examples
+- **Add visualizations**: Make concepts clearer
+- **Share projects**: Add your capstone projects
 
 **Share:**
-- ⭐ **Enjoying the content?** Star the repo
-- 🔗 **Share on LinkedIn**: Tag me in your posts
-- 🐦 **Tweet about it**: Use #AILearningPath
-- 👥 **Tell your classmates**: Learn together
+- **Enjoying the content?** Star the repo
+- **Share on LinkedIn**: Tag me in your posts
+- **Tweet about it**: Use #AILearningPath
+- **Tell your classmates**: Learn together
 
-### 📊 Repository Stats
+### Repository Stats
 
-- 📚 15 comprehensive lessons (B01-B15)
-- 💻 100% hands-on with runnable code
-- 🎓 Aligned with top university curriculum
-- 🌍 Used by students worldwide
-- 🔄 Actively maintained and updated
+- 15 comprehensive lessons (B01-B15)
+- 100% hands-on with runnable code
+- Aligned with top university curriculum
+- Used by students worldwide
+- Actively maintained and updated
 
-### 🌟 Why Star This Repository?
+### Why Star This Repository?
 
 - **Stay Updated**: Get notified when new lessons and projects are added
 - **Support a Fellow Student**: Help me reach more learners
@@ -631,7 +669,7 @@ This is a collaborative learning space! Here's how you can participate:
 - **Motivation**: Your star motivates me to create more content
 - **Show Appreciation**: Free way to say "thank you"
 
-### 💬 Connect & Collaborate
+### Connect & Collaborate
 
 **Let's learn together.** The best way to learn is to teach, and the best way to grow is to help others grow.
 

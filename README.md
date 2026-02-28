@@ -57,10 +57,11 @@ This is not just another AI tutorial collection - it's a **carefully designed cu
 ## Learning Path Diagram
 
 ```mermaid
-graph TB
+graph LR
     Start([START YOUR AI JOURNEY]):::startNode
     
-    subgraph Basic["BASIC LEVEL"]
+    subgraph Basic["BASIC LEVEL - Complete Sequentially"]
+        direction LR
         B1["B1: Arithmetic<br/>Tensor Operations"]:::basic
         B2["B2: Linear Regression<br/>Straight Line Patterns"]:::basic
         B3["B3: Binary Classification<br/>Two-Class Problems"]:::basic
@@ -73,58 +74,56 @@ graph TB
         B11["B11: Transformers<br/>Attention Mechanism"]:::basic
         B12["B12: Tokenization<br/>Byte Pair Encoding"]:::basic
         B13["B13: Build Mini LLM<br/>GPT-Style Model"]:::basic
+        
+        B1 --> B2 --> B3 --> B4 --> B5 --> B6 --> B7
+        B7 --> B9
+        B7 --> B10
+        B9 --> B11
+        B10 --> B11
+        B11 --> B12 --> B13
     end
     
     subgraph Intermediate["INTERMEDIATE LEVEL"]
+        direction LR
         I1["Transfer Learning"]:::intermediate
         I2["Advanced Optimization"]:::intermediate
         I3["Advanced Architectures"]:::intermediate
         I4["Hyperparameter Tuning"]:::intermediate
+        
+        I1 --> I3
+        I2 --> I3
+        I3 --> I4
     end
     
     subgraph Advanced["ADVANCED LEVEL"]
+        direction LR
         A1["Fine-tuning LLMs"]:::advanced
         A2["RAG Systems"]:::advanced
         A3["Multi-Modal AI"]:::advanced
         A4["Production MLOps"]:::advanced
+        
+        A1 --> A3
+        A2 --> A3
+        A3 --> A4
     end
     
     subgraph Expert["EXPERT LEVEL"]
+        direction LR
         E1["Research & Papers"]:::expert
         E2["Novel Architectures"]:::expert
         E3["Open Source Contribution"]:::expert
+        
+        E1 --> E3
+        E2 --> E3
     end
     
     Start --> B1
-    B1 --> B2
-    B2 --> B3
-    B3 --> B4
-    B4 --> B5
-    B5 --> B6
-    B6 --> B7
-    B7 --> B9
-    B7 --> B10
-    B9 --> B11
-    B10 --> B11
-    B11 --> B12
-    B12 --> B13
-    
     B13 --> I1
     B13 --> I2
-    I1 --> I3
-    I2 --> I3
-    I3 --> I4
-    
     I4 --> A1
     I4 --> A2
-    A1 --> A3
-    A2 --> A3
-    A3 --> A4
-    
     A4 --> E1
     A4 --> E2
-    E1 --> E3
-    E2 --> E3
     
     classDef startNode fill:#4A90E2,stroke:#2E5C8A,stroke-width:3px,color:#fff
     classDef basic fill:#FFE5B4,stroke:#D4A574,stroke-width:2px,color:#000
@@ -182,18 +181,18 @@ AI/
 
 Foundation lessons covering fundamental AI/ML concepts. [View all Basic lessons →](./Basic/)
 
-1. **L1 - Arithmetic** - TensorFlow basics and tensor operations
-2. **L2 - Linear Regression** - Linear regression fundamentals
-3. **L3 - Binary Classification** - Two-class classification problems
-4. **L4 - Byte Pair Encoding (BPE)** - Tokenization for NLP
-5. **L5 - Multi-Class Classification** - Multiple category classification
-6. **L6 - Neural Network Fundamentals** - Deep dive into NN architecture
-7. **L7 - Convolutional Neural Networks** - CNNs for image processing
-8. **L8 - Recurrent Neural Networks** - RNNs for sequential data
-9. **L9 - Attention and Transformers** - Modern attention mechanisms
-10. **L10 - Building a Mini Language Model** - Create your own GPT-style model
-11. **L11 - Data Preprocessing and Feature Engineering** - Data preparation techniques
-12. **L12 - Model Evaluation and Performance Metrics** - Measuring model performance
+1. **B1 - Arithmetic** - TensorFlow basics and tensor operations
+2. **B2 - Linear Regression** - Linear regression fundamentals
+3. **B3 - Binary Classification** - Two-class classification problems
+4. **B4 - Multi-Class Classification** - Multiple category classification
+5. **B5 - Neural Network Fundamentals** - Deep dive into NN architecture
+6. **B6 - Data Preprocessing and Feature Engineering** - Data preparation techniques
+7. **B7 - Model Evaluation and Performance Metrics** - Measuring model performance
+8. **B9 - Convolutional Neural Networks** - CNNs for image processing
+9. **B10 - Recurrent Neural Networks** - RNNs for sequential data
+10. **B11 - Attention and Transformers** - Modern attention mechanisms
+11. **B12 - Byte Pair Encoding (BPE)** - Tokenization for NLP
+12. **B13 - Building a Mini Language Model** - Create your own GPT-style model
 
 ### Intermediate Level (Coming Soon)
 
@@ -290,8 +289,8 @@ Open the desired notebook and run the cells sequentially. All notebooks are self
 
 These notebooks are designed for learning and experimentation:
 
-- **For Beginners**: Start with Basic/L1 and progress sequentially through all Basic lessons
-- **For NLP Enthusiasts**: Complete L1-L3 first, then jump to Basic/L4 for tokenization
+- **For Beginners**: Start with Basic/B1 and progress sequentially through all Basic lessons
+- **For NLP Enthusiasts**: Complete B1-B11 first, then jump to B12 for tokenization and B13 for language models
 - **For Experimentation**: Modify the code, adjust parameters, and observe the results
 
 Each notebook includes:
@@ -304,7 +303,7 @@ Each notebook includes:
 
 1. Clone the repository
 2. Navigate to the `Basic/` folder
-3. Open `L1 - Arithmetic.ipynb` in Jupyter or Google Colab
+3. Open `B1 - Arithmetic.ipynb` in Jupyter or Google Colab
 4. Follow the lessons sequentially
 
 ## Structure

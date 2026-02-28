@@ -1,53 +1,53 @@
-# 🚀 AI Learning Path - From Basics to Building Language Models
+# AI Learning Path - From Basics to Building Language Models
 
 **A Comprehensive Open-Source Tutorial Series by a Master's Student, for Master's Students**
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Made with Love](https://img.shields.io/badge/Made%20with-❤️-red.svg)](https://github.com/nexageapps)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](http://makeapullrequest.com)
+[![GitHub Stars](https://img.shields.io/github/stars/nexageapps/AI?style=social)](https://github.com/nexageapps/AI)
 
-## 👋 About This Project
+## About This Project
 
 Hi! I'm a **Master of Artificial Intelligence (MAI)** student at the **University of Auckland**, and this is my open-source learning journey. I created this repository to document everything I'm learning and to help fellow students, researchers, and AI enthusiasts learn alongside me.
 
 **Why this repository exists:**
-- 📚 Learn AI concepts from scratch with a fellow student's perspective
-- 🤝 Build a community of learners who support each other
-- 💡 Share practical implementations, not just theory
-- 🌍 Make quality AI education accessible to everyone, everywhere
-- 🔥 Learn by doing - every concept comes with runnable code
+- Learn AI concepts from scratch with a fellow student's perspective
+- Build a community of learners who support each other
+- Share practical implementations, not just theory
+- Make quality AI education accessible to everyone, everywhere
+- Learn by doing - every concept comes with runnable code
 
-**This is not just a tutorial - it's a learning companion!** Whether you're a master's student like me, a self-learner, or a professional looking to upskill, you're welcome to learn with me.
+**This is not just a tutorial - it's a learning companion.** Whether you're a master's student like me, a self-learner, or a professional looking to upskill, you're welcome to learn with me.
 
-## 🎯 Mission
+## Mission
 
 This repository provides a **structured, hands-on learning path** to deeply understand Artificial Intelligence concepts - from basic arithmetic operations to building complete language models. Each lesson builds progressively on previous concepts with clear explanations, visualizations, and practical implementations that you can run immediately.
 
 ## Table of Contents
 
-- [About This Project](#-about-this-project)
-- [What Makes This Different](#-what-makes-this-different)
+- [About This Project](#about-this-project)
+- [What Makes This Different](#what-makes-this-different)
 - [Learning Path Diagram](#learning-path-diagram)
 - [Repository Structure](#repository-structure)
 - [Getting Started](#getting-started)
-- [Project Ideas for Students](#-project-ideas-for-students)
+- [Project Ideas for Students](#project-ideas-for-students)
 - [Contributing](#contributing)
-- [Author](#-author)
-- [Contact](#-contact--collaboration)
+- [Author](#author)
+- [Contact](#contact--collaboration)
 
-## ✨ What Makes This Different?
+## What Makes This Different?
 
 This is not just another AI tutorial collection - it's a **carefully designed curriculum** created by a student who understands the challenges of learning AI:
 
-- 🎯 **Student Perspective**: Written by someone currently learning, not just teaching
-- 🔨 **Builds Progressively**: From fundamentals to advanced concepts, no gaps
-- 💻 **100% Hands-On**: Every concept comes with runnable code
-- 📊 **Visual Learning**: Comprehensive visualizations to understand complex concepts
-- 🌍 **Real-World Focus**: Practical applications at each level
-- 🎓 **Academic Rigor**: Meets the standards of a top university program
-- 🚀 **Culminates in Building**: Create your own mini language model (GPT-style)
-- 🆓 **Completely Free**: Quality education shouldn't have a price tag
+- **Student Perspective**: Written by someone currently learning, not just teaching
+- **Builds Progressively**: From fundamentals to advanced concepts, no gaps
+- **100% Hands-On**: Every concept comes with runnable code
+- **Visual Learning**: Comprehensive visualizations to understand complex concepts
+- **Real-World Focus**: Practical applications at each level
+- **Academic Rigor**: Meets the standards of a top university program
+- **Culminates in Building**: Create your own mini language model (GPT-style)
+- **Completely Free**: Quality education shouldn't have a price tag
 
 **Target Audience:** Master's students in AI, undergraduate students, self-learners, bootcamp graduates, and anyone wanting to deeply understand AI/ML concepts.
 
@@ -338,7 +338,7 @@ AI/
 
 All notebooks are designed to run in Google Colab and include Colab badges for easy access.
 
-## 💡 Project Ideas for Students
+## Project Ideas for Students
 
 Ready to apply what you've learned? Here are hands-on project ideas perfect for master's students and portfolio building:
 
@@ -399,41 +399,41 @@ Contributions are welcome! To contribute:
 - Use self-contained examples (no external data dependencies)
 - Follow the existing code style
 
-## 🌟 Why Star This Repository?
+## Why Star This Repository?
 
-- ⭐ **Stay Updated**: Get notified when new lessons and projects are added
-- 🎓 **Support a Fellow Student**: Help me reach more learners
-- 📖 **Bookmark for Later**: Easy access to quality AI learning resources
-- 🤝 **Join the Community**: Be part of a growing learning community
-- 💪 **Motivation**: Your star motivates me to create more content!
+- **Stay Updated**: Get notified when new lessons and projects are added
+- **Support a Fellow Student**: Help me reach more learners
+- **Bookmark for Later**: Easy access to quality AI learning resources
+- **Join the Community**: Be part of a growing learning community
+- **Motivation**: Your star motivates me to create more content
 
-## 🤝 Join the Learning Community
+## Join the Learning Community
 
 This is a collaborative learning space! Here's how you can participate:
 
-- 🐛 **Found a bug?** Open an issue
-- 💡 **Have an idea?** Start a discussion
-- 📝 **Want to contribute?** Submit a pull request
-- 🤔 **Have questions?** Connect with me on LinkedIn
-- 🌟 **Enjoying the content?** Star the repo and share with friends!
+- **Found a bug?** Open an issue
+- **Have an idea?** Start a discussion
+- **Want to contribute?** Submit a pull request
+- **Have questions?** Connect with me on LinkedIn
+- **Enjoying the content?** Star the repo and share with friends
 
-**Let's learn together!** The best way to learn is to teach, and the best way to grow is to help others grow.
+**Let's learn together.** The best way to learn is to teach, and the best way to grow is to help others grow.
 
 ## License
 
 If you have a preferred license, add a LICENSE file to the repository. If none is present, consider using a permissive license such as MIT.
 
-## 👨‍🎓 Author
+## Author
 
 **Karthik Arjun**
-- 🎓 Master of Artificial Intelligence (MAI) Student
-- 🏛️ University of Auckland, New Zealand
-- 💼 LinkedIn: [karthik-arjun-a5b4a258](https://www.linkedin.com/in/karthik-arjun-a5b4a258/)
-- 💻 GitHub: [nexageapps](https://github.com/nexageapps)
+- Master of Artificial Intelligence (MAI) Student
+- University of Auckland, New Zealand
+- LinkedIn: [karthik-arjun-a5b4a258](https://www.linkedin.com/in/karthik-arjun-a5b4a258/)
+- GitHub: [nexageapps](https://github.com/nexageapps)
 
 *"Learning AI one notebook at a time, and sharing the journey with the world."*
 
-## 📚 References & Acknowledgments
+## References & Acknowledgments
 
 This repository builds upon excellent resources from the AI community:
 
@@ -445,24 +445,24 @@ This repository builds upon excellent resources from the AI community:
 
 Special thanks to all contributors and the open-source AI community!
 
-## 📬 Contact & Collaboration
+## Contact & Collaboration
 
 I'm always excited to connect with fellow learners and researchers!
 
-- 💬 **Questions?** Open an issue on GitHub
-- 🤝 **Collaboration?** Connect on LinkedIn
-- 📧 **Research Opportunities?** Reach out via LinkedIn
-- 🎤 **Speaking/Workshop Invitations?** I'd love to share and learn!
+- **Questions?** Open an issue on GitHub
+- **Collaboration?** Connect on LinkedIn
+- **Research Opportunities?** Reach out via LinkedIn
+- **Speaking/Workshop Invitations?** I'd love to share and learn
 
 ---
 
 <div align="center">
 
-**⭐ If you find this helpful, please star the repository! ⭐**
+**If you find this helpful, please star the repository!**
 
-*Made with ❤️ by a student, for students*
+*Made by a student, for students*
 
-**Happy Learning! 🚀**
+**Happy Learning!**
 
 </div>
 

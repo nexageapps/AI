@@ -216,6 +216,20 @@ This repository is designed by a fellow MAI student at the University of Aucklan
 
 ## Integration with Course Assessments
 
+### For COMPSCI 712 Assignments (AI Ethics)
+**Typical Assignment:** Analyze ethical implications of AI systems
+
+**How This Repo Helps:**
+- B06: Understanding bias in data and preprocessing
+- B07: Fairness metrics and evaluation
+- B14: Ethical AI assignments
+
+**What to Add:**
+- Philosophical analysis
+- Case studies of AI failures
+- Regulatory compliance considerations
+- Stakeholder impact analysis
+
 ### For COMPSCI 713 Assignments (AI Fundamentals)
 **Typical Assignment:** Implement basic AI/ML algorithms from scratch
 
@@ -243,7 +257,21 @@ This repository is designed by a fellow MAI student at the University of Aucklan
 - Scalability considerations
 - System performance benchmarks
 
-### For COMPSCI 762 Assignments (Foundations of ML)
+### For COMPSCI 761 Assignments (Advanced AI)
+**Typical Assignment:** Knowledge representation and search problems
+
+**How This Repo Helps:**
+- B06: Feature representation techniques
+- B12: Text and knowledge representation
+- B14: Advanced assignments
+
+**What to Add:**
+- Search algorithm implementations
+- Heuristic design
+- Planning systems
+- Knowledge base construction
+
+### For COMPSCI 762 Assignments (ML Foundations)
 **Typical Assignment:** Implement and compare ML algorithms
 
 **How This Repo Helps:**
@@ -255,6 +283,18 @@ This repository is designed by a fellow MAI student at the University of Aucklan
 - Theoretical analysis (not in repo)
 - Comparison with research papers
 - Novel variations or improvements
+
+### For COMPSCI 703 Assignments (Generalising AI)
+**Typical Assignment:** Build systems that generalize across tasks
+
+**How This Repo Helps:**
+- B11-B13: Transformer and LLM implementations
+- B15: Multi-task project templates
+
+**What to Add:**
+- Multi-task learning approaches
+- Transfer learning strategies
+- Generalization analysis
 
 ### For COMPSYS 721 Projects (Machine Intelligence)
 **Typical Project:** Implement a deep learning system
@@ -398,24 +438,219 @@ This repository is a living document, growing alongside my MAI journey. As I lea
 
 ---
 
-## Quick Reference: Lesson-to-Course Mapping
+## Quick Reference: Course-to-Lesson Mapping
 
-| Lesson | Primary Course | Topics Covered | When to Study |
-|--------|---------------|----------------|---------------|
-| B01 | COMPSCI 713 | TensorFlow Basics | Before Semester 1 |
-| B02 | COMPSCI 713, 762 | Linear Regression | Week 1-2 |
-| B03 | COMPSCI 713, 762 | Binary Classification | Week 2-3 |
-| B04 | COMPSCI 713, 762 | Multi-Class Classification | Week 3-4 |
-| B05 | COMPSCI 713, 762 | Neural Networks | Week 4-6 |
-| B06 | COMPSCI 761 | Data Preprocessing | Week 5-7 |
-| B07 | COMPSCI 762 | Model Evaluation | Week 6-8 |
-| B09 | COMPSCI 714, COMPSYS 721 | CNNs | Week 7-9 |
-| B10 | COMPSCI 714, COMPSYS 721 | RNNs | Week 8-10 |
-| B11 | COMPSCI 714, COMPSYS 721 | Transformers | Week 9-11 |
-| B12 | COMPSCI 703 | Tokenization | Week 10-12 |
-| B13 | COMPSCI 714, COMPSYS 721 | Language Models | Week 11-12 |
-| B14 | All Courses | Practice Assignments | Throughout Semester |
-| B15 | Dissertation | Capstone Projects | Semester 2 / Summer |
+Use this table to quickly find which lessons support each course:
+
+| Course | Code | Relevant Lessons | Focus Area | Priority |
+|--------|------|------------------|------------|----------|
+| AI Agency, Ethics and Society | COMPSCI 712 | B06, B07, B14, B15 | Ethics & Bias | Semester 1 |
+| AI Fundamentals | COMPSCI 713 | B01-B05, B14 | Core Algorithms | Semester 1 |
+| AI Architecture and Design | COMPSCI 714 | B09-B11, B13, B14, B15 | System Design | Semester 1/2 |
+| Advanced AI Topics | COMPSCI 761 | B06, B12, B14, B15 | Knowledge Rep | Semester 1/2 |
+| Foundations of ML | COMPSCI 762 | B02-B05, B07, B14 | ML Theory | Semester 1 |
+| Generalising AI | COMPSCI 703 | B11-B13, B14, B15 | General AI | Semester 2 |
+| Machine Intelligence | COMPSYS 721 | B09-B11, B13, B14 | Deep Learning | Semester 2 |
+
+**Recommended Study Order:**
+1. Start with COMPSCI 712 (Ethics) - understand responsible AI
+2. Then COMPSCI 713 (Fundamentals) - build strong foundations
+3. Parallel: COMPSCI 762 (ML Foundations) + COMPSCI 714 (Architecture)
+4. Advanced: COMPSCI 761, 703, COMPSYS 721
+
+---
+
+## Course-by-Course Guide
+
+Navigate to your specific course for detailed guidance:
+
+### COMPSCI 712: AI Agency, Ethics and Society
+**Course Focus:** Philosophical and ethical foundations of AI
+
+**Repository Coverage:**
+- **B06 - Data Preprocessing**: Understanding bias in data collection
+- **B07 - Model Evaluation**: Fairness metrics and ethical evaluation
+- **B14 - Practical Projects**: Assignments on bias detection
+- **B15 - Capstone Projects**: Ethical AI system design
+
+**How to Use:** 
+- Use B06 to understand how bias enters AI systems through data
+- Apply B07 metrics to evaluate fairness in your models
+- Complete ethical AI assignments from B14
+- Build responsible AI systems using B15 guidelines
+
+**What to Add for Assignments:**
+- Ethical analysis of AI systems
+- Bias detection and mitigation strategies
+- Privacy and consent considerations
+- Societal impact assessments
+
+---
+
+### COMPSCI 713: AI Fundamentals
+**Course Focus:** Core AI/ML algorithms and foundations
+
+**Repository Coverage:**
+- **B01 - Arithmetic**: TensorFlow and tensor fundamentals
+- **B02 - Linear Regression**: Core ML algorithms and gradient descent
+- **B03 - Binary Classification**: Classification fundamentals
+- **B04 - Multi-Class Classification**: Softmax and categorical problems
+- **B05 - Neural Network Fundamentals**: Building blocks of AI systems
+- **B14 - Practical Projects**: Assignments 1-5 (fundamentals practice)
+
+**How to Use:** 
+Complete B01-B05 sequentially before or during COMPSCI 713 lectures. These provide hands-on implementations of the algorithms discussed in class. Use B14 assignments to practice before course assignments.
+
+**What to Add for Assignments:**
+- Mathematical derivations and proofs
+- Complexity analysis (time and space)
+- Comparison with theoretical bounds
+- Algorithm variations and improvements
+
+**Study Timeline:**
+- Week 1-2: B01-B02 (Tensors and Linear Regression)
+- Week 3-4: B03-B04 (Classification)
+- Week 5-6: B05 (Neural Networks)
+- Week 7-8: B14 Assignments 1-5
+
+---
+
+### COMPSCI 714: AI Architecture and Design
+**Course Focus:** Designing and implementing AI system architectures
+
+**Repository Coverage:**
+- **B09 - CNNs**: Architecture design for computer vision
+- **B10 - RNNs**: Sequential architecture patterns
+- **B11 - Transformers**: Modern AI architecture design
+- **B13 - Mini Language Model**: End-to-end system architecture
+- **B14 - Practical Projects**: Assignments 6-10 (architecture practice)
+- **B15 - Capstone Projects**: Complete system design and implementation
+
+**How to Use:** 
+These lessons demonstrate practical architecture patterns and design decisions. Study the architecture choices in each notebook and understand the trade-offs. Use B15 projects as templates for your course projects.
+
+**What to Add for Assignments:**
+- Architecture justification and rationale
+- Design trade-off analysis
+- Scalability considerations
+- Performance benchmarking
+- Alternative architecture comparisons
+
+**Study Timeline:**
+- Week 1-3: B09 (CNN Architectures)
+- Week 4-6: B10-B11 (RNN and Transformer Architectures)
+- Week 7-9: B13 (Complete System Design)
+- Week 10-12: B15 (Capstone Project)
+
+---
+
+### COMPSCI 761: Advanced Topics in Artificial Intelligence
+**Course Focus:** Knowledge representation, search, and advanced AI topics
+
+**Repository Coverage:**
+- **B06 - Data Preprocessing**: Feature engineering and representation
+- **B12 - Byte Pair Encoding**: Knowledge representation for NLP
+- **B14 - Practical Projects**: Assignment 9 (Custom Tokenizer)
+- **B15 - Capstone Projects**: Advanced AI applications
+
+**How to Use:** 
+Focus on how data and knowledge are represented in AI systems. B06 covers feature representation, B12 covers text representation. Use these as foundations for understanding knowledge representation in AI.
+
+**What to Add for Assignments:**
+- Search algorithm implementations
+- Knowledge base design
+- Heuristic function development
+- Planning and reasoning systems
+
+**Study Timeline:**
+- Week 1-3: B06 (Feature Representation)
+- Week 4-6: B12 (Text Representation)
+- Week 7-9: B14 Assignment 9
+- Week 10-12: Advanced topics from lectures
+
+---
+
+### COMPSCI 762: Foundations of Machine Learning
+**Course Focus:** Theoretical foundations and core ML algorithms
+
+**Repository Coverage:**
+- **B02 - Linear Regression**: Regression fundamentals
+- **B03 - Binary Classification**: Classification theory
+- **B04 - Multi-Class Classification**: Multi-class methods
+- **B05 - Neural Network Fundamentals**: Deep learning foundations
+- **B07 - Model Evaluation**: Comprehensive metrics and validation
+- **B14 - Practical Projects**: Assignments 1-5 (ML fundamentals)
+
+**How to Use:** 
+These lessons provide practical implementations that complement the theoretical concepts in COMPSCI 762. Complete them alongside lectures to build intuition. Use B14 assignments for exam preparation.
+
+**What to Add for Assignments:**
+- Theoretical analysis and proofs
+- Comparison with research papers
+- Novel variations or improvements
+- Computational learning theory connections
+
+**Study Timeline:**
+- Week 1-2: B02 (Linear Models)
+- Week 3-4: B03-B04 (Classification)
+- Week 5-7: B05 (Neural Networks)
+- Week 8-10: B07 (Evaluation)
+- Week 11-12: B14 Assignments
+
+---
+
+### COMPSCI 703: Generalising Artificial Intelligence
+**Course Focus:** Building general AI systems, NLP, and reasoning
+
+**Repository Coverage:**
+- **B11 - Attention and Transformers**: Natural language understanding foundations
+- **B12 - Byte Pair Encoding**: Tokenization for language systems
+- **B13 - Mini Language Model**: Building general AI systems
+- **B14 - Practical Projects**: Assignments 8-10 (NLP and LLMs)
+- **B15 - Capstone Projects**: Research-oriented projects
+
+**How to Use:** 
+Use these as starting points for understanding how specialized AI systems contribute to general AI. B13 shows how to build a complete language model that can generalize across tasks.
+
+**What to Add for Assignments:**
+- Planning and reasoning implementations
+- Natural language understanding systems
+- Knowledge acquisition methods
+- Multi-task learning approaches
+
+**Study Timeline:**
+- Week 1-3: B11 (Attention Mechanisms)
+- Week 4-6: B12 (Tokenization)
+- Week 7-9: B13 (Language Models)
+- Week 10-12: B15 (Research Project)
+
+---
+
+### COMPSYS 721: Machine Intelligence and Deep Learning
+**Course Focus:** Deep neural networks and cutting-edge architectures
+
+**Repository Coverage:**
+- **B09 - CNNs**: Convolutional neural networks for computer vision
+- **B10 - RNNs**: Recurrent networks for sequential data
+- **B11 - Transformers**: Attention mechanisms and modern NLP
+- **B13 - Mini Language Model**: Complete transformer implementation
+- **B14 - Practical Projects**: Assignments 6-10 (deep learning)
+
+**How to Use:** 
+These lessons provide hands-on implementations of the architectures discussed in COMPSYS 721. Experiment with different architectures and hyperparameters. Use B14 assignments to practice before course projects.
+
+**What to Add for Assignments:**
+- Literature review of recent papers
+- Ablation studies on architecture choices
+- Performance optimization techniques
+- Novel architecture variations
+- Research contribution
+
+**Study Timeline:**
+- Week 1-3: B09 (CNNs)
+- Week 4-6: B10 (RNNs)
+- Week 7-9: B11 (Transformers)
+- Week 10-12: B13 (Complete LLM)
 
 ---
 

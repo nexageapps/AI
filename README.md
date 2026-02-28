@@ -447,7 +447,14 @@ This is a collaborative learning space! Here's how you can participate:
 
 ## License
 
-If you have a preferred license, add a LICENSE file to the repository. If none is present, consider using a permissive license such as MIT.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+You are free to:
+- Use this project for personal or commercial purposes
+- Modify and distribute the code
+- Use it in your own projects
+
+Attribution is appreciated but not required.
 
 ## Author
 

@@ -537,22 +537,27 @@ graph TD
 
 ```mermaid
 graph TD
-    A[Having Issues?] --> B{What Type?}
-    B -->|Math| C[Focus on Intuition First<br/>Use Visualizations<br/>Khan Academy Review]
-    B -->|Code| D{Error Type?}
-    B -->|Conceptual| E[Re-read Explanations<br/>Watch Videos<br/>Discuss with Peers]
-    B -->|Motivation| F[Join Study Group<br/>Adjust Pace<br/>Take Breaks]
+    A["Having Issues?"] --> B{"What Type?"}
+    B -->|"Math"| C["Focus on Intuition First<br/>Use Visualizations<br/>Khan Academy Review"]
+    B -->|"Code"| D{"Error Type?"}
+    B -->|"Conceptual"| E["Re-read Explanations<br/>Watch Videos<br/>Discuss with Peers"]
+    B -->|"Motivation"| F["Join Study Group<br/>Adjust Pace<br/>Take Breaks"]
     
-    D -->|Shape Error| G[Check Tensor Dimensions<br/>Use print statements<br/>Review B01]
-    D -->|Loss Not Decreasing| H[Check Learning Rate<br/>Verify Data Preprocessing<br/>Review B02]
-    D -->|Overfitting| I[Add Regularization<br/>More Data<br/>Review B07]
-    D -->|Other| J[Read Error Message<br/>Search Online<br/>Ask ChatGPT]
+    D -->|"Shape Error"| G["Check Tensor Dimensions<br/>Use print statements<br/>Review B01"]
+    D -->|"Loss Not Decreasing"| H["Check Learning Rate<br/>Verify Data Preprocessing<br/>Review B02"]
+    D -->|"Overfitting"| I["Add Regularization<br/>More Data<br/>Review B07"]
+    D -->|"Other"| J["Read Error Message<br/>Search Online<br/>Ask ChatGPT"]
     
-    style A fill:#FFB6C1
-    style B fill:#87CEEB
-    style C fill:#90EE90
-    style E fill:#90EE90
-    style F fill:#90EE90
+    style A fill:#ffebee,stroke:#c62828,stroke-width:3px,color:#000
+    style B fill:#e3f2fd,stroke:#1976d2,stroke-width:2px,color:#000
+    style C fill:#e8f5e9,stroke:#43a047,stroke-width:2px,color:#000
+    style D fill:#fff3e0,stroke:#f57c00,stroke-width:2px,color:#000
+    style E fill:#e8f5e9,stroke:#43a047,stroke-width:2px,color:#000
+    style F fill:#e8f5e9,stroke:#43a047,stroke-width:2px,color:#000
+    style G fill:#fff9c4,stroke:#f9a825,stroke-width:2px,color:#000
+    style H fill:#fff9c4,stroke:#f9a825,stroke-width:2px,color:#000
+    style I fill:#fff9c4,stroke:#f9a825,stroke-width:2px,color:#000
+    style J fill:#fff9c4,stroke:#f9a825,stroke-width:2px,color:#000
 ```
 
 ### Challenge 1: "The math is overwhelming"

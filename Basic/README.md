@@ -748,7 +748,8 @@ Found an error? Have a suggestion? Want to contribute?
 **Remember:** Learning AI/ML is a marathon, not a sprint. Take your time, understand deeply, and enjoy the journey!
 
 **Author:** Karthik Arjun  
-**LinkedIn:** [karthik-arjun-a5b4a258](https://www.linkedin.com/in/karthik-arjun-a5b4a258/)
+**LinkedIn:** [karthik-arjun-a5b4a258](https://www.linkedin.com/in/karthik-arjun-a5b4a258/)  
+**Hugging Face:** [nexageapps](https://huggingface.co/spaces/nexageapps)
 
 *"The best way to learn is to build. Start your AI journey today!"*
 

@@ -8,6 +8,12 @@
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](http://makeapullrequest.com)
 [![GitHub Stars](https://img.shields.io/github/stars/nexageapps/AI?style=social)](https://github.com/nexageapps/AI)
 
+---
+
+**DISCLAIMER:** This is an independent student project and is not officially affiliated with, endorsed by, or sponsored by the University of Auckland. This repository is created by a current MAI student to share personal learning materials with fellow students. Use of the University of Auckland name is solely to provide context about the author's academic program and to help students align their self-study with their coursework. All course references (COMPSCI 712, 713, 714, 761, 762, 703, COMPSYS 721) are provided for educational context only. The content, opinions, and implementations in this repository are solely those of the author and do not represent the views or policies of the University of Auckland.
+
+---
+
 ## About This Project
 
 Hi! I'm a **Master of Artificial Intelligence (MAI)** student at the **University of Auckland**, and this is my open-source learning journey. I created this repository to document everything I'm learning and to help fellow students, researchers, and AI enthusiasts learn alongside me.
@@ -53,7 +59,7 @@ Check out the comprehensive **[MAI Student Guide](./MAI_STUDENT_GUIDE.md)** for:
 
 This repository provides a **structured, hands-on learning path** to deeply understand Artificial Intelligence concepts - from basic arithmetic operations to building complete language models. Each lesson builds progressively on previous concepts with clear explanations, visualizations, and practical implementations that you can run immediately.
 
-**Specifically designed to help Master of Artificial Intelligence (MAI) students at the University of Auckland** succeed in their coursework by providing practical implementations that complement theoretical lectures. The content directly aligns with core MAI courses including COMPSCI 713, 714, 761, 762, 703, and COMPSYS 721.
+**Specifically designed to help Master of Artificial Intelligence (MAI) students at the University of Auckland** succeed in their coursework by providing practical implementations that complement theoretical lectures. The content directly aligns with core University of Auckland MAI courses including COMPSCI 713, 714, 761, 762, 703, and COMPSYS 721.
 
 ## Table of Contents
 
@@ -104,13 +110,13 @@ This is not just another AI tutorial collection - it's a **carefully designed cu
 
 **Language:** Jupyter Notebooks (100%) - All runnable in Google Colab with zero setup!
 
-**Why MAI Students Love This Repository:**
-- Directly complements UoA course content
+**Why University of Auckland MAI Students Love This Repository:**
+- Directly complements University of Auckland course content
 - Saves hours of implementation time
 - Provides tested, working code examples
 - Helps achieve better grades through practice
 - Builds portfolio for job applications
-- Created by a fellow MAI student who understands your challenges
+- Created by a fellow University of Auckland MAI student who understands your challenges
 
 ## Learning Path Diagram
 
@@ -265,7 +271,7 @@ AI/
 ├── Intermediate/       # [COMING SOON]
 ├── Advanced/           # [COMING SOON]
 ├── Expert/             # [COMING SOON]
-└── MAI_STUDENT_GUIDE.md # Guide for UoA MAI Students
+├── MAI_STUDENT_GUIDE.md # Guide for University of Auckland MAI Students
 ```
 
 ### Basic Level (Available Now - 15 Lessons)
@@ -509,7 +515,7 @@ This repository is **specifically designed to help MAI students at the Universit
 - **Semester Break**: B14 practice assignments (reinforce learning)
 - **Semester 2**: B15 capstone + Dissertation work (build portfolio)
 
-**Benefits for MAI Students:**
+**Benefits for University of Auckland MAI Students:**
 - **Better Understanding**: Practical implementations clarify theoretical concepts
 - **Higher Grades**: Practice before assignments leads to better performance
 - **Time Savings**: Reference implementations save hours of debugging
@@ -517,7 +523,7 @@ This repository is **specifically designed to help MAI students at the Universit
 - **Career Ready**: Portfolio projects impress employers
 - **Research Foundation**: Capstone projects can evolve into dissertation topics
 
-**Not a UoA MAI student?** The content is still valuable for any AI/ML program at any university!
+**Not a University of Auckland MAI student?** The content is still valuable for any AI/ML program at any university!
 
 ## Structure
 
@@ -693,6 +699,8 @@ Attribution is appreciated but not required.
 - GitHub: [nexageapps](https://github.com/nexageapps)
 
 *"Learning AI one notebook at a time, and sharing the journey with the world."*
+
+**Note:** This is a personal learning project and is not officially affiliated with the University of Auckland.
 
 ## References & Acknowledgments
 

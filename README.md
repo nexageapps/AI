@@ -1,81 +1,232 @@
-# AI Learning Path - Complete Journey from Basics to Production
+# 🚀 AI Learning Path - From Basics to Building Language Models
 
-**A Comprehensive 15-Lesson Curriculum for Master's Students in AI**
+**A Comprehensive Open-Source Tutorial Series by a Master's Student, for Master's Students**
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Made with Love](https://img.shields.io/badge/Made%20with-❤️-red.svg)](https://github.com/nexageapps)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](http://makeapullrequest.com)
 
-## Mission Statement
+## 👋 About This Project
 
-This repository provides a **complete, production-ready learning path** for Master's students in AI - from basic tensor operations to deploying models in production. All 15 lessons build progressively with detailed explanations, visualizations, and real-world applications.
+Hi! I'm a **Master of Artificial Intelligence (MAI)** student at the **University of Auckland**, and this is my open-source learning journey. I created this repository to document everything I'm learning and to help fellow students, researchers, and AI enthusiasts learn alongside me.
 
-## Why This Curriculum?
+**Why this repository exists:**
+- 📚 Learn AI concepts from scratch with a fellow student's perspective
+- 🤝 Build a community of learners who support each other
+- 💡 Share practical implementations, not just theory
+- 🌍 Make quality AI education accessible to everyone, everywhere
+- 🔥 Learn by doing - every concept comes with runnable code
 
-- **Complete Coverage**: 15 comprehensive lessons covering theory to practice
-- **Graduate Level**: Detailed explanations suitable for Master's students
-- **Hands-On**: Every concept backed by runnable code
-- **Industry Ready**: Includes preprocessing, evaluation, and deployment
-- **Zero Setup**: All notebooks run in Google Colab
+**This is not just a tutorial - it's a learning companion!** Whether you're a master's student like me, a self-learner, or a professional looking to upskill, you're welcome to learn with me.
+
+## 🎯 Mission
+
+This repository provides a **structured, hands-on learning path** to deeply understand Artificial Intelligence concepts - from basic arithmetic operations to building complete language models. Each lesson builds progressively on previous concepts with clear explanations, visualizations, and practical implementations that you can run immediately.
 
 ## Table of Contents
 
-- [Complete Learning Path](#complete-learning-path)
-- [Lesson Descriptions](#lesson-descriptions)
-- [Prerequisites](#prerequisites)
+- [About This Project](#-about-this-project)
+- [What Makes This Different](#-what-makes-this-different)
+- [Learning Path Diagram](#learning-path-diagram)
+- [Repository Structure](#repository-structure)
 - [Getting Started](#getting-started)
-- [Installation](#installation)
-- [Project Structure](#project-structure)
+- [Project Ideas for Students](#-project-ideas-for-students)
 - [Contributing](#contributing)
-- [Author](#author)
+- [Author](#-author)
+- [Contact](#-contact--collaboration)
 
-## Complete Learning Path
+## ✨ What Makes This Different?
 
-### Stage 1: Foundation (B1-B3)
-**Goal**: Master basics of ML and understand data representation
+This is not just another AI tutorial collection - it's a **carefully designed curriculum** created by a student who understands the challenges of learning AI:
 
-| Lesson | Topic | Key Concepts | Duration |
-|--------|-------|--------------|----------|
-| B1 | Arithmetic Operations | TensorFlow basics, tensor operations | 30 min |
-| B2 | Linear Regression | Gradient descent, loss functions | 45 min |
-| B3 | Binary Classification | Sigmoid, cross-entropy, decision boundaries | 1 hour |
+- 🎯 **Student Perspective**: Written by someone currently learning, not just teaching
+- 🔨 **Builds Progressively**: From fundamentals to advanced concepts, no gaps
+- 💻 **100% Hands-On**: Every concept comes with runnable code
+- 📊 **Visual Learning**: Comprehensive visualizations to understand complex concepts
+- 🌍 **Real-World Focus**: Practical applications at each level
+- 🎓 **Academic Rigor**: Meets the standards of a top university program
+- 🚀 **Culminates in Building**: Create your own mini language model (GPT-style)
+- 🆓 **Completely Free**: Quality education shouldn't have a price tag
 
-### Stage 2: Core Machine Learning (B4-B8)
-**Goal**: Build strong ML fundamentals and practical skills
+**Target Audience:** Master's students in AI, undergraduate students, self-learners, bootcamp graduates, and anyone wanting to deeply understand AI/ML concepts.
 
-| Lesson | Topic | Key Concepts | Duration |
-|--------|-------|--------------|----------|
-| B4 | Multi-Class Classification | Softmax, categorical cross-entropy | 1 hour |
-| B5 | Neural Network Fundamentals | MLPs, activation functions, backpropagation | 1.5 hours |
-| B6 | Data Preprocessing | Feature engineering, scaling, encoding | 2 hours |
-| B7 | Model Evaluation | Metrics, cross-validation, imbalanced data | 2 hours |
-| B8 | Regularization | Overfitting, L1/L2, ensemble methods | 2 hours |
+**Language:** Jupyter Notebooks (100%) - All runnable in Google Colab with zero setup!
 
-### Stage 3: Deep Learning (B9-B11)
-**Goal**: Master modern deep learning architectures
+## Learning Path Diagram
 
-| Lesson | Topic | Key Concepts | Duration |
-|--------|-------|--------------|----------|
-| B9 | Convolutional Neural Networks | Convolution, pooling, image classification | 2 hours |
-| B10 | Recurrent Neural Networks | RNN, LSTM, GRU, sequence modeling | 2 hours |
-| B11 | Attention & Transformers | Self-attention, multi-head, positional encoding | 2.5 hours |
+```mermaid
+graph TB
+    Start([START YOUR AI JOURNEY]):::startNode
+    
+    subgraph Basic["BASIC LEVEL"]
+        L1["L1: Arithmetic<br/>Tensor Operations"]:::basic
+        L2["L2: Linear Patterns<br/>Regression & Graphs"]:::basic
+        L3["L3: Binary Classification<br/>Two-Class Problems"]:::basic
+        L5["L5: Multi-Class<br/>Multiple Categories"]:::basic
+        L6["L6: Neural Networks<br/>Architecture Deep Dive"]:::basic
+        L7["L7: CNNs<br/>Image Processing"]:::basic
+        L8["L8: RNNs<br/>Sequential Data"]:::basic
+        L9["L9: Transformers<br/>Attention Mechanism"]:::basic
+        L4["L4: Tokenization<br/>Byte Pair Encoding"]:::basic
+        L10["L10: Build Mini LLM<br/>GPT-Style Model"]:::basic
+        L11["L11: Data Engineering<br/>Preprocessing & Features"]:::basic
+        L12["L12: Model Evaluation<br/>Performance Metrics"]:::basic
+    end
+    
+    subgraph Intermediate["INTERMEDIATE LEVEL"]
+        I1["Transfer Learning"]:::intermediate
+        I2["Advanced Optimization"]:::intermediate
+        I3["Advanced Architectures"]:::intermediate
+        I4["Hyperparameter Tuning"]:::intermediate
+    end
+    
+    subgraph Advanced["ADVANCED LEVEL"]
+        A1["Fine-tuning LLMs"]:::advanced
+        A2["RAG Systems"]:::advanced
+        A3["Multi-Modal AI"]:::advanced
+        A4["Production MLOps"]:::advanced
+    end
+    
+    subgraph Expert["EXPERT LEVEL"]
+        E1["Research & Papers"]:::expert
+        E2["Novel Architectures"]:::expert
+        E3["Open Source Contribution"]:::expert
+    end
+    
+    Start --> L1
+    L1 --> L2
+    L2 --> L3
+    L2 --> L5
+    L3 --> L6
+    L5 --> L6
+    L6 --> L7
+    L6 --> L8
+    L7 --> L9
+    L8 --> L9
+    L9 --> L4
+    L4 --> L10
+    L10 --> L11
+    L11 --> L12
+    
+    L12 --> I1
+    L12 --> I2
+    I1 --> I3
+    I2 --> I3
+    I3 --> I4
+    
+    I4 --> A1
+    I4 --> A2
+    A1 --> A3
+    A2 --> A3
+    A3 --> A4
+    
+    A4 --> E1
+    A4 --> E2
+    E1 --> E3
+    E2 --> E3
+    
+    classDef startNode fill:#4A90E2,stroke:#2E5C8A,stroke-width:3px,color:#fff
+    classDef basic fill:#FFE5B4,stroke:#D4A574,stroke-width:2px,color:#000
+    classDef intermediate fill:#B4E5FF,stroke:#74A5D4,stroke-width:2px,color:#000
+    classDef advanced fill:#D4B4FF,stroke:#9474D4,stroke-width:2px,color:#000
+    classDef expert fill:#FFD700,stroke:#B8860B,stroke-width:3px,color:#000
+```
 
-### Stage 4: NLP Specialization (B12-B13)
-**Goal**: Build language models from scratch
+### Learning Path Explanation
 
-| Lesson | Topic | Key Concepts | Duration |
-|--------|-------|--------------|----------|
-| B12 | Byte Pair Encoding | Tokenization, subword units, BPE algorithm | 1 hour |
-| B13 | Mini Language Model | GPT architecture, causal attention, text generation | 3 hours |
+**Color Guide:**
+- Blue: Your entry point into AI
+- Peach: Basic Level - Foundation concepts (L1-L12)
+- Light Blue: Intermediate Level - Advanced techniques
+- Purple: Advanced Level - Production systems
+- Gold: Expert Level - Research and innovation
 
-### Stage 5: Advanced Topics (B14-B15)
-**Goal**: Optimize and deploy models to production
+**Progression Path:**
 
-| Lesson | Topic | Key Concepts | Duration |
-|--------|-------|--------------|----------|
-| B14 | Optimization Algorithms | SGD, Adam, learning rate scheduling | 1.5 hours |
-| B15 | Model Deployment | Serialization, APIs, cloud deployment, monitoring | 2.5 hours |
+1. **Basic Level (Start Here)** - Complete all 12 lessons sequentially
+   - Foundation: Tensors, linear models, classification
+   - Neural Networks: Architecture, CNNs, RNNs, Transformers
+   - Language Models: Tokenization, building mini LLM
+   - Data Science: Preprocessing, feature engineering, evaluation
 
-**Total Learning Time**: Approximately 25-30 hours
+2. **Intermediate Level** - Build on fundamentals
+   - Transfer learning and fine-tuning techniques
+   - Advanced optimization and regularization
+   - Complex architectures and hyperparameter tuning
+
+3. **Advanced Level** - Production-ready systems
+   - Fine-tuning large language models
+   - RAG systems and multi-modal AI
+   - MLOps, deployment, and monitoring
+
+4. **Expert Level** - Contribute to the field
+   - Research paper implementation
+   - Novel architecture design
+   - Open-source contributions
+
+## Repository Structure
+
+This repository is organized into four progressive levels:
+
+```
+AI/
+├── Basic/           # Foundation lessons (L1-L12)
+├── Intermediate/    # Advanced topics (Coming Soon)
+├── Advanced/        # Production-ready systems (Coming Soon)
+├── Expert/          # Research-oriented topics (Coming Soon)
+└── archive/         # Historical documentation
+```
+
+### Basic Level (Available Now)
+
+Foundation lessons covering fundamental AI/ML concepts. [View all Basic lessons →](./Basic/)
+
+1. **L1 - Arithmetic** - TensorFlow basics and tensor operations
+2. **L2 - Linear Regression** - Linear regression fundamentals
+3. **L3 - Binary Classification** - Two-class classification problems
+4. **L4 - Byte Pair Encoding (BPE)** - Tokenization for NLP
+5. **L5 - Multi-Class Classification** - Multiple category classification
+6. **L6 - Neural Network Fundamentals** - Deep dive into NN architecture
+7. **L7 - Convolutional Neural Networks** - CNNs for image processing
+8. **L8 - Recurrent Neural Networks** - RNNs for sequential data
+9. **L9 - Attention and Transformers** - Modern attention mechanisms
+10. **L10 - Building a Mini Language Model** - Create your own GPT-style model
+11. **L11 - Data Preprocessing and Feature Engineering** - Data preparation techniques
+12. **L12 - Model Evaluation and Performance Metrics** - Measuring model performance
+
+### Intermediate Level (Coming Soon)
+
+Advanced topics building on basic concepts:
+- Transfer Learning and Fine-tuning
+- Advanced Optimization Techniques
+- Advanced CNN/RNN Architectures
+- Encoder-Decoder Models
+- Hyperparameter Tuning
+
+[View Intermediate roadmap →](./Intermediate/)
+
+### Advanced Level (Coming Soon)
+
+Production-ready AI systems:
+- Fine-tuning Large Language Models
+- Retrieval-Augmented Generation (RAG)
+- Multi-Modal AI
+- Model Deployment and MLOps
+- Ethical AI and Bias Mitigation
+
+[View Advanced roadmap →](./Advanced/)
+
+### Expert Level (Coming Soon)
+
+Research-oriented topics:
+- Novel Architecture Design
+- Research Paper Implementation
+- Neural Architecture Search
+- Meta-Learning
+- Contributing to Open-Source AI
+
+[View Expert roadmap →](./Expert/)
 
 ## Getting Started
 
@@ -161,18 +312,18 @@ Each notebook includes:
 ```
 AI/
 ├── Basic/
-│   ├── L1 - Arithmetic.ipynb
-│   ├── L2 - Straight Line Pattern with Graph.ipynb
-│   ├── L3 - Binary Classification.ipynb
-│   ├── L4 - Byte Pair Encoding (BPE).ipynb
-│   ├── L5 - Multi-Class Classification.ipynb
-│   ├── L6 - Neural Network Fundamentals.ipynb
-│   ├── L7 - Convolutional Neural Networks.ipynb
-│   ├── L8 - Recurrent Neural Networks.ipynb
-│   ├── L9 - Attention and Transformers.ipynb
-│   ├── L10 - Building a Mini Language Model.ipynb
-│   ├── L11 - Data Preprocessing and Feature Engineering.ipynb
-│   ├── L12 - Model Evaluation and Performance Metrics.ipynb
+│   ├── B1 - Arithmetic.ipynb
+│   ├── B2 - Linear Regression.ipynb
+│   ├── B3 - Binary Classification.ipynb
+│   ├── B4 - Multi-Class Classification.ipynb
+│   ├── B5 - Neural Network Fundamentals.ipynb
+│   ├── B6 - Data Preprocessing and Feature Engineering.ipynb
+│   ├── B7 - Model Evaluation and Performance Metrics.ipynb
+│   ├── B9 - Convolutional Neural Networks.ipynb
+│   ├── B10 - Recurrent Neural Networks.ipynb
+│   ├── B11 - Attention and Transformers.ipynb
+│   ├── B12 - Byte Pair Encoding (BPE).ipynb
+│   ├── B13 - Building a Mini Language Model.ipynb
 │   └── README.md
 ├── Intermediate/
 │   └── README.md (Coming Soon)
@@ -186,32 +337,6 @@ AI/
 ```
 
 All notebooks are designed to run in Google Colab and include Colab badges for easy access.
-
-## Contributing
-
-Contributions are welcome! To contribute:
-
-1. Fork the repository
-2. Create a feature branch: `git checkout -b feature/new-tutorial`
-3. Add your notebook to the appropriate level folder (Basic, Intermediate, Advanced, or Expert)
-4. Follow the naming convention: `LX - Topic.ipynb`
-5. Include:
-   - Author information and LinkedIn profile
-   - Clear comments and explanations
-   - Colab badge for easy access
-   - Creation and update dates
-6. Clear all outputs before committing (to keep the repo clean)
-7. Submit a pull request with a clear description
-
-**Notebook Guidelines:**
-- Keep code beginner-friendly with detailed comments
-- Include visualization where applicable
-- Use self-contained examples (no external data dependencies)
-- Follow the existing code style
-
-## License
-
-If you have a preferred license, add a LICENSE file to the repository. If none is present, consider using a permissive license such as MIT.
 
 ## 💡 Project Ideas for Students
 
@@ -252,6 +377,28 @@ Ready to apply what you've learned? Here are hands-on project ideas perfect for 
 - Collaborate with classmates - team projects are more fun
 - Present your projects at university seminars or local meetups
 
+## Contributing
+
+Contributions are welcome! To contribute:
+
+1. Fork the repository
+2. Create a feature branch: `git checkout -b feature/new-tutorial`
+3. Add your notebook to the appropriate level folder (Basic, Intermediate, Advanced, or Expert)
+4. Follow the naming convention: `LX - Topic.ipynb`
+5. Include:
+   - Author information and LinkedIn profile
+   - Clear comments and explanations
+   - Colab badge for easy access
+   - Creation and update dates
+6. Clear all outputs before committing (to keep the repo clean)
+7. Submit a pull request with a clear description
+
+**Notebook Guidelines:**
+- Keep code beginner-friendly with detailed comments
+- Include visualization where applicable
+- Use self-contained examples (no external data dependencies)
+- Follow the existing code style
+
 ## 🌟 Why Star This Repository?
 
 - ⭐ **Stay Updated**: Get notified when new lessons and projects are added
@@ -271,6 +418,10 @@ This is a collaborative learning space! Here's how you can participate:
 - 🌟 **Enjoying the content?** Star the repo and share with friends!
 
 **Let's learn together!** The best way to learn is to teach, and the best way to grow is to help others grow.
+
+## License
+
+If you have a preferred license, add a LICENSE file to the repository. If none is present, consider using a permissive license such as MIT.
 
 ## 👨‍🎓 Author
 

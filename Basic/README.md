@@ -400,22 +400,29 @@ jupyter lab
 
 ```mermaid
 graph TD
-    A[📚 Before Starting] --> B[Read Prerequisites<br/>Set Time Aside<br/>Prepare Environment]
-    B --> C[📖 While Learning]
-    C --> D[Read Carefully<br/>Run Every Cell<br/>Modify Code]
-    D --> E[Add Comments<br/>Study Visualizations<br/>Predict Outputs]
-    E --> F[✅ After Completing]
-    F --> G[Summarize Key Concepts<br/>Complete Assignments<br/>Teach Others]
-    G --> H[Connect to Real-World<br/>Review Periodically]
-    H --> I{Understood?}
-    I -->|Yes| J[Next Lesson]
-    I -->|No| K[Review & Practice]
+    A["Before Starting"] --> B["Read Prerequisites<br/>Set Time Aside<br/>Prepare Environment"]
+    B --> C["While Learning"]
+    C --> D["Read Carefully<br/>Run Every Cell<br/>Modify Code"]
+    D --> E["Add Comments<br/>Study Visualizations<br/>Predict Outputs"]
+    E --> F["After Completing"]
+    F --> G["Summarize Key Concepts<br/>Complete Assignments<br/>Teach Others"]
+    G --> H["Connect to Real-World<br/>Review Periodically"]
+    H --> I{"Understood?"}
+    I -->|"Yes"| J["Next Lesson"]
+    I -->|"No"| K["Review & Practice"]
     K --> C
     
-    style A fill:#87CEEB
-    style C fill:#FFE4B5
-    style F fill:#90EE90
-    style I fill:#FFB6C1
+    style A fill:#e3f2fd,stroke:#1976d2,stroke-width:3px,color:#000
+    style B fill:#e8eaf6,stroke:#3f51b5,stroke-width:2px,color:#000
+    style C fill:#fff3e0,stroke:#f57c00,stroke-width:3px,color:#000
+    style D fill:#fff8e1,stroke:#ffa726,stroke-width:2px,color:#000
+    style E fill:#fff8e1,stroke:#ffa726,stroke-width:2px,color:#000
+    style F fill:#e8f5e9,stroke:#43a047,stroke-width:3px,color:#000
+    style G fill:#f1f8e9,stroke:#7cb342,stroke-width:2px,color:#000
+    style H fill:#f1f8e9,stroke:#7cb342,stroke-width:2px,color:#000
+    style I fill:#f3e5f5,stroke:#8e24aa,stroke-width:2px,color:#000
+    style J fill:#c8e6c9,stroke:#2e7d32,stroke-width:3px,color:#000
+    style K fill:#ffccbc,stroke:#d84315,stroke-width:2px,color:#000
 ```
 
 ### Before Starting a Lesson

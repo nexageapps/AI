@@ -57,67 +57,78 @@ This is not just another AI tutorial collection - it's a **carefully designed cu
 ## Learning Path Diagram
 
 ```mermaid
-graph LR
-    Start([START YOUR AI JOURNEY]):::startNode
+graph TB
+    Start([🚀 START YOUR AI JOURNEY]):::startNode
     
-    subgraph Basic["BASIC LEVEL - Complete Sequentially"]
-        direction LR
-        B1["B1: Arithmetic<br/>Tensor Operations"]:::basic
-        B2["B2: Linear Regression<br/>Straight Line Patterns"]:::basic
-        B3["B3: Binary Classification<br/>Two-Class Problems"]:::basic
-        B4["B4: Multi-Class<br/>Multiple Categories"]:::basic
-        B5["B5: Neural Networks<br/>Architecture Deep Dive"]:::basic
-        B6["B6: Data Preprocessing<br/>Feature Engineering"]:::basic
-        B7["B7: Model Evaluation<br/>Performance Metrics"]:::basic
-        B9["B9: CNNs<br/>Image Processing"]:::basic
-        B10["B10: RNNs<br/>Sequential Data"]:::basic
-        B11["B11: Transformers<br/>Attention Mechanism"]:::basic
-        B12["B12: Tokenization<br/>Byte Pair Encoding"]:::basic
-        B13["B13: Build Mini LLM<br/>GPT-Style Model"]:::basic
+    subgraph Foundation["📚 FOUNDATION (B1-B3)"]
+        B1["B1: Arithmetic Operations<br/>Master tensor operations & TensorFlow basics"]:::basic
+        B2["B2: Linear Regression<br/>Learn gradient descent & loss functions"]:::basic
+        B3["B3: Binary Classification<br/>Understand decision boundaries & sigmoid"]:::basic
         
-        B1 --> B2 --> B3 --> B4 --> B5 --> B6 --> B7
-        B7 --> B9
-        B7 --> B10
-        B9 --> B11
-        B10 --> B11
-        B11 --> B12 --> B13
+        B1 --> B2 --> B3
     end
     
-    subgraph Intermediate["INTERMEDIATE LEVEL"]
-        direction LR
-        I1["Transfer Learning"]:::intermediate
-        I2["Advanced Optimization"]:::intermediate
-        I3["Advanced Architectures"]:::intermediate
-        I4["Hyperparameter Tuning"]:::intermediate
+    subgraph CoreML["🎯 CORE MACHINE LEARNING (B4-B7)"]
+        B4["B4: Multi-Class Classification<br/>Softmax & categorical cross-entropy"]:::basic
+        B5["B5: Neural Network Fundamentals<br/>MLPs, activation functions, backpropagation"]:::basic
+        B6["B6: Data Preprocessing<br/>Feature engineering, scaling, encoding"]:::basic
+        B7["B7: Model Evaluation<br/>Metrics, cross-validation, imbalanced data"]:::basic
+        
+        B4 --> B5 --> B6 --> B7
+    end
+    
+    subgraph DeepLearning["🧠 DEEP LEARNING (B9-B11)"]
+        B9["B9: Convolutional Neural Networks<br/>CNNs for computer vision & image processing"]:::basic
+        B10["B10: Recurrent Neural Networks<br/>RNNs, LSTMs, GRUs for sequential data"]:::basic
+        B11["B11: Attention & Transformers<br/>Self-attention mechanism & modern NLP"]:::basic
+        
+        B9 --> B11
+        B10 --> B11
+    end
+    
+    subgraph NLP["💬 NLP SPECIALIZATION (B12-B13)"]
+        B12["B12: Byte Pair Encoding<br/>Tokenization techniques for language models"]:::basic
+        B13["B13: Build Mini Language Model<br/>Create your own GPT-style model from scratch"]:::basic
+        
+        B12 --> B13
+    end
+    
+    subgraph Intermediate["🔧 INTERMEDIATE LEVEL"]
+        I1["Transfer Learning<br/>& Fine-tuning"]:::intermediate
+        I2["Advanced Optimization<br/>& Regularization"]:::intermediate
+        I3["Advanced Architectures<br/>ResNet, BERT, etc."]:::intermediate
+        I4["Hyperparameter Tuning<br/>& AutoML"]:::intermediate
         
         I1 --> I3
         I2 --> I3
         I3 --> I4
     end
     
-    subgraph Advanced["ADVANCED LEVEL"]
-        direction LR
-        A1["Fine-tuning LLMs"]:::advanced
-        A2["RAG Systems"]:::advanced
-        A3["Multi-Modal AI"]:::advanced
-        A4["Production MLOps"]:::advanced
+    subgraph Advanced["🚀 ADVANCED LEVEL"]
+        A1["Fine-tuning LLMs<br/>GPT, LLaMA, etc."]:::advanced
+        A2["RAG Systems<br/>Retrieval-Augmented Generation"]:::advanced
+        A3["Multi-Modal AI<br/>Vision + Language Models"]:::advanced
+        A4["Production MLOps<br/>Deployment & Monitoring"]:::advanced
         
         A1 --> A3
         A2 --> A3
         A3 --> A4
     end
     
-    subgraph Expert["EXPERT LEVEL"]
-        direction LR
-        E1["Research & Papers"]:::expert
-        E2["Novel Architectures"]:::expert
-        E3["Open Source Contribution"]:::expert
+    subgraph Expert["⭐ EXPERT LEVEL"]
+        E1["Research Papers<br/>Implementation"]:::expert
+        E2["Novel Architectures<br/>Design & Experimentation"]:::expert
+        E3["Open Source<br/>Contribution"]:::expert
         
         E1 --> E3
         E2 --> E3
     end
     
     Start --> B1
+    B3 --> B4
+    B7 --> B9
+    B7 --> B10
+    B11 --> B12
     B13 --> I1
     B13 --> I2
     I4 --> A1
@@ -125,11 +136,11 @@ graph LR
     A4 --> E1
     A4 --> E2
     
-    classDef startNode fill:#4A90E2,stroke:#2E5C8A,stroke-width:3px,color:#fff
-    classDef basic fill:#FFE5B4,stroke:#D4A574,stroke-width:2px,color:#000
-    classDef intermediate fill:#B4E5FF,stroke:#74A5D4,stroke-width:2px,color:#000
-    classDef advanced fill:#D4B4FF,stroke:#9474D4,stroke-width:2px,color:#000
-    classDef expert fill:#FFD700,stroke:#B8860B,stroke-width:3px,color:#000
+    classDef startNode fill:#4A90E2,stroke:#2E5C8A,stroke-width:4px,color:#fff,font-size:16px
+    classDef basic fill:#FFE5B4,stroke:#D4A574,stroke-width:3px,color:#000,font-size:14px
+    classDef intermediate fill:#B4E5FF,stroke:#74A5D4,stroke-width:3px,color:#000,font-size:14px
+    classDef advanced fill:#D4B4FF,stroke:#9474D4,stroke-width:3px,color:#000,font-size:14px
+    classDef expert fill:#FFD700,stroke:#B8860B,stroke-width:4px,color:#000,font-size:14px
 ```
 
 ### Learning Path Explanation

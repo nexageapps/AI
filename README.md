@@ -3,6 +3,7 @@
 **A Comprehensive Open-Source Tutorial Series by a Master's Student, for Master's Students**
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/)
+[![Sponsored by NexAge Apps](https://img.shields.io/badge/Sponsored%20by-NexAge%20Apps-blue?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNMTIgMkw0IDdWMTdMMTIgMjJMMjAgMTdWN0wxMiAyWiIgZmlsbD0id2hpdGUiLz48L3N2Zz4=)](https://nexageapps.com)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](http://makeapullrequest.com)
 [![GitHub Stars](https://img.shields.io/github/stars/nexageapps/AI?style=social)](https://github.com/nexageapps/AI)
@@ -60,18 +61,18 @@ graph TB
     Start([START YOUR AI JOURNEY]):::startNode
     
     subgraph Basic["BASIC LEVEL"]
-        L1["L1: Arithmetic<br/>Tensor Operations"]:::basic
-        L2["L2: Linear Patterns<br/>Regression & Graphs"]:::basic
-        L3["L3: Binary Classification<br/>Two-Class Problems"]:::basic
-        L5["L5: Multi-Class<br/>Multiple Categories"]:::basic
-        L6["L6: Neural Networks<br/>Architecture Deep Dive"]:::basic
-        L7["L7: CNNs<br/>Image Processing"]:::basic
-        L8["L8: RNNs<br/>Sequential Data"]:::basic
-        L9["L9: Transformers<br/>Attention Mechanism"]:::basic
-        L4["L4: Tokenization<br/>Byte Pair Encoding"]:::basic
-        L10["L10: Build Mini LLM<br/>GPT-Style Model"]:::basic
-        L11["L11: Data Engineering<br/>Preprocessing & Features"]:::basic
-        L12["L12: Model Evaluation<br/>Performance Metrics"]:::basic
+        B1["B1: Arithmetic<br/>Tensor Operations"]:::basic
+        B2["B2: Linear Regression<br/>Straight Line Patterns"]:::basic
+        B3["B3: Binary Classification<br/>Two-Class Problems"]:::basic
+        B4["B4: Multi-Class<br/>Multiple Categories"]:::basic
+        B5["B5: Neural Networks<br/>Architecture Deep Dive"]:::basic
+        B6["B6: Data Preprocessing<br/>Feature Engineering"]:::basic
+        B7["B7: Model Evaluation<br/>Performance Metrics"]:::basic
+        B9["B9: CNNs<br/>Image Processing"]:::basic
+        B10["B10: RNNs<br/>Sequential Data"]:::basic
+        B11["B11: Transformers<br/>Attention Mechanism"]:::basic
+        B12["B12: Tokenization<br/>Byte Pair Encoding"]:::basic
+        B13["B13: Build Mini LLM<br/>GPT-Style Model"]:::basic
     end
     
     subgraph Intermediate["INTERMEDIATE LEVEL"]
@@ -94,23 +95,22 @@ graph TB
         E3["Open Source Contribution"]:::expert
     end
     
-    Start --> L1
-    L1 --> L2
-    L2 --> L3
-    L2 --> L5
-    L3 --> L6
-    L5 --> L6
-    L6 --> L7
-    L6 --> L8
-    L7 --> L9
-    L8 --> L9
-    L9 --> L4
-    L4 --> L10
-    L10 --> L11
-    L11 --> L12
+    Start --> B1
+    B1 --> B2
+    B2 --> B3
+    B3 --> B4
+    B4 --> B5
+    B5 --> B6
+    B6 --> B7
+    B7 --> B9
+    B7 --> B10
+    B9 --> B11
+    B10 --> B11
+    B11 --> B12
+    B12 --> B13
     
-    L12 --> I1
-    L12 --> I2
+    B13 --> I1
+    B13 --> I2
     I1 --> I3
     I2 --> I3
     I3 --> I4
@@ -137,18 +137,18 @@ graph TB
 
 **Color Guide:**
 - Blue: Your entry point into AI
-- Peach: Basic Level - Foundation concepts (L1-L12)
+- Peach: Basic Level - Foundation concepts (B1-B13)
 - Light Blue: Intermediate Level - Advanced techniques
 - Purple: Advanced Level - Production systems
 - Gold: Expert Level - Research and innovation
 
 **Progression Path:**
 
-1. **Basic Level (Start Here)** - Complete all 12 lessons sequentially
-   - Foundation: Tensors, linear models, classification
-   - Neural Networks: Architecture, CNNs, RNNs, Transformers
-   - Language Models: Tokenization, building mini LLM
-   - Data Science: Preprocessing, feature engineering, evaluation
+1. **Basic Level (Start Here)** - Complete all lessons sequentially
+   - **Foundation** (B1-B3): Tensors, linear models, binary classification
+   - **Core ML** (B4-B7): Multi-class classification, neural networks, data preprocessing, model evaluation
+   - **Deep Learning** (B9-B11): CNNs for images, RNNs for sequences, Transformers with attention
+   - **NLP Specialization** (B12-B13): Tokenization (BPE), building mini language model
 
 2. **Intermediate Level** - Build on fundamentals
    - Transfer learning and fine-tuning techniques
@@ -444,6 +444,12 @@ This repository builds upon excellent resources from the AI community:
 - **University of Auckland**: For providing an excellent learning environment
 
 Special thanks to all contributors and the open-source AI community!
+
+## Sponsor
+
+This project is proudly sponsored by **[NexAge Apps](https://nexageapps.com)** - Supporting open-source education and innovation in AI.
+
+NexAge Apps is committed to advancing technology education and making quality learning resources accessible to students worldwide.
 
 ## Contact & Collaboration
 

@@ -38,155 +38,177 @@ This is not just another AI tutorial collection - it's a **carefully designed cu
 ## Learning Path Diagram
 
 ```mermaid
-graph TD
-    Start([Start Your AI Journey]) --> L1[L1: Arithmetic<br/>Tensor Operations & TensorFlow Basics]
+graph TB
+    Start([START YOUR AI JOURNEY]):::startNode
     
-    L1 --> L2[L2: Linear Patterns<br/>Straight Line with Graphs]
+    subgraph Basic["BASIC LEVEL"]
+        L1["L1: Arithmetic<br/>Tensor Operations"]:::basic
+        L2["L2: Linear Patterns<br/>Regression & Graphs"]:::basic
+        L3["L3: Binary Classification<br/>Two-Class Problems"]:::basic
+        L5["L5: Multi-Class<br/>Multiple Categories"]:::basic
+        L6["L6: Neural Networks<br/>Architecture Deep Dive"]:::basic
+        L7["L7: CNNs<br/>Image Processing"]:::basic
+        L8["L8: RNNs<br/>Sequential Data"]:::basic
+        L9["L9: Transformers<br/>Attention Mechanism"]:::basic
+        L4["L4: Tokenization<br/>Byte Pair Encoding"]:::basic
+        L10["L10: Build Mini LLM<br/>GPT-Style Model"]:::basic
+        L11["L11: Data Engineering<br/>Preprocessing & Features"]:::basic
+        L12["L12: Model Evaluation<br/>Performance Metrics"]:::basic
+    end
     
-    L2 --> Classification{Classification<br/>Branch}
+    subgraph Intermediate["INTERMEDIATE LEVEL"]
+        I1["Transfer Learning"]:::intermediate
+        I2["Advanced Optimization"]:::intermediate
+        I3["Advanced Architectures"]:::intermediate
+        I4["Hyperparameter Tuning"]:::intermediate
+    end
     
-    Classification --> L3[L3: Binary Classification<br/>Two-Class Problems]
-    Classification --> L5[L5: Multi-Class Classification<br/>Multiple Categories]
+    subgraph Advanced["ADVANCED LEVEL"]
+        A1["Fine-tuning LLMs"]:::advanced
+        A2["RAG Systems"]:::advanced
+        A3["Multi-Modal AI"]:::advanced
+        A4["Production MLOps"]:::advanced
+    end
     
-    L3 --> L6[L6: Neural Network Fundamentals<br/>Deep Dive into Architecture]
+    subgraph Expert["EXPERT LEVEL"]
+        E1["Research & Papers"]:::expert
+        E2["Novel Architectures"]:::expert
+        E3["Open Source Contribution"]:::expert
+    end
+    
+    Start --> L1
+    L1 --> L2
+    L2 --> L3
+    L2 --> L5
+    L3 --> L6
     L5 --> L6
-    
-    L6 --> Advanced{Advanced<br/>Architectures}
-    
-    Advanced --> L7[L7: CNNs<br/>Convolutional Neural Networks<br/>Image Processing]
-    Advanced --> L8[L8: RNNs<br/>Recurrent Neural Networks<br/>Sequential Data]
-    
-    L7 --> L9[L9: Attention & Transformers<br/>Self-Attention Mechanism]
+    L6 --> L7
+    L6 --> L8
+    L7 --> L9
     L8 --> L9
+    L9 --> L4
+    L4 --> L10
+    L10 --> L11
+    L11 --> L12
     
-    L9 --> L4[L4: Byte Pair Encoding<br/>Tokenization for NLP]
+    L12 --> I1
+    L12 --> I2
+    I1 --> I3
+    I2 --> I3
+    I3 --> I4
     
-    L4 --> L10[L10: Mini Language Model<br/>Build Your Own GPT]
+    I4 --> A1
+    I4 --> A2
+    A1 --> A3
+    A2 --> A3
+    A3 --> A4
     
-    L10 --> L11[L11: Data Preprocessing<br/>Feature Engineering]
+    A4 --> E1
+    A4 --> E2
+    E1 --> E3
+    E2 --> E3
     
-    L11 --> NextLevel{Ready for<br/>Next Level?}
-    
-    NextLevel -->|Yes| Advanced_Path[Advanced Topics]
-    NextLevel -->|Review| L1
-    
-    Advanced_Path --> AP1[Fine-tuning LLMs]
-    Advanced_Path --> AP2[RAG Systems]
-    Advanced_Path --> AP3[Multi-Modal Models]
-    Advanced_Path --> AP4[Production Deployment]
-    
-    AP1 --> Expert[Expert Level]
-    AP2 --> Expert
-    AP3 --> Expert
-    AP4 --> Expert
-    
-    Expert --> Research[Research & Innovation]
-    
-    style Start fill:#e1f5ff
-    style L1 fill:#fff4e1
-    style L2 fill:#fff4e1
-    style L3 fill:#ffe1f5
-    style L5 fill:#ffe1f5
-    style L6 fill:#f5e1ff
-    style L7 fill:#e1ffe1
-    style L8 fill:#e1ffe1
-    style L9 fill:#ffe1e1
-    style L4 fill:#fff4e1
-    style L10 fill:#ffd700
-    style L11 fill:#ffd700
-    style Advanced_Path fill:#87ceeb
-    style Expert fill:#90ee90
-    style Research fill:#ff69b4
+    classDef startNode fill:#4A90E2,stroke:#2E5C8A,stroke-width:3px,color:#fff
+    classDef basic fill:#FFE5B4,stroke:#D4A574,stroke-width:2px,color:#000
+    classDef intermediate fill:#B4E5FF,stroke:#74A5D4,stroke-width:2px,color:#000
+    classDef advanced fill:#D4B4FF,stroke:#9474D4,stroke-width:2px,color:#000
+    classDef expert fill:#FFD700,stroke:#B8860B,stroke-width:3px,color:#000
 ```
 
 ### Learning Path Explanation
 
-**Foundation Level (L1-L2):**
-- Start with basic tensor operations and linear patterns
-- Build intuition for how neural networks learn
+**Color Guide:**
+- Blue: Your entry point into AI
+- Peach: Basic Level - Foundation concepts (L1-L12)
+- Light Blue: Intermediate Level - Advanced techniques
+- Purple: Advanced Level - Production systems
+- Gold: Expert Level - Research and innovation
 
-**Classification Level (L3, L5-L6):**
-- Master binary and multi-class classification
-- Deep dive into neural network architecture and training
+**Progression Path:**
 
-**Advanced Architectures (L7-L9):**
-- Learn specialized architectures: CNNs for images, RNNs for sequences
-- Understand the revolutionary Attention mechanism and Transformers
+1. **Basic Level (Start Here)** - Complete all 12 lessons sequentially
+   - Foundation: Tensors, linear models, classification
+   - Neural Networks: Architecture, CNNs, RNNs, Transformers
+   - Language Models: Tokenization, building mini LLM
+   - Data Science: Preprocessing, feature engineering, evaluation
 
-**Language Models (L4, L10-L11):**
-- Master tokenization with Byte Pair Encoding
-- Build a complete mini language model (GPT-style)
-- Learn data preprocessing and feature engineering
+2. **Intermediate Level** - Build on fundamentals
+   - Transfer learning and fine-tuning techniques
+   - Advanced optimization and regularization
+   - Complex architectures and hyperparameter tuning
 
-**Next Level (Advanced Topics):**
-- Fine-tuning large language models
-- Retrieval-Augmented Generation (RAG) systems
-- Multi-modal models (text, image, audio)
-- Production deployment and MLOps
+3. **Advanced Level** - Production-ready systems
+   - Fine-tuning large language models
+   - RAG systems and multi-modal AI
+   - MLOps, deployment, and monitoring
 
-**Expert Level:**
-- Research and innovation in AI
-- Contributing to open-source AI projects
-- Publishing papers and building novel architectures
+4. **Expert Level** - Contribute to the field
+   - Research paper implementation
+   - Novel architecture design
+   - Open-source contributions
 
-## Contents
+## Repository Structure
 
-This repository contains beginner-level notebooks covering fundamental AI/ML concepts:
+This repository is organized into four progressive levels:
 
-### Basic Tutorials
+```
+AI/
+├── Basic/           # Foundation lessons (L1-L12)
+├── Intermediate/    # Advanced topics (Coming Soon)
+├── Advanced/        # Production-ready systems (Coming Soon)
+├── Expert/          # Research-oriented topics (Coming Soon)
+└── archive/         # Historical documentation
+```
 
-1. **L1 - Arithmetic** (`Basic | L1 - Arithmetic.ipynb`)
-   - Introduction to TensorFlow basics
-   - Basic tensor operations (addition, multiplication)
+### Basic Level (Available Now)
 
-2. **L2 - Straight Line Pattern with Graph** (`Basic | L2 - Straight_line_Pattern_with_graph.ipynb`)
-   - Linear regression fundamentals
-   - Training a simple neural network to learn linear patterns
-   - Visualization of model predictions
+Foundation lessons covering fundamental AI/ML concepts. [View all Basic lessons →](./Basic/)
 
-3. **L3 - Binary Classification** (`Basic | L3 - Binary Classification.ipynb`)
-   - Binary classification using neural networks
-   - Training and evaluation metrics
-   - Decision boundary visualization
+1. **L1 - Arithmetic** - TensorFlow basics and tensor operations
+2. **L2 - Straight Line Pattern with Graph** - Linear regression fundamentals
+3. **L3 - Binary Classification** - Two-class classification problems
+4. **L4 - Byte Pair Encoding (BPE)** - Tokenization for NLP
+5. **L5 - Multi-Class Classification** - Multiple category classification
+6. **L6 - Neural Network Fundamentals** - Deep dive into NN architecture
+7. **L7 - Convolutional Neural Networks** - CNNs for image processing
+8. **L8 - Recurrent Neural Networks** - RNNs for sequential data
+9. **L9 - Attention and Transformers** - Modern attention mechanisms
+10. **L10 - Building a Mini Language Model** - Create your own GPT-style model
+11. **L11 - Data Preprocessing and Feature Engineering** - Data preparation techniques
+12. **L12 - Model Evaluation and Performance Metrics** - Measuring model performance
 
-4. **L4 - Byte Pair Encoding (BPE) - Complete Guide** (`Basic | L4 - Byte Pair Encoding [BPE].ipynb`)
-   - **Part 1**: Manual implementation of BPE algorithm from scratch
-   - **Part 2**: Using OpenAI's tiktoken library for GPT-2 tokenization
-   - **Part 3**: Data sampling with sliding window for sequence prediction
-   - Understanding tokenization in NLP
-   - Comparison of character-level vs subword tokenization
-   - Handling special tokens
-   - Creating training datasets for language models
+### Intermediate Level (Coming Soon)
 
-5. **L5 - Multi-Class Classification** (`Basic | L5 - Multi-Class Classification.ipynb`)
-   - Multi-class classification problems
-   - Softmax activation and categorical cross-entropy
-   - Model evaluation for multiple classes
+Advanced topics building on basic concepts:
+- Transfer Learning and Fine-tuning
+- Advanced Optimization Techniques
+- Advanced CNN/RNN Architectures
+- Encoder-Decoder Models
+- Hyperparameter Tuning
 
-6. **L6 - Neural Network Fundamentals** (`Basic | L6 - Neural Network Fundamentals.ipynb`)
-   - Deep dive into neural network architecture
-   - Activation functions and backpropagation
-   - Training optimization techniques
+[View Intermediate roadmap →](./Intermediate/)
 
-7. **L7 - Convolutional Neural Networks** (`Basic | L7 - Convolutional Neural Networks.ipynb`)
-   - CNN architecture and convolution operations
-   - Pooling layers and feature extraction
-   - Image classification applications
+### Advanced Level (Coming Soon)
 
-8. **L8 - Recurrent Neural Networks** (`Basic | L8 - Recurrent Neural Networks.ipynb`)
-   - RNN architecture for sequential data
-   - LSTM and GRU cells
-   - Time series and sequence modeling
+Production-ready AI systems:
+- Fine-tuning Large Language Models
+- Retrieval-Augmented Generation (RAG)
+- Multi-Modal AI
+- Model Deployment and MLOps
+- Ethical AI and Bias Mitigation
 
-9. **L9 - Attention and Transformers** (`Basic | L9 - Attention and Transformers.ipynb`)
-   - Attention mechanism fundamentals
-   - Self-attention and multi-head attention
-   - Transformer architecture basics
+[View Advanced roadmap →](./Advanced/)
 
-10. **L10 - Building a Mini Language Model** (`Basic | L10 - Building a Mini Language Model.ipynb`)
-    - Putting it all together: building a GPT-style model
-    - Training and inference pipeline
-    - Text generation and model evaluation
+### Expert Level (Coming Soon)
+
+Research-oriented topics:
+- Novel Architecture Design
+- Research Paper Implementation
+- Neural Architecture Search
+- Meta-Learning
+- Contributing to Open-Source AI
+
+[View Expert roadmap →](./Expert/)
 
 ## Getting Started
 
@@ -202,14 +224,18 @@ These instructions will get you a copy of the project up and running on your loc
 
 Using venv:
 
+```bash
 python -m venv .venv
 source .venv/bin/activate   # macOS / Linux
 .venv\Scripts\activate     # Windows
+```
 
 Or using conda:
 
+```bash
 conda create -n ai-notebooks python=3.10
 conda activate ai-notebooks
+```
 
 ### Install dependencies
 
@@ -246,8 +272,8 @@ Open the desired notebook and run the cells sequentially. All notebooks are self
 
 These notebooks are designed for learning and experimentation:
 
-- **For Beginners**: Start with L1 (Arithmetic) and progress sequentially through the lessons
-- **For NLP Enthusiasts**: Jump to the L4 series to understand tokenization fundamentals
+- **For Beginners**: Start with Basic/L1 and progress sequentially through all Basic lessons
+- **For NLP Enthusiasts**: Complete L1-L3 first, then jump to Basic/L4 for tokenization
 - **For Experimentation**: Modify the code, adjust parameters, and observe the results
 
 Each notebook includes:
@@ -256,20 +282,39 @@ Each notebook includes:
 - References to source materials
 - Detailed comments explaining the code
 
+## Quick Start
+
+1. Clone the repository
+2. Navigate to the `Basic/` folder
+3. Open `L1 - Arithmetic.ipynb` in Jupyter or Google Colab
+4. Follow the lessons sequentially
+
 ## Structure
 
 ```
 AI/
-├── Basic | L1 - Arithmetic.ipynb
-├── Basic | L2 - Straight_line_Pattern_with_graph.ipynb
-├── Basic | L3 - Binary Classification.ipynb
-├── Basic | L4 - Byte Pair Encoding [BPE].ipynb
-├── Basic | L5 - Multi-Class Classification.ipynb
-├── Basic | L6 - Neural Network Fundamentals.ipynb
-├── Basic | L7 - Convolutional Neural Networks.ipynb
-├── Basic | L8 - Recurrent Neural Networks.ipynb
-├── Basic | L9 - Attention and Transformers.ipynb
-├── Basic | L10 - Building a Mini Language Model.ipynb
+├── Basic/
+│   ├── L1 - Arithmetic.ipynb
+│   ├── L2 - Straight Line Pattern with Graph.ipynb
+│   ├── L3 - Binary Classification.ipynb
+│   ├── L4 - Byte Pair Encoding (BPE).ipynb
+│   ├── L5 - Multi-Class Classification.ipynb
+│   ├── L6 - Neural Network Fundamentals.ipynb
+│   ├── L7 - Convolutional Neural Networks.ipynb
+│   ├── L8 - Recurrent Neural Networks.ipynb
+│   ├── L9 - Attention and Transformers.ipynb
+│   ├── L10 - Building a Mini Language Model.ipynb
+│   ├── L11 - Data Preprocessing and Feature Engineering.ipynb
+│   ├── L12 - Model Evaluation and Performance Metrics.ipynb
+│   └── README.md
+├── Intermediate/
+│   └── README.md (Coming Soon)
+├── Advanced/
+│   └── README.md (Coming Soon)
+├── Expert/
+│   └── README.md (Coming Soon)
+├── archive/
+│   └── PROGRESS_SUMMARY.md
 └── README.md
 ```
 
@@ -281,14 +326,15 @@ Contributions are welcome! To contribute:
 
 1. Fork the repository
 2. Create a feature branch: `git checkout -b feature/new-tutorial`
-3. Add your notebook following the naming convention: `Basic | LX - Topic.ipynb`
-4. Include:
+3. Add your notebook to the appropriate level folder (Basic, Intermediate, Advanced, or Expert)
+4. Follow the naming convention: `LX - Topic.ipynb`
+5. Include:
    - Author information and LinkedIn profile
    - Clear comments and explanations
    - Colab badge for easy access
    - Creation and update dates
-5. Clear all outputs before committing (to keep the repo clean)
-6. Submit a pull request with a clear description
+6. Clear all outputs before committing (to keep the repo clean)
+7. Submit a pull request with a clear description
 
 **Notebook Guidelines:**
 - Keep code beginner-friendly with detailed comments

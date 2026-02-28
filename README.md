@@ -13,13 +13,23 @@
 Hi! I'm a **Master of Artificial Intelligence (MAI)** student at the **University of Auckland**, and this is my open-source learning journey. I created this repository to document everything I'm learning and to help fellow students, researchers, and AI enthusiasts learn alongside me.
 
 **Why this repository exists:**
-- Learn AI concepts from scratch with a fellow student's perspective
-- Build a community of learners who support each other
-- Share practical implementations, not just theory
-- Make quality AI education accessible to everyone, everywhere
-- Learn by doing - every concept comes with runnable code
+- 🎓 Learn AI concepts from scratch with a fellow student's perspective
+- 🤝 Build a community of learners who support each other
+- 💻 Share practical implementations, not just theory
+- 🌍 Make quality AI education accessible to everyone, everywhere
+- 🚀 Learn by doing - every concept comes with runnable code
+- 📚 Complement your university coursework with hands-on practice
 
 **This is not just a tutorial - it's a learning companion.** Whether you're a master's student like me, a self-learner, or a professional looking to upskill, you're welcome to learn with me.
+
+### 🎯 For University of Auckland MAI Students
+This repository is specifically designed to complement your MAI coursework! Check out the **[MAI Student Guide](./MAI_STUDENT_GUIDE.md)** for:
+- Direct mapping to UoA courses (COMPSCI 713, 714, 761, 762, 703, COMPSYS 721, etc.)
+- Study strategies for each semester
+- Assignment preparation tips
+- Research project ideas aligned with your dissertation
+
+**Not a UoA student?** No worries! The content is valuable for any AI/ML learner.
 
 ## Mission
 
@@ -172,6 +182,12 @@ The diagram flows from top to bottom, organized into clear stages. Each stage bu
 - Duration: ~4-6 hours
 - Prerequisites: Complete Deep Learning stage
 
+**5. Practice & Portfolio (B14-B15)** - Apply Your Skills
+- Complete practical assignments and build capstone projects
+- Create portfolio-worthy projects for job applications
+- Duration: ~2-6 weeks (depending on project scope)
+- Prerequisites: Complete all previous stages
+
 **5. Intermediate Level** - Advanced Techniques (Coming Soon)
 - Transfer learning, advanced optimization, complex architectures, hyperparameter tuning
 - Prerequisites: Complete all Basic level lessons
@@ -220,6 +236,8 @@ Foundation lessons covering fundamental AI/ML concepts. [View all Basic lessons 
 11. **B11 - Attention and Transformers** - Modern attention mechanisms
 12. **B12 - Byte Pair Encoding (BPE)** - Tokenization for NLP
 13. **B13 - Building a Mini Language Model** - Create your own GPT-style model
+14. **B14 - Practical Projects and Assignments** - Hands-on assignments to reinforce learning
+15. **B15 - Capstone Projects and Portfolio Building** - Build portfolio-worthy projects
 
 ### Intermediate Level (Coming Soon)
 
@@ -350,6 +368,8 @@ AI/
 │   ├── B11 - Attention and Transformers.ipynb
 │   ├── B12 - Byte Pair Encoding (BPE).ipynb
 │   ├── B13 - Building a Mini Language Model.ipynb
+│   ├── B14 - Practical Projects and Assignments.ipynb
+│   ├── B15 - Capstone Projects and Portfolio Building.ipynb
 │   └── README.md
 ├── Intermediate/
 │   └── README.md (Coming Soon)

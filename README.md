@@ -1,27 +1,39 @@
-# AI
+# AI Learning Path - From Basics to Building Language Models
 
-Artificial Intelligence - GenAI, ML, DL, and NLP
+**A Comprehensive Open-Source Tutorial Series for Master's Students in AI**
 
-## Table of Contents
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+## 🎯 Mission
+
+This repository provides a **structured, hands-on learning path** for Master's students in AI to deeply understand Artificial Intelligence concepts - from basic arithmetic operations to building complete language models. Each lesson builds progressively on previous concepts with clear explanations, visualizations, and practical implementations.
+
+## 📚 Table of Contents
 
 - [About](#about)
-- [Contents](#contents)
+- [Learning Path](#learning-path)
 - [Getting Started](#getting-started)
-  - [Requirements](#requirements)
-  - [Create a virtual environment](#create-a-virtual-environment)
-  - [Install dependencies](#install-dependencies)
-  - [Run notebooks](#run-notebooks)
-- [Usage](#usage)
-- [Structure](#structure)
+- [Prerequisites](#prerequisites)
+- [Installation](#installation)
+- [How to Use](#how-to-use)
 - [Contributing](#contributing)
+- [Author](#author)
 - [License](#license)
-- [Contact](#contact)
 
-## About
+## 🌟 About
 
-This repository collects Jupyter notebooks and supporting materials related to Artificial Intelligence, including Generative AI, Machine Learning, Deep Learning, and Natural Language Processing. The notebooks are intended for exploration, learning, and reference.
+This is not just another AI tutorial collection - it's a **carefully designed curriculum** that:
 
-Language composition: Jupyter Notebook (100%).
+- ✅ **Builds progressively** from fundamentals to advanced concepts
+- ✅ **Includes hands-on code** with detailed explanations
+- ✅ **Provides visualizations** to understand complex concepts
+- ✅ **Covers real-world applications** at each level
+- ✅ **Culminates in building** a mini language model (GPT-style)
+
+**Target Audience:** Master's students in AI, self-learners, and anyone wanting to deeply understand AI/ML concepts.
+
+**Language:** Jupyter Notebooks (100%) - All runnable in Google Colab!
 
 ## Contents
 
@@ -43,20 +55,44 @@ This repository contains beginner-level notebooks covering fundamental AI/ML con
    - Training and evaluation metrics
    - Decision boundary visualization
 
-4. **L4 - Byte Pair Encoding (BPE)** (`Basic | L4 - Byte Pair Encoding [BPE].ipynb`)
+4. **L4 - Byte Pair Encoding (BPE) - Complete Guide** (`Basic | L4 - Byte Pair Encoding [BPE].ipynb`)
+   - **Part 1**: Manual implementation of BPE algorithm from scratch
+   - **Part 2**: Using OpenAI's tiktoken library for GPT-2 tokenization
+   - **Part 3**: Data sampling with sliding window for sequence prediction
    - Understanding tokenization in NLP
-   - Manual implementation of BPE algorithm
    - Comparison of character-level vs subword tokenization
-
-5. **L4A - BPE with tiktoken** (`Basic | L4A - BPE with tiktoken.ipynb`)
-   - Using OpenAI's tiktoken library
-   - GPT-2 tokenization examples
    - Handling special tokens
-
-6. **L4B - BPE with Data Sample and Sliding Window** (`Basic | L4B - BPE with datasample SW.ipynb`)
-   - Implementing sliding window for sequence prediction
    - Creating training datasets for language models
-   - Next-word prediction fundamentals
+
+5. **L5 - Multi-Class Classification** (`Basic | L5 - Multi-Class Classification.ipynb`)
+   - Multi-class classification problems
+   - Softmax activation and categorical cross-entropy
+   - Model evaluation for multiple classes
+
+6. **L6 - Neural Network Fundamentals** (`Basic | L6 - Neural Network Fundamentals.ipynb`)
+   - Deep dive into neural network architecture
+   - Activation functions and backpropagation
+   - Training optimization techniques
+
+7. **L7 - Convolutional Neural Networks** (`Basic | L7 - Convolutional Neural Networks.ipynb`)
+   - CNN architecture and convolution operations
+   - Pooling layers and feature extraction
+   - Image classification applications
+
+8. **L8 - Recurrent Neural Networks** (`Basic | L8 - Recurrent Neural Networks.ipynb`)
+   - RNN architecture for sequential data
+   - LSTM and GRU cells
+   - Time series and sequence modeling
+
+9. **L9 - Attention and Transformers** (`Basic | L9 - Attention and Transformers.ipynb`)
+   - Attention mechanism fundamentals
+   - Self-attention and multi-head attention
+   - Transformer architecture basics
+
+10. **L10 - Building a Mini Language Model** (`Basic | L10 - Building a Mini Language Model.ipynb`)
+    - Putting it all together: building a GPT-style model
+    - Training and inference pipeline
+    - Text generation and model evaluation
 
 ## Getting Started
 
@@ -134,8 +170,12 @@ AI/
 ├── Basic | L2 - Straight_line_Pattern_with_graph.ipynb
 ├── Basic | L3 - Binary Classification.ipynb
 ├── Basic | L4 - Byte Pair Encoding [BPE].ipynb
-├── Basic | L4A - BPE with tiktoken.ipynb
-├── Basic | L4B - BPE with datasample SW.ipynb
+├── Basic | L5 - Multi-Class Classification.ipynb
+├── Basic | L6 - Neural Network Fundamentals.ipynb
+├── Basic | L7 - Convolutional Neural Networks.ipynb
+├── Basic | L8 - Recurrent Neural Networks.ipynb
+├── Basic | L9 - Attention and Transformers.ipynb
+├── Basic | L10 - Building a Mini Language Model.ipynb
 └── README.md
 ```
 

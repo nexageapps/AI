@@ -1,214 +1,81 @@
-# AI Learning Path - From Basics to Building Language Models
+# AI Learning Path - Complete Journey from Basics to Production
 
-**A Comprehensive Open-Source Tutorial Series for Master's Students in AI**
+**A Comprehensive 15-Lesson Curriculum for Master's Students in AI**
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-## Mission
+## Mission Statement
 
-This repository provides a **structured, hands-on learning path** for Master's students in AI to deeply understand Artificial Intelligence concepts - from basic arithmetic operations to building complete language models. Each lesson builds progressively on previous concepts with clear explanations, visualizations, and practical implementations.
+This repository provides a **complete, production-ready learning path** for Master's students in AI - from basic tensor operations to deploying models in production. All 15 lessons build progressively with detailed explanations, visualizations, and real-world applications.
+
+## Why This Curriculum?
+
+- **Complete Coverage**: 15 comprehensive lessons covering theory to practice
+- **Graduate Level**: Detailed explanations suitable for Master's students
+- **Hands-On**: Every concept backed by runnable code
+- **Industry Ready**: Includes preprocessing, evaluation, and deployment
+- **Zero Setup**: All notebooks run in Google Colab
 
 ## Table of Contents
 
-- [About](#about)
-- [Learning Path Diagram](#learning-path-diagram)
-- [Getting Started](#getting-started)
+- [Complete Learning Path](#complete-learning-path)
+- [Lesson Descriptions](#lesson-descriptions)
 - [Prerequisites](#prerequisites)
+- [Getting Started](#getting-started)
 - [Installation](#installation)
-- [How to Use](#how-to-use)
+- [Project Structure](#project-structure)
 - [Contributing](#contributing)
 - [Author](#author)
-- [License](#license)
 
-## About
+## Complete Learning Path
 
-This is not just another AI tutorial collection - it's a **carefully designed curriculum** that:
+### Stage 1: Foundation (B1-B3)
+**Goal**: Master basics of ML and understand data representation
 
-- **Builds progressively** from fundamentals to advanced concepts
-- **Includes hands-on code** with detailed explanations
-- **Provides visualizations** to understand complex concepts
-- **Covers real-world applications** at each level
-- **Culminates in building** a mini language model (GPT-style)
+| Lesson | Topic | Key Concepts | Duration |
+|--------|-------|--------------|----------|
+| B1 | Arithmetic Operations | TensorFlow basics, tensor operations | 30 min |
+| B2 | Linear Regression | Gradient descent, loss functions | 45 min |
+| B3 | Binary Classification | Sigmoid, cross-entropy, decision boundaries | 1 hour |
 
-**Target Audience:** Master's students in AI, self-learners, and anyone wanting to deeply understand AI/ML concepts.
+### Stage 2: Core Machine Learning (B4-B8)
+**Goal**: Build strong ML fundamentals and practical skills
 
-**Language:** Jupyter Notebooks (100%) - All runnable in Google Colab!
+| Lesson | Topic | Key Concepts | Duration |
+|--------|-------|--------------|----------|
+| B4 | Multi-Class Classification | Softmax, categorical cross-entropy | 1 hour |
+| B5 | Neural Network Fundamentals | MLPs, activation functions, backpropagation | 1.5 hours |
+| B6 | Data Preprocessing | Feature engineering, scaling, encoding | 2 hours |
+| B7 | Model Evaluation | Metrics, cross-validation, imbalanced data | 2 hours |
+| B8 | Regularization | Overfitting, L1/L2, ensemble methods | 2 hours |
 
-## Learning Path Diagram
+### Stage 3: Deep Learning (B9-B11)
+**Goal**: Master modern deep learning architectures
 
-```mermaid
-graph TB
-    Start([START YOUR AI JOURNEY]):::startNode
-    
-    subgraph Basic["BASIC LEVEL"]
-        L1["L1: Arithmetic<br/>Tensor Operations"]:::basic
-        L2["L2: Linear Patterns<br/>Regression & Graphs"]:::basic
-        L3["L3: Binary Classification<br/>Two-Class Problems"]:::basic
-        L5["L5: Multi-Class<br/>Multiple Categories"]:::basic
-        L6["L6: Neural Networks<br/>Architecture Deep Dive"]:::basic
-        L7["L7: CNNs<br/>Image Processing"]:::basic
-        L8["L8: RNNs<br/>Sequential Data"]:::basic
-        L9["L9: Transformers<br/>Attention Mechanism"]:::basic
-        L4["L4: Tokenization<br/>Byte Pair Encoding"]:::basic
-        L10["L10: Build Mini LLM<br/>GPT-Style Model"]:::basic
-        L11["L11: Data Engineering<br/>Preprocessing & Features"]:::basic
-        L12["L12: Model Evaluation<br/>Performance Metrics"]:::basic
-    end
-    
-    subgraph Intermediate["INTERMEDIATE LEVEL"]
-        I1["Transfer Learning"]:::intermediate
-        I2["Advanced Optimization"]:::intermediate
-        I3["Advanced Architectures"]:::intermediate
-        I4["Hyperparameter Tuning"]:::intermediate
-    end
-    
-    subgraph Advanced["ADVANCED LEVEL"]
-        A1["Fine-tuning LLMs"]:::advanced
-        A2["RAG Systems"]:::advanced
-        A3["Multi-Modal AI"]:::advanced
-        A4["Production MLOps"]:::advanced
-    end
-    
-    subgraph Expert["EXPERT LEVEL"]
-        E1["Research & Papers"]:::expert
-        E2["Novel Architectures"]:::expert
-        E3["Open Source Contribution"]:::expert
-    end
-    
-    Start --> L1
-    L1 --> L2
-    L2 --> L3
-    L2 --> L5
-    L3 --> L6
-    L5 --> L6
-    L6 --> L7
-    L6 --> L8
-    L7 --> L9
-    L8 --> L9
-    L9 --> L4
-    L4 --> L10
-    L10 --> L11
-    L11 --> L12
-    
-    L12 --> I1
-    L12 --> I2
-    I1 --> I3
-    I2 --> I3
-    I3 --> I4
-    
-    I4 --> A1
-    I4 --> A2
-    A1 --> A3
-    A2 --> A3
-    A3 --> A4
-    
-    A4 --> E1
-    A4 --> E2
-    E1 --> E3
-    E2 --> E3
-    
-    classDef startNode fill:#4A90E2,stroke:#2E5C8A,stroke-width:3px,color:#fff
-    classDef basic fill:#FFE5B4,stroke:#D4A574,stroke-width:2px,color:#000
-    classDef intermediate fill:#B4E5FF,stroke:#74A5D4,stroke-width:2px,color:#000
-    classDef advanced fill:#D4B4FF,stroke:#9474D4,stroke-width:2px,color:#000
-    classDef expert fill:#FFD700,stroke:#B8860B,stroke-width:3px,color:#000
-```
+| Lesson | Topic | Key Concepts | Duration |
+|--------|-------|--------------|----------|
+| B9 | Convolutional Neural Networks | Convolution, pooling, image classification | 2 hours |
+| B10 | Recurrent Neural Networks | RNN, LSTM, GRU, sequence modeling | 2 hours |
+| B11 | Attention & Transformers | Self-attention, multi-head, positional encoding | 2.5 hours |
 
-### Learning Path Explanation
+### Stage 4: NLP Specialization (B12-B13)
+**Goal**: Build language models from scratch
 
-**Color Guide:**
-- Blue: Your entry point into AI
-- Peach: Basic Level - Foundation concepts (L1-L12)
-- Light Blue: Intermediate Level - Advanced techniques
-- Purple: Advanced Level - Production systems
-- Gold: Expert Level - Research and innovation
+| Lesson | Topic | Key Concepts | Duration |
+|--------|-------|--------------|----------|
+| B12 | Byte Pair Encoding | Tokenization, subword units, BPE algorithm | 1 hour |
+| B13 | Mini Language Model | GPT architecture, causal attention, text generation | 3 hours |
 
-**Progression Path:**
+### Stage 5: Advanced Topics (B14-B15)
+**Goal**: Optimize and deploy models to production
 
-1. **Basic Level (Start Here)** - Complete all 12 lessons sequentially
-   - Foundation: Tensors, linear models, classification
-   - Neural Networks: Architecture, CNNs, RNNs, Transformers
-   - Language Models: Tokenization, building mini LLM
-   - Data Science: Preprocessing, feature engineering, evaluation
+| Lesson | Topic | Key Concepts | Duration |
+|--------|-------|--------------|----------|
+| B14 | Optimization Algorithms | SGD, Adam, learning rate scheduling | 1.5 hours |
+| B15 | Model Deployment | Serialization, APIs, cloud deployment, monitoring | 2.5 hours |
 
-2. **Intermediate Level** - Build on fundamentals
-   - Transfer learning and fine-tuning techniques
-   - Advanced optimization and regularization
-   - Complex architectures and hyperparameter tuning
-
-3. **Advanced Level** - Production-ready systems
-   - Fine-tuning large language models
-   - RAG systems and multi-modal AI
-   - MLOps, deployment, and monitoring
-
-4. **Expert Level** - Contribute to the field
-   - Research paper implementation
-   - Novel architecture design
-   - Open-source contributions
-
-## Repository Structure
-
-This repository is organized into four progressive levels:
-
-```
-AI/
-├── Basic/           # Foundation lessons (L1-L12)
-├── Intermediate/    # Advanced topics (Coming Soon)
-├── Advanced/        # Production-ready systems (Coming Soon)
-├── Expert/          # Research-oriented topics (Coming Soon)
-└── archive/         # Historical documentation
-```
-
-### Basic Level (Available Now)
-
-Foundation lessons covering fundamental AI/ML concepts. [View all Basic lessons →](./Basic/)
-
-1. **L1 - Arithmetic** - TensorFlow basics and tensor operations
-2. **L2 - Straight Line Pattern with Graph** - Linear regression fundamentals
-3. **L3 - Binary Classification** - Two-class classification problems
-4. **L4 - Byte Pair Encoding (BPE)** - Tokenization for NLP
-5. **L5 - Multi-Class Classification** - Multiple category classification
-6. **L6 - Neural Network Fundamentals** - Deep dive into NN architecture
-7. **L7 - Convolutional Neural Networks** - CNNs for image processing
-8. **L8 - Recurrent Neural Networks** - RNNs for sequential data
-9. **L9 - Attention and Transformers** - Modern attention mechanisms
-10. **L10 - Building a Mini Language Model** - Create your own GPT-style model
-11. **L11 - Data Preprocessing and Feature Engineering** - Data preparation techniques
-12. **L12 - Model Evaluation and Performance Metrics** - Measuring model performance
-
-### Intermediate Level (Coming Soon)
-
-Advanced topics building on basic concepts:
-- Transfer Learning and Fine-tuning
-- Advanced Optimization Techniques
-- Advanced CNN/RNN Architectures
-- Encoder-Decoder Models
-- Hyperparameter Tuning
-
-[View Intermediate roadmap →](./Intermediate/)
-
-### Advanced Level (Coming Soon)
-
-Production-ready AI systems:
-- Fine-tuning Large Language Models
-- Retrieval-Augmented Generation (RAG)
-- Multi-Modal AI
-- Model Deployment and MLOps
-- Ethical AI and Bias Mitigation
-
-[View Advanced roadmap →](./Advanced/)
-
-### Expert Level (Coming Soon)
-
-Research-oriented topics:
-- Novel Architecture Design
-- Research Paper Implementation
-- Neural Architecture Search
-- Meta-Learning
-- Contributing to Open-Source AI
-
-[View Expert roadmap →](./Expert/)
+**Total Learning Time**: Approximately 25-30 hours
 
 ## Getting Started
 
@@ -346,25 +213,108 @@ Contributions are welcome! To contribute:
 
 If you have a preferred license, add a LICENSE file to the repository. If none is present, consider using a permissive license such as MIT.
 
-## Author
+## 💡 Project Ideas for Students
+
+Ready to apply what you've learned? Here are hands-on project ideas perfect for master's students and portfolio building:
+
+### Beginner Projects (After completing Basic Level)
+1. **Sentiment Analysis Dashboard** - Build a web app that analyzes Twitter/Reddit sentiment on trending topics
+2. **Image Classifier for Your Domain** - Create a CNN to classify images in your field of interest (medical, fashion, wildlife)
+3. **Text Generator** - Build a character-level or word-level text generator using RNNs
+4. **Spam Email Detector** - Implement a binary classifier with feature engineering
+5. **Handwritten Digit Recognition** - Classic MNIST with your own twist (try different architectures)
+
+### Intermediate Projects (After Intermediate Level)
+6. **Transfer Learning for Medical Images** - Fine-tune pre-trained models for disease detection
+7. **Chatbot with Context** - Build a conversational AI using transformers
+8. **Stock Price Predictor** - Time series forecasting with LSTM/GRU networks
+9. **Document Summarizer** - Extractive and abstractive summarization using transformers
+10. **Multi-label Image Classification** - Detect multiple objects/attributes in images
+
+### Advanced Projects (After Advanced Level)
+11. **RAG-based Q&A System** - Build a retrieval-augmented generation system for your university's documentation
+12. **Fine-tuned Domain LLM** - Fine-tune an open-source LLM for a specific domain (legal, medical, finance)
+13. **Multi-Modal Search Engine** - Search using both text and images
+14. **AI Code Review Assistant** - Build a tool that reviews code and suggests improvements
+15. **Real-time Object Detection** - Deploy a YOLO-based system for real-time detection
+
+### Research-Level Projects (Expert Level)
+16. **Novel Architecture Experiment** - Design and test a new neural network architecture
+17. **Reproduce a Recent Paper** - Implement a cutting-edge paper from NeurIPS/ICML/ICLR
+18. **Bias Detection in LLMs** - Research and mitigate biases in language models
+19. **Efficient Model Compression** - Develop techniques for model pruning and quantization
+20. **Federated Learning System** - Build a privacy-preserving distributed learning system
+
+**Pro Tips for Projects:**
+- Start small, iterate fast
+- Document your process (great for your portfolio!)
+- Share your work on GitHub and LinkedIn
+- Collaborate with classmates - team projects are more fun
+- Present your projects at university seminars or local meetups
+
+## 🌟 Why Star This Repository?
+
+- ⭐ **Stay Updated**: Get notified when new lessons and projects are added
+- 🎓 **Support a Fellow Student**: Help me reach more learners
+- 📖 **Bookmark for Later**: Easy access to quality AI learning resources
+- 🤝 **Join the Community**: Be part of a growing learning community
+- 💪 **Motivation**: Your star motivates me to create more content!
+
+## 🤝 Join the Learning Community
+
+This is a collaborative learning space! Here's how you can participate:
+
+- 🐛 **Found a bug?** Open an issue
+- 💡 **Have an idea?** Start a discussion
+- 📝 **Want to contribute?** Submit a pull request
+- 🤔 **Have questions?** Connect with me on LinkedIn
+- 🌟 **Enjoying the content?** Star the repo and share with friends!
+
+**Let's learn together!** The best way to learn is to teach, and the best way to grow is to help others grow.
+
+## 👨‍🎓 Author
 
 **Karthik Arjun**
-- LinkedIn: [karthik-arjun-a5b4a258](https://www.linkedin.com/in/karthik-arjun-a5b4a258/)
-- GitHub: [nexageapps](https://github.com/nexageapps)
+- 🎓 Master of Artificial Intelligence (MAI) Student
+- 🏛️ University of Auckland, New Zealand
+- 💼 LinkedIn: [karthik-arjun-a5b4a258](https://www.linkedin.com/in/karthik-arjun-a5b4a258/)
+- 💻 GitHub: [nexageapps](https://github.com/nexageapps)
 
-## References
+*"Learning AI one notebook at a time, and sharing the journey with the world."*
+
+## 📚 References & Acknowledgments
+
+This repository builds upon excellent resources from the AI community:
 
 - **Book**: "Build a Large Language Model from Scratch" by Sebastian Raschka
 - **OpenAI tiktoken**: https://github.com/openai/tiktoken
 - **TensorFlow Documentation**: https://www.tensorflow.org/
 - **PyTorch Documentation**: https://pytorch.org/
+- **University of Auckland**: For providing an excellent learning environment
 
-## Contact
+Special thanks to all contributors and the open-source AI community!
 
-For questions, suggestions, or collaboration opportunities:
-- Open an issue on GitHub
-- Connect on LinkedIn
+## 📬 Contact & Collaboration
+
+I'm always excited to connect with fellow learners and researchers!
+
+- 💬 **Questions?** Open an issue on GitHub
+- 🤝 **Collaboration?** Connect on LinkedIn
+- 📧 **Research Opportunities?** Reach out via LinkedIn
+- 🎤 **Speaking/Workshop Invitations?** I'd love to share and learn!
 
 ---
 
-**Note**: All notebooks are designed for educational purposes and include references to source materials where applicable.
+<div align="center">
+
+**⭐ If you find this helpful, please star the repository! ⭐**
+
+*Made with ❤️ by a student, for students*
+
+**Happy Learning! 🚀**
+
+</div>
+
+---
+
+**Note**: All notebooks are designed for educational purposes and include references to source materials where applicable. This is an active learning project - expect regular updates as I progress through my master's program!

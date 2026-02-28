@@ -151,19 +151,19 @@ The diagram flows from top to bottom, organized into clear stages. Each stage bu
 
 **Stage Breakdown:**
 
-**1. Foundation (B1-B3)** - Start Here
+**1. Foundation (B01-B03)** - Start Here
 - Master the absolute basics: tensors, linear models, and binary classification
 - Duration: ~2-3 hours
 - Prerequisites: Basic Python knowledge
 
-**2. Core Machine Learning (B4-B7)** - Essential Skills
+**2. Core Machine Learning (B04-B07)** - Essential Skills
 - Build strong ML fundamentals with multi-class problems, neural networks, data preprocessing, and evaluation
 - Duration: ~6-8 hours
 - Prerequisites: Complete Foundation stage
 
-**3. Deep Learning (B9-B11)** - Advanced Neural Networks
+**3. Deep Learning (B09-B11)** - Advanced Neural Networks
 - Dive into CNNs for images, RNNs for sequences, and Transformers for modern AI
-- Note: B9 and B10 can be learned in parallel, both converge at B11
+- Note: B09 and B10 can be learned in parallel, both converge at B11
 - Duration: ~8-10 hours
 - Prerequisites: Complete Core ML stage
 
@@ -186,7 +186,7 @@ The diagram flows from top to bottom, organized into clear stages. Each stage bu
 
 **Color Guide:**
 - Blue: Your starting point
-- Peach: Basic Level - Foundation concepts (B1-B13)
+- Peach: Basic Level - Foundation concepts (B01-B13)
 - Light Blue: Intermediate Level - Advanced techniques
 - Purple: Advanced Level - Production systems
 - Gold: Expert Level - Research and innovation
@@ -215,11 +215,11 @@ Foundation lessons covering fundamental AI/ML concepts. [View all Basic lessons 
 5. **B05 - Neural Network Fundamentals** - Deep dive into NN architecture
 6. **B06 - Data Preprocessing and Feature Engineering** - Data preparation techniques
 7. **B07 - Model Evaluation and Performance Metrics** - Measuring model performance
-8. **B09 - Convolutional Neural Networks** - CNNs for image processing
-9. **B10 - Recurrent Neural Networks** - RNNs for sequential data
-10. **B11 - Attention and Transformers** - Modern attention mechanisms
-11. **B12 - Byte Pair Encoding (BPE)** - Tokenization for NLP
-12. **B13 - Building a Mini Language Model** - Create your own GPT-style model
+9. **B09 - Convolutional Neural Networks** - CNNs for image processing
+10. **B10 - Recurrent Neural Networks** - RNNs for sequential data
+11. **B11 - Attention and Transformers** - Modern attention mechanisms
+12. **B12 - Byte Pair Encoding (BPE)** - Tokenization for NLP
+13. **B13 - Building a Mini Language Model** - Create your own GPT-style model
 
 ### Intermediate Level (Coming Soon)
 
@@ -316,8 +316,8 @@ Open the desired notebook and run the cells sequentially. All notebooks are self
 
 These notebooks are designed for learning and experimentation:
 
-- **For Beginners**: Start with Basic/B1 and progress sequentially through all Basic lessons
-- **For NLP Enthusiasts**: Complete B1-B11 first, then jump to B12 for tokenization and B13 for language models
+- **For Beginners**: Start with Basic/B01 and progress sequentially through all Basic lessons
+- **For NLP Enthusiasts**: Complete B01-B11 first, then jump to B12 for tokenization and B13 for language models
 - **For Experimentation**: Modify the code, adjust parameters, and observe the results
 
 Each notebook includes:
@@ -410,7 +410,7 @@ Contributions are welcome! To contribute:
 1. Fork the repository
 2. Create a feature branch: `git checkout -b feature/new-tutorial`
 3. Add your notebook to the appropriate level folder (Basic, Intermediate, Advanced, or Expert)
-4. Follow the naming convention: `BX - Topic.ipynb` (for Basic level)
+4. Follow the naming convention: `BXX - Topic.ipynb` (for Basic level, use zero-padded numbers like B01, B02)
 5. Include:
    - Author information and LinkedIn profile
    - Clear comments and explanations

@@ -617,22 +617,27 @@ graph TD
 
 ```mermaid
 graph LR
-    A[🌱 Foundation<br/>B01-B03] --> B[🎯 Core ML<br/>B04-B07]
-    B --> C[🧠 Deep Learning<br/>B09-B11]
-    C --> D[💬 NLP<br/>B12-B13]
-    D --> E[🚀 Projects<br/>B14-B15]
+    A["Foundation<br/>B01-B03"] --> B["Core ML<br/>B04-B07"]
+    B --> C["Deep Learning<br/>B09-B11"]
+    C --> D["NLP<br/>B12-B13"]
+    D --> E["Projects<br/>B14-B15"]
     
-    A -.->|3-4 hrs| A1[✓ Tensors<br/>✓ Regression<br/>✓ Classification]
-    B -.->|8-10 hrs| B1[✓ Multi-class<br/>✓ Neural Nets<br/>✓ Data Prep<br/>✓ Evaluation]
-    C -.->|10-12 hrs| C1[✓ CNNs<br/>✓ RNNs<br/>✓ Transformers]
-    D -.->|6-8 hrs| D1[✓ Tokenization<br/>✓ Language Model]
-    E -.->|2-6 weeks| E1[✓ Assignments<br/>✓ Portfolio]
+    A -.->|"3-4 hrs"| A1["✓ Tensors<br/>✓ Regression<br/>✓ Classification"]
+    B -.->|"8-10 hrs"| B1["✓ Multi-class<br/>✓ Neural Nets<br/>✓ Data Prep<br/>✓ Evaluation"]
+    C -.->|"10-12 hrs"| C1["✓ CNNs<br/>✓ RNNs<br/>✓ Transformers"]
+    D -.->|"6-8 hrs"| D1["✓ Tokenization<br/>✓ Language Model"]
+    E -.->|"2-6 weeks"| E1["✓ Assignments<br/>✓ Portfolio"]
     
-    style A fill:#90EE90
-    style B fill:#87CEEB
-    style C fill:#FFB6C1
-    style D fill:#FFD700
-    style E fill:#FF6347
+    style A fill:#e8f5e9,stroke:#43a047,stroke-width:3px,color:#000
+    style B fill:#e3f2fd,stroke:#1976d2,stroke-width:3px,color:#000
+    style C fill:#f3e5f5,stroke:#8e24aa,stroke-width:3px,color:#000
+    style D fill:#fff3e0,stroke:#f57c00,stroke-width:3px,color:#000
+    style E fill:#ffebee,stroke:#c62828,stroke-width:3px,color:#000
+    style A1 fill:#f1f8e9,stroke:#7cb342,stroke-width:2px,color:#000
+    style B1 fill:#e1f5fe,stroke:#0288d1,stroke-width:2px,color:#000
+    style C1 fill:#f3e5f5,stroke:#ab47bc,stroke-width:2px,color:#000
+    style D1 fill:#fff8e1,stroke:#ffa726,stroke-width:2px,color:#000
+    style E1 fill:#fce4ec,stroke:#e91e63,stroke-width:2px,color:#000
 ```
 
 ### Checklist: Foundation Stage

@@ -138,34 +138,37 @@ Choose the path that matches your goals:
 
 ```mermaid
 graph TD
-    A[Start: B01 Arithmetic] --> B[B02 Linear Regression]
-    B --> C[B03 Binary Classification]
-    C --> D{Choose Your Path}
-    D -->|Complete Path| E[B04 Multi-Class]
-    D -->|NLP Focus| F[Skip to B10]
-    D -->|CV Focus| G[Skip to B09]
-    D -->|Fast Track| H[Skim B04-B05]
+    A["🌱 Start<br/>B01 Arithmetic"] --> B["B02<br/>Linear Regression"]
+    B --> C["B03<br/>Binary Classification"]
+    C --> D{"Choose Your Path"}
+    D -->|"Complete Path"| E["B04 Multi-Class"]
+    D -->|"NLP Focus"| F["Skip to B10"]
+    D -->|"CV Focus"| G["Skip to B09"]
+    D -->|"Fast Track"| H["Skim B04-B05"]
     
-    E --> I[B05 Neural Networks]
-    I --> J[B06 Data Preprocessing]
-    J --> K[B07 Model Evaluation]
-    K --> L{Specialization}
+    E --> I["B05<br/>Neural Networks"]
+    I --> J["B06<br/>Data Preprocessing"]
+    J --> K["B07<br/>Model Evaluation"]
+    K --> L{"Specialization"}
     
-    L -->|Computer Vision| M[B09 CNNs]
-    L -->|Sequential Data| N[B10 RNNs]
-    L -->|Both| M
+    L -->|"Computer Vision"| M["B09 CNNs"]
+    L -->|"Sequential Data"| N["B10 RNNs"]
+    L -->|"Both"| M
     M --> N
     
-    N --> O[B11 Transformers]
-    O --> P[B12 BPE Tokenization]
-    P --> Q[B13 Mini Language Model]
-    Q --> R[B14 Assignments]
-    R --> S[B15 Capstone Projects]
+    N --> O["B11<br/>Transformers"]
+    O --> P["B12<br/>BPE Tokenization"]
+    P --> Q["B13<br/>Mini Language Model"]
+    Q --> R["B14<br/>Assignments"]
+    R --> S["🎯 B15<br/>Capstone Projects"]
     
-    style A fill:#90EE90
-    style S fill:#FFD700
-    style D fill:#87CEEB
-    style L fill:#87CEEB
+    style A fill:#90EE90,stroke:#2d5016,stroke-width:3px,color:#000
+    style S fill:#FFD700,stroke:#b8860b,stroke-width:3px,color:#000
+    style D fill:#87CEEB,stroke:#4682b4,stroke-width:2px,color:#000
+    style L fill:#87CEEB,stroke:#4682b4,stroke-width:2px,color:#000
+    style M fill:#FFB6C1,stroke:#c71585,stroke-width:2px,color:#000
+    style N fill:#FFB6C1,stroke:#c71585,stroke-width:2px,color:#000
+    style O fill:#DDA0DD,stroke:#8b008b,stroke-width:2px,color:#000
 ```
 
 ### Path 1: Complete Beginner (Recommended)
@@ -196,16 +199,18 @@ Week 12+:   B14 → B15 (Projects)
 
 ```mermaid
 graph LR
-    A[B01-B03<br/>Foundation] --> B[B04-B05<br/>Neural Nets]
-    B --> C[B06-B07<br/>Data & Eval]
-    C --> D[B10 RNNs]
-    D --> E[B11 Transformers<br/>⭐ Deep Dive]
-    E --> F[B12 BPE<br/>⭐ Deep Dive]
-    F --> G[B13 Mini LLM]
-    G --> H[B14-B15<br/>NLP Projects]
+    A["B01-B03<br/>Foundation"] --> B["B04-B05<br/>Neural Nets"]
+    B --> C["B06-B07<br/>Data & Eval"]
+    C --> D["B10<br/>RNNs"]
+    D --> E["⭐ B11<br/>Transformers<br/>Deep Dive"]
+    E --> F["⭐ B12<br/>BPE<br/>Deep Dive"]
+    F --> G["B13<br/>Mini LLM"]
+    G --> H["B14-B15<br/>NLP Projects"]
     
-    style E fill:#FFB6C1
-    style F fill:#FFB6C1
+    style E fill:#FFB6C1,stroke:#c71585,stroke-width:3px,color:#000
+    style F fill:#FFB6C1,stroke:#c71585,stroke-width:3px,color:#000
+    style A fill:#e8f5e9,stroke:#4caf50,stroke-width:2px,color:#000
+    style H fill:#fff9c4,stroke:#fbc02d,stroke-width:2px,color:#000
 ```
 
 ```

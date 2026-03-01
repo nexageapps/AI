@@ -502,52 +502,42 @@ Research-oriented topics and cutting-edge techniques. **[View complete syllabus 
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and learning purposes.
-
 ### Requirements
 
-- Python 3.8+ (recommended)
+- Python 3.8+
 - Jupyter / JupyterLab
 - pip or conda
 
-### Create a virtual environment
+### Setup
 
-Using venv:
+Create a virtual environment:
 
 ```bash
+# Using venv
 python -m venv .venv
-source .venv/bin/activate   # macOS / Linux
-.venv\Scripts\activate     # Windows
-```
+source .venv/bin/activate   # macOS/Linux
+.venv\Scripts\activate      # Windows
 
-Or using conda:
-
-```bash
+# Or using conda
 conda create -n ai-notebooks python=3.10
 conda activate ai-notebooks
 ```
 
-### Install dependencies
-
-The notebooks primarily use TensorFlow and PyTorch. Install the required packages:
+Install dependencies:
 
 ```bash
+# Core packages
 pip install tensorflow torch numpy matplotlib
-```
 
-For the BPE notebooks, you'll also need:
-
-```bash
+# For BPE notebooks
 pip install tiktoken
 ```
 
-Alternatively, run the notebooks directly in Google Colab where most dependencies are pre-installed.
-
-### Run notebooks
+### Run Notebooks
 
 **Option 1: Google Colab (Recommended)**
-- Click the "Open in Colab" badge at the top of any notebook
-- All dependencies are pre-installed in Colab
+- Click "Open in Colab" badge at the top of any notebook
+- All dependencies pre-installed
 
 **Option 2: Local Jupyter**
 ```bash
@@ -556,90 +546,69 @@ jupyter lab
 jupyter notebook
 ```
 
-Open the desired notebook and run the cells sequentially. All notebooks are self-contained and include sample data.
+Open the desired notebook and run cells sequentially. All notebooks are self-contained with sample data.
 
 ## Usage & Learning Tips
 
-These notebooks are designed for learning and experimentation. Here's how to get the most out of them:
-
 ### Learning Paths
 
-**For Complete Beginners:**
-1. Start with Basic/B01 and progress sequentially
-2. Don't skip lessons - each builds on previous concepts
-3. Complete the assignments in B14 after every 3-4 lessons
-4. Aim for 2-3 lessons per week (3-5 hours/week)
-5. Join study groups or find an accountability partner
+**Complete Beginners:**
+- Start with B01, progress sequentially
+- Don't skip lessons - each builds on previous concepts
+- Complete B14 assignments after every 3-4 lessons
+- Aim for 2-3 lessons per week (3-5 hours/week)
 
-**For Students with ML Background:**
-1. Skim B01-B04 for review
-2. Focus on B05-B13 for deep learning concepts
-3. Jump straight to B14-B15 for projects
-4. Use as reference material for coursework
+**Students with ML Background:**
+- Skim B01-B04 for review
+- Focus on B05-B13 for deep learning
+- Jump to B14-B15 for projects
 
-**For NLP Enthusiasts:**
-1. Complete B01-B07 for foundations (can go faster)
-2. Study B10-B13 in depth (RNNs, Transformers, LLMs)
-3. Build the language model projects in B15
-4. Extend with your own NLP applications
+**NLP Enthusiasts:**
+- Complete B01-B07 for foundations
+- Deep dive into B10-B13 (RNNs, Transformers, LLMs)
+- Build language model projects in B15
 
-**For Computer Vision Enthusiasts:**
-1. Complete B01-B07 for foundations
-2. Deep dive into B09 (CNNs)
-3. Explore B11 for Vision Transformers
-4. Build image recognition projects from B15
+**Computer Vision Enthusiasts:**
+- Complete B01-B07 for foundations
+- Deep dive into B09 (CNNs)
+- Explore B11 for Vision Transformers
+- Build image recognition projects from B15
 
 ### Study Tips
 
-**Before Starting a Lesson:**
-- Read the lesson overview
+**Before Starting:**
+- Read lesson overview
 - Check prerequisites
-- Set aside 1-2 hours of focused time
-- Have a notebook ready for notes
+- Set aside 1-2 hours focused time
 
 **While Learning:**
 - Run every code cell and observe outputs
-- Modify parameters and see what changes
-- Add your own comments to explain concepts
-- Try to predict outputs before running cells
-- Don't just copy-paste - type the code yourself
+- Modify parameters to see changes
+- Add your own comments
+- Try to predict outputs before running
+- Type code yourself, don't copy-paste
 
-**After Completing a Lesson:**
+**After Completing:**
 - Summarize key concepts in your own words
-- Complete related assignments from B14
-- Explain the concept to someone else
-- Connect it to real-world applications
-- Review after 1 day, 1 week, 1 month (spaced repetition)
+- Complete related B14 assignments
+- Explain concept to someone else
+- Connect to real-world applications
 
 ### Best Practices
 
-- **Consistency > Intensity**: 1 hour daily beats 7 hours on Sunday
-- **Active Learning**: Implement variations, don't just run code
-- **Document Everything**: Keep a learning journal
-- **Build Projects**: Apply concepts to personal projects
-- **Join Communities**: Discuss with other learners
-- **Teach Others**: Best way to solidify understanding
+- Consistency > Intensity: 1 hour daily beats 7 hours on Sunday
+- Active Learning: Implement variations, don't just run code
+- Document Everything: Keep a learning journal
+- Build Projects: Apply concepts to personal projects
+- Join Communities: Discuss with other learners
 
 ### Each Notebook Includes
 
 - Clear learning objectives
-- Author information and LinkedIn profile
-- Creation and update dates
 - Step-by-step explanations
 - Visualizations and plots
-- References to source materials
 - Detailed code comments
 - Practice exercises (in B14)
-
-### Progression Tracking
-
-Track your progress:
-- [ ] B01-B03: Foundation (Week 1)
-- [ ] B04-B07: Core ML (Week 2-3)
-- [ ] B09-B11: Deep Learning (Week 4-6)
-- [ ] B12-B13: NLP & LLMs (Week 7-8)
-- [ ] B14: Complete 5 assignments (Week 9-10)
-- [ ] B15: Build 1 capstone project (Week 11-16)
 
 ## For MAI Students at University of Auckland
 

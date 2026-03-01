@@ -65,19 +65,19 @@ Use this table to quickly find which lessons support each course:
 graph TB
     Start([START MAI PROGRAM<br/>University of Auckland]):::startNode
     
-    subgraph Semester1["SEMESTER 1 - Building Foundations"]
+    subgraph Semester1["SEMESTER 1 - Building Foundations (4 Courses)"]
         direction TB
         Ethics["COMPSCI 712<br/>AI Ethics & Society<br/><br/>Lessons: B06, B07<br/>Focus: Data Bias & Fairness"]:::ethics
         Fundamentals["COMPSCI 713<br/>AI Fundamentals<br/><br/>Lessons: B01-B05<br/>Focus: Core ML Concepts"]:::fundamentals
-        MLTheory["COMPSCI 762<br/>ML Foundations<br/><br/>Lessons: B02-B07<br/>Focus: Theory & Practice"]:::mlTheory
         Architecture["COMPSCI 714<br/>AI Architecture & Design<br/><br/>Lessons: B09-B11, B13<br/>Focus: Deep Learning"]:::architecture
+        MLTheory["COMPSCI 762<br/>ML Foundations<br/><br/>Lessons: B02-B07<br/>Focus: Theory & Practice"]:::mlTheory
     end
     
-    subgraph Semester2["SEMESTER 2 - Advanced Mastery"]
+    subgraph Semester2["SEMESTER 2 - Advanced Mastery (3 Courses)"]
         direction TB
-        AdvancedAI["COMPSCI 761<br/>Advanced AI Topics<br/><br/>Lessons: B06, B12<br/>Focus: Tokenization"]:::advancedAI
-        GeneralAI["COMPSCI 703<br/>Generalising AI<br/><br/>Lessons: B11-B13<br/>Focus: Transformers & LLMs"]:::generalAI
         DeepLearning["COMPSYS 721<br/>Deep Learning<br/><br/>Lessons: B09-B13<br/>Focus: Neural Networks"]:::deepLearning
+        GeneralAI["COMPSCI 703<br/>Generalising AI<br/><br/>Lessons: B11-B13<br/>Focus: Transformers & LLMs"]:::generalAI
+        AdvancedAI["COMPSCI 761<br/>Advanced AI Topics<br/><br/>Lessons: B06, B12<br/>Focus: Tokenization"]:::advancedAI
     end
     
     subgraph Practice["CONTINUOUS PRACTICE - Throughout Program"]
@@ -91,30 +91,31 @@ graph TB
     Ethics --> MLTheory
     Fundamentals ==> MLTheory
     Fundamentals ==> Architecture
+    MLTheory --> Architecture
     
-    MLTheory ==> AdvancedAI
-    Architecture ==> GeneralAI
     Architecture ==> DeepLearning
+    Architecture ==> GeneralAI
     MLTheory --> DeepLearning
+    Fundamentals --> AdvancedAI
     
     Fundamentals -.->|"Practice<br/>Weekly"| Assignments
     MLTheory -.->|"Practice<br/>Weekly"| Assignments
     Architecture -.->|"Practice<br/>Weekly"| Assignments
     
-    AdvancedAI -.->|"Build<br/>Portfolio"| Capstone
-    GeneralAI -.->|"Build<br/>Portfolio"| Capstone
     DeepLearning -.->|"Build<br/>Portfolio"| Capstone
+    GeneralAI -.->|"Build<br/>Portfolio"| Capstone
+    AdvancedAI -.->|"Build<br/>Portfolio"| Capstone
     
     Assignments --> Capstone
     
     classDef startNode fill:#2E7D32,stroke:#1B5E20,stroke-width:4px,color:#fff,font-size:16px,font-weight:bold
     classDef ethics fill:#E91E63,stroke:#AD1457,stroke-width:3px,color:#fff,font-size:14px
     classDef fundamentals fill:#FF9800,stroke:#E65100,stroke-width:3px,color:#fff,font-size:14px
-    classDef mlTheory fill:#FF6F00,stroke:#E65100,stroke-width:3px,color:#fff,font-size:14px
     classDef architecture fill:#3F51B5,stroke:#1A237E,stroke-width:3px,color:#fff,font-size:14px
-    classDef advancedAI fill:#9C27B0,stroke:#4A148C,stroke-width:3px,color:#fff,font-size:14px
-    classDef generalAI fill:#673AB7,stroke:#311B92,stroke-width:3px,color:#fff,font-size:14px
+    classDef mlTheory fill:#FF6F00,stroke:#E65100,stroke-width:3px,color:#fff,font-size:14px
     classDef deepLearning fill:#512DA8,stroke:#311B92,stroke-width:3px,color:#fff,font-size:14px
+    classDef generalAI fill:#673AB7,stroke:#311B92,stroke-width:3px,color:#fff,font-size:14px
+    classDef advancedAI fill:#9C27B0,stroke:#4A148C,stroke-width:3px,color:#fff,font-size:14px
     classDef assignments fill:#00BCD4,stroke:#006064,stroke-width:3px,color:#fff,font-size:14px
     classDef capstone fill:#FFD700,stroke:#F57F17,stroke-width:4px,color:#000,font-size:14px,font-weight:bold
 ```
@@ -124,6 +125,7 @@ graph TB
 - **Pink/Red**: Ethics & Society - Foundation for responsible AI
 - **Orange**: Core Fundamentals - Essential ML concepts
 - **Blue**: Architecture & Design - Deep learning systems
+- **Dark Orange**: ML Theory - Theoretical foundations
 - **Purple**: Advanced Topics - Cutting-edge AI techniques
 - **Cyan**: Practice Assignments - Weekly hands-on work
 - **Gold**: Capstone Projects - Portfolio-worthy final projects
@@ -134,9 +136,11 @@ graph TB
 - **Dotted lines (-..->)**: Practice opportunities - apply your knowledge continuously
 
 **Time Commitment:**
-- **Semester 1**: 4 courses + Weekly practice from B14
-- **Semester 2**: 3 courses + Build capstone projects from B15
+- **Semester 1**: 4 courses (CS712, CS713, CS714, CS762) + Weekly practice from B14
+- **Semester 2**: 3 courses (CS721, CS703, CS761) + Build capstone projects from B15
 - **Throughout**: Continuous practice with assignments and projects
+
+**Important Note:** Semester 1 has a heavier course load (4 courses), so time management is critical. Use the mid-year break to consolidate learning and prepare for Semester 2.
 
 ---
 
@@ -524,7 +528,7 @@ Traditional methods → Specialized architectures (CNN/RNN) → Attention mechan
 
 ```mermaid
 gantt
-    title MAI Study Plan
+    title MAI Study Plan - Updated Course Schedule
     dateFormat YYYY-MM-DD
     section Preparation
     Complete B01-B07           :prep1, 2026-01-01, 21d
@@ -533,32 +537,51 @@ gantt
     section Semester 1
     COMPSCI 712 (Ethics)       :s1c1, 2026-02-01, 84d
     COMPSCI 713 (Fundamentals) :s1c2, 2026-02-01, 84d
-    COMPSCI 762 (ML Theory)    :s1c3, 2026-02-15, 70d
-    B14 Assignments 1-5        :s1p1, 2026-02-01, 84d
+    COMPSCI 714 (Architecture) :s1c3, 2026-02-01, 84d
+    COMPSCI 762 (ML Theory)    :s1c4, 2026-02-15, 70d
+    B14 Assignments 1-7        :s1p1, 2026-02-01, 84d
     
     section Mid-Year Break
-    B09-B11 Deep Learning      :break1, 2026-05-01, 21d
+    B09-B13 Deep Learning      :break1, 2026-05-01, 21d
+    Review & Consolidate       :break2, 2026-05-15, 14d
     
     section Semester 2
-    COMPSCI 714 (Architecture) :s2c1, 2026-06-01, 84d
-    COMPSYS 721 (Deep Learning):s2c2, 2026-06-01, 84d
-    COMPSCI 703 (General AI)   :s2c3, 2026-06-15, 70d
-    B14 Assignments 6-10       :s2p1, 2026-06-01, 84d
+    COMPSYS 721 (Deep Learning):s2c1, 2026-06-01, 84d
+    COMPSCI 703 (General AI)   :s2c2, 2026-06-01, 84d
+    COMPSCI 761 (Advanced AI)  :s2c3, 2026-06-15, 70d
+    B14 Assignments 8-10       :s2p1, 2026-06-01, 84d
     B15 Capstone Project       :s2p2, 2026-07-01, 60d
 ```
 
+**Key Changes:**
+- **Semester 1**: COMPSCI 712, 713, 714, and 762 (4 courses)
+- **Semester 2**: COMPSYS 721, COMPSCI 703, and 761 (3 courses)
+- **Mid-Year Break**: Focus on B09-B13 to prepare for Semester 2
+
 ### Time Management
 
-**Weekly Schedule (Example):**
+**Semester 1 Weekly Schedule (4 Courses):**
 
 | Day | Morning (9-12) | Afternoon (1-4) | Evening (7-9) |
 |-----|---------------|-----------------|---------------|
-| Mon | Lectures | Repository Practice | Review & Notes |
-| Tue | Lectures | Assignment Work | B14 Practice |
-| Wed | Lectures | Repository Practice | Study Group |
-| Thu | Lectures | Project Work | Review & Notes |
-| Fri | Lectures | Repository Practice | B14 Practice |
-| Sat | Project Work | B15 Capstone | Free Time |
+| Mon | CS712 + CS713 Lectures | Repository Practice (B01-B05) | Review & Notes |
+| Tue | CS714 + CS762 Lectures | Assignment Work | B14 Practice (1-5) |
+| Wed | CS712 + CS713 Lectures | Repository Practice (B06-B07) | Study Group |
+| Thu | CS714 + CS762 Lectures | Architecture Practice (B09-B11) | Review & Notes |
+| Fri | Catch-up Lectures | Repository Practice | B14 Practice (6-7) |
+| Sat | Project Work | B13 Language Model | Free Time |
+| Sun | Review Week | Prepare Next Week | Free Time |
+
+**Semester 2 Weekly Schedule (3 Courses):**
+
+| Day | Morning (9-12) | Afternoon (1-4) | Evening (7-9) |
+|-----|---------------|-----------------|---------------|
+| Mon | CS721 + CS703 Lectures | Deep Learning Practice | Review & Notes |
+| Tue | CS761 Lectures | Assignment Work | B14 Practice (8-10) |
+| Wed | CS721 + CS703 Lectures | Repository Practice | Study Group |
+| Thu | CS761 Lectures | Advanced Topics | Review & Notes |
+| Fri | Catch-up Lectures | Repository Practice | B14 Practice |
+| Sat | B15 Capstone Project | Portfolio Building | Free Time |
 | Sun | Review Week | Prepare Next Week | Free Time |
 
 **Daily Habits:**
@@ -566,6 +589,20 @@ gantt
 - 10 min: Review previous concepts
 - 20 min: Read ML articles/papers
 - 10 min: Participate in discussions
+
+**Semester 1 Focus (Heavy Load):**
+- **CS712 (Ethics)**: B06-B07 for bias and fairness
+- **CS713 (Fundamentals)**: B01-B05 for core concepts
+- **CS714 (Architecture)**: B09-B11, B13 for deep learning
+- **CS762 (ML Theory)**: B02-B07 for theoretical foundations
+- **Practice**: B14 Assignments 1-7
+
+**Semester 2 Focus (Lighter Load + Capstone):**
+- **CS721 (Deep Learning)**: B09-B13 for neural networks
+- **CS703 (General AI)**: B11-B13 for transformers and LLMs
+- **CS761 (Advanced AI)**: B06, B12 for advanced topics
+- **Practice**: B14 Assignments 8-10
+- **Portfolio**: B15 Capstone Projects
 
 ---
 
@@ -664,15 +701,30 @@ graph TD
 
 ### Recommended Reading
 
-**Books:**
-- "Deep Learning" by Goodfellow, Bengio, Courville
-- "Pattern Recognition and Machine Learning" by Bishop
-- Course-specific readings from syllabi
+**Essential Books:**
+- **"Artificial Intelligence: A Modern Approach"** by Stuart Russell and Peter Norvig
+  - The definitive AI textbook used in CS713 and CS714
+  - Comprehensive coverage of AI fundamentals, search, logic, and learning
+  - [Available online](http://aima.cs.berkeley.edu/)
+- **"Deep Learning"** by Ian Goodfellow, Yoshua Bengio, and Aaron Courville
+  - In-depth coverage of neural networks and deep learning
+  - Essential for CS721 and CS714
+  - [Free online version](http://www.deeplearningbook.org/)
+- **"Pattern Recognition and Machine Learning"** by Christopher Bishop
+  - Strong theoretical foundations for CS762
+  - Probabilistic perspective on machine learning
+- **Course-specific readings**: Check your course syllabi for required texts
 
-**Papers:**
-- Attention Is All You Need (Transformers)
-- BERT, GPT series
-- Recent NeurIPS, ICML, ICLR papers
+**Supplementary Books:**
+- "Hands-On Machine Learning" by Aurélien Géron - Practical implementations
+- "Neural Networks and Deep Learning" by Michael Nielsen - Intuitive explanations
+- "Speech and Language Processing" by Jurafsky & Martin - For NLP in CS703
+
+**Research Papers:**
+- "Attention Is All You Need" (Transformers) - Vaswani et al., 2017
+- "BERT: Pre-training of Deep Bidirectional Transformers" - Devlin et al., 2018
+- "Language Models are Few-Shot Learners" (GPT-3) - Brown et al., 2020
+- Recent papers from NeurIPS, ICML, ICLR, ACL conferences
 
 ---
 

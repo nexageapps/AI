@@ -3,7 +3,7 @@
 [![language: Python](https://img.shields.io/badge/language-Python-orange.svg)](https://www.python.org/)
 [![license: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![Sponsored by: nexageapps](https://img.shields.io/badge/Sponsored%20by-nexageapps-blue.svg)](https://nexageapps.com)
-[![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%20A%20Coffee-Support-yellow.svg)](https://buymeacoffee.com/fcc4sbsx5f6)
+[![Buy me a book](https://img.shields.io/badge/Buy%20Me%20A%20Coffee-Support-yellow.svg)](https://buymeacoffee.com/fcc4sbsx5f6)
 
 **Complete foundation in Artificial Intelligence and Machine Learning through 15 hands-on lessons**
 

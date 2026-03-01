@@ -110,7 +110,7 @@ This is not just another AI tutorial collection - it's a **carefully designed cu
 
 **Also Valuable For:** Master's students in AI at other universities, undergraduate students, self-learners, bootcamp graduates, career switchers, and anyone wanting to deeply understand AI/ML concepts.
 
-**Language:** Jupyter Notebooks (100%) - All runnable in Google Colab with zero setup!
+**Language:** Python & Jupyter Notebooks (100%) - All runnable in Google Colab with zero setup!
 
 **Why University of Auckland MAI Students Love This Repository:**
 - Directly complements University of Auckland course content

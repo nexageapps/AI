@@ -81,6 +81,21 @@ Best for: Understanding new features, seeing what's been added, learning about e
 
 [View Updates Summary](./UPDATES_SUMMARY.md)
 
+### Advanced Lessons Complete
+Documentation of the completion of all 15 Advanced level lessons.
+
+Contents:
+- Complete list of all Advanced lessons (A01-A15)
+- Lesson structure and organization
+- UoA MAI course alignment
+- Next steps for content development
+- Technical details and verification
+- Repository status overview
+
+Best for: Understanding Advanced level completion, tracking curriculum progress
+
+[View Advanced Lessons Complete](./ADVANCED_LESSONS_COMPLETE.md)
+
 ## Policy Documentation
 
 ### Academic Integrity Policy

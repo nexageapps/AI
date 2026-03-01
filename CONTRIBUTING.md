@@ -402,4 +402,4 @@ By contributing, you agree that your contributions will be licensed under the MI
 
 Your contributions help make quality AI education accessible to everyone. Whether you're fixing a typo or adding a complete lesson, every contribution matters.
 
-Happy contributing! 🚀
+Happy contributing! 

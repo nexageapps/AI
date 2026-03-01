@@ -78,6 +78,7 @@ This repository provides a **structured, hands-on learning path** to deeply unde
 - [Repository Structure](#repository-structure)
 - [Getting Started](#getting-started)
 - [Usage & Learning Tips](#usage--learning-tips)
+- [Academic Integrity](#academic-integrity)
 - [Project Ideas for Students](#project-ideas-for-students)
 - [For MAI Students](#for-mai-students)
 - [Contributing](#contributing)
@@ -746,6 +747,75 @@ AI/
 ```
 
 All notebooks are designed to run in Google Colab and include Colab badges for easy access.
+
+## Academic Integrity
+
+**IMPORTANT: This repository is a learning resource, not a solution manual.**
+
+### Using This Repository Responsibly
+
+This repository is designed to help you **learn and understand** AI/ML concepts, not to provide ready-made solutions for your assignments. We are committed to supporting education while maintaining the highest standards of academic integrity.
+
+**✅ Appropriate Use:**
+- Learning concepts and understanding implementations
+- Preparing for lectures and reinforcing class material
+- Practicing before exams and building foundational skills
+- Using as inspiration for your own original projects
+- Understanding different approaches and coding patterns
+
+**❌ Inappropriate Use:**
+- Copying code for assignments without understanding
+- Submitting repository code as your own work
+- Using during exams or closed-book assessments
+- Violating your institution's academic integrity policies
+- Sharing solutions inappropriately with classmates
+
+### Guidelines for Students
+
+1. **Learn First, Code Second**
+   - Understand the concepts in the notebooks
+   - Close the repository before starting your assignment
+   - Implement your own solution from scratch
+   - Only refer back if stuck on a specific concept
+
+2. **Cite Appropriately**
+   - If you use ideas from this repository, cite it properly
+   - Follow your institution's citation guidelines
+   - Example citation:
+     ```
+     Karthik Arjun. (2024). AI & Machine Learning Roadmap. 
+     GitHub repository. https://github.com/nexageapps/AI
+     ```
+
+3. **Check Your Institution's Policies**
+   - Understand what resources you're allowed to use
+   - Know your institution's collaboration policies
+   - Ask your instructor if you're unsure
+   - When in doubt, ask first
+
+4. **Transform, Don't Transfer**
+   - Use the repository to understand approaches
+   - Implement your own version with your own style
+   - Add your own improvements or variations
+   - Make it genuinely your work
+
+### For University of Auckland MAI Students
+
+Follow the [University of Auckland Academic Integrity Policy](https://www.auckland.ac.nz/en/students/academic-information/academic-integrity.html). Your assignments are designed to test YOUR understanding. Use this repository to learn concepts, not to find answers.
+
+**Academic misconduct has serious consequences:**
+- Failing the assignment or course
+- Academic probation or suspension
+- Permanent record on your transcript
+- Potential expulsion
+
+**It's never worth it.** Learn with integrity, succeed with honor.
+
+### Full Policy
+
+For complete details on academic integrity expectations, appropriate use, and guidelines for both students and contributors, please read our comprehensive **[Academic Integrity Policy](./ACADEMIC_INTEGRITY.md)**.
+
+---
 
 ## Project Ideas for Students
 

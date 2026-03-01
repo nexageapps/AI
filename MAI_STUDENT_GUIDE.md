@@ -75,7 +75,7 @@ Use this table to quickly find which lessons support each course:
 graph TB
     Start([START MAI PROGRAM<br/>University of Auckland]):::startNode
     
-    subgraph Semester1["SEMESTER 1 - Building Foundations (4 Courses)"]
+    subgraph Foundation["FOUNDATION PATH - Core Courses (Year 1, Sem 1)"]
         direction TB
         Ethics["COMPSCI 712<br/>AI Ethics & Society<br/><br/>Lessons: B06, B07<br/>Focus: Data Bias & Fairness"]:::ethics
         Fundamentals["COMPSCI 713<br/>AI Fundamentals<br/><br/>Lessons: B01-B05<br/>Focus: Core ML Concepts"]:::fundamentals
@@ -83,14 +83,14 @@ graph TB
         MLTheory["COMPSCI 762<br/>ML Foundations<br/><br/>Lessons: B02-B07<br/>Focus: Theory & Practice"]:::mlTheory
     end
     
-    subgraph Semester2["SEMESTER 2 - Advanced Mastery (3 Courses)"]
+    subgraph Advanced["ADVANCED PATH - Specialization (Year 1, Sem 2)"]
         direction TB
         DeepLearning["COMPSYS 721<br/>Deep Learning<br/><br/>Lessons: B09-B13<br/>Focus: Neural Networks"]:::deepLearning
         GeneralAI["COMPSCI 703<br/>Generalising AI<br/><br/>Lessons: B11-B13<br/>Focus: Transformers & LLMs"]:::generalAI
         AdvancedAI["COMPSCI 761<br/>Advanced AI Topics<br/><br/>Lessons: B06, B12<br/>Focus: Tokenization"]:::advancedAI
     end
     
-    subgraph Practice["CONTINUOUS PRACTICE - Throughout Program"]
+    subgraph Practice["PRACTICE PATH - Continuous Learning"]
         direction LR
         Assignments["B14<br/>Practical Assignments<br/><br/>10 hands-on projects<br/>Apply what you learn"]:::assignments
         Capstone["B15<br/>Capstone Projects<br/><br/>5 portfolio projects<br/>Build real systems"]:::capstone
@@ -145,12 +145,12 @@ graph TB
 - **Solid thin arrows (-->)**: Secondary connections - important relationships
 - **Dotted lines (-..->)**: Practice opportunities - apply your knowledge continuously
 
-**Time Commitment:**
-- **Semester 1**: 4 courses (CS712, CS713, CS714, CS762) + Weekly practice from B14
-- **Semester 2**: 3 courses (CS721, CS703, CS761) + Build capstone projects from B15
-- **Throughout**: Continuous practice with assignments and projects
+**Learning Paths:**
+- **Foundation Path**: 4 core courses (CS712, CS713, CS714, CS762) - Build essential knowledge
+- **Advanced Path**: 3 specialization courses (CS721, CS703, CS761) - Deepen expertise
+- **Practice Path**: Continuous hands-on work (B14 assignments + B15 capstone projects)
 
-**Important Note:** Semester 1 has a heavier course load (4 courses), so time management is critical. Use the mid-year break to consolidate learning and prepare for Semester 2.
+**Important Note:** The Foundation Path has a heavier course load (4 courses), so time management is critical. Use the mid-year break to consolidate learning and prepare for the Advanced Path.
 
 ---
 

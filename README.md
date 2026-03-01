@@ -1,12 +1,10 @@
 <div align="center">
 
-# AI Learning Path - From Basics to Building Language Models
+# AI Learning Path: From Hello World to Hello GPT
 
-**A Comprehensive Open-Source Tutorial Series by a Master's Student, for Master's Students**
+**Open-source AI education built by a Master's in AI student, for everyone.**
 
-*From zero to building your own language models. Open-source AI education built by a Master's student, for Master's students.*
-
-**One path. Battle-tested. Concepts that actually work for you.**
+*Basic → Expert. Zero → Language Models. 60+ lessons. 100% hands-on. Actually works.*
 
 [Documentation](./MAI_STUDENT_GUIDE.md) • [Quick Start](#getting-started) • [LinkedIn](https://www.linkedin.com/in/karthik-arjun-a5b4a258/)
 

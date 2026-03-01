@@ -30,11 +30,11 @@ Hi! I'm a **Master of Artificial Intelligence (MAI)** student at the **Universit
 
 **This is not just a tutorial - it's a learning companion.** Whether you're a master's student like me, a self-learner, or a professional looking to upskill, you're welcome to learn with me.
 
-### For University of Auckland MAI Students
+### For MAI Students and AI Learners
 
-**This repository will significantly help you succeed in your MAI program at the University of Auckland!**
+**This repository will significantly help you succeed in your AI/ML journey!**
 
-Every lesson is carefully aligned with your coursework to provide:
+Every lesson is carefully designed to provide:
 - **Practical implementations** of concepts taught in lectures
 - **Hands-on practice** before assignments and exams
 - **Reference code** for your projects and dissertation

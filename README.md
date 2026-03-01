@@ -198,24 +198,80 @@ graph TB
         I14 --> I15
     end
     
-    subgraph Advanced["ADVANCED LEVEL"]
-        A1["Fine-tuning LLMs<br/>GPT, LLaMA, etc."]:::advanced
-        A2["RAG Systems<br/>Retrieval-Augmented Generation"]:::advanced
-        A3["Multi-Modal AI<br/>Vision + Language Models"]:::advanced
-        A4["Production MLOps<br/>Deployment & Monitoring"]:::advanced
+    subgraph AdvancedLLM["ADVANCED: LLMs (A01-A03)"]
+        A01["A01: Fine-tuning LLMs<br/>LoRA, QLoRA, PEFT"]:::advanced
+        A02["A02: Prompt Engineering<br/>Chain-of-Thought, ReAct"]:::advanced
+        A03["A03: RAG Systems<br/>Vector DBs, embeddings"]:::advanced
         
-        A1 --> A3
-        A2 --> A3
-        A3 --> A4
+        A01 --> A02 --> A03
     end
     
-    subgraph Expert["EXPERT LEVEL"]
-        E1["Research Papers<br/>Implementation"]:::expert
-        E2["Novel Architectures<br/>Design & Experimentation"]:::expert
-        E3["Open Source<br/>Contribution"]:::expert
+    subgraph AdvancedMulti["ADVANCED: MULTI-MODAL (A04-A06)"]
+        A04["A04: Vision-Language<br/>CLIP, BLIP, Stable Diffusion"]:::advanced
+        A05["A05: Audio & Speech<br/>Whisper, TTS"]:::advanced
+        A06["A06: Multi-Modal Fusion<br/>Unified systems"]:::advanced
         
-        E1 --> E3
-        E2 --> E3
+        A04 --> A05 --> A06
+    end
+    
+    subgraph AdvancedScale["ADVANCED: SCALING (A07-A09)"]
+        A07["A07: Distributed Training<br/>Data/model parallelism"]:::advanced
+        A08["A08: Mixed Precision<br/>FP16, BF16 training"]:::advanced
+        A09["A09: Inference Optimization<br/>TensorRT, ONNX"]:::advanced
+        
+        A07 --> A08 --> A09
+    end
+    
+    subgraph AdvancedOps["ADVANCED: MLOps (A10-A15)"]
+        A10["A10: ML Pipelines<br/>Feature stores, orchestration"]:::advanced
+        A11["A11: Deployment<br/>Docker, Kubernetes"]:::advanced
+        A12["A12: Monitoring<br/>Drift detection, A/B testing"]:::advanced
+        A13["A13: CI/CD for ML<br/>Automated testing"]:::advanced
+        A14["A14: Responsible AI<br/>Bias, privacy, compliance"]:::advanced
+        A15["A15: Production Capstone<br/>Real-world systems"]:::advanced
+        
+        A10 --> A11 --> A12
+        A12 --> A13 --> A14 --> A15
+    end
+    
+    subgraph ExpertResearch["EXPERT: RESEARCH (E01-E03)"]
+        E01["E01: Reading Papers<br/>Implementation & reproduction"]:::expert
+        E02["E02: Experimental Design<br/>Ablation studies"]:::expert
+        E03["E03: Writing & Publishing<br/>Research papers"]:::expert
+        
+        E01 --> E02 --> E03
+    end
+    
+    subgraph ExpertArch["EXPERT: ARCHITECTURES (E04-E06)"]
+        E04["E04: Neural Architecture Search<br/>DARTS, ENAS"]:::expert
+        E05["E05: Custom Layers<br/>CUDA kernels"]:::expert
+        E06["E06: Attention Innovations<br/>Flash Attention"]:::expert
+        
+        E04 --> E05 --> E06
+    end
+    
+    subgraph ExpertLearn["EXPERT: LEARNING (E07-E09)"]
+        E07["E07: Meta-Learning<br/>MAML, few-shot"]:::expert
+        E08["E08: Continual Learning<br/>Lifelong learning"]:::expert
+        E09["E09: Self-Supervised<br/>SimCLR, MoCo"]:::expert
+        
+        E07 --> E08 --> E09
+    end
+    
+    subgraph ExpertRL["EXPERT: RL & PRIVACY (E10-E12)"]
+        E10["E10: Deep RL<br/>DQN, PPO, SAC"]:::expert
+        E11["E11: RLHF<br/>Alignment & safety"]:::expert
+        E12["E12: Federated Learning<br/>Privacy-preserving"]:::expert
+        
+        E10 --> E11 --> E12
+    end
+    
+    subgraph ExpertEdge["EXPERT: CUTTING-EDGE (E13-E15)"]
+        E13["E13: Multimodal Foundation<br/>Unified models"]:::expert
+        E14["E14: Efficient AI<br/>Green & sustainable"]:::expert
+        E15["E15: Research Project<br/>Original contribution"]:::expert
+        
+        E13 --> E14 --> E15
     end
     
     Start --> B01
@@ -231,10 +287,18 @@ graph TB
     I09 --> I10
     I09 --> I12
     
-    I15 --> A1
-    I15 --> A2
-    A4 --> E1
-    A4 --> E2
+    I15 --> A01
+    A03 --> A04
+    A06 --> A07
+    A09 --> A10
+    
+    A15 --> E01
+    E03 --> E04
+    E03 --> E07
+    E03 --> E10
+    E06 --> E13
+    E09 --> E13
+    E12 --> E13
     
     classDef startNode fill:#4A90E2,stroke:#2E5C8A,stroke-width:4px,color:#fff,font-size:16px
     classDef basic fill:#FFE5B4,stroke:#D4A574,stroke-width:3px,color:#000,font-size:14px
@@ -286,38 +350,52 @@ The diagram flows from top to bottom, organized into clear stages. Each stage bu
 - Duration: ~60-80 hours
 - Prerequisites: Complete all Basic level lessons
 
-**7. Advanced Level** - Production Systems (Coming Soon)
-- Fine-tune LLMs, build RAG systems, multi-modal AI, MLOps deployment
+**7. Advanced Level (A01-A15)** - Production Systems
+- **LLMs (A01-A03)**: Fine-tuning, prompt engineering, RAG systems
+- **Multi-Modal (A04-A06)**: Vision-language, audio, multi-modal fusion
+- **Scaling (A07-A09)**: Distributed training, mixed precision, inference optimization
+- **MLOps (A10-A15)**: Pipelines, deployment, monitoring, CI/CD, responsible AI
+- Duration: ~80-100 hours
 - Prerequisites: Complete Intermediate level
 
-**8. Expert Level** - Research & Innovation (Coming Soon)
-- Implement research papers, design novel architectures, contribute to open-source
+**8. Expert Level (E01-E15)** - Research & Innovation
+- **Research (E01-E03)**: Reading papers, experimental design, publishing
+- **Architectures (E04-E06)**: NAS, custom layers, attention innovations
+- **Learning (E07-E09)**: Meta-learning, continual learning, self-supervised
+- **RL & Privacy (E10-E12)**: Deep RL, RLHF, federated learning
+- **Cutting-Edge (E13-E15)**: Multimodal foundations, efficient AI, research projects
+- Duration: ~100-120 hours
 - Prerequisites: Complete Advanced level
 
 **Color Guide:**
 - Blue: Your starting point
 - Peach: Basic Level - Foundation concepts (B01-B15)
 - Light Blue: Intermediate Level - Advanced techniques (I01-I15)
-- Purple: Advanced Level - Production systems
-- Gold: Expert Level - Research and innovation
+- Purple: Advanced Level - Production systems (A01-A15)
+- Gold: Expert Level - Research and innovation (E01-E15)
 
-**Intermediate Level Flow:**
-The Intermediate level is organized into four parallel tracks that can be studied based on your interests:
-1. Start with Optimization (I01-I03) - foundational for all tracks
-2. Choose your specialization: Computer Vision (I04-I06) or NLP (I07-I09)
-3. Both tracks converge at Production ML (I10-I15)
-4. Complete with MLOps and deployment (I15)
+**Learning Flow:**
+- **Basic → Intermediate**: Focus on mastering fundamentals before advancing
+- **Intermediate → Advanced**: Build production-ready skills after mastering techniques
+- **Advanced → Expert**: Transition to research after production experience
+- **Parallel Tracks**: Within each level, some tracks can be studied in parallel based on interests
+
+**Total Journey:**
+- Complete path: ~280-380 hours (6-9 months at 10-15 hours/week)
+- Basic to Intermediate: ~100-140 hours (2-3 months)
+- Intermediate to Advanced: ~140-180 hours (3-4 months)
+- Advanced to Expert: ~180-220 hours (4-5 months)
 
 ## Repository Structure
 
-This repository is organized into four progressive levels, with the Basic level fully available now and Intermediate level detailed:
+This repository is organized into four progressive levels, with comprehensive roadmaps for all levels:
 
 ```
 AI/
 ├── Basic/              # [COMPLETE] 15 Lessons (B01-B15)
 ├── Intermediate/       # [DETAILED] 15 Lessons (I01-I15)
-├── Advanced/           # [COMING SOON]
-├── Expert/             # [COMING SOON]
+├── Advanced/           # [DETAILED] 15 Lessons (A01-A15)
+├── Expert/             # [DETAILED] 15 Lessons (E01-E15)
 ├── MAI_STUDENT_GUIDE.md # Guide for University of Auckland MAI Students
 ```
 
@@ -391,27 +469,81 @@ Advanced topics building on basic concepts. **[View complete Intermediate syllab
 
 ---
 
-### Advanced Level (Coming Soon)
+### Advanced Level (Detailed - 15 Lessons)
 
-Production-ready AI systems:
-- Fine-tuning Large Language Models (GPT, LLaMA, Mistral)
-- Retrieval-Augmented Generation (RAG) Systems
-- Multi-Modal AI (CLIP, Vision-Language Models)
-- Model Deployment and MLOps (Docker, Kubernetes, FastAPI)
-- Ethical AI and Bias Mitigation
-- Model Monitoring and A/B Testing
+Production-ready AI systems. **[View complete Advanced syllabus →](./Advanced/)**
+
+#### Large Language Models (A01-A03)
+1. **A01 - Fine-tuning Large Language Models** - LoRA, QLoRA, PEFT, instruction tuning
+2. **A02 - Prompt Engineering and In-Context Learning** - Chain-of-Thought, ReAct, LangChain
+3. **A03 - Retrieval-Augmented Generation (RAG)** - Vector databases, embeddings, hybrid search
+
+#### Multi-Modal AI (A04-A06)
+4. **A04 - Vision-Language Models** - CLIP, BLIP, image captioning, text-to-image
+5. **A05 - Audio and Speech Processing** - Whisper, TTS, audio classification
+6. **A06 - Multi-Modal Fusion and Integration** - Fusion strategies, unified systems
+
+#### Distributed & Scalable Training (A07-A09)
+7. **A07 - Distributed Training Strategies** - Data/model parallelism, DeepSpeed, Megatron
+8. **A08 - Mixed Precision and Optimization** - FP16, BF16, gradient accumulation
+9. **A09 - Model Serving and Inference Optimization** - TensorRT, ONNX, batching strategies
+
+#### Production MLOps (A10-A15)
+10. **A10 - ML Pipeline Architecture** - Feature stores, model registry, orchestration
+11. **A11 - Containerization and Deployment** - Docker, Kubernetes, cloud deployment
+12. **A12 - Monitoring and Observability** - Performance monitoring, drift detection, A/B testing
+13. **A13 - CI/CD for Machine Learning** - Automated testing, continuous training, GitOps
+14. **A14 - Responsible AI and Governance** - Bias mitigation, privacy, compliance
+15. **A15 - Production Case Studies and Capstone** - Real-world architectures, scaling
+
+**Total Learning Time:** ~80-100 hours for complete mastery
+
+**Key Features:**
+- Industry-standard MLOps practices
+- Cloud deployment strategies
+- Production monitoring and maintenance
+- Responsible AI implementation
 
 **[View Advanced roadmap →](./Advanced/)**
 
-### Expert Level (Coming Soon)
+---
 
-Research-oriented topics:
-- Novel Architecture Design and Experimentation
-- Research Paper Implementation (NeurIPS, ICML, ICLR)
-- Neural Architecture Search (NAS)
-- Meta-Learning and Few-Shot Learning
-- Contributing to Open-Source AI Projects
-- Publishing Research Papers
+### Expert Level (Detailed - 15 Lessons)
+
+Research-oriented topics and cutting-edge techniques. **[View complete Expert syllabus →](./Expert/)**
+
+#### Research Foundations (E01-E03)
+1. **E01 - Reading and Implementing Research Papers** - Paper analysis, reproduction, benchmarking
+2. **E02 - Experimental Design and Ablation Studies** - Rigorous experiments, statistical testing
+3. **E03 - Writing and Publishing Research** - Paper structure, peer review, publishing
+
+#### Novel Architectures (E04-E06)
+4. **E04 - Neural Architecture Search (NAS)** - DARTS, ENAS, hardware-aware NAS
+5. **E05 - Custom Layer and Operation Design** - Novel layers, CUDA kernels, gradients
+6. **E06 - Attention Mechanism Innovations** - Sparse attention, Flash Attention, efficiency
+
+#### Advanced Learning Paradigms (E07-E09)
+7. **E07 - Meta-Learning and Few-Shot Learning** - MAML, Reptile, Prototypical Networks
+8. **E08 - Continual and Lifelong Learning** - Catastrophic forgetting, EWC, progressive networks
+9. **E09 - Self-Supervised and Contrastive Learning** - SimCLR, MoCo, BYOL, contrastive losses
+
+#### Reinforcement Learning & Advanced Topics (E10-E12)
+10. **E10 - Deep Reinforcement Learning** - DQN, A3C, PPO, SAC, multi-agent RL
+11. **E11 - Reinforcement Learning from Human Feedback (RLHF)** - Reward modeling, alignment
+12. **E12 - Federated and Privacy-Preserving Learning** - Federated learning, differential privacy
+
+#### Cutting-Edge Research (E13-E15)
+13. **E13 - Multimodal Foundation Models** - Unified models, cross-modal alignment, scaling laws
+14. **E14 - Efficient and Green AI** - Carbon footprint, lottery tickets, sustainable AI
+15. **E15 - Research Project and Contribution** - Original research, open-source, publishing
+
+**Total Learning Time:** ~100-120 hours for complete mastery
+
+**Key Features:**
+- Research methodology and paper writing
+- Novel architecture design
+- State-of-the-art techniques
+- Original research contributions
 
 **[View Expert roadmap →](./Expert/)**
 

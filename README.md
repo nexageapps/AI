@@ -68,7 +68,7 @@ Designed to help MAI students at the University of Auckland succeed by complemen
 
 ## Documentation Overview
 
-This repository includes comprehensive documentation to support your learning journey. For a complete overview of all documentation, see the [Documentation Index](./DOCUMENTATION_INDEX.md).
+This repository includes comprehensive documentation to support your learning journey. For a complete overview of all documentation, see the [Documentation Index](./documentation/DOCUMENTATION_INDEX.md).
 
 ### Core Documentation
 
@@ -79,7 +79,7 @@ This repository includes comprehensive documentation to support your learning jo
 | [Exam Preparation Guide](./documentation/EXAM_PREPARATION_GUIDE.md) | Exam strategies, practice problems, study tips | Exam preparation, concept review |
 | [Progress Tracker Guide](./documentation/PROGRESS_TRACKER_GUIDE.md) | How to track learning, spaced repetition | Organizing study, tracking progress |
 | [Updates Summary](./documentation/UPDATES_SUMMARY.md) | Recent enhancements, new features | Understanding new additions |
-| [Documentation Index](./DOCUMENTATION_INDEX.md) | Complete guide to all documentation | Finding specific information |
+| [Documentation Index](./documentation/DOCUMENTATION_INDEX.md) | Complete guide to all documentation | Finding specific information |
 
 ### Policy Documentation
 

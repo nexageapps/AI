@@ -280,7 +280,7 @@ Found an error? Have a suggestion?
 ---
 
 **Last Updated:** March 2026  
-**Status:** In Progress (4/15 lessons complete)
+**Status:** In Progress (6/15 lessons complete)
 
 ## Current Status
 
@@ -289,10 +289,12 @@ Found an error? Have a suggestion?
 - I02 - Regularization Techniques
 - I03 - Batch and Layer Normalization
 - I04 - Advanced CNN Architectures
-
-🚧 **In Development:**
 - I05 - Transfer Learning and Fine-tuning
 - I06 - Object Detection and Segmentation
+
+🎉 **Computer Vision Track Complete!** (I04-I06)
+
+🚧 **In Development:**
 - I07 - Advanced RNN Architectures
 - I08 - Encoder-Decoder and Seq2Seq Models
 - I09 - Advanced Transformer Architectures

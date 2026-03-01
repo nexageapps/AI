@@ -159,15 +159,43 @@ graph TB
         B12 --> B13
     end
     
-    subgraph Intermediate["INTERMEDIATE LEVEL"]
-        I1["Transfer Learning<br/>& Fine-tuning"]:::intermediate
-        I2["Advanced Optimization<br/>& Regularization"]:::intermediate
-        I3["Advanced Architectures<br/>ResNet, BERT, etc."]:::intermediate
-        I4["Hyperparameter Tuning<br/>& AutoML"]:::intermediate
+    subgraph IntermediateOpt["INTERMEDIATE: OPTIMIZATION (I01-I03)"]
+        I01["I01: Advanced Optimization<br/>Adam, RMSprop, learning rate scheduling"]:::intermediate
+        I02["I02: Regularization<br/>L1/L2, dropout, data augmentation"]:::intermediate
+        I03["I03: Normalization<br/>Batch & layer normalization"]:::intermediate
         
-        I1 --> I3
-        I2 --> I3
-        I3 --> I4
+        I01 --> I02 --> I03
+    end
+    
+    subgraph IntermediateCV["INTERMEDIATE: COMPUTER VISION (I04-I06)"]
+        I04["I04: Advanced CNNs<br/>ResNet, VGG, EfficientNet"]:::intermediate
+        I05["I05: Transfer Learning<br/>Pre-trained models & fine-tuning"]:::intermediate
+        I06["I06: Detection & Segmentation<br/>YOLO, R-CNN, U-Net"]:::intermediate
+        
+        I04 --> I05 --> I06
+    end
+    
+    subgraph IntermediateNLP["INTERMEDIATE: NLP (I07-I09)"]
+        I07["I07: Advanced RNNs<br/>Bidirectional & stacked LSTMs"]:::intermediate
+        I08["I08: Seq2Seq Models<br/>Encoder-decoder architecture"]:::intermediate
+        I09["I09: Advanced Transformers<br/>BERT, GPT variants, T5"]:::intermediate
+        
+        I07 --> I08 --> I09
+    end
+    
+    subgraph IntermediateProd["INTERMEDIATE: PRODUCTION (I10-I15)"]
+        I10["I10: Hyperparameter Tuning<br/>Bayesian optimization, AutoML"]:::intermediate
+        I11["I11: Model Compression<br/>Pruning, quantization"]:::intermediate
+        I12["I12: Generative Models<br/>VAEs, GANs, diffusion"]:::intermediate
+        I13["I13: Meta-Learning<br/>Few-shot, MAML"]:::intermediate
+        I14["I14: Explainable AI<br/>SHAP, LIME, fairness"]:::intermediate
+        I15["I15: MLOps<br/>Deployment & monitoring"]:::intermediate
+        
+        I10 --> I11
+        I12 --> I13
+        I11 --> I14
+        I13 --> I14
+        I14 --> I15
     end
     
     subgraph Advanced["ADVANCED LEVEL"]
@@ -195,10 +223,16 @@ graph TB
     B07 --> B09
     B07 --> B10
     B11 --> B12
-    B13 --> I1
-    B13 --> I2
-    I4 --> A1
-    I4 --> A2
+    B13 --> I01
+    
+    I03 --> I04
+    I03 --> I07
+    I06 --> I10
+    I09 --> I10
+    I09 --> I12
+    
+    I15 --> A1
+    I15 --> A2
     A4 --> E1
     A4 --> E2
     
@@ -244,33 +278,44 @@ The diagram flows from top to bottom, organized into clear stages. Each stage bu
 - Duration: ~2-6 weeks (depending on project scope)
 - Prerequisites: Complete all previous stages
 
-**5. Intermediate Level** - Advanced Techniques (Coming Soon)
-- Transfer learning, advanced optimization, complex architectures, hyperparameter tuning
+**6. Intermediate Level (I01-I15)** - Advanced Techniques
+- **Optimization (I01-I03)**: Master advanced training techniques
+- **Computer Vision (I04-I06)**: State-of-the-art CV architectures
+- **NLP (I07-I09)**: Advanced sequential models and transformers
+- **Production ML (I10-I15)**: Tuning, compression, generative models, and deployment
+- Duration: ~60-80 hours
 - Prerequisites: Complete all Basic level lessons
 
-**6. Advanced Level** - Production Systems (Coming Soon)
+**7. Advanced Level** - Production Systems (Coming Soon)
 - Fine-tune LLMs, build RAG systems, multi-modal AI, MLOps deployment
 - Prerequisites: Complete Intermediate level
 
-**7. Expert Level** - Research & Innovation (Coming Soon)
+**8. Expert Level** - Research & Innovation (Coming Soon)
 - Implement research papers, design novel architectures, contribute to open-source
 - Prerequisites: Complete Advanced level
 
 **Color Guide:**
 - Blue: Your starting point
-- Peach: Basic Level - Foundation concepts (B01-B13)
-- Light Blue: Intermediate Level - Advanced techniques
+- Peach: Basic Level - Foundation concepts (B01-B15)
+- Light Blue: Intermediate Level - Advanced techniques (I01-I15)
 - Purple: Advanced Level - Production systems
 - Gold: Expert Level - Research and innovation
 
+**Intermediate Level Flow:**
+The Intermediate level is organized into four parallel tracks that can be studied based on your interests:
+1. Start with Optimization (I01-I03) - foundational for all tracks
+2. Choose your specialization: Computer Vision (I04-I06) or NLP (I07-I09)
+3. Both tracks converge at Production ML (I10-I15)
+4. Complete with MLOps and deployment (I15)
+
 ## Repository Structure
 
-This repository is organized into four progressive levels, with the Basic level fully available now:
+This repository is organized into four progressive levels, with the Basic level fully available now and Intermediate level detailed:
 
 ```
 AI/
 ├── Basic/              # [COMPLETE] 15 Lessons (B01-B15)
-├── Intermediate/       # [COMING SOON]
+├── Intermediate/       # [DETAILED] 15 Lessons (I01-I15)
 ├── Advanced/           # [COMING SOON]
 ├── Expert/             # [COMING SOON]
 ├── MAI_STUDENT_GUIDE.md # Guide for University of Auckland MAI Students
@@ -308,36 +353,43 @@ Foundation lessons covering fundamental AI/ML concepts. **[View all Basic lesson
 
 ---
 
-### Intermediate Level (Coming Soon - 15 Lessons)
+### Intermediate Level (Detailed - 15 Lessons)
 
 Advanced topics building on basic concepts. **[View complete Intermediate syllabus →](./Intermediate/)**
 
 #### Advanced Optimization & Training (I01-I03)
-1. **I01 - Advanced Optimization Algorithms** - Adam, RMSprop, learning rate scheduling
-2. **I02 - Regularization Techniques** - L1/L2, dropout variants, data augmentation
-3. **I03 - Batch and Layer Normalization** - Stabilize training and improve convergence
+1. **I01 - Advanced Optimization Algorithms** - Adam, RMSprop, AdaGrad, learning rate scheduling
+2. **I02 - Regularization Techniques** - L1/L2, dropout variants, early stopping, data augmentation
+3. **I03 - Batch and Layer Normalization** - Batch norm, layer norm, group norm, instance norm
 
 #### Advanced Computer Vision (I04-I06)
-4. **I04 - Advanced CNN Architectures** - ResNet, VGG, Inception, EfficientNet
-5. **I05 - Transfer Learning and Fine-tuning** - Pre-trained models and domain adaptation
-6. **I06 - Object Detection and Segmentation** - YOLO, R-CNN, U-Net, Mask R-CNN
+4. **I04 - Advanced CNN Architectures** - ResNet, VGG, Inception, EfficientNet architecture design
+5. **I05 - Transfer Learning and Fine-tuning** - Pre-trained models, domain adaptation, few-shot learning
+6. **I06 - Object Detection and Segmentation** - YOLO, R-CNN family, U-Net, Mask R-CNN
 
 #### Advanced NLP & Sequences (I07-I09)
-7. **I07 - Advanced RNN Architectures** - Bidirectional RNNs, stacked LSTMs
-8. **I08 - Encoder-Decoder and Seq2Seq Models** - Translation and summarization
-9. **I09 - Advanced Transformer Architectures** - BERT, GPT variants, T5, BART
+7. **I07 - Advanced RNN Architectures** - Bidirectional RNNs, stacked LSTMs, GRU vs LSTM
+8. **I08 - Encoder-Decoder and Seq2Seq Models** - Sequence-to-sequence, attention in seq2seq
+9. **I09 - Advanced Transformer Architectures** - BERT, GPT variants, T5, BART, positional encoding
 
 #### Production ML & Advanced Topics (I10-I15)
-10. **I10 - Hyperparameter Tuning and AutoML** - Bayesian optimization, NAS
-11. **I11 - Model Compression and Optimization** - Pruning, quantization, distillation
-12. **I12 - Generative Models** - VAEs, GANs, diffusion models
-13. **I13 - Multi-Task and Meta-Learning** - Few-shot learning, MAML
-14. **I14 - Explainable AI and Interpretability** - SHAP, LIME, fairness metrics
-15. **I15 - MLOps and Production Deployment** - CI/CD, monitoring, model serving
+10. **I10 - Hyperparameter Tuning and AutoML** - Grid search, Bayesian optimization, NAS, Optuna
+11. **I11 - Model Compression and Optimization** - Pruning, quantization, knowledge distillation, mobile deployment
+12. **I12 - Generative Models** - VAEs, GANs, diffusion models, applications
+13. **I13 - Multi-Task and Meta-Learning** - Multi-task frameworks, MAML, few-shot and zero-shot learning
+14. **I14 - Explainable AI and Interpretability** - SHAP, LIME, attention visualization, fairness detection
+15. **I15 - MLOps and Production Deployment** - Model versioning, CI/CD, monitoring, drift detection, serving
 
 **Total Learning Time:** ~60-80 hours for complete mastery
 
-**[View Intermediate roadmap →](./Intermediate/)**
+**Key Features:**
+- Aligned with University of Auckland MAI curriculum
+- Four specialized tracks: Optimization, Computer Vision, NLP, Production ML
+- Multiple learning paths for different specializations
+- Production-ready implementations
+- Industry best practices
+
+---
 
 ### Advanced Level (Coming Soon)
 

@@ -13,7 +13,7 @@
 [![version: 1.0.0](https://img.shields.io/badge/version-1.0.0-green.svg)](https://github.com/nexageapps/AI)
 [![tests: 15 lessons passing](https://img.shields.io/badge/tests-15%20lessons%20passing-brightgreen.svg)](./Basic/)
 [![Sponsored by: nexageapps](https://img.shields.io/badge/Sponsored%20by-nexageapps-blue.svg)](https://nexageapps.com)
-[![repo: Buy me a coffee](https://img.shields.io/badge/repo-Buy%20me%20a%20coffee-yellow.svg)](https://buymeacoffee.com/fcc4sbsx5f6)
+[![repo: Buy me a book](https://img.shields.io/badge/repo-Buy%20me%20a%20coffee-yellow.svg)](https://buymeacoffee.com/fcc4sbsx5f6)
 
 </div>
 
@@ -924,7 +924,7 @@ I'm always excited to connect with fellow learners and researchers!
 
 **If you find this helpful, please star the repository!**
 
-[![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%20A%20Coffee-Support%20This%20Project-yellow?style=for-the-badge&logo=buy-me-a-coffee)](https://buymeacoffee.com/fcc4sbsx5f6)
+[![Buy me a book](https://img.shields.io/badge/Buy%20Me%20A%20Coffee-Support%20This%20Project-yellow?style=for-the-badge&logo=buy-me-a-coffee)](https://buymeacoffee.com/fcc4sbsx5f6)
 
 *Made by a student, for students*
 

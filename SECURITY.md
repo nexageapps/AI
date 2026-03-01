@@ -1,12 +1,12 @@
 # Security Policy
 
+## Overview
+
+This repository contains educational AI/ML materials and Jupyter notebooks. We take security seriously to protect our learners and contributors.
+
 ## Supported Versions
 
-Use this section to tell people about which versions of your project are
-currently being supported with security updates.
-
-| Version | Supported          |
-| ------- | ------------------ |
+We actively maintain and provide security updates for the foll
 | 5.1.x   | :white_check_mark: |
 | 5.0.x   | :x:                |
 | 4.0.x   | :white_check_mark: |

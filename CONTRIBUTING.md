@@ -253,37 +253,43 @@ def calc(p,t):
 
 ## Academic Integrity
 
-**IMPORTANT:** This repository is a learning resource, not a solution manual.
+**IMPORTANT:** This repository is a **personal learning resource** created by a student, not official university material. It's not a solution manual.
 
 ### For Contributors:
 
+**Remember: This is one student's personal study notes, not official course material from any institution.**
+
 - **Original Work**: Only contribute your own original work or properly attributed content
 - **Proper Attribution**: Always cite sources, papers, and inspirations
-- **No Assignment Solutions**: Do not submit solutions to specific university assignments
-- **Educational Focus**: Contributions should teach concepts, not provide copy-paste answers
+- **No Assignment Solutions**: Do not submit solutions to specific university assignments from any institution
+- **Educational Focus**: Contributions should teach concepts, not provide copy-paste answers for coursework
+- **General Examples Only**: Keep implementations general and educational, not tied to specific assignments
 
 ### For Users:
 
 - **Learn, Don't Copy**: Use this repository to understand concepts, not to copy code for assignments
-- **Academic Honesty**: Follow your institution's academic integrity policies
-- **Cite Appropriately**: If you use ideas from this repository, cite it properly
+- **Academic Honesty**: Follow your institution's academic integrity policies - you are responsible
+- **Cite Appropriately**: If you use ideas from this repository, cite it properly in your work
 - **Understand First**: Make sure you understand the code before using it in your work
+- **Not Official Material**: Remember this is a fellow student's notes, not authoritative course content
 
 ### What We Accept:
 
 ✅ General tutorials and explanations  
-✅ Example implementations of algorithms  
+✅ Example implementations of algorithms and concepts  
 ✅ Practice exercises with solutions  
 ✅ Project templates and starter code  
-✅ Conceptual explanations and visualizations
+✅ Conceptual explanations and visualizations  
+✅ Personal learning notes and study materials
 
 ### What We Don't Accept:
 
-❌ Solutions to specific university assignments  
+❌ Solutions to specific university assignments from any institution  
 ❌ Exam questions or answers  
 ❌ Plagiarized content  
 ❌ Code designed to bypass academic integrity checks  
-❌ Content that violates copyright
+❌ Content that violates copyright  
+❌ Material that could be directly submitted as coursework
 
 ---
 

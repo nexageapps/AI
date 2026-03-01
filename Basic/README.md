@@ -77,6 +77,13 @@ This folder contains all fundamental concepts you need to master before advancin
    - Handling imbalanced data
    - **Why it matters:** Accuracy alone is not enough
 
+8. **B08 - Regularization and Overfitting** - Preventing overfitting
+   - Understanding overfitting vs underfitting
+   - L1 and L2 regularization
+   - Dropout techniques
+   - Early stopping
+   - **Why it matters:** Models must generalize to new data
+
 ### Deep Learning (B09-B11) - Advanced Neural Networks
 **Duration:** 10-12 hours | **Goal:** Master modern architectures
 

@@ -461,12 +461,12 @@ graph LR
 
 ```mermaid
 graph TD
-    Traditional[Traditional ML]:::old
-    CNN[CNNs<br/>B09]:::arch
-    RNN[RNNs/LSTMs<br/>B10]:::arch
-    Attention[Attention<br/>B11]:::arch
-    Transformer[Transformers<br/>B11]:::modern
-    LLM[Language Models<br/>B13]:::modern
+    Traditional["📊 Traditional ML<br/>Linear Models<br/>Decision Trees"]:::traditional
+    CNN["🖼️ CNNs<br/>B09<br/>Computer Vision"]:::cnn
+    RNN["⏱️ RNNs/LSTMs<br/>B10<br/>Sequential Data"]:::rnn
+    Attention["👁️ Attention<br/>B11<br/>Focus Mechanism"]:::attention
+    Transformer["🔄 Transformers<br/>B11<br/>Modern Architecture"]:::transformer
+    LLM["🤖 Language Models<br/>B13<br/>GPT-style Systems"]:::llm
     
     Traditional --> CNN
     Traditional --> RNN
@@ -475,10 +475,24 @@ graph TD
     Attention --> Transformer
     Transformer --> LLM
     
-    classDef old fill:#D3D3D3,stroke:#A9A9A9,stroke-width:2px
-    classDef arch fill:#FFE5B4,stroke:#D4A574,stroke-width:2px
-    classDef modern fill:#B4E5FF,stroke:#74A5D4,stroke-width:3px
+    classDef traditional fill:#9E9E9E,stroke:#616161,stroke-width:2px,color:#fff,font-size:13px
+    classDef cnn fill:#FF5722,stroke:#BF360C,stroke-width:3px,color:#fff,font-size:13px
+    classDef rnn fill:#673AB7,stroke:#311B92,stroke-width:3px,color:#fff,font-size:13px
+    classDef attention fill:#FF9800,stroke:#E65100,stroke-width:3px,color:#fff,font-size:13px
+    classDef transformer fill:#2196F3,stroke:#0D47A1,stroke-width:4px,color:#fff,font-size:14px,font-weight:bold
+    classDef llm fill:#4CAF50,stroke:#2E7D32,stroke-width:4px,color:#fff,font-size:14px,font-weight:bold
 ```
+
+**🎨 Architecture Evolution:**
+- ⚫ **Gray**: Traditional ML - Where we started
+- 🔴 **Red**: CNNs (B09) - Vision revolution
+- 🟣 **Purple**: RNNs (B10) - Sequential processing
+- 🟠 **Orange**: Attention (B11) - Focus mechanism
+- 🔵 **Blue**: Transformers (B11) - Modern breakthrough
+- 🟢 **Green**: LLMs (B13) - Current state-of-the-art
+
+**📈 Evolution Path:**
+Traditional methods → Specialized architectures (CNN/RNN) → Attention mechanism → Transformers → Large Language Models
 
 **Weekly Study Plan:**
 
@@ -561,14 +575,14 @@ gantt
 
 ```mermaid
 graph TD
-    Receive[Receive Assignment]:::start
-    Review[Review Related<br/>Repository Lessons]:::step
-    Understand[Understand<br/>Requirements]:::step
-    Reference[Use Code as<br/>Reference]:::step
-    Implement[Implement Your<br/>Solution]:::step
-    Test[Test & Debug]:::step
-    Document[Document<br/>Approach]:::step
-    Submit[Submit]:::end
+    Receive["📬 Receive Assignment<br/>Read requirements"]:::start
+    Review["📖 Review Related<br/>Repository Lessons<br/>Find relevant code"]:::review
+    Understand["💡 Understand<br/>Requirements<br/>Break down tasks"]:::understand
+    Reference["🔍 Use Code as<br/>Reference<br/>Learn patterns"]:::reference
+    Implement["⚙️ Implement Your<br/>Solution<br/>Write original code"]:::implement
+    Test["🧪 Test & Debug<br/>Fix issues"]:::test
+    Document["📝 Document<br/>Approach<br/>Explain decisions"]:::document
+    Submit["✅ Submit<br/>On time!"]:::submit
     
     Receive --> Review
     Review --> Understand
@@ -578,10 +592,29 @@ graph TD
     Test --> Document
     Document --> Submit
     
-    classDef start fill:#4A90E2,stroke:#2E5C8A,stroke-width:3px,color:#fff
-    classDef step fill:#FFE5B4,stroke:#D4A574,stroke-width:2px
-    classDef end fill:#D4FFB4,stroke:#74D474,stroke-width:3px
+    Test -.->|"Issues Found"| Reference
+    
+    classDef start fill:#E91E63,stroke:#AD1457,stroke-width:4px,color:#fff,font-size:14px,font-weight:bold
+    classDef review fill:#FF9800,stroke:#E65100,stroke-width:3px,color:#fff,font-size:13px
+    classDef understand fill:#FFC107,stroke:#F57C00,stroke-width:3px,color:#000,font-size:13px
+    classDef reference fill:#2196F3,stroke:#0D47A1,stroke-width:3px,color:#fff,font-size:13px
+    classDef implement fill:#9C27B0,stroke:#6A1B9A,stroke-width:3px,color:#fff,font-size:13px
+    classDef test fill:#00BCD4,stroke:#006064,stroke-width:3px,color:#fff,font-size:13px
+    classDef document fill:#673AB7,stroke:#311B92,stroke-width:3px,color:#fff,font-size:13px
+    classDef submit fill:#4CAF50,stroke:#2E7D32,stroke-width:4px,color:#fff,font-size:14px,font-weight:bold
 ```
+
+**🎨 Workflow Steps:**
+- 🔴 **Pink**: Start - Receive assignment
+- 🟠 **Orange**: Review - Find relevant lessons
+- 🟡 **Yellow**: Understand - Break down requirements
+- 🔵 **Blue**: Reference - Learn from examples
+- 🟣 **Purple**: Implement - Write your code
+- 🔷 **Cyan**: Test - Debug and fix
+- 🟣 **Dark Purple**: Document - Explain your work
+- 🟢 **Green**: Submit - Complete!
+
+**💡 Pro Tip:** If testing reveals issues, loop back to reference materials before re-implementing.
 
 ### Dissertation Planning
 

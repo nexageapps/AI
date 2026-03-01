@@ -413,129 +413,113 @@ AI/
 
 ### Basic Level (15 Lessons - Available Now)
 
-Foundation lessons covering fundamental AI/ML concepts. **[View all Basic lessons →](./Basic/)**
+**Foundation (B01-B03)**
+1. B01 - Arithmetic
+2. B02 - Linear Regression
+3. B03 - Binary Classification
 
-**Foundation (B01-B03)** - Start Here
-1. B01 - Arithmetic: TensorFlow basics and tensor operations
-2. B02 - Linear Regression: Linear regression fundamentals  
-3. B03 - Binary Classification: Two-class classification problems
+**Core Machine Learning (B04-B08)**
+4. B04 - Multi-Class Classification
+5. B05 - Neural Network Fundamentals
+6. B06 - Data Preprocessing
+7. B07 - Model Evaluation
+8. B08 - Regularization
 
-**Core Machine Learning (B04-B08)** - Essential Skills
-4. B04 - Multi-Class Classification: Multiple category classification
-5. B05 - Neural Network Fundamentals: Deep dive into NN architecture
-6. B06 - Data Preprocessing: Data preparation techniques
-7. B07 - Model Evaluation: Measuring model performance
-8. B08 - Regularization: Preventing overfitting
+**Deep Learning (B09-B11)**
+9. B09 - CNNs
+10. B10 - RNNs
+11. B11 - Attention & Transformers
 
-**Deep Learning (B09-B11)** - Advanced Neural Networks
-9. B09 - CNNs: Convolutional networks for image processing
-10. B10 - RNNs: Recurrent networks for sequential data
-11. B11 - Attention & Transformers: Modern attention mechanisms
+**NLP Specialization (B12-B13)**
+12. B12 - Byte Pair Encoding
+13. B13 - Mini Language Model
 
-**NLP Specialization (B12-B13)** - Build Language Models
-12. B12 - Byte Pair Encoding: Tokenization for NLP
-13. B13 - Mini Language Model: Create your own GPT-style model
-
-**Practice & Portfolio (B14-B15)** - Apply Your Skills
-14. B14 - Practical Projects: 10 hands-on assignments
-15. B15 - Capstone Projects: 5 portfolio-worthy projects
-
-**Learning Time:** ~40-60 hours for complete mastery
+**Practice & Portfolio (B14-B15)**
+14. B14 - Practical Projects
+15. B15 - Capstone Projects
 
 ---
 
-### Intermediate Level (15 Lessons - Detailed Roadmap)
-
-Advanced topics building on basic concepts. **[View complete syllabus →](./Intermediate/)**
+### Intermediate Level (15 Lessons)
 
 **Advanced Optimization (I01-I03)**
-1. I01 - Advanced Optimization: Adam, RMSprop, learning rate scheduling
-2. I02 - Regularization: L1/L2, dropout, data augmentation
-3. I03 - Normalization: Batch norm, layer norm, group norm
+1. I01 - Advanced Optimization
+2. I02 - Regularization Techniques
+3. I03 - Batch and Layer Normalization
 
 **Advanced Computer Vision (I04-I06)**
-4. I04 - Advanced CNNs: ResNet, VGG, Inception, EfficientNet
-5. I05 - Transfer Learning: Pre-trained models, domain adaptation
-6. I06 - Detection & Segmentation: YOLO, R-CNN, U-Net, Mask R-CNN
+4. I04 - Advanced CNNs
+5. I05 - Transfer Learning
+6. I06 - Object Detection & Segmentation
 
 **Advanced NLP (I07-I09)**
-7. I07 - Advanced RNNs: Bidirectional, stacked LSTMs, GRU vs LSTM
-8. I08 - Seq2Seq Models: Encoder-decoder, attention in seq2seq
-9. I09 - Advanced Transformers: BERT, GPT variants, T5, BART
+7. I07 - Advanced RNNs
+8. I08 - Seq2Seq Models
+9. I09 - Advanced Transformers
 
 **Production ML (I10-I15)**
-10. I10 - Hyperparameter Tuning: Grid search, Bayesian optimization, AutoML
-11. I11 - Model Compression: Pruning, quantization, knowledge distillation
-12. I12 - Generative Models: VAEs, GANs, diffusion models
-13. I13 - Multi-Task Learning: Multi-task frameworks, MAML, few-shot
-14. I14 - Explainable AI: SHAP, LIME, attention visualization, fairness
-15. I15 - MLOps: Model versioning, CI/CD, monitoring, drift detection
-
-**Learning Time:** ~60-80 hours
+10. I10 - Hyperparameter Tuning
+11. I11 - Model Compression
+12. I12 - Generative Models
+13. I13 - Multi-Task Learning
+14. I14 - Explainable AI
+15. I15 - MLOps
 
 ---
 
-### Advanced Level (15 Lessons - Detailed Roadmap)
-
-Production-ready AI systems. **[View complete syllabus →](./Advanced/)**
+### Advanced Level (15 Lessons)
 
 **Large Language Models (A01-A03)**
-1. A01 - Fine-tuning LLMs: LoRA, QLoRA, PEFT, instruction tuning
-2. A02 - Prompt Engineering: Chain-of-Thought, ReAct, LangChain
-3. A03 - RAG Systems: Vector databases, embeddings, hybrid search
+1. A01 - Fine-tuning LLMs
+2. A02 - Prompt Engineering
+3. A03 - RAG Systems
 
 **Multi-Modal AI (A04-A06)**
-4. A04 - Vision-Language Models: CLIP, BLIP, image captioning
-5. A05 - Audio & Speech: Whisper, TTS, audio classification
-6. A06 - Multi-Modal Fusion: Fusion strategies, unified systems
+4. A04 - Vision-Language Models
+5. A05 - Audio & Speech
+6. A06 - Multi-Modal Fusion
 
 **Distributed Training (A07-A09)**
-7. A07 - Distributed Training: Data/model parallelism, DeepSpeed
-8. A08 - Mixed Precision: FP16, BF16, gradient accumulation
-9. A09 - Inference Optimization: TensorRT, ONNX, batching
+7. A07 - Distributed Training
+8. A08 - Mixed Precision
+9. A09 - Inference Optimization
 
 **Production MLOps (A10-A15)**
-10. A10 - ML Pipelines: Feature stores, model registry, orchestration
-11. A11 - Deployment: Docker, Kubernetes, cloud deployment
-12. A12 - Monitoring: Performance monitoring, drift detection, A/B testing
-13. A13 - CI/CD for ML: Automated testing, continuous training
-14. A14 - Responsible AI: Bias mitigation, privacy, compliance
-15. A15 - Production Capstone: Real-world architectures, scaling
-
-**Learning Time:** ~80-100 hours
+10. A10 - ML Pipelines
+11. A11 - Deployment
+12. A12 - Monitoring
+13. A13 - CI/CD for ML
+14. A14 - Responsible AI
+15. A15 - Production Capstone
 
 ---
 
-### Expert Level (15 Lessons - Detailed Roadmap)
-
-Research-oriented topics and cutting-edge techniques. **[View complete syllabus →](./Expert/)**
+### Expert Level (15 Lessons)
 
 **Research Foundations (E01-E03)**
-1. E01 - Reading Papers: Paper analysis, reproduction, benchmarking
-2. E02 - Experimental Design: Rigorous experiments, statistical testing
-3. E03 - Writing & Publishing: Paper structure, peer review
+1. E01 - Reading Papers
+2. E02 - Experimental Design
+3. E03 - Writing & Publishing
 
 **Novel Architectures (E04-E06)**
-4. E04 - Neural Architecture Search: DARTS, ENAS, hardware-aware NAS
-5. E05 - Custom Layers: Novel layers, CUDA kernels, gradients
-6. E06 - Attention Innovations: Sparse attention, Flash Attention
+4. E04 - Neural Architecture Search
+5. E05 - Custom Layers
+6. E06 - Attention Innovations
 
 **Advanced Learning (E07-E09)**
-7. E07 - Meta-Learning: MAML, Reptile, Prototypical Networks
-8. E08 - Continual Learning: Catastrophic forgetting, EWC
-9. E09 - Self-Supervised Learning: SimCLR, MoCo, BYOL
+7. E07 - Meta-Learning
+8. E08 - Continual Learning
+9. E09 - Self-Supervised Learning
 
 **RL & Advanced Topics (E10-E12)**
-10. E10 - Deep RL: DQN, A3C, PPO, SAC, multi-agent RL
-11. E11 - RLHF: Reward modeling, alignment, safety
-12. E12 - Federated Learning: Privacy-preserving, differential privacy
+10. E10 - Deep RL
+11. E11 - RLHF
+12. E12 - Federated Learning
 
 **Cutting-Edge Research (E13-E15)**
-13. E13 - Multimodal Foundation Models: Unified models, cross-modal alignment
-14. E14 - Efficient AI: Carbon footprint, lottery tickets, sustainable AI
-15. E15 - Research Project: Original research, open-source contribution
-
-**Learning Time:** ~100-120 hours
+13. E13 - Multimodal Foundation Models
+14. E14 - Efficient AI
+15. E15 - Research Project
 
 ## Getting Started
 

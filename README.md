@@ -1,10 +1,10 @@
 <div align="center">
 
-# AI Learning Path
+# AI Learning Path: From Hello World to Hello GPT
 
 **The Complete Learning Journey**
 
-*From basics to building language models. Open-source AI education built by a Master's student, for Master's students.*
+*From zero to building your own language models. Open-source AI education built by a Master's student, for Master's students.*
 
 **One path. Battle-tested. Concepts that actually work for you.**
 
@@ -88,45 +88,19 @@ This repository provides a **structured, hands-on learning path** to deeply unde
 
 ## What Makes This Different?
 
-This is not just another AI tutorial collection - it's a **carefully designed curriculum** created by a student who understands the challenges of learning AI:
-
 **Key Features:**
 
-- **Student Perspective**: Written by someone currently learning, not just teaching - I understand the struggles!
-- **Builds Progressively**: From fundamentals to advanced concepts, no gaps or confusing jumps
-- **100% Hands-On**: Every concept comes with runnable code - learn by doing, not just reading
-- **Visual Learning**: Comprehensive visualizations to understand complex concepts intuitively
-- **Real-World Focus**: Practical applications at each level, not just toy examples
-- **Academic Rigor**: Meets the standards of a top university program (University of Auckland MAI)
-- **Culminates in Building**: Create your own mini language model (GPT-style) from scratch
-- **Completely Free**: Quality education shouldn't have a price tag
-- **Active Development**: Regular updates as I learn new concepts in my master's program
-- **Community-Driven**: Open to contributions, feedback, and collaboration
+- **Student Perspective** - Written by someone currently learning, not just teaching
+- **Builds Progressively** - From fundamentals to advanced concepts, no gaps
+- **100% Hands-On** - Every concept comes with runnable code
+- **Visual Learning** - Comprehensive visualizations for complex concepts
+- **Real-World Focus** - Practical applications, not just toy examples
+- **Academic Rigor** - Meets top university program standards
+- **Completely Free** - Quality education shouldn't have a price tag
+- **Active Development** - Regular updates as I learn new concepts
 
 **What You'll Build:**
-- Linear regression models from scratch
-- Binary and multi-class classifiers
-- Deep neural networks with custom architectures
-- CNNs for image recognition
-- RNNs and LSTMs for sequential data
-- Transformer models with attention mechanisms
-- Your own tokenizer using BPE
-- A mini GPT-style language model
-- Portfolio-worthy capstone projects
-
-**Primary Audience:** Master of Artificial Intelligence (MAI) students at the University of Auckland - this repository is built specifically to help you excel in your program.
-
-**Also Valuable For:** Master's students in AI at other universities, undergraduate students, self-learners, bootcamp graduates, career switchers, and anyone wanting to deeply understand AI/ML concepts.
-
-**Language:** Python & Jupyter Notebooks (100%) - All runnable in Google Colab with zero setup!
-
-**Why University of Auckland MAI Students Love This Repository:**
-- Directly complements University of Auckland course content
-- Saves hours of implementation time
-- Provides tested, working code examples
-- Helps achieve better grades through practice
-- Builds portfolio for job applications
-- Created by a fellow University of Auckland MAI student who understands your challenges
+Linear regression models • Binary and multi-class classifiers • Deep neural networks • CNNs for image recognition • RNNs and LSTMs for sequential data • Transformer models with attention • Your own tokenizer using BPE • A mini GPT-style language model • Portfolio-worthy capstone projects
 
 ## Learning Path Diagram
 
@@ -950,6 +924,8 @@ I'm always excited to connect with fellow learners and researchers!
 <div align="center">
 
 **If you find this helpful, please star the repository!**
+
+[![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%20A%20Coffee-Support%20This%20Project-yellow?style=for-the-badge&logo=buy-me-a-coffee)](https://buymeacoffee.com/fcc4sbsx5f6)
 
 *Made by a student, for students*
 

@@ -59,58 +59,84 @@ Use this table to quickly find which lessons support each course:
 
 ## Learning Path Flowchart
 
+**Your Complete MAI Journey Visualized**
+
 ```mermaid
-graph TD
-    Start([Start MAI Program]):::start
+graph TB
+    Start([🎓 START MAI PROGRAM<br/>University of Auckland]):::startNode
     
-    subgraph Semester1["Semester 1"]
-        Ethics[COMPSCI 712<br/>AI Ethics<br/>B06, B07]:::ethics
-        Fundamentals[COMPSCI 713<br/>AI Fundamentals<br/>B01-B05]:::core
-        MLTheory[COMPSCI 762<br/>ML Foundations<br/>B02-B07]:::core
-        Architecture[COMPSCI 714<br/>AI Architecture<br/>B09-B11, B13]:::advanced
+    subgraph Semester1["📚 SEMESTER 1 - Building Foundations"]
+        direction TB
+        Ethics["COMPSCI 712<br/>🤝 AI Ethics & Society<br/><br/>📖 Lessons: B06, B07<br/>⏱️ Focus: Data Bias & Fairness"]:::ethics
+        Fundamentals["COMPSCI 713<br/>🧠 AI Fundamentals<br/><br/>📖 Lessons: B01-B05<br/>⏱️ Focus: Core ML Concepts"]:::fundamentals
+        MLTheory["COMPSCI 762<br/>📊 ML Foundations<br/><br/>📖 Lessons: B02-B07<br/>⏱️ Focus: Theory & Practice"]:::mlTheory
+        Architecture["COMPSCI 714<br/>🏗️ AI Architecture & Design<br/><br/>📖 Lessons: B09-B11, B13<br/>⏱️ Focus: Deep Learning"]:::architecture
     end
     
-    subgraph Semester2["Semester 2"]
-        AdvancedAI[COMPSCI 761<br/>Advanced AI<br/>B06, B12]:::advanced
-        GeneralAI[COMPSCI 703<br/>Generalising AI<br/>B11-B13]:::advanced
-        DeepLearning[COMPSYS 721<br/>Deep Learning<br/>B09-B13]:::advanced
+    subgraph Semester2["🚀 SEMESTER 2 - Advanced Mastery"]
+        direction TB
+        AdvancedAI["COMPSCI 761<br/>⚡ Advanced AI Topics<br/><br/>📖 Lessons: B06, B12<br/>⏱️ Focus: Tokenization"]:::advancedAI
+        GeneralAI["COMPSCI 703<br/>🌐 Generalising AI<br/><br/>📖 Lessons: B11-B13<br/>⏱️ Focus: Transformers & LLMs"]:::generalAI
+        DeepLearning["COMPSYS 721<br/>🔥 Deep Learning<br/><br/>📖 Lessons: B09-B13<br/>⏱️ Focus: Neural Networks"]:::deepLearning
     end
     
-    subgraph Practice["Throughout Program"]
-        Assignments[B14<br/>Practical Assignments]:::practice
-        Capstone[B15<br/>Capstone Projects]:::practice
+    subgraph Practice["💪 CONTINUOUS PRACTICE - Throughout Program"]
+        direction LR
+        Assignments["B14<br/>📝 Practical Assignments<br/><br/>10 hands-on projects<br/>Apply what you learn"]:::assignments
+        Capstone["B15<br/>🎯 Capstone Projects<br/><br/>5 portfolio projects<br/>Build real systems"]:::capstone
     end
     
-    Start --> Ethics
-    Ethics --> Fundamentals
-    Fundamentals --> MLTheory
-    Fundamentals --> Architecture
+    Start ==> Ethics
+    Start ==> Fundamentals
+    Ethics --> MLTheory
+    Fundamentals ==> MLTheory
+    Fundamentals ==> Architecture
     
-    MLTheory --> AdvancedAI
-    Architecture --> GeneralAI
-    Architecture --> DeepLearning
+    MLTheory ==> AdvancedAI
+    Architecture ==> GeneralAI
+    Architecture ==> DeepLearning
+    MLTheory --> DeepLearning
     
-    Fundamentals -.-> Assignments
-    MLTheory -.-> Assignments
-    Architecture -.-> Assignments
+    Fundamentals -.->|"Practice<br/>Weekly"| Assignments
+    MLTheory -.->|"Practice<br/>Weekly"| Assignments
+    Architecture -.->|"Practice<br/>Weekly"| Assignments
     
-    AdvancedAI -.-> Capstone
-    GeneralAI -.-> Capstone
-    DeepLearning -.-> Capstone
+    AdvancedAI -.->|"Build<br/>Portfolio"| Capstone
+    GeneralAI -.->|"Build<br/>Portfolio"| Capstone
+    DeepLearning -.->|"Build<br/>Portfolio"| Capstone
     
-    classDef start fill:#4A90E2,stroke:#2E5C8A,stroke-width:3px,color:#fff
-    classDef ethics fill:#FFB6C1,stroke:#C71585,stroke-width:2px
-    classDef core fill:#FFE5B4,stroke:#D4A574,stroke-width:2px
-    classDef advanced fill:#B4E5FF,stroke:#74A5D4,stroke-width:2px
-    classDef practice fill:#D4FFB4,stroke:#74D474,stroke-width:2px
+    Assignments --> Capstone
+    
+    classDef startNode fill:#2E7D32,stroke:#1B5E20,stroke-width:4px,color:#fff,font-size:16px,font-weight:bold
+    classDef ethics fill:#E91E63,stroke:#AD1457,stroke-width:3px,color:#fff,font-size:14px
+    classDef fundamentals fill:#FF9800,stroke:#E65100,stroke-width:3px,color:#fff,font-size:14px
+    classDef mlTheory fill:#FF6F00,stroke:#E65100,stroke-width:3px,color:#fff,font-size:14px
+    classDef architecture fill:#3F51B5,stroke:#1A237E,stroke-width:3px,color:#fff,font-size:14px
+    classDef advancedAI fill:#9C27B0,stroke:#4A148C,stroke-width:3px,color:#fff,font-size:14px
+    classDef generalAI fill:#673AB7,stroke:#311B92,stroke-width:3px,color:#fff,font-size:14px
+    classDef deepLearning fill:#512DA8,stroke:#311B92,stroke-width:3px,color:#fff,font-size:14px
+    classDef assignments fill:#00BCD4,stroke:#006064,stroke-width:3px,color:#fff,font-size:14px
+    classDef capstone fill:#FFD700,stroke:#F57F17,stroke-width:4px,color:#000,font-size:14px,font-weight:bold
 ```
 
-**Legend:**
-- Pink: Ethics foundation
-- Peach: Core fundamentals
-- Light Blue: Advanced topics
-- Light Green: Practice & projects
-- Dotted lines: Supplementary practice
+**🎨 Color Legend:**
+- 🟢 **Green**: Your starting point - MAI Program begins here
+- 🔴 **Pink/Red**: Ethics & Society - Foundation for responsible AI
+- 🟠 **Orange**: Core Fundamentals - Essential ML concepts
+- 🔵 **Blue**: Architecture & Design - Deep learning systems
+- 🟣 **Purple**: Advanced Topics - Cutting-edge AI techniques
+- 🔷 **Cyan**: Practice Assignments - Weekly hands-on work
+- 🟡 **Gold**: Capstone Projects - Portfolio-worthy final projects
+
+**📊 Connection Types:**
+- **Solid thick arrows (==>)**: Primary learning path - follow these first
+- **Solid thin arrows (-->)**: Secondary connections - important relationships
+- **Dotted lines (-..->)**: Practice opportunities - apply your knowledge continuously
+
+**⏱️ Time Commitment:**
+- **Semester 1**: 4 courses + Weekly practice from B14
+- **Semester 2**: 3 courses + Build capstone projects from B15
+- **Throughout**: Continuous practice with assignments and projects
 
 ---
 

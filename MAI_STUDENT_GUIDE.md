@@ -63,27 +63,27 @@ Use this table to quickly find which lessons support each course:
 
 ```mermaid
 graph TB
-    Start([🎓 START MAI PROGRAM<br/>University of Auckland]):::startNode
+    Start([START MAI PROGRAM<br/>University of Auckland]):::startNode
     
-    subgraph Semester1["📚 SEMESTER 1 - Building Foundations"]
+    subgraph Semester1["SEMESTER 1 - Building Foundations"]
         direction TB
-        Ethics["COMPSCI 712<br/>🤝 AI Ethics & Society<br/><br/>📖 Lessons: B06, B07<br/>⏱️ Focus: Data Bias & Fairness"]:::ethics
-        Fundamentals["COMPSCI 713<br/>🧠 AI Fundamentals<br/><br/>📖 Lessons: B01-B05<br/>⏱️ Focus: Core ML Concepts"]:::fundamentals
-        MLTheory["COMPSCI 762<br/>📊 ML Foundations<br/><br/>📖 Lessons: B02-B07<br/>⏱️ Focus: Theory & Practice"]:::mlTheory
-        Architecture["COMPSCI 714<br/>🏗️ AI Architecture & Design<br/><br/>📖 Lessons: B09-B11, B13<br/>⏱️ Focus: Deep Learning"]:::architecture
+        Ethics["COMPSCI 712<br/>AI Ethics & Society<br/><br/>Lessons: B06, B07<br/>Focus: Data Bias & Fairness"]:::ethics
+        Fundamentals["COMPSCI 713<br/>AI Fundamentals<br/><br/>Lessons: B01-B05<br/>Focus: Core ML Concepts"]:::fundamentals
+        MLTheory["COMPSCI 762<br/>ML Foundations<br/><br/>Lessons: B02-B07<br/>Focus: Theory & Practice"]:::mlTheory
+        Architecture["COMPSCI 714<br/>AI Architecture & Design<br/><br/>Lessons: B09-B11, B13<br/>Focus: Deep Learning"]:::architecture
     end
     
-    subgraph Semester2["🚀 SEMESTER 2 - Advanced Mastery"]
+    subgraph Semester2["SEMESTER 2 - Advanced Mastery"]
         direction TB
-        AdvancedAI["COMPSCI 761<br/>⚡ Advanced AI Topics<br/><br/>📖 Lessons: B06, B12<br/>⏱️ Focus: Tokenization"]:::advancedAI
-        GeneralAI["COMPSCI 703<br/>🌐 Generalising AI<br/><br/>📖 Lessons: B11-B13<br/>⏱️ Focus: Transformers & LLMs"]:::generalAI
-        DeepLearning["COMPSYS 721<br/>🔥 Deep Learning<br/><br/>📖 Lessons: B09-B13<br/>⏱️ Focus: Neural Networks"]:::deepLearning
+        AdvancedAI["COMPSCI 761<br/>Advanced AI Topics<br/><br/>Lessons: B06, B12<br/>Focus: Tokenization"]:::advancedAI
+        GeneralAI["COMPSCI 703<br/>Generalising AI<br/><br/>Lessons: B11-B13<br/>Focus: Transformers & LLMs"]:::generalAI
+        DeepLearning["COMPSYS 721<br/>Deep Learning<br/><br/>Lessons: B09-B13<br/>Focus: Neural Networks"]:::deepLearning
     end
     
-    subgraph Practice["💪 CONTINUOUS PRACTICE - Throughout Program"]
+    subgraph Practice["CONTINUOUS PRACTICE - Throughout Program"]
         direction LR
-        Assignments["B14<br/>📝 Practical Assignments<br/><br/>10 hands-on projects<br/>Apply what you learn"]:::assignments
-        Capstone["B15<br/>🎯 Capstone Projects<br/><br/>5 portfolio projects<br/>Build real systems"]:::capstone
+        Assignments["B14<br/>Practical Assignments<br/><br/>10 hands-on projects<br/>Apply what you learn"]:::assignments
+        Capstone["B15<br/>Capstone Projects<br/><br/>5 portfolio projects<br/>Build real systems"]:::capstone
     end
     
     Start ==> Ethics
@@ -119,21 +119,21 @@ graph TB
     classDef capstone fill:#FFD700,stroke:#F57F17,stroke-width:4px,color:#000,font-size:14px,font-weight:bold
 ```
 
-**🎨 Color Legend:**
-- 🟢 **Green**: Your starting point - MAI Program begins here
-- 🔴 **Pink/Red**: Ethics & Society - Foundation for responsible AI
-- 🟠 **Orange**: Core Fundamentals - Essential ML concepts
-- 🔵 **Blue**: Architecture & Design - Deep learning systems
-- 🟣 **Purple**: Advanced Topics - Cutting-edge AI techniques
-- 🔷 **Cyan**: Practice Assignments - Weekly hands-on work
-- 🟡 **Gold**: Capstone Projects - Portfolio-worthy final projects
+**Color Legend:**
+- **Green**: Your starting point - MAI Program begins here
+- **Pink/Red**: Ethics & Society - Foundation for responsible AI
+- **Orange**: Core Fundamentals - Essential ML concepts
+- **Blue**: Architecture & Design - Deep learning systems
+- **Purple**: Advanced Topics - Cutting-edge AI techniques
+- **Cyan**: Practice Assignments - Weekly hands-on work
+- **Gold**: Capstone Projects - Portfolio-worthy final projects
 
-**📊 Connection Types:**
+**Connection Types:**
 - **Solid thick arrows (==>)**: Primary learning path - follow these first
 - **Solid thin arrows (-->)**: Secondary connections - important relationships
 - **Dotted lines (-..->)**: Practice opportunities - apply your knowledge continuously
 
-**⏱️ Time Commitment:**
+**Time Commitment:**
 - **Semester 1**: 4 courses + Weekly practice from B14
 - **Semester 2**: 3 courses + Build capstone projects from B15
 - **Throughout**: Continuous practice with assignments and projects
@@ -191,11 +191,11 @@ graph TB
 
 ```mermaid
 graph LR
-    B01["📊 B01<br/>Tensors &<br/>Operations"]:::foundation --> B02["📈 B02<br/>Linear<br/>Regression"]:::foundation
-    B02 --> B03["🎯 B03<br/>Binary<br/>Classification"]:::intermediate
-    B03 --> B04["🎲 B04<br/>Multi-Class<br/>Classification"]:::intermediate
-    B04 --> B05["🧠 B05<br/>Neural<br/>Networks"]:::advanced
-    B05 --> B14["💪 B14<br/>Practice<br/>Assignments"]:::practice
+    B01["B01<br/>Tensors &<br/>Operations"]:::foundation --> B02["B02<br/>Linear<br/>Regression"]:::foundation
+    B02 --> B03["B03<br/>Binary<br/>Classification"]:::intermediate
+    B03 --> B04["B04<br/>Multi-Class<br/>Classification"]:::intermediate
+    B04 --> B05["B05<br/>Neural<br/>Networks"]:::advanced
+    B05 --> B14["B14<br/>Practice<br/>Assignments"]:::practice
     
     classDef foundation fill:#4CAF50,stroke:#2E7D32,stroke-width:3px,color:#fff,font-size:14px
     classDef intermediate fill:#FF9800,stroke:#E65100,stroke-width:3px,color:#fff,font-size:14px
@@ -203,11 +203,11 @@ graph LR
     classDef practice fill:#9C27B0,stroke:#6A1B9A,stroke-width:4px,color:#fff,font-size:14px,font-weight:bold
 ```
 
-**🎨 Progression Colors:**
-- 🟢 **Green**: Foundation - Start here (B01-B02)
-- 🟠 **Orange**: Intermediate - Building skills (B03-B04)
-- 🔵 **Blue**: Advanced - Deep concepts (B05)
-- 🟣 **Purple**: Practice - Apply everything (B14)
+**Progression Colors:**
+- **Green**: Foundation - Start here (B01-B02)
+- **Orange**: Intermediate - Building skills (B03-B04)
+- **Blue**: Advanced - Deep concepts (B05)
+- **Purple**: Practice - Apply everything (B14)
 
 **Weekly Study Plan:**
 
@@ -248,12 +248,12 @@ graph LR
 
 ```mermaid
 graph TD
-    Problem["🎯 Define Problem<br/>What are we solving?"]:::start
-    Requirements["📋 Gather Requirements<br/>Performance, constraints, data"]:::step
-    Design["🏗️ Architecture Design<br/>Choose model type"]:::design
-    Implement["⚙️ Implementation<br/>Build the system"]:::implement
-    Evaluate["📊 Evaluation<br/>Test & measure"]:::evaluate
-    Deploy["🚀 Deployment<br/>Production ready"]:::deploy
+    Problem["Define Problem<br/>What are we solving?"]:::start
+    Requirements["Gather Requirements<br/>Performance, constraints, data"]:::step
+    Design["Architecture Design<br/>Choose model type"]:::design
+    Implement["Implementation<br/>Build the system"]:::implement
+    Evaluate["Evaluation<br/>Test & measure"]:::evaluate
+    Deploy["Deployment<br/>Production ready"]:::deploy
     
     Problem --> Requirements
     Requirements --> Design
@@ -261,12 +261,12 @@ graph TD
     Implement --> Evaluate
     Evaluate --> Deploy
     
-    Design -.->|"Vision Tasks"| B09["B09: CNN<br/>Architectures<br/>🖼️ Images"]:::cnn
-    Design -.->|"Sequential Data"| B10["B10: RNN<br/>Architectures<br/>⏱️ Time Series"]:::rnn
-    Design -.->|"Modern NLP"| B11["B11: Transformer<br/>Architectures<br/>💬 Language"]:::transformer
+    Design -.->|"Vision Tasks"| B09["B09: CNN<br/>Architectures<br/>Images"]:::cnn
+    Design -.->|"Sequential Data"| B10["B10: RNN<br/>Architectures<br/>Time Series"]:::rnn
+    Design -.->|"Modern NLP"| B11["B11: Transformer<br/>Architectures<br/>Language"]:::transformer
     
-    Implement -.->|"End-to-End"| B13["B13: Complete<br/>System<br/>🎓 Full Pipeline"]:::system
-    Deploy -.->|"Production"| B15["B15: Deployment<br/>Strategies<br/>☁️ Cloud Ready"]:::production
+    Implement -.->|"End-to-End"| B13["B13: Complete<br/>System<br/>Full Pipeline"]:::system
+    Deploy -.->|"Production"| B15["B15: Deployment<br/>Strategies<br/>Cloud Ready"]:::production
     
     classDef start fill:#E91E63,stroke:#AD1457,stroke-width:4px,color:#fff,font-size:14px,font-weight:bold
     classDef step fill:#FF9800,stroke:#E65100,stroke-width:3px,color:#fff,font-size:13px
@@ -281,15 +281,15 @@ graph TD
     classDef production fill:#8BC34A,stroke:#558B2F,stroke-width:2px,color:#fff,font-size:12px
 ```
 
-**🎨 Process Flow Colors:**
-- 🔴 **Pink**: Problem definition - Start here
-- 🟠 **Orange**: Requirements gathering
-- 🟣 **Purple**: Design phase - Critical decisions
-- 🔵 **Blue**: Implementation - Build it
-- 🔷 **Cyan**: Evaluation - Test it
-- 🟢 **Green**: Deployment - Ship it
+**Process Flow Colors:**
+- **Pink**: Problem definition - Start here
+- **Orange**: Requirements gathering
+- **Purple**: Design phase - Critical decisions
+- **Blue**: Implementation - Build it
+- **Cyan**: Evaluation - Test it
+- **Green**: Deployment - Ship it
 
-**📚 Architecture References:**
+**Architecture References:**
 - **CNN (Red)**: For image/vision tasks
 - **RNN (Purple)**: For sequential/time-series data
 - **Transformer (Blue)**: For modern NLP tasks
@@ -369,10 +369,10 @@ graph TD
 
 ```mermaid
 graph LR
-    Theory["📚 Lecture<br/>Theory &<br/>Concepts"]:::theory --> Understand["💡 Understand<br/>Core Ideas"]:::understand
-    Understand --> Implement["💻 Repository<br/>Implementation<br/>& Code"]:::implement
-    Implement --> Experiment["🔬 Experiment<br/>Modify &<br/>Test"]:::experiment
-    Experiment --> Master["🎓 Master<br/>Complete<br/>Understanding"]:::master
+    Theory["Lecture<br/>Theory &<br/>Concepts"]:::theory --> Understand["Understand<br/>Core Ideas"]:::understand
+    Understand --> Implement["Repository<br/>Implementation<br/>& Code"]:::implement
+    Implement --> Experiment["Experiment<br/>Modify &<br/>Test"]:::experiment
+    Experiment --> Master["Master<br/>Complete<br/>Understanding"]:::master
     
     classDef theory fill:#E91E63,stroke:#AD1457,stroke-width:3px,color:#fff,font-size:14px
     classDef understand fill:#FF9800,stroke:#E65100,stroke-width:3px,color:#fff,font-size:14px
@@ -381,12 +381,12 @@ graph LR
     classDef master fill:#4CAF50,stroke:#2E7D32,stroke-width:4px,color:#fff,font-size:14px,font-weight:bold
 ```
 
-**🎨 Learning Cycle:**
-- 🔴 **Pink**: Theory from lectures - Learn concepts
-- 🟠 **Orange**: Understanding - Process information
-- 🔵 **Blue**: Implementation - Code it yourself
-- 🟣 **Purple**: Experimentation - Modify and explore
-- 🟢 **Green**: Mastery - Complete understanding achieved
+**Learning Cycle:**
+- **Pink**: Theory from lectures - Learn concepts
+- **Orange**: Understanding - Process information
+- **Blue**: Implementation - Code it yourself
+- **Purple**: Experimentation - Modify and explore
+- **Green**: Mastery - Complete understanding achieved
 
 **Weekly Study Plan:**
 
@@ -461,12 +461,12 @@ graph LR
 
 ```mermaid
 graph TD
-    Traditional["📊 Traditional ML<br/>Linear Models<br/>Decision Trees"]:::traditional
-    CNN["🖼️ CNNs<br/>B09<br/>Computer Vision"]:::cnn
-    RNN["⏱️ RNNs/LSTMs<br/>B10<br/>Sequential Data"]:::rnn
-    Attention["👁️ Attention<br/>B11<br/>Focus Mechanism"]:::attention
-    Transformer["🔄 Transformers<br/>B11<br/>Modern Architecture"]:::transformer
-    LLM["🤖 Language Models<br/>B13<br/>GPT-style Systems"]:::llm
+    Traditional["Traditional ML<br/>Linear Models<br/>Decision Trees"]:::traditional
+    CNN["CNNs<br/>B09<br/>Computer Vision"]:::cnn
+    RNN["RNNs/LSTMs<br/>B10<br/>Sequential Data"]:::rnn
+    Attention["Attention<br/>B11<br/>Focus Mechanism"]:::attention
+    Transformer["Transformers<br/>B11<br/>Modern Architecture"]:::transformer
+    LLM["Language Models<br/>B13<br/>GPT-style Systems"]:::llm
     
     Traditional --> CNN
     Traditional --> RNN
@@ -483,15 +483,15 @@ graph TD
     classDef llm fill:#4CAF50,stroke:#2E7D32,stroke-width:4px,color:#fff,font-size:14px,font-weight:bold
 ```
 
-**🎨 Architecture Evolution:**
-- ⚫ **Gray**: Traditional ML - Where we started
-- 🔴 **Red**: CNNs (B09) - Vision revolution
-- 🟣 **Purple**: RNNs (B10) - Sequential processing
-- 🟠 **Orange**: Attention (B11) - Focus mechanism
-- 🔵 **Blue**: Transformers (B11) - Modern breakthrough
-- 🟢 **Green**: LLMs (B13) - Current state-of-the-art
+**Architecture Evolution:**
+- **Gray**: Traditional ML - Where we started
+- **Red**: CNNs (B09) - Vision revolution
+- **Purple**: RNNs (B10) - Sequential processing
+- **Orange**: Attention (B11) - Focus mechanism
+- **Blue**: Transformers (B11) - Modern breakthrough
+- **Green**: LLMs (B13) - Current state-of-the-art
 
-**📈 Evolution Path:**
+**Evolution Path:**
 Traditional methods → Specialized architectures (CNN/RNN) → Attention mechanism → Transformers → Large Language Models
 
 **Weekly Study Plan:**
@@ -575,14 +575,14 @@ gantt
 
 ```mermaid
 graph TD
-    Receive["📬 Receive Assignment<br/>Read requirements"]:::start
-    Review["📖 Review Related<br/>Repository Lessons<br/>Find relevant code"]:::review
-    Understand["💡 Understand<br/>Requirements<br/>Break down tasks"]:::understand
-    Reference["🔍 Use Code as<br/>Reference<br/>Learn patterns"]:::reference
-    Implement["⚙️ Implement Your<br/>Solution<br/>Write original code"]:::implement
-    Test["🧪 Test & Debug<br/>Fix issues"]:::test
-    Document["📝 Document<br/>Approach<br/>Explain decisions"]:::document
-    Submit["✅ Submit<br/>On time!"]:::submit
+    Receive["Receive Assignment<br/>Read requirements"]:::start
+    Review["Review Related<br/>Repository Lessons<br/>Find relevant code"]:::review
+    Understand["Understand<br/>Requirements<br/>Break down tasks"]:::understand
+    Reference["Use Code as<br/>Reference<br/>Learn patterns"]:::reference
+    Implement["Implement Your<br/>Solution<br/>Write original code"]:::implement
+    Test["Test & Debug<br/>Fix issues"]:::test
+    Document["Document<br/>Approach<br/>Explain decisions"]:::document
+    Submit["Submit<br/>On time!"]:::submit
     
     Receive --> Review
     Review --> Understand
@@ -604,17 +604,17 @@ graph TD
     classDef submit fill:#4CAF50,stroke:#2E7D32,stroke-width:4px,color:#fff,font-size:14px,font-weight:bold
 ```
 
-**🎨 Workflow Steps:**
-- 🔴 **Pink**: Start - Receive assignment
-- 🟠 **Orange**: Review - Find relevant lessons
-- 🟡 **Yellow**: Understand - Break down requirements
-- 🔵 **Blue**: Reference - Learn from examples
-- 🟣 **Purple**: Implement - Write your code
-- 🔷 **Cyan**: Test - Debug and fix
-- 🟣 **Dark Purple**: Document - Explain your work
-- 🟢 **Green**: Submit - Complete!
+**Workflow Steps:**
+- **Pink**: Start - Receive assignment
+- **Orange**: Review - Find relevant lessons
+- **Yellow**: Understand - Break down requirements
+- **Blue**: Reference - Learn from examples
+- **Purple**: Implement - Write your code
+- **Cyan**: Test - Debug and fix
+- **Dark Purple**: Document - Explain your work
+- **Green**: Submit - Complete!
 
-**💡 Pro Tip:** If testing reveals issues, loop back to reference materials before re-implementing.
+**Pro Tip:** If testing reveals issues, loop back to reference materials before re-implementing.
 
 ### Dissertation Planning
 

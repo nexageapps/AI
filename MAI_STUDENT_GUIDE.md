@@ -39,21 +39,31 @@ This repository is designed by a fellow MAI student at the University of Aucklan
 
 Use this table to quickly find which lessons support each course:
 
-| Course Code | Course Name | Relevant Lessons | Focus Area | Semester |
-|-------------|-------------|------------------|------------|----------|
-| COMPSCI 712 | AI Agency, Ethics and Society | B06, B07, B14, B15 | Ethics & Bias | 1 |
-| COMPSCI 713 | AI Fundamentals | B01-B05, B14 | Core Algorithms | 1 |
-| COMPSCI 714 | AI Architecture and Design | B09-B11, B13-B15 | System Design | 1/2 |
-| COMPSCI 761 | Advanced AI Topics | B06, B12, B14, B15 | Knowledge Rep | 1/2 |
-| COMPSCI 762 | Foundations of ML | B02-B05, B07, B14 | ML Theory | 1 |
-| COMPSCI 703 | Generalising AI | B11-B13, B14, B15 | General AI | 2 |
-| COMPSYS 721 | Machine Intelligence | B09-B11, B13, B14 | Deep Learning | 2 |
+| Course Code | Course Name | Relevant Lessons | Focus Area |
+|-------------|-------------|------------------|------------|
+| COMPSCI 712 | AI Agency, Ethics and Society | B06, B07, B14, B15 | Ethics & Bias |
+| COMPSCI 713 | AI Fundamentals | B01-B05, B14 | Core Algorithms |
+| COMPSCI 714 | AI Architecture and Design | B09-B11, B13-B15 | System Design |
+| COMPSCI 762 | Foundations of ML | B02-B05, B07, B14 | ML Theory |
+| COMPSCI 761 | Advanced AI Topics | B06, B12, B14, B15 | Knowledge Rep |
+| COMPSCI 703 | Generalising AI | B11-B13, B14, B15 | General AI |
+| COMPSYS 721 | Machine Intelligence | B09-B11, B13, B14 | Deep Learning |
+
+**Semester Breakdown:**
+- **Semester 1**: COMPSCI 712, 713, 714, 762 (4 courses)
+- **Semester 2**: COMPSCI 761, 703, COMPSYS 721 (3 courses)
 
 **Recommended Study Order:**
-1. COMPSCI 712 (Ethics) - Understand responsible AI first
-2. COMPSCI 713 (Fundamentals) - Build strong foundations
-3. Parallel: COMPSCI 762 (ML Theory) + COMPSCI 714 (Architecture)
-4. Advanced: COMPSCI 761, 703, COMPSYS 721
+1. **COMPSCI 713 (Fundamentals)** - CRITICAL: Build strong foundations first
+2. **COMPSCI 714 (Architecture)** - CRITICAL: Core deep learning architectures
+3. COMPSCI 712 (Ethics) - Understand responsible AI principles
+4. COMPSCI 762 (ML Theory) - Parallel with 713/714 for theoretical depth
+5. Advanced: COMPSCI 761, 703, COMPSYS 721
+
+**Why CS713 and CS714 are Critical:**
+- **CS713**: Foundation for all other courses - covers essential ML algorithms
+- **CS714**: Core architectures (CNNs, RNNs, Transformers) used throughout the program
+- These two courses provide the practical and architectural knowledge needed for success in all advanced courses
 
 ---
 

@@ -39,26 +39,61 @@ This repository is designed by a fellow MAI student at the University of Aucklan
 
 Use this table to quickly find which lessons support each course:
 
+**Core Required Courses (60 points):**
+
 | Course Code | Course Name | Relevant Lessons | Focus Area |
 |-------------|-------------|------------------|------------|
 | COMPSCI 712 | AI Agency, Ethics and Society | B06, B07, B14, B15 | Ethics & Bias |
 | COMPSCI 713 | AI Fundamentals | B01-B05, B14 | Core Algorithms |
 | COMPSCI 714 | AI Architecture and Design | B09-B11, B13-B15 | System Design |
-| COMPSCI 762 | Foundations of ML | B02-B05, B07, B14 | ML Theory |
-| COMPSCI 761 | Advanced AI Topics | B06, B12, B14, B15 | Knowledge Rep |
-| COMPSCI 703 | Generalising AI | B11-B13, B14, B15 | General AI |
-| COMPSYS 721 | Machine Intelligence | B09-B11, B13, B14 | Deep Learning |
+| INFOSYS 703 | Information Systems | - | Systems Thinking |
 
-**Semester Breakdown:**
-- **Semester 1**: COMPSCI 712, 713, 714, 762 (4 courses)
-- **Semester 2**: COMPSCI 761, 703, COMPSYS 721 (3 courses)
+**Research Project (45 points - Choose one path):**
+
+| Course Code | Course Name | Relevant Lessons | Focus Area |
+|-------------|-------------|------------------|------------|
+| ENGGEN 769 + COMPSCI 792 | Research Project | B15 | Research & Thesis |
+| ENGGEN 794 | Research Project | B15 | Research & Thesis |
+
+**Required Internship (30 points):**
+
+| Course Code | Course Name | Relevant Lessons | Focus Area |
+|-------------|-------------|------------------|------------|
+| COMPSCI 779 | Internship | B15 | Industry Experience |
+
+**Elective Courses (15 points minimum from this group):**
+
+| Course Code | Course Name | Relevant Lessons | Focus Area |
+|-------------|-------------|------------------|------------|
+| COMPSCI 703 | Generalising AI | B11-B13, B14, B15 | General AI |
+| COMPSCI 764 | Advanced Topics | B06, B12 | Advanced Concepts |
+| COMPSCI 769 | Natural Language Processing | B11-B13 | NLP |
+| COMPSYS 726 | Machine Learning | B09-B13 | Deep Learning |
+
+**Additional Electives (Up to 45 points):**
+
+| Course Code | Course Name | Relevant Lessons | Focus Area |
+|-------------|-------------|------------------|------------|
+| COMPSCI 760-762 | Various Advanced Topics | B02-B07 | ML Theory |
+| COMPSCI 765, 767, 773 | Specialized Topics | B09-B13 | Specialization |
+| COMPSYS 728, 731, 732 | Computer Systems | B09-B11 | Systems |
+| DIGIHLT 704 | Artificial Intelligence in Healthcare | B09-B15 | Healthcare AI |
+
+**Program Structure:**
+- **Total Points Required**: 180 points
+- **Core Courses**: 60 points (CS712, CS713, CS714, INFOSYS703)
+- **Research Project**: 45 points (ENGGEN769 + CS792 or ENGGEN794)
+- **Internship**: 30 points (CS779)
+- **Electives**: 45 points (15 points minimum from specific courses + up to 45 from broader list)
 
 **Recommended Study Order:**
 1. **COMPSCI 713 (Fundamentals)** - CRITICAL: Build strong foundations first
 2. **COMPSCI 714 (Architecture)** - CRITICAL: Core deep learning architectures
 3. COMPSCI 712 (Ethics) - Understand responsible AI principles
-4. COMPSCI 762 (ML Theory) - Parallel with 713/714 for theoretical depth
-5. Advanced: COMPSCI 761, 703, COMPSYS 721
+4. INFOSYS 703 (Information Systems) - Systems thinking
+5. Electives: COMPSCI 703, 764, 769, COMPSYS 726, etc.
+6. COMPSCI 779 (Internship) - Industry experience
+7. Research Project: ENGGEN 769 + COMPSCI 792 or ENGGEN 794
 
 **Why CS713 and CS714 are Critical:**
 - **CS713**: Foundation for all other courses - covers essential ML algorithms
@@ -69,88 +104,90 @@ Use this table to quickly find which lessons support each course:
 
 ## Learning Path Flowchart
 
-**Your Complete MAI Journey Visualized**
+**Your Complete MAI Journey Visualized (180 Points)**
 
 ```mermaid
 graph TB
-    Start([START MAI PROGRAM<br/>University of Auckland]):::startNode
+    Start([START MAI PROGRAM<br/>University of Auckland<br/>180 Points Total]):::startNode
     
-    subgraph Foundation["FOUNDATION PATH - Core Courses (Year 1, Sem 1)"]
+    subgraph Core["CORE REQUIRED - 60 Points"]
         direction TB
-        Ethics["COMPSCI 712<br/>AI Ethics & Society<br/><br/>Lessons: B06, B07<br/>Focus: Data Bias & Fairness"]:::ethics
-        Fundamentals["COMPSCI 713<br/>AI Fundamentals<br/><br/>Lessons: B01-B05<br/>Focus: Core ML Concepts"]:::fundamentals
-        Architecture["COMPSCI 714<br/>AI Architecture & Design<br/><br/>Lessons: B09-B11, B13<br/>Focus: Deep Learning"]:::architecture
-        MLTheory["COMPSCI 762<br/>ML Foundations<br/><br/>Lessons: B02-B07<br/>Focus: Theory & Practice"]:::mlTheory
+        CS712["COMPSCI 712<br/>AI Ethics & Society<br/>15 points<br/>Lessons: B06, B07"]:::required
+        CS713["COMPSCI 713<br/>AI Fundamentals<br/>15 points<br/>Lessons: B01-B05"]:::required
+        CS714["COMPSCI 714<br/>AI Architecture<br/>15 points<br/>Lessons: B09-B11, B13"]:::required
+        INFOSYS703["INFOSYS 703<br/>Information Systems<br/>15 points"]:::required
     end
     
-    subgraph Advanced["ADVANCED PATH - Specialization (Year 1, Sem 2)"]
+    subgraph Electives["ELECTIVES - 45 Points Total"]
         direction TB
-        DeepLearning["COMPSYS 721<br/>Deep Learning<br/><br/>Lessons: B09-B13<br/>Focus: Neural Networks"]:::deepLearning
-        GeneralAI["COMPSCI 703<br/>Generalising AI<br/><br/>Lessons: B11-B13<br/>Focus: Transformers & LLMs"]:::generalAI
-        AdvancedAI["COMPSCI 761<br/>Advanced AI Topics<br/><br/>Lessons: B06, B12<br/>Focus: Tokenization"]:::advancedAI
+        Elective1["15 points minimum from:<br/>CS703, CS764, CS769<br/>COMPSYS726<br/>Lessons: B11-B13"]:::elective
+        Elective2["Up to 45 points from:<br/>CS760-762, CS765, CS767<br/>COMPSYS728, 731, 732<br/>DIGIHLT704<br/>Lessons: B02-B13"]:::elective
     end
     
-    subgraph Practice["PRACTICE PATH - Continuous Learning"]
+    subgraph Experience["PRACTICAL EXPERIENCE - 75 Points"]
+        direction TB
+        Internship["COMPSCI 779<br/>Internship<br/>30 points<br/>Industry Experience"]:::internship
+        Research["Research Project<br/>45 points<br/>ENGGEN769 + CS792<br/>or ENGGEN794<br/>Lessons: B15"]:::research
+    end
+    
+    subgraph Practice["CONTINUOUS PRACTICE"]
         direction LR
-        Assignments["B14<br/>Practical Assignments<br/><br/>10 hands-on projects<br/>Apply what you learn"]:::assignments
-        Capstone["B15<br/>Capstone Projects<br/><br/>5 portfolio projects<br/>Build real systems"]:::capstone
+        B14["B14 Assignments<br/>10 projects<br/>Weekly practice"]:::practice
+        B15["B15 Capstone<br/>5 portfolio projects<br/>Research preparation"]:::practice
     end
     
-    Start ==> Ethics
-    Start ==> Fundamentals
-    Ethics --> MLTheory
-    Fundamentals ==> MLTheory
-    Fundamentals ==> Architecture
-    MLTheory --> Architecture
+    Start ==> CS713
+    Start ==> CS712
+    CS713 ==> CS714
+    CS712 --> INFOSYS703
+    CS713 --> INFOSYS703
     
-    Architecture ==> DeepLearning
-    Architecture ==> GeneralAI
-    MLTheory --> DeepLearning
-    Fundamentals --> AdvancedAI
+    CS714 ==> Elective1
+    INFOSYS703 --> Elective1
+    Elective1 --> Elective2
     
-    Fundamentals -.->|"Practice<br/>Weekly"| Assignments
-    MLTheory -.->|"Practice<br/>Weekly"| Assignments
-    Architecture -.->|"Practice<br/>Weekly"| Assignments
+    CS714 -.-> B14
+    Elective1 -.-> B14
+    Elective2 -.-> B14
     
-    DeepLearning -.->|"Build<br/>Portfolio"| Capstone
-    GeneralAI -.->|"Build<br/>Portfolio"| Capstone
-    AdvancedAI -.->|"Build<br/>Portfolio"| Capstone
-    
-    Assignments --> Capstone
+    B14 --> B15
+    Elective2 --> Internship
+    B15 --> Research
+    Internship --> Research
     
     classDef startNode fill:#2E7D32,stroke:#1B5E20,stroke-width:4px,color:#fff,font-size:16px,font-weight:bold
-    classDef ethics fill:#E91E63,stroke:#AD1457,stroke-width:3px,color:#fff,font-size:14px
-    classDef fundamentals fill:#FF9800,stroke:#E65100,stroke-width:3px,color:#fff,font-size:14px
-    classDef architecture fill:#3F51B5,stroke:#1A237E,stroke-width:3px,color:#fff,font-size:14px
-    classDef mlTheory fill:#FF6F00,stroke:#E65100,stroke-width:3px,color:#fff,font-size:14px
-    classDef deepLearning fill:#512DA8,stroke:#311B92,stroke-width:3px,color:#fff,font-size:14px
-    classDef generalAI fill:#673AB7,stroke:#311B92,stroke-width:3px,color:#fff,font-size:14px
-    classDef advancedAI fill:#9C27B0,stroke:#4A148C,stroke-width:3px,color:#fff,font-size:14px
-    classDef assignments fill:#00BCD4,stroke:#006064,stroke-width:3px,color:#fff,font-size:14px
-    classDef capstone fill:#FFD700,stroke:#F57F17,stroke-width:4px,color:#000,font-size:14px,font-weight:bold
+    classDef required fill:#E91E63,stroke:#AD1457,stroke-width:4px,color:#fff,font-size:14px,font-weight:bold
+    classDef elective fill:#2196F3,stroke:#0D47A1,stroke-width:3px,color:#fff,font-size:13px
+    classDef internship fill:#FF9800,stroke:#E65100,stroke-width:4px,color:#fff,font-size:14px,font-weight:bold
+    classDef research fill:#9C27B0,stroke:#6A1B9A,stroke-width:4px,color:#fff,font-size:14px,font-weight:bold
+    classDef practice fill:#00BCD4,stroke:#006064,stroke-width:3px,color:#fff,font-size:13px
 ```
 
 **Color Legend:**
-- **Green**: Your starting point - MAI Program begins here
-- **Pink/Red**: Ethics & Society - Foundation for responsible AI
-- **Orange**: Core Fundamentals - Essential ML concepts
-- **Blue**: Architecture & Design - Deep learning systems
-- **Dark Orange**: ML Theory - Theoretical foundations
-- **Purple**: Advanced Topics - Cutting-edge AI techniques
-- **Cyan**: Practice Assignments - Weekly hands-on work
-- **Gold**: Capstone Projects - Portfolio-worthy final projects
+- **Green**: Program start - 180 points total
+- **Pink/Red**: Core Required (60 points) - CS712, CS713, CS714, INFOSYS703
+- **Blue**: Electives (45 points) - Choose from approved list
+- **Orange**: Internship (30 points) - CS779 industry experience
+- **Purple**: Research Project (45 points) - Thesis/dissertation
+- **Cyan**: Practice - B14 assignments and B15 capstone projects
 
 **Connection Types:**
 - **Solid thick arrows (==>)**: Primary learning path - follow these first
 - **Solid thin arrows (-->)**: Secondary connections - important relationships
 - **Dotted lines (-..->)**: Practice opportunities - apply your knowledge continuously
 
-**Learning Paths:**
-- **Foundation Path**: 4 core courses (CS712, CS713, CS714, CS762) - Build essential knowledge
-- **Advanced Path**: 3 specialization courses (CS721, CS703, CS761) - Deepen expertise
-- **Practice Path**: Continuous hands-on work (B14 assignments + B15 capstone projects)
+**180-Point Program Breakdown:**
+- **Core Required (60 points)**: CS712, CS713, CS714, INFOSYS703
+- **Electives (45 points)**: 15 points minimum from CS703/764/769/COMPSYS726, up to 45 from broader list
+- **Internship (30 points)**: CS779 industry experience
+- **Research Project (45 points)**: ENGGEN769 + CS792 or ENGGEN794
 
-**Important Note:** The Foundation Path has a heavier course load (4 courses), so time management is critical. Use the mid-year break to consolidate learning and prepare for the Advanced Path.
+**Critical Path:**
+1. Start with CS713 (Fundamentals) and CS712 (Ethics)
+2. Complete CS714 (Architecture) - builds on CS713
+3. Take INFOSYS703 and begin electives
+4. Complete CS779 (Internship) for industry experience
+5. Finish with Research Project (45 points) - your thesis/dissertation
 
 ---
 

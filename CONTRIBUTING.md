@@ -1,6 +1,10 @@
 # Contributing to AI & Machine Learning Roadmap
 
-Thank you for your interest in contributing! This repository is built by students, for students, and we welcome contributions from the community.
+Thank you for your interest in contributing! 
+
+**About This Project:** This is a **personal learning repository** created by a student in the Master of Artificial Intelligence program at the University of Auckland. It's **not official university material** - just one student's study notes and implementations shared publicly to help fellow learners.
+
+This repository is built by students, for students, and we welcome contributions from the community.
 
 ## Table of Contents
 

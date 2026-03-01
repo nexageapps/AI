@@ -1,39 +1,39 @@
 # Security Policy
 
-## Overview
-
-This repository contains educational AI/ML materials and Jupyter notebooks. We take security seriously to protect our learners and contributors.
-
 ## Supported Versions
 
-We actively maintain and provide security updates for the following versions:
+This repository does not follow a versioned release model. Security fixes are
+applied to the latest revision of the default branch only.
 
-| Version | Status | Support |
-| ------- | ------ | ------- |
-| Latest (main branch) | ✅ Active | Full security updates |
-| Previous releases | ⚠️ Limited | Critical fixes only |
-| Archived versions | ❌ Unsupported | No updates |
+| Version        | Supported          |
+| -------------- | ------------------ |
+| Latest (main)  | :white_check_mark: |
+| Older commits  | :x:                |
 
-**Recommendation:** Always use the latest version from the `main` branch for the most secure and up-to-date content.
+## Reporting a Vulnerability
 
----
+If you believe you have found a security vulnerability in this project, please
+contact our security team at **security@nexageapps.com**.
 
-## Security Measures in Place
+When reporting, please include:
+- A description of the vulnerability and its potential impact
+- Steps to reproduce (proof-of-concept, logs, or screenshots if available)
+- The affected version(s) and any relevant configuration details
 
-### Repository Protection
-- ✅ Branch protection rules enabled on `main` branch
-- ✅ Pull request reviews required for all changes
-- ✅ CODEOWNERS file enforces review requirements
-- ✅ Dependabot alerts enabled for dependency vulnerabilities
-- ✅ Secret scanning enabled to prevent credential leaks
-- ✅ Two-factor authentication (2FA) required for maintainers
+We ask that you **do not** open a public issue for security reports.
 
-### Code Quality
-- ✅ All notebooks tested before merging
-- ✅ Dependencies regularly updated
-- ✅ No hardcoded credentials or API keys
-- ✅ Safe coding practices in all examples
+**Response expectations**
+- We aim to acknowledge your report within **2 business days**.
+- We will provide you with an initial assessment or status update within
+  **7 business days** of acknowledgement.
+- We will keep you informed of the fix progress and expected release timeline.
 
+<<<<<<< Updated upstream
+If we confirm the vulnerability, we will work to address it as quickly as
+possible before publicly disclosing details. After a fix is released, we may
+credit you as the reporter, if you wish, and summarize the issue in the
+changelog or a security advisory.
+=======
 ---
 
 ## Reporting a Security Vulnerability
@@ -66,20 +66,33 @@ Please provide as much information as possible:
 5. **Suggested fix** (if you have one)
 6. **Your contact information** for follow-up questions
 
-### Example Report Format
+### Report Format Template
 
-```
-**Vulnerability Type:** [e.g., Dependency vulnerability]
-**Location:** [e.g., requirements.txt, line 15]
-**Description:** [Detailed description of the issue]
-**Steps to Reproduce:**
-1. Step one
-2. Step two
-3. Step three
+Please structure your security report as follows:
 
-**Impact:** [What could an attacker do?]
-**Suggested Fix:** [Optional - your recommendation]
-```
+**Vulnerability Type:**  
+Specify the type of vulnerability (e.g., Dependency vulnerability, Code injection, XSS, Authentication bypass)
+
+**Location:**  
+Provide the exact location (e.g., requirements.txt line 15, Basic/B01-Arithmetic.ipynb cell 5)
+
+**Description:**  
+Provide a detailed description of the security issue and why it's a concern
+
+**Steps to Reproduce:**  
+1. First step to reproduce the issue
+2. Second step to reproduce the issue
+3. Third step to reproduce the issue
+4. Continue as needed
+
+**Impact:**  
+Explain what an attacker could do if they exploit this vulnerability
+
+**Suggested Fix:**  
+(Optional) Provide your recommendation for fixing the issue
+
+**Additional Context:**  
+(Optional) Any other relevant information, screenshots, or logs
 
 ---
 
@@ -309,3 +322,4 @@ If you have questions about this security policy or need clarification:
 ---
 
 *This security policy is subject to change. Please check back regularly for updates.*
+>>>>>>> Stashed changes

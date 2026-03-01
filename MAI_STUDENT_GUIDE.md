@@ -369,16 +369,24 @@ graph TD
 
 ```mermaid
 graph LR
-    Theory[Lecture:<br/>Theory]:::theory --> Understand[Understand<br/>Concepts]:::step
-    Understand --> Implement[Repository:<br/>Implementation]:::practice
-    Implement --> Experiment[Experiment &<br/>Modify]:::step
-    Experiment --> Master[Master<br/>Concept]:::master
+    Theory["📚 Lecture<br/>Theory &<br/>Concepts"]:::theory --> Understand["💡 Understand<br/>Core Ideas"]:::understand
+    Understand --> Implement["💻 Repository<br/>Implementation<br/>& Code"]:::implement
+    Implement --> Experiment["🔬 Experiment<br/>Modify &<br/>Test"]:::experiment
+    Experiment --> Master["🎓 Master<br/>Complete<br/>Understanding"]:::master
     
-    classDef theory fill:#FFB6C1,stroke:#C71585,stroke-width:2px
-    classDef practice fill:#B4E5FF,stroke:#74A5D4,stroke-width:2px
-    classDef step fill:#FFE5B4,stroke:#D4A574,stroke-width:2px
-    classDef master fill:#D4FFB4,stroke:#74D474,stroke-width:3px
+    classDef theory fill:#E91E63,stroke:#AD1457,stroke-width:3px,color:#fff,font-size:14px
+    classDef understand fill:#FF9800,stroke:#E65100,stroke-width:3px,color:#fff,font-size:14px
+    classDef implement fill:#2196F3,stroke:#0D47A1,stroke-width:3px,color:#fff,font-size:14px
+    classDef experiment fill:#9C27B0,stroke:#6A1B9A,stroke-width:3px,color:#fff,font-size:14px
+    classDef master fill:#4CAF50,stroke:#2E7D32,stroke-width:4px,color:#fff,font-size:14px,font-weight:bold
 ```
+
+**🎨 Learning Cycle:**
+- 🔴 **Pink**: Theory from lectures - Learn concepts
+- 🟠 **Orange**: Understanding - Process information
+- 🔵 **Blue**: Implementation - Code it yourself
+- 🟣 **Purple**: Experimentation - Modify and explore
+- 🟢 **Green**: Mastery - Complete understanding achieved
 
 **Weekly Study Plan:**
 

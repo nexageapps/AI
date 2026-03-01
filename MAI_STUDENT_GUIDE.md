@@ -191,15 +191,23 @@ graph TB
 
 ```mermaid
 graph LR
-    B01[B01: Tensors]:::lesson --> B02[B02: Linear<br/>Regression]:::lesson
-    B02 --> B03[B03: Binary<br/>Classification]:::lesson
-    B03 --> B04[B04: Multi-Class<br/>Classification]:::lesson
-    B04 --> B05[B05: Neural<br/>Networks]:::lesson
-    B05 --> B14[B14: Practice<br/>Assignments]:::practice
+    B01["📊 B01<br/>Tensors &<br/>Operations"]:::foundation --> B02["📈 B02<br/>Linear<br/>Regression"]:::foundation
+    B02 --> B03["🎯 B03<br/>Binary<br/>Classification"]:::intermediate
+    B03 --> B04["🎲 B04<br/>Multi-Class<br/>Classification"]:::intermediate
+    B04 --> B05["🧠 B05<br/>Neural<br/>Networks"]:::advanced
+    B05 --> B14["💪 B14<br/>Practice<br/>Assignments"]:::practice
     
-    classDef lesson fill:#FFE5B4,stroke:#D4A574,stroke-width:2px
-    classDef practice fill:#D4FFB4,stroke:#74D474,stroke-width:2px
+    classDef foundation fill:#4CAF50,stroke:#2E7D32,stroke-width:3px,color:#fff,font-size:14px
+    classDef intermediate fill:#FF9800,stroke:#E65100,stroke-width:3px,color:#fff,font-size:14px
+    classDef advanced fill:#2196F3,stroke:#1565C0,stroke-width:3px,color:#fff,font-size:14px
+    classDef practice fill:#9C27B0,stroke:#6A1B9A,stroke-width:4px,color:#fff,font-size:14px,font-weight:bold
 ```
+
+**🎨 Progression Colors:**
+- 🟢 **Green**: Foundation - Start here (B01-B02)
+- 🟠 **Orange**: Intermediate - Building skills (B03-B04)
+- 🔵 **Blue**: Advanced - Deep concepts (B05)
+- 🟣 **Purple**: Practice - Apply everything (B14)
 
 **Weekly Study Plan:**
 
@@ -240,12 +248,12 @@ graph LR
 
 ```mermaid
 graph TD
-    Problem[Define Problem]:::start
-    Requirements[Gather Requirements]:::step
-    Design[Architecture Design]:::step
-    Implement[Implementation]:::step
-    Evaluate[Evaluation]:::step
-    Deploy[Deployment]:::step
+    Problem["🎯 Define Problem<br/>What are we solving?"]:::start
+    Requirements["📋 Gather Requirements<br/>Performance, constraints, data"]:::step
+    Design["🏗️ Architecture Design<br/>Choose model type"]:::design
+    Implement["⚙️ Implementation<br/>Build the system"]:::implement
+    Evaluate["📊 Evaluation<br/>Test & measure"]:::evaluate
+    Deploy["🚀 Deployment<br/>Production ready"]:::deploy
     
     Problem --> Requirements
     Requirements --> Design
@@ -253,17 +261,40 @@ graph TD
     Implement --> Evaluate
     Evaluate --> Deploy
     
-    Design -.->|Reference| B09[B09: CNN<br/>Architectures]:::lesson
-    Design -.->|Reference| B10[B10: RNN<br/>Architectures]:::lesson
-    Design -.->|Reference| B11[B11: Transformer<br/>Architectures]:::lesson
+    Design -.->|"Vision Tasks"| B09["B09: CNN<br/>Architectures<br/>🖼️ Images"]:::cnn
+    Design -.->|"Sequential Data"| B10["B10: RNN<br/>Architectures<br/>⏱️ Time Series"]:::rnn
+    Design -.->|"Modern NLP"| B11["B11: Transformer<br/>Architectures<br/>💬 Language"]:::transformer
     
-    Implement -.->|Template| B13[B13: Complete<br/>System]:::lesson
-    Deploy -.->|Guide| B15[B15: Deployment<br/>Strategies]:::lesson
+    Implement -.->|"End-to-End"| B13["B13: Complete<br/>System<br/>🎓 Full Pipeline"]:::system
+    Deploy -.->|"Production"| B15["B15: Deployment<br/>Strategies<br/>☁️ Cloud Ready"]:::production
     
-    classDef start fill:#4A90E2,stroke:#2E5C8A,stroke-width:3px,color:#fff
-    classDef step fill:#FFE5B4,stroke:#D4A574,stroke-width:2px
-    classDef lesson fill:#B4E5FF,stroke:#74A5D4,stroke-width:2px
+    classDef start fill:#E91E63,stroke:#AD1457,stroke-width:4px,color:#fff,font-size:14px,font-weight:bold
+    classDef step fill:#FF9800,stroke:#E65100,stroke-width:3px,color:#fff,font-size:13px
+    classDef design fill:#9C27B0,stroke:#6A1B9A,stroke-width:3px,color:#fff,font-size:13px
+    classDef implement fill:#3F51B5,stroke:#1A237E,stroke-width:3px,color:#fff,font-size:13px
+    classDef evaluate fill:#00BCD4,stroke:#006064,stroke-width:3px,color:#fff,font-size:13px
+    classDef deploy fill:#4CAF50,stroke:#2E7D32,stroke-width:4px,color:#fff,font-size:13px,font-weight:bold
+    classDef cnn fill:#FF5722,stroke:#BF360C,stroke-width:2px,color:#fff,font-size:12px
+    classDef rnn fill:#673AB7,stroke:#311B92,stroke-width:2px,color:#fff,font-size:12px
+    classDef transformer fill:#2196F3,stroke:#0D47A1,stroke-width:2px,color:#fff,font-size:12px
+    classDef system fill:#FFC107,stroke:#F57C00,stroke-width:2px,color:#000,font-size:12px
+    classDef production fill:#8BC34A,stroke:#558B2F,stroke-width:2px,color:#fff,font-size:12px
 ```
+
+**🎨 Process Flow Colors:**
+- 🔴 **Pink**: Problem definition - Start here
+- 🟠 **Orange**: Requirements gathering
+- 🟣 **Purple**: Design phase - Critical decisions
+- 🔵 **Blue**: Implementation - Build it
+- 🔷 **Cyan**: Evaluation - Test it
+- 🟢 **Green**: Deployment - Ship it
+
+**📚 Architecture References:**
+- **CNN (Red)**: For image/vision tasks
+- **RNN (Purple)**: For sequential/time-series data
+- **Transformer (Blue)**: For modern NLP tasks
+- **Complete System (Yellow)**: End-to-end implementation
+- **Production (Green)**: Deployment strategies
 
 **Weekly Study Plan:**
 

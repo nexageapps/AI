@@ -1,39 +1,39 @@
 # Security Policy
 
+## Overview
+
+This repository contains educational AI/ML materials and Jupyter notebooks. We take security seriously to protect our learners and contributors.
+
 ## Supported Versions
 
-This repository does not follow a versioned release model. Security fixes are
-applied to the latest revision of the default branch only.
+We actively maintain and provide security updates for the following versions:
 
-| Version        | Supported          |
-| -------------- | ------------------ |
-| Latest (main)  | :white_check_mark: |
-| Older commits  | :x:                |
+| Version | Status | Support |
+| ------- | ------ | ------- |
+| Latest (main branch) | ✅ Active | Full security updates |
+| Previous releases | ⚠️ Limited | Critical fixes only |
+| Archived versions | ❌ Unsupported | No updates |
 
-## Reporting a Vulnerability
+**Recommendation:** Always use the latest version from the `main` branch for the most secure and up-to-date content.
 
-If you believe you have found a security vulnerability in this project, please
-contact our security team at **security@nexageapps.com**.
+---
 
-When reporting, please include:
-- A description of the vulnerability and its potential impact
-- Steps to reproduce (proof-of-concept, logs, or screenshots if available)
-- The affected version(s) and any relevant configuration details
+## Security Measures in Place
 
-We ask that you **do not** open a public issue for security reports.
+### Repository Protection
+- ✅ Branch protection rules enabled on `main` branch
+- ✅ Pull request reviews required for all changes
+- ✅ CODEOWNERS file enforces review requirements
+- ✅ Dependabot alerts enabled for dependency vulnerabilities
+- ✅ Secret scanning enabled to prevent credential leaks
+- ✅ Two-factor authentication (2FA) required for maintainers
 
-**Response expectations**
-- We aim to acknowledge your report within **2 business days**.
-- We will provide you with an initial assessment or status update within
-  **7 business days** of acknowledgement.
-- We will keep you informed of the fix progress and expected release timeline.
+### Code Quality
+- ✅ All notebooks tested before merging
+- ✅ Dependencies regularly updated
+- ✅ No hardcoded credentials or API keys
+- ✅ Safe coding practices in all examples
 
-<<<<<<< Updated upstream
-If we confirm the vulnerability, we will work to address it as quickly as
-possible before publicly disclosing details. After a fix is released, we may
-credit you as the reporter, if you wish, and summarize the issue in the
-changelog or a security advisory.
-=======
 ---
 
 ## Reporting a Security Vulnerability
@@ -52,7 +52,7 @@ Instead, please report security issues through one of these channels:
 3. Fill out the form with details
 
 #### Option 2: Direct Contact
-- **Email:** Create an issue with title "SECURITY: [Brief Description]" and we'll provide a secure contact method
+- **GitHub Issue:** Create a private issue with title "SECURITY: [Brief Description]" and we'll provide a secure contact method
 - **LinkedIn:** [Karthik Arjun](https://www.linkedin.com/in/karthik-arjun-a5b4a258/)
 
 ### What to Include in Your Report
@@ -311,7 +311,7 @@ If you have questions about this security policy or need clarification:
 
 1. Open a general (non-security) issue on GitHub
 2. Contact us via LinkedIn
-3. Check our [Contributing Guidelines](CONTRIBUTING.md) for more information
+3. Check our documentation for more information
 
 ---
 
@@ -322,4 +322,4 @@ If you have questions about this security policy or need clarification:
 ---
 
 *This security policy is subject to change. Please check back regularly for updates.*
->>>>>>> Stashed changes
+ 

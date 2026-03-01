@@ -358,29 +358,34 @@ Academic misconduct can result in:
 
 ---
 
-## Our Pledge
+## My Pledge as the Author
 
-**As maintainers of this repository, we pledge to:**
+**As a student creating and maintaining this repository, I pledge to:**
 
 1. **Promote Learning**
-   - Create resources that teach, not solve
+   - Share resources that teach concepts, not solve assignments
    - Encourage understanding over completion
-   - Support genuine education
+   - Support genuine education and learning
 
 2. **Support Academic Integrity**
    - Remove content that enables misconduct
    - Respond to concerns from educators
    - Update policies as needed
+   - Never share specific assignment solutions
 
 3. **Be Transparent**
-   - Clearly state our intentions
-   - Acknowledge limitations
+   - Clearly state this is a personal project, not official material
+   - Acknowledge I'm a student, not an authority
    - Communicate openly with the community
+   - Make my limitations clear
 
 4. **Continuously Improve**
-   - Listen to feedback
+   - Listen to feedback from fellow students and educators
    - Adapt to educational needs
    - Balance accessibility with integrity
+   - Learn and grow alongside users
+
+**Remember:** I'm a student just like you. I'm sharing what helps me learn, but you're responsible for your own academic integrity and following your institution's policies.
 
 ---
 

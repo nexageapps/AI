@@ -6,7 +6,7 @@ Open-source AI education built by a Master's in AI student, for everyone.
 
 Basic to Expert. Zero to Language Models. 60+ lessons. 100% hands-on.
 
-[MAI Student Guide](./MAI_STUDENT_GUIDE.md) • [Exam Prep Guide](./EXAM_PREPARATION_GUIDE.md) • [Quick Start](#getting-started) • [LinkedIn](https://www.linkedin.com/in/karthik-arjun-a5b4a258/)
+[MAI Student Guide](./documentation/MAI_STUDENT_GUIDE.md) • [Exam Prep Guide](./documentation/EXAM_PREPARATION_GUIDE.md) • [Quick Start](#getting-started) • [LinkedIn](https://www.linkedin.com/in/karthik-arjun-a5b4a258/)
 
 [![Python](https://img.shields.io/badge/Python-3.8+-orange.svg)](https://www.python.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](./LICENSE)
@@ -75,26 +75,26 @@ This repository includes comprehensive documentation to support your learning jo
 | Document | Purpose | Best For |
 |----------|---------|----------|
 | [README.md](./README.md) | Repository overview, learning paths, progress tracker | Getting started, understanding structure |
-| [MAI Student Guide](./MAI_STUDENT_GUIDE.md) | UoA course mappings, semester planning, study strategies | MAI students, course alignment |
-| [Exam Preparation Guide](./EXAM_PREPARATION_GUIDE.md) | Exam strategies, practice problems, study tips | Exam preparation, concept review |
-| [Progress Tracker Guide](./PROGRESS_TRACKER_GUIDE.md) | How to track learning, spaced repetition | Organizing study, tracking progress |
-| [Updates Summary](./UPDATES_SUMMARY.md) | Recent enhancements, new features | Understanding new additions |
+| [MAI Student Guide](./documentation/MAI_STUDENT_GUIDE.md) | UoA course mappings, semester planning, study strategies | MAI students, course alignment |
+| [Exam Preparation Guide](./documentation/EXAM_PREPARATION_GUIDE.md) | Exam strategies, practice problems, study tips | Exam preparation, concept review |
+| [Progress Tracker Guide](./documentation/PROGRESS_TRACKER_GUIDE.md) | How to track learning, spaced repetition | Organizing study, tracking progress |
+| [Updates Summary](./documentation/UPDATES_SUMMARY.md) | Recent enhancements, new features | Understanding new additions |
 | [Documentation Index](./DOCUMENTATION_INDEX.md) | Complete guide to all documentation | Finding specific information |
 
 ### Policy Documentation
 
 | Document | Purpose |
 |----------|---------|
-| [Academic Integrity](./ACADEMIC_INTEGRITY.md) | Responsible use guidelines |
-| [Contributing](./CONTRIBUTING.md) | How to contribute to the project |
-| [Security](./SECURITY.md) | Security policies and reporting |
+| [Academic Integrity](./documentation/ACADEMIC_INTEGRITY.md) | Responsible use guidelines |
+| [Contributing](./documentation/CONTRIBUTING.md) | How to contribute to the project |
+| [Security](./documentation/SECURITY.md) | Security policies and reporting |
 
 ### Quick Navigation
 
 - New to this repository? Start with [Getting Started](#getting-started)
-- UoA MAI student? Read the [MAI Student Guide](./MAI_STUDENT_GUIDE.md)
-- Preparing for exams? Check the [Exam Preparation Guide](./EXAM_PREPARATION_GUIDE.md)
-- Want to track progress? See [Progress Tracker Guide](./PROGRESS_TRACKER_GUIDE.md)
+- UoA MAI student? Read the [MAI Student Guide](./documentation/MAI_STUDENT_GUIDE.md)
+- Preparing for exams? Check the [Exam Preparation Guide](./documentation/EXAM_PREPARATION_GUIDE.md)
+- Want to track progress? See [Progress Tracker Guide](./documentation/PROGRESS_TRACKER_GUIDE.md)
 - Looking for specific lessons? Jump to [Repository Structure](#repository-structure)
 
 ---
@@ -635,7 +635,7 @@ Open the desired notebook and run cells sequentially. All notebooks are self-con
 
 This repository is specifically designed to help MAI students succeed. As a fellow MAI student, I created this to address the exact challenges we face.
 
-[Complete MAI Student Guide](./MAI_STUDENT_GUIDE.md) - Your essential companion
+[Complete MAI Student Guide](./documentation/MAI_STUDENT_GUIDE.md) - Your essential companion
 
 What's Inside:
 - Direct course mappings (COMPSCI 713, 714, 761, 762, 703, COMPSYS 721)
@@ -673,38 +673,39 @@ Not a UoA MAI student? Content is valuable for any AI/ML program.
 
 ---
 
-## Structure
+## Repository Structure
+
+Progressive learning path organized into four levels:
 
 ```
 AI/
-├── Basic/
+├── Basic/              # 15 Lessons (B01-B15)
 │   ├── B01 - Arithmetic.ipynb
 │   ├── B02 - Linear Regression.ipynb
-│   ├── B03 - Binary Classification.ipynb
-│   ├── B04 - Multi-Class Classification.ipynb
-│   ├── B05 - Neural Network Fundamentals.ipynb
-│   ├── B06 - Data Preprocessing and Feature Engineering.ipynb
-│   ├── B07 - Model Evaluation and Performance Metrics.ipynb
-│   ├── B08 - Regularization and Overfitting.ipynb
-│   ├── B09 - Convolutional Neural Networks.ipynb
-│   ├── B10 - Recurrent Neural Networks.ipynb
-│   ├── B11 - Attention and Transformers.ipynb
-│   ├── B12 - Byte Pair Encoding (BPE).ipynb
-│   ├── B13 - Building a Mini Language Model.ipynb
-│   ├── B14 - Practical Projects and Assignments.ipynb
-│   ├── B15 - Capstone Projects and Portfolio Building.ipynb
+│   ├── ...
+│   └── B15 - Capstone Projects and Portfolio Building.ipynb
+├── Intermediate/       # 15 Lessons (I01-I15)
+│   ├── I01 - Advanced Optimization Algorithms.ipynb
+│   ├── I02 - Regularization Techniques.ipynb
+│   ├── ...
+│   └── I15 - MLOps and Production Deployment.ipynb
+├── Advanced/           # 15 Lessons (A01-A15)
 │   └── README.md
-├── Intermediate/
-│   └── README.md (Coming Soon)
-├── Advanced/
-│   └── README.md (Coming Soon)
-├── Expert/
-│   └── README.md (Coming Soon)
-├── MAI_STUDENT_GUIDE.md
-└── README.md
+├── Expert/             # 15 Lessons (E01-E15)
+│   ├── E01 - Reading and Implementing Research Papers.ipynb
+│   ├── E02 - Experimental Design and Ablation Studies.ipynb
+│   ├── ...
+│   └── E15 - Research Project and Contribution.ipynb
+├── documentation/      # All documentation files
+│   ├── MAI_STUDENT_GUIDE.md
+│   ├── EXAM_PREPARATION_GUIDE.md
+│   ├── PROGRESS_TRACKER_GUIDE.md
+│   ├── ACADEMIC_INTEGRITY.md
+│   ├── CONTRIBUTING.md
+│   ├── SECURITY.md
+│   └── UPDATES_SUMMARY.md
+└── README.md           # You are here
 ```
-
-All notebooks are designed to run in Google Colab and include Colab badges for easy access.
 
 ## Academic Integrity
 
@@ -750,7 +751,7 @@ Your assignments test YOUR understanding. Use this to learn concepts, not find a
 
 Academic misconduct has serious consequences: failing grades, academic probation, permanent transcript records, potential expulsion.
 
-[Full Academic Integrity Policy](./ACADEMIC_INTEGRITY.md)
+[Full Academic Integrity Policy](./documentation/ACADEMIC_INTEGRITY.md)
 
 ---
 
@@ -882,9 +883,9 @@ You are free to use, modify, and distribute the code for personal or commercial 
 
 Track your learning journey by marking completed lessons and recording dates. This helps you monitor progress and identify areas for review.
 
-For detailed guidance on using the progress tracker effectively, see the [Progress Tracker Guide](./PROGRESS_TRACKER_GUIDE.md).
+For detailed guidance on using the progress tracker effectively, see the [Progress Tracker Guide](./documentation/PROGRESS_TRACKER_GUIDE.md).
 
-For exam preparation strategies and study tips, see the [Exam Preparation Guide](./EXAM_PREPARATION_GUIDE.md).
+For exam preparation strategies and study tips, see the [Exam Preparation Guide](./documentation/EXAM_PREPARATION_GUIDE.md).
 
 ### Basic Level Progress
 

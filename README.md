@@ -725,6 +725,7 @@ AI/
 │   ├── B05 - Neural Network Fundamentals.ipynb
 │   ├── B06 - Data Preprocessing and Feature Engineering.ipynb
 │   ├── B07 - Model Evaluation and Performance Metrics.ipynb
+│   ├── B08 - Regularization and Overfitting.ipynb
 │   ├── B09 - Convolutional Neural Networks.ipynb
 │   ├── B10 - Recurrent Neural Networks.ipynb
 │   ├── B11 - Attention and Transformers.ipynb

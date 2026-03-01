@@ -506,9 +506,9 @@ Production-ready AI systems. **[View complete syllabus →](./Advanced/)**
 
 ---
 
-### Expert Level (15 Lessons - 🔒 PREMIUM)
+### Expert Level (15 Lessons - Detailed Roadmap)
 
-Research-oriented topics and cutting-edge techniques. **[Get Access →](#pricing)**
+Research-oriented topics and cutting-edge techniques. **[View complete syllabus →](./Expert/)**
 
 **Research Foundations (E01-E03)**
 1. E01 - Reading Papers: Paper analysis, reproduction, benchmarking
@@ -536,70 +536,6 @@ Research-oriented topics and cutting-edge techniques. **[Get Access →](#pricin
 15. E15 - Research Project: Original research, open-source contribution
 
 **Learning Time:** ~100-120 hours
-
----
-
-## Pricing
-
-### What's Included
-
-**🆓 FREE - Basic Level (15 Lessons)**
-- Complete foundation in AI/ML
-- TensorFlow basics to Language Models
-- CNNs, RNNs, Transformers, and Attention
-- Build your own mini GPT-style model
-- Practical projects and portfolio building
-- Full access forever, no strings attached
-
-**💎 PREMIUM - Intermediate + Expert Levels (30 Lessons)**
-- Everything in Basic Level, plus:
-- Advanced optimization and architectures
-- Production ML and MLOps
-- Large Language Models (LLMs)
-- Multi-modal AI systems
-- Distributed training and deployment
-- Research-level techniques
-- Cutting-edge AI innovations
-
-### Pricing Options
-
-**One-Time Purchase: $149**
-- Lifetime access to all 45 lessons
-- All future updates included
-- Priority email support
-- Certificate of completion
-- Commercial use allowed
-
-**Monthly Subscription: $29/month**
-- Access to all premium content
-- Cancel anytime
-- All updates included
-- Email support
-
-### How to Get Access
-
-1. **Purchase:** [Click here to get premium access](#) *(Payment link coming soon)*
-2. **Receive:** Get instant access via email with download link
-3. **Learn:** Start with Intermediate lessons immediately
-
-### Why Premium?
-
-Creating quality educational content takes significant time and effort. Your support helps:
-- Keep Basic level free for everyone
-- Fund development of new lessons
-- Maintain and update existing content
-- Provide student support
-- Create more open educational resources
-
-### Student Discount
-
-**50% off for verified students!** Email proof of enrollment to [your-email] for discount code.
-
-### Money-Back Guarantee
-
-Not satisfied? Get a full refund within 30 days, no questions asked.
-
----
 
 ## Getting Started
 

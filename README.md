@@ -612,25 +612,21 @@ Open the desired notebook and run cells sequentially. All notebooks are self-con
 
 ## For MAI Students at University of Auckland
 
-### How This Repository Helps Your MAI Journey
+This repository is specifically designed to help MAI students succeed. As a fellow MAI student, I created this to address the exact challenges we face.
 
-This repository is **specifically designed to help MAI students at the University of Auckland succeed** in their coursework and beyond. As a fellow MAI student, I created this to address the exact challenges we face in the program.
+**[Complete MAI Student Guide](./MAI_STUDENT_GUIDE.md)** - Your essential companion
 
-**[Complete MAI Student Guide](./MAI_STUDENT_GUIDE.md)** - Your essential companion for success
-
-**What's Inside the Guide:**
+**What's Inside:**
 - Direct course mappings (COMPSCI 713, 714, 761, 762, 703, COMPSYS 721)
 - Semester-by-semester study strategies
-- Assignment preparation tips and templates
-- Research project ideas for your dissertation
+- Assignment preparation tips
+- Research project ideas for dissertations
 - Exam preparation strategies
-- Study group formation tips
-- Career preparation advice
 
 **Quick Course Alignment:**
 
-| Your Course | Relevant Lessons | Focus Area |
-|-------------|-----------------|------------|
+| Course | Relevant Lessons | Focus Area |
+|--------|-----------------|------------|
 | COMPSCI 713 | B01-B05 | AI Fundamentals |
 | COMPSCI 714 | B09-B15 | AI Architecture & Design |
 | COMPSCI 761 | B06, B12, B14 | Advanced AI Topics |
@@ -638,21 +634,23 @@ This repository is **specifically designed to help MAI students at the Universit
 | COMPSCI 703 | B11-B13, B15 | Generalising AI |
 | COMPSYS 721 | B09-B13 | Deep Learning |
 
-**Study Schedule Recommendation for MAI Students:**
-- **Before Semester 1**: Complete B01-B07 (build strong foundations)
-- **During Semester 1**: B09-B13 + Course assignments (complement lectures)
-- **Semester Break**: B14 practice assignments (reinforce learning)
-- **Semester 2**: B15 capstone + Dissertation work (build portfolio)
+**Study Schedule:**
+- Before Semester 1: Complete B01-B07 (foundations)
+- During Semester 1: B09-B13 + course assignments
+- Semester Break: B14 practice assignments
+- Semester 2: B15 capstone + dissertation work
 
-**Benefits for University of Auckland MAI Students:**
-- **Better Understanding**: Practical implementations clarify theoretical concepts
-- **Higher Grades**: Practice before assignments leads to better performance
-- **Time Savings**: Reference implementations save hours of debugging
-- **Exam Preparation**: Complete review of all concepts with working code
-- **Career Ready**: Portfolio projects impress employers
-- **Research Foundation**: Capstone projects can evolve into dissertation topics
+**Benefits:**
+- Better understanding through practical implementations
+- Higher grades with pre-assignment practice
+- Time savings with reference implementations
+- Exam preparation with complete concept review
+- Career-ready portfolio projects
+- Research foundation for dissertations
 
-**Not a University of Auckland MAI student?** The content is still valuable for any AI/ML program at any university!
+**Not a UoA MAI student?** Content is valuable for any AI/ML program.
+
+---
 
 ## Structure
 
@@ -689,74 +687,49 @@ All notebooks are designed to run in Google Colab and include Colab badges for e
 
 ## Academic Integrity
 
-**IMPORTANT: This repository is a learning resource, not a solution manual.**
+**This repository is a learning resource, not a solution manual.**
 
-### Using This Repository Responsibly
-
-This repository is designed to help you **learn and understand** AI/ML concepts, not to provide ready-made solutions for your assignments. We are committed to supporting education while maintaining the highest standards of academic integrity.
+### Using Responsibly
 
 **✅ Appropriate Use:**
 - Learning concepts and understanding implementations
-- Preparing for lectures and reinforcing class material
-- Practicing before exams and building foundational skills
-- Using as inspiration for your own original projects
-- Understanding different approaches and coding patterns
+- Preparing for lectures and reinforcing material
+- Practicing before exams
+- Using as inspiration for original projects
+- Understanding different approaches
 
 **❌ Inappropriate Use:**
 - Copying code for assignments without understanding
 - Submitting repository code as your own work
 - Using during exams or closed-book assessments
 - Violating your institution's academic integrity policies
-- Sharing solutions inappropriately with classmates
 
-### Guidelines for Students
+### Guidelines
 
 1. **Learn First, Code Second**
-   - Understand the concepts in the notebooks
-   - Close the repository before starting your assignment
+   - Understand concepts in notebooks
+   - Close repository before starting assignments
    - Implement your own solution from scratch
-   - Only refer back if stuck on a specific concept
+   - Only refer back if stuck on specific concepts
 
 2. **Cite Appropriately**
-   - If you use ideas from this repository, cite it properly
+   - If using ideas from this repository, cite it properly
    - Follow your institution's citation guidelines
-   - Example citation:
-     ```
-     Karthik Arjun. (2024). AI & Machine Learning Roadmap. 
-     GitHub repository. https://github.com/nexageapps/AI
-     ```
 
 3. **Check Your Institution's Policies**
    - Understand what resources you're allowed to use
    - Know your institution's collaboration policies
-   - Ask your instructor if you're unsure
-   - When in doubt, ask first
+   - When in doubt, ask your instructor first
 
-4. **Transform, Don't Transfer**
-   - Use the repository to understand approaches
-   - Implement your own version with your own style
-   - Add your own improvements or variations
-   - Make it genuinely your work
+### For UoA MAI Students
 
-### For University of Auckland MAI Students
+**⚠️ IMPORTANT:** This is a personal project by a fellow MAI student, NOT official university material. You are responsible for following the [University of Auckland Academic Integrity Policy](https://www.auckland.ac.nz/en/students/academic-information/academic-integrity.html).
 
-**⚠️ IMPORTANT:** This is a **personal project by a fellow MAI student**, NOT official university material. It's not created by faculty, not endorsed by the university, and not part of any official curriculum. Think of it as a classmate's study notes being shared publicly.
+Your assignments test YOUR understanding. Use this to learn concepts, not find answers. Submitting code from this repository as your own work is plagiarism.
 
-**You are responsible for following the [University of Auckland Academic Integrity Policy](https://www.auckland.ac.nz/en/students/academic-information/academic-integrity.html).**
+Academic misconduct has serious consequences: failing grades, academic probation, permanent transcript records, potential expulsion.
 
-Your assignments test YOUR understanding. Use this repository to learn concepts, not to find answers. Submitting code from this repository as your own work is plagiarism.
-
-**Academic misconduct at UoA has serious consequences:**
-- Failing the assignment or course
-- Academic probation or suspension
-- Permanent record on your transcript
-- Potential expulsion
-
-**It's never worth it.** Learn with integrity, succeed with honor.
-
-### Full Policy
-
-For complete details on academic integrity expectations, appropriate use, and guidelines for both students and contributors, please read our comprehensive **[Academic Integrity Policy](./ACADEMIC_INTEGRITY.md)**.
+**[Full Academic Integrity Policy](./ACADEMIC_INTEGRITY.md)**
 
 ---
 
@@ -801,84 +774,78 @@ Ready to apply what you've learned? Here are hands-on project ideas perfect for 
 
 ## Contributing
 
-Contributions are welcome! To contribute:
+Contributions welcome! To contribute:
 
 1. Fork the repository
 2. Create a feature branch: `git checkout -b feature/new-tutorial`
-3. Add your notebook to the appropriate level folder (Basic, Intermediate, Advanced, or Expert)
-4. Follow the naming convention: `BXX - Topic.ipynb` (for Basic level, use zero-padded numbers like B01, B02)
-5. Include:
-   - Author information and LinkedIn profile
-   - Clear comments and explanations
-   - Colab badge for easy access
-   - Creation and update dates
-6. Clear all outputs before committing (to keep the repo clean)
-7. Submit a pull request with a clear description
+3. Add your notebook to the appropriate level folder
+4. Follow naming convention: `BXX - Topic.ipynb` (zero-padded: B01, B02)
+5. Include author info, clear comments, Colab badge, dates
+6. Clear all outputs before committing
+7. Submit a pull request with clear description
 
 **Notebook Guidelines:**
-- Keep code beginner-friendly with detailed comments
-- Include visualization where applicable
+- Beginner-friendly code with detailed comments
+- Include visualizations where applicable
 - Use self-contained examples (no external data dependencies)
-- Follow the existing code style
+- Follow existing code style
 
-## Why Star This Repository?
-
-- **Stay Updated**: Get notified when new lessons and projects are added
-- **Support a Fellow Student**: Help me reach more learners
-- **Bookmark for Later**: Easy access to quality AI learning resources
-- **Join the Community**: Be part of a growing learning community
-- **Motivation**: Your star motivates me to create more content
+---
 
 ## Community & Support
 
-### Join the Learning Community
-
-This is a collaborative learning space! Here's how you can participate:
-
 **Get Help:**
-- **Found a bug?** [Open an issue](https://github.com/nexageapps/AI/issues)
-- **Have an idea?** [Start a discussion](https://github.com/nexageapps/AI/discussions)
-- **Have questions?** Connect with me on [LinkedIn](https://www.linkedin.com/in/karthik-arjun-a5b4a258/)
-- **Email**: For collaboration inquiries
+- Found a bug? [Open an issue](https://github.com/nexageapps/AI/issues)
+- Have questions? Connect on [LinkedIn](https://www.linkedin.com/in/karthik-arjun-a5b4a258/)
+- Want to discuss? [Start a discussion](https://github.com/nexageapps/AI/discussions)
 
 **Contribute:**
-- **Want to contribute?** Submit a pull request
-- **Improve documentation**: Fix typos, add examples
-- **Add visualizations**: Make concepts clearer
-- **Share projects**: Add your capstone projects
+- Submit pull requests
+- Improve documentation
+- Add visualizations
+- Share your projects
 
 **Share:**
-- **Enjoying the content?** Star the repo
-- **Share on LinkedIn**: Tag me in your posts
-- **Tweet about it**: Use #AILearningPath
-- **Tell your classmates**: Learn together
-
-### Repository Stats
-
-- 15 comprehensive lessons (B01-B15)
-- 100% hands-on with runnable code
-- Aligned with top university curriculum
-- Used by students worldwide
-- Actively maintained and updated
-
-### Why Star This Repository?
-
-- **Stay Updated**: Get notified when new lessons and projects are added
-- **Support a Fellow Student**: Help me reach more learners
-- **Bookmark for Later**: Easy access to quality AI learning resources
-- **Join the Community**: Be part of a growing learning community
-- **Motivation**: Your star motivates me to create more content
-- **Show Appreciation**: Free way to say "thank you"
+- Star the repo to stay updated
+- Share on LinkedIn and tag me
+- Tell your classmates
 
 ### Connect & Collaborate
 
-**Let's learn together.** The best way to learn is to teach, and the best way to grow is to help others grow.
+Form study groups, help each other with code reviews, work on B15 projects together, or collaborate on research. I'm happy to help where I can.
 
-- **Study Groups**: Form groups with fellow learners
-- **Code Reviews**: Help each other improve
-- **Project Collaboration**: Work on B15 projects together
-- **Research Partnerships**: Collaborate on papers
-- **Mentorship**: I'm happy to help where I can
+---
+
+## Author
+
+**Karthik Arjun**
+- Master of Artificial Intelligence (MAI) Student
+- University of Auckland, New Zealand
+- [LinkedIn](https://www.linkedin.com/in/karthik-arjun-a5b4a258/) • [Hugging Face](https://huggingface.co/spaces/nexageapps) • [GitHub](https://github.com/nexageapps)
+
+*"Learning AI one notebook at a time, and sharing the journey with the world."*
+
+**Note:** This is a personal learning project, not officially affiliated with the University of Auckland.
+
+---
+
+## References
+
+This repository builds upon excellent resources from the AI community:
+
+- "Build a Large Language Model from Scratch" by Sebastian Raschka
+- OpenAI tiktoken: https://github.com/openai/tiktoken
+- TensorFlow Documentation: https://www.tensorflow.org/
+- PyTorch Documentation: https://pytorch.org/
+- University of Auckland: For providing an excellent learning environment
+
+Special thanks to all contributors and the open-source AI community!
+
+---
+
+## Sponsor
+
+This project is proudly sponsored by **[nexageapps](https://nexageapps.com)** - Supporting open-source education and innovation in AI.
 
 ---
 
@@ -886,52 +853,144 @@ This is a collaborative learning space! Here's how you can participate:
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-You are free to:
-- Use this project for personal or commercial purposes
-- Modify and distribute the code
-- Use it in your own projects
+You are free to use, modify, and distribute the code for personal or commercial purposes. Attribution is appreciated but not required.
 
-Attribution is appreciated but not required.
+---
 
-## Author
+## Learning Progress Tracker
 
-**Karthik Arjun**
-- Master of Artificial Intelligence (MAI) Student
-- University of Auckland, New Zealand
-- LinkedIn: [karthik-arjun-a5b4a258](https://www.linkedin.com/in/karthik-arjun-a5b4a258/)
-- Hugging Face: [nexageapps](https://huggingface.co/spaces/nexageapps)
-- GitHub: [nexageapps](https://github.com/nexageapps)
+Track your learning journey by marking completed lessons and recording dates. This helps you monitor progress and identify areas for review.
 
-*"Learning AI one notebook at a time, and sharing the journey with the world."*
+### Basic Level Progress
 
-**Note:** This is a personal learning project and is not officially affiliated with the University of Auckland.
+**Foundation (B01-B03)**
+- [ ] B01 - Arithmetic | Completed: ____/____/____ | Review: ____/____/____
+- [ ] B02 - Linear Regression | Completed: ____/____/____ | Review: ____/____/____
+- [ ] B03 - Binary Classification | Completed: ____/____/____ | Review: ____/____/____
 
-## References & Acknowledgments
+**Core Machine Learning (B04-B08)**
+- [ ] B04 - Multi-Class Classification | Completed: ____/____/____ | Review: ____/____/____
+- [ ] B05 - Neural Network Fundamentals | Completed: ____/____/____ | Review: ____/____/____
+- [ ] B06 - Data Preprocessing | Completed: ____/____/____ | Review: ____/____/____
+- [ ] B07 - Model Evaluation | Completed: ____/____/____ | Review: ____/____/____
+- [ ] B08 - Regularization | Completed: ____/____/____ | Review: ____/____/____
 
-This repository builds upon excellent resources from the AI community:
+**Deep Learning (B09-B11)**
+- [ ] B09 - CNNs | Completed: ____/____/____ | Review: ____/____/____
+- [ ] B10 - RNNs | Completed: ____/____/____ | Review: ____/____/____
+- [ ] B11 - Attention & Transformers | Completed: ____/____/____ | Review: ____/____/____
 
-- **Book**: "Build a Large Language Model from Scratch" by Sebastian Raschka
-- **OpenAI tiktoken**: https://github.com/openai/tiktoken
-- **TensorFlow Documentation**: https://www.tensorflow.org/
-- **PyTorch Documentation**: https://pytorch.org/
-- **University of Auckland**: For providing an excellent learning environment
+**NLP Specialization (B12-B13)**
+- [ ] B12 - Byte Pair Encoding | Completed: ____/____/____ | Review: ____/____/____
+- [ ] B13 - Mini Language Model | Completed: ____/____/____ | Review: ____/____/____
 
-Special thanks to all contributors and the open-source AI community!
+**Practice & Portfolio (B14-B15)**
+- [ ] B14 - Practical Projects | Completed: ____/____/____ | Review: ____/____/____
+- [ ] B15 - Capstone Projects | Completed: ____/____/____ | Review: ____/____/____
 
-## Sponsor
+### Intermediate Level Progress
 
-This project is proudly sponsored by **[nexageapps](https://nexageapps.com)** - Supporting open-source education and innovation in AI.
+**Advanced Optimization (I01-I03)**
+- [ ] I01 - Advanced Optimization | Completed: ____/____/____ | Review: ____/____/____
+- [ ] I02 - Regularization | Completed: ____/____/____ | Review: ____/____/____
+- [ ] I03 - Normalization | Completed: ____/____/____ | Review: ____/____/____
 
-nexageapps is committed to advancing technology education and making quality learning resources accessible to students worldwide.
+**Advanced Computer Vision (I04-I06)**
+- [ ] I04 - Advanced CNNs | Completed: ____/____/____ | Review: ____/____/____
+- [ ] I05 - Transfer Learning | Completed: ____/____/____ | Review: ____/____/____
+- [ ] I06 - Detection & Segmentation | Completed: ____/____/____ | Review: ____/____/____
 
-## Contact & Collaboration
+**Advanced NLP (I07-I09)**
+- [ ] I07 - Advanced RNNs | Completed: ____/____/____ | Review: ____/____/____
+- [ ] I08 - Seq2Seq Models | Completed: ____/____/____ | Review: ____/____/____
+- [ ] I09 - Advanced Transformers | Completed: ____/____/____ | Review: ____/____/____
 
-I'm always excited to connect with fellow learners and researchers!
+**Production ML (I10-I15)**
+- [ ] I10 - Hyperparameter Tuning | Completed: ____/____/____ | Review: ____/____/____
+- [ ] I11 - Model Compression | Completed: ____/____/____ | Review: ____/____/____
+- [ ] I12 - Generative Models | Completed: ____/____/____ | Review: ____/____/____
+- [ ] I13 - Multi-Task Learning | Completed: ____/____/____ | Review: ____/____/____
+- [ ] I14 - Explainable AI | Completed: ____/____/____ | Review: ____/____/____
+- [ ] I15 - MLOps | Completed: ____/____/____ | Review: ____/____/____
 
-- **Questions?** Open an issue on GitHub
-- **Collaboration?** Connect on LinkedIn
-- **Research Opportunities?** Reach out via LinkedIn
-- **Speaking/Workshop Invitations?** I'd love to share and learn
+### Advanced Level Progress
+
+**Large Language Models (A01-A03)**
+- [ ] A01 - Fine-tuning LLMs | Completed: ____/____/____ | Review: ____/____/____
+- [ ] A02 - Prompt Engineering | Completed: ____/____/____ | Review: ____/____/____
+- [ ] A03 - RAG Systems | Completed: ____/____/____ | Review: ____/____/____
+
+**Multi-Modal AI (A04-A06)**
+- [ ] A04 - Vision-Language Models | Completed: ____/____/____ | Review: ____/____/____
+- [ ] A05 - Audio & Speech | Completed: ____/____/____ | Review: ____/____/____
+- [ ] A06 - Multi-Modal Fusion | Completed: ____/____/____ | Review: ____/____/____
+
+**Distributed Training (A07-A09)**
+- [ ] A07 - Distributed Training | Completed: ____/____/____ | Review: ____/____/____
+- [ ] A08 - Mixed Precision | Completed: ____/____/____ | Review: ____/____/____
+- [ ] A09 - Inference Optimization | Completed: ____/____/____ | Review: ____/____/____
+
+**Production MLOps (A10-A15)**
+- [ ] A10 - ML Pipelines | Completed: ____/____/____ | Review: ____/____/____
+- [ ] A11 - Deployment | Completed: ____/____/____ | Review: ____/____/____
+- [ ] A12 - Monitoring | Completed: ____/____/____ | Review: ____/____/____
+- [ ] A13 - CI/CD for ML | Completed: ____/____/____ | Review: ____/____/____
+- [ ] A14 - Responsible AI | Completed: ____/____/____ | Review: ____/____/____
+- [ ] A15 - Production Capstone | Completed: ____/____/____ | Review: ____/____/____
+
+### Expert Level Progress
+
+**Research Foundations (E01-E03)**
+- [ ] E01 - Reading Papers | Completed: ____/____/____ | Review: ____/____/____
+- [ ] E02 - Experimental Design | Completed: ____/____/____ | Review: ____/____/____
+- [ ] E03 - Writing & Publishing | Completed: ____/____/____ | Review: ____/____/____
+
+**Novel Architectures (E04-E06)**
+- [ ] E04 - Neural Architecture Search | Completed: ____/____/____ | Review: ____/____/____
+- [ ] E05 - Custom Layers | Completed: ____/____/____ | Review: ____/____/____
+- [ ] E06 - Attention Innovations | Completed: ____/____/____ | Review: ____/____/____
+
+**Advanced Learning (E07-E09)**
+- [ ] E07 - Meta-Learning | Completed: ____/____/____ | Review: ____/____/____
+- [ ] E08 - Continual Learning | Completed: ____/____/____ | Review: ____/____/____
+- [ ] E09 - Self-Supervised Learning | Completed: ____/____/____ | Review: ____/____/____
+
+**RL & Advanced Topics (E10-E12)**
+- [ ] E10 - Deep RL | Completed: ____/____/____ | Review: ____/____/____
+- [ ] E11 - RLHF | Completed: ____/____/____ | Review: ____/____/____
+- [ ] E12 - Federated Learning | Completed: ____/____/____ | Review: ____/____/____
+
+**Cutting-Edge Research (E13-E15)**
+- [ ] E13 - Multimodal Foundation Models | Completed: ____/____/____ | Review: ____/____/____
+- [ ] E14 - Efficient AI | Completed: ____/____/____ | Review: ____/____/____
+- [ ] E15 - Research Project | Completed: ____/____/____ | Review: ____/____/____
+
+### Progress Summary
+
+**Overall Completion:**
+- Basic Level: _____ / 15 lessons completed
+- Intermediate Level: _____ / 15 lessons completed
+- Advanced Level: _____ / 15 lessons completed
+- Expert Level: _____ / 15 lessons completed
+- **Total Progress: _____ / 60 lessons completed**
+
+**Learning Milestones:**
+- Started learning: ____/____/____
+- Completed Basic Level: ____/____/____
+- Completed Intermediate Level: ____/____/____
+- Completed Advanced Level: ____/____/____
+- Completed Expert Level: ____/____/____
+
+**Notes & Reflections:**
+```
+Add your personal notes, insights, and areas that need more review here.
+You can track which topics you found challenging and want to revisit.
+
+Example:
+- Need to review: B11 (Attention mechanisms)
+- Strong areas: B02-B04 (Regression and Classification)
+- Next focus: Deep dive into Transformers
+```
 
 ---
 
@@ -939,14 +998,10 @@ I'm always excited to connect with fellow learners and researchers!
 
 **If you find this helpful, please star the repository!**
 
-[![Buy me a book](https://img.shields.io/badge/Buy%20Me%20A%20Book-Support%20This%20Project-yellow?style=for-the-badge&logo=buy-me-a-book)](https://buymeacoffee.com/fcc4sbsx5f6)
+[![Buy me a book](https://img.shields.io/badge/Buy%20Me%20A%20Book-Support%20This%20Project-yellow?style=for-the-badge)](https://buymeacoffee.com/fcc4sbsx5f6)
 
 *Made by a student, for students*
 
 **Happy Learning!**
 
 </div>
-
----
-
-**Note**: All notebooks are designed for educational purposes and include references to source materials where applicable. This is an active learning project - expect regular updates as I progress through my master's program!

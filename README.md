@@ -115,13 +115,14 @@ graph TB
         B01 --> B02 --> B03
     end
     
-    subgraph CoreML["CORE MACHINE LEARNING (B04-B07)"]
+    subgraph CoreML["CORE MACHINE LEARNING (B04-B08)"]
         B04["B04: Multi-Class Classification<br/>Softmax & categorical cross-entropy"]:::basic
         B05["B05: Neural Network Fundamentals<br/>MLPs, activation functions, backpropagation"]:::basic
         B06["B06: Data Preprocessing<br/>Feature engineering, scaling, encoding"]:::basic
         B07["B07: Model Evaluation<br/>Metrics, cross-validation, imbalanced data"]:::basic
+        B08["B08: Regularization & Overfitting<br/>L1/L2, dropout, early stopping"]:::basic
         
-        B04 --> B05 --> B06 --> B07
+        B04 --> B05 --> B06 --> B07 --> B08
     end
     
     subgraph DeepLearning["DEEP LEARNING (B09-B11)"]
@@ -257,8 +258,8 @@ graph TB
     
     Start --> B01
     B03 --> B04
-    B07 --> B09
-    B07 --> B10
+    B08 --> B09
+    B08 --> B10
     B11 --> B12
     B13 --> I01
     
@@ -301,9 +302,9 @@ The diagram flows from top to bottom, organized into clear stages. Each stage bu
 - Duration: ~2-3 hours
 - Prerequisites: Basic Python knowledge
 
-**2. Core Machine Learning (B04-B07)** - Essential Skills
-- Build strong ML fundamentals with multi-class problems, neural networks, data preprocessing, and evaluation
-- Duration: ~6-8 hours
+**2. Core Machine Learning (B04-B08)** - Essential Skills
+- Build strong ML fundamentals with multi-class problems, neural networks, data preprocessing, evaluation, and regularization
+- Duration: ~8-10 hours
 - Prerequisites: Complete Foundation stage
 
 **3. Deep Learning (B09-B11)** - Advanced Neural Networks

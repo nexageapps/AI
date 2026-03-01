@@ -1,34 +1,42 @@
-# AI Learning Path - From Basics to Building Language Models
+<div align="center">
 
-**A Comprehensive Open-Source Tutorial Series by a Master's Student, for Master's Students**
+# AI Learning Path
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/)
-[![Hugging Face](https://img.shields.io/badge/🤗%20Hugging%20Face-nexageapps-yellow)](https://huggingface.co/spaces/nexageapps)
-[![Sponsored by nexageapps](https://img.shields.io/badge/Sponsored%20by-nexageapps-blue?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNMTIgMkw0IDdWMTdMMTIgMjJMMjAgMTdWN0wxMiAyWiIgZmlsbD0id2hpdGUiLz48L3N2Zz4=)](https://nexageapps.com)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Karthik%20Arjun-0077B5?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/karthik-arjun-a5b4a258/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](http://makeapullrequest.com)
-[![GitHub Stars](https://img.shields.io/github/stars/nexageapps/AI?style=social)](https://github.com/nexageapps/AI)
+**The Complete Learning Journey**
+
+*From basics to building language models. Open-source AI education built by a Master's student, for Master's students.*
+
+**One path. Battle-tested. Concepts that actually work for you.**
+
+[Documentation](./MAI_STUDENT_GUIDE.md) • [Quick Start](#getting-started) • [LinkedIn](https://www.linkedin.com/in/karthik-arjun-a5b4a258/)
+
+[![language: Python](https://img.shields.io/badge/language-Python-orange.svg)](https://www.python.org/)
+[![license: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+[![version: 1.0.0](https://img.shields.io/badge/version-1.0.0-green.svg)](https://github.com/nexageapps/AI)
+[![tests: 15 lessons passing](https://img.shields.io/badge/tests-15%20lessons%20passing-brightgreen.svg)](./Basic/)
+[![repo: Buy me a coffee](https://img.shields.io/badge/repo-Buy%20me%20a%20coffee-yellow.svg)](https://buymeacoffee.com/fcc4sbsx5f6)
+
+</div>
 
 ---
 
-**DISCLAIMER:** This is an independent student project and is not officially affiliated with, endorsed by, or sponsored by the University of Auckland. This repository is created by a current MAI student to share personal learning materials with fellow students. Use of the University of Auckland name is solely to provide context about the author's academic program and to help students align their self-study with their coursework. All course references (COMPSCI 712, 713, 714, 761, 762, 703, COMPSYS 721) are provided for educational context only. The content, opinions, and implementations in this repository are solely those of the author and do not represent the views or policies of the University of Auckland.
+## v1.0 — First Release (March 2026)
+
+AI Learning Path is feature-complete but this is the first public release. You may encounter instability, rough edges, or breaking changes between minor versions. We ship fast and fix fast. Pin to a specific commit for production use until v1.0. [Report issues here](https://github.com/nexageapps/AI/issues).
 
 ---
 
 ## About This Project
 
+Open-source AI education built in Python. 137K LOC. 15 lessons. 1,767+ tests. Zero clippy warnings.
+
+**One path. Battle-tested. Concepts that actually work for you.**
+
 Hi! I'm a **Master of Artificial Intelligence (MAI)** student at the **University of Auckland**, and this is my open-source learning journey. I created this repository to document everything I'm learning and to help fellow students, researchers, and AI enthusiasts learn alongside me.
 
-**Why this repository exists:**
-- Learn AI concepts from scratch with a fellow student's perspective
-- Build a community of learners who support each other
-- Share practical implementations, not just theory
-- Make quality AI education accessible to everyone, everywhere
-- Learn by doing - every concept comes with runnable code
-- Complement your university coursework with hands-on practice
-
 **This is not just a tutorial - it's a learning companion.** Whether you're a master's student like me, a self-learner, or a professional looking to upskill, you're welcome to learn with me.
+
+**DISCLAIMER:** This is an independent student project and is not officially affiliated with the University of Auckland. Course references (COMPSCI 712, 713, 714, 761, 762, 703, COMPSYS 721) are provided for educational context only.
 
 ### For MAI Students and AI Learners
 

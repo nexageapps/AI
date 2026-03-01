@@ -495,6 +495,7 @@ graph TD
 ## Additional Resources
 
 ### Books (Free Online)
+- "Artificial Intelligence: A Modern Approach" by Stuart Russell and Peter Norvig - [aima.cs.berkeley.edu](http://aima.cs.berkeley.edu/)
 - "Deep Learning" by Goodfellow, Bengio, Courville - [deeplearningbook.org](http://www.deeplearningbook.org/)
 - "Neural Networks and Deep Learning" by Michael Nielsen - [neuralnetworksanddeeplearning.com](http://neuralnetworksanddeeplearning.com/)
 - "Dive into Deep Learning" - [d2l.ai](https://d2l.ai/)

@@ -1,6 +1,6 @@
 <div align="center">
 
-# AI Learning Path: From Hello World to Hello GPT
+# AI & Machine Learning Roadmap: From Basics to LLMs
 
 **Open-source AI education built by a Master's in AI student, for everyone.**
 

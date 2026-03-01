@@ -308,15 +308,34 @@ Foundation lessons covering fundamental AI/ML concepts. **[View all Basic lesson
 
 ---
 
-### Intermediate Level (Coming Soon)
+### Intermediate Level (Coming Soon - 15 Lessons)
 
-Advanced topics building on basic concepts:
-- Transfer Learning and Fine-tuning
-- Advanced Optimization Techniques (Adam, RMSprop, Learning Rate Scheduling)
-- Advanced CNN/RNN Architectures (ResNet, DenseNet, Bidirectional RNNs)
-- Encoder-Decoder Models and Seq2Seq
-- Hyperparameter Tuning and AutoML
-- Ensemble Methods and Model Stacking
+Advanced topics building on basic concepts. **[View complete Intermediate syllabus →](./Intermediate/)**
+
+#### Advanced Optimization & Training (I01-I03)
+1. **I01 - Advanced Optimization Algorithms** - Adam, RMSprop, learning rate scheduling
+2. **I02 - Regularization Techniques** - L1/L2, dropout variants, data augmentation
+3. **I03 - Batch and Layer Normalization** - Stabilize training and improve convergence
+
+#### Advanced Computer Vision (I04-I06)
+4. **I04 - Advanced CNN Architectures** - ResNet, VGG, Inception, EfficientNet
+5. **I05 - Transfer Learning and Fine-tuning** - Pre-trained models and domain adaptation
+6. **I06 - Object Detection and Segmentation** - YOLO, R-CNN, U-Net, Mask R-CNN
+
+#### Advanced NLP & Sequences (I07-I09)
+7. **I07 - Advanced RNN Architectures** - Bidirectional RNNs, stacked LSTMs
+8. **I08 - Encoder-Decoder and Seq2Seq Models** - Translation and summarization
+9. **I09 - Advanced Transformer Architectures** - BERT, GPT variants, T5, BART
+
+#### Production ML & Advanced Topics (I10-I15)
+10. **I10 - Hyperparameter Tuning and AutoML** - Bayesian optimization, NAS
+11. **I11 - Model Compression and Optimization** - Pruning, quantization, distillation
+12. **I12 - Generative Models** - VAEs, GANs, diffusion models
+13. **I13 - Multi-Task and Meta-Learning** - Few-shot learning, MAML
+14. **I14 - Explainable AI and Interpretability** - SHAP, LIME, fairness metrics
+15. **I15 - MLOps and Production Deployment** - CI/CD, monitoring, model serving
+
+**Total Learning Time:** ~60-80 hours for complete mastery
 
 **[View Intermediate roadmap →](./Intermediate/)**
 

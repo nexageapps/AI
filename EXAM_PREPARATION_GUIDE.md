@@ -14,7 +14,7 @@ Each lesson includes 5 essential takeaways that summarize the most important con
 - Highlight connections between concepts
 - Emphasize practical understanding
 
-**Example from B02 (Linear Regression):**
+Example from B02 (Linear Regression):
 1. Linear regression finds the best-fit line: y = wx + b
 2. Loss function (MSE) measures prediction error: L = (y_pred - y_true)²
 3. Gradient descent iteratively updates weights: w = w - α∇L
@@ -68,90 +68,90 @@ Shows which UoA courses each lesson supports:
 ## Course-Specific Guidance
 
 ### COMPSCI 713 (AI Fundamentals)
-**Relevant Lessons:** B01-B05, I01-I02
+Relevant Lessons: B01-B05, I01-I02
 
-**Focus Areas:**
+Focus Areas:
 - Tensor operations and shapes
 - Neural network fundamentals
 - Gradient descent and optimization
 - Loss functions and backpropagation
 
-**Exam Tips:**
+Exam Tips:
 - Master shape calculations
 - Understand gradient flow
 - Practice deriving gradients by hand
 - Know activation function properties
 
 ### COMPSCI 714 (AI Architecture & Design)
-**Relevant Lessons:** B09-B15
+Relevant Lessons: B09-B15
 
-**Focus Areas:**
+Focus Areas:
 - CNN architectures
 - Transformer models
 - Language model design
 - System architecture
 
-**Exam Tips:**
+Exam Tips:
 - Understand architectural choices
 - Know parameter counts
 - Compare different architectures
 - Design systems for specific tasks
 
 ### COMPSCI 761 (Advanced AI Topics)
-**Relevant Lessons:** B06, B12, B14, E01, E10-E11
+Relevant Lessons: B06, B12, B14, E01, E10-E11
 
-**Focus Areas:**
+Focus Areas:
 - Advanced preprocessing
 - Tokenization techniques
 - Research methodology
 - Reinforcement learning
 
-**Exam Tips:**
+Exam Tips:
 - Read and analyze papers
 - Understand experimental design
 - Know state-of-the-art methods
 - Critical thinking about approaches
 
 ### COMPSCI 762 (ML Foundations)
-**Relevant Lessons:** B02-B08, I01-I03
+Relevant Lessons: B02-B08, I01-I03
 
-**Focus Areas:**
+Focus Areas:
 - Regression and classification
 - Model evaluation
 - Regularization
 - Optimization algorithms
 
-**Exam Tips:**
+Exam Tips:
 - Master mathematical foundations
 - Calculate metrics from confusion matrices
 - Understand bias-variance tradeoff
 - Know when to apply which technique
 
 ### COMPSCI 703 (Generalising AI)
-**Relevant Lessons:** B11-B13, B15, I09, E11
+Relevant Lessons: B11-B13, B15, I09, E11
 
-**Focus Areas:**
+Focus Areas:
 - Attention mechanisms
 - Transformers
 - Language models
 - Model alignment (RLHF)
 
-**Exam Tips:**
+Exam Tips:
 - Understand attention calculations
 - Know transformer architecture details
 - Explain generation process
 - Understand alignment techniques
 
 ### COMPSYS 721 (Deep Learning)
-**Relevant Lessons:** B09-B11, I03, I09
+Relevant Lessons: B09-B11, I03, I09
 
-**Focus Areas:**
+Focus Areas:
 - CNNs for computer vision
 - RNNs for sequences
 - Transformers
 - Normalization techniques
 
-**Exam Tips:**
+Exam Tips:
 - Calculate convolution output sizes
 - Understand recurrence mechanisms
 - Know normalization types
@@ -161,24 +161,24 @@ Shows which UoA courses each lesson supports:
 
 ### Before Exams
 
-1. **Review Key Takeaways**: Start with the 5 key points in each lesson
-2. **Work Through Practice Problems**: Do them without looking at solutions
-3. **Check Common Mistakes**: Make sure you understand why they're wrong
-4. **Test Yourself**: Can you explain concepts to someone else?
+1. Review Key Takeaways: Start with the 5 key points in each lesson
+2. Work Through Practice Problems: Do them without looking at solutions
+3. Check Common Mistakes: Make sure you understand why they're wrong
+4. Test Yourself: Can you explain concepts to someone else?
 
 ### During Study Sessions
 
-1. **Active Learning**: Don't just read, implement and experiment
-2. **Connect Concepts**: Link lessons to lecture material
-3. **Practice Calculations**: Work through math by hand
-4. **Build Intuition**: Understand why, not just what
+1. Active Learning: Don't just read, implement and experiment
+2. Connect Concepts: Link lessons to lecture material
+3. Practice Calculations: Work through math by hand
+4. Build Intuition: Understand why, not just what
 
 ### Week Before Exam
 
-1. **Focus on Essential Concepts**: Review exam tips section
-2. **Practice Problems**: Work through all practice problems
-3. **Review Mistakes**: Go through common mistakes list
-4. **Quick Review**: Skim key takeaways for all relevant lessons
+1. Focus on Essential Concepts: Review exam tips section
+2. Practice Problems: Work through all practice problems
+3. Review Mistakes: Go through common mistakes list
+4. Quick Review: Skim key takeaways for all relevant lessons
 
 ## Study Strategies
 
@@ -241,67 +241,67 @@ Shows which UoA courses each lesson supports:
 
 ### Before the Exam
 
-1. **Complete All Practice Problems**: Don't skip any
-2. **Review Common Mistakes**: Learn from others' errors
-3. **Test Your Understanding**: Explain concepts out loud
-4. **Connect Theory to Code**: Link math to implementation
-5. **Get Enough Sleep**: Your brain needs rest to perform
+1. Complete All Practice Problems: Don't skip any
+2. Review Common Mistakes: Learn from others' errors
+3. Test Your Understanding: Explain concepts out loud
+4. Connect Theory to Code: Link math to implementation
+5. Get Enough Sleep: Your brain needs rest to perform
 
 ### During the Exam
 
-1. **Read Questions Carefully**: Understand what's being asked
-2. **Start with Easy Questions**: Build confidence
-3. **Show Your Work**: Partial credit for correct process
-4. **Check Your Answers**: Verify calculations
-5. **Manage Your Time**: Don't spend too long on one question
+1. Read Questions Carefully: Understand what's being asked
+2. Start with Easy Questions: Build confidence
+3. Show Your Work: Partial credit for correct process
+4. Check Your Answers: Verify calculations
+5. Manage Your Time: Don't spend too long on one question
 
 ### After the Exam
 
-1. **Review Your Performance**: What went well? What didn't?
-2. **Update Your Notes**: Add insights from exam
-3. **Help Others**: Teaching reinforces learning
-4. **Keep Practicing**: Skills improve with use
+1. Review Your Performance: What went well? What didn't?
+2. Update Your Notes: Add insights from exam
+3. Help Others: Teaching reinforces learning
+4. Keep Practicing: Skills improve with use
 
 ## Additional Resources
 
 ### In This Repository
 
-- **README.md**: Overall progress tracker
-- **PROGRESS_TRACKER_GUIDE.md**: How to track your learning
-- **MAI_STUDENT_GUIDE.md**: Comprehensive guide for MAI students
-- **Individual Notebooks**: Detailed implementations with exam prep
+- README.md: Overall progress tracker
+- PROGRESS_TRACKER_GUIDE.md: How to track your learning
+- MAI_STUDENT_GUIDE.md: Comprehensive guide for MAI students
+- Individual Notebooks: Detailed implementations with exam prep
 
 ### External Resources
 
-- **Course Lectures**: Primary source of theoretical knowledge
-- **Office Hours**: Ask TAs and professors for clarification
-- **Study Groups**: Learn with peers
-- **Past Exams**: Practice with real exam questions (if available)
-- **Online Resources**: Supplement with videos and tutorials
+- Course Lectures: Primary source of theoretical knowledge
+- Office Hours: Ask TAs and professors for clarification
+- Study Groups: Learn with peers
+- Past Exams: Practice with real exam questions (if available)
+- Online Resources: Supplement with videos and tutorials
 
 ## Success Stories
 
 Students who use these exam preparation sections report:
 
-- **Better Understanding**: Concepts click when connected to code
-- **Higher Grades**: Practice problems prepare for exam questions
-- **More Confidence**: Knowing common mistakes helps avoid them
-- **Faster Learning**: Focused study on essential concepts
-- **Better Retention**: Active practice improves memory
+- Better Understanding: Concepts click when connected to code
+- Higher Grades: Practice problems prepare for exam questions
+- More Confidence: Knowing common mistakes helps avoid them
+- Faster Learning: Focused study on essential concepts
+- Better Retention: Active practice improves memory
 
 ## Final Thoughts
 
 Success in AI/ML courses requires:
 
-1. **Understanding Fundamentals**: Master the basics first
-2. **Hands-On Practice**: Implement concepts yourself
-3. **Regular Review**: Spaced repetition improves retention
-4. **Active Learning**: Don't just read, do
-5. **Persistence**: Some concepts take time to click
+1. Understanding Fundamentals: Master the basics first
+2. Hands-On Practice: Implement concepts yourself
+3. Regular Review: Spaced repetition improves retention
+4. Active Learning: Don't just read, do
+5. Persistence: Some concepts take time to click
 
 Remember: These notebooks are learning tools, not solution manuals. Use them to understand concepts, then apply that understanding to your assignments and exams.
 
-**Good luck with your exams! You've got this! 🎓✨**
+Good luck with your exams! You've got this! 
 
 ---
 
@@ -327,4 +327,11 @@ Remember: These notebooks are learning tools, not solution manuals. Use them to 
 
 ---
 
-**Remember**: Understanding > Memorization. Focus on why things work, not just what they do.
+Remember: Understanding > Memorization. Focus on why things work, not just what they do.
+
+## Related Documentation
+
+- [README.md](./README.md) - Main repository overview and learning paths
+- [Progress Tracker Guide](./PROGRESS_TRACKER_GUIDE.md) - How to track your learning progress
+- [MAI Student Guide](./MAI_STUDENT_GUIDE.md) - Complete guide for UoA MAI students
+- [Updates Summary](./UPDATES_SUMMARY.md) - Recent repository enhancements

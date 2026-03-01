@@ -2,11 +2,11 @@
 
 # AI & Machine Learning Roadmap: From Basics to LLMs
 
-**Open-source AI education built by a Master's in AI student, for everyone.**
+Open-source AI education built by a Master's in AI student, for everyone.
 
-*Basic → Expert. Zero → Language Models. 60+ lessons. 100% hands-on.*
+Basic to Expert. Zero to Language Models. 60+ lessons. 100% hands-on.
 
-[MAI Student Guide](./MAI_STUDENT_GUIDE.md) • [Quick Start](#getting-started) • [LinkedIn](https://www.linkedin.com/in/karthik-arjun-a5b4a258/)
+[MAI Student Guide](./MAI_STUDENT_GUIDE.md) • [Exam Prep Guide](./EXAM_PREPARATION_GUIDE.md) • [Quick Start](#getting-started) • [LinkedIn](https://www.linkedin.com/in/karthik-arjun-a5b4a258/)
 
 [![Python](https://img.shields.io/badge/Python-3.8+-orange.svg)](https://www.python.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](./LICENSE)
@@ -17,7 +17,7 @@
 
 ---
 
-**DISCLAIMER:** This is an independent student project, not officially affiliated with the University of Auckland. Created by a current MAI student to share learning materials. Course references (COMPSCI 713, 714, 761, 762, 703, COMPSYS 721) are for educational context only. Content and opinions are solely those of the author.
+DISCLAIMER: This is an independent student project, not officially affiliated with the University of Auckland. Created by a current MAI student to share learning materials. Course references (COMPSCI 713, 714, 761, 762, 703, COMPSYS 721) are for educational context only. Content and opinions are solely those of the author.
 
 ---
 
@@ -42,21 +42,21 @@ Every lesson provides:
 - Reference code for projects and dissertations
 - Portfolio projects to showcase your skills
 
-**[MAI Student Guide](./MAI_STUDENT_GUIDE.md)** includes:
+[Complete MAI Student Guide](./MAI_STUDENT_GUIDE.md) includes:
 - Course mapping (COMPSCI 713, 714, 761, 762, 703, COMPSYS 721)
 - Week-by-week study strategies
 - Assignment preparation tips
 - Research project ideas
 - Exam preparation strategies
 
-**How this helps:**
+How this helps:
 - Before lectures: Build intuition with examples
 - During semester: Reinforce concepts with code
 - For assignments: Reference implementations
 - For exams: Review all concepts
 - For dissertation: Capstone project starting points
 
-**Not a UoA student?** Content is valuable for any AI/ML learner.
+Not a UoA student? Content is valuable for any AI/ML learner.
 
 ## Mission
 
@@ -64,8 +64,44 @@ Provide a structured, hands-on learning path from basic arithmetic to complete l
 
 Designed to help MAI students at the University of Auckland succeed by complementing theoretical lectures with practical code. Content aligns with core courses: COMPSCI 713, 714, 761, 762, 703, and COMPSYS 721.
 
+---
+
+## Documentation Overview
+
+This repository includes comprehensive documentation to support your learning journey. For a complete overview of all documentation, see the [Documentation Index](./DOCUMENTATION_INDEX.md).
+
+### Core Documentation
+
+| Document | Purpose | Best For |
+|----------|---------|----------|
+| [README.md](./README.md) | Repository overview, learning paths, progress tracker | Getting started, understanding structure |
+| [MAI Student Guide](./MAI_STUDENT_GUIDE.md) | UoA course mappings, semester planning, study strategies | MAI students, course alignment |
+| [Exam Preparation Guide](./EXAM_PREPARATION_GUIDE.md) | Exam strategies, practice problems, study tips | Exam preparation, concept review |
+| [Progress Tracker Guide](./PROGRESS_TRACKER_GUIDE.md) | How to track learning, spaced repetition | Organizing study, tracking progress |
+| [Updates Summary](./UPDATES_SUMMARY.md) | Recent enhancements, new features | Understanding new additions |
+| [Documentation Index](./DOCUMENTATION_INDEX.md) | Complete guide to all documentation | Finding specific information |
+
+### Policy Documentation
+
+| Document | Purpose |
+|----------|---------|
+| [Academic Integrity](./ACADEMIC_INTEGRITY.md) | Responsible use guidelines |
+| [Contributing](./CONTRIBUTING.md) | How to contribute to the project |
+| [Security](./SECURITY.md) | Security policies and reporting |
+
+### Quick Navigation
+
+- New to this repository? Start with [Getting Started](#getting-started)
+- UoA MAI student? Read the [MAI Student Guide](./MAI_STUDENT_GUIDE.md)
+- Preparing for exams? Check the [Exam Preparation Guide](./EXAM_PREPARATION_GUIDE.md)
+- Want to track progress? See [Progress Tracker Guide](./PROGRESS_TRACKER_GUIDE.md)
+- Looking for specific lessons? Jump to [Repository Structure](#repository-structure)
+
+---
+
 ## Table of Contents
 
+- [Documentation Overview](#documentation-overview)
 - [About This Project](#about-this-project)
 - [What Makes This Different](#what-makes-this-different)
 - [Learning Path Diagram](#learning-path-diagram)
@@ -77,6 +113,7 @@ Designed to help MAI students at the University of Auckland succeed by complemen
 - [For MAI Students](#for-mai-students)
 - [Contributing](#contributing)
 - [Community & Support](#community--support)
+- [Learning Progress Tracker](#learning-progress-tracker)
 - [Author](#author)
 - [License](#license)
 
@@ -469,9 +506,9 @@ Production-ready AI systems. **[View complete syllabus →](./Advanced/)**
 
 ---
 
-### Expert Level (15 Lessons - Detailed Roadmap)
+### Expert Level (15 Lessons - 🔒 PREMIUM)
 
-Research-oriented topics and cutting-edge techniques. **[View complete syllabus →](./Expert/)**
+Research-oriented topics and cutting-edge techniques. **[Get Access →](#pricing)**
 
 **Research Foundations (E01-E03)**
 1. E01 - Reading Papers: Paper analysis, reproduction, benchmarking
@@ -499,6 +536,70 @@ Research-oriented topics and cutting-edge techniques. **[View complete syllabus 
 15. E15 - Research Project: Original research, open-source contribution
 
 **Learning Time:** ~100-120 hours
+
+---
+
+## Pricing
+
+### What's Included
+
+**🆓 FREE - Basic Level (15 Lessons)**
+- Complete foundation in AI/ML
+- TensorFlow basics to Language Models
+- CNNs, RNNs, Transformers, and Attention
+- Build your own mini GPT-style model
+- Practical projects and portfolio building
+- Full access forever, no strings attached
+
+**💎 PREMIUM - Intermediate + Expert Levels (30 Lessons)**
+- Everything in Basic Level, plus:
+- Advanced optimization and architectures
+- Production ML and MLOps
+- Large Language Models (LLMs)
+- Multi-modal AI systems
+- Distributed training and deployment
+- Research-level techniques
+- Cutting-edge AI innovations
+
+### Pricing Options
+
+**One-Time Purchase: $149**
+- Lifetime access to all 45 lessons
+- All future updates included
+- Priority email support
+- Certificate of completion
+- Commercial use allowed
+
+**Monthly Subscription: $29/month**
+- Access to all premium content
+- Cancel anytime
+- All updates included
+- Email support
+
+### How to Get Access
+
+1. **Purchase:** [Click here to get premium access](#) *(Payment link coming soon)*
+2. **Receive:** Get instant access via email with download link
+3. **Learn:** Start with Intermediate lessons immediately
+
+### Why Premium?
+
+Creating quality educational content takes significant time and effort. Your support helps:
+- Keep Basic level free for everyone
+- Fund development of new lessons
+- Maintain and update existing content
+- Provide student support
+- Create more open educational resources
+
+### Student Discount
+
+**50% off for verified students!** Email proof of enrollment to [your-email] for discount code.
+
+### Money-Back Guarantee
+
+Not satisfied? Get a full refund within 30 days, no questions asked.
+
+---
 
 ## Getting Started
 
@@ -614,16 +715,16 @@ Open the desired notebook and run cells sequentially. All notebooks are self-con
 
 This repository is specifically designed to help MAI students succeed. As a fellow MAI student, I created this to address the exact challenges we face.
 
-**[Complete MAI Student Guide](./MAI_STUDENT_GUIDE.md)** - Your essential companion
+[Complete MAI Student Guide](./MAI_STUDENT_GUIDE.md) - Your essential companion
 
-**What's Inside:**
+What's Inside:
 - Direct course mappings (COMPSCI 713, 714, 761, 762, 703, COMPSYS 721)
 - Semester-by-semester study strategies
 - Assignment preparation tips
 - Research project ideas for dissertations
 - Exam preparation strategies
 
-**Quick Course Alignment:**
+Quick Course Alignment:
 
 | Course | Relevant Lessons | Focus Area |
 |--------|-----------------|------------|
@@ -634,13 +735,13 @@ This repository is specifically designed to help MAI students succeed. As a fell
 | COMPSCI 703 | B11-B13, B15 | Generalising AI |
 | COMPSYS 721 | B09-B13 | Deep Learning |
 
-**Study Schedule:**
+Study Schedule:
 - Before Semester 1: Complete B01-B07 (foundations)
 - During Semester 1: B09-B13 + course assignments
 - Semester Break: B14 practice assignments
 - Semester 2: B15 capstone + dissertation work
 
-**Benefits:**
+Benefits:
 - Better understanding through practical implementations
 - Higher grades with pre-assignment practice
 - Time savings with reference implementations
@@ -648,7 +749,7 @@ This repository is specifically designed to help MAI students succeed. As a fell
 - Career-ready portfolio projects
 - Research foundation for dissertations
 
-**Not a UoA MAI student?** Content is valuable for any AI/ML program.
+Not a UoA MAI student? Content is valuable for any AI/ML program.
 
 ---
 
@@ -687,18 +788,18 @@ All notebooks are designed to run in Google Colab and include Colab badges for e
 
 ## Academic Integrity
 
-**This repository is a learning resource, not a solution manual.**
+This repository is a learning resource, not a solution manual.
 
 ### Using Responsibly
 
-**✅ Appropriate Use:**
+Appropriate Use:
 - Learning concepts and understanding implementations
 - Preparing for lectures and reinforcing material
 - Practicing before exams
 - Using as inspiration for original projects
 - Understanding different approaches
 
-**❌ Inappropriate Use:**
+Inappropriate Use:
 - Copying code for assignments without understanding
 - Submitting repository code as your own work
 - Using during exams or closed-book assessments
@@ -706,30 +807,30 @@ All notebooks are designed to run in Google Colab and include Colab badges for e
 
 ### Guidelines
 
-1. **Learn First, Code Second**
+1. Learn First, Code Second
    - Understand concepts in notebooks
    - Close repository before starting assignments
    - Implement your own solution from scratch
    - Only refer back if stuck on specific concepts
 
-2. **Cite Appropriately**
+2. Cite Appropriately
    - If using ideas from this repository, cite it properly
    - Follow your institution's citation guidelines
 
-3. **Check Your Institution's Policies**
+3. Check Your Institution's Policies
    - Understand what resources you're allowed to use
    - Know your institution's collaboration policies
    - When in doubt, ask your instructor first
 
 ### For UoA MAI Students
 
-**⚠️ IMPORTANT:** This is a personal project by a fellow MAI student, NOT official university material. You are responsible for following the [University of Auckland Academic Integrity Policy](https://www.auckland.ac.nz/en/students/academic-information/academic-integrity.html).
+IMPORTANT: This is a personal project by a fellow MAI student, NOT official university material. You are responsible for following the [University of Auckland Academic Integrity Policy](https://www.auckland.ac.nz/en/students/academic-information/academic-integrity.html).
 
 Your assignments test YOUR understanding. Use this to learn concepts, not find answers. Submitting code from this repository as your own work is plagiarism.
 
 Academic misconduct has serious consequences: failing grades, academic probation, permanent transcript records, potential expulsion.
 
-**[Full Academic Integrity Policy](./ACADEMIC_INTEGRITY.md)**
+[Full Academic Integrity Policy](./ACADEMIC_INTEGRITY.md)
 
 ---
 
@@ -794,18 +895,18 @@ Contributions welcome! To contribute:
 
 ## Community & Support
 
-**Get Help:**
+Get Help:
 - Found a bug? [Open an issue](https://github.com/nexageapps/AI/issues)
 - Have questions? Connect on [LinkedIn](https://www.linkedin.com/in/karthik-arjun-a5b4a258/)
 - Want to discuss? [Start a discussion](https://github.com/nexageapps/AI/discussions)
 
-**Contribute:**
+Contribute:
 - Submit pull requests
 - Improve documentation
 - Add visualizations
 - Share your projects
 
-**Share:**
+Share:
 - Star the repo to stay updated
 - Share on LinkedIn and tag me
 - Tell your classmates
@@ -860,6 +961,10 @@ You are free to use, modify, and distribute the code for personal or commercial 
 ## Learning Progress Tracker
 
 Track your learning journey by marking completed lessons and recording dates. This helps you monitor progress and identify areas for review.
+
+For detailed guidance on using the progress tracker effectively, see the [Progress Tracker Guide](./PROGRESS_TRACKER_GUIDE.md).
+
+For exam preparation strategies and study tips, see the [Exam Preparation Guide](./EXAM_PREPARATION_GUIDE.md).
 
 ### Basic Level Progress
 

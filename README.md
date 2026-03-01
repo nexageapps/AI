@@ -801,9 +801,13 @@ This repository is designed to help you **learn and understand** AI/ML concepts,
 
 ### For University of Auckland MAI Students
 
-Follow the [University of Auckland Academic Integrity Policy](https://www.auckland.ac.nz/en/students/academic-information/academic-integrity.html). Your assignments are designed to test YOUR understanding. Use this repository to learn concepts, not to find answers.
+**⚠️ IMPORTANT:** This is a **personal project by a fellow MAI student**, NOT official university material. It's not created by faculty, not endorsed by the university, and not part of any official curriculum. Think of it as a classmate's study notes being shared publicly.
 
-**Academic misconduct has serious consequences:**
+**You are responsible for following the [University of Auckland Academic Integrity Policy](https://www.auckland.ac.nz/en/students/academic-information/academic-integrity.html).**
+
+Your assignments test YOUR understanding. Use this repository to learn concepts, not to find answers. Submitting code from this repository as your own work is plagiarism.
+
+**Academic misconduct at UoA has serious consequences:**
 - Failing the assignment or course
 - Academic probation or suspension
 - Permanent record on your transcript

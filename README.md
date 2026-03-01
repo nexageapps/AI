@@ -279,31 +279,33 @@ AI/
 
 Foundation lessons covering fundamental AI/ML concepts. **[View all Basic lessons →](./Basic/)**
 
-**Foundation (B01-B03)** - Start Here
+#### Foundation (B01-B03) - Start Here
 1. **B01 - Arithmetic** - TensorFlow basics and tensor operations
 2. **B02 - Linear Regression** - Linear regression fundamentals  
 3. **B03 - Binary Classification** - Two-class classification problems
 
-**Core Machine Learning (B04-B07)** - Essential Skills
+#### Core Machine Learning (B04-B07) - Essential Skills
 4. **B04 - Multi-Class Classification** - Multiple category classification
 5. **B05 - Neural Network Fundamentals** - Deep dive into NN architecture
 6. **B06 - Data Preprocessing and Feature Engineering** - Data preparation techniques
 7. **B07 - Model Evaluation and Performance Metrics** - Measuring model performance
 
-**Deep Learning (B09-B11)** - Advanced Neural Networks
+#### Deep Learning (B09-B11) - Advanced Neural Networks
 9. **B09 - Convolutional Neural Networks** - CNNs for image processing
 10. **B10 - Recurrent Neural Networks** - RNNs for sequential data
 11. **B11 - Attention and Transformers** - Modern attention mechanisms
 
-**NLP Specialization (B12-B13)** - Build Language Models
+#### NLP Specialization (B12-B13) - Build Language Models
 12. **B12 - Byte Pair Encoding (BPE)** - Tokenization for NLP
 13. **B13 - Building a Mini Language Model** - Create your own GPT-style model
 
-**Practice & Portfolio (B14-B15)** - Apply Your Skills
+#### Practice & Portfolio (B14-B15) - Apply Your Skills
 14. **B14 - Practical Projects and Assignments** - 10 hands-on assignments to reinforce learning
 15. **B15 - Capstone Projects and Portfolio Building** - 5 portfolio-worthy projects
 
 **Total Learning Time:** ~40-60 hours for complete mastery
+
+---
 
 ### Intermediate Level (Coming Soon)
 

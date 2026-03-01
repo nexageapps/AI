@@ -4,71 +4,65 @@
 
 **Open-source AI education built by a Master's in AI student, for everyone.**
 
-*Basic → Expert. Zero → Language Models. 60+ lessons. 100% hands-on. Actually works.*
+*Basic → Expert. Zero → Language Models. 60+ lessons. 100% hands-on.*
 
-[Documentation](./MAI_STUDENT_GUIDE.md) • [Quick Start](#getting-started) • [LinkedIn](https://www.linkedin.com/in/karthik-arjun-a5b4a258/)
+[MAI Student Guide](./MAI_STUDENT_GUIDE.md) • [Quick Start](#getting-started) • [LinkedIn](https://www.linkedin.com/in/karthik-arjun-a5b4a258/)
 
-[![language: Python](https://img.shields.io/badge/language-Python-orange.svg)](https://www.python.org/)
-[![license: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
-[![version: 1.0.0](https://img.shields.io/badge/version-1.0.0-green.svg)](https://github.com/nexageapps/AI)
-[![tests: 15 lessons passing](https://img.shields.io/badge/tests-15%20lessons%20passing-brightgreen.svg)](./Basic/)
-[![Sponsored by: nexageapps](https://img.shields.io/badge/Sponsored%20by-nexageapps-blue.svg)](https://nexageapps.com)
-[![repo: Buy me a book](https://img.shields.io/badge/repo-Buy%20me%20a%20book-yellow.svg)](https://buymeacoffee.com/fcc4sbsx5f6)
+[![Python](https://img.shields.io/badge/Python-3.8+-orange.svg)](https://www.python.org/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](./LICENSE)
+[![Lessons](https://img.shields.io/badge/Lessons-60+-brightgreen.svg)](./Basic/)
+[![Sponsored by nexageapps](https://img.shields.io/badge/Sponsored%20by-nexageapps-blue.svg)](https://nexageapps.com)
 
 </div>
 
 ---
 
-**DISCLAIMER:** This is an independent student project and is not officially affiliated with, endorsed by, or sponsored by the University of Auckland. This repository is created by a current MAI student to share personal learning materials with fellow students. Use of the University of Auckland name is solely to provide context about the author's academic program and to help students align their self-study with their coursework. All course references (COMPSCI 712, 713, 714, 761, 762, 703, COMPSYS 721) are provided for educational context only. The content, opinions, and implementations in this repository are solely those of the author and do not represent the views or policies of the University of Auckland.
+**DISCLAIMER:** This is an independent student project, not officially affiliated with the University of Auckland. Created by a current MAI student to share learning materials. Course references (COMPSCI 713, 714, 761, 762, 703, COMPSYS 721) are for educational context only. Content and opinions are solely those of the author.
 
 ---
 
 ## About This Project
 
-Hi! I'm a **Master of Artificial Intelligence (MAI)** student at the **University of Auckland**, and this is my open-source learning journey. I created this repository to document everything I'm learning and to help fellow students, researchers, and AI enthusiasts learn alongside me.
+I'm a Master of Artificial Intelligence (MAI) student at the University of Auckland, and this is my open-source learning journey. This repository documents everything I'm learning to help fellow students, researchers, and AI enthusiasts.
 
-**Why this repository exists:**
-- Learn AI concepts from scratch with a fellow student's perspective
-- Build a community of learners who support each other
-- Share practical implementations, not just theory
-- Make quality AI education accessible to everyone, everywhere
-- Learn by doing - every concept comes with runnable code
-- Complement your university coursework with hands-on practice
+**Why this exists:**
+- Student perspective on AI concepts from scratch
+- Practical implementations, not just theory
+- Quality AI education accessible to everyone
+- Every concept comes with runnable code
+- Complements university coursework with hands-on practice
 
-**This is not just a tutorial - it's a learning companion.** Whether you're a master's student like me, a self-learner, or a professional looking to upskill, you're welcome to learn with me.
+**This is a learning companion.** Whether you're a master's student, self-learner, or professional upskilling, you're welcome here.
 
-### For MAI Students and AI Learners
+### For MAI Students
 
-**This repository will significantly help you succeed in your AI/ML journey!**
+Every lesson provides:
+- Practical implementations of lecture concepts
+- Hands-on practice before assignments and exams
+- Reference code for projects and dissertations
+- Portfolio projects to showcase your skills
 
-Every lesson is carefully designed to provide:
-- **Practical implementations** of concepts taught in lectures
-- **Hands-on practice** before assignments and exams
-- **Reference code** for your projects and dissertation
-- **Portfolio projects** to showcase your skills to employers
-
-Check out the comprehensive **[MAI Student Guide](./MAI_STUDENT_GUIDE.md)** for:
-- Direct mapping to University of Auckland courses (COMPSCI 713, 714, 761, 762, 703, COMPSYS 721)
-- Week-by-week study strategies for each semester
-- Assignment preparation tips and templates
-- Research project ideas aligned with your dissertation
+**[MAI Student Guide](./MAI_STUDENT_GUIDE.md)** includes:
+- Course mapping (COMPSCI 713, 714, 761, 762, 703, COMPSYS 721)
+- Week-by-week study strategies
+- Assignment preparation tips
+- Research project ideas
 - Exam preparation strategies
-- Success stories from fellow MAI students
 
-**How this helps University of Auckland MAI students:**
-- **Before lectures**: Build intuition with practical examples
-- **During semester**: Reinforce concepts with hands-on coding
-- **For assignments**: Reference implementations and patterns
-- **For exams**: Review and practice all concepts
-- **For dissertation**: Capstone projects as starting points
+**How this helps:**
+- Before lectures: Build intuition with examples
+- During semester: Reinforce concepts with code
+- For assignments: Reference implementations
+- For exams: Review all concepts
+- For dissertation: Capstone project starting points
 
-**Not a University of Auckland student?** The content is still valuable for any AI/ML learner at any university or self-study program!
+**Not a UoA student?** Content is valuable for any AI/ML learner.
 
 ## Mission
 
-This repository provides a **structured, hands-on learning path** to deeply understand Artificial Intelligence concepts - from basic arithmetic operations to building complete language models. Each lesson builds progressively on previous concepts with clear explanations, visualizations, and practical implementations that you can run immediately.
+Provide a structured, hands-on learning path from basic arithmetic to complete language models. Each lesson builds progressively with clear explanations, visualizations, and runnable implementations.
 
-**Specifically designed to help Master of Artificial Intelligence (MAI) students at the University of Auckland** succeed in their coursework by providing practical implementations that complement theoretical lectures. The content directly aligns with core University of Auckland MAI courses including COMPSCI 713, 714, 761, 762, 703, and COMPSYS 721.
+Designed to help MAI students at the University of Auckland succeed by complementing theoretical lectures with practical code. Content aligns with core courses: COMPSCI 713, 714, 761, 762, 703, and COMPSYS 721.
 
 ## Table of Contents
 
@@ -86,21 +80,19 @@ This repository provides a **structured, hands-on learning path** to deeply unde
 - [Author](#author)
 - [License](#license)
 
-## What Makes This Different?
+## What Makes This Different
 
-**Key Features:**
-
-- **Student Perspective** - Written by someone currently learning, not just teaching
-- **Builds Progressively** - From fundamentals to advanced concepts, no gaps
-- **100% Hands-On** - Every concept comes with runnable code
-- **Visual Learning** - Comprehensive visualizations for complex concepts
-- **Real-World Focus** - Practical applications, not just toy examples
-- **Academic Rigor** - Meets top university program standards
-- **Completely Free** - Quality education shouldn't have a price tag
-- **Active Development** - Regular updates as I learn new concepts
+- Student perspective: Written by someone currently learning
+- Progressive structure: From fundamentals to advanced, no gaps
+- 100% hands-on: Every concept with runnable code
+- Visual learning: Comprehensive visualizations
+- Real-world focus: Practical applications, not toy examples
+- Academic rigor: Meets top university standards
+- Completely free: Quality education for everyone
+- Active development: Regular updates
 
 **What You'll Build:**
-Linear regression models • Binary and multi-class classifiers • Deep neural networks • CNNs for image recognition • RNNs and LSTMs for sequential data • Transformer models with attention • Your own tokenizer using BPE • A mini GPT-style language model • Portfolio-worthy capstone projects
+Linear regression • Binary/multi-class classifiers • Deep neural networks • CNNs for images • RNNs/LSTMs for sequences • Transformers with attention • BPE tokenizer • Mini GPT-style language model • Portfolio capstone projects
 
 ## Learning Path Diagram
 
@@ -371,164 +363,142 @@ The diagram flows from top to bottom, organized into clear stages. Each stage bu
 
 ## Repository Structure
 
-This repository is organized into four progressive levels, with comprehensive roadmaps for all levels:
+Progressive learning path organized into four levels:
 
 ```
 AI/
-├── Basic/              # [COMPLETE] 15 Lessons (B01-B15)
-├── Intermediate/       # [DETAILED] 15 Lessons (I01-I15)
-├── Advanced/           # [DETAILED] 15 Lessons (A01-A15)
-├── Expert/             # [DETAILED] 15 Lessons (E01-E15)
-├── MAI_STUDENT_GUIDE.md # Guide for University of Auckland MAI Students
+├── Basic/              # 15 Lessons (B01-B15) - COMPLETE
+├── Intermediate/       # 15 Lessons (I01-I15) - Detailed roadmap
+├── Advanced/           # 15 Lessons (A01-A15) - Detailed roadmap
+├── Expert/             # 15 Lessons (E01-E15) - Detailed roadmap
+└── MAI_STUDENT_GUIDE.md # Guide for UoA MAI Students
 ```
 
-### Basic Level (Available Now - 15 Lessons)
+### Basic Level (15 Lessons - Available Now)
 
 Foundation lessons covering fundamental AI/ML concepts. **[View all Basic lessons →](./Basic/)**
 
-#### Foundation (B01-B03) - Start Here
-1. **B01 - Arithmetic** - TensorFlow basics and tensor operations
-2. **B02 - Linear Regression** - Linear regression fundamentals  
-3. **B03 - Binary Classification** - Two-class classification problems
+**Foundation (B01-B03)** - Start Here
+1. B01 - Arithmetic: TensorFlow basics and tensor operations
+2. B02 - Linear Regression: Linear regression fundamentals  
+3. B03 - Binary Classification: Two-class classification problems
 
-#### Core Machine Learning (B04-B07) - Essential Skills
-4. **B04 - Multi-Class Classification** - Multiple category classification
-5. **B05 - Neural Network Fundamentals** - Deep dive into NN architecture
-6. **B06 - Data Preprocessing and Feature Engineering** - Data preparation techniques
-7. **B07 - Model Evaluation and Performance Metrics** - Measuring model performance
+**Core Machine Learning (B04-B08)** - Essential Skills
+4. B04 - Multi-Class Classification: Multiple category classification
+5. B05 - Neural Network Fundamentals: Deep dive into NN architecture
+6. B06 - Data Preprocessing: Data preparation techniques
+7. B07 - Model Evaluation: Measuring model performance
+8. B08 - Regularization: Preventing overfitting
 
-#### Deep Learning (B09-B11) - Advanced Neural Networks
-9. **B09 - Convolutional Neural Networks** - CNNs for image processing
-10. **B10 - Recurrent Neural Networks** - RNNs for sequential data
-11. **B11 - Attention and Transformers** - Modern attention mechanisms
+**Deep Learning (B09-B11)** - Advanced Neural Networks
+9. B09 - CNNs: Convolutional networks for image processing
+10. B10 - RNNs: Recurrent networks for sequential data
+11. B11 - Attention & Transformers: Modern attention mechanisms
 
-#### NLP Specialization (B12-B13) - Build Language Models
-12. **B12 - Byte Pair Encoding (BPE)** - Tokenization for NLP
-13. **B13 - Building a Mini Language Model** - Create your own GPT-style model
+**NLP Specialization (B12-B13)** - Build Language Models
+12. B12 - Byte Pair Encoding: Tokenization for NLP
+13. B13 - Mini Language Model: Create your own GPT-style model
 
-#### Practice & Portfolio (B14-B15) - Apply Your Skills
-14. **B14 - Practical Projects and Assignments** - 10 hands-on assignments to reinforce learning
-15. **B15 - Capstone Projects and Portfolio Building** - 5 portfolio-worthy projects
+**Practice & Portfolio (B14-B15)** - Apply Your Skills
+14. B14 - Practical Projects: 10 hands-on assignments
+15. B15 - Capstone Projects: 5 portfolio-worthy projects
 
-**Total Learning Time:** ~40-60 hours for complete mastery
-
----
-
-### Intermediate Level (Detailed - 15 Lessons)
-
-Advanced topics building on basic concepts. **[View complete Intermediate syllabus →](./Intermediate/)**
-
-#### Advanced Optimization & Training (I01-I03)
-1. **I01 - Advanced Optimization Algorithms** - Adam, RMSprop, AdaGrad, learning rate scheduling
-2. **I02 - Regularization Techniques** - L1/L2, dropout variants, early stopping, data augmentation
-3. **I03 - Batch and Layer Normalization** - Batch norm, layer norm, group norm, instance norm
-
-#### Advanced Computer Vision (I04-I06)
-4. **I04 - Advanced CNN Architectures** - ResNet, VGG, Inception, EfficientNet architecture design
-5. **I05 - Transfer Learning and Fine-tuning** - Pre-trained models, domain adaptation, few-shot learning
-6. **I06 - Object Detection and Segmentation** - YOLO, R-CNN family, U-Net, Mask R-CNN
-
-#### Advanced NLP & Sequences (I07-I09)
-7. **I07 - Advanced RNN Architectures** - Bidirectional RNNs, stacked LSTMs, GRU vs LSTM
-8. **I08 - Encoder-Decoder and Seq2Seq Models** - Sequence-to-sequence, attention in seq2seq
-9. **I09 - Advanced Transformer Architectures** - BERT, GPT variants, T5, BART, positional encoding
-
-#### Production ML & Advanced Topics (I10-I15)
-10. **I10 - Hyperparameter Tuning and AutoML** - Grid search, Bayesian optimization, NAS, Optuna
-11. **I11 - Model Compression and Optimization** - Pruning, quantization, knowledge distillation, mobile deployment
-12. **I12 - Generative Models** - VAEs, GANs, diffusion models, applications
-13. **I13 - Multi-Task and Meta-Learning** - Multi-task frameworks, MAML, few-shot and zero-shot learning
-14. **I14 - Explainable AI and Interpretability** - SHAP, LIME, attention visualization, fairness detection
-15. **I15 - MLOps and Production Deployment** - Model versioning, CI/CD, monitoring, drift detection, serving
-
-**Total Learning Time:** ~60-80 hours for complete mastery
-
-**Key Features:**
-- Aligned with University of Auckland MAI curriculum
-- Four specialized tracks: Optimization, Computer Vision, NLP, Production ML
-- Multiple learning paths for different specializations
-- Production-ready implementations
-- Industry best practices
+**Learning Time:** ~40-60 hours for complete mastery
 
 ---
 
-### Advanced Level (Detailed - 15 Lessons)
+### Intermediate Level (15 Lessons - Detailed Roadmap)
 
-Production-ready AI systems. **[View complete Advanced syllabus →](./Advanced/)**
+Advanced topics building on basic concepts. **[View complete syllabus →](./Intermediate/)**
 
-#### Large Language Models (A01-A03)
-1. **A01 - Fine-tuning Large Language Models** - LoRA, QLoRA, PEFT, instruction tuning
-2. **A02 - Prompt Engineering and In-Context Learning** - Chain-of-Thought, ReAct, LangChain
-3. **A03 - Retrieval-Augmented Generation (RAG)** - Vector databases, embeddings, hybrid search
+**Advanced Optimization (I01-I03)**
+1. I01 - Advanced Optimization: Adam, RMSprop, learning rate scheduling
+2. I02 - Regularization: L1/L2, dropout, data augmentation
+3. I03 - Normalization: Batch norm, layer norm, group norm
 
-#### Multi-Modal AI (A04-A06)
-4. **A04 - Vision-Language Models** - CLIP, BLIP, image captioning, text-to-image
-5. **A05 - Audio and Speech Processing** - Whisper, TTS, audio classification
-6. **A06 - Multi-Modal Fusion and Integration** - Fusion strategies, unified systems
+**Advanced Computer Vision (I04-I06)**
+4. I04 - Advanced CNNs: ResNet, VGG, Inception, EfficientNet
+5. I05 - Transfer Learning: Pre-trained models, domain adaptation
+6. I06 - Detection & Segmentation: YOLO, R-CNN, U-Net, Mask R-CNN
 
-#### Distributed & Scalable Training (A07-A09)
-7. **A07 - Distributed Training Strategies** - Data/model parallelism, DeepSpeed, Megatron
-8. **A08 - Mixed Precision and Optimization** - FP16, BF16, gradient accumulation
-9. **A09 - Model Serving and Inference Optimization** - TensorRT, ONNX, batching strategies
+**Advanced NLP (I07-I09)**
+7. I07 - Advanced RNNs: Bidirectional, stacked LSTMs, GRU vs LSTM
+8. I08 - Seq2Seq Models: Encoder-decoder, attention in seq2seq
+9. I09 - Advanced Transformers: BERT, GPT variants, T5, BART
 
-#### Production MLOps (A10-A15)
-10. **A10 - ML Pipeline Architecture** - Feature stores, model registry, orchestration
-11. **A11 - Containerization and Deployment** - Docker, Kubernetes, cloud deployment
-12. **A12 - Monitoring and Observability** - Performance monitoring, drift detection, A/B testing
-13. **A13 - CI/CD for Machine Learning** - Automated testing, continuous training, GitOps
-14. **A14 - Responsible AI and Governance** - Bias mitigation, privacy, compliance
-15. **A15 - Production Case Studies and Capstone** - Real-world architectures, scaling
+**Production ML (I10-I15)**
+10. I10 - Hyperparameter Tuning: Grid search, Bayesian optimization, AutoML
+11. I11 - Model Compression: Pruning, quantization, knowledge distillation
+12. I12 - Generative Models: VAEs, GANs, diffusion models
+13. I13 - Multi-Task Learning: Multi-task frameworks, MAML, few-shot
+14. I14 - Explainable AI: SHAP, LIME, attention visualization, fairness
+15. I15 - MLOps: Model versioning, CI/CD, monitoring, drift detection
 
-**Total Learning Time:** ~80-100 hours for complete mastery
-
-**Key Features:**
-- Industry-standard MLOps practices
-- Cloud deployment strategies
-- Production monitoring and maintenance
-- Responsible AI implementation
-
-**[View Advanced roadmap →](./Advanced/)**
+**Learning Time:** ~60-80 hours
 
 ---
 
-### Expert Level (Detailed - 15 Lessons)
+### Advanced Level (15 Lessons - Detailed Roadmap)
 
-Research-oriented topics and cutting-edge techniques. **[View complete Expert syllabus →](./Expert/)**
+Production-ready AI systems. **[View complete syllabus →](./Advanced/)**
 
-#### Research Foundations (E01-E03)
-1. **E01 - Reading and Implementing Research Papers** - Paper analysis, reproduction, benchmarking
-2. **E02 - Experimental Design and Ablation Studies** - Rigorous experiments, statistical testing
-3. **E03 - Writing and Publishing Research** - Paper structure, peer review, publishing
+**Large Language Models (A01-A03)**
+1. A01 - Fine-tuning LLMs: LoRA, QLoRA, PEFT, instruction tuning
+2. A02 - Prompt Engineering: Chain-of-Thought, ReAct, LangChain
+3. A03 - RAG Systems: Vector databases, embeddings, hybrid search
 
-#### Novel Architectures (E04-E06)
-4. **E04 - Neural Architecture Search (NAS)** - DARTS, ENAS, hardware-aware NAS
-5. **E05 - Custom Layer and Operation Design** - Novel layers, CUDA kernels, gradients
-6. **E06 - Attention Mechanism Innovations** - Sparse attention, Flash Attention, efficiency
+**Multi-Modal AI (A04-A06)**
+4. A04 - Vision-Language Models: CLIP, BLIP, image captioning
+5. A05 - Audio & Speech: Whisper, TTS, audio classification
+6. A06 - Multi-Modal Fusion: Fusion strategies, unified systems
 
-#### Advanced Learning Paradigms (E07-E09)
-7. **E07 - Meta-Learning and Few-Shot Learning** - MAML, Reptile, Prototypical Networks
-8. **E08 - Continual and Lifelong Learning** - Catastrophic forgetting, EWC, progressive networks
-9. **E09 - Self-Supervised and Contrastive Learning** - SimCLR, MoCo, BYOL, contrastive losses
+**Distributed Training (A07-A09)**
+7. A07 - Distributed Training: Data/model parallelism, DeepSpeed
+8. A08 - Mixed Precision: FP16, BF16, gradient accumulation
+9. A09 - Inference Optimization: TensorRT, ONNX, batching
 
-#### Reinforcement Learning & Advanced Topics (E10-E12)
-10. **E10 - Deep Reinforcement Learning** - DQN, A3C, PPO, SAC, multi-agent RL
-11. **E11 - Reinforcement Learning from Human Feedback (RLHF)** - Reward modeling, alignment
-12. **E12 - Federated and Privacy-Preserving Learning** - Federated learning, differential privacy
+**Production MLOps (A10-A15)**
+10. A10 - ML Pipelines: Feature stores, model registry, orchestration
+11. A11 - Deployment: Docker, Kubernetes, cloud deployment
+12. A12 - Monitoring: Performance monitoring, drift detection, A/B testing
+13. A13 - CI/CD for ML: Automated testing, continuous training
+14. A14 - Responsible AI: Bias mitigation, privacy, compliance
+15. A15 - Production Capstone: Real-world architectures, scaling
 
-#### Cutting-Edge Research (E13-E15)
-13. **E13 - Multimodal Foundation Models** - Unified models, cross-modal alignment, scaling laws
-14. **E14 - Efficient and Green AI** - Carbon footprint, lottery tickets, sustainable AI
-15. **E15 - Research Project and Contribution** - Original research, open-source, publishing
+**Learning Time:** ~80-100 hours
 
-**Total Learning Time:** ~100-120 hours for complete mastery
+---
 
-**Key Features:**
-- Research methodology and paper writing
-- Novel architecture design
-- State-of-the-art techniques
-- Original research contributions
+### Expert Level (15 Lessons - Detailed Roadmap)
 
-**[View Expert roadmap →](./Expert/)**
+Research-oriented topics and cutting-edge techniques. **[View complete syllabus →](./Expert/)**
+
+**Research Foundations (E01-E03)**
+1. E01 - Reading Papers: Paper analysis, reproduction, benchmarking
+2. E02 - Experimental Design: Rigorous experiments, statistical testing
+3. E03 - Writing & Publishing: Paper structure, peer review
+
+**Novel Architectures (E04-E06)**
+4. E04 - Neural Architecture Search: DARTS, ENAS, hardware-aware NAS
+5. E05 - Custom Layers: Novel layers, CUDA kernels, gradients
+6. E06 - Attention Innovations: Sparse attention, Flash Attention
+
+**Advanced Learning (E07-E09)**
+7. E07 - Meta-Learning: MAML, Reptile, Prototypical Networks
+8. E08 - Continual Learning: Catastrophic forgetting, EWC
+9. E09 - Self-Supervised Learning: SimCLR, MoCo, BYOL
+
+**RL & Advanced Topics (E10-E12)**
+10. E10 - Deep RL: DQN, A3C, PPO, SAC, multi-agent RL
+11. E11 - RLHF: Reward modeling, alignment, safety
+12. E12 - Federated Learning: Privacy-preserving, differential privacy
+
+**Cutting-Edge Research (E13-E15)**
+13. E13 - Multimodal Foundation Models: Unified models, cross-modal alignment
+14. E14 - Efficient AI: Carbon footprint, lottery tickets, sustainable AI
+15. E15 - Research Project: Original research, open-source contribution
+
+**Learning Time:** ~100-120 hours
 
 ## Getting Started
 

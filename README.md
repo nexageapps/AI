@@ -1,8 +1,8 @@
 <div align="center">
 
-# AI Learning Path: From Hello World to Hello GPT
+# AI Learning Path - From Basics to Building Language Models
 
-**The Complete Learning Journey**
+**A Comprehensive Open-Source Tutorial Series by a Master's Student, for Master's Students**
 
 *From zero to building your own language models. Open-source AI education built by a Master's student, for Master's students.*
 
@@ -14,29 +14,30 @@
 [![license: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![version: 1.0.0](https://img.shields.io/badge/version-1.0.0-green.svg)](https://github.com/nexageapps/AI)
 [![tests: 15 lessons passing](https://img.shields.io/badge/tests-15%20lessons%20passing-brightgreen.svg)](./Basic/)
+[![Sponsored by: nexageapps](https://img.shields.io/badge/Sponsored%20by-nexageapps-blue.svg)](https://nexageapps.com)
 [![repo: Buy me a coffee](https://img.shields.io/badge/repo-Buy%20me%20a%20coffee-yellow.svg)](https://buymeacoffee.com/fcc4sbsx5f6)
 
 </div>
 
 ---
 
-## v1.0 — First Release (March 2026)
-
-AI Learning Path is feature-complete but this is the first public release. You may encounter instability, rough edges, or breaking changes between minor versions. We ship fast and fix fast. Pin to a specific commit for production use until v1.0. [Report issues here](https://github.com/nexageapps/AI/issues).
+**DISCLAIMER:** This is an independent student project and is not officially affiliated with, endorsed by, or sponsored by the University of Auckland. This repository is created by a current MAI student to share personal learning materials with fellow students. Use of the University of Auckland name is solely to provide context about the author's academic program and to help students align their self-study with their coursework. All course references (COMPSCI 712, 713, 714, 761, 762, 703, COMPSYS 721) are provided for educational context only. The content, opinions, and implementations in this repository are solely those of the author and do not represent the views or policies of the University of Auckland.
 
 ---
 
 ## About This Project
 
-Open-source AI education built in Python. 137K LOC. 15 lessons. 1,767+ tests. Zero clippy warnings.
-
-**One path. Battle-tested. Concepts that actually work for you.**
-
 Hi! I'm a **Master of Artificial Intelligence (MAI)** student at the **University of Auckland**, and this is my open-source learning journey. I created this repository to document everything I'm learning and to help fellow students, researchers, and AI enthusiasts learn alongside me.
 
-**This is not just a tutorial - it's a learning companion.** Whether you're a master's student like me, a self-learner, or a professional looking to upskill, you're welcome to learn with me.
+**Why this repository exists:**
+- Learn AI concepts from scratch with a fellow student's perspective
+- Build a community of learners who support each other
+- Share practical implementations, not just theory
+- Make quality AI education accessible to everyone, everywhere
+- Learn by doing - every concept comes with runnable code
+- Complement your university coursework with hands-on practice
 
-**DISCLAIMER:** This is an independent student project and is not officially affiliated with the University of Auckland. Course references (COMPSCI 712, 713, 714, 761, 762, 703, COMPSYS 721) are provided for educational context only.
+**This is not just a tutorial - it's a learning companion.** Whether you're a master's student like me, a self-learner, or a professional looking to upskill, you're welcome to learn with me.
 
 ### For MAI Students and AI Learners
 

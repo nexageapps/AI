@@ -360,7 +360,7 @@ Happy Learning! You've got this!
 ## Version History
 
 - v2.0 (March 2026): Added progress trackers and exam prep sections
-- v1.0 (2024): Initial release with 15 Basic level lessons
+- v1.0 (2026): Initial release with 15 Basic level lessons
 
 ---
 

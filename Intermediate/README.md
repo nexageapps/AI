@@ -9,6 +9,8 @@
 
 This folder contains 15 comprehensive lessons covering intermediate AI/ML topics. Each lesson builds on the Basic level (B01-B15) and prepares you for Advanced topics.
 
+Designed for university students and AI learners worldwide. The author is currently pursuing a Master of Artificial Intelligence at the University of Auckland.
+
 ---
 
 ## Complete Lesson List
@@ -272,6 +274,7 @@ Found an error? Have a suggestion?
 ---
 
 **Author:** Karthik Arjun  
+**Currently:** Master of Artificial Intelligence Student at the University of Auckland  
 **LinkedIn:** [karthik-arjun-a5b4a258](https://www.linkedin.com/in/karthik-arjun-a5b4a258/)  
 **Hugging Face:** [nexageapps](https://huggingface.co/spaces/nexageapps)
 

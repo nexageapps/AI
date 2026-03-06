@@ -17,6 +17,32 @@ Designed for university students and AI learners worldwide. Created by a Master 
 
 ---
 
+## ⚠️ Important Disclaimer
+
+**Educational & Research Resource Notice:**
+This is an independent, open-source educational project created by a student for students and AI researchers worldwide. The content focuses on research methodologies and cutting-edge techniques but is NOT official curriculum material or research guidance from any institution.
+
+**Key Points:**
+- This is NOT official university material or research supervision
+- Content and opinions are solely those of the author
+- No affiliation with or endorsement by any institution
+- Requires completion of Basic (B01-B15), Intermediate (I01-I15), and Advanced (A01-A15) levels
+- Research examples are educational - always follow your institution's research ethics policies
+- Paper implementations are for learning - cite original authors when using ideas
+- Computational resources may be significant (use institutional or cloud resources)
+- Use responsibly and follow your institution's academic integrity and research policies
+- Always cite sources appropriately and follow publication ethics
+
+**Research Ethics:** When conducting research, follow ethical guidelines, obtain necessary approvals (IRB/ethics committees), respect intellectual property, cite all sources, and consider societal impact. These notebooks provide educational examples - actual research requires institutional oversight and ethical review.
+
+**Publication Notice:** If you use concepts or code from these notebooks in research publications, cite this repository and the original papers referenced within. Follow your target venue's citation guidelines.
+
+---
+
+> 💾 **Research-Optimized & Reproducible:** Notebooks emphasize reproducibility with fixed random seeds, version pinning, and detailed experimental setups. Examples demonstrate research best practices including ablation studies, statistical testing, and result visualization. Designed for high-performance computing environments with GPU/TPU support.
+
+---
+
 ## Table of Contents
 
 - [Complete Lesson List](#complete-lesson-list)

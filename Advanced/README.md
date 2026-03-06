@@ -17,6 +17,29 @@ Designed for university students and AI learners worldwide. Created by a Master 
 
 ---
 
+## ⚠️ Important Disclaimer
+
+**Educational Resource Notice:**
+This is an independent, open-source educational project created by a student for students and AI learners worldwide. The content focuses on production AI systems but is NOT official curriculum material or industry certification.
+
+**Key Points:**
+- This is NOT official university material or industry certification
+- Content and opinions are solely those of the author
+- No affiliation with or endorsement by any institution or company
+- Requires completion of Basic (B01-B15) and Intermediate (I01-I15) levels
+- Production examples are educational - always follow your organization's deployment policies
+- Cloud costs may apply when using external services (use free tiers when available)
+- Use responsibly and follow your institution's academic integrity policies
+- Always cite sources appropriately per your institution's guidelines
+
+**Production Responsibility:** When deploying AI systems, consider ethical implications, data privacy, security, and regulatory compliance. These notebooks provide educational examples - production deployments require additional considerations specific to your use case and jurisdiction.
+
+---
+
+> 💾 **Cache-Friendly & Production-Optimized:** Notebooks demonstrate efficient model loading, caching strategies, and production best practices. Examples use optimized inference techniques and demonstrate real-world deployment patterns. Compatible with cloud platforms (AWS, GCP, Azure) and local environments.
+
+---
+
 ## Table of Contents
 
 - [Complete Lesson List](#complete-lesson-list)

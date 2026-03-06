@@ -17,6 +17,28 @@ Designed for university students and AI learners worldwide. Created by a Master 
 
 ---
 
+## ⚠️ Important Disclaimer
+
+**Educational Resource Notice:**
+This is an independent, open-source educational project created by a student for students and AI learners worldwide. The content is designed to complement university coursework but is NOT official curriculum material.
+
+**Key Points:**
+- This is NOT official university material
+- Content and opinions are solely those of the author
+- No affiliation with or endorsement by any institution
+- Requires completion of Basic level (B01-B15) as prerequisite
+- Use responsibly and follow your institution's academic integrity policies
+- For academic assignments, understand concepts first, then implement independently
+- Always cite sources appropriately per your institution's guidelines
+
+**Academic Integrity Warning:** Using code from these notebooks for assignments without understanding constitutes plagiarism. These are learning resources, not solution manuals. See the main repository's [Academic Integrity Policy](../documentation/ACADEMIC_INTEGRITY.md) for detailed guidelines.
+
+---
+
+> 💾 **Cache-Friendly Design:** All notebooks are optimized for efficient execution with smart caching strategies. Pre-trained models are loaded efficiently, and training examples use reasonable dataset sizes. Works seamlessly in Google Colab with GPU acceleration or local environments.
+
+---
+
 ## Complete Lesson List
 
 ### Advanced Optimization & Training (I01-I03)

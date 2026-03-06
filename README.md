@@ -19,7 +19,24 @@ Basic to Expert. Zero to Language Models. 60+ lessons. 100% hands-on.
 
 ---
 
-DISCLAIMER: This is an independent student project created for all university students and AI learners worldwide. The author is currently pursuing a Master of Artificial Intelligence at the University of Auckland. Course references (COMPSCI 713, 714, 761, 762, 703, COMPSYS 721) are provided as examples of how this content can complement university coursework. Content and opinions are solely those of the author.
+## ⚠️ Important Disclaimer
+
+**Educational Resource Notice:**
+This is an independent, open-source educational project created by a student for students and AI learners worldwide. The author is currently pursuing a Master of Artificial Intelligence at the University of Auckland.
+
+**Key Points:**
+- This is NOT official university material or curriculum
+- Content and opinions are solely those of the author
+- Course references (COMPSCI 713, 714, 761, 762, 703, COMPSYS 721) are examples only
+- No affiliation with or endorsement by any institution
+- Use responsibly and follow your institution's academic integrity policies
+- For academic use, always cite sources and follow your university's guidelines
+
+**Academic Integrity:** This repository is a learning tool, not a solution manual. Submitting code from this repository as your own work without understanding or proper attribution constitutes plagiarism. See [Academic Integrity Policy](./documentation/ACADEMIC_INTEGRITY.md) for detailed guidelines.
+
+---
+
+> 💾 **Cache-Friendly Learning:** All notebooks are designed for efficient loading and execution. Content is optimized for both online (Colab) and offline use with minimal dependencies.
 
 ---
 

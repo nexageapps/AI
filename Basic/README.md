@@ -17,6 +17,27 @@ Designed for university students and AI learners worldwide. Created by a Master 
 
 ---
 
+## ⚠️ Important Disclaimer
+
+**Educational Resource Notice:**
+This is an independent, open-source educational project created by a student for students and AI learners worldwide. The content is designed to complement university coursework but is NOT official curriculum material.
+
+**Key Points:**
+- This is NOT official university material
+- Content and opinions are solely those of the author
+- No affiliation with or endorsement by any institution
+- Use responsibly and follow your institution's academic integrity policies
+- For academic assignments, understand concepts first, then implement independently
+- Always cite sources appropriately per your institution's guidelines
+
+**Academic Integrity Warning:** Using code from these notebooks for assignments without understanding constitutes plagiarism. These are learning resources, not solution manuals. See the main repository's [Academic Integrity Policy](../documentation/ACADEMIC_INTEGRITY.md) for detailed guidelines.
+
+---
+
+> 💾 **Cache-Friendly Design:** All notebooks are optimized for fast loading with minimal dependencies. Works seamlessly in Google Colab (recommended) or local Jupyter environments. No large dataset downloads required - all examples use built-in or generated data.
+
+---
+
 ## Table of Contents
 
 - [Complete Lesson List](#complete-lesson-list)

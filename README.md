@@ -17,13 +17,13 @@ Basic to Expert. Zero to Language Models. 60+ lessons. 100% hands-on.
 
 ---
 
-DISCLAIMER: This is an independent student project, not officially affiliated with the University of Auckland. Created by a current MAI student to share learning materials. Course references (COMPSCI 713, 714, 761, 762, 703, COMPSYS 721) are for educational context only. Content and opinions are solely those of the author.
+DISCLAIMER: This is an independent student project created for all university students and AI learners worldwide. The author is currently pursuing a Master of Artificial Intelligence at the University of Auckland. Course references (COMPSCI 713, 714, 761, 762, 703, COMPSYS 721) are provided as examples of how this content can complement university coursework. Content and opinions are solely those of the author.
 
 ---
 
 ## About This Project
 
-I'm a Master of Artificial Intelligence (MAI) student at the University of Auckland, and this is my open-source learning journey. This repository documents everything I'm learning to help fellow students, researchers, and AI enthusiasts.
+This is an open-source AI learning journey created for university students and AI learners worldwide. The author is currently pursuing a Master of Artificial Intelligence at the University of Auckland, and this repository documents the learning process to help students, researchers, and AI enthusiasts everywhere.
 
 **Why this exists:**
 - Student perspective on AI concepts from scratch
@@ -32,18 +32,18 @@ I'm a Master of Artificial Intelligence (MAI) student at the University of Auckl
 - Every concept comes with runnable code
 - Complements university coursework with hands-on practice
 
-**This is a learning companion.** Whether you're a master's student, self-learner, or professional upskilling, you're welcome here.
+**This is a learning companion for everyone.** Whether you're a university student, self-learner, or professional upskilling, you're welcome here.
 
-### For MAI Students
+### For University Students
 
 Every lesson provides:
-- Practical implementations of lecture concepts
+- Practical implementations of theoretical concepts
 - Hands-on practice before assignments and exams
-- Reference code for projects and dissertations
+- Reference code for projects and research
 - Portfolio projects to showcase your skills
 
-[Complete MAI Student Guide](./MAI_STUDENT_GUIDE.md) includes:
-- Course mapping (COMPSCI 713, 714, 761, 762, 703, COMPSYS 721)
+[Complete Student Guide](./documentation/MAI_STUDENT_GUIDE.md) includes:
+- Example course mappings (based on University of Auckland's MAI program)
 - Week-by-week study strategies
 - Assignment preparation tips
 - Research project ideas
@@ -54,15 +54,15 @@ How this helps:
 - During semester: Reinforce concepts with code
 - For assignments: Reference implementations
 - For exams: Review all concepts
-- For dissertation: Capstone project starting points
+- For research: Project starting points
 
-Not a UoA student? Content is valuable for any AI/ML learner.
+Whether you're at a university or learning independently, this content is designed to support your AI/ML journey.
 
 ## Mission
 
 Provide a structured, hands-on learning path from basic arithmetic to complete language models. Each lesson builds progressively with clear explanations, visualizations, and runnable implementations.
 
-Designed to help MAI students at the University of Auckland succeed by complementing theoretical lectures with practical code. Content aligns with core courses: COMPSCI 713, 714, 761, 762, 703, and COMPSYS 721.
+Designed to help university students and AI learners worldwide succeed by complementing theoretical knowledge with practical code. Content examples are aligned with courses from the University of Auckland's MAI program (COMPSCI 713, 714, 761, 762, 703, and COMPSYS 721) but are applicable to any AI/ML curriculum.
 
 ---
 
@@ -75,7 +75,7 @@ This repository includes comprehensive documentation to support your learning jo
 | Document | Purpose | Best For |
 |----------|---------|----------|
 | [README.md](./README.md) | Repository overview, learning paths, progress tracker | Getting started, understanding structure |
-| [MAI Student Guide](./documentation/MAI_STUDENT_GUIDE.md) | UoA course mappings, semester planning, study strategies | MAI students, course alignment |
+| [Student Guide](./documentation/MAI_STUDENT_GUIDE.md) | Course mapping examples, semester planning, study strategies | University students, course alignment |
 | [Exam Preparation Guide](./documentation/EXAM_PREPARATION_GUIDE.md) | Exam strategies, practice problems, study tips | Exam preparation, concept review |
 | [Progress Tracker Guide](./documentation/PROGRESS_TRACKER_GUIDE.md) | How to track learning, spaced repetition | Organizing study, tracking progress |
 | [Updates Summary](./documentation/UPDATES_SUMMARY.md) | Recent enhancements, new features | Understanding new additions |
@@ -92,7 +92,7 @@ This repository includes comprehensive documentation to support your learning jo
 ### Quick Navigation
 
 - New to this repository? Start with [Getting Started](#getting-started)
-- UoA MAI student? Read the [MAI Student Guide](./documentation/MAI_STUDENT_GUIDE.md)
+- University student? Read the [Student Guide](./documentation/MAI_STUDENT_GUIDE.md)
 - Preparing for exams? Check the [Exam Preparation Guide](./documentation/EXAM_PREPARATION_GUIDE.md)
 - Want to track progress? See [Progress Tracker Guide](./documentation/PROGRESS_TRACKER_GUIDE.md)
 - Looking for specific lessons? Jump to [Repository Structure](#repository-structure)
@@ -110,7 +110,7 @@ This repository includes comprehensive documentation to support your learning jo
 - [Usage & Learning Tips](#usage--learning-tips)
 - [Academic Integrity](#academic-integrity)
 - [Project Ideas for Students](#project-ideas-for-students)
-- [For MAI Students](#for-mai-students)
+- [For University Students](#for-university-students)
 - [Contributing](#contributing)
 - [Community & Support](#community--support)
 - [Learning Progress Tracker](#learning-progress-tracker)
@@ -631,20 +631,20 @@ Open the desired notebook and run cells sequentially. All notebooks are self-con
 - Detailed code comments
 - Practice exercises (in B14)
 
-## For MAI Students at University of Auckland
+## For University Students
 
-This repository is specifically designed to help MAI students succeed. As a fellow MAI student, I created this to address the exact challenges we face.
+This repository is designed to help university students worldwide succeed in their AI/ML studies. Created by a student currently pursuing a Master of Artificial Intelligence at the University of Auckland, this resource addresses common challenges faced by students everywhere.
 
-[Complete MAI Student Guide](./documentation/MAI_STUDENT_GUIDE.md) - Your essential companion
+[Complete Student Guide](./documentation/MAI_STUDENT_GUIDE.md) - Your essential companion
 
 What's Inside:
-- Direct course mappings (COMPSCI 713, 714, 761, 762, 703, COMPSYS 721)
+- Example course mappings (based on University of Auckland's MAI program)
 - Semester-by-semester study strategies
 - Assignment preparation tips
-- Research project ideas for dissertations
+- Research project ideas
 - Exam preparation strategies
 
-Quick Course Alignment:
+Example Course Alignment (University of Auckland MAI):
 
 | Course | Relevant Lessons | Focus Area |
 |--------|-----------------|------------|
@@ -655,21 +655,21 @@ Quick Course Alignment:
 | COMPSCI 703 | B11-B13, B15 | Generalising AI |
 | COMPSYS 721 | B09-B13 | Deep Learning |
 
-Study Schedule:
+Example Study Schedule:
 - Before Semester 1: Complete B01-B07 (foundations)
 - During Semester 1: B09-B13 + course assignments
 - Semester Break: B14 practice assignments
-- Semester 2: B15 capstone + dissertation work
+- Semester 2: B15 capstone + research work
 
 Benefits:
 - Better understanding through practical implementations
-- Higher grades with pre-assignment practice
+- Improved grades with pre-assignment practice
 - Time savings with reference implementations
 - Exam preparation with complete concept review
 - Career-ready portfolio projects
 - Research foundation for dissertations
 
-Not a UoA MAI student? Content is valuable for any AI/ML program.
+This content is valuable for any AI/ML program, regardless of your university.
 
 ---
 
@@ -743,13 +743,15 @@ Inappropriate Use:
    - Know your institution's collaboration policies
    - When in doubt, ask your instructor first
 
-### For UoA MAI Students
+### For University Students
 
-IMPORTANT: This is a personal project by a fellow MAI student, NOT official university material. You are responsible for following the [University of Auckland Academic Integrity Policy](https://www.auckland.ac.nz/en/students/academic-information/academic-integrity.html).
+IMPORTANT: This is a personal learning project, NOT official university material. You are responsible for following your institution's academic integrity policies.
 
 Your assignments test YOUR understanding. Use this to learn concepts, not find answers. Submitting code from this repository as your own work is plagiarism.
 
 Academic misconduct has serious consequences: failing grades, academic probation, permanent transcript records, potential expulsion.
+
+For University of Auckland students: Follow the [University of Auckland Academic Integrity Policy](https://www.auckland.ac.nz/en/students/academic-information/academic-integrity.html).
 
 [Full Academic Integrity Policy](./documentation/ACADEMIC_INTEGRITY.md)
 
@@ -841,13 +843,12 @@ Form study groups, help each other with code reviews, work on B15 projects toget
 ## Author
 
 **Karthik Arjun**
-- Master of Artificial Intelligence (MAI) Student
-- University of Auckland, New Zealand
+- Master of Artificial Intelligence (MAI) Student at the University of Auckland, New Zealand
 - [LinkedIn](https://www.linkedin.com/in/karthik-arjun-a5b4a258/) • [Hugging Face](https://huggingface.co/spaces/nexageapps) • [GitHub](https://github.com/nexageapps)
 
-*"Learning AI one notebook at a time, and sharing the journey with the world."*
+*"Learning AI one notebook at a time, and sharing the journey with students and learners worldwide."*
 
-**Note:** This is a personal learning project, not officially affiliated with the University of Auckland.
+**Note:** This is an independent learning project created for the global AI learning community, not officially affiliated with any institution.
 
 ---
 

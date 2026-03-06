@@ -248,18 +248,20 @@ Week 8-10:  A12 → A15 (Production)
 
 ---
 
-## UoA MAI Alignment
+## University Course Alignment
 
-This curriculum complements University of Auckland's Master of Artificial Intelligence program:
+This curriculum complements university AI/ML programs worldwide. Example mapping based on the University of Auckland's Master of Artificial Intelligence program (where the author is currently studying):
 
-### Course Mapping
+### Example Course Mapping (University of Auckland MAI)
 
-| MAI Course | Relevant Advanced Lessons | Focus |
+| Course | Relevant Advanced Lessons | Focus |
 |------------|--------------------------|-------|
 | COMPSCI 714 (Architecture) | A01-A06, A10 | System design & deployment |
 | COMPSCI 703 (General AI) | A01-A03, A04-A06 | Multi-modal & LLMs |
 | COMPSYS 721 (Deep Learning) | A07-A09 | Distributed training |
 | Dissertation | A15 (Capstone) | Production system |
+
+These mappings serve as examples - adapt them to your own university's curriculum.
 
 ### Learning Progression
 

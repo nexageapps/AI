@@ -82,7 +82,7 @@ This repository is designed as a **personal learning resource** to help students
    - If you use ideas from this repository, cite it
    - Example citation:
      ```
-     Karthik Arjun. (2024). AI & Machine Learning Roadmap. 
+     Karthik Arjun. (2026). AI & Machine Learning Roadmap. 
      GitHub repository. https://github.com/nexageapps/AI
      ```
    - Follow your institution's citation guidelines
@@ -424,5 +424,5 @@ When you graduate, you'll be proud of what you've accomplished through your own 
 
 ---
 
-*Last Updated: 2024*  
+*Last Updated: 2026*  
 *This policy may be updated periodically. Check back for the latest version.*

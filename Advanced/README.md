@@ -1,5 +1,7 @@
 # Advanced Level - Production AI Systems
 
+### Build for scale. Deploy for impact. Monitor for success.
+
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/)
 [![Hugging Face](https://img.shields.io/badge/🤗%20Hugging%20Face-nexageapps-yellow)](https://huggingface.co/spaces/nexageapps)
 [![Sponsored by nexageapps](https://img.shields.io/badge/Sponsored%20by-nexageapps-blue?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNMTIgMkw0IDdWMTdMMTIgMjJMMjAgMTdWN0wxMiAyWiIgZmlsbD0id2hpdGUiLz48L3N2Zz4=)](https://nexageapps.com)
@@ -7,7 +9,11 @@
 
 **Production-ready AI systems aligned with industry best practices and enterprise deployment**
 
+From LLMs to MLOps. From fine-tuning to monitoring. Build AI systems that scale in production.
+
 This folder contains 15 advanced-level lessons focused on building, deploying, and maintaining AI systems in production environments. Each lesson emphasizes real-world applications, scalability, and industry standards.
+
+Designed for university students and AI learners worldwide. Created by a Master of Artificial Intelligence student at the University of Auckland.
 
 ---
 
@@ -368,6 +374,7 @@ After completing Advanced level:
 ---
 
 **Author:** Karthik Arjun  
+**Currently:** Master of Artificial Intelligence Student at the University of Auckland  
 **LinkedIn:** [karthik-arjun-a5b4a258](https://www.linkedin.com/in/karthik-arjun-a5b4a258/)  
 **Hugging Face:** [nexageapps](https://huggingface.co/spaces/nexageapps)
 

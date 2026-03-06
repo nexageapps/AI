@@ -1,5 +1,7 @@
 # Expert Level - Research & Innovation
 
+### Read papers. Write code. Publish results. Advance the field.
+
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/)
 [![Hugging Face](https://img.shields.io/badge/🤗%20Hugging%20Face-nexageapps-yellow)](https://huggingface.co/spaces/nexageapps)
 [![Sponsored by nexageapps](https://img.shields.io/badge/Sponsored%20by-nexageapps-blue?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNMTIgMkw0IDdWMTdMMTIgMjJMMjAgMTdWN0wxMiAyWiIgZmlsbD0id2hpdGUiLz48L3N2Zz4=)](https://nexageapps.com)
@@ -7,7 +9,11 @@
 
 **Research-oriented topics and cutting-edge techniques for advancing the field of AI**
 
+From paper to code. From experiments to publications. Master research methods and create novel AI.
+
 This folder contains 15 expert-level lessons focused on research, innovation, and contributing to the state-of-the-art in AI. Each lesson emphasizes novel techniques, research paper implementation, and pushing the boundaries of what's possible.
+
+Designed for university students and AI learners worldwide. Created by a Master of Artificial Intelligence student at the University of Auckland.
 
 ---
 
@@ -404,6 +410,7 @@ After completing Expert level:
 ---
 
 **Author:** Karthik Arjun  
+**Currently:** Master of Artificial Intelligence Student at the University of Auckland  
 **LinkedIn:** [karthik-arjun-a5b4a258](https://www.linkedin.com/in/karthik-arjun-a5b4a258/)  
 **Hugging Face:** [nexageapps](https://huggingface.co/spaces/nexageapps)
 

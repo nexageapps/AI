@@ -1,5 +1,7 @@
 # Intermediate Level - Advanced AI/ML Techniques
 
+### Master the craft. Optimize the code. Deploy with confidence.
+
 [![language: Python](https://img.shields.io/badge/language-Python-orange.svg)](https://www.python.org/)
 [![license: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![Sponsored by: nexageapps](https://img.shields.io/badge/Sponsored%20by-nexageapps-blue.svg)](https://nexageapps.com)
@@ -7,9 +9,11 @@
 
 **Advanced techniques building on basic concepts**
 
+From ResNet to BERT. From optimization to deployment. Master the techniques that power modern AI.
+
 This folder contains 15 comprehensive lessons covering intermediate AI/ML topics. Each lesson builds on the Basic level (B01-B15) and prepares you for Advanced topics.
 
-Designed for university students and AI learners worldwide. The author is currently pursuing a Master of Artificial Intelligence at the University of Auckland.
+Designed for university students and AI learners worldwide. Created by a Master of Artificial Intelligence student at the University of Auckland.
 
 ---
 

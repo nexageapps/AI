@@ -2,11 +2,13 @@
 
 # AI & Machine Learning Roadmap: From Basics to LLMs
 
-Open-source AI education built by a Master's in AI student, for everyone.
+### Learn by doing. Build by understanding. Master by creating.
+
+**Open-source AI education built by a student, for students and learners worldwide.**
 
 Basic to Expert. Zero to Language Models. 60+ lessons. 100% hands-on.
 
-[MAI Student Guide](./documentation/MAI_STUDENT_GUIDE.md) • [Exam Prep Guide](./documentation/EXAM_PREPARATION_GUIDE.md) • [Quick Start](#getting-started) • [LinkedIn](https://www.linkedin.com/in/karthik-arjun-a5b4a258/)
+[Student Guide](./documentation/MAI_STUDENT_GUIDE.md) • [Exam Prep Guide](./documentation/EXAM_PREPARATION_GUIDE.md) • [Quick Start](#getting-started) • [LinkedIn](https://www.linkedin.com/in/karthik-arjun-a5b4a258/)
 
 [![Python](https://img.shields.io/badge/Python-3.8+-orange.svg)](https://www.python.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](./LICENSE)

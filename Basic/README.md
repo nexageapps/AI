@@ -1,5 +1,7 @@
 # Basic Level - Foundation in AI/ML
 
+### Start simple. Build strong. Code everything.
+
 [![language: Python](https://img.shields.io/badge/language-Python-orange.svg)](https://www.python.org/)
 [![license: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![Sponsored by: nexageapps](https://img.shields.io/badge/Sponsored%20by-nexageapps-blue.svg)](https://nexageapps.com)
@@ -7,9 +9,11 @@
 
 **Complete foundation in Artificial Intelligence and Machine Learning through 15 hands-on lessons**
 
+From tensors to transformers. From theory to code. Build your AI foundation with practical implementations.
+
 This folder contains all fundamental concepts you need to master before advancing to intermediate topics. Each lesson builds progressively on previous concepts with clear explanations, visualizations, and practical implementations.
 
-Designed for university students and AI learners worldwide. The author is currently pursuing a Master of Artificial Intelligence at the University of Auckland.
+Designed for university students and AI learners worldwide. Created by a Master of Artificial Intelligence student at the University of Auckland.
 
 ---
 

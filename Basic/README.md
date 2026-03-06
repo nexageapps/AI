@@ -9,6 +9,8 @@
 
 This folder contains all fundamental concepts you need to master before advancing to intermediate topics. Each lesson builds progressively on previous concepts with clear explanations, visualizations, and practical implementations.
 
+Designed for university students and AI learners worldwide. The author is currently pursuing a Master of Artificial Intelligence at the University of Auckland.
+
 ---
 
 ## Table of Contents
@@ -794,6 +796,7 @@ Found an error? Have a suggestion? Want to contribute?
 **Remember:** Learning AI/ML is a marathon, not a sprint. Take your time, understand deeply, and enjoy the journey!
 
 **Author:** Karthik Arjun  
+**Currently:** Master of Artificial Intelligence Student at the University of Auckland  
 **LinkedIn:** [karthik-arjun-a5b4a258](https://www.linkedin.com/in/karthik-arjun-a5b4a258/)  
 **Hugging Face:** [nexageapps](https://huggingface.co/spaces/nexageapps)
 

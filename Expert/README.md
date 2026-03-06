@@ -224,19 +224,21 @@ Week 11-12: E15 (Research project)
 
 ---
 
-## UoA MAI Alignment
+## University Research Alignment
 
-This curriculum is designed for University of Auckland MAI students pursuing research:
+This curriculum is designed for university students worldwide pursuing AI/ML research. Example mapping based on the University of Auckland's MAI program (where the author is currently studying):
 
-### Dissertation Alignment
+### Example Research/Dissertation Alignment
 
-| Dissertation Phase | Relevant Expert Lessons | Focus |
+| Research Phase | Relevant Expert Lessons | Focus |
 |-------------------|------------------------|-------|
 | Literature Review | E01 (Reading papers) | Understanding state-of-the-art |
 | Research Design | E02 (Experimental design) | Methodology |
 | Implementation | E04-E14 (Specialized topics) | Novel contributions |
-| Writing | E03 (Writing research) | Thesis writing |
+| Writing | E03 (Writing research) | Thesis/dissertation writing |
 | Publication | E15 (Research project) | Conference/journal papers |
+
+These mappings serve as examples - adapt them to your own university's research requirements.
 
 ### Research Progression
 

@@ -36,7 +36,7 @@ This is an independent, open-source educational project created by a student for
 
 ---
 
-> 💾 **Cache-Friendly Learning:** All notebooks are designed for efficient loading and execution. Content is optimized for both online (Colab) and offline use with minimal dependencies.
+> **Cache-Friendly Learning:** All notebooks are designed for efficient loading and execution. Content is optimized for both online (Colab) and offline use with minimal dependencies.
 
 ---
 

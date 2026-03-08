@@ -1,5 +1,6 @@
 <div align="center">
 
+<img src="./logo/logo_v1.png" width="220"/>
 # AI & Machine Learning Roadmap: From Basics to LLMs
 
 ### Learn by doing. Build by understanding. Master by creating.

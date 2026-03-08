@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="./logo/logo_v1.png" width="220" alt="AI & ML Roadmap Logo"/>
+<img src="./logo/logo_v1.png" width="220" alt="AI & ML Roadmap Logo" style="border-radius: 50%; box-shadow: 0 4px 8px rgba(0,0,0,0.1);"/>
 
 # AI & Machine Learning Roadmap: From Basics to LLMs
 

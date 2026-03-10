@@ -331,7 +331,7 @@ function App() {
       setScore(prev => prev - 1);  // Each move costs 1 point
       setMoves(prev => prev + 1);
     }
-  };
+  }, [gameStatus, agentPos, agentDir]);
 
   /**
    * Turn Left
@@ -339,14 +339,14 @@ function App() {
    * Direction cycle: right → up → left → down → right
    * Costs 1 point per turn
    */
-  const turnLeft = () => {
+  const turnLeft = useCallback(() => {
     if (gameStatus !== 'playing') return;
     const dirs = ['right', 'up', 'left', 'down'];
     const currentIndex = dirs.indexOf(agentDir);
     setAgentDir(dirs[(currentIndex + 1) % 4]);  // Rotate counter-clockwise
     setScore(prev => prev - 1);
     setMoves(prev => prev + 1);
-  };
+  }, [gameStatus, agentDir]);
 
   /**
    * Turn Right
@@ -354,14 +354,14 @@ function App() {
    * Direction cycle: right → down → left → up → right
    * Costs 1 point per turn
    */
-  const turnRight = () => {
+  const turnRight = useCallback(() => {
     if (gameStatus !== 'playing') return;
     const dirs = ['right', 'up', 'left', 'down'];
     const currentIndex = dirs.indexOf(agentDir);
     setAgentDir(dirs[(currentIndex + 3) % 4]);  // Rotate clockwise (same as -1 mod 4)
     setScore(prev => prev - 1);
     setMoves(prev => prev + 1);
-  };
+  }, [gameStatus, agentDir]);
 
   /**
    * Grab Gold
@@ -369,7 +369,7 @@ function App() {
    * - Rewards 1000 points
    * - Agent can only carry one gold at a time
    */
-  const grab = () => {
+  const grab = useCallback(() => {
     if (gameStatus !== 'playing') return;
     
     // Find current cell
@@ -383,7 +383,7 @@ function App() {
       setHasGold(true);
       setScore(prev => prev + 1000);  // Big reward for finding gold
     }
-  };
+  }, [gameStatus, worldState, agentPos, hasGold]);
 
   /**
    * Reset Game

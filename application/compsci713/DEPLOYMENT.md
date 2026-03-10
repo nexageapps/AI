@@ -4,7 +4,9 @@ This guide explains how to deploy React applications to GitHub Pages.
 
 ## Current Deployments
 
-- **Wumpus World**: https://nexageapps.github.io/AI/wumpus
+Live demos for Symbolic AI - Beginning AI concepts:
+
+- **Wumpus World** (Symbolic Logic): https://nexageapps.github.io/AI/wumpus
 
 ## How It Works
 

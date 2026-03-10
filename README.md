@@ -815,14 +815,16 @@ Create a **Smart Maze Solver** that uses search algorithms to find the shortest 
 
 **Course Focus:** Neural network architectures, deep learning design patterns, and system-level AI design.
 
-**📚 Supplementary Materials:**
-- [COMPSCI 714 Lecture 2 Supplement](./documentation/COMPSCI_714_LECTURE_2_SUPPLEMENT.md) - Comprehensive guide covering artificial neurons, perceptron theory, MLPs, DNNs, Universal Function Approximation Theorem, and gradient descent mathematics
+**📚 Complete Course Supplement:** [COMPSCI 714 Supplement](./documentation/COMPSCI_714_SUPPLEMENT.md) - Unified guide for all lectures
+
+**Lecture-Specific Supplements:**
+- [Lecture 2: Neural Networks](./documentation/COMPSCI_714_LECTURE_2_SUPPLEMENT.md) - Artificial neurons, perceptron, MLP, DNN, Universal Function Approximation
+- [Lecture 3: Training & Optimization](./documentation/COMPSCI_714_TRAINING_OPTIMIZATION_SUPPLEMENT.md) - Gradient descent, backpropagation, learning rates, batch variants
 
 | Lecture Topic | Practical Extension | Repository Resources |
 |---------------|-------------------|----------------------|
-| **Lecture 2: Neural Networks** | Implement artificial neurons, perceptrons, and MLPs from scratch. Visualize decision boundaries and solve the XOR problem. | **B05a** (Neural Networks Theory), B01-B02 (Fundamentals), B05 (Neural Networks), [Lecture 2 Supplement](./documentation/COMPSCI_714_LECTURE_2_SUPPLEMENT.md) |
-| **Artificial Neurons** | Implement a simple artificial neuron from scratch. Build a decision-based game agent using a single neuron to learn simple patterns. | B01-B02 (Arithmetic, Linear Regression), B05a (Theory), B14 (Projects) |
-| **Perceptrons & MLPs** | Create a multi-layer perceptron to solve XOR problem. Visualize decision boundaries as you train. | B05 (Neural Network Fundamentals), B05a (Theory), B14 (Projects) |
+| **Lecture 2: Neural Networks** | Implement artificial neurons, perceptrons, and MLPs from scratch. Visualize decision boundaries and solve the XOR problem. | **B05a** (Neural Networks Theory), B01-B02 (Fundamentals), B05 (Neural Networks), [Supplement](./documentation/COMPSCI_714_LECTURE_2_SUPPLEMENT.md) |
+| **Lecture 3: Training & Optimization** | Implement gradient descent variants (batch, SGD, mini-batch). Work through backpropagation step-by-step. Experiment with learning rates. | B02 (Gradient Descent), **B05** (Backpropagation), I01 (Advanced Optimizers), [Supplement](./documentation/COMPSCI_714_TRAINING_OPTIMIZATION_SUPPLEMENT.md) |
 | **Convolutional Layers** | Build a simple CNN from scratch for MNIST digit recognition. Visualize learned filters at each layer. | B09 (CNNs), B14 (Projects) |
 | **Recurrent Architectures** | Implement an LSTM from scratch to generate text character-by-character. Train on a small dataset and generate creative outputs. | B10 (RNNs), B13 (Mini Language Model), B14 (Projects) |
 | **Attention Mechanisms** | Build a simple attention layer and visualize which parts of input the model focuses on. | B11 (Attention & Transformers), B14 (Projects) |

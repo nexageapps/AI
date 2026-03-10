@@ -115,6 +115,39 @@ Best for: COMPSCI 714 students, theoretical understanding, exam preparation, con
 
 [View COMPSCI 714 Lecture 2 Supplement](./COMPSCI_714_LECTURE_2_SUPPLEMENT.md)
 
+### COMPSCI 714 Training & Optimization Supplement
+Comprehensive guide for COMPSCI 714 training and optimization topics.
+
+Contents:
+- Learning as optimization problem
+- Gradient descent algorithm (w ← w - α∇L(w))
+- Learning rate selection and effects
+- Gradient descent variants (Batch, SGD, Mini-batch)
+- Backpropagation algorithm and chain rule
+- Worked backpropagation example (Matt Mazur)
+- Automatic differentiation tools
+- Computational complexity analysis
+- Repository mapping and practical guide
+
+Best for: COMPSCI 714 students, understanding optimization, backpropagation mastery, exam preparation
+
+[View COMPSCI 714 Training & Optimization Supplement](./COMPSCI_714_TRAINING_OPTIMIZATION_SUPPLEMENT.md)
+
+### COMPSCI 714 Complete Supplement
+Unified guide combining all COMPSCI 714 lecture supplements.
+
+Contents:
+- Complete topic coverage for Lectures 2-3
+- Cross-references between lectures
+- Unified learning path
+- Quick reference formulas
+- Comprehensive exam preparation
+- Links to all detailed supplements
+
+Best for: COMPSCI 714 students, course overview, finding specific topics, exam review
+
+[View COMPSCI 714 Complete Supplement](./COMPSCI_714_SUPPLEMENT.md)
+
 ## Policy Documentation
 
 ### Academic Integrity Policy

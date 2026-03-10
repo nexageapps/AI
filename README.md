@@ -811,8 +811,11 @@ This section shows how you can extend lecture concepts from the University of Au
 
 **Course Focus:** Foundations of artificial intelligence, problem-solving, search algorithms, and knowledge representation.
 
+**🎮 Interactive Demo:** [Wumpus World Game](https://nexageapps.github.io/AI/wumpus/) - Play the classic AI problem from Week 2: Symbolic Logic
+
 | Lecture Topic | Practical Extension | Repository Resources |
 |---------------|-------------------|----------------------|
+| **Week 2: Symbolic Logic & Knowledge Representation** | **🎮 [Play Wumpus World](https://nexageapps.github.io/AI/wumpus/)** - Interactive visualization of the classic Wumpus World problem. Navigate a 4x4 grid using logical inference to avoid pits and the Wumpus while collecting gold. Demonstrates propositional logic, FOL formulas, and knowledge-based agents. | [Source Code](./application/compsci713/week2/wumpus/) |
 | **Intelligent Agents** | Build a simple maze-solving agent using search algorithms (BFS/DFS). Create an interactive visualization showing how the agent explores the environment. | B01-B05 (Fundamentals), B14 (Projects) |
 | **Search Algorithms** | Implement A* pathfinding for a game character. Build a visual demo where the agent navigates obstacles optimally. | B05 (Neural Networks), B14 (Projects) |
 | **Knowledge Representation** | Create a simple knowledge base system that answers questions using rule-based logic. Extend it to learn new rules from examples. | B04-B05 (Classification), B14 (Projects) |
@@ -820,6 +823,16 @@ This section shows how you can extend lecture concepts from the University of Au
 
 **Example MVP Project:**
 Create a **Smart Maze Solver** that uses search algorithms to find the shortest path through a maze. Visualize the search process in real-time, showing explored cells and the final path. Extend it to learn from multiple mazes and optimize its strategy.
+
+**Featured Project - Wumpus World:**
+An interactive React application demonstrating symbolic logic and knowledge representation from COMPSCI 713 Week 2. The game implements:
+- **Propositional Logic:** `Breeze(x,y) ⟹ ∃adjacent(x',y'). Pit(x',y')`
+- **First-Order Logic:** `∀x,y. Pit(x,y) ⟹ Breeze(adjacent cells)`
+- **Knowledge-Based Agent:** Uses logical inference to navigate safely
+- **Fog of War:** Agent only knows what it has explored
+- **Real-time Scoring:** Track performance and decision-making
+
+[Play Now](https://nexageapps.github.io/AI/wumpus/) | [View Source](./application/compsci713/week2/wumpus/) | [README](./application/compsci713/week2/wumpus/README.md)
 
 ---
 

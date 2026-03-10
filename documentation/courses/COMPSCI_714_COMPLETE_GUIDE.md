@@ -21,23 +21,23 @@ This supplementary document is an **independent educational resource** created t
 ## Table of Contents
 
 ### Lecture 2: Neural Networks Fundamentals
-1. [Artificial Neuron Anatomy](./COMPSCI_714_LECTURE_2_SUPPLEMENT.md#artificial-neuron-anatomy)
-2. [Linear Algebra Representation](./COMPSCI_714_LECTURE_2_SUPPLEMENT.md#linear-algebra-representation)
-3. [The Perceptron (1958)](./COMPSCI_714_LECTURE_2_SUPPLEMENT.md#the-perceptron-rosenblatt-1958)
-4. [Multilayer Perceptron](./COMPSCI_714_LECTURE_2_SUPPLEMENT.md#multilayer-perceptron-mlp)
-5. [Deep Neural Networks](./COMPSCI_714_LECTURE_2_SUPPLEMENT.md#deep-neural-networks-dnn)
-6. [Hierarchical Feature Learning](./COMPSCI_714_LECTURE_2_SUPPLEMENT.md#hierarchical-feature-learning)
-7. [Universal Function Approximation](./COMPSCI_714_LECTURE_2_SUPPLEMENT.md#universal-function-approximation-theorem)
-8. [Gradient Descent Basics](./COMPSCI_714_LECTURE_2_SUPPLEMENT.md#gradient-descent-and-steepest-descent)
+1. [Artificial Neuron Anatomy](./COMPSCI_714_LECTURE_2.md#artificial-neuron-anatomy)
+2. [Linear Algebra Representation](./COMPSCI_714_LECTURE_2.md#linear-algebra-representation)
+3. [The Perceptron (1958)](./COMPSCI_714_LECTURE_2.md#the-perceptron-rosenblatt-1958)
+4. [Multilayer Perceptron](./COMPSCI_714_LECTURE_2.md#multilayer-perceptron-mlp)
+5. [Deep Neural Networks](./COMPSCI_714_LECTURE_2.md#deep-neural-networks-dnn)
+6. [Hierarchical Feature Learning](./COMPSCI_714_LECTURE_2.md#hierarchical-feature-learning)
+7. [Universal Function Approximation](./COMPSCI_714_LECTURE_2.md#universal-function-approximation-theorem)
+8. [Gradient Descent Basics](./COMPSCI_714_LECTURE_2.md#gradient-descent-and-steepest-descent)
 
 ### Lecture 3: Training & Optimization
-1. [Learning as Optimization](./COMPSCI_714_TRAINING_OPTIMIZATION_SUPPLEMENT.md#learning-as-optimization)
-2. [Gradient Descent Algorithm](./COMPSCI_714_TRAINING_OPTIMIZATION_SUPPLEMENT.md#gradient-descent-algorithm)
-3. [Learning Rate Selection](./COMPSCI_714_TRAINING_OPTIMIZATION_SUPPLEMENT.md#learning-rate-selection)
-4. [Gradient Descent Variants](./COMPSCI_714_TRAINING_OPTIMIZATION_SUPPLEMENT.md#gradient-descent-variants)
-5. [Backpropagation](./COMPSCI_714_TRAINING_OPTIMIZATION_SUPPLEMENT.md#backpropagation)
-6. [Worked Backprop Example](./COMPSCI_714_TRAINING_OPTIMIZATION_SUPPLEMENT.md#worked-backpropagation-example)
-7. [Automatic Differentiation](./COMPSCI_714_TRAINING_OPTIMIZATION_SUPPLEMENT.md#automatic-differentiation)
+1. [Learning as Optimization](./COMPSCI_714_LECTURE_3.md#learning-as-optimization)
+2. [Gradient Descent Algorithm](./COMPSCI_714_LECTURE_3.md#gradient-descent-algorithm)
+3. [Learning Rate Selection](./COMPSCI_714_LECTURE_3.md#learning-rate-selection)
+4. [Gradient Descent Variants](./COMPSCI_714_LECTURE_3.md#gradient-descent-variants)
+5. [Backpropagation](./COMPSCI_714_LECTURE_3.md#backpropagation)
+6. [Worked Backprop Example](./COMPSCI_714_LECTURE_3.md#worked-backpropagation-example)
+7. [Automatic Differentiation](./COMPSCI_714_LECTURE_3.md#automatic-differentiation)
 
 ---
 

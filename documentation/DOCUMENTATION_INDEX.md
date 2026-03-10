@@ -96,8 +96,24 @@ Best for: Understanding Advanced level completion, tracking curriculum progress
 
 [View Advanced Lessons Complete](./ADVANCED_LESSONS_COMPLETE.md)
 
-### COMPSCI 714 Lecture 2 Supplement
-Comprehensive theoretical guide for COMPSCI 714 Lecture 2 topics.
+### COMPSCI 714 Complete Guide
+Unified guide for COMPSCI 714 - AI Architecture and Design course.
+
+Contents:
+- Complete topic coverage for Lectures 2-3
+- Cross-references between lectures
+- Unified learning path for semester
+- Quick reference formulas and algorithms
+- Comprehensive exam preparation checklist
+- Links to detailed lecture guides
+- Repository resource mapping
+
+Best for: COMPSCI 714 students, course overview, semester planning, exam review
+
+[View COMPSCI 714 Complete Guide](./courses/COMPSCI_714_COMPLETE_GUIDE.md)
+
+### COMPSCI 714 Lecture 2: Neural Networks
+Detailed guide for Lecture 2 - Neural Networks fundamentals.
 
 Contents:
 - Artificial neuron anatomy (inputs, weights, bias, pre-activation, activation)
@@ -108,15 +124,14 @@ Contents:
 - Hierarchical feature learning intuition
 - Universal Function Approximation Theorem (formal and intuitive)
 - Gradient descent and steepest descent mathematics
-- Repository mapping to lecture topics
-- Practical implementation guide
+- Repository mapping and practical guide
 
-Best for: COMPSCI 714 students, theoretical understanding, exam preparation, connecting lecture concepts to practical implementations
+Best for: Lecture 2 preparation, theoretical understanding, exam prep
 
-[View COMPSCI 714 Lecture 2 Supplement](./COMPSCI_714_LECTURE_2_SUPPLEMENT.md)
+[View Lecture 2 Guide](./courses/COMPSCI_714_LECTURE_2.md)
 
-### COMPSCI 714 Training & Optimization Supplement
-Comprehensive guide for COMPSCI 714 training and optimization topics.
+### COMPSCI 714 Lecture 3: Training & Optimization
+Detailed guide for Lecture 3 - Training and optimization.
 
 Contents:
 - Learning as optimization problem
@@ -125,28 +140,13 @@ Contents:
 - Gradient descent variants (Batch, SGD, Mini-batch)
 - Backpropagation algorithm and chain rule
 - Worked backpropagation example (Matt Mazur)
-- Automatic differentiation tools
+- Automatic differentiation tools (TensorFlow, PyTorch)
 - Computational complexity analysis
 - Repository mapping and practical guide
 
-Best for: COMPSCI 714 students, understanding optimization, backpropagation mastery, exam preparation
+Best for: Lecture 3 preparation, understanding optimization, backpropagation mastery
 
-[View COMPSCI 714 Training & Optimization Supplement](./COMPSCI_714_TRAINING_OPTIMIZATION_SUPPLEMENT.md)
-
-### COMPSCI 714 Complete Supplement
-Unified guide combining all COMPSCI 714 lecture supplements.
-
-Contents:
-- Complete topic coverage for Lectures 2-3
-- Cross-references between lectures
-- Unified learning path
-- Quick reference formulas
-- Comprehensive exam preparation
-- Links to all detailed supplements
-
-Best for: COMPSCI 714 students, course overview, finding specific topics, exam review
-
-[View COMPSCI 714 Complete Supplement](./COMPSCI_714_SUPPLEMENT.md)
+[View Lecture 3 Guide](./courses/COMPSCI_714_LECTURE_3.md)
 
 ## Policy Documentation
 

@@ -159,27 +159,32 @@ graph TB
     Start([START YOUR AI JOURNEY]):::startNode
     
     subgraph Foundation["FOUNDATION (B01-B03)"]
-        B01["B01: Arithmetic Operations<br/>Master tensor operations & TensorFlow basics"]:::basic
-        B02["B02: Linear Regression<br/>Learn gradient descent & loss functions"]:::basic
-        B03["B03: Binary Classification<br/>Understand decision boundaries & sigmoid"]:::basic
+        B01["B01: Arithmetic Operations<br/>Master tensor operations & TensorFlow basics<br/>🎓 COMPSCI 714 L2: Tensors & Linear Algebra"]:::basic
+        B02["B02: Linear Regression<br/>Learn gradient descent & loss functions<br/>🎓 COMPSCI 714 L2-L3: Gradient Descent"]:::basic
+        B03["B03: Binary Classification<br/>Understand decision boundaries & sigmoid<br/>🎓 COMPSCI 714 L2: Perceptron Intro"]:::basic
         
         B01 --> B02 --> B03
     end
     
     subgraph CoreML["CORE MACHINE LEARNING (B04-B08)"]
         B04["B04: Multi-Class Classification<br/>Softmax & categorical cross-entropy"]:::basic
-        B05["B05: Neural Network Fundamentals<br/>MLPs, activation functions, backpropagation"]:::basic
+        B05["B05: Neural Network Fundamentals<br/>MLPs, activation functions, backpropagation<br/>🎓 COMPSCI 714 L2-L3: MLP, DNN, Backprop"]:::basic
+        B05a["B05a: Neural Networks Theory<br/>COMPSCI 714 Lecture 2 & 3 Coverage<br/>🎓 Perceptron, Universal Approximation, Training"]:::course
         B06["B06: Data Preprocessing<br/>Feature engineering, scaling, encoding"]:::basic
         B07["B07: Model Evaluation<br/>Metrics, cross-validation, imbalanced data"]:::basic
         B08["B08: Regularization & Overfitting<br/>L1/L2, dropout, early stopping"]:::basic
         
-        B04 --> B05 --> B06 --> B07 --> B08
+        B04 --> B05
+        B05 --> B05a
+        B05a --> B06
+        B06 --> B07
+        B07 --> B08
     end
     
     subgraph DeepLearning["DEEP LEARNING (B09-B11)"]
-        B09["B09: Convolutional Neural Networks<br/>CNNs for computer vision & image processing"]:::basic
-        B10["B10: Recurrent Neural Networks<br/>RNNs, LSTMs, GRUs for sequential data"]:::basic
-        B11["B11: Attention & Transformers<br/>Self-attention mechanism & modern NLP"]:::basic
+        B09["B09: Convolutional Neural Networks<br/>CNNs for computer vision & image processing<br/>🎓 COMPSCI 714: CNN Architectures"]:::basic
+        B10["B10: Recurrent Neural Networks<br/>RNNs, LSTMs, GRUs for sequential data<br/>🎓 COMPSCI 714: RNN Architectures"]:::basic
+        B11["B11: Attention & Transformers<br/>Self-attention mechanism & modern NLP<br/>🎓 COMPSCI 714: Attention Mechanisms"]:::basic
         
         B09 --> B11
         B10 --> B11
@@ -335,6 +340,7 @@ graph TB
     
     classDef startNode fill:#4A90E2,stroke:#2E5C8A,stroke-width:4px,color:#fff,font-size:16px
     classDef basic fill:#FFE5B4,stroke:#D4A574,stroke-width:3px,color:#000,font-size:14px
+    classDef course fill:#90EE90,stroke:#2d5016,stroke-width:4px,color:#000,font-size:14px
     classDef intermediate fill:#B4E5FF,stroke:#74A5D4,stroke-width:3px,color:#000,font-size:14px
     classDef advanced fill:#D4B4FF,stroke:#9474D4,stroke-width:3px,color:#000,font-size:14px
     classDef expert fill:#FFD700,stroke:#B8860B,stroke-width:4px,color:#000,font-size:14px
@@ -403,9 +409,15 @@ The diagram flows from top to bottom, organized into clear stages. Each stage bu
 **Color Guide:**
 - Blue: Your starting point
 - Peach: Basic Level - Foundation concepts (B01-B15)
+- Green: Course-aligned lessons (COMPSCI 714)
 - Light Blue: Intermediate Level - Advanced techniques (I01-I15)
 - Purple: Advanced Level - Production systems (A01-A15)
 - Gold: Expert Level - Research and innovation (E01-E15)
+
+**Course Alignment:**
+- 🎓 Indicates lessons that directly align with COMPSCI 714 topics
+- B05a is specifically designed for COMPSCI 714 Lectures 2-3
+- See [COMPSCI 714 Complete Guide](./documentation/courses/COMPSCI_714_COMPLETE_GUIDE.md) for full details
 
 **Learning Flow:**
 - **Basic → Intermediate**: Focus on mastering fundamentals before advancing
@@ -815,19 +827,28 @@ Create a **Smart Maze Solver** that uses search algorithms to find the shortest 
 
 **Course Focus:** Neural network architectures, deep learning design patterns, and system-level AI design.
 
-**📚 Complete Course Supplement:** [COMPSCI 714 Supplement](./documentation/COMPSCI_714_SUPPLEMENT.md) - Unified guide for all lectures
+**📚 Complete Course Guide:** [COMPSCI 714 Complete Guide](./documentation/courses/COMPSCI_714_COMPLETE_GUIDE.md)
 
-**Lecture-Specific Supplements:**
-- [Lecture 2: Neural Networks](./documentation/COMPSCI_714_LECTURE_2_SUPPLEMENT.md) - Artificial neurons, perceptron, MLP, DNN, Universal Function Approximation
-- [Lecture 3: Training & Optimization](./documentation/COMPSCI_714_TRAINING_OPTIMIZATION_SUPPLEMENT.md) - Gradient descent, backpropagation, learning rates, batch variants
+**Lecture Coverage:**
+- **Lecture 2:** Neural Networks - Artificial neurons, perceptron, MLP, DNN, Universal Function Approximation → [Details](./documentation/courses/COMPSCI_714_LECTURE_2.md)
+- **Lecture 3:** Training & Optimization - Gradient descent, backpropagation, learning rates, batch variants → [Details](./documentation/courses/COMPSCI_714_LECTURE_3.md)
 
-| Lecture Topic | Practical Extension | Repository Resources |
-|---------------|-------------------|----------------------|
-| **Lecture 2: Neural Networks** | Implement artificial neurons, perceptrons, and MLPs from scratch. Visualize decision boundaries and solve the XOR problem. | **B05a** (Neural Networks Theory), B01-B02 (Fundamentals), B05 (Neural Networks), [Supplement](./documentation/COMPSCI_714_LECTURE_2_SUPPLEMENT.md) |
-| **Lecture 3: Training & Optimization** | Implement gradient descent variants (batch, SGD, mini-batch). Work through backpropagation step-by-step. Experiment with learning rates. | B02 (Gradient Descent), **B05** (Backpropagation), I01 (Advanced Optimizers), [Supplement](./documentation/COMPSCI_714_TRAINING_OPTIMIZATION_SUPPLEMENT.md) |
-| **Convolutional Layers** | Build a simple CNN from scratch for MNIST digit recognition. Visualize learned filters at each layer. | B09 (CNNs), B14 (Projects) |
-| **Recurrent Architectures** | Implement an LSTM from scratch to generate text character-by-character. Train on a small dataset and generate creative outputs. | B10 (RNNs), B13 (Mini Language Model), B14 (Projects) |
-| **Attention Mechanisms** | Build a simple attention layer and visualize which parts of input the model focuses on. | B11 (Attention & Transformers), B14 (Projects) |
+**Repository Alignment:**
+
+| Lecture | Topics Covered | Repository Lessons | Practical Notebook |
+|---------|---------------|-------------------|-------------------|
+| **Lecture 2** | Artificial Neuron, Linear Algebra (y=g(wᵀx+b)), Perceptron (1958), MLP, DNN, Hierarchical Features, Universal Approximation, Gradient Descent | B01 (Tensors), B02 (Gradient Descent), B03 (Perceptron), B05 (Neural Networks) | **B05a** - Neural Networks Theory |
+| **Lecture 3** | Learning as Optimization, Gradient Descent Algorithm, Learning Rate, Batch/SGD/Mini-batch GD, Backpropagation, Chain Rule, Worked Example (Matt Mazur), AutoDiff | B02 (Optimization), B05 (Backprop), I01 (Advanced Optimizers) | B05 (Implementation) |
+
+**Practical Extensions:**
+
+| Topic | Build This | Resources |
+|-------|-----------|-----------|
+| Neural Networks Theory | Implement neurons, perceptrons, MLPs from scratch. Solve XOR problem. Visualize decision boundaries. | B05a, B05, [Lecture 2 Guide](./documentation/courses/COMPSCI_714_LECTURE_2.md) |
+| Training & Optimization | Implement all GD variants. Work through backprop step-by-step. Experiment with learning rates. | B02, B05, [Lecture 3 Guide](./documentation/courses/COMPSCI_714_LECTURE_3.md) |
+| Convolutional Layers | Build CNN from scratch for MNIST. Visualize learned filters. | B09 (CNNs), B14 (Projects) |
+| Recurrent Architectures | Implement LSTM for text generation. | B10 (RNNs), B13 (Mini LLM) |
+| Attention Mechanisms | Build attention layer. Visualize attention weights. | B11 (Transformers) |
 
 **Example MVP Project:**
 Create a **Neural Network Visualizer** that shows how a simple MLP learns to classify data. Visualize the decision boundary changing in real-time as the network trains. Include interactive controls to adjust learning rate, layer sizes, and activation functions.

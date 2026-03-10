@@ -54,6 +54,63 @@ This is an independent, open-source educational project created by a student for
 
 ## Complete Lesson List
 
+### COMPSCI 714 Course Alignment
+
+This section shows how Basic lessons align with COMPSCI 714 (AI Architecture and Design):
+
+```mermaid
+graph LR
+    subgraph "COMPSCI 714 Lecture 2: Neural Networks"
+        L2["Lecture 2<br/>Neural Networks"]
+    end
+    
+    subgraph "COMPSCI 714 Lecture 3: Training"
+        L3["Lecture 3<br/>Training & Optimization"]
+    end
+    
+    subgraph "Repository Lessons"
+        B01["B01<br/>Arithmetic<br/>(Tensors, Matrix Ops)"]
+        B02["B02<br/>Linear Regression<br/>(Gradient Descent)"]
+        B03["B03<br/>Binary Classification<br/>(Perceptron Intro)"]
+        B05a["B05a<br/>Neural Networks Theory<br/>(COMPSCI 714)"]
+        B05["B05<br/>Neural Network<br/>Fundamentals"]
+        I01["I01<br/>Advanced<br/>Optimization"]
+    end
+    
+    L2 -.->|"Artificial Neuron<br/>Linear Algebra"| B01
+    L2 -.->|"Gradient Descent<br/>Basics"| B02
+    L2 -.->|"Perceptron<br/>(1958)"| B03
+    L2 ==>|"Complete<br/>Coverage"| B05a
+    L2 -.->|"MLP, DNN<br/>Implementation"| B05
+    
+    L3 -.->|"Optimization<br/>Algorithms"| B02
+    L3 ==>|"Backpropagation<br/>All GD Variants"| B05
+    L3 -.->|"Advanced<br/>Optimizers"| I01
+    
+    B01 --> B02 --> B03 --> B05a --> B05
+    
+    style L2 fill:#FFE5B4,stroke:#D4A574,stroke-width:3px
+    style L3 fill:#FFE5B4,stroke:#D4A574,stroke-width:3px
+    style B05a fill:#90EE90,stroke:#2d5016,stroke-width:3px
+    style B05 fill:#B4E5FF,stroke:#74A5D4,stroke-width:2px
+```
+
+**Legend:**
+- 🟡 Orange: COMPSCI 714 Lectures
+- 🟢 Green: Dedicated course notebook (B05a)
+- 🔵 Blue: Core implementation lessons
+- Solid arrows (⇒): Primary coverage
+- Dashed arrows (⇢): Supporting concepts
+
+**Quick Links:**
+- [COMPSCI 714 Complete Guide](../documentation/courses/COMPSCI_714_COMPLETE_GUIDE.md)
+- [Lecture 2: Neural Networks](../documentation/courses/COMPSCI_714_LECTURE_2.md)
+- [Lecture 3: Training & Optimization](../documentation/courses/COMPSCI_714_LECTURE_3.md)
+
+---
+
+## Complete Lesson List
+
 ### Foundation Stage (B01-B03) - Start Here
 **Duration:** 3-4 hours | **Goal:** Master the basics
 

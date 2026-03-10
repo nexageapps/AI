@@ -25,7 +25,7 @@ const Cell = ({ row, col, items, isAgent, agentDir, isVisited, hasGold, showAll 
 
   return (
     <div className={`cell ${!isVisited && !showAll ? 'unexplored' : ''} ${isAgent ? 'agent-cell' : ''}`}>
-      <div className={`cell-content ${isAgent || (isVisited || showAll) && items.length === 1 ? 'single-item' : ''}`}>
+      <div className={`cell-content ${isAgent || ((isVisited || showAll) && items.length === 1) ? 'single-item' : ''}`}>
         {isAgent && (
           <div className="item agent">
             <div className="agent-icon">👤</div>

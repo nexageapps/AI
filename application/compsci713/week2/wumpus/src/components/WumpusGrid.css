@@ -1,0 +1,18 @@
+.wumpus-grid {
+  display: flex;
+  flex-direction: column;
+  border: 3px solid #333;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.grid-row {
+  display: flex;
+}
+
+@media (max-width: 600px) {
+  .wumpus-grid {
+    border: 2px solid #333;
+  }
+}

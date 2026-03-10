@@ -1,0 +1,125 @@
+.controls {
+  margin-top: 30px;
+  padding: 20px;
+  background: #f8f9fa;
+  border-radius: 10px;
+}
+
+.controls-section {
+  margin-bottom: 20px;
+}
+
+.controls-section h3 {
+  margin-bottom: 15px;
+  color: #333;
+  font-size: 1.2rem;
+}
+
+.button-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+button {
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+button:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btn-move {
+  background: #4CAF50;
+  color: white;
+}
+
+.btn-move:hover:not(:disabled) {
+  background: #45a049;
+}
+
+.btn-turn {
+  background: #2196F3;
+  color: white;
+}
+
+.btn-turn:hover:not(:disabled) {
+  background: #0b7dda;
+}
+
+.btn-action {
+  background: #ff9800;
+  color: white;
+}
+
+.btn-action:hover:not(:disabled) {
+  background: #e68900;
+}
+
+.btn-reset {
+  background: #f44336;
+  color: white;
+}
+
+.btn-reset:hover {
+  background: #da190b;
+}
+
+.instructions {
+  margin-top: 20px;
+  padding: 15px;
+  background: white;
+  border-radius: 8px;
+  border-left: 4px solid #2196F3;
+}
+
+.instructions h4 {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.instructions ul {
+  margin-left: 20px;
+  color: #666;
+}
+
+.instructions li {
+  margin-bottom: 5px;
+}
+
+@media (max-width: 600px) {
+  button {
+    padding: 10px 16px;
+    font-size: 0.9rem;
+  }
+
+  .button-grid {
+    gap: 8px;
+  }
+}

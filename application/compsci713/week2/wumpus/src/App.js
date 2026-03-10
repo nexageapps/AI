@@ -389,7 +389,7 @@ function App() {
    * Reset Game
    * Generates a new world and resets all game state
    */
-  const reset = () => {
+  const reset = useCallback(() => {
     const newWorld = generateWorld(numPits);
     setWorldState(newWorld);
     setAgentPos({ row: 1, col: 1 });
@@ -399,7 +399,7 @@ function App() {
     setGameStatus('playing');
     setScore(0);
     setMoves(0);
-  };
+  });
 
   /**
    * Handle Pit Count Change

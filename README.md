@@ -237,5 +237,5 @@ MIT License - See [LICENSE](./LICENSE) for details.
 *Made by a student, for students*
 
 **Happy Learning!**
-
+[![Buy me a book](https://img.shields.io/badge/Buy%20Me%20A%20Book-Support-yellow.svg)](https://buymeacoffee.com/fcc4sbsx5f6)
 </div>

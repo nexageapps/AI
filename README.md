@@ -10,7 +10,7 @@
 
 Basic to Expert. Zero to Language Models. 60+ lessons. 100% hands-on.
 
-[Quick Start](#quick-start) • [Student Guide](./documentation/MAI_STUDENT_GUIDE.md) • [Exam Prep](./documentation/EXAM_PREPARATION_GUIDE.md) • [LinkedIn](https://www.linkedin.com/in/karthik-arjun-a5b4a258/)
+[Quick Start](#quick-start) • [Student Guide](./documentation/MAI_STUDENT_GUIDE.md) • [Exam Prep](./documentation/EXAM_PREPARATION_GUIDE.md) • [LinkedIn](https://www.linkedin.com/in/karthik-arjun-a5b4a258/) • [Support Project](https://buymeacoffee.com/fcc4sbsx5f6)
 
 [![Python](https://img.shields.io/badge/Python-3.8+-orange.svg)](https://www.python.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](./LICENSE)
@@ -84,7 +84,7 @@ AI/
 └── documentation/      # Guides & resources
 ```
 
-**[View Full Learning Path Diagram](./documentation/LEARNING_PATH.md)**
+**[View Full Learning Path Diagram](./documentation/LEARNING_PATH_DIAGRAM.md)**
 
 ---
 
@@ -211,6 +211,7 @@ Contributions welcome! See [Contributing Guide](./documentation/CONTRIBUTING.md)
 - **Issues?** Open a GitHub issue
 - **Suggestions?** Submit a pull request
 - **Connect:** [LinkedIn](https://www.linkedin.com/in/karthik-arjun-a5b4a258/)
+- **Next Step:** After Expert level, explore [LLM Repository](https://github.com/nexageapps/LLM) for production-scale language models
 
 ---
 

@@ -206,13 +206,105 @@ Contributions welcome! See [Contributing Guide](./documentation/CONTRIBUTING.md)
 
 ---
 
+## Learning Path Visualization
+
+```mermaid
+graph TD
+    Start[Start Your AI Journey] --> Basic[Basic Level B01-B15]
+    
+    Basic --> B1[Arithmetic & Tensors]
+    Basic --> B2[Linear Regression]
+    Basic --> B3[Classification]
+    Basic --> B4[Neural Networks]
+    Basic --> B5[CNNs & RNNs]
+    Basic --> B6[Transformers & LLMs]
+    
+    Basic --> Intermediate[Intermediate Level I01-I15]
+    
+    Intermediate --> I1[Advanced Optimization]
+    Intermediate --> I2[Transfer Learning]
+    Intermediate --> I3[Object Detection]
+    Intermediate --> I4[Seq2Seq Models]
+    Intermediate --> I5[Generative Models]
+    Intermediate --> I6[MLOps]
+    
+    Intermediate --> Advanced[Advanced Level A01-A15]
+    
+    Advanced --> A1[Fine-tuning LLMs]
+    Advanced --> A2[Prompt Engineering & RAG]
+    Advanced --> A3[Vision-Language Models]
+    Advanced --> A4[Distributed Training]
+    Advanced --> A5[Production ML Systems]
+    Advanced --> A6[Responsible AI]
+    
+    Advanced --> Expert[Expert Level E01-E15]
+    
+    Expert --> E1[Research Papers]
+    Expert --> E2[Neural Architecture Search]
+    Expert --> E3[Meta-Learning]
+    Expert --> E4[Deep RL & RLHF]
+    Expert --> E5[Federated Learning]
+    Expert --> E6[Cutting-Edge Research]
+    
+    Expert --> NextLevel[Next Level: Production LLMs]
+    NextLevel --> LLMRepo[LLM Repository]
+    
+    style Start fill:#e1f5ff
+    style Basic fill:#fff4e1
+    style Intermediate fill:#ffe1f5
+    style Advanced fill:#e1ffe1
+    style Expert fill:#f5e1ff
+    style NextLevel fill:#ffe1e1
+    style LLMRepo fill:#ff6b6b,color:#fff
+```
+
+---
+
+## Next Steps: Production LLMs
+
+After completing the Expert level, take your skills to production scale:
+
+### 🚀 [LLM Repository](https://github.com/nexageapps/llm)
+
+Production-ready implementations of:
+- Large Language Model architectures
+- Deployment strategies at scale
+- Real-world LLM applications
+- Performance optimization techniques
+- Production best practices
+
+**This repository teaches you the fundamentals. The LLM repo shows you how to deploy them at scale.**
+
+---
+
 ## Community & Support
 
 - **Questions?** Check [Documentation Index](./documentation/DOCUMENTATION_INDEX.md)
 - **Issues?** Open a GitHub issue
 - **Suggestions?** Submit a pull request
 - **Connect:** [LinkedIn](https://www.linkedin.com/in/karthik-arjun-a5b4a258/)
-- **Next Step:** After Expert level, explore [LLM Repository](https://github.com/nexageapps/LLM) for production-scale language models
+
+---
+
+## Support This Project
+
+<div align="center">
+
+### ☕ Buy Me a Book
+
+This repository represents hundreds of hours of work to make AI education accessible to everyone. If you find it helpful, consider supporting its continued development!
+
+[![Buy me a book](https://img.shields.io/badge/Buy%20Me%20A%20Book-Support%20This%20Project-yellow.svg?style=for-the-badge&logo=buy-me-a-coffee&logoColor=white)](https://buymeacoffee.com/fcc4sbsx5f6)
+
+**Your support helps:**
+- 📚 Create more lessons and content
+- 🔧 Maintain and update existing materials
+- 🌟 Add new features and improvements
+- 💡 Develop advanced topics and research implementations
+
+*Every contribution, no matter how small, makes a difference!*
+
+</div>
 
 ---
 
@@ -232,10 +324,13 @@ MIT License - See [LICENSE](./LICENSE) for details.
 
 <div align="center">
 
-**If you find this helpful, please star the repository!**
+### ⭐ If you find this helpful, please star the repository! ⭐
 
 *Made by a student, for students*
 
 **Happy Learning!**
-[![Buy me a book](https://img.shields.io/badge/Buy%20Me%20A%20Book-Support-yellow.svg)](https://buymeacoffee.com/fcc4sbsx5f6)
+
+[![GitHub stars](https://img.shields.io/github/stars/nexageapps/llm?style=social)](https://github.com/nexageapps/llm)
+[![Buy me a book](https://img.shields.io/badge/Buy%20Me%20A%20Book-Support-yellow.svg?style=for-the-badge)](https://buymeacoffee.com/fcc4sbsx5f6)
+
 </div>

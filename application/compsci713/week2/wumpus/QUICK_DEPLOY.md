@@ -16,7 +16,7 @@ This will:
 
 ## First Time Setup
 
-If this is your first time deploying, install gh-pages:
+If this is your first time deploying, install gh-pages: 
 
 ```bash
 cd application/compsci713/week2/wumpus

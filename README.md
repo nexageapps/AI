@@ -255,13 +255,32 @@ MIT License - See [LICENSE](./LICENSE) for details.
 
 <div align="center">
 
+---
+
 ### ⭐ If you find this helpful, please star the repository! ⭐
+
+<br/>
 
 *Made by a student, for students*
 
 **Happy Learning!**
 
-**[Continue to Production LLMs →](https://github.com/nexageapps/llm)**
-[![Buy me a book](https://img.shields.io/badge/Buy%20Me%20A%20Book-Support-yellow.svg?style=for-the-badge)](https://buymeacoffee.com/fcc4sbsx5f6)
+<br/>
+
+### 🚀 Ready for the Next Level?
+
+[![Continue to Production LLMs](https://img.shields.io/badge/Continue%20to%20Production%20LLMs-Next%20Step-2ECC71.svg?style=for-the-badge&logo=github&logoColor=white)](https://github.com/nexageapps/llm)
+
+<br/>
+
+### ☕ Support This Project
+
+[![Buy me a book](https://img.shields.io/badge/Buy%20Me%20A%20Book-Support%20This%20Project-FFDD00.svg?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/fcc4sbsx5f6)
+
+<br/>
+
+*Every contribution helps create more free educational content!*
+
+---
 
 </div>

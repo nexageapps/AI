@@ -416,7 +416,7 @@ function App() {
     setGameStatus('playing');
     setScore(0);
     setMoves(0);
-  }, []);
+  }, [generateWorld]);
 
   /**
    * Get Current Perceptions

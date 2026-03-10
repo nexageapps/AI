@@ -1,4 +1,4 @@
-# 🚀 Deployment Guide for COMPSCI 713 Applications
+# Deployment Guide for COMPSCI 713 Applications
 
 This guide explains how to deploy React applications to GitHub Pages.
 

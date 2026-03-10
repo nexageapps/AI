@@ -82,10 +82,25 @@ AI/
 ├── Intermediate/       # 15 Lessons (I01-I15) ✅
 ├── Advanced/           # 15 Lessons (A01-A15) ✅
 ├── Expert/             # 15 Lessons (E01-E15) ✅
+├── application/        # Live demos & practical implementations
 └── documentation/      # Guides & resources
 ```
 
 **[View Full Learning Path Diagram](./documentation/LEARNING_PATH_DIAGRAM.md)**
+
+---
+
+## Live Demos & Practical Applications
+
+Interactive demonstrations of AI concepts in action:
+
+| Demo | Concept | Course | Link |
+|------|---------|--------|------|
+| **Wumpus World** | Symbolic Logic & Knowledge Representation | COMPSCI 713 | [Play Online](https://nexageapps.github.io/AI/wumpus) |
+
+Explore the `application/` folder for source code and deployment guides.
+
+**[View All Applications & Deployment Guide](./application/compsci713/DEPLOYMENT.md)**
 
 ---
 

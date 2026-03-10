@@ -1,22 +1,22 @@
-# 🎮 Wumpus World - COMPSCI 713
+# Wumpus World - COMPSCI 713
 
 Interactive visualization of the Wumpus World problem from COMPSCI 713 Week 2: Symbolic Logic.
 
 [![React](https://img.shields.io/badge/React-18.2.0-blue.svg)](https://reactjs.org/)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
-## 🌟 Overview
+## Overview
 
 This React application provides an interactive visualization of the classic Wumpus World AI problem, featuring:
-- 🤖 Intelligent agent with directional movement
-- 👹 Wumpus (monster to avoid)
-- 🕳️ Pits (deadly hazards)
-- 🏆 Gold (treasure to collect)
-- 💨 Stench & 🌬️ Breeze (perceptions)
-- 🎯 Fog of war exploration
-- 📊 Real-time score tracking
+- Intelligent agent with directional movement
+- Wumpus (monster to avoid)
+- Pits (deadly hazards)
+- Gold (treasure to collect)
+- Stench and Breeze (perceptions)
+- Fog of war exploration
+- Real-time score tracking
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Installation
 
@@ -47,13 +47,13 @@ This creates an optimized production build in the `build/` folder.
 npm run deploy
 ```
 
-## 🔗 Live Demo
+## Live Demo
 
 **Play Online**: https://nexageapps.github.io/AI/wumpus
 
 *Part of COMPSCI 713 (Symbolic Logic) - University of Auckland, Master of AI*
 
-## 🧠 Symbolic Logic & Knowledge Representation
+## Symbolic Logic & Knowledge Representation
 
 This implementation demonstrates key concepts from COMPSCI 713 (University of Auckland, Master of AI):
 

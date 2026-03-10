@@ -227,12 +227,6 @@ This repository represents hundreds of hours of work to make AI education access
 
 [![Buy me a book](https://img.shields.io/badge/Buy%20Me%20A%20Book-Support%20This%20Project-yellow.svg?style=for-the-badge&logo=buy-me-a-coffee&logoColor=white)](https://buymeacoffee.com/fcc4sbsx5f6)
 
-**Your support helps:**
-- Create more lessons and content
-- Maintain and update existing materials
-- Add new features and improvements
-- Develop advanced topics and research implementations
-
 *Every contribution, no matter how small, makes a difference!*
 
 </div>

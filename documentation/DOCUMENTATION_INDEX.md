@@ -96,6 +96,25 @@ Best for: Understanding Advanced level completion, tracking curriculum progress
 
 [View Advanced Lessons Complete](./ADVANCED_LESSONS_COMPLETE.md)
 
+### COMPSCI 714 Lecture 2 Supplement
+Comprehensive theoretical guide for COMPSCI 714 Lecture 2 topics.
+
+Contents:
+- Artificial neuron anatomy (inputs, weights, bias, pre-activation, activation)
+- Linear algebra representation (y = g(wᵀx + b))
+- The Perceptron (Rosenblatt, 1958) and historical context
+- Multilayer Perceptron (MLP) architecture
+- Deep Neural Networks (DNN) formal definition
+- Hierarchical feature learning intuition
+- Universal Function Approximation Theorem (formal and intuitive)
+- Gradient descent and steepest descent mathematics
+- Repository mapping to lecture topics
+- Practical implementation guide
+
+Best for: COMPSCI 714 students, theoretical understanding, exam preparation, connecting lecture concepts to practical implementations
+
+[View COMPSCI 714 Lecture 2 Supplement](./COMPSCI_714_LECTURE_2_SUPPLEMENT.md)
+
 ## Policy Documentation
 
 ### Academic Integrity Policy

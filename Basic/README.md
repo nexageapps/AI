@@ -90,6 +90,16 @@ This is an independent, open-source educational project created by a student for
    - Backpropagation explained
    - **Why it matters:** Core of all deep learning models
 
+5a. **B05a - Neural Networks Theory (COMPSCI 714)** - Theoretical foundations
+   - Artificial neuron anatomy (inputs, weights, bias, pre-activation, activation)
+   - Linear algebra representation (y = g(wᵀx + b))
+   - The Perceptron (Rosenblatt, 1958) and its limitations
+   - Universal Function Approximation Theorem
+   - Gradient descent and steepest descent mathematics
+   - **Why it matters:** Deep theoretical understanding for advanced study
+   - **Course Alignment:** COMPSCI 714 Lecture 2
+   - **Supplement:** [COMPSCI 714 Lecture 2 Guide](../documentation/COMPSCI_714_LECTURE_2_SUPPLEMENT.md)
+
 6. **B06 - Data Preprocessing and Feature Engineering** - Data preparation techniques
    - Handling missing values
    - Feature scaling and normalization

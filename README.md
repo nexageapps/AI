@@ -778,6 +778,190 @@ For University of Auckland students: Follow the [University of Auckland Academic
 
 ---
 
+## University of Auckland – Practical Learning Extensions
+
+**⚠️ Important Disclaimer:** This section is designed for University of Auckland students and other learners worldwide. This repository is an **independent learning project** and is **NOT official University of Auckland course material**. It is not affiliated with or endorsed by the university. Use this as a supplementary learning tool to extend lecture concepts into practical implementations.
+
+### Overview
+
+This section shows how you can extend lecture concepts from the University of Auckland Master of Artificial Intelligence program into small, practical MVP-style projects using this repository. The goal is to transform theory into practice by building small, working products that deepen your understanding beyond the lecture hall.
+
+**Key Principles:**
+- Turn lecture theory into working code
+- Build small MVP (Minimum Viable Product) projects
+- Encourage experimentation and iteration
+- Deepen understanding through hands-on implementation
+- Create portfolio-worthy projects
+
+---
+
+### COMPSCI 713 – AI Fundamentals
+
+**Course Focus:** Foundations of artificial intelligence, problem-solving, search algorithms, and knowledge representation.
+
+| Lecture Topic | Practical Extension | Repository Resources |
+|---------------|-------------------|----------------------|
+| **Intelligent Agents** | Build a simple maze-solving agent using search algorithms (BFS/DFS). Create an interactive visualization showing how the agent explores the environment. | B01-B05 (Fundamentals), B14 (Projects) |
+| **Search Algorithms** | Implement A* pathfinding for a game character. Build a visual demo where the agent navigates obstacles optimally. | B05 (Neural Networks), B14 (Projects) |
+| **Knowledge Representation** | Create a simple knowledge base system that answers questions using rule-based logic. Extend it to learn new rules from examples. | B04-B05 (Classification), B14 (Projects) |
+| **Game Playing** | Build a simple game AI (Tic-Tac-Toe or Connect Four) using minimax algorithm with alpha-beta pruning. | B05 (Neural Networks), B14 (Projects) |
+
+**Example MVP Project:**
+Create a **Smart Maze Solver** that uses search algorithms to find the shortest path through a maze. Visualize the search process in real-time, showing explored cells and the final path. Extend it to learn from multiple mazes and optimize its strategy.
+
+---
+
+### COMPSCI 714 – AI Architecture and Design
+
+**Course Focus:** Neural network architectures, deep learning design patterns, and system-level AI design.
+
+**📚 Supplementary Materials:**
+- [COMPSCI 714 Lecture 2 Supplement](./documentation/COMPSCI_714_LECTURE_2_SUPPLEMENT.md) - Comprehensive guide covering artificial neurons, perceptron theory, MLPs, DNNs, Universal Function Approximation Theorem, and gradient descent mathematics
+
+| Lecture Topic | Practical Extension | Repository Resources |
+|---------------|-------------------|----------------------|
+| **Lecture 2: Neural Networks** | Implement artificial neurons, perceptrons, and MLPs from scratch. Visualize decision boundaries and solve the XOR problem. | **B05a** (Neural Networks Theory), B01-B02 (Fundamentals), B05 (Neural Networks), [Lecture 2 Supplement](./documentation/COMPSCI_714_LECTURE_2_SUPPLEMENT.md) |
+| **Artificial Neurons** | Implement a simple artificial neuron from scratch. Build a decision-based game agent using a single neuron to learn simple patterns. | B01-B02 (Arithmetic, Linear Regression), B05a (Theory), B14 (Projects) |
+| **Perceptrons & MLPs** | Create a multi-layer perceptron to solve XOR problem. Visualize decision boundaries as you train. | B05 (Neural Network Fundamentals), B05a (Theory), B14 (Projects) |
+| **Convolutional Layers** | Build a simple CNN from scratch for MNIST digit recognition. Visualize learned filters at each layer. | B09 (CNNs), B14 (Projects) |
+| **Recurrent Architectures** | Implement an LSTM from scratch to generate text character-by-character. Train on a small dataset and generate creative outputs. | B10 (RNNs), B13 (Mini Language Model), B14 (Projects) |
+| **Attention Mechanisms** | Build a simple attention layer and visualize which parts of input the model focuses on. | B11 (Attention & Transformers), B14 (Projects) |
+
+**Example MVP Project:**
+Create a **Neural Network Visualizer** that shows how a simple MLP learns to classify data. Visualize the decision boundary changing in real-time as the network trains. Include interactive controls to adjust learning rate, layer sizes, and activation functions.
+
+---
+
+### COMPSCI 762 – Machine Learning Foundations
+
+**Course Focus:** Core ML concepts, supervised learning, model evaluation, and practical ML workflows.
+
+| Lecture Topic | Practical Extension | Repository Resources |
+|---------------|-------------------|----------------------|
+| **Regression Models** | Build a house price predictor using linear and polynomial regression. Compare models and visualize predictions vs. actual values. | B02 (Linear Regression), B06 (Data Preprocessing), B14 (Projects) |
+| **Classification** | Create a binary classifier for a real-world dataset (e.g., credit approval, disease diagnosis). Implement from scratch and compare with scikit-learn. | B03-B04 (Classification), B07 (Model Evaluation), B14 (Projects) |
+| **Feature Engineering** | Build a feature engineering pipeline that transforms raw data into useful features. Measure impact on model performance. | B06 (Data Preprocessing), B14 (Projects) |
+| **Model Evaluation** | Create a comprehensive evaluation dashboard showing precision, recall, F1-score, ROC curves, and confusion matrices for your classifier. | B07 (Model Evaluation), B14 (Projects) |
+| **Hyperparameter Tuning** | Implement grid search and random search from scratch. Visualize how different hyperparameters affect model performance. | B08 (Regularization), I10 (Hyperparameter Tuning), B14 (Projects) |
+
+**Example MVP Project:**
+Create a **Loan Approval Predictor** that classifies loan applications as approved or rejected. Build a web interface where users input application details and get instant predictions with confidence scores. Include feature importance analysis showing which factors most influence the decision.
+
+---
+
+### COMPSCI 703 – Generalising AI
+
+**Course Focus:** Transfer learning, domain adaptation, generalization, and building AI systems that work across different contexts.
+
+| Lecture Topic | Practical Extension | Repository Resources |
+|---------------|-------------------|----------------------|
+| **Transfer Learning** | Fine-tune a pre-trained image classifier for a custom dataset (e.g., plant disease detection, fashion items). Compare performance with training from scratch. | I05 (Transfer Learning), B14 (Projects) |
+| **Domain Adaptation** | Build a system that adapts a model trained on one dataset to work on a different but related dataset. Measure adaptation effectiveness. | I05 (Transfer Learning), B14 (Projects) |
+| **Few-Shot Learning** | Implement a simple few-shot learning system that learns new classes from just a few examples. | E07 (Meta-Learning), B14 (Projects) |
+| **Generalization** | Create a model evaluation framework that tests generalization across different data distributions and domains. | B07 (Model Evaluation), I14 (Explainable AI), B14 (Projects) |
+| **Multi-Task Learning** | Build a model that learns multiple related tasks simultaneously (e.g., image classification + object detection). Show how shared representations improve performance. | I13 (Multi-Task Learning), B14 (Projects) |
+
+**Example MVP Project:**
+Create a **Custom Image Classifier** that uses transfer learning to classify images in your domain of interest (medical, wildlife, fashion, etc.). Start with a pre-trained model, fine-tune it on your dataset, and build a simple web app where users can upload images and get predictions with confidence scores.
+
+---
+
+### COMPSYS 721 – Deep Learning
+
+**Course Focus:** Deep neural networks, advanced architectures, and practical deep learning systems.
+
+| Lecture Topic | Practical Extension | Repository Resources |
+|---------------|-------------------|----------------------|
+| **CNNs for Vision** | Build an image classification system for a real-world problem (e.g., traffic sign recognition, facial expression detection). Include data augmentation and visualization of learned features. | B09 (CNNs), B06 (Data Preprocessing), B14 (Projects) |
+| **RNNs for Sequences** | Create a time series forecasting model using LSTMs to predict stock prices, weather, or sensor data. Visualize predictions vs. actual values. | B10 (RNNs), B14 (Projects) |
+| **Transformers & NLP** | Build a text classification system using transformers (e.g., sentiment analysis, topic classification). Fine-tune a pre-trained model on your dataset. | B11 (Attention & Transformers), B13 (Mini Language Model), B14 (Projects) |
+| **Generative Models** | Implement a simple GAN or VAE to generate new images or text. Visualize the generation process and latent space. | I12 (Generative Models), B14 (Projects) |
+| **Language Models** | Build a mini language model that generates text in a specific style or domain. Train on your own dataset and generate creative outputs. | B13 (Mini Language Model), B12 (BPE), B14 (Projects) |
+
+**Example MVP Project:**
+Create a **Sentiment Analysis Tool** that analyzes customer reviews or social media posts. Use a pre-trained transformer model or fine-tune one on your dataset. Build a dashboard showing sentiment distribution, key phrases, and trends over time.
+
+---
+
+### How to Use This Section
+
+**Step 1: Choose Your Course**
+- Select the course code that matches your current lecture topics
+- Review the practical extensions that align with what you're learning
+
+**Step 2: Pick a Project**
+- Choose an extension that interests you
+- Check the recommended repository resources
+
+**Step 3: Build Your MVP**
+- Start small – aim for a working prototype in 1-2 weeks
+- Use the repository lessons as your foundation
+- Implement the core functionality first, then iterate
+
+**Step 4: Extend & Experiment**
+- Add features and improvements
+- Try different approaches and compare results
+- Document your process and findings
+
+**Step 5: Share Your Work**
+- Create a GitHub repository for your project
+- Write a clear README explaining your approach
+- Share on LinkedIn and tag your classmates
+- Add to your portfolio
+
+---
+
+### Tips for Success
+
+**Connect Theory to Practice:**
+- After each lecture, identify one concept you want to implement
+- Use this repository's lessons to understand the theory
+- Build a small project to apply what you learned
+- Reflect on how the theory manifests in your code
+
+**Build Incrementally:**
+- Start with the simplest version that works
+- Add complexity gradually
+- Test and validate at each step
+- Don't aim for perfection – aim for learning
+
+**Experiment Fearlessly:**
+- Try different architectures and hyperparameters
+- Compare approaches and measure results
+- Document what works and what doesn't
+- Share your experiments with classmates
+
+**Create Portfolio Projects:**
+- These projects are perfect for your portfolio
+- Employers love seeing practical implementations
+- Document your process and learnings
+- Showcase on GitHub and LinkedIn
+
+---
+
+### Important Reminders
+
+**Academic Integrity:**
+- Use this repository to **learn and understand** concepts
+- Implement your own solutions from scratch
+- Don't copy code directly into assignments
+- Always cite sources and follow your institution's policies
+- When in doubt, ask your instructor
+
+**This is a Learning Tool:**
+- These extensions are suggestions, not requirements
+- Adapt them to your interests and learning style
+- Work at your own pace
+- Collaborate with classmates but do your own work
+
+**Not Official Material:**
+- This repository is independent and not affiliated with the University of Auckland
+- It complements but does not replace official course materials
+- Always refer to your course syllabus and instructor guidance
+- Use responsibly and ethically
+
+---
+
 ## Project Ideas for Students
 
 Ready to apply what you've learned? Here are hands-on project ideas perfect for master's students and portfolio building:

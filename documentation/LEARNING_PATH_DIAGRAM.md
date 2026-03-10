@@ -2,101 +2,99 @@
 
 ## Complete AI/ML Learning Journey
 
-```
-START YOUR AI JOURNEY
-        |
-        v
-FOUNDATION (B01-B03)
-- B01: Arithmetic Operations & Tensors
-- B02: Linear Regression & Gradient Descent
-- B03: Binary Classification
-        |
-        v
-CORE MACHINE LEARNING (B04-B08)
-- B04: Multi-Class Classification
-- B05: Neural Network Fundamentals
-- B05a: Neural Networks Theory (COMPSCI 714)
-- B06: Data Preprocessing & Feature Engineering
-- B07: Model Evaluation & Performance Metrics
-- B08: Regularization & Overfitting
-        |
-        v
-DEEP LEARNING (B09-B11)
-- B09: Convolutional Neural Networks
-- B10: Recurrent Neural Networks
-- B11: Attention & Transformers
-        |
-        v
-NLP SPECIALIZATION (B12-B13)
-- B12: Byte Pair Encoding (Tokenization)
-- B13: Building a Mini Language Model
-        |
-        v
-PRACTICE & PORTFOLIO (B14-B15)
-- B14: Practical Projects & Assignments
-- B15: Capstone Projects & Portfolio Building
-        |
-        v
-INTERMEDIATE LEVEL (I01-I15)
-        |
-    +---+---+---+---+
-    |   |   |   |   |
-    v   v   v   v   v
-   OPT REG CNN RNN NLP
-   I01 I02 I04 I07 I09
-   I03     I05 I08
-           I06
-    |   |   |   |   |
-    +---+---+---+---+
-        |
-        v
-PRODUCTION ML (I10-I15)
-- I10: Hyperparameter Tuning & AutoML
-- I11: Model Compression & Optimization
-- I12: Generative Models (VAEs, GANs)
-- I13: Multi-Task & Meta-Learning
-- I14: Explainable AI & Interpretability
-- I15: MLOps & Production Deployment
-        |
-        v
-ADVANCED LEVEL (A01-A15)
-        |
-    +---+---+---+---+
-    |   |   |   |   |
-    v   v   v   v   v
-   LLM MULTI DIST PROD RESP
-   A01 A04 A07 A10 A14
-   A02 A05 A08 A11 A15
-   A03 A06 A09 A12
-           A13
-    |   |   |   |   |
-    +---+---+---+---+
-        |
-        v
-EXPERT LEVEL (E01-E15)
-        |
-    +---+---+---+---+
-    |   |   |   |   |
-    v   v   v   v   v
-  RESEARCH ARCH LEARN RL CUTTING
-  E01    E04  E07   E10 E13
-  E02    E05  E08   E11 E14
-  E03    E06  E09   E12 E15
-    |   |   |   |   |
-    +---+---+---+---+
-        |
-        v
-RESEARCH & INNOVATION
-- Original contributions
-- Novel architectures
-- Published papers
-        |
-        v
-PRODUCTION LLMs
-(See LLM Repository)
-- Fine-tuning at scale
-- Production deployment
-- Real-world systems
+```mermaid
+graph TB
+    Start([🚀 Start Your AI Journey]) --> Foundation
+    
+    subgraph Basic["📘 BASIC LEVEL (B01-B15)"]
+        Foundation[Foundation<br/>B01-B03]
+        CoreML[Core ML<br/>B04-B08]
+        DeepLearning[Deep Learning<br/>B09-B11]
+        NLP[NLP Specialization<br/>B12-B13]
+        Portfolio[Practice & Portfolio<br/>B14-B15]
+        
+        Foundation --> CoreML
+        CoreML --> DeepLearning
+        DeepLearning --> NLP
+        NLP --> Portfolio
+    end
+    
+    Portfolio --> IntermediateEntry
+    
+    subgraph Intermediate["🔷 INTERMEDIATE LEVEL (I01-I15)"]
+        IntermediateEntry[Advanced Techniques<br/>I01-I03]
+        Vision[Computer Vision<br/>I04-I06]
+        Sequence[Sequence Models<br/>I07-I09]
+        Production[Production ML<br/>I10-I15]
+        
+        IntermediateEntry --> Vision
+        IntermediateEntry --> Sequence
+        Vision --> Production
+        Sequence --> Production
+    end
+    
+    Production --> AdvancedEntry
+    
+    subgraph Advanced["🟣 ADVANCED LEVEL (A01-A15)"]
+        AdvancedEntry[LLMs & Prompting<br/>A01-A03]
+        MultiModal[Multi-Modal AI<br/>A04-A06]
+        Distributed[Distributed Training<br/>A07-A09]
+        MLPipeline[ML Pipelines<br/>A10-A13]
+        Responsible[Responsible AI<br/>A14-A15]
+        
+        AdvancedEntry --> MultiModal
+        AdvancedEntry --> Distributed
+        MultiModal --> MLPipeline
+        Distributed --> MLPipeline
+        MLPipeline --> Responsible
+    end
+    
+    Responsible --> ExpertEntry
+    
+    subgraph Expert["🌟 EXPERT LEVEL (E01-E15)"]
+        ExpertEntry[Research Methods<br/>E01-E03]
+        Architecture[Architecture Design<br/>E04-E06]
+        MetaLearning[Meta & Few-Shot<br/>E07-E09]
+        RL[Deep RL & RLHF<br/>E10-E11]
+        Federated[Federated Learning<br/>E12]
+        Cutting[Cutting-Edge<br/>E13-E15]
+        
+        ExpertEntry --> Architecture
+        ExpertEntry --> MetaLearning
+        Architecture --> RL
+        MetaLearning --> RL
+        RL --> Federated
+        Federated --> Cutting
+    end
+    
+    Cutting --> NextLevel[🎯 Next Level:<br/>Production LLMs]
+    NextLevel --> LLMRepo[🚀 LLM Repository<br/>github.com/nexageapps/llm]
+    
+    style Start fill:#4A90E2,stroke:#2E5C8A,stroke-width:3px,color:#fff
+    style Foundation fill:#FFE5B4,stroke:#D4A574,stroke-width:2px
+    style CoreML fill:#FFE5B4,stroke:#D4A574,stroke-width:2px
+    style DeepLearning fill:#FFE5B4,stroke:#D4A574,stroke-width:2px
+    style NLP fill:#FFE5B4,stroke:#D4A574,stroke-width:2px
+    style Portfolio fill:#FFE5B4,stroke:#D4A574,stroke-width:2px
+    style IntermediateEntry fill:#B4E5FF,stroke:#74A5D4,stroke-width:2px
+    style Vision fill:#B4E5FF,stroke:#74A5D4,stroke-width:2px
+    style Sequence fill:#B4E5FF,stroke:#74A5D4,stroke-width:2px
+    style Production fill:#B4E5FF,stroke:#74A5D4,stroke-width:2px
+    style AdvancedEntry fill:#E5B4FF,stroke:#A574D4,stroke-width:2px
+    style MultiModal fill:#E5B4FF,stroke:#A574D4,stroke-width:2px
+    style Distributed fill:#E5B4FF,stroke:#A574D4,stroke-width:2px
+    style MLPipeline fill:#E5B4FF,stroke:#A574D4,stroke-width:2px
+    style Responsible fill:#E5B4FF,stroke:#A574D4,stroke-width:2px
+    style ExpertEntry fill:#FFD700,stroke:#DAA520,stroke-width:2px
+    style Architecture fill:#FFD700,stroke:#DAA520,stroke-width:2px
+    style MetaLearning fill:#FFD700,stroke:#DAA520,stroke-width:2px
+    style RL fill:#FFD700,stroke:#DAA520,stroke-width:2px
+    style Federated fill:#FFD700,stroke:#DAA520,stroke-width:2px
+    style Cutting fill:#FFD700,stroke:#DAA520,stroke-width:2px
+    style NextLevel fill:#FF6B6B,stroke:#CC5555,stroke-width:3px,color:#fff
+    style LLMRepo fill:#2ECC71,stroke:#27AE60,stroke-width:3px,color:#fff
+    
+    click LLMRepo "https://github.com/nexageapps/llm" "Go to Production LLM Repository"
 ```
 
 ---

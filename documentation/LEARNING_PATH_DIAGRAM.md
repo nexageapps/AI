@@ -70,29 +70,29 @@ graph TB
     Cutting --> NextLevel[🎯 Next Level:<br/>Production LLMs]
     NextLevel --> LLMRepo[🚀 LLM Repository<br/>github.com/nexageapps/llm]
     
-    style Start fill:#4A90E2,stroke:#2E5C8A,stroke-width:3px,color:#fff
-    style Foundation fill:#FFE5B4,stroke:#D4A574,stroke-width:2px
-    style CoreML fill:#FFE5B4,stroke:#D4A574,stroke-width:2px
-    style DeepLearning fill:#FFE5B4,stroke:#D4A574,stroke-width:2px
-    style NLP fill:#FFE5B4,stroke:#D4A574,stroke-width:2px
-    style Portfolio fill:#FFE5B4,stroke:#D4A574,stroke-width:2px
-    style IntermediateEntry fill:#B4E5FF,stroke:#74A5D4,stroke-width:2px
-    style Vision fill:#B4E5FF,stroke:#74A5D4,stroke-width:2px
-    style Sequence fill:#B4E5FF,stroke:#74A5D4,stroke-width:2px
-    style Production fill:#B4E5FF,stroke:#74A5D4,stroke-width:2px
-    style AdvancedEntry fill:#E5B4FF,stroke:#A574D4,stroke-width:2px
-    style MultiModal fill:#E5B4FF,stroke:#A574D4,stroke-width:2px
-    style Distributed fill:#E5B4FF,stroke:#A574D4,stroke-width:2px
-    style MLPipeline fill:#E5B4FF,stroke:#A574D4,stroke-width:2px
-    style Responsible fill:#E5B4FF,stroke:#A574D4,stroke-width:2px
-    style ExpertEntry fill:#FFD700,stroke:#DAA520,stroke-width:2px
-    style Architecture fill:#FFD700,stroke:#DAA520,stroke-width:2px
-    style MetaLearning fill:#FFD700,stroke:#DAA520,stroke-width:2px
-    style RL fill:#FFD700,stroke:#DAA520,stroke-width:2px
-    style Federated fill:#FFD700,stroke:#DAA520,stroke-width:2px
-    style Cutting fill:#FFD700,stroke:#DAA520,stroke-width:2px
-    style NextLevel fill:#FF6B6B,stroke:#CC5555,stroke-width:3px,color:#fff
-    style LLMRepo fill:#2ECC71,stroke:#27AE60,stroke-width:3px,color:#fff
+    style Start fill:#4A90E2,stroke:#2E5C8A,stroke-width:3px,color:#ffffff
+    style Foundation fill:#FFE5B4,stroke:#D4A574,stroke-width:2px,color:#000000
+    style CoreML fill:#FFE5B4,stroke:#D4A574,stroke-width:2px,color:#000000
+    style DeepLearning fill:#FFE5B4,stroke:#D4A574,stroke-width:2px,color:#000000
+    style NLP fill:#FFE5B4,stroke:#D4A574,stroke-width:2px,color:#000000
+    style Portfolio fill:#FFE5B4,stroke:#D4A574,stroke-width:2px,color:#000000
+    style IntermediateEntry fill:#B4E5FF,stroke:#74A5D4,stroke-width:2px,color:#000000
+    style Vision fill:#B4E5FF,stroke:#74A5D4,stroke-width:2px,color:#000000
+    style Sequence fill:#B4E5FF,stroke:#74A5D4,stroke-width:2px,color:#000000
+    style Production fill:#B4E5FF,stroke:#74A5D4,stroke-width:2px,color:#000000
+    style AdvancedEntry fill:#E5B4FF,stroke:#A574D4,stroke-width:2px,color:#000000
+    style MultiModal fill:#E5B4FF,stroke:#A574D4,stroke-width:2px,color:#000000
+    style Distributed fill:#E5B4FF,stroke:#A574D4,stroke-width:2px,color:#000000
+    style MLPipeline fill:#E5B4FF,stroke:#A574D4,stroke-width:2px,color:#000000
+    style Responsible fill:#E5B4FF,stroke:#A574D4,stroke-width:2px,color:#000000
+    style ExpertEntry fill:#FFD700,stroke:#DAA520,stroke-width:2px,color:#000000
+    style Architecture fill:#FFD700,stroke:#DAA520,stroke-width:2px,color:#000000
+    style MetaLearning fill:#FFD700,stroke:#DAA520,stroke-width:2px,color:#000000
+    style RL fill:#FFD700,stroke:#DAA520,stroke-width:2px,color:#000000
+    style Federated fill:#FFD700,stroke:#DAA520,stroke-width:2px,color:#000000
+    style Cutting fill:#FFD700,stroke:#DAA520,stroke-width:2px,color:#000000
+    style NextLevel fill:#FF6B6B,stroke:#CC5555,stroke-width:3px,color:#ffffff
+    style LLMRepo fill:#2ECC71,stroke:#27AE60,stroke-width:3px,color:#ffffff
     
     click LLMRepo "https://github.com/nexageapps/llm" "Go to Production LLM Repository"
 ```

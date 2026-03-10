@@ -2,7 +2,7 @@ import React from 'react';
 import Cell from './Cell';
 import './WumpusGrid.css';
 
-const WumpusGrid = ({ worldState, agentPos, agentDir, visitedCells, hasGold }) => {
+const WumpusGrid = ({ worldState, agentPos, agentDir, visitedCells, hasGold, showAll }) => {
   const renderGrid = () => {
     const grid = [];
     for (let row = 4; row >= 1; row--) {
@@ -13,7 +13,7 @@ const WumpusGrid = ({ worldState, agentPos, agentDir, visitedCells, hasGold }) =
         );
         const cellData = worldState[cellKey];
         const isAgent = agentPos.row === row && agentPos.col === col;
-        const isVisited = visitedCells.has(`${row}-${col}`);
+        const isVisited = visitedCells.has(`${row}-${col}`) || showAll;
         
         rowCells.push(
           <Cell
@@ -25,6 +25,7 @@ const WumpusGrid = ({ worldState, agentPos, agentDir, visitedCells, hasGold }) =
             agentDir={agentDir}
             isVisited={isVisited}
             hasGold={hasGold}
+            showAll={showAll}
           />
         );
       }

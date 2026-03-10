@@ -1,7 +1,7 @@
 import React from 'react';
 import './Cell.css';
 
-const Cell = ({ row, col, items, isAgent, agentDir, isVisited, hasGold }) => {
+const Cell = ({ row, col, items, isAgent, agentDir, isVisited, hasGold, showAll }) => {
   const getAgentIcon = () => {
     switch (agentDir) {
       case 'right':
@@ -18,42 +18,40 @@ const Cell = ({ row, col, items, isAgent, agentDir, isVisited, hasGold }) => {
   };
 
   const renderItem = (item) => {
-    // Don't show gold if agent has picked it up
     if (item === 'gold' && hasGold) {
       return null;
     }
 
     switch (item) {
       case 'wumpus':
-        return <div className="item wumpus">👹<div className="label">Wumpus</div></div>;
+        return <div className="item wumpus">👹</div>;
       case 'stench':
-        return <div className="item stench">💨<div className="label">stench</div></div>;
+        return <div className="item stench">💨</div>;
       case 'pit':
-        return <div className="item pit">🕳️<div className="label">PIT</div></div>;
+        return <div className="item pit">🕳️</div>;
       case 'breeze':
-        return <div className="item breeze">🌬️<div className="label">Breeze</div></div>;
+        return <div className="item breeze">🌬️</div>;
       case 'gold':
-        return <div className="item gold">🏆<div className="label">GOLD</div></div>;
+        return <div className="item gold">🏆</div>;
       default:
         return null;
     }
   };
 
   return (
-    <div className={`cell ${!isVisited ? 'unexplored' : ''} ${isAgent ? 'agent-cell' : ''}`}>
+    <div className={`cell ${!isVisited && !showAll ? 'unexplored' : ''} ${isAgent ? 'agent-cell' : ''}`}>
       <div className="cell-content">
         {isAgent && (
           <div className="item agent">
             <div className="agent-icon">{getAgentIcon()}</div>
-            <div className="label">Agent</div>
           </div>
         )}
-        {isVisited && items.map((item, index) => (
+        {(isVisited || showAll) && items.map((item, index) => (
           <React.Fragment key={index}>
             {renderItem(item)}
           </React.Fragment>
         ))}
-        {!isVisited && !isAgent && (
+        {!isVisited && !isAgent && !showAll && (
           <div className="fog">?</div>
         )}
       </div>

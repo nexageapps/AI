@@ -1,0 +1,142 @@
+.sidebar {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.sidebar-section {
+  background: #f8f9fa;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.sidebar-section h3 {
+  margin: 0 0 15px 0;
+  color: #333;
+  font-size: 1.1rem;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 8px;
+}
+
+.stat-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  font-size: 0.95rem;
+}
+
+.stat-label {
+  color: #666;
+  font-weight: 500;
+}
+
+.stat-value {
+  color: #2196F3;
+  font-weight: 700;
+}
+
+.perceptions {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.perception-item {
+  padding: 8px 12px;
+  background: white;
+  border-radius: 6px;
+  border-left: 3px solid #ff9800;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.pit-control {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.pit-control label {
+  font-size: 0.9rem;
+  color: #555;
+  font-weight: 600;
+}
+
+.pit-slider {
+  width: 100%;
+  height: 6px;
+  border-radius: 3px;
+  outline: none;
+  cursor: pointer;
+}
+
+.control-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.turn-buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.btn {
+  padding: 12px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btn-move {
+  background: #4CAF50;
+  color: white;
+}
+
+.btn-turn {
+  background: #2196F3;
+  color: white;
+}
+
+.btn-grab {
+  background: #ff9800;
+  color: white;
+}
+
+.btn-reset {
+  background: #f44336;
+  color: white;
+}
+
+.instructions {
+  margin: 0;
+  padding-left: 20px;
+  color: #666;
+  font-size: 0.85rem;
+}
+
+.instructions li {
+  margin-bottom: 6px;
+}
+
+@media (max-width: 900px) {
+  .sidebar {
+    width: 100%;
+  }
+}

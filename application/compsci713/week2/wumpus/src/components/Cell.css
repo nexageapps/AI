@@ -1,6 +1,6 @@
 .cell {
-  width: 150px;
-  height: 150px;
+  width: 120px;
+  height: 120px;
   border: 2px solid #666;
   background: white;
   display: flex;
@@ -20,6 +20,7 @@
   background: #e3f2fd;
   border-color: #2196F3;
   border-width: 3px;
+  box-shadow: 0 0 15px rgba(33, 150, 243, 0.5);
 }
 
 .cell:hover {
@@ -32,26 +33,25 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  gap: 8px;
-  padding: 10px;
+  gap: 5px;
+  padding: 5px;
   width: 100%;
   height: 100%;
 }
 
 .item {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: 2rem;
-  animation: fadeIn 0.5s ease;
+  animation: fadeIn 0.3s ease;
 }
 
 .agent-icon {
-  font-size: 3rem;
+  font-size: 3.5rem;
   font-weight: bold;
   color: #2196F3;
-  animation: pulse 1s ease-in-out infinite;
+  animation: pulse 1.5s ease-in-out infinite;
 }
 
 @keyframes pulse {
@@ -69,50 +69,17 @@
   opacity: 0.5;
 }
 
-.label {
-  font-size: 0.7rem;
-  font-weight: 600;
-  margin-top: 2px;
-  text-transform: uppercase;
-}
-
-.agent .label {
-  color: #2196F3;
-}
-
-.wumpus .label {
-  color: #f44336;
-}
-
-.stench .label {
-  color: #ff5722;
-}
-
-.pit .label {
-  color: #9c27b0;
-  background: #f3e5f5;
-  padding: 2px 6px;
-  border-radius: 3px;
-}
-
-.breeze .label {
-  color: #03a9f4;
-}
-
-.gold .label {
-  color: #ff9800;
-  background: #fff3e0;
-  padding: 2px 6px;
-  border-radius: 3px;
-}
-
 .cell-coords {
   position: absolute;
-  bottom: 5px;
+  bottom: 3px;
   right: 5px;
-  font-size: 0.7rem;
+  font-size: 0.65rem;
   color: #999;
   font-weight: 500;
+}
+
+.cell.unexplored .cell-coords {
+  color: #7f8c8d;
 }
 
 @keyframes fadeIn {
@@ -126,21 +93,26 @@
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 900px) {
   .cell {
-    width: 80px;
-    height: 80px;
+    width: 90px;
+    height: 90px;
   }
 
   .item {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
   }
 
-  .label {
-    font-size: 0.5rem;
+  .agent-icon {
+    font-size: 2.5rem;
+  }
+
+  .fog {
+    font-size: 2rem;
   }
 
   .cell-coords {
     font-size: 0.6rem;
   }
 }
+

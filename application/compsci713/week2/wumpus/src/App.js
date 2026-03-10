@@ -1,36 +1,139 @@
 import React, { useState, useEffect } from 'react';
 import WumpusGrid from './components/WumpusGrid';
-import Controls from './components/Controls';
+import Sidebar from './components/Sidebar';
+import GameOverlay from './components/GameOverlay';
 import './App.css';
 
 function App() {
-  // World state (hidden from agent)
-  const [worldState] = useState({
-    1: { row: 1, col: 1, items: [] },
-    2: { row: 1, col: 2, items: ['breeze'] },
-    3: { row: 1, col: 3, items: ['pit'] },
-    4: { row: 1, col: 4, items: ['breeze'] },
-    5: { row: 2, col: 1, items: ['stench'] },
-    6: { row: 2, col: 2, items: [] },
-    7: { row: 2, col: 3, items: ['breeze'] },
-    8: { row: 2, col: 4, items: [] },
-    9: { row: 3, col: 1, items: ['wumpus'] },
-    10: { row: 3, col: 2, items: ['stench', 'breeze', 'gold'] },
-    11: { row: 3, col: 3, items: ['pit'] },
-    12: { row: 3, col: 4, items: ['breeze'] },
-    13: { row: 4, col: 1, items: ['stench'] },
-    14: { row: 4, col: 2, items: [] },
-    15: { row: 4, col: 3, items: ['breeze'] },
-    16: { row: 4, col: 4, items: ['pit'] }
-  });
+  const generateWorld = (numPits = 3) => {
+    const world = {};
+    for (let row = 1; row <= 4; row++) {
+      for (let col = 1; col <= 4; col++) {
+        const key = (row - 1) * 4 + col;
+        world[key] = { row, col, items: [] };
+      }
+    }
 
+    // Place Wumpus randomly (not at start)
+    const wumpusPos = Math.floor(Math.random() * 15) + 2;
+    const wumpusCell = world[wumpusPos];
+    wumpusCell.items.push('wumpus');
+
+    // Add stench around Wumpus
+    addPerception(world, wumpusCell.row, wumpusCell.col, 'stench');
+
+    // Place Gold randomly (not at start, not on Wumpus)
+    let goldPos;
+    do {
+      goldPos = Math.floor(Math.random() * 15) + 2;
+    } while (goldPos === wumpusPos);
+    world[goldPos].items.push('gold');
+
+    // Place Pits randomly
+    const pits = new Set();
+    while (pits.size < numPits) {
+      const pitPos = Math.floor(Math.random() * 15) + 2;
+      if (pitPos !== wumpusPos && pitPos !== goldPos) {
+        pits.add(pitPos);
+      }
+    }
+
+    pits.forEach(pitPos => {
+      const pitCell = world[pitPos];
+      pitCell.items.push('pit');
+      addPerception(world, pitCell.row, pitCell.col, 'breeze');
+    });
+
+    return world;
+  };
+
+  const addPerception = (world, row, col, perception) => {
+    const adjacent = [
+      { r: row - 1, c: col },
+      { r: row + 1, c: col },
+      { r: row, c: col - 1 },
+      { r: row, c: col + 1 }
+    ];
+
+    adjacent.forEach(({ r, c }) => {
+      if (r >= 1 && r <= 4 && c >= 1 && c <= 4) {
+        const key = Object.keys(world).find(
+          k => world[k].row === r && world[k].col === c
+        );
+        if (key && !world[key].items.includes(perception)) {
+          world[key].items.push(perception);
+        }
+      }
+    });
+  };
+
+  const [numPits, setNumPits] = useState(3);
+  const [worldState, setWorldState] = useState(() => generateWorld(3));
   const [agentPos, setAgentPos] = useState({ row: 1, col: 1 });
-  const [agentDir, setAgentDir] = useState('right'); // right, up, left, down
+  const [agentDir, setAgentDir] = useState('right');
   const [visitedCells, setVisitedCells] = useState(new Set(['1-1']));
   const [hasGold, setHasGold] = useState(false);
-  const [gameOver, setGameOver] = useState(false);
-  const [message, setMessage] = useState('');
+  const [gameStatus, setGameStatus] = useState('playing'); // playing, victory, dead
   const [score, setScore] = useState(0);
+  const [moves, setMoves] = useState(0);
+  const [showAll, setShowAll] = useState(false);
+
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (e.key === 'Shift') {
+        setShowAll(true);
+      }
+      if (gameStatus !== 'playing') {
+        if (e.key === ' ') {
+          e.preventDefault();
+          reset();
+        }
+        return;
+      }
+
+      switch (e.key.toLowerCase()) {
+        case 'w':
+        case 'arrowup':
+          e.preventDefault();
+          moveForward();
+          break;
+        case 'a':
+        case 'arrowleft':
+          e.preventDefault();
+          turnLeft();
+          break;
+        case 'd':
+        case 'arrowright':
+          e.preventDefault();
+          turnRight();
+          break;
+        case 'g':
+        case ' ':
+          e.preventDefault();
+          grab();
+          break;
+        case 'r':
+          e.preventDefault();
+          reset();
+          break;
+        default:
+          break;
+      }
+    };
+
+    const handleKeyUp = (e) => {
+      if (e.key === 'Shift') {
+        setShowAll(false);
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+    window.addEventListener('keyup', handleKeyUp);
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown);
+      window.removeEventListener('keyup', handleKeyUp);
+    };
+  }, [gameStatus, agentPos, agentDir, hasGold]);
 
   useEffect(() => {
     checkCurrentCell();
@@ -41,29 +144,22 @@ function App() {
       key => worldState[key].row === agentPos.row && worldState[key].col === agentPos.col
     );
     const cell = worldState[cellKey];
-    
+
     if (cell.items.includes('pit')) {
-      setGameOver(true);
-      setMessage('💀 You fell into a pit! Game Over!');
+      setGameStatus('dead');
       setScore(prev => prev - 1000);
     } else if (cell.items.includes('wumpus')) {
-      setGameOver(true);
-      setMessage('💀 The Wumpus got you! Game Over!');
+      setGameStatus('dead');
       setScore(prev => prev - 1000);
-    } else if (cell.items.includes('gold') && !hasGold) {
-      setHasGold(true);
-      setMessage('🏆 You found the gold! Now get back to (1,1)!');
-      setScore(prev => prev + 1000);
     } else if (agentPos.row === 1 && agentPos.col === 1 && hasGold) {
-      setGameOver(true);
-      setMessage('🎉 Victory! You escaped with the gold!');
-      setScore(prev => prev + 500);
+      setGameStatus('victory');
+      setScore(prev => prev + 1000);
     }
   };
 
   const moveForward = () => {
-    if (gameOver) return;
-    
+    if (gameStatus !== 'playing') return;
+
     let newRow = agentPos.row;
     let newCol = agentPos.col;
 
@@ -88,114 +184,110 @@ function App() {
       setAgentPos({ row: newRow, col: newCol });
       setVisitedCells(prev => new Set([...prev, `${newRow}-${newCol}`]));
       setScore(prev => prev - 1);
-    } else {
-      setMessage('⚠️ Cannot move outside the grid!');
+      setMoves(prev => prev + 1);
     }
   };
 
   const turnLeft = () => {
-    if (gameOver) return;
+    if (gameStatus !== 'playing') return;
     const dirs = ['right', 'up', 'left', 'down'];
     const currentIndex = dirs.indexOf(agentDir);
     setAgentDir(dirs[(currentIndex + 1) % 4]);
     setScore(prev => prev - 1);
+    setMoves(prev => prev + 1);
   };
 
   const turnRight = () => {
-    if (gameOver) return;
+    if (gameStatus !== 'playing') return;
     const dirs = ['right', 'up', 'left', 'down'];
     const currentIndex = dirs.indexOf(agentDir);
     setAgentDir(dirs[(currentIndex + 3) % 4]);
     setScore(prev => prev - 1);
+    setMoves(prev => prev + 1);
   };
 
   const grab = () => {
-    if (gameOver) return;
+    if (gameStatus !== 'playing') return;
     const cellKey = Object.keys(worldState).find(
       key => worldState[key].row === agentPos.row && worldState[key].col === agentPos.col
     );
     const cell = worldState[cellKey];
-    
+
     if (cell.items.includes('gold') && !hasGold) {
       setHasGold(true);
-      setMessage('🏆 Grabbed the gold!');
       setScore(prev => prev + 1000);
-    } else {
-      setMessage('Nothing to grab here.');
     }
   };
 
   const reset = () => {
+    const newWorld = generateWorld(numPits);
+    setWorldState(newWorld);
     setAgentPos({ row: 1, col: 1 });
     setAgentDir('right');
     setVisitedCells(new Set(['1-1']));
     setHasGold(false);
-    setGameOver(false);
-    setMessage('');
+    setGameStatus('playing');
     setScore(0);
+    setMoves(0);
+  };
+
+  const handlePitChange = (newPits) => {
+    setNumPits(newPits);
+    const newWorld = generateWorld(newPits);
+    setWorldState(newWorld);
+    setAgentPos({ row: 1, col: 1 });
+    setAgentDir('right');
+    setVisitedCells(new Set(['1-1']));
+    setHasGold(false);
+    setGameStatus('playing');
+    setScore(0);
+    setMoves(0);
+  };
+
+  const getCurrentPerceptions = () => {
+    const cellKey = Object.keys(worldState).find(
+      key => worldState[key].row === agentPos.row && worldState[key].col === agentPos.col
+    );
+    return worldState[cellKey]?.items || [];
   };
 
   return (
     <div className="App">
-      <div className="container">
-        <h1>Wumpus World</h1>
-        <p className="subtitle">COMPSCI 713 - Week 2: Symbolic Logic</p>
-        
-        <div className="game-info">
-          <div className="info-item">Score: {score}</div>
-          <div className="info-item">Position: ({agentPos.col}, {agentPos.row})</div>
-          <div className="info-item">Direction: {agentDir}</div>
-          <div className="info-item">Gold: {hasGold ? '✓' : '✗'}</div>
+      <div className="game-container">
+        <div className="game-area">
+          <h1 className="game-title">Wumpus World</h1>
+          <p className="game-subtitle">COMPSCI 713 - Symbolic Logic</p>
+          
+          <WumpusGrid
+            worldState={worldState}
+            agentPos={agentPos}
+            agentDir={agentDir}
+            visitedCells={visitedCells}
+            hasGold={hasGold}
+            showAll={showAll}
+          />
+
+          {gameStatus !== 'playing' && (
+            <GameOverlay status={gameStatus} score={score} moves={moves} onRestart={reset} />
+          )}
         </div>
 
-        {message && <div className={`message ${gameOver ? 'game-over' : ''}`}>{message}</div>}
-
-        <WumpusGrid 
-          worldState={worldState}
-          agentPos={agentPos}
-          agentDir={agentDir}
-          visitedCells={visitedCells}
+        <Sidebar
+          score={score}
+          moves={moves}
+          position={agentPos}
+          direction={agentDir}
           hasGold={hasGold}
-        />
-
-        <Controls
+          perceptions={getCurrentPerceptions()}
+          numPits={numPits}
+          onPitChange={handlePitChange}
           onMoveForward={moveForward}
           onTurnLeft={turnLeft}
           onTurnRight={turnRight}
           onGrab={grab}
           onReset={reset}
-          disabled={gameOver}
+          disabled={gameStatus !== 'playing'}
         />
-
-        <div className="legend">
-          <h3>Legend</h3>
-          <div className="legend-items">
-            <div className="legend-item">
-              <span className="legend-icon">👤</span>
-              <span>Agent</span>
-            </div>
-            <div className="legend-item">
-              <span className="legend-icon">👹</span>
-              <span>Wumpus</span>
-            </div>
-            <div className="legend-item">
-              <span className="legend-icon">💨</span>
-              <span>Stench</span>
-            </div>
-            <div className="legend-item">
-              <span className="legend-icon">🕳️</span>
-              <span>Pit</span>
-            </div>
-            <div className="legend-item">
-              <span className="legend-icon">🌬️</span>
-              <span>Breeze</span>
-            </div>
-            <div className="legend-item">
-              <span className="legend-icon">🏆</span>
-              <span>Gold</span>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   );

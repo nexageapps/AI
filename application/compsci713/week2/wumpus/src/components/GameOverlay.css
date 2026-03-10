@@ -1,0 +1,119 @@
+.game-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  animation: fadeIn 0.3s ease;
+  border-radius: 10px;
+}
+
+.overlay-content {
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
+  text-align: center;
+  max-width: 400px;
+  animation: slideUp 0.5s ease;
+}
+
+.overlay-icon {
+  font-size: 5rem;
+  margin-bottom: 20px;
+  animation: bounce 1s ease infinite;
+}
+
+.overlay-title {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.overlay-title.victory {
+  color: #4CAF50;
+}
+
+.overlay-message {
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+.overlay-stats {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 30px;
+  padding: 20px;
+  background: #f8f9fa;
+  border-radius: 10px;
+}
+
+.overlay-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.overlay-stat .stat-label {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.overlay-stat .stat-value {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #2196F3;
+}
+
+.restart-button {
+  padding: 15px 30px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  background: #2196F3;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.restart-button:hover {
+  background: #0b7dda;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}

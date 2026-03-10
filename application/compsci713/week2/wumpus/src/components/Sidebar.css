@@ -59,6 +59,27 @@
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
 }
 
+.perception-warning {
+  padding: 8px 10px;
+  background: #f8d7da;
+  border-radius: 5px;
+  border-left: 3px solid #dc3545;
+  font-size: 0.75rem;
+  color: #721c24;
+  font-weight: 700;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+  animation: pulse-warning 2s ease-in-out infinite;
+}
+
+@keyframes pulse-warning {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+
 .pit-control {
   display: flex;
   flex-direction: column;
@@ -112,7 +133,7 @@
 }
 
 .btn {
-  padding: 8px;
+  padding: 8px 12px;
   font-size: 0.75rem;
   font-weight: 700;
   border: none;
@@ -122,6 +143,8 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12);
   text-transform: uppercase;
   letter-spacing: 0.3px;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .btn:hover:not(:disabled) {

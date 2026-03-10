@@ -130,10 +130,8 @@ function App() {
    * =================
    * Handles all keyboard input for the game
    * - W: Move forward in current direction
-   * - A/←: Turn left (counter-clockwise)
-   * - D/→: Turn right (clockwise)
-   * - ↑: Turn to face up
-   * - ↓: Turn to face down
+   * - A/D: Turn left/right (rotate 90°)
+   * - Arrow Keys: Move in that direction (changes facing + moves)
    * - G/Space: Grab gold at current position
    * - R: Reset game
    * - Shift: Hold to reveal entire world (debug mode)
@@ -173,19 +171,19 @@ function App() {
           break;
         case 'ArrowUp':
           e.preventDefault();
-          setAgentDir('up');
+          moveInDirection('up');
           break;
         case 'ArrowDown':
           e.preventDefault();
-          setAgentDir('down');
+          moveInDirection('down');
           break;
         case 'ArrowLeft':
           e.preventDefault();
-          setAgentDir('left');
+          moveInDirection('left');
           break;
         case 'ArrowRight':
           e.preventDefault();
-          setAgentDir('right');
+          moveInDirection('right');
           break;
         case 'g':
         case 'G':
@@ -256,6 +254,45 @@ function App() {
    * =============
    * All actions the agent can perform in the world
    */
+
+  /**
+   * Move in Direction
+   * Sets agent direction and moves forward in one action
+   */
+  const moveInDirection = (direction) => {
+    if (gameStatus !== 'playing') return;
+    
+    setAgentDir(direction);
+    
+    let newRow = agentPos.row;
+    let newCol = agentPos.col;
+
+    // Calculate new position based on direction
+    switch (direction) {
+      case 'right':
+        newCol += 1;
+        break;
+      case 'up':
+        newRow += 1;
+        break;
+      case 'left':
+        newCol -= 1;
+        break;
+      case 'down':
+        newRow -= 1;
+        break;
+      default:
+        break;
+    }
+
+    // Only move if new position is within grid boundaries (1-4)
+    if (newRow >= 1 && newRow <= 4 && newCol >= 1 && newCol <= 4) {
+      setAgentPos({ row: newRow, col: newCol });
+      setVisitedCells(prev => new Set([...prev, `${newRow}-${newCol}`]));
+      setScore(prev => prev - 1);
+      setMoves(prev => prev + 1);
+    }
+  };
 
   /**
    * Move Forward
@@ -427,6 +464,81 @@ function App() {
           {gameStatus !== 'playing' && (
             <GameOverlay status={gameStatus} score={score} moves={moves} onRestart={reset} />
           )}
+
+          {/* Controls and How to Play below grid */}
+          <div className="bottom-controls">
+            <div className="controls-section">
+              <h3>Controls</h3>
+              <div className="control-pad">
+                <div className="direction-pad">
+                  <button 
+                    onClick={() => moveInDirection('up')} 
+                    disabled={gameStatus !== 'playing'} 
+                    className="btn btn-direction btn-up"
+                    title="Move Up (↑)"
+                  >
+                    ↑
+                  </button>
+                  <div className="direction-middle">
+                    <button 
+                      onClick={() => moveInDirection('left')} 
+                      disabled={gameStatus !== 'playing'} 
+                      className="btn btn-direction btn-left"
+                      title="Move Left (←)"
+                    >
+                      ←
+                    </button>
+                    <div className="center-indicator">
+                      <span className="agent-indicator">{
+                        agentDir === 'up' ? '↑' :
+                        agentDir === 'down' ? '↓' :
+                        agentDir === 'left' ? '←' : '→'
+                      }</span>
+                    </div>
+                    <button 
+                      onClick={() => moveInDirection('right')} 
+                      disabled={gameStatus !== 'playing'} 
+                      className="btn btn-direction btn-right"
+                      title="Move Right (→)"
+                    >
+                      →
+                    </button>
+                  </div>
+                  <button 
+                    onClick={() => moveInDirection('down')} 
+                    disabled={gameStatus !== 'playing'} 
+                    className="btn btn-direction btn-down"
+                    title="Move Down (↓)"
+                  >
+                    ↓
+                  </button>
+                </div>
+                <div className="action-buttons-grid">
+                  <button onClick={grab} disabled={gameStatus !== 'playing'} className="btn btn-grab">
+                    🤲 Grab
+                  </button>
+                  <button onClick={reset} className="btn btn-reset">
+                    🔄 Reset
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div className="legend-section">
+              <h3>Legend</h3>
+              <div className="legend-grid">
+                <div className="legend-item"><span className="legend-icon">👤</span> Agent</div>
+                <div className="legend-item"><span className="legend-icon">👹</span> Wumpus</div>
+                <div className="legend-item"><span className="legend-icon">🕳️</span> Pit</div>
+                <div className="legend-item"><span className="legend-icon">🏆</span> Gold</div>
+                <div className="legend-item"><span className="legend-icon">💨</span> Stench</div>
+                <div className="legend-item"><span className="legend-icon">🌬️</span> Breeze</div>
+              </div>
+              <div className="keyboard-hint">
+                <small>💡 Use arrow keys or click buttons</small>
+              </div>
+            </div>
+          </div>
         </div>
 
         <Sidebar
@@ -439,12 +551,6 @@ function App() {
           numPits={numPits}
           totalGold={getTotalGoldCount()}
           onPitChange={handlePitChange}
-          onMoveForward={moveForward}
-          onTurnLeft={turnLeft}
-          onTurnRight={turnRight}
-          onGrab={grab}
-          onReset={reset}
-          disabled={gameStatus !== 'playing'}
         />
       </div>
     </div>

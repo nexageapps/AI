@@ -10,13 +10,7 @@ const Sidebar = ({
   perceptions,
   numPits,
   totalGold,
-  onPitChange,
-  onMoveForward,
-  onTurnLeft,
-  onTurnRight,
-  onGrab,
-  onReset,
-  disabled
+  onPitChange
 }) => {
   return (
     <div className="sidebar">
@@ -52,11 +46,16 @@ const Sidebar = ({
           ) : (
             perceptions.map((p, i) => (
               <div key={i} className="perception-item">
-                {p === 'stench' && '💨 Stench'}
-                {p === 'breeze' && '🌬️ Breeze'}
+                {p === 'stench' && '💨 Stench - Wumpus nearby!'}
+                {p === 'breeze' && '🌬️ Breeze - Pit nearby!'}
                 {p === 'gold' && '🏆 Gold here!'}
               </div>
             ))
+          )}
+          {perceptions.includes('stench') && perceptions.includes('breeze') && (
+            <div className="perception-warning">
+              ⚠️ Both detected: Multiple hazards nearby!
+            </div>
           )}
         </div>
       </div>
@@ -87,38 +86,13 @@ const Sidebar = ({
       </div>
 
       <div className="sidebar-section">
-        <h3>Controls</h3>
-        <div className="control-buttons">
-          <button onClick={onMoveForward} disabled={disabled} className="btn btn-move">
-            ↑ Forward (W)
-          </button>
-          <div className="turn-buttons">
-            <button onClick={onTurnLeft} disabled={disabled} className="btn btn-turn">
-              ↶ Left (A)
-            </button>
-            <button onClick={onTurnRight} disabled={disabled} className="btn btn-turn">
-              ↷ Right (D)
-            </button>
-          </div>
-          <button onClick={onGrab} disabled={disabled} className="btn btn-grab">
-            🤲 Grab (G)
-          </button>
-          <button onClick={onReset} className="btn btn-reset">
-            🔄 Reset (R)
-          </button>
-        </div>
-      </div>
-
-      <div className="sidebar-section">
         <h3>How to Play</h3>
         <ul className="instructions">
           <li>W: Move forward</li>
-          <li>Arrow keys: Turn direction</li>
+          <li>Arrow keys: Face direction</li>
           <li>A/D: Turn left/right</li>
-          <li>G/Space: Grab gold</li>
-          <li>Find gold, return to (1,1)</li>
-          <li>Breeze = pit nearby</li>
-          <li>Stench = Wumpus nearby</li>
+          <li>G: Grab gold</li>
+          <li>Return to (1,1) with gold</li>
         </ul>
       </div>
     </div>

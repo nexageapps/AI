@@ -2,21 +2,6 @@ import React from 'react';
 import './Cell.css';
 
 const Cell = ({ row, col, items, isAgent, agentDir, isVisited, hasGold, showAll }) => {
-  const getAgentIcon = () => {
-    switch (agentDir) {
-      case 'right':
-        return '→';
-      case 'up':
-        return '↑';
-      case 'left':
-        return '←';
-      case 'down':
-        return '↓';
-      default:
-        return '→';
-    }
-  };
-
   const renderItem = (item) => {
     if (item === 'gold' && hasGold) {
       return null;
@@ -40,10 +25,15 @@ const Cell = ({ row, col, items, isAgent, agentDir, isVisited, hasGold, showAll 
 
   return (
     <div className={`cell ${!isVisited && !showAll ? 'unexplored' : ''} ${isAgent ? 'agent-cell' : ''}`}>
-      <div className="cell-content">
+      <div className={`cell-content ${isAgent || (isVisited || showAll) && items.length === 1 ? 'single-item' : ''}`}>
         {isAgent && (
           <div className="item agent">
-            <div className="agent-icon">{getAgentIcon()}</div>
+            <div className="agent-icon">👤</div>
+            <div className="agent-direction">{
+              agentDir === 'up' ? '↑' :
+              agentDir === 'down' ? '↓' :
+              agentDir === 'left' ? '←' : '→'
+            }</div>
           </div>
         )}
         {(isVisited || showAll) && items.map((item, index) => (

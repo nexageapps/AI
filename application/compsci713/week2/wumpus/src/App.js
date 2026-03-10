@@ -243,7 +243,11 @@ function App() {
       setGameStatus('victory');
       setScore(prev => prev + 1000); // Bonus for winning
     }
-  };
+  }, [worldState, agentPos, hasGold]);
+
+  useEffect(() => {
+    checkCurrentCell();
+  }, [agentPos, checkCurrentCell]);
 
   /**
    * AGENT ACTIONS
@@ -296,7 +300,7 @@ function App() {
    * - Costs 1 point per move
    * - Cannot move outside grid boundaries
    */
-  const moveForward = () => {
+  const moveForward = useCallback(() => {
     if (gameStatus !== 'playing') return;
 
     let newRow = agentPos.row;

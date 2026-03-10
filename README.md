@@ -792,47 +792,21 @@ For University of Auckland students: Follow the [University of Auckland Academic
 
 ## University of Auckland – Practical Learning Extensions
 
-**⚠️ Important Disclaimer:** This section is designed for University of Auckland students and other learners worldwide. This repository is an **independent learning project** and is **NOT official University of Auckland course material**. It is not affiliated with or endorsed by the university. Use this as a supplementary learning tool to extend lecture concepts into practical implementations.
+**For University of Auckland students and AI learners worldwide:** This repository includes practical extensions for courses from the University of Auckland Master of Artificial Intelligence program.
 
-### Overview
+**📚 Full Details:** [University of Auckland Practical Extensions](./documentation/UNIVERSITY_OF_AUCKLAND_EXTENSIONS.md)
 
-This section shows how you can extend lecture concepts from the University of Auckland Master of Artificial Intelligence program into small, practical MVP-style projects using this repository. The goal is to transform theory into practice by building small, working products that deepen your understanding beyond the lecture hall.
+### Quick Course Links
 
-**Key Principles:**
-- Turn lecture theory into working code
-- Build small MVP (Minimum Viable Product) projects
-- Encourage experimentation and iteration
-- Deepen understanding through hands-on implementation
-- Create portfolio-worthy projects
+| Course | Focus | Practical Examples |
+|--------|-------|-------------------|
+| **COMPSCI 713** | AI Fundamentals | [Intelligent Agents, Knowledge Bases, Game AI](./documentation/UNIVERSITY_OF_AUCKLAND_EXTENSIONS.md#compsci-713--ai-fundamentals) |
+| **COMPSCI 714** | Neural Networks & Deep Learning | [Neural Networks, Gradient Descent, CNNs, Attention](./documentation/COMPSCI_714_EXTENSIONS.md) |
+| **COMPSCI 762** | Machine Learning Foundations | [Regression, Classification, Feature Engineering](./documentation/UNIVERSITY_OF_AUCKLAND_EXTENSIONS.md#compsci-762--machine-learning-foundations) |
+| **COMPSCI 703** | Generalising AI | [Transfer Learning, Domain Adaptation, Few-Shot](./documentation/UNIVERSITY_OF_AUCKLAND_EXTENSIONS.md#compsci-703--generalising-ai) |
+| **COMPSYS 721** | Deep Learning | [Object Detection, Time Series, NLP, GANs](./documentation/UNIVERSITY_OF_AUCKLAND_EXTENSIONS.md#compsys-721--deep-learning) |
 
----
-
-### COMPSCI 713 – AI Fundamentals
-
-**Course Focus:** Foundations of artificial intelligence, problem-solving, search algorithms, and knowledge representation.
-
-**🎮 Interactive Demo:** [Wumpus World Game](https://nexageapps.github.io/AI/wumpus/) - Play the classic AI problem from Week 2: Symbolic Logic
-
-| Lecture Topic | Practical Extension | Repository Resources |
-|---------------|-------------------|----------------------|
-| **Week 2: Symbolic Logic & Knowledge Representation** | **🎮 [Play Wumpus World](https://nexageapps.github.io/AI/wumpus/)** - Interactive visualization of the classic Wumpus World problem. Navigate a 4x4 grid using logical inference to avoid pits and the Wumpus while collecting gold. Demonstrates propositional logic, FOL formulas, and knowledge-based agents. | [Source Code](./application/compsci713/week2/wumpus/) |
-| **Intelligent Agents** | Build a simple maze-solving agent using search algorithms (BFS/DFS). Create an interactive visualization showing how the agent explores the environment. | B01-B05 (Fundamentals), B14 (Projects) |
-| **Search Algorithms** | Implement A* pathfinding for a game character. Build a visual demo where the agent navigates obstacles optimally. | B05 (Neural Networks), B14 (Projects) |
-| **Knowledge Representation** | Create a simple knowledge base system that answers questions using rule-based logic. Extend it to learn new rules from examples. | B04-B05 (Classification), B14 (Projects) |
-| **Game Playing** | Build a simple game AI (Tic-Tac-Toe or Connect Four) using minimax algorithm with alpha-beta pruning. | B05 (Neural Networks), B14 (Projects) |
-
-**Example MVP Project:**
-Create a **Smart Maze Solver** that uses search algorithms to find the shortest path through a maze. Visualize the search process in real-time, showing explored cells and the final path. Extend it to learn from multiple mazes and optimize its strategy.
-
-**Featured Project - Wumpus World:**
-An interactive React application demonstrating symbolic logic and knowledge representation from COMPSCI 713 Week 2. The game implements:
-- **Propositional Logic:** `Breeze(x,y) ⟹ ∃adjacent(x',y'). Pit(x',y')`
-- **First-Order Logic:** `∀x,y. Pit(x,y) ⟹ Breeze(adjacent cells)`
-- **Knowledge-Based Agent:** Uses logical inference to navigate safely
-- **Fog of War:** Agent only knows what it has explored
-- **Real-time Scoring:** Track performance and decision-making
-
-[Play Now](https://nexageapps.github.io/AI/wumpus/) | [View Source](./application/compsci713/week2/wumpus/) | [README](./application/compsci713/week2/wumpus/README.md)
+**⚠️ Important:** This is an independent learning project, NOT official university material. Use responsibly and follow your institution's academic integrity policies.
 
 #### Detailed Practical Examples
 

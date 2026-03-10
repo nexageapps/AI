@@ -16,6 +16,7 @@ Basic to Expert. Zero to Language Models. 60+ lessons. 100% hands-on.
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](./LICENSE)
 [![Lessons](https://img.shields.io/badge/Lessons-60+-brightgreen.svg)](./Basic/)
 [![Sponsored by nexageapps](https://img.shields.io/badge/Sponsored%20by-nexageapps-blue.svg)](https://nexageapps.com)
+[![Buy me a book](https://img.shields.io/badge/Buy%20Me%20A%20Book-Support-yellow.svg)](https://buymeacoffee.com/fcc4sbsx5f6)
 
 </div>
 

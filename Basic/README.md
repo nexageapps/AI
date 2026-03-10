@@ -89,16 +89,21 @@ graph LR
     
     B01 --> B02 --> B03 --> B05a --> B05
     
-    style L2 fill:#FFE5B4,stroke:#D4A574,stroke-width:3px
-    style L3 fill:#FFE5B4,stroke:#D4A574,stroke-width:3px
-    style B05a fill:#90EE90,stroke:#2d5016,stroke-width:3px
-    style B05 fill:#B4E5FF,stroke:#74A5D4,stroke-width:2px
+    style L2 fill:#FFE5B4,stroke:#D4A574,stroke-width:3px,color:#000
+    style L3 fill:#FFE5B4,stroke:#D4A574,stroke-width:3px,color:#000
+    style B05a fill:#90EE90,stroke:#2d5016,stroke-width:3px,color:#000
+    style B05 fill:#B4E5FF,stroke:#74A5D4,stroke-width:2px,color:#000
+    style B01 fill:#f5f5f5,stroke:#757575,stroke-width:2px,color:#000
+    style B02 fill:#f5f5f5,stroke:#757575,stroke-width:2px,color:#000
+    style B03 fill:#f5f5f5,stroke:#757575,stroke-width:2px,color:#000
+    style I01 fill:#f5f5f5,stroke:#757575,stroke-width:2px,color:#000
 ```
 
 **Legend:**
-- 🟡 Orange: COMPSCI 714 Lectures
+- � Orange: COMPSCI 714 Lectures
 - 🟢 Green: Dedicated course notebook (B05a)
 - 🔵 Blue: Core implementation lessons
+- ⚪ Gray: Supporting lessons
 - Solid arrows (⇒): Primary coverage
 - Dashed arrows (⇢): Supporting concepts
 

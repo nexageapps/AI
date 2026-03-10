@@ -51,6 +51,8 @@ npm run deploy
 
 **Play Online**: https://nexageapps.github.io/AI/wumpus
 
+*Part of COMPSCI 713 (Symbolic Logic) - University of Auckland, Master of AI*
+
 ## 🧠 Symbolic Logic & Knowledge Representation
 
 This implementation demonstrates key concepts from COMPSCI 713 (University of Auckland, Master of AI):

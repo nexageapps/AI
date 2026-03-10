@@ -214,7 +214,7 @@ function App() {
       window.removeEventListener('keydown', handleKeyDown);
       window.removeEventListener('keyup', handleKeyUp);
     };
-  }, [gameStatus, agentPos, agentDir, hasGold]);
+  }, [gameStatus, agentPos, agentDir, hasGold, moveForward, turnLeft, turnRight, moveInDirection, grab, reset]);
 
   /**
    * CHECK CURRENT CELL

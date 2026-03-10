@@ -405,7 +405,7 @@ function App() {
    * Handle Pit Count Change
    * Regenerates world with new number of pits
    */
-  const handlePitChange = (newPits) => {
+  const handlePitChange = useCallback((newPits) => {
     setNumPits(newPits);
     const newWorld = generateWorld(newPits);
     setWorldState(newWorld);
@@ -416,26 +416,26 @@ function App() {
     setGameStatus('playing');
     setScore(0);
     setMoves(0);
-  };
+  }, []);
 
   /**
    * Get Current Perceptions
    * Returns what the agent can sense at current position
    * (stench, breeze, or gold presence)
    */
-  const getCurrentPerceptions = () => {
+  const getCurrentPerceptions = useCallback(() => {
     const cellKey = Object.keys(worldState).find(
       key => worldState[key].row === agentPos.row && worldState[key].col === agentPos.col
     );
     return worldState[cellKey]?.items || [];
-  };
+  }, [worldState, agentPos]);
 
   /**
    * Get Total Gold Count
    * Counts how many gold pieces exist in the world
    * Used for the hint system
    */
-  const getTotalGoldCount = () => {
+  const getTotalGoldCount = useCallback(() => {
     let count = 0;
     Object.values(worldState).forEach(cell => {
       if (cell.items.includes('gold')) {
@@ -443,7 +443,7 @@ function App() {
       }
     });
     return count;
-  };
+  }, [worldState]);
 
   return (
     <div className="App">

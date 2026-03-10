@@ -1,26 +1,27 @@
 .cell {
-  width: 120px;
-  height: 120px;
-  border: 2px solid #666;
+  width: 88px;
+  height: 88px;
+  border: 2px solid #495057;
   background: white;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   position: relative;
-  transition: all 0.3s ease;
+  transition: all 0.2s ease;
 }
 
 .cell.unexplored {
   background: #2c3e50;
   color: white;
+  border-color: #1a252f;
 }
 
 .cell.agent-cell {
   background: #e3f2fd;
   border-color: #2196F3;
   border-width: 3px;
-  box-shadow: 0 0 15px rgba(33, 150, 243, 0.5);
+  box-shadow: 0 0 10px rgba(33, 150, 243, 0.5);
 }
 
 .cell:hover {
@@ -33,8 +34,8 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  gap: 5px;
-  padding: 5px;
+  gap: 3px;
+  padding: 3px;
   width: 100%;
   height: 100%;
 }
@@ -43,15 +44,16 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 2rem;
+  font-size: 1.5rem;
   animation: fadeIn 0.3s ease;
 }
 
 .agent-icon {
-  font-size: 3.5rem;
+  font-size: 2.6rem;
   font-weight: bold;
   color: #2196F3;
   animation: pulse 1.5s ease-in-out infinite;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 @keyframes pulse {
@@ -59,27 +61,31 @@
     transform: scale(1);
   }
   50% {
-    transform: scale(1.1);
+    transform: scale(1.08);
   }
 }
 
 .fog {
-  font-size: 3rem;
-  color: #95a5a6;
-  opacity: 0.5;
+  font-size: 2rem;
+  color: #7f8c8d;
+  opacity: 0.6;
 }
 
 .cell-coords {
   position: absolute;
-  bottom: 3px;
-  right: 5px;
-  font-size: 0.65rem;
-  color: #999;
-  font-weight: 500;
+  bottom: 2px;
+  right: 3px;
+  font-size: 0.55rem;
+  color: #6c757d;
+  font-weight: 600;
+  background: rgba(255, 255, 255, 0.85);
+  padding: 1px 3px;
+  border-radius: 2px;
 }
 
 .cell.unexplored .cell-coords {
-  color: #7f8c8d;
+  color: #95a5a6;
+  background: rgba(0, 0, 0, 0.3);
 }
 
 @keyframes fadeIn {
@@ -93,26 +99,25 @@
   }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1000px) {
   .cell {
-    width: 90px;
-    height: 90px;
+    width: 75px;
+    height: 75px;
   }
 
   .item {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
 
   .agent-icon {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
   }
 
   .fog {
-    font-size: 2rem;
+    font-size: 1.7rem;
   }
 
   .cell-coords {
-    font-size: 0.6rem;
+    font-size: 0.5rem;
   }
 }
-

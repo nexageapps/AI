@@ -9,6 +9,7 @@ const Sidebar = ({
   hasGold,
   perceptions,
   numPits,
+  totalGold,
   onPitChange,
   onMoveForward,
   onTurnLeft,
@@ -75,6 +76,16 @@ const Sidebar = ({
         </div>
       </div>
 
+      <div className="sidebar-section hint-section">
+        <h3>💡 Hint</h3>
+        <div className="hint-content">
+          <div className="hint-item">
+            <span className="hint-icon">🏆</span>
+            <span className="hint-text">Gold in world: {totalGold}</span>
+          </div>
+        </div>
+      </div>
+
       <div className="sidebar-section">
         <h3>Controls</h3>
         <div className="control-buttons">
@@ -101,11 +112,13 @@ const Sidebar = ({
       <div className="sidebar-section">
         <h3>How to Play</h3>
         <ul className="instructions">
-          <li>Find the gold and return to (1,1)</li>
-          <li>Avoid pits and the Wumpus</li>
+          <li>W: Move forward</li>
+          <li>Arrow keys: Turn direction</li>
+          <li>A/D: Turn left/right</li>
+          <li>G/Space: Grab gold</li>
+          <li>Find gold, return to (1,1)</li>
           <li>Breeze = pit nearby</li>
           <li>Stench = Wumpus nearby</li>
-          <li>Hold Shift to reveal all cells</li>
         </ul>
       </div>
     </div>

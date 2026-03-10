@@ -127,15 +127,146 @@ function App() {
   const [showAll, setShowAll] = useState(false);          // Debug mode: show all cells (Shift key)
 
   /**
+   * AGENT ACTIONS
+   * =============
+   * All actions the agent can perform in the world
+   * These must be defined BEFORE the useEffect that uses them
+   */
+
+  /**
+   * Move in Direction
+   * Sets agent direction and moves forward in one action
+   */
+  const moveInDirection = useCallback((direction) => {
+    if (gameStatus !== 'playing') return;
+    
+    setAgentDir(direction);
+    
+    let newRow = agentPos.row;
+    let newCol = agentPos.col;
+
+    // Calculate new position based on direction
+    switch (direction) {
+      case 'right':
+        newCol += 1;
+        break;
+      case 'up':
+        newRow += 1;
+        break;
+      case 'left':
+        newCol -= 1;
+        break;
+      case 'down':
+        newRow -= 1;
+        break;
+      default:
+        break;
+    }
+
+    // Only move if new position is within grid boundaries (1-4)
+    if (newRow >= 1 && newRow <= 4 && newCol >= 1 && newCol <= 4) {
+      setAgentPos({ row: newRow, col: newCol });
+      setVisitedCells(prev => new Set([...prev, `${newRow}-${newCol}`]));
+      setScore(prev => prev - 1);
+      setMoves(prev => prev + 1);
+    }
+  }, [gameStatus, agentPos]);
+
+  /**
+   * Move Forward
+   * Moves agent one cell in the direction it's currently facing
+   */
+  const moveForward = useCallback(() => {
+    if (gameStatus !== 'playing') return;
+
+    let newRow = agentPos.row;
+    let newCol = agentPos.col;
+
+    switch (agentDir) {
+      case 'right':
+        newCol += 1;
+        break;
+      case 'up':
+        newRow += 1;
+        break;
+      case 'left':
+        newCol -= 1;
+        break;
+      case 'down':
+        newRow -= 1;
+        break;
+      default:
+        break;
+    }
+
+    if (newRow >= 1 && newRow <= 4 && newCol >= 1 && newCol <= 4) {
+      setAgentPos({ row: newRow, col: newCol });
+      setVisitedCells(prev => new Set([...prev, `${newRow}-${newCol}`]));
+      setScore(prev => prev - 1);
+      setMoves(prev => prev + 1);
+    }
+  }, [gameStatus, agentPos, agentDir]);
+
+  /**
+   * Turn Left
+   */
+  const turnLeft = useCallback(() => {
+    if (gameStatus !== 'playing') return;
+    const dirs = ['right', 'up', 'left', 'down'];
+    const currentIndex = dirs.indexOf(agentDir);
+    setAgentDir(dirs[(currentIndex + 1) % 4]);
+    setScore(prev => prev - 1);
+    setMoves(prev => prev + 1);
+  }, [gameStatus, agentDir]);
+
+  /**
+   * Turn Right
+   */
+  const turnRight = useCallback(() => {
+    if (gameStatus !== 'playing') return;
+    const dirs = ['right', 'up', 'left', 'down'];
+    const currentIndex = dirs.indexOf(agentDir);
+    setAgentDir(dirs[(currentIndex + 3) % 4]);
+    setScore(prev => prev - 1);
+    setMoves(prev => prev + 1);
+  }, [gameStatus, agentDir]);
+
+  /**
+   * Grab Gold
+   */
+  const grab = useCallback(() => {
+    if (gameStatus !== 'playing') return;
+    
+    const cellKey = Object.keys(worldState).find(
+      key => worldState[key].row === agentPos.row && worldState[key].col === agentPos.col
+    );
+    const cell = worldState[cellKey];
+
+    if (cell.items.includes('gold') && !hasGold) {
+      setHasGold(true);
+      setScore(prev => prev + 1000);
+    }
+  }, [gameStatus, worldState, agentPos, hasGold]);
+
+  /**
+   * Reset Game
+   */
+  const reset = useCallback(() => {
+    const newWorld = generateWorld(numPits);
+    setWorldState(newWorld);
+    setAgentPos({ row: 1, col: 1 });
+    setAgentDir('right');
+    setVisitedCells(new Set(['1-1']));
+    setHasGold(false);
+    setGameStatus('playing');
+    setScore(0);
+    setMoves(0);
+  }, [numPits, generateWorld]);
+
+  /**
    * KEYBOARD CONTROLS
    * =================
    * Handles all keyboard input for the game
-   * - W: Move forward in current direction
-   * - A/D: Turn left/right (rotate 90°)
-   * - Arrow Keys: Move in that direction (changes facing + moves)
-   * - G/Space: Grab gold at current position
-   * - R: Reset game
-   * - Shift: Hold to reveal entire world (debug mode)
    */
   useEffect(() => {
     const handleKeyDown = (e) => {
@@ -249,158 +380,6 @@ function App() {
   useEffect(() => {
     checkCurrentCell();
   }, [agentPos, checkCurrentCell]);
-
-  /**
-   * AGENT ACTIONS
-   * =============
-   * All actions the agent can perform in the world
-   */
-
-  /**
-   * Move in Direction
-   * Sets agent direction and moves forward in one action
-   */
-  const moveInDirection = useCallback((direction) => {
-    if (gameStatus !== 'playing') return;
-    
-    setAgentDir(direction);
-    
-    let newRow = agentPos.row;
-    let newCol = agentPos.col;
-
-    // Calculate new position based on direction
-    switch (direction) {
-      case 'right':
-        newCol += 1;
-        break;
-      case 'up':
-        newRow += 1;
-        break;
-      case 'left':
-        newCol -= 1;
-        break;
-      case 'down':
-        newRow -= 1;
-        break;
-      default:
-        break;
-    }
-
-    // Only move if new position is within grid boundaries (1-4)
-    if (newRow >= 1 && newRow <= 4 && newCol >= 1 && newCol <= 4) {
-      setAgentPos({ row: newRow, col: newCol });
-      setVisitedCells(prev => new Set([...prev, `${newRow}-${newCol}`]));
-      setScore(prev => prev - 1);
-      setMoves(prev => prev + 1);
-    }
-  }, [gameStatus, agentPos]);
-
-  /**
-   * Move Forward
-   * Moves agent one cell in the direction it's currently facing
-   * - Costs 1 point per move
-   * - Cannot move outside grid boundaries
-   */
-  const moveForward = useCallback(() => {
-    if (gameStatus !== 'playing') return;
-
-    let newRow = agentPos.row;
-    let newCol = agentPos.col;
-
-    // Calculate new position based on current direction
-    switch (agentDir) {
-      case 'right':
-        newCol += 1;  // Move right (increase column)
-        break;
-      case 'up':
-        newRow += 1;  // Move up (increase row)
-        break;
-      case 'left':
-        newCol -= 1;  // Move left (decrease column)
-        break;
-      case 'down':
-        newRow -= 1;  // Move down (decrease row)
-        break;
-      default:
-        break;
-    }
-
-    // Only move if new position is within grid boundaries (1-4)
-    if (newRow >= 1 && newRow <= 4 && newCol >= 1 && newCol <= 4) {
-      setAgentPos({ row: newRow, col: newCol });
-      setVisitedCells(prev => new Set([...prev, `${newRow}-${newCol}`]));
-      setScore(prev => prev - 1);  // Each move costs 1 point
-      setMoves(prev => prev + 1);
-    }
-  }, [gameStatus, agentPos, agentDir]);
-
-  /**
-   * Turn Left
-   * Rotates agent 90 degrees counter-clockwise
-   * Direction cycle: right → up → left → down → right
-   * Costs 1 point per turn
-   */
-  const turnLeft = useCallback(() => {
-    if (gameStatus !== 'playing') return;
-    const dirs = ['right', 'up', 'left', 'down'];
-    const currentIndex = dirs.indexOf(agentDir);
-    setAgentDir(dirs[(currentIndex + 1) % 4]);  // Rotate counter-clockwise
-    setScore(prev => prev - 1);
-    setMoves(prev => prev + 1);
-  }, [gameStatus, agentDir]);
-
-  /**
-   * Turn Right
-   * Rotates agent 90 degrees clockwise
-   * Direction cycle: right → down → left → up → right
-   * Costs 1 point per turn
-   */
-  const turnRight = useCallback(() => {
-    if (gameStatus !== 'playing') return;
-    const dirs = ['right', 'up', 'left', 'down'];
-    const currentIndex = dirs.indexOf(agentDir);
-    setAgentDir(dirs[(currentIndex + 3) % 4]);  // Rotate clockwise (same as -1 mod 4)
-    setScore(prev => prev - 1);
-    setMoves(prev => prev + 1);
-  }, [gameStatus, agentDir]);
-
-  /**
-   * Grab Gold
-   * Picks up gold at current position if present
-   * - Rewards 1000 points
-   * - Agent can only carry one gold at a time
-   */
-  const grab = useCallback(() => {
-    if (gameStatus !== 'playing') return;
-    
-    // Find current cell
-    const cellKey = Object.keys(worldState).find(
-      key => worldState[key].row === agentPos.row && worldState[key].col === agentPos.col
-    );
-    const cell = worldState[cellKey];
-
-    // Pick up gold if present and not already carrying gold
-    if (cell.items.includes('gold') && !hasGold) {
-      setHasGold(true);
-      setScore(prev => prev + 1000);  // Big reward for finding gold
-    }
-  }, [gameStatus, worldState, agentPos, hasGold]);
-
-  /**
-   * Reset Game
-   * Generates a new world and resets all game state
-   */
-  const reset = useCallback(() => {
-    const newWorld = generateWorld(numPits);
-    setWorldState(newWorld);
-    setAgentPos({ row: 1, col: 1 });
-    setAgentDir('right');
-    setVisitedCells(new Set(['1-1']));
-    setHasGold(false);
-    setGameStatus('playing');
-    setScore(0);
-    setMoves(0);
-  });
 
   /**
    * Handle Pit Count Change

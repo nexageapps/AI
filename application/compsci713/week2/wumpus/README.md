@@ -1,25 +1,45 @@
-# Wumpus World - COMPSCI 713
+# 🎮 Wumpus World - COMPSCI 713
 
 Interactive visualization of the Wumpus World problem from COMPSCI 713 Week 2: Symbolic Logic.
 
-## Overview
+[![React](https://img.shields.io/badge/React-18.2.0-blue.svg)](https://reactjs.org/)
+[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
-This React application visualizes a 4x4 grid representing the Wumpus World environment with:
-- Agent starting position
-- Wumpus (monster)
-- Pits (hazards)
-- Gold (treasure)
-- Perceptions (stench, breeze)
+## 🌟 Overview
 
-## Setup
+This React application provides an interactive visualization of the classic Wumpus World AI problem, featuring:
+- 🤖 Intelligent agent with directional movement
+- 👹 Wumpus (monster to avoid)
+- 🕳️ Pits (deadly hazards)
+- 🏆 Gold (treasure to collect)
+- 💨 Stench & 🌬️ Breeze (perceptions)
+- 🎯 Fog of war exploration
+- 📊 Real-time score tracking
+
+## 🚀 Quick Start
+
+### Installation
 
 ```bash
 cd application/compsci713/week2/wumpus
 npm install
+```
+
+### Development
+
+```bash
 npm start
 ```
 
 The application will open at `http://localhost:3000`
+
+### Build for Production
+
+```bash
+npm run build
+```
+
+This creates an optimized production build in the `build/` folder.
 
 ## Grid Layout
 

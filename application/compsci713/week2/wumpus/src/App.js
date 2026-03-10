@@ -259,7 +259,7 @@ function App() {
    * Move in Direction
    * Sets agent direction and moves forward in one action
    */
-  const moveInDirection = (direction) => {
+  const moveInDirection = useCallback((direction) => {
     if (gameStatus !== 'playing') return;
     
     setAgentDir(direction);
@@ -292,7 +292,7 @@ function App() {
       setScore(prev => prev - 1);
       setMoves(prev => prev + 1);
     }
-  };
+  }, [gameStatus, agentPos]);
 
   /**
    * Move Forward

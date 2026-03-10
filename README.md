@@ -247,7 +247,7 @@ graph TD
     Expert --> E6[Cutting-Edge Research]
     
     Expert --> NextLevel[Next Level: Production LLMs]
-    NextLevel --> LLMRepo[LLM Repository]
+    NextLevel --> LLMRepo["<a href='https://github.com/nexageapps/llm'>LLM Repository</a>"]
     
     style Start fill:#e1f5ff
     style Basic fill:#fff4e1
@@ -256,6 +256,8 @@ graph TD
     style Expert fill:#f5e1ff
     style NextLevel fill:#ffe1e1
     style LLMRepo fill:#ff6b6b,color:#fff
+    
+    click LLMRepo "https://github.com/nexageapps/llm" "Go to LLM Repository"
 ```
 
 ---
@@ -330,7 +332,7 @@ MIT License - See [LICENSE](./LICENSE) for details.
 
 **Happy Learning!**
 
-[![GitHub stars](https://img.shields.io/github/stars/nexageapps/llm?style=social)](https://github.com/nexageapps/llm)
+**[Continue to Production LLMs →](https://github.com/nexageapps/llm)**
 [![Buy me a book](https://img.shields.io/badge/Buy%20Me%20A%20Book-Support-yellow.svg?style=for-the-badge)](https://buymeacoffee.com/fcc4sbsx5f6)
 
 </div>

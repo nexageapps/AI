@@ -253,18 +253,13 @@ MIT License - See [LICENSE](./LICENSE) for details.
 
 ### ⭐ If you find this helpful, please star the repository! ⭐
 
-<br/>
-
 *Made by a student, for students*
-
 **Happy Learning!**
 
 ### Ready for the Next Level?
-
 [![Continue to Production LLMs](https://img.shields.io/badge/Continue%20to%20Production%20LLMs-Next%20Step-2ECC71.svg?style=for-the-badge&logo=github&logoColor=white)](https://github.com/nexageapps/llm)
 
 ### Support This Project
-
 [![Buy me a book](https://img.shields.io/badge/Buy%20Me%20A%20Book-Support%20This%20Project-FFDD00.svg?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/fcc4sbsx5f6)
 
 *Every contribution helps create more free educational content!*

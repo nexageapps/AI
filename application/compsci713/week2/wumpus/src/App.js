@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import WumpusGrid from './components/WumpusGrid';
 import Sidebar from './components/Sidebar';
 import GameOverlay from './components/GameOverlay';
@@ -223,11 +223,7 @@ function App() {
    * 1. Death conditions (pit or Wumpus)
    * 2. Victory condition (back at start with gold)
    */
-  useEffect(() => {
-    checkCurrentCell();
-  }, [agentPos]);
-
-  const checkCurrentCell = () => {
+  const checkCurrentCell = useCallback(() => {
     // Find the cell data for agent's current position
     const cellKey = Object.keys(worldState).find(
       key => worldState[key].row === agentPos.row && worldState[key].col === agentPos.col

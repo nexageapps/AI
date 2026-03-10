@@ -16,7 +16,43 @@ function App() {
    * 5. Pits are placed randomly (not at start, not adjacent to start)
    * 6. Perceptions (stench/breeze) are added to cells adjacent to hazards
    */
-  const generateWorld = (numPits = 3) => {
+  
+  /**
+   * PERCEPTION LOGIC
+   * ================
+   * Adds a perception (stench or breeze) to all cells adjacent to a hazard.
+   * Adjacent means: up, down, left, right (not diagonal)
+   * 
+   * @param {Object} world - The world grid
+   * @param {number} row - Row of the hazard
+   * @param {number} col - Column of the hazard
+   * @param {string} perception - Type of perception ('stench' or 'breeze')
+   */
+  const addPerception = useCallback((world, row, col, perception) => {
+    // Define all 4 adjacent cells (up, down, left, right)
+    const adjacent = [
+      { r: row - 1, c: col },  // below
+      { r: row + 1, c: col },  // above
+      { r: row, c: col - 1 },  // left
+      { r: row, c: col + 1 }   // right
+    ];
+
+    // Add perception to each valid adjacent cell
+    adjacent.forEach(({ r, c }) => {
+      // Check if cell is within grid boundaries
+      if (r >= 1 && r <= 4 && c >= 1 && c <= 4) {
+        const key = Object.keys(world).find(
+          k => world[k].row === r && world[k].col === c
+        );
+        // Add perception if not already present
+        if (key && !world[key].items.includes(perception)) {
+          world[key].items.push(perception);
+        }
+      }
+    });
+  }, []);
+
+  const generateWorld = useCallback((numPits = 3) => {
     // Initialize empty 4x4 grid
     const world = {};
     for (let row = 1; row <= 4; row++) {
@@ -74,42 +110,7 @@ function App() {
     });
 
     return world;
-  };
-
-  /**
-   * PERCEPTION LOGIC
-   * ================
-   * Adds a perception (stench or breeze) to all cells adjacent to a hazard.
-   * Adjacent means: up, down, left, right (not diagonal)
-   * 
-   * @param {Object} world - The world grid
-   * @param {number} row - Row of the hazard
-   * @param {number} col - Column of the hazard
-   * @param {string} perception - Type of perception ('stench' or 'breeze')
-   */
-  const addPerception = (world, row, col, perception) => {
-    // Define all 4 adjacent cells (up, down, left, right)
-    const adjacent = [
-      { r: row - 1, c: col },  // below
-      { r: row + 1, c: col },  // above
-      { r: row, c: col - 1 },  // left
-      { r: row, c: col + 1 }   // right
-    ];
-
-    // Add perception to each valid adjacent cell
-    adjacent.forEach(({ r, c }) => {
-      // Check if cell is within grid boundaries
-      if (r >= 1 && r <= 4 && c >= 1 && c <= 4) {
-        const key = Object.keys(world).find(
-          k => world[k].row === r && world[k].col === c
-        );
-        // Add perception if not already present
-        if (key && !world[key].items.includes(perception)) {
-          world[key].items.push(perception);
-        }
-      }
-    });
-  };
+  }, [addPerception]);
 
   // ==================
   // GAME STATE

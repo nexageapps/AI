@@ -23,18 +23,18 @@
         }
 
         .container {
-            max-width: 1200px;
+            max-width: 1000px;
             width: 100%;
         }
 
         .uoa-badge {
             text-align: center;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
         }
 
         .uoa-badge img {
-            width: 80px;
-            height: 80px;
+            width: 50px;
+            height: 50px;
             filter: brightness(0) invert(1);
             opacity: 0.9;
         }
@@ -42,34 +42,34 @@
         .header {
             text-align: center;
             color: white;
-            margin-bottom: 50px;
+            margin-bottom: 30px;
         }
 
         .header h1 {
-            font-size: 3rem;
-            margin-bottom: 10px;
+            font-size: 1.8rem;
+            margin-bottom: 8px;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
             font-weight: 700;
         }
 
         .header .subtitle {
-            font-size: 1.3rem;
+            font-size: 1rem;
             opacity: 0.95;
             font-weight: 500;
-            margin-bottom: 8px;
+            margin-bottom: 5px;
         }
 
         .header .institution {
-            font-size: 1.1rem;
+            font-size: 0.9rem;
             opacity: 0.85;
             font-weight: 400;
         }
 
         .games-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 30px;
-            margin-bottom: 40px;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
         }
 
         .game-card {
@@ -210,28 +210,57 @@
                 font-size: 2rem;
             }
 
+            .header .subtitle {
+                font-size: 1.1rem;
+            }
+
             .games-grid {
                 grid-template-columns: 1fr;
+            }
+
+            .game-card {
+                padding: 25px;
+            }
+
+            .game-icon {
+                font-size: 3rem;
             }
         }
     </style>
 </head>
 <body>
     <div class="container">
+        <div class="uoa-badge">
+            <svg width="80" height="80" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="50" cy="50" r="45" stroke="white" stroke-width="3" opacity="0.9"/>
+                <path d="M50 20 L60 45 L50 40 L40 45 Z" fill="white" opacity="0.9"/>
+                <rect x="35" y="50" width="30" height="25" fill="white" opacity="0.9"/>
+                <rect x="42" y="55" width="4" height="8" fill="#00467F"/>
+                <rect x="54" y="55" width="4" height="8" fill="#00467F"/>
+                <rect x="42" y="66" width="4" height="9" fill="#00467F"/>
+                <rect x="54" y="66" width="4" height="9" fill="#00467F"/>
+            </svg>
+        </div>
+        
         <div class="header">
-            <h1>🎮 AI & ML Interactive Demos</h1>
-            <p>University of Auckland - Hands-on Learning Experiences</p>
+            <h1>🎮 Interactive AI Demonstrations</h1>
+            <p class="subtitle">Hands-on Learning Experiences</p>
+            <p class="institution">University of Auckland • COMPSCI Courses</p>
         </div>
 
         <div class="games-grid">
             <!-- Wumpus World Game -->
             <a href="./wumpus/" class="game-card">
                 <div class="game-icon">🏰</div>
-                <div class="game-title">Wumpus World</div>
-                <div class="game-course">COMPSCI 713 - AI Fundamentals</div>
+                <div class="game-title">
+                    Wumpus World
+                    <span class="status-badge">LIVE</span>
+                </div>
+                <div class="game-course">COMPSCI 713 • AI Fundamentals</div>
                 <div class="game-description">
                     Navigate a dangerous cave using logical reasoning and knowledge representation. 
-                    Avoid pits and the Wumpus while finding the gold!
+                    Avoid pits and the Wumpus while finding the gold! Learn how AI agents make 
+                    decisions in uncertain environments.
                 </div>
                 <div class="game-concepts">
                     <span class="concept-tag">Symbolic Logic</span>
@@ -239,17 +268,21 @@
                     <span class="concept-tag">Inference</span>
                     <span class="concept-tag">Agent-based AI</span>
                 </div>
-                <span class="play-button">Play Now →</span>
+                <span class="play-button">Launch Game →</span>
             </a>
 
             <!-- Gradient Descent Game -->
             <a href="./gradient-descent/" class="game-card">
                 <div class="game-icon">⛰️</div>
-                <div class="game-title">Mountain Explorer</div>
-                <div class="game-course">COMPSCI 714 - Neural Networks</div>
+                <div class="game-title">
+                    Mountain Explorer
+                    <span class="status-badge">LIVE</span>
+                </div>
+                <div class="game-course">COMPSCI 714 • Neural Networks</div>
                 <div class="game-description">
-                    Guide a ball down a mountain to find the lowest valley. 
-                    Learn how gradient descent optimization works in machine learning!
+                    Guide a ball down a mountain to find the lowest valley using gradient descent. 
+                    Experiment with learning rates and see how optimization algorithms work in 
+                    machine learning training!
                 </div>
                 <div class="game-concepts">
                     <span class="concept-tag">Gradient Descent</span>
@@ -257,17 +290,21 @@
                     <span class="concept-tag">Learning Rate</span>
                     <span class="concept-tag">Local Minima</span>
                 </div>
-                <span class="play-button">Play Now →</span>
+                <span class="play-button">Launch Game →</span>
             </a>
         </div>
 
         <div class="footer">
-            <p>
-                Part of the <a href="https://github.com/nexageapps/AI" target="_blank">AI & ML Roadmap</a> project
-            </p>
-            <p style="margin-top: 10px; opacity: 0.8;">
-                Created by a Master of AI student at the University of Auckland
-            </p>
+            <a href="https://github.com/nexageapps/AI" target="_blank" class="repo-link">
+                📚 View Full AI & ML Roadmap on GitHub
+            </a>
+            <div class="credits">
+                <p>Part of the open-source AI & ML learning roadmap</p>
+                <p style="margin-top: 8px;">Created by a Master of AI student at the University of Auckland</p>
+                <p style="margin-top: 8px; font-size: 0.85rem; opacity: 0.7;">
+                    60+ lessons • Basic to Expert • Zero to Language Models
+                </p>
+            </div>
         </div>
     </div>
 </body>

@@ -23,18 +23,18 @@
         }
 
         .container {
-            max-width: 1200px;
+            max-width: 1000px;
             width: 100%;
         }
 
         .uoa-badge {
             text-align: center;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
         }
 
         .uoa-badge img {
-            width: 80px;
-            height: 80px;
+            width: 50px;
+            height: 50px;
             filter: brightness(0) invert(1);
             opacity: 0.9;
         }
@@ -42,142 +42,144 @@
         .header {
             text-align: center;
             color: white;
-            margin-bottom: 50px;
+            margin-bottom: 30px;
         }
 
         .header h1 {
-            font-size: 3rem;
-            margin-bottom: 10px;
+            font-size: 1.8rem;
+            margin-bottom: 8px;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
             font-weight: 700;
         }
 
         .header .subtitle {
-            font-size: 1.3rem;
+            font-size: 1rem;
             opacity: 0.95;
             font-weight: 500;
-            margin-bottom: 8px;
+            margin-bottom: 5px;
         }
 
         .header .institution {
-            font-size: 1.1rem;
+            font-size: 0.9rem;
             opacity: 0.85;
             font-weight: 400;
         }
 
         .games-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 30px;
-            margin-bottom: 40px;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
         }
 
         .game-card {
             background: white;
-            border-radius: 20px;
-            padding: 35px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             cursor: pointer;
             text-decoration: none;
             color: inherit;
             display: block;
-            border-top: 5px solid #00467F;
+            border-top: 4px solid #00467F;
         }
 
         .game-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+            transform: translateY(-5px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.4);
             border-top-color: #0066CC;
         }
 
         .game-icon {
-            font-size: 4rem;
-            margin-bottom: 20px;
+            font-size: 2.5rem;
+            margin-bottom: 12px;
             text-align: center;
         }
 
         .game-title {
-            font-size: 1.8rem;
+            font-size: 1.4rem;
             font-weight: bold;
-            margin-bottom: 10px;
+            margin-bottom: 8px;
             color: #333;
         }
 
         .game-course {
-            font-size: 0.95rem;
+            font-size: 0.75rem;
             color: #00467F;
             font-weight: 700;
-            margin-bottom: 15px;
+            margin-bottom: 12px;
             text-transform: uppercase;
             letter-spacing: 0.5px;
             display: flex;
             align-items: center;
-            gap: 8px;
+            gap: 6px;
         }
 
         .game-course::before {
             content: "🎓";
-            font-size: 1.2rem;
+            font-size: 1rem;
         }
 
         .game-description {
             color: #666;
-            line-height: 1.6;
-            margin-bottom: 20px;
+            line-height: 1.5;
+            margin-bottom: 15px;
+            font-size: 0.9rem;
         }
 
         .game-concepts {
             display: flex;
             flex-wrap: wrap;
-            gap: 8px;
-            margin-bottom: 20px;
+            gap: 6px;
+            margin-bottom: 15px;
         }
 
         .concept-tag {
             background: #f0f0f0;
-            padding: 5px 12px;
-            border-radius: 15px;
-            font-size: 0.85rem;
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 0.75rem;
             color: #555;
         }
 
         .play-button {
             background: linear-gradient(135deg, #00467F 0%, #0066CC 100%);
             color: white;
-            padding: 14px 35px;
-            border-radius: 25px;
+            padding: 10px 24px;
+            border-radius: 20px;
             border: none;
-            font-size: 1.05rem;
+            font-size: 0.9rem;
             font-weight: 600;
             cursor: pointer;
             transition: all 0.3s ease;
             display: inline-block;
-            box-shadow: 0 4px 15px rgba(0, 70, 127, 0.3);
+            box-shadow: 0 3px 12px rgba(0, 70, 127, 0.3);
         }
 
         .play-button:hover {
-            transform: translateX(5px);
-            box-shadow: 0 6px 20px rgba(0, 70, 127, 0.4);
+            transform: translateX(3px);
+            box-shadow: 0 4px 15px rgba(0, 70, 127, 0.4);
         }
 
         .footer {
             text-align: center;
             color: white;
-            margin-top: 50px;
-            padding-top: 30px;
+            margin-top: 30px;
+            padding-top: 20px;
             border-top: 1px solid rgba(255, 255, 255, 0.2);
         }
 
         .footer .repo-link {
             display: inline-block;
-            margin: 15px 0;
-            padding: 12px 25px;
+            margin: 10px 0;
+            padding: 10px 20px;
             background: rgba(255, 255, 255, 0.1);
-            border-radius: 25px;
+            border-radius: 20px;
             text-decoration: none;
             color: white;
             font-weight: 600;
+            font-size: 0.9rem;
             transition: all 0.3s ease;
             backdrop-filter: blur(10px);
         }
@@ -188,86 +190,181 @@
         }
 
         .footer .credits {
-            margin-top: 20px;
+            margin-top: 15px;
             opacity: 0.85;
-            font-size: 0.95rem;
+            font-size: 0.85rem;
         }
 
         .status-badge {
             display: inline-block;
-            padding: 6px 14px;
+            padding: 4px 10px;
             background: rgba(76, 175, 80, 0.2);
             color: #4CAF50;
-            border-radius: 15px;
-            font-size: 0.85rem;
+            border-radius: 12px;
+            font-size: 0.7rem;
             font-weight: 600;
-            margin-left: 10px;
+            margin-left: 8px;
             border: 1px solid rgba(76, 175, 80, 0.3);
         }
 
         @media (max-width: 768px) {
+            body {
+                padding: 15px;
+            }
+
+            .uoa-badge img {
+                width: 40px;
+                height: 40px;
+            }
+
+            .header {
+                margin-bottom: 20px;
+            }
+
             .header h1 {
-                font-size: 2rem;
+                font-size: 1.5rem;
+            }
+
+            .header .subtitle {
+                font-size: 0.9rem;
+            }
+
+            .header .institution {
+                font-size: 0.8rem;
             }
 
             .games-grid {
                 grid-template-columns: 1fr;
+                gap: 15px;
+            }
+
+            .game-card {
+                padding: 18px;
+            }
+
+            .game-icon {
+                font-size: 2rem;
+                margin-bottom: 10px;
+            }
+
+            .game-title {
+                font-size: 1.2rem;
+            }
+
+            .game-course {
+                font-size: 0.7rem;
+            }
+
+            .game-description {
+                font-size: 0.85rem;
+                line-height: 1.4;
+            }
+
+            .concept-tag {
+                font-size: 0.7rem;
+                padding: 3px 8px;
+            }
+
+            .play-button {
+                padding: 8px 20px;
+                font-size: 0.85rem;
+            }
+
+            .footer .credits {
+                font-size: 0.8rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header h1 {
+                font-size: 1.3rem;
+            }
+
+            .game-card {
+                padding: 15px;
+            }
+
+            .game-title {
+                font-size: 1.1rem;
+            }
+
+            .status-badge {
+                font-size: 0.65rem;
+                padding: 3px 8px;
             }
         }
     </style>
 </head>
 <body>
     <div class="container">
+        <div class="uoa-badge">
+            <svg width="50" height="50" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="50" cy="50" r="45" stroke="white" stroke-width="3" opacity="0.9"/>
+                <path d="M50 20 L60 45 L50 40 L40 45 Z" fill="white" opacity="0.9"/>
+                <rect x="35" y="50" width="30" height="25" fill="white" opacity="0.9"/>
+                <rect x="42" y="55" width="4" height="8" fill="#00467F"/>
+                <rect x="54" y="55" width="4" height="8" fill="#00467F"/>
+                <rect x="42" y="66" width="4" height="9" fill="#00467F"/>
+                <rect x="54" y="66" width="4" height="9" fill="#00467F"/>
+            </svg>
+        </div>
+        
         <div class="header">
-            <h1>🎮 AI & ML Interactive Demos</h1>
-            <p>University of Auckland - Hands-on Learning Experiences</p>
+            <h1>🎮 Interactive AI Demonstrations</h1>
+            <p class="subtitle">Hands-on Learning Experiences</p>
+            <p class="institution">University of Auckland • COMPSCI</p>
         </div>
 
         <div class="games-grid">
             <!-- Wumpus World Game -->
             <a href="./wumpus/" class="game-card">
                 <div class="game-icon">🏰</div>
-                <div class="game-title">Wumpus World</div>
-                <div class="game-course">COMPSCI 713 - AI Fundamentals</div>
+                <div class="game-title">
+                    Wumpus World
+                    <span class="status-badge">LIVE</span>
+                </div>
+                <div class="game-course">COMPSCI 713 • AI Fundamentals</div>
                 <div class="game-description">
-                    Navigate a dangerous cave using logical reasoning and knowledge representation. 
-                    Avoid pits and the Wumpus while finding the gold!
+                    Navigate a dangerous cave using logical reasoning. Avoid pits and the Wumpus while finding gold!
                 </div>
                 <div class="game-concepts">
-                    <span class="concept-tag">Symbolic Logic</span>
-                    <span class="concept-tag">Knowledge Representation</span>
+                    <span class="concept-tag">Logic</span>
+                    <span class="concept-tag">Knowledge Rep</span>
                     <span class="concept-tag">Inference</span>
-                    <span class="concept-tag">Agent-based AI</span>
+                    <span class="concept-tag">Agents</span>
                 </div>
-                <span class="play-button">Play Now →</span>
+                <span class="play-button">Launch Game →</span>
             </a>
 
             <!-- Gradient Descent Game -->
             <a href="./gradient-descent/" class="game-card">
                 <div class="game-icon">⛰️</div>
-                <div class="game-title">Mountain Explorer</div>
-                <div class="game-course">COMPSCI 714 - Neural Networks</div>
+                <div class="game-title">
+                    Mountain Explorer
+                    <span class="status-badge">LIVE</span>
+                </div>
+                <div class="game-course">COMPSCI 714 • Neural Networks</div>
                 <div class="game-description">
-                    Guide a ball down a mountain to find the lowest valley. 
-                    Learn how gradient descent optimization works in machine learning!
+                    Guide a ball down a mountain to find the lowest valley. Learn gradient descent optimization!
                 </div>
                 <div class="game-concepts">
                     <span class="concept-tag">Gradient Descent</span>
                     <span class="concept-tag">Optimization</span>
                     <span class="concept-tag">Learning Rate</span>
-                    <span class="concept-tag">Local Minima</span>
+                    <span class="concept-tag">Minima</span>
                 </div>
-                <span class="play-button">Play Now →</span>
+                <span class="play-button">Launch Game →</span>
             </a>
         </div>
 
         <div class="footer">
-            <p>
-                Part of the <a href="https://github.com/nexageapps/AI" target="_blank">AI & ML Roadmap</a> project
-            </p>
-            <p style="margin-top: 10px; opacity: 0.8;">
-                Created by a Master of AI student at the University of Auckland
-            </p>
+            <a href="https://github.com/nexageapps/AI" target="_blank" class="repo-link">
+                📚 View Full Roadmap on GitHub
+            </a>
+            <div class="credits">
+                <p>Open-source AI & ML learning roadmap</p>
+                <p style="margin-top: 5px;">Master of AI • University of Auckland</p>
+            </div>
         </div>
     </div>
 </body>

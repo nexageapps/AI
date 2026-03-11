@@ -37,11 +37,11 @@ const Controls = ({ onMoveForward, onTurnLeft, onTurnRight, onGrab, onReset, dis
       <div className="instructions">
         <h4>How to Play:</h4>
         <ul>
-          <li>Move the agent to find the gold</li>
-          <li>Avoid pits (🕳️) and the Wumpus (👹)</li>
-          <li>Breeze (🌬️) means pit nearby</li>
-          <li>Stench (💨) means Wumpus nearby</li>
-          <li>Grab the gold and return to (1,1)</li>
+          <li>🎯 <strong>Goal:</strong> Find gold and return to (1,1)</li>
+          <li>🌬️ <strong>Breeze:</strong> Pit in adjacent cell</li>
+          <li>💨 <strong>Stench:</strong> Wumpus in adjacent cell</li>
+          <li>⚠️ Avoid pits (🕳️) and Wumpus (👹)</li>
+          <li>🏆 Grab gold when you find it</li>
         </ul>
       </div>
     </div>

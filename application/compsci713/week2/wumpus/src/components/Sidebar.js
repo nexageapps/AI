@@ -42,19 +42,19 @@ const Sidebar = ({
         <h3>Current Perceptions</h3>
         <div className="perceptions">
           {perceptions.length === 0 ? (
-            <div className="perception-item">Nothing detected</div>
+            <div className="perception-item">✅ Nothing detected - Safe!</div>
           ) : (
             perceptions.map((p, i) => (
               <div key={i} className="perception-item">
-                {p === 'stench' && '💨 Stench - Wumpus nearby!'}
-                {p === 'breeze' && '🌬️ Breeze - Pit nearby!'}
-                {p === 'gold' && '🏆 Gold here!'}
+                {p === 'stench' && '💨 Stench - Wumpus in adjacent cell!'}
+                {p === 'breeze' && '🌬️ Breeze - Pit in adjacent cell!'}
+                {p === 'gold' && '🏆 Gold here - Press G to grab!'}
               </div>
             ))
           )}
           {perceptions.includes('stench') && perceptions.includes('breeze') && (
             <div className="perception-warning">
-              ⚠️ Both detected: Multiple hazards nearby!
+              ⚠️ Danger! Multiple hazards nearby!
             </div>
           )}
         </div>
@@ -76,8 +76,16 @@ const Sidebar = ({
       </div>
 
       <div className="sidebar-section hint-section">
-        <h3>💡 Hint</h3>
+        <h3>💡 Game Rules</h3>
         <div className="hint-content">
+          <div className="hint-item">
+            <span className="hint-icon">🌬️</span>
+            <span className="hint-text"><strong>Breeze:</strong> Pit in adjacent cell</span>
+          </div>
+          <div className="hint-item">
+            <span className="hint-icon">💨</span>
+            <span className="hint-text"><strong>Stench:</strong> Wumpus in adjacent cell</span>
+          </div>
           <div className="hint-item">
             <span className="hint-icon">🏆</span>
             <span className="hint-text">Gold in world: {totalGold}</span>
@@ -88,11 +96,11 @@ const Sidebar = ({
       <div className="sidebar-section">
         <h3>How to Play</h3>
         <ul className="instructions">
-          <li>W: Move forward</li>
-          <li>Arrow keys: Face direction</li>
-          <li>A/D: Turn left/right</li>
-          <li>G: Grab gold</li>
-          <li>Return to (1,1) with gold</li>
+          <li><strong>W:</strong> Move forward</li>
+          <li><strong>Arrow keys:</strong> Face direction</li>
+          <li><strong>A/D:</strong> Turn left/right</li>
+          <li><strong>G:</strong> Grab gold</li>
+          <li><strong>Goal:</strong> Return to (1,1) with gold</li>
         </ul>
       </div>
     </div>

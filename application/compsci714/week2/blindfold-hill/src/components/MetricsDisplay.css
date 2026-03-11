@@ -1,0 +1,78 @@
+.metrics-display {
+  background: rgba(255, 255, 255, 0.95);
+  border: 2px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.metrics-display h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #667eea;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.metric-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.875rem;
+  margin-bottom: 0.5rem;
+  background: #f9fafb;
+  border-radius: 8px;
+  border-left: 4px solid #667eea;
+  transition: all 0.3s;
+}
+
+.metric-item:hover {
+  background: #f3f4f6;
+  transform: translateX(5px);
+}
+
+.metric-label {
+  font-size: 0.875rem;
+  color: #6b7280;
+  font-weight: 500;
+}
+
+.metric-value {
+  font-size: 1.125rem;
+  font-weight: bold;
+  color: #667eea;
+  font-family: 'Courier New', monospace;
+}
+
+.concept-info {
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #e5e7eb;
+}
+
+.concept-info h3 {
+  font-size: 1rem;
+  margin-bottom: 0.75rem;
+  color: #667eea;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.concept-item {
+  font-size: 0.875rem;
+  margin-bottom: 0.75rem;
+  padding: 0.75rem;
+  background: #f9fafb;
+  border-radius: 6px;
+  color: #374151;
+  line-height: 1.5;
+  border-left: 3px solid #667eea;
+}
+
+.concept-item strong {
+  color: #667eea;
+  display: block;
+  margin-bottom: 0.25rem;
+}

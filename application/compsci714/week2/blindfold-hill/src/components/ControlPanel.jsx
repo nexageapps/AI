@@ -49,13 +49,13 @@ const ControlPanel = () => {
         />
         <div className="preset-buttons">
           <button onClick={() => handlePresetLearningRate(0.1)} className="preset-btn">
-            Easy (0.1)
+            Easy<br/>0.1
           </button>
           <button onClick={() => handlePresetLearningRate(0.5)} className="preset-btn">
-            Medium (0.5)
+            Medium<br/>0.5
           </button>
           <button onClick={() => handlePresetLearningRate(1.0)} className="preset-btn">
-            Hard (1.0)
+            Hard<br/>1.0
           </button>
         </div>
       </div>
@@ -101,15 +101,15 @@ const ControlPanel = () => {
 
       {gameStatus !== 'playing' && (
         <div className={`status-message ${gameStatus}`}>
-          {gameStatus === 'converged' ? '✓ Converged!' : '✗ Diverged'}
+          {gameStatus === 'converged' ? 'Converged!' : 'Diverged'}
         </div>
       )}
 
       <div className="keyboard-hints">
         <h4>Keyboard Shortcuts</h4>
-        <p><kbd>Space</kbd> - Take Step</p>
-        <p><kbd>P</kbd> - Play/Pause Auto</p>
-        <p><kbd>R</kbd> - Reset Game</p>
+        <p><kbd>Space</kbd> Take Step</p>
+        <p><kbd>P</kbd> Play/Pause</p>
+        <p><kbd>R</kbd> Reset</p>
       </div>
     </div>
   );

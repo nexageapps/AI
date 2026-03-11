@@ -3,10 +3,10 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "/compsci714/week2/gradient-descent-game/",
+  "homepage": "/AI/gradient-descent/",
   "scripts": {
     "dev": "vite",
-    "build": "vite build --outDir docs --base=/compsci714/week2/gradient-descent-game/",
+    "build": "vite build --outDir docs --base=/AI/gradient-descent/",
     "lint": "eslint .",
     "preview": "vite preview"
   },

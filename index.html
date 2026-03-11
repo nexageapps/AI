@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI & ML Interactive Demos - University of Auckland</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            width: 100%;
+        }
+
+        .header {
+            text-align: center;
+            color: white;
+            margin-bottom: 50px;
+        }
+
+        .header h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        .games-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .game-card {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+
+        .game-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+        }
+
+        .game-icon {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .game-title {
+            font-size: 1.8rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .game-course {
+            font-size: 0.9rem;
+            color: #667eea;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .game-description {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .game-concepts {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 20px;
+        }
+
+        .concept-tag {
+            background: #f0f0f0;
+            padding: 5px 12px;
+            border-radius: 15px;
+            font-size: 0.85rem;
+            color: #555;
+        }
+
+        .play-button {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 25px;
+            border: none;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: opacity 0.3s ease;
+            display: inline-block;
+        }
+
+        .play-button:hover {
+            opacity: 0.9;
+        }
+
+        .footer {
+            text-align: center;
+            color: white;
+            margin-top: 40px;
+        }
+
+        .footer a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            border-bottom: 2px solid white;
+        }
+
+        .footer a:hover {
+            opacity: 0.8;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2rem;
+            }
+
+            .games-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🎮 AI & ML Interactive Demos</h1>
+            <p>University of Auckland - Hands-on Learning Experiences</p>
+        </div>
+
+        <div class="games-grid">
+            <!-- Wumpus World Game -->
+            <a href="./wumpus/" class="game-card">
+                <div class="game-icon">🏰</div>
+                <div class="game-title">Wumpus World</div>
+                <div class="game-course">COMPSCI 713 - AI Fundamentals</div>
+                <div class="game-description">
+                    Navigate a dangerous cave using logical reasoning and knowledge representation. 
+                    Avoid pits and the Wumpus while finding the gold!
+                </div>
+                <div class="game-concepts">
+                    <span class="concept-tag">Symbolic Logic</span>
+                    <span class="concept-tag">Knowledge Representation</span>
+                    <span class="concept-tag">Inference</span>
+                    <span class="concept-tag">Agent-based AI</span>
+                </div>
+                <span class="play-button">Play Now →</span>
+            </a>
+
+            <!-- Gradient Descent Game -->
+            <a href="./gradient-descent/" class="game-card">
+                <div class="game-icon">⛰️</div>
+                <div class="game-title">Mountain Explorer</div>
+                <div class="game-course">COMPSCI 714 - Neural Networks</div>
+                <div class="game-description">
+                    Guide a ball down a mountain to find the lowest valley. 
+                    Learn how gradient descent optimization works in machine learning!
+                </div>
+                <div class="game-concepts">
+                    <span class="concept-tag">Gradient Descent</span>
+                    <span class="concept-tag">Optimization</span>
+                    <span class="concept-tag">Learning Rate</span>
+                    <span class="concept-tag">Local Minima</span>
+                </div>
+                <span class="play-button">Play Now →</span>
+            </a>
+        </div>
+
+        <div class="footer">
+            <p>
+                Part of the <a href="https://github.com/nexageapps/AI" target="_blank">AI & ML Roadmap</a> project
+            </p>
+            <p style="margin-top: 10px; opacity: 0.8;">
+                Created by a Master of AI student at the University of Auckland
+            </p>
+        </div>
+    </div>
+</body>
+</html>

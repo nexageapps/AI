@@ -6,6 +6,7 @@ on:
       - main
     paths:
       - 'application/**'
+      - 'index.html'
   workflow_dispatch:
 
 permissions:
@@ -23,6 +24,8 @@ jobs:
     runs-on: ubuntu-latest
     outputs:
       wumpus: ${{ steps.filter.outputs.wumpus }}
+      gradient: ${{ steps.filter.outputs.gradient }}
+      index: ${{ steps.filter.outputs.index }}
     steps:
       - uses: actions/checkout@v4
       - uses: dorny/paths-filter@v2
@@ -31,6 +34,30 @@ jobs:
           filters: |
             wumpus:
               - 'application/compsci713/week2/wumpus/**'
+            gradient:
+              - 'application/compsci714/week2/gradient-descent-game/**'
+            index:
+              - 'index.html'
+
+  # Deploy landing page
+  deploy-index:
+    needs: detect-changes
+    if: needs.detect-changes.outputs.index == 'true' || github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      
+      - name: Deploy index to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: .
+          keep_files: true
+          user_name: 'github-actions[bot]'
+          user_email: 'github-actions[bot]@users.noreply.github.com'
+          exclude_assets: '.github,application,.venv,.vscode,Basic,Intermediate,Advanced,Expert,documentation,archive,logo'
 
   # Build and deploy Wumpus World
   deploy-wumpus:
@@ -63,6 +90,41 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./application/compsci713/week2/wumpus/build
           destination_dir: wumpus
+          keep_files: true
+          user_name: 'github-actions[bot]'
+          user_email: 'github-actions[bot]@users.noreply.github.com'
+
+  # Build and deploy Gradient Descent Game
+  deploy-gradient:
+    needs: detect-changes
+    if: needs.detect-changes.outputs.gradient == 'true' || github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+          cache-dependency-path: application/compsci714/week2/gradient-descent-game/package-lock.json
+      
+      - name: Install dependencies
+        working-directory: application/compsci714/week2/gradient-descent-game
+        run: npm ci
+      
+      - name: Build
+        working-directory: application/compsci714/week2/gradient-descent-game
+        run: npm run build
+      
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./application/compsci714/week2/gradient-descent-game/docs
+          destination_dir: gradient-descent
           keep_files: true
           user_name: 'github-actions[bot]'
           user_email: 'github-actions[bot]@users.noreply.github.com'

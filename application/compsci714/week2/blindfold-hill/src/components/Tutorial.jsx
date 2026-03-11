@@ -19,111 +19,127 @@ const Tutorial = ({ onClose }) => {
       )
     },
     {
-      title: "The Goal",
+      title: "What You See on the Screen",
       content: (
         <>
-          <p>Your goal is to reach the <span className="highlight-green">green target</span> at the bottom of the hill.</p>
-          <p>The <span className="highlight-blue">blue circle with blindfold</span> is you - the player.</p>
-          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='100'%3E%3Ccircle cx='50' cy='50' r='20' fill='%2300d9ff' stroke='white' stroke-width='2'/%3E%3Crect x='40' y='45' width='20' height='8' fill='black'/%3E%3Ctext x='80' y='55' fill='white' font-size='14'%3EYou (blindfolded)%3C/text%3E%3C/svg%3E" alt="Player" />
-          <p>The colored background shows elevation:</p>
+          <p><strong>The Colorful Map:</strong> This shows the hill from above. Different colors mean different heights:</p>
           <ul>
-            <li><span className="color-blue">Blue</span> = Low elevation (good!)</li>
-            <li><span className="color-green">Green/Yellow</span> = Medium elevation</li>
-            <li><span className="color-red">Red</span> = High elevation (bad!)</li>
+            <li><span className="color-blue">Dark Blue</span> = Very low (like a valley - this is where you want to be!)</li>
+            <li><span className="color-green">Light Blue/Green</span> = Medium height</li>
+            <li><span className="color-red">Yellow/Red</span> = Very high (like a mountain top)</li>
           </ul>
+          <p><strong>The Blue Circle:</strong> That's YOU! You have a black blindfold on, so you can't see the colors.</p>
+          <p><strong>The Green Target:</strong> This is your goal - the lowest point on the hill. You win when you reach it!</p>
+          <p><strong>The Yellow Arrow:</strong> This is your helper! It always points downhill (the steepest way down).</p>
         </>
       )
     },
     {
-      title: "The Gradient (Yellow Arrow)",
+      title: "How the Yellow Arrow Works",
       content: (
         <>
-          <p>The <span className="highlight-yellow">yellow arrow</span> shows the <strong>gradient</strong> - the direction of steepest descent.</p>
-          <p><strong>Think of it as:</strong> If you put a ball on the ground, which way would it roll?</p>
+          <p>The yellow arrow is called the <strong>"gradient"</strong> - a fancy word that means "which way is downhill."</p>
+          <p><strong>Think of it like this:</strong></p>
+          <ul>
+            <li>If you put a ball on the ground, which way would it roll? That's the gradient!</li>
+            <li>The arrow always points to where the ground slopes down the most</li>
+          </ul>
           <div className="key-point">
-            <strong>Longer arrow</strong> = Steeper slope (far from goal)<br/>
-            <strong>Shorter arrow</strong> = Flatter slope (near goal)
+            <strong>Arrow Length Tells You:</strong><br/>
+            • Long arrow = Very steep slope (you're far from the bottom)<br/>
+            • Short arrow = Gentle slope (you're getting close!)<br/>
+            • Tiny arrow = Almost flat (you're at the bottom!)
           </div>
-          <p>In AI: The gradient tells us which direction to adjust our model parameters.</p>
+          <p><strong>In Real AI:</strong> Computers use this same idea to learn. They follow the "gradient" to find the best answer, just like you follow the arrow to find the bottom!</p>
         </>
       )
     },
     {
-      title: "Learning Rate (Step Size)",
+      title: "Understanding Step Size",
       content: (
         <>
-          <p>The <strong>Learning Rate</strong> controls how big each step you take is.</p>
+          <p>The <strong>Step Size</strong> (also called "Learning Rate") controls how far you move each time you take a step.</p>
+          
+          <p><strong>Imagine walking down a real hill:</strong></p>
+          
           <div className="comparison">
             <div className="comparison-item">
-              <strong>Small Learning Rate (0.1)</strong>
+              <strong>Small Steps (0.1)</strong>
               <ul>
-                <li>+ Safe, stable steps</li>
-                <li>- Takes many steps to reach goal</li>
-                <li>Best for: Learning the concept</li>
+                <li>+ You won't fall or miss the bottom</li>
+                <li>+ Very safe and steady</li>
+                <li>- Takes a long time (many steps)</li>
+                <li><strong>Like:</strong> Taking baby steps down a hill</li>
               </ul>
             </div>
             <div className="comparison-item">
-              <strong>Large Learning Rate (1.0)</strong>
+              <strong>Big Steps (1.0)</strong>
               <ul>
-                <li>+ Fast progress</li>
-                <li>- Might overshoot and miss the goal</li>
-                <li>Best for: Seeing what happens when too aggressive</li>
+                <li>+ You get there faster (fewer steps)</li>
+                <li>- You might jump over the bottom!</li>
+                <li>- You could bounce back and forth</li>
+                <li><strong>Like:</strong> Taking giant leaps down a hill</li>
               </ul>
             </div>
           </div>
-          <p>In AI: Too small = slow training. Too large = unstable training.</p>
-        </>
-      )
-    },
-    {
-      title: "How to Play",
-      content: (
-        <>
-          <h3>Step 1: Choose Difficulty</h3>
-          <p>Start with <strong>"Bowl (Simple)"</strong> surface and <strong>"Easy (0.1)"</strong> learning rate.</p>
           
-          <h3>Step 2: Take Steps</h3>
-          <ul>
-            <li>Click <strong>"Take Step"</strong> button (or press Space)</li>
-            <li>Watch the blue circle move in the direction of the yellow arrow</li>
-            <li>See the path trail showing where you've been</li>
-          </ul>
-
-          <h3>Step 3: Watch the Metrics</h3>
-          <ul>
-            <li><strong>Iterations:</strong> How many steps you've taken</li>
-            <li><strong>Distance to Goal:</strong> How far from the target</li>
-            <li><strong>Gradient Magnitude:</strong> How steep the slope is</li>
-          </ul>
-
-          <h3>Step 4: Try Auto Mode</h3>
-          <p>Click <strong>"Start Auto"</strong> to watch it solve automatically!</p>
+          <p><strong>The Trick:</strong> You need to find the right step size - not too small (slow) and not too big (unstable)!</p>
+          <p><strong>In Real AI:</strong> This is one of the hardest problems! If the computer's steps are too big, it never learns properly. Too small, and training takes forever!</p>
         </>
       )
     },
     {
-      title: "Success vs Failure",
+      title: "How to Play the Game",
       content: (
         <>
-          <h3>Success!</h3>
-          <p>When you get close enough to the green target, you win!</p>
+          <h3>Step 1: Start Simple</h3>
+          <p>Choose <strong>"Easy - Simple Bowl"</strong> and <strong>Step Size 0.1</strong> for your first try.</p>
+          
+          <h3>Step 2: Take Your First Step</h3>
           <ul>
-            <li>Player turns <span className="highlight-green">green</span></li>
-            <li>Message shows "Converged!"</li>
-            <li>You found the minimum!</li>
+            <li>Click the big <strong>"Take Step"</strong> button</li>
+            <li>Watch the blue circle move in the direction of the yellow arrow</li>
+            <li>See the orange trail showing where you've been</li>
           </ul>
 
-          <h3>Failure</h3>
-          <p>If your learning rate is too high, you might:</p>
+          <h3>Step 3: Keep Going!</h3>
           <ul>
-            <li>Overshoot the target repeatedly</li>
-            <li>Bounce back and forth without getting closer</li>
-            <li>Player turns <span className="highlight-red">red</span></li>
+            <li>Keep clicking "Take Step" to move closer to the green target</li>
+            <li>Watch the numbers: "Distance to Goal" should get smaller</li>
+            <li>The yellow arrow will get shorter as you get closer</li>
+          </ul>
+
+          <h3>Step 4: Try Auto Play</h3>
+          <p>Click <strong>"Auto Play"</strong> to watch the computer solve it automatically! This is how AI learns - step by step, following the gradient.</p>
+        </>
+      )
+    },
+    {
+      title: "What Can Go Wrong?",
+      content: (
+        <>
+          <h3>Success! (You Win)</h3>
+          <p>When you get close to the green target:</p>
+          <ul>
+            <li>Your blue circle turns <span className="highlight-green">green</span></li>
+            <li>You see "Success!" message</li>
+            <li>You found the lowest point!</li>
+          </ul>
+
+          <h3>Failure (Oops!)</h3>
+          <p>If your step size is TOO BIG, bad things happen:</p>
+          <ul>
+            <li><strong>Overshooting:</strong> You jump over the target and land on the other side</li>
+            <li><strong>Bouncing:</strong> You keep jumping back and forth, never reaching the bottom</li>
+            <li>Your circle turns <span className="highlight-red">red</span></li>
+            <li>You see "Try Again" message</li>
           </ul>
 
           <div className="tip">
-            <strong>Tip:</strong> If you diverge, try a smaller learning rate!
+            <strong>What to Do:</strong> If you fail, click "Start Over" and try a SMALLER step size. Start with 0.1 and slowly increase it to find the fastest step size that still works!
           </div>
+          
+          <p><strong>In Real AI:</strong> This is called "divergence" - when the learning rate is too high and the AI never learns properly. Data scientists spend a lot of time finding the right learning rate!</p>
         </>
       )
     },

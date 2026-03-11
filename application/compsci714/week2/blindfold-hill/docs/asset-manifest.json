@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/compsci714/week2/blindfold-hill/static/css/main.51262eb8.css",
+    "main.css": "/compsci714/week2/blindfold-hill/static/css/main.6cdda337.css",
     "main.js": "/compsci714/week2/blindfold-hill/static/js/main.b58b19d9.js",
     "index.html": "/compsci714/week2/blindfold-hill/index.html",
-    "main.51262eb8.css.map": "/compsci714/week2/blindfold-hill/static/css/main.51262eb8.css.map",
+    "main.6cdda337.css.map": "/compsci714/week2/blindfold-hill/static/css/main.6cdda337.css.map",
     "main.b58b19d9.js.map": "/compsci714/week2/blindfold-hill/static/js/main.b58b19d9.js.map"
   },
   "entrypoints": [
-    "static/css/main.51262eb8.css",
+    "static/css/main.6cdda337.css",
     "static/js/main.b58b19d9.js"
   ]
 }

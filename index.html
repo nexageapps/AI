@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI & ML Interactive Demos - University of Auckland</title>
+    <meta name="description" content="Interactive AI and Machine Learning demonstrations for University of Auckland COMPSCI courses">
     <style>
         * {
             margin: 0;
@@ -13,7 +14,7 @@
 
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #00467F 0%, #003366 50%, #001F3F 100%);
             min-height: 100vh;
             display: flex;
             align-items: center;
@@ -26,6 +27,18 @@
             width: 100%;
         }
 
+        .uoa-badge {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .uoa-badge img {
+            width: 80px;
+            height: 80px;
+            filter: brightness(0) invert(1);
+            opacity: 0.9;
+        }
+
         .header {
             text-align: center;
             color: white;
@@ -35,12 +48,21 @@
         .header h1 {
             font-size: 3rem;
             margin-bottom: 10px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            font-weight: 700;
         }
 
-        .header p {
-            font-size: 1.2rem;
-            opacity: 0.9;
+        .header .subtitle {
+            font-size: 1.3rem;
+            opacity: 0.95;
+            font-weight: 500;
+            margin-bottom: 8px;
+        }
+
+        .header .institution {
+            font-size: 1.1rem;
+            opacity: 0.85;
+            font-weight: 400;
         }
 
         .games-grid {
@@ -53,18 +75,20 @@
         .game-card {
             background: white;
             border-radius: 20px;
-            padding: 30px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            padding: 35px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             cursor: pointer;
             text-decoration: none;
             color: inherit;
             display: block;
+            border-top: 5px solid #00467F;
         }
 
         .game-card:hover {
             transform: translateY(-10px);
-            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+            border-top-color: #0066CC;
         }
 
         .game-icon {
@@ -81,10 +105,20 @@
         }
 
         .game-course {
-            font-size: 0.9rem;
-            color: #667eea;
-            font-weight: 600;
+            font-size: 0.95rem;
+            color: #00467F;
+            font-weight: 700;
             margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .game-course::before {
+            content: "🎓";
+            font-size: 1.2rem;
         }
 
         .game-description {
@@ -109,37 +143,66 @@
         }
 
         .play-button {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #00467F 0%, #0066CC 100%);
             color: white;
-            padding: 12px 30px;
+            padding: 14px 35px;
             border-radius: 25px;
             border: none;
-            font-size: 1rem;
+            font-size: 1.05rem;
             font-weight: 600;
             cursor: pointer;
-            transition: opacity 0.3s ease;
+            transition: all 0.3s ease;
             display: inline-block;
+            box-shadow: 0 4px 15px rgba(0, 70, 127, 0.3);
         }
 
         .play-button:hover {
-            opacity: 0.9;
+            transform: translateX(5px);
+            box-shadow: 0 6px 20px rgba(0, 70, 127, 0.4);
         }
 
         .footer {
             text-align: center;
             color: white;
-            margin-top: 40px;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
         }
 
-        .footer a {
-            color: white;
+        .footer .repo-link {
+            display: inline-block;
+            margin: 15px 0;
+            padding: 12px 25px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 25px;
             text-decoration: none;
+            color: white;
             font-weight: 600;
-            border-bottom: 2px solid white;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
         }
 
-        .footer a:hover {
-            opacity: 0.8;
+        .footer .repo-link:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
+        }
+
+        .footer .credits {
+            margin-top: 20px;
+            opacity: 0.85;
+            font-size: 0.95rem;
+        }
+
+        .status-badge {
+            display: inline-block;
+            padding: 6px 14px;
+            background: rgba(76, 175, 80, 0.2);
+            color: #4CAF50;
+            border-radius: 15px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-left: 10px;
+            border: 1px solid rgba(76, 175, 80, 0.3);
         }
 
         @media (max-width: 768px) {

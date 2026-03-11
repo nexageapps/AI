@@ -49,15 +49,19 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
       
+      - name: Create deployment directory
+        run: |
+          mkdir -p deploy-temp
+          cp index.html deploy-temp/
+      
       - name: Deploy index to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: .
+          publish_dir: ./deploy-temp
           keep_files: true
           user_name: 'github-actions[bot]'
           user_email: 'github-actions[bot]@users.noreply.github.com'
-          exclude_assets: '.github,application,.venv,.vscode,Basic,Intermediate,Advanced,Expert,documentation,archive,logo'
 
   # Build and deploy Wumpus World
   deploy-wumpus:

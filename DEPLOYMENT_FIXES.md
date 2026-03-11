@@ -28,11 +28,12 @@
 ## Files Created/Modified
 
 ### Created:
-1. `index.html` - Landing page for all games
+1. `index.html` - UoA-branded landing page with both games listed
 2. `.github/workflows/deploy-apps.yml` - Automated deployment workflow
 3. `application/DEPLOYMENT_GUIDE.md` - Comprehensive deployment documentation
 4. `application/QUICK_DEPLOY.md` - Quick reference for deployment commands
 5. `DEPLOYMENT_FIXES.md` - This file
+6. `deploy-landing-page.sh` - Quick script to deploy landing page immediately
 
 ### Modified:
 1. `application/compsci714/week2/gradient-descent-game/package.json` - Updated paths
@@ -40,12 +41,21 @@
 
 ## Next Steps
 
-### To Deploy Changes:
+### Option 1: Quick Deploy Landing Page Now
+
+Run the deployment script:
+```bash
+./deploy-landing-page.sh
+```
+
+This will immediately deploy the new landing page to the root URL.
+
+### Option 2: Deploy Everything via Git
 
 1. **Commit and push all changes:**
    ```bash
    git add .
-   git commit -m "Fix deployment: Add landing page and gradient descent game"
+   git commit -m "Add UoA-branded landing page and gradient descent game deployment"
    git push origin main
    ```
 

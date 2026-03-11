@@ -1,0 +1,14 @@
+.game-canvas-container {
+  background-color: #0f3460;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.game-canvas {
+  display: block;
+  background-color: #1a1a2e;
+  border: 2px solid #00d9ff;
+  border-radius: 4px;
+  cursor: crosshair;
+}

@@ -1,0 +1,59 @@
+.metrics-display {
+  background-color: #16213e;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.metrics-display h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #00d9ff;
+}
+
+.metric-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.metric-item:last-of-type {
+  border-bottom: none;
+}
+
+.metric-label {
+  font-size: 0.875rem;
+  color: #aaa;
+}
+
+.metric-value {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #00d9ff;
+  font-family: monospace;
+}
+
+.concept-info {
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.concept-info h3 {
+  font-size: 1rem;
+  margin-bottom: 0.75rem;
+  color: #00d9ff;
+}
+
+.concept-item {
+  font-size: 0.875rem;
+  margin-bottom: 0.75rem;
+  color: #ccc;
+  line-height: 1.4;
+}
+
+.concept-item strong {
+  color: #00d9ff;
+}

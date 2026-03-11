@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/compsci714/week2/blindfold-hill/static/css/main.d3a09ffe.css",
+    "main.js": "/compsci714/week2/blindfold-hill/static/js/main.f2b60285.js",
+    "index.html": "/compsci714/week2/blindfold-hill/index.html",
+    "main.d3a09ffe.css.map": "/compsci714/week2/blindfold-hill/static/css/main.d3a09ffe.css.map",
+    "main.f2b60285.js.map": "/compsci714/week2/blindfold-hill/static/js/main.f2b60285.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d3a09ffe.css",
+    "static/js/main.f2b60285.js"
+  ]
+}

@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/AI/wumpus/static/css/main.a8a8722f.css",
-    "main.js": "/AI/wumpus/static/js/main.0adc7708.js",
+    "main.js": "/AI/wumpus/static/js/main.b6dfe441.js",
     "index.html": "/AI/wumpus/index.html",
     "main.a8a8722f.css.map": "/AI/wumpus/static/css/main.a8a8722f.css.map",
-    "main.0adc7708.js.map": "/AI/wumpus/static/js/main.0adc7708.js.map"
+    "main.b6dfe441.js.map": "/AI/wumpus/static/js/main.b6dfe441.js.map"
   },
   "entrypoints": [
     "static/css/main.a8a8722f.css",
-    "static/js/main.0adc7708.js"
+    "static/js/main.b6dfe441.js"
   ]
 }

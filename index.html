@@ -208,24 +208,89 @@
         }
 
         @media (max-width: 768px) {
+            body {
+                padding: 15px;
+            }
+
+            .uoa-badge img {
+                width: 40px;
+                height: 40px;
+            }
+
+            .header {
+                margin-bottom: 20px;
+            }
+
             .header h1 {
-                font-size: 2rem;
+                font-size: 1.5rem;
             }
 
             .header .subtitle {
-                font-size: 1.1rem;
+                font-size: 0.9rem;
+            }
+
+            .header .institution {
+                font-size: 0.8rem;
             }
 
             .games-grid {
                 grid-template-columns: 1fr;
+                gap: 15px;
             }
 
             .game-card {
-                padding: 25px;
+                padding: 18px;
             }
 
             .game-icon {
-                font-size: 3rem;
+                font-size: 2rem;
+                margin-bottom: 10px;
+            }
+
+            .game-title {
+                font-size: 1.2rem;
+            }
+
+            .game-course {
+                font-size: 0.7rem;
+            }
+
+            .game-description {
+                font-size: 0.85rem;
+                line-height: 1.4;
+            }
+
+            .concept-tag {
+                font-size: 0.7rem;
+                padding: 3px 8px;
+            }
+
+            .play-button {
+                padding: 8px 20px;
+                font-size: 0.85rem;
+            }
+
+            .footer .credits {
+                font-size: 0.8rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header h1 {
+                font-size: 1.3rem;
+            }
+
+            .game-card {
+                padding: 15px;
+            }
+
+            .game-title {
+                font-size: 1.1rem;
+            }
+
+            .status-badge {
+                font-size: 0.65rem;
+                padding: 3px 8px;
             }
         }
     </style>
@@ -233,7 +298,7 @@
 <body>
     <div class="container">
         <div class="uoa-badge">
-            <svg width="80" height="80" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg width="50" height="50" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <circle cx="50" cy="50" r="45" stroke="white" stroke-width="3" opacity="0.9"/>
                 <path d="M50 20 L60 45 L50 40 L40 45 Z" fill="white" opacity="0.9"/>
                 <rect x="35" y="50" width="30" height="25" fill="white" opacity="0.9"/>
@@ -247,7 +312,7 @@
         <div class="header">
             <h1>🎮 Interactive AI Demonstrations</h1>
             <p class="subtitle">Hands-on Learning Experiences</p>
-            <p class="institution">University of Auckland • COMPSCI Courses</p>
+            <p class="institution">University of Auckland • COMPSCI</p>
         </div>
 
         <div class="games-grid">
@@ -260,15 +325,13 @@
                 </div>
                 <div class="game-course">COMPSCI 713 • AI Fundamentals</div>
                 <div class="game-description">
-                    Navigate a dangerous cave using logical reasoning and knowledge representation. 
-                    Avoid pits and the Wumpus while finding the gold! Learn how AI agents make 
-                    decisions in uncertain environments.
+                    Navigate a dangerous cave using logical reasoning. Avoid pits and the Wumpus while finding gold!
                 </div>
                 <div class="game-concepts">
-                    <span class="concept-tag">Symbolic Logic</span>
-                    <span class="concept-tag">Knowledge Representation</span>
+                    <span class="concept-tag">Logic</span>
+                    <span class="concept-tag">Knowledge Rep</span>
                     <span class="concept-tag">Inference</span>
-                    <span class="concept-tag">Agent-based AI</span>
+                    <span class="concept-tag">Agents</span>
                 </div>
                 <span class="play-button">Launch Game →</span>
             </a>
@@ -282,15 +345,13 @@
                 </div>
                 <div class="game-course">COMPSCI 714 • Neural Networks</div>
                 <div class="game-description">
-                    Guide a ball down a mountain to find the lowest valley using gradient descent. 
-                    Experiment with learning rates and see how optimization algorithms work in 
-                    machine learning training!
+                    Guide a ball down a mountain to find the lowest valley. Learn gradient descent optimization!
                 </div>
                 <div class="game-concepts">
                     <span class="concept-tag">Gradient Descent</span>
                     <span class="concept-tag">Optimization</span>
                     <span class="concept-tag">Learning Rate</span>
-                    <span class="concept-tag">Local Minima</span>
+                    <span class="concept-tag">Minima</span>
                 </div>
                 <span class="play-button">Launch Game →</span>
             </a>
@@ -298,14 +359,11 @@
 
         <div class="footer">
             <a href="https://github.com/nexageapps/AI" target="_blank" class="repo-link">
-                📚 View Full AI & ML Roadmap on GitHub
+                📚 View Full Roadmap on GitHub
             </a>
             <div class="credits">
-                <p>Part of the open-source AI & ML learning roadmap</p>
-                <p style="margin-top: 8px;">Created by a Master of AI student at the University of Auckland</p>
-                <p style="margin-top: 8px; font-size: 0.85rem; opacity: 0.7;">
-                    60+ lessons • Basic to Expert • Zero to Language Models
-                </p>
+                <p>Open-source AI & ML learning roadmap</p>
+                <p style="margin-top: 5px;">Master of AI • University of Auckland</p>
             </div>
         </div>
     </div>

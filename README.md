@@ -97,7 +97,7 @@ Interactive demonstrations of AI concepts in action:
 | Demo | Concept | Course | Link |
 |------|---------|--------|------|
 | **Wumpus World** | Symbolic Logic & Knowledge Representation | COMPSCI 713 | [Play Online](https://nexageapps.github.io/AI/wumpus) |
-| **Mountain Explorer** | Gradient Descent & Optimization | COMPSCI 714 | [Play Online](https://nexageapps.github.io/AI/gradient-descent) |
+| **Mountain Explorer** | Gradient Descent & Optimization | COMPSCI 714 | [Play Online](https://nexageapps.github.io/AI/gradient-descent) | 
 
 **[View All Games](https://nexageapps.github.io/AI/)** • Explore the `application/` folder for source code and deployment guides.
 

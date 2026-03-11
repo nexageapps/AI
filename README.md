@@ -850,6 +850,12 @@ Create a **Smart Maze Solver** that uses search algorithms to find the shortest 
 | Recurrent Architectures | Implement LSTM for text generation. | B10 (RNNs), B13 (Mini LLM) |
 | Attention Mechanisms | Build attention layer. Visualize attention weights. | B11 (Transformers) |
 
+**Live Demo - Interactive Learning Tools:**
+
+| Demo | Description | Try It Live |
+|------|-------------|-------------|
+| **Mountain Explorer** | Interactive gradient descent visualization game. Learn how gradient descent works by guiding a ball to find the lowest valley on different mathematical surfaces. Features multiple difficulty levels, real-time visualization, and step-by-step learning. | [Play Now](https://nexageapps.github.io/AI/compsci714/week2/gradient-descent-game/) |
+
 **Example MVP Project:**
 Create a **Neural Network Visualizer** that shows how a simple MLP learns to classify data. Visualize the decision boundary changing in real-time as the network trains. Include interactive controls to adjust learning rate, layer sizes, and activation functions.
 

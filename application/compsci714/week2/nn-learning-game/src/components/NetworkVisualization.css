@@ -57,3 +57,28 @@
 .edge-update-decrease {
   animation: pulse-decrease 0.7s ease-in-out 3;
 }
+
+/* ----------------------------------------------------------
+   Node glow — driven by animationPhase in non-step mode
+   ---------------------------------------------------------- */
+@keyframes glow-forward {
+  0%   { filter: drop-shadow(0 0 0px #0066CC); }
+  50%  { filter: drop-shadow(0 0 8px #0066CC); }
+  100% { filter: drop-shadow(0 0 0px #0066CC); }
+}
+
+@keyframes glow-backward {
+  0%   { filter: drop-shadow(0 0 0px #f97316); }
+  50%  { filter: drop-shadow(0 0 8px #f97316); }
+  100% { filter: drop-shadow(0 0 0px #f97316); }
+}
+
+@keyframes glow-update {
+  0%   { filter: drop-shadow(0 0 0px #10b981); }
+  50%  { filter: drop-shadow(0 0 8px #10b981); }
+  100% { filter: drop-shadow(0 0 0px #10b981); }
+}
+
+.node-glow-forward  { animation: glow-forward  1s ease-in-out 2; }
+.node-glow-backward { animation: glow-backward 1s ease-in-out 2; }
+.node-glow-update   { animation: glow-update   0.7s ease-in-out 3; }

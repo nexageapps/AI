@@ -77,7 +77,7 @@ html, body {
 .app-main {
   flex: 1;
   display: grid;
-  grid-template-columns: 1fr 290px 260px;
+  grid-template-columns: 1fr 270px 310px;
   gap: 8px;
   padding: 8px 12px;
   min-height: 0;
@@ -134,16 +134,16 @@ html, body {
   scrollbar-color: rgba(0,70,127,0.2) transparent;
 }
 
-/* loss graph — top half of right column */
+/* loss graph — top 65% of right column */
 .app-card--loss {
-  flex: 1 1 55%;
+  flex: 1 1 65%;
   min-height: 0;
   overflow: hidden;
 }
 
-/* info panel — bottom half of right column */
+/* info panel — bottom 35% of right column */
 .app-card--info {
-  flex: 1 1 45%;
+  flex: 1 1 35%;
   min-height: 0;
   overflow-y: auto;
   scrollbar-width: thin;

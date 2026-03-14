@@ -1,20 +1,20 @@
 import { useGame } from '../context/GameContext'
 import './InfoPanel.css'
 
-const FORMULAS = [
-  { label: 'Sigmoid',    f: 'σ(z) = 1/(1+e⁻ᶻ)',              color: '#3b82f6' },
-  { label: 'Net input',  f: 'net = w₁x₁ + w₂x₂ + b',         color: '#8b5cf6' },
-  { label: 'Loss',       f: 'E = ½(t₁−y₁)² + ½(t₂−y₂)²',    color: '#ef4444' },
-  { label: '∂E/∂y₁',    f: 'y₁ − t₁',                        color: '#f97316' },
-  { label: 'σ′(z)',      f: 'σ(z)·(1−σ(z))',                  color: '#10b981' },
-  { label: '∂E/∂w₅',    f: 'δ_y₁ · h₁',                      color: '#f59e0b' },
-  { label: 'δ_h₁',      f: '(δ_y₁w₅+δ_y₂w₇)·σ′(net_h₁)',    color: '#06b6d4' },
-  { label: 'Update',     f: 'w ← w − α · ∂E/∂w',             color: '#00467F' },
+const FORMULAS: { label: string; f: string; color: string; phase: string[] }[] = [
+  { label: 'Net input',  f: 'net = w₁x₁ + w₂x₂ + b',         color: '#8b5cf6', phase: ['forward'] },
+  { label: 'Sigmoid',    f: 'σ(z) = 1/(1+e⁻ᶻ)',              color: '#3b82f6', phase: ['forward'] },
+  { label: 'Loss',       f: 'E = ½(t₁−y₁)² + ½(t₂−y₂)²',    color: '#ef4444', phase: ['forward'] },
+  { label: '∂E/∂y',     f: 'y₁ − t₁',                        color: '#f97316', phase: ['backward'] },
+  { label: 'σ′(z)',      f: 'σ(z)·(1−σ(z))',                  color: '#10b981', phase: ['backward'] },
+  { label: '∂E/∂w₅',    f: 'δ_y₁ · h₁',                      color: '#f59e0b', phase: ['backward'] },
+  { label: 'δ_h',        f: '(δ_y₁w₅+δ_y₂w₇)·σ′(net_h₁)',    color: '#06b6d4', phase: ['backward'] },
+  { label: 'Update',     f: 'w ← w − α · ∂E/∂w',             color: '#00467F', phase: ['update'] },
 ]
 
 export default function InfoPanel() {
   const { state } = useGame()
-  const { currentLevel, levels, progress, learningRate } = state
+  const { currentLevel, levels, progress, learningRate, animationPhase } = state
 
   const levelConfig = levels.find(l => l.id === currentLevel)
   const lossThreshold = levelConfig?.lossThreshold ?? 0
@@ -78,14 +78,28 @@ export default function InfoPanel() {
 
       {/* ── Formulas ── */}
       <div className="ip-section">
-        <div className="ip-section-title">Key Formulas</div>
+        <div className="ip-section-title">
+          Key Formulas
+          {animationPhase !== 'idle' && (
+            <span className="ip-phase-badge ip-phase-badge--{animationPhase}" data-phase={animationPhase}>
+              {animationPhase === 'forward' ? '▶ Forward Pass' : animationPhase === 'backward' ? '◀ Backprop' : '↑ Weight Update'}
+            </span>
+          )}
+        </div>
         <div className="ip-formulas">
-          {FORMULAS.map(({ label, f, color }) => (
-            <div key={label} className="ip-formula-row" style={{ borderLeftColor: color }}>
-              <span className="ip-formula-label" style={{ color }}>{label}</span>
-              <span className="ip-formula-code">{f}</span>
-            </div>
-          ))}
+          {FORMULAS.map(({ label, f, color, phase }) => {
+            const active = animationPhase !== 'idle' && phase.includes(animationPhase)
+            return (
+              <div
+                key={label}
+                className={`ip-formula-row${active ? ' ip-formula-row--active' : ''}`}
+                style={{ borderLeftColor: active ? color : '#d1d5db' }}
+              >
+                <span className="ip-formula-label" style={{ color: active ? color : '#9ca3af' }}>{label}</span>
+                <span className="ip-formula-code" style={{ color: active ? '#1a202c' : '#9ca3af' }}>{f}</span>
+              </div>
+            )
+          })}
         </div>
       </div>
 

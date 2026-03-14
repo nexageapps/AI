@@ -57,16 +57,17 @@ interface NodeProps {
   activation: number | null
   highlighted: boolean
   dashed?: boolean
+  glowClass?: string
 }
 
-function NetworkNode({ cx, cy, r, label, activation, highlighted, dashed = false }: NodeProps) {
+function NetworkNode({ cx, cy, r, label, activation, highlighted, dashed = false, glowClass }: NodeProps) {
   const fill = activationColor(activation)
   const stroke = highlighted ? '#f59e0b' : '#00467F'
   const strokeWidth = highlighted ? 3 : 1.5
   const strokeDasharray = dashed ? '4 3' : undefined
 
   return (
-    <g>
+    <g className={glowClass}>
       <circle
         cx={cx}
         cy={cy}
@@ -218,6 +219,16 @@ export function NetworkVisualization() {
       const g = gradients[gradKey]
       return g < 0 ? 'edge-update-increase' : 'edge-update-decrease'
     }
+    return undefined
+  }
+
+  // Node glow class — in non-step mode, highlight relevant layer per phase
+  // forward: output nodes glow blue; backward: hidden nodes glow orange; update: all weight nodes glow green
+  function nodeGlowClass(nodeId: string): string | undefined {
+    if (highlightedNode) return undefined // step mode handles its own highlight via stroke
+    if (animationPhase === 'forward' && (nodeId === 'y1' || nodeId === 'y2' || nodeId === 'h1' || nodeId === 'h2')) return 'node-glow-forward'
+    if (animationPhase === 'backward' && (nodeId === 'h1' || nodeId === 'h2')) return 'node-glow-backward'
+    if (animationPhase === 'update' && (nodeId === 'h1' || nodeId === 'h2' || nodeId === 'y1' || nodeId === 'y2')) return 'node-glow-update'
     return undefined
   }
 
@@ -396,6 +407,7 @@ export function NetworkVisualization() {
         label="h1"
         activation={actH1}
         highlighted={highlightedNode === 'h1'}
+        glowClass={nodeGlowClass('h1')}
       />
       <NetworkNode
         cx={COL_HIDDEN} cy={ROW_BOT}
@@ -403,6 +415,7 @@ export function NetworkVisualization() {
         label="h2"
         activation={actH2}
         highlighted={highlightedNode === 'h2'}
+        glowClass={nodeGlowClass('h2')}
       />
 
       {/* ------------------------------------------------------------------ */}
@@ -415,6 +428,7 @@ export function NetworkVisualization() {
         label="y1"
         activation={actY1}
         highlighted={highlightedNode === 'y1'}
+        glowClass={nodeGlowClass('y1')}
       />
       <NetworkNode
         cx={COL_OUTPUT} cy={ROW_BOT}
@@ -422,6 +436,7 @@ export function NetworkVisualization() {
         label="y2"
         activation={actY2}
         highlighted={highlightedNode === 'y2'}
+        glowClass={nodeGlowClass('y2')}
       />
 
       {/* ------------------------------------------------------------------ */}

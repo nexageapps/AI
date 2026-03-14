@@ -6,20 +6,20 @@ import './NetworkVisualization.css'
 // Layout constants
 // ---------------------------------------------------------------------------
 
-// Layout constants — tighter viewBox so network fills the card
-const SVG_WIDTH = 560
-const SVG_HEIGHT = 320
-const NODE_RADIUS = 32
-const BIAS_RADIUS = 22
+// Layout constants
+const SVG_WIDTH = 580
+const SVG_HEIGHT = 400
+const NODE_RADIUS = 34
+const BIAS_RADIUS = 23
 
 // Column x positions
 const COL_INPUT = 90
-const COL_HIDDEN = 280
-const COL_OUTPUT = 470
+const COL_HIDDEN = 290
+const COL_OUTPUT = 490
 
-// Node y positions — vertically centred in the tighter box
-const ROW_TOP = 120
-const ROW_BOT = 220
+// Node y positions — more vertical spread so crossing labels don't overlap
+const ROW_TOP = 140
+const ROW_BOT = 270
 const ROW_BIAS = 30
 
 // ---------------------------------------------------------------------------
@@ -114,11 +114,13 @@ interface EdgeProps {
   highlighted: boolean
   dashed?: boolean
   animationClass?: string
+  labelOffsetX?: number
+  labelOffsetY?: number
 }
 
-function NetworkEdge({ x1, y1, x2, y2, weightLabel, gradientLabel, highlighted, dashed = false, animationClass }: EdgeProps) {
-  const mx = (x1 + x2) / 2
-  const my = (y1 + y2) / 2
+function NetworkEdge({ x1, y1, x2, y2, weightLabel, gradientLabel, highlighted, dashed = false, animationClass, labelOffsetX = 0, labelOffsetY = 0 }: EdgeProps) {
+  const mx = (x1 + x2) / 2 + labelOffsetX
+  const my = (y1 + y2) / 2 + labelOffsetY
   // When an animation class is active, let CSS control stroke/width
   const stroke = animationClass ? undefined : (highlighted ? '#f59e0b' : '#00467F')
   const strokeWidth = animationClass ? undefined : (highlighted ? 2.5 : 1.5)
@@ -301,6 +303,8 @@ export function NetworkVisualization() {
         gradientLabel={gradLabel('dE_dw2')}
         highlighted={highlightedEdge === 'w2'}
         animationClass={edgeAnimClass('dE_dw2')}
+        labelOffsetX={-32}
+        labelOffsetY={-16}
       />
       {/* w3: x1 → h2 */}
       <NetworkEdge
@@ -337,6 +341,8 @@ export function NetworkVisualization() {
         gradientLabel={gradLabel('dE_dw6')}
         highlighted={highlightedEdge === 'w6'}
         animationClass={edgeAnimClass('dE_dw6')}
+        labelOffsetX={-32}
+        labelOffsetY={-16}
       />
       {/* w7: h1 → y2 */}
       <NetworkEdge

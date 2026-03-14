@@ -18,6 +18,15 @@ export default function LevelManager() {
 
   useEffect(() => { setModalDismissed(false); setPopoverOpen(false) }, [currentLevel])
 
+  // Also reset modal dismissed state when level is reset
+  const prevIterationCount = useRef(currentProgress.iterationCount)
+  useEffect(() => {
+    if (currentProgress.iterationCount === 0 && prevIterationCount.current > 0) {
+      setModalDismissed(false)
+    }
+    prevIterationCount.current = currentProgress.iterationCount
+  }, [currentProgress.iterationCount])
+
   // Close popover on outside click
   useEffect(() => {
     if (!popoverOpen) return
@@ -120,6 +129,13 @@ export default function LevelManager() {
           {currentProgress.completed && currentProgress.highScore > 0 && (
             <span className="lm-hs-pill">🏆 {currentProgress.highScore}pts</span>
           )}
+          <button
+            className="lm-reset-btn"
+            onClick={() => dispatch({ type: 'RESET_LEVEL' })}
+            title="Reset network and iteration count for a fresh attempt"
+          >
+            ↺ Reset
+          </button>
         </div>
 
         {/* Info / formula popover trigger */}

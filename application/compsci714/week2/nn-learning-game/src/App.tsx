@@ -1,3 +1,7 @@
+// References:
+//   - Russell, S. & Norvig, P. (2022). Artificial Intelligence: A Modern Approach (4th ed.), Chapter 21: Deep Learning.
+//   - UoA COMPSCI 714 lecture materials.
+
 import { GameProvider, useGame } from './context/GameContext'
 import { NetworkVisualization } from './components/NetworkVisualization'
 import { TrainingControls } from './components/TrainingControls'

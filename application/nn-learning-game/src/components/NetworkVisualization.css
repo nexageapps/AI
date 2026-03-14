@@ -1,0 +1,61 @@
+/* ============================================================
+   NetworkVisualization — CSS animations for signal/gradient flow
+   ============================================================ */
+
+/* ----------------------------------------------------------
+   Forward pass: left→right traveling pulse
+   Uses stroke-dashoffset to animate a dashed pattern moving
+   from left (source) to right (target).
+   ---------------------------------------------------------- */
+@keyframes pulse-forward {
+  0%   { stroke-dashoffset: 40; opacity: 0.4; }
+  50%  { opacity: 1; }
+  100% { stroke-dashoffset: 0;  opacity: 0.4; }
+}
+
+.edge-forward {
+  stroke: #3b82f6;          /* blue-500 */
+  stroke-width: 2.5;
+  stroke-dasharray: 8 6;
+  animation: pulse-forward 0.9s ease-in-out infinite;
+}
+
+/* ----------------------------------------------------------
+   Backward pass: right→left traveling pulse
+   Reverse dashoffset direction.
+   ---------------------------------------------------------- */
+@keyframes pulse-backward {
+  0%   { stroke-dashoffset: 0;  opacity: 0.4; }
+  50%  { opacity: 1; }
+  100% { stroke-dashoffset: 40; opacity: 0.4; }
+}
+
+.edge-backward {
+  stroke: #f97316;          /* orange-500 */
+  stroke-width: 2.5;
+  stroke-dasharray: 8 6;
+  animation: pulse-backward 0.9s ease-in-out infinite;
+}
+
+/* ----------------------------------------------------------
+   Weight update: flash green (weight increased) or red (decreased)
+   ---------------------------------------------------------- */
+@keyframes pulse-increase {
+  0%   { stroke: #22c55e; stroke-width: 1.5; opacity: 1; }   /* green-500 */
+  50%  { stroke: #4ade80; stroke-width: 3.5; opacity: 1; }   /* green-400 */
+  100% { stroke: #22c55e; stroke-width: 1.5; opacity: 1; }
+}
+
+@keyframes pulse-decrease {
+  0%   { stroke: #ef4444; stroke-width: 1.5; opacity: 1; }   /* red-500 */
+  50%  { stroke: #f87171; stroke-width: 3.5; opacity: 1; }   /* red-400 */
+  100% { stroke: #ef4444; stroke-width: 1.5; opacity: 1; }
+}
+
+.edge-update-increase {
+  animation: pulse-increase 0.7s ease-in-out 3;
+}
+
+.edge-update-decrease {
+  animation: pulse-decrease 0.7s ease-in-out 3;
+}

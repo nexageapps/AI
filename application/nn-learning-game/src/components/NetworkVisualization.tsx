@@ -1,5 +1,6 @@
 import { useGame } from '../context/GameContext'
 import type { NetworkState } from '../types'
+import './NetworkVisualization.css'
 
 // ---------------------------------------------------------------------------
 // Layout constants
@@ -109,13 +110,15 @@ interface EdgeProps {
   gradientLabel?: string
   highlighted: boolean
   dashed?: boolean
+  animationClass?: string
 }
 
-function NetworkEdge({ x1, y1, x2, y2, weightLabel, gradientLabel, highlighted, dashed = false }: EdgeProps) {
+function NetworkEdge({ x1, y1, x2, y2, weightLabel, gradientLabel, highlighted, dashed = false, animationClass }: EdgeProps) {
   const mx = (x1 + x2) / 2
   const my = (y1 + y2) / 2
-  const stroke = highlighted ? '#f59e0b' : '#64748b'
-  const strokeWidth = highlighted ? 2.5 : 1.5
+  // When an animation class is active, let CSS control stroke/width
+  const stroke = animationClass ? undefined : (highlighted ? '#f59e0b' : '#64748b')
+  const strokeWidth = animationClass ? undefined : (highlighted ? 2.5 : 1.5)
   const strokeDasharray = dashed ? '5 4' : undefined
 
   return (
@@ -128,6 +131,7 @@ function NetworkEdge({ x1, y1, x2, y2, weightLabel, gradientLabel, highlighted, 
         stroke={stroke}
         strokeWidth={strokeWidth}
         strokeDasharray={strokeDasharray}
+        className={animationClass}
       />
       {/* Weight label */}
       <rect
@@ -183,7 +187,7 @@ function NetworkEdge({ x1, y1, x2, y2, weightLabel, gradientLabel, highlighted, 
 
 export function NetworkVisualization() {
   const { state } = useGame()
-  const { network, highlightedNode, highlightedEdge } = state
+  const { network, highlightedNode, highlightedEdge, animationPhase } = state
   const { inputs, weights, biases, activations, gradients } = network
 
   // Activation values (inputs are always known)
@@ -198,6 +202,21 @@ export function NetworkVisualization() {
   function gradLabel(key: keyof NonNullable<NetworkState['gradients']>): string | undefined {
     if (!gradients) return undefined
     return `∂${fmt(gradients[key], 4)}`
+  }
+
+  // Determine animation class for weight edges
+  // For 'update' phase, gradient sign tells us if weight increased or decreased:
+  //   w_new = w_old - α * grad
+  //   grad > 0 → weight decreased (red)
+  //   grad < 0 → weight increased (green)
+  function edgeAnimClass(gradKey?: keyof NonNullable<NetworkState['gradients']>): string | undefined {
+    if (animationPhase === 'forward') return 'edge-forward'
+    if (animationPhase === 'backward') return 'edge-backward'
+    if (animationPhase === 'update' && gradKey && gradients) {
+      const g = gradients[gradKey]
+      return g < 0 ? 'edge-update-increase' : 'edge-update-decrease'
+    }
+    return undefined
   }
 
   return (
@@ -256,6 +275,7 @@ export function NetworkVisualization() {
         weightLabel={`w1=${fmt(weights.w1)}`}
         gradientLabel={gradLabel('dE_dw1')}
         highlighted={highlightedEdge === 'w1'}
+        animationClass={edgeAnimClass('dE_dw1')}
       />
       {/* w2: x2 → h1 */}
       <NetworkEdge
@@ -264,6 +284,7 @@ export function NetworkVisualization() {
         weightLabel={`w2=${fmt(weights.w2)}`}
         gradientLabel={gradLabel('dE_dw2')}
         highlighted={highlightedEdge === 'w2'}
+        animationClass={edgeAnimClass('dE_dw2')}
       />
       {/* w3: x1 → h2 */}
       <NetworkEdge
@@ -272,6 +293,7 @@ export function NetworkVisualization() {
         weightLabel={`w3=${fmt(weights.w3)}`}
         gradientLabel={gradLabel('dE_dw3')}
         highlighted={highlightedEdge === 'w3'}
+        animationClass={edgeAnimClass('dE_dw3')}
       />
       {/* w4: x2 → h2 */}
       <NetworkEdge
@@ -280,6 +302,7 @@ export function NetworkVisualization() {
         weightLabel={`w4=${fmt(weights.w4)}`}
         gradientLabel={gradLabel('dE_dw4')}
         highlighted={highlightedEdge === 'w4'}
+        animationClass={edgeAnimClass('dE_dw4')}
       />
       {/* w5: h1 → y1 */}
       <NetworkEdge
@@ -288,6 +311,7 @@ export function NetworkVisualization() {
         weightLabel={`w5=${fmt(weights.w5)}`}
         gradientLabel={gradLabel('dE_dw5')}
         highlighted={highlightedEdge === 'w5'}
+        animationClass={edgeAnimClass('dE_dw5')}
       />
       {/* w6: h2 → y1 */}
       <NetworkEdge
@@ -296,6 +320,7 @@ export function NetworkVisualization() {
         weightLabel={`w6=${fmt(weights.w6)}`}
         gradientLabel={gradLabel('dE_dw6')}
         highlighted={highlightedEdge === 'w6'}
+        animationClass={edgeAnimClass('dE_dw6')}
       />
       {/* w7: h1 → y2 */}
       <NetworkEdge
@@ -304,6 +329,7 @@ export function NetworkVisualization() {
         weightLabel={`w7=${fmt(weights.w7)}`}
         gradientLabel={gradLabel('dE_dw7')}
         highlighted={highlightedEdge === 'w7'}
+        animationClass={edgeAnimClass('dE_dw7')}
       />
       {/* w8: h2 → y2 */}
       <NetworkEdge
@@ -312,6 +338,7 @@ export function NetworkVisualization() {
         weightLabel={`w8=${fmt(weights.w8)}`}
         gradientLabel={gradLabel('dE_dw8')}
         highlighted={highlightedEdge === 'w8'}
+        animationClass={edgeAnimClass('dE_dw8')}
       />
 
       {/* ------------------------------------------------------------------ */}

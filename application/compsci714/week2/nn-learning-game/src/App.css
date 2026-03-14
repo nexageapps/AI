@@ -1,5 +1,5 @@
 /* ============================================================
-   App shell — desktop dashboard layout, UoA blue theme
+   App shell — desktop dashboard, UoA blue theme
    ============================================================ */
 
 *, *::before, *::after { box-sizing: border-box; }
@@ -14,7 +14,6 @@ html, body {
   color: #2c3e50;
 }
 
-/* ── Shell: full viewport, vertical flex ─────────────────── */
 .app-shell {
   height: 100vh;
   display: flex;
@@ -22,13 +21,13 @@ html, body {
   overflow: hidden;
 }
 
-/* ── Header — slim, single line ─────────────────────────── */
+/* ── Header ──────────────────────────────────────────────── */
 .app-header {
   flex-shrink: 0;
   background: rgba(0,0,0,0.3);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid rgba(255,255,255,0.12);
-  padding: 8px 24px;
+  padding: 7px 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -38,7 +37,7 @@ html, body {
 
 .app-title {
   margin: 0;
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 700;
   letter-spacing: 0.3px;
   white-space: nowrap;
@@ -47,16 +46,16 @@ html, body {
 .app-subtitle {
   margin: 0;
   font-size: 11px;
-  opacity: 0.7;
+  opacity: 0.65;
   white-space: nowrap;
 }
 
-/* ── Level bar — compact strip ───────────────────────────── */
+/* ── Level bar ───────────────────────────────────────────── */
 .app-level-bar {
   flex-shrink: 0;
   background: rgba(255,255,255,0.07);
   border-bottom: 1px solid rgba(255,255,255,0.1);
-  padding: 8px 20px;
+  padding: 5px 16px;
 }
 
 /* ── Step hint ───────────────────────────────────────────── */
@@ -64,35 +63,35 @@ html, body {
   flex-shrink: 0;
   background: rgba(254,243,199,0.95);
   border-bottom: 2px solid #f59e0b;
-  padding: 5px 20px;
-  font-size: 12px;
+  padding: 4px 20px;
+  font-size: 11px;
   color: #92400e;
   font-weight: 600;
   text-align: center;
 }
 
-/* ── Main 3-column dashboard ─────────────────────────────── */
+/* ── Main: 3-column grid ─────────────────────────────────── */
+/* col 1: network diagram (largest)                          */
+/* col 2: training controls                                  */
+/* col 3: loss graph (top) + info panel (bottom)             */
 .app-main {
   flex: 1;
   display: grid;
-  grid-template-columns: 1fr 320px 280px;
-  grid-template-rows: 1fr;
-  gap: 10px;
-  padding: 10px 14px;
-  min-height: 0;          /* critical: lets grid children shrink */
-  overflow: hidden;
-}
-
-/* Left: network visualization — takes all remaining height */
-.app-left {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+  grid-template-columns: 1fr 290px 260px;
+  gap: 8px;
+  padding: 8px 12px;
   min-height: 0;
   overflow: hidden;
 }
 
-/* Center: training controls */
+/* ── Column wrappers ─────────────────────────────────────── */
+.app-left {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  overflow: hidden;
+}
+
 .app-center {
   display: flex;
   flex-direction: column;
@@ -100,11 +99,11 @@ html, body {
   overflow: hidden;
 }
 
-/* Right: loss graph + output */
+/* Right column: two vertical halves */
 .app-right {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 8px;
   min-height: 0;
   overflow: hidden;
 }
@@ -113,7 +112,7 @@ html, body {
 .app-card {
   background: #fff;
   border-radius: 10px;
-  padding: 10px 12px;
+  padding: 8px 12px;
   box-shadow: 0 4px 18px rgba(0,0,0,0.28);
   border-top: 3px solid #00467F;
   display: flex;
@@ -122,71 +121,57 @@ html, body {
   overflow: hidden;
 }
 
-/* Network card fills all available left height */
+/* fills its column */
 .app-card--fill {
   flex: 1;
 }
 
-/* Controls card fills center column */
+/* scrollable controls */
 .app-card--scroll {
   flex: 1;
   overflow-y: auto;
   scrollbar-width: thin;
-  scrollbar-color: rgba(0,70,127,0.25) transparent;
+  scrollbar-color: rgba(0,70,127,0.2) transparent;
+}
+
+/* loss graph — top half of right column */
+.app-card--loss {
+  flex: 1 1 55%;
+  min-height: 0;
+  overflow: hidden;
+}
+
+/* info panel — bottom half of right column */
+.app-card--info {
+  flex: 1 1 45%;
+  min-height: 0;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0,70,127,0.2) transparent;
 }
 
 .app-card-title {
   flex-shrink: 0;
-  margin: 0 0 6px;
-  font-size: 11px;
+  margin: 0 0 5px;
+  font-size: 10px;
   font-weight: 700;
   color: #00467F;
   text-transform: uppercase;
   letter-spacing: 0.7px;
   border-bottom: 1px solid #e8edf2;
-  padding-bottom: 5px;
+  padding-bottom: 4px;
 }
 
-/* SVG inside network card should fill available space */
-.app-card--fill svg {
-  flex: 1;
-  height: 100%;
-  width: 100%;
-}
-
-/* ── Loss graph card — fixed height ──────────────────────── */
-.app-card--loss {
-  flex: 1;
-  min-height: 0;
-  overflow: hidden;
-}
-
-.app-card--loss svg {
-  width: 100%;
-  height: 100%;
-}
-
-/* ── Responsive fallback (tablet/mobile) ─────────────────── */
+/* ── Responsive ──────────────────────────────────────────── */
 @media (max-width: 960px) {
   html, body { overflow: auto; }
-
-  .app-shell {
-    height: auto;
-    overflow: visible;
-  }
-
+  .app-shell { height: auto; overflow: visible; }
   .app-main {
     grid-template-columns: 1fr;
-    grid-template-rows: auto;
     overflow: visible;
-    padding: 10px;
+    padding: 8px;
   }
-
-  .app-left, .app-center, .app-right {
-    overflow: visible;
-  }
-
-  .app-card--scroll {
-    overflow: visible;
-  }
+  .app-left, .app-center, .app-right { overflow: visible; }
+  .app-card--scroll, .app-card--info { overflow: visible; }
+  .app-right { flex-direction: column; }
 }

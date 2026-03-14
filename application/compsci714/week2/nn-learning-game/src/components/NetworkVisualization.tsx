@@ -6,20 +6,21 @@ import './NetworkVisualization.css'
 // Layout constants
 // ---------------------------------------------------------------------------
 
-const SVG_WIDTH = 600
-const SVG_HEIGHT = 400
-const NODE_RADIUS = 30
-const BIAS_RADIUS = 20
+// Layout constants — tighter viewBox so network fills the card
+const SVG_WIDTH = 560
+const SVG_HEIGHT = 320
+const NODE_RADIUS = 32
+const BIAS_RADIUS = 22
 
 // Column x positions
-const COL_INPUT = 100
-const COL_HIDDEN = 300
-const COL_OUTPUT = 500
+const COL_INPUT = 90
+const COL_HIDDEN = 280
+const COL_OUTPUT = 470
 
-// Node y positions
-const ROW_TOP = 150
-const ROW_BOT = 250
-const ROW_BIAS = 60
+// Node y positions — vertically centred in the tighter box
+const ROW_TOP = 120
+const ROW_BOT = 220
+const ROW_BIAS = 30
 
 // ---------------------------------------------------------------------------
 // Color coding: blue (0) → red (1) based on activation value
@@ -221,12 +222,13 @@ export function NetworkVisualization() {
   }
 
   return (
-    <div style={{ flex: 1, minHeight: 0, display: 'flex', flexDirection: 'column' }}>
+    <div style={{ flex: 1, minHeight: 0, display: 'flex', alignItems: 'stretch' }}>
     <svg
       viewBox={`0 0 ${SVG_WIDTH} ${SVG_HEIGHT}`}
       width="100%"
       height="100%"
-      style={{ display: 'block', flex: 1, minHeight: 0 }}
+      preserveAspectRatio="xMidYMid meet"
+      style={{ display: 'block' }}
       aria-label="Neural network visualization"
       role="img"
     >

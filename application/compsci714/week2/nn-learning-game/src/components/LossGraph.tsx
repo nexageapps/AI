@@ -60,7 +60,7 @@ export default function LossGraph() {
   )
 
   return (
-    <div style={{ flex: 1, minHeight: 0, display: 'flex', flexDirection: 'column' }}>
+    <div style={{ flex: 1, minHeight: 0, display: 'flex', alignItems: 'stretch' }}>
       <svg
         viewBox={`0 0 ${VIEW_W} ${VIEW_H}`}
         width="100%"

@@ -291,7 +291,7 @@ export function TrainingControls() {
       {/* ── Learning Rate + Step Mode on one row ── */}
       <section className="tc-section" aria-labelledby="tc-lr-heading">
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 4 }}>
-          <h3 id="tc-lr-heading" className="tc-section-title" style={{ margin: 0 }}>Learning Rate (α)</h3>
+          <h3 id="tc-lr-heading" className="tc-section-title" style={{ margin: 0 }}>α = {learningRate.toFixed(2)}</h3>
           <button
             className={`tc-btn tc-btn--toggle${stepMode ? ' tc-btn--active' : ''}`}
             onClick={() => dispatch({ type: 'TOGGLE_STEP_MODE' })}
@@ -310,7 +310,6 @@ export function TrainingControls() {
             onChange={e => handleLearningRateChange(e.target.value)}
             aria-label="Learning rate"
           />
-          <span className="tc-lr-value">{learningRate.toFixed(2)}</span>
         </div>
       </section>
 

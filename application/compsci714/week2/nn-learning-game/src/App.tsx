@@ -21,7 +21,7 @@ function GameLayout() {
   return (
     <div className="app-shell">
       <header className="app-header">
-        <h1 className="app-title">Neural Network Learning Game</h1>
+        <h1 className="app-title">UoA COMPSCI 714 : Neural Network Learning Game</h1>
         <p className="app-subtitle">
           Explore forward propagation, backpropagation, and gradient descent step by step.
         </p>

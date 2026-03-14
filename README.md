@@ -96,7 +96,7 @@ Interactive demonstrations of AI concepts in action:
 
 <div align="center">
   <a href="https://nexageapps.github.io/AI/">
-    <img src="./landingpage/game_landingPage.png" alt="AI Games Landing Page" width="80%" style="border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);"/>
+    <img src="./landingpage/game_landingPage.png" alt="AI Games Landing Page" width="100%" style="border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);"/>
   </a>
   <p><em>Interactive AI demos — playable in your browser</em></p>
 </div>

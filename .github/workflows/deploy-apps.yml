@@ -25,6 +25,7 @@ jobs:
     outputs:
       wumpus: ${{ steps.filter.outputs.wumpus }}
       gradient: ${{ steps.filter.outputs.gradient }}
+      nn-trainer: ${{ steps.filter.outputs.nn-trainer }}
       index: ${{ steps.filter.outputs.index }}
     steps:
       - uses: actions/checkout@v4
@@ -36,6 +37,8 @@ jobs:
               - 'application/compsci713/week2/wumpus/**'
             gradient:
               - 'application/compsci714/week2/gradient-descent-game/**'
+            nn-trainer:
+              - 'application/compsci714/week2/nn-learning-game/**'
             index:
               - 'index.html'
 
@@ -94,6 +97,41 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./application/compsci713/week2/wumpus/build
           destination_dir: wumpus
+          keep_files: true
+          user_name: 'github-actions[bot]'
+          user_email: 'github-actions[bot]@users.noreply.github.com'
+
+  # Build and deploy Neural Network Trainer
+  deploy-nn-trainer:
+    needs: detect-changes
+    if: needs.detect-changes.outputs.nn-trainer == 'true' || github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+          cache-dependency-path: application/compsci714/week2/nn-learning-game/package-lock.json
+      
+      - name: Install dependencies
+        working-directory: application/compsci714/week2/nn-learning-game
+        run: npm ci
+      
+      - name: Build
+        working-directory: application/compsci714/week2/nn-learning-game
+        run: npm run build
+      
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./application/compsci714/week2/nn-learning-game/dist
+          destination_dir: nn-trainer
           keep_files: true
           user_name: 'github-actions[bot]'
           user_email: 'github-actions[bot]@users.noreply.github.com'

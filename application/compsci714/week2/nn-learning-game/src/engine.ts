@@ -110,7 +110,7 @@ export function deserializeState(json: string): NetworkState {
 }
 
 // Build the 9 forward-pass computation steps for step-by-step mode.
-export function buildForwardSteps(state: NetworkState): ComputationStep[] {
+export function buildForwardSteps(_state: NetworkState): ComputationStep[] {
   return [
     // Step 1: net_h1
     {
@@ -204,7 +204,7 @@ export function buildForwardSteps(state: NetworkState): ComputationStep[] {
 // Build the 14 backpropagation computation steps for step-by-step mode.
 // delta_y1/delta_y2 are intermediate values — they are recomputed from activations
 // as needed since they are not part of the stored gradients shape.
-export function buildBackpropSteps(state: NetworkState): ComputationStep[] {
+export function buildBackpropSteps(_state: NetworkState): ComputationStep[] {
   // Helper: derive delta_y1 from current state
   const getDeltaY1 = (s: NetworkState) => {
     const { y1 } = s.activations!

@@ -1,6 +1,6 @@
 import { describe, it, expect } from 'vitest'
 import { LEVELS } from './levels'
-import type { LevelConfig, NetworkState, GameState, LevelProgress, ComputationStep, ScoreResult } from './types'
+import type { NetworkState, GameState, LevelProgress, ComputationStep, ScoreResult } from './types'
 
 describe('LevelConfig definitions', () => {
   it('defines exactly four levels', () => {

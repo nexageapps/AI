@@ -11,7 +11,7 @@ import './App.css'
 
 function GameLayout() {
   const { state } = useGame()
-  const { stepMode, stepQueue, highlightedNode, highlightedEdge } = state
+  const { stepMode, highlightedNode, highlightedEdge } = state
 
   // Show a hint about the currently highlighted node/edge when in step mode
   const stepHint = stepMode && (highlightedNode || highlightedEdge)

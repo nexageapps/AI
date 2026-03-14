@@ -343,6 +343,9 @@ export function TrainingControls() {
         </div>
       </section>
 
+      {/* ── Active formula strip ── */}
+      <FormulaStrip state={state} />
+
       {/* ── Output — shown after forward pass ── */}
       {activations !== null && loss !== null && (
         <>

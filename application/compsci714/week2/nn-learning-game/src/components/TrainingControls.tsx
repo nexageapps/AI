@@ -1,15 +1,92 @@
 import { useState, useEffect } from 'react'
 import { useGame } from '../context/GameContext'
-import type { NetworkState } from '../types'
+import type { NetworkState, GameState } from '../types'
 import './TrainingControls.css'
 
 // Weight keys in display order
 const WEIGHT_KEYS = ['w1', 'w2', 'w3', 'w4', 'w5', 'w6', 'w7', 'w8'] as const
 
 // ---------------------------------------------------------------------------
-// Helpers
+// FormulaStrip — shows active formulas with live values below TRAIN buttons
 // ---------------------------------------------------------------------------
 
+interface FormulaRow { label: string; expr: string; value?: string; color: string }
+
+function FormulaStrip({ state }: { state: GameState }) {
+  const { animationPhase, network } = state
+  const { inputs, weights, biases, activations, gradients, targets } = network
+
+  if (animationPhase === 'idle') return null
+
+  let rows: FormulaRow[] = []
+  let title = ''
+
+  if (animationPhase === 'forward') {
+    title = '▶ Forward Pass Formulas'
+    const net_h1 = activations ? (inputs.x1 * weights.w1 + inputs.x2 * weights.w2 + biases.b1) : null
+    const net_h2 = activations ? (inputs.x1 * weights.w3 + inputs.x2 * weights.w4 + biases.b1) : null
+    rows = [
+      { label: 'net_h1', expr: 'x1·w1 + x2·w2 + b1', value: net_h1?.toFixed(4), color: '#8b5cf6' },
+      { label: 'h1 = σ(net)', expr: '1/(1+e⁻ⁿᵉᵗ)', value: activations?.h1.toFixed(4), color: '#3b82f6' },
+      { label: 'net_h2', expr: 'x1·w3 + x2·w4 + b1', value: net_h2?.toFixed(4), color: '#8b5cf6' },
+      { label: 'h2 = σ(net)', expr: '1/(1+e⁻ⁿᵉᵗ)', value: activations?.h2.toFixed(4), color: '#3b82f6' },
+      { label: 'y1 = σ(net)', expr: 'h1·w5 + h2·w6 + b2 → σ', value: activations?.y1.toFixed(4), color: '#0066cc' },
+      { label: 'y2 = σ(net)', expr: 'h1·w7 + h2·w8 + b2 → σ', value: activations?.y2.toFixed(4), color: '#0066cc' },
+      { label: 'Loss E', expr: '½(t1−y1)² + ½(t2−y2)²', value: network.loss?.E.toFixed(5), color: '#ef4444' },
+    ]
+  } else if (animationPhase === 'backward') {
+    title = '◀ Backprop Formulas'
+    const dE_dy1 = activations && targets ? activations.y1 - targets.t1 : null
+    const dE_dy2 = activations && targets ? activations.y2 - targets.t2 : null
+    rows = [
+      { label: '∂E/∂y1', expr: 'y1 − t1', value: dE_dy1?.toFixed(4), color: '#f97316' },
+      { label: '∂E/∂y2', expr: 'y2 − t2', value: dE_dy2?.toFixed(4), color: '#f97316' },
+      { label: "σ'(y1)", expr: 'y1·(1−y1)', value: activations ? (activations.y1*(1-activations.y1)).toFixed(4) : undefined, color: '#10b981' },
+      { label: '∂E/∂w5', expr: 'δ_y1 · h1', value: gradients?.dE_dw5.toFixed(5), color: '#f59e0b' },
+      { label: '∂E/∂w6', expr: 'δ_y1 · h2', value: gradients?.dE_dw6.toFixed(5), color: '#f59e0b' },
+      { label: 'δ_h1', expr: '(δ_y1·w5+δ_y2·w7)·σ\'(h1)', value: gradients?.dE_dw1 !== undefined ? 'see ∂E/∂w1' : undefined, color: '#06b6d4' },
+      { label: '∂E/∂w1', expr: 'δ_h1 · x1', value: gradients?.dE_dw1.toFixed(5), color: '#06b6d4' },
+    ]
+  } else if (animationPhase === 'update') {
+    title = '↑ Weight Update Formulas'
+    rows = [
+      { label: 'Rule', expr: 'w_new = w − α · ∂E/∂w', color: '#00467F' },
+      ...(['w1','w2','w3','w4','w5','w6','w7','w8'] as const).map(k => {
+        const gradKey = `dE_d${k}` as keyof NonNullable<typeof gradients>
+        const grad = gradients?.[gradKey] as number | undefined
+        const cur = weights[k]
+        const lr = state.learningRate
+        const next = grad !== undefined ? cur - lr * grad : undefined
+        return {
+          label: k,
+          expr: `${cur.toFixed(4)} − ${lr}·${grad?.toFixed(4) ?? '?'}`,
+          value: next?.toFixed(4),
+          color: grad !== undefined ? (grad > 0 ? '#ef4444' : '#10b981') : '#718096',
+        }
+      }),
+    ]
+  }
+
+  return (
+    <div className="tc-formula-strip">
+      <div className="tc-formula-strip-title">{title}</div>
+      <div className="tc-formula-rows">
+        {rows.map(({ label, expr, value, color }) => (
+          <div key={label} className="tc-formula-item" style={{ borderLeftColor: color }}>
+            <span className="tc-formula-item-label" style={{ color }}>{label}</span>
+            <span className="tc-formula-item-expr">
+              {expr}{value !== undefined && <span className="tc-formula-item-value" style={{ color }}> = {value}</span>}
+            </span>
+          </div>
+        ))}
+      </div>
+    </div>
+  )
+}
+
+// ---------------------------------------------------------------------------
+// Helpers
+// ---------------------------------------------------------------------------
 function isInRange(value: number, min: number, max: number): boolean {
   return value >= min && value <= max
 }

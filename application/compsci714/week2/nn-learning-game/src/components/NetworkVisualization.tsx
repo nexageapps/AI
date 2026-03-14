@@ -221,10 +221,12 @@ export function NetworkVisualization() {
   }
 
   return (
+    <div style={{ flex: 1, minHeight: 0, display: 'flex', flexDirection: 'column' }}>
     <svg
       viewBox={`0 0 ${SVG_WIDTH} ${SVG_HEIGHT}`}
       width="100%"
-      style={{ maxWidth: SVG_WIDTH, display: 'block', margin: '0 auto' }}
+      height="100%"
+      style={{ display: 'block', flex: 1, minHeight: 0 }}
       aria-label="Neural network visualization"
       role="img"
     >
@@ -428,5 +430,6 @@ export function NetworkVisualization() {
       <text x={COL_HIDDEN} y={SVG_HEIGHT - 10} textAnchor="middle" fontSize={12} fill="#00467F" fontWeight="600">Hidden</text>
       <text x={COL_OUTPUT} y={SVG_HEIGHT - 10} textAnchor="middle" fontSize={12} fill="#00467F" fontWeight="600">Output</text>
     </svg>
+    </div>
   )
 }

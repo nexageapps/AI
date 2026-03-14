@@ -18,6 +18,15 @@ export default function LevelManager() {
 
   useEffect(() => { setModalDismissed(false); setPopoverOpen(false) }, [currentLevel])
 
+  // Also reset modal dismissed state when level is reset
+  const prevIterationCount = useRef(currentProgress.iterationCount)
+  useEffect(() => {
+    if (currentProgress.iterationCount === 0 && prevIterationCount.current > 0) {
+      setModalDismissed(false)
+    }
+    prevIterationCount.current = currentProgress.iterationCount
+  }, [currentProgress.iterationCount])
+
   // Close popover on outside click
   useEffect(() => {
     if (!popoverOpen) return

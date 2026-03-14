@@ -24,7 +24,7 @@ Basic to Expert. Zero to Language Models. 60+ lessons. 100% hands-on.
 
 ## ⚠️ Important Disclaimer
 
-This is an **independent learning project**, NOT official university material. Use responsibly and follow your institution's academic integrity policies. See [Academic Integrity Policy](./documentation/ACADEMIC_INTEGRITY.md) for details.
+This is an **independent learning project**, NOT official University of Auckland, material. Use responsibly and follow your institution's academic integrity policies. See [Academic Integrity Policy](./documentation/ACADEMIC_INTEGRITY.md) for details.
 
 ---
 

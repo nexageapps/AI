@@ -1,55 +1,53 @@
 /* ============================================================
    NetworkVisualization — CSS animations for signal/gradient flow
+   UoA blue theme
    ============================================================ */
 
 /* ----------------------------------------------------------
-   Forward pass: left→right traveling pulse
-   Uses stroke-dashoffset to animate a dashed pattern moving
-   from left (source) to right (target).
+   Forward pass: left→right traveling pulse (UoA blue)
    ---------------------------------------------------------- */
 @keyframes pulse-forward {
-  0%   { stroke-dashoffset: 40; opacity: 0.4; }
+  0%   { stroke-dashoffset: 40; opacity: 0.5; }
   50%  { opacity: 1; }
-  100% { stroke-dashoffset: 0;  opacity: 0.4; }
+  100% { stroke-dashoffset: 0;  opacity: 0.5; }
 }
 
 .edge-forward {
-  stroke: #3b82f6;          /* blue-500 */
+  stroke: #0066CC;
   stroke-width: 2.5;
   stroke-dasharray: 8 6;
   animation: pulse-forward 0.9s ease-in-out infinite;
 }
 
 /* ----------------------------------------------------------
-   Backward pass: right→left traveling pulse
-   Reverse dashoffset direction.
+   Backward pass: right→left traveling pulse (orange)
    ---------------------------------------------------------- */
 @keyframes pulse-backward {
-  0%   { stroke-dashoffset: 0;  opacity: 0.4; }
+  0%   { stroke-dashoffset: 0;  opacity: 0.5; }
   50%  { opacity: 1; }
-  100% { stroke-dashoffset: 40; opacity: 0.4; }
+  100% { stroke-dashoffset: 40; opacity: 0.5; }
 }
 
 .edge-backward {
-  stroke: #f97316;          /* orange-500 */
+  stroke: #f97316;
   stroke-width: 2.5;
   stroke-dasharray: 8 6;
   animation: pulse-backward 0.9s ease-in-out infinite;
 }
 
 /* ----------------------------------------------------------
-   Weight update: flash green (weight increased) or red (decreased)
+   Weight update: flash green (increased) or red (decreased)
    ---------------------------------------------------------- */
 @keyframes pulse-increase {
-  0%   { stroke: #22c55e; stroke-width: 1.5; opacity: 1; }   /* green-500 */
-  50%  { stroke: #4ade80; stroke-width: 3.5; opacity: 1; }   /* green-400 */
-  100% { stroke: #22c55e; stroke-width: 1.5; opacity: 1; }
+  0%   { stroke: #10b981; stroke-width: 1.5; }
+  50%  { stroke: #34d399; stroke-width: 3.5; }
+  100% { stroke: #10b981; stroke-width: 1.5; }
 }
 
 @keyframes pulse-decrease {
-  0%   { stroke: #ef4444; stroke-width: 1.5; opacity: 1; }   /* red-500 */
-  50%  { stroke: #f87171; stroke-width: 3.5; opacity: 1; }   /* red-400 */
-  100% { stroke: #ef4444; stroke-width: 1.5; opacity: 1; }
+  0%   { stroke: #ef4444; stroke-width: 1.5; }
+  50%  { stroke: #f87171; stroke-width: 3.5; }
+  100% { stroke: #ef4444; stroke-width: 1.5; }
 }
 
 .edge-update-increase {
@@ -59,3 +57,28 @@
 .edge-update-decrease {
   animation: pulse-decrease 0.7s ease-in-out 3;
 }
+
+/* ----------------------------------------------------------
+   Node glow — driven by animationPhase in non-step mode
+   ---------------------------------------------------------- */
+@keyframes glow-forward {
+  0%   { filter: drop-shadow(0 0 0px #0066CC); }
+  50%  { filter: drop-shadow(0 0 8px #0066CC); }
+  100% { filter: drop-shadow(0 0 0px #0066CC); }
+}
+
+@keyframes glow-backward {
+  0%   { filter: drop-shadow(0 0 0px #f97316); }
+  50%  { filter: drop-shadow(0 0 8px #f97316); }
+  100% { filter: drop-shadow(0 0 0px #f97316); }
+}
+
+@keyframes glow-update {
+  0%   { filter: drop-shadow(0 0 0px #10b981); }
+  50%  { filter: drop-shadow(0 0 8px #10b981); }
+  100% { filter: drop-shadow(0 0 0px #10b981); }
+}
+
+.node-glow-forward  { animation: glow-forward  1s ease-in-out 2; }
+.node-glow-backward { animation: glow-backward 1s ease-in-out 2; }
+.node-glow-update   { animation: glow-update   0.7s ease-in-out 3; }

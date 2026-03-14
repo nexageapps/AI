@@ -6,20 +6,21 @@ import './NetworkVisualization.css'
 // Layout constants
 // ---------------------------------------------------------------------------
 
-const SVG_WIDTH = 600
-const SVG_HEIGHT = 400
-const NODE_RADIUS = 30
-const BIAS_RADIUS = 20
+// Layout constants — tighter viewBox so network fills the card
+const SVG_WIDTH = 560
+const SVG_HEIGHT = 320
+const NODE_RADIUS = 32
+const BIAS_RADIUS = 22
 
 // Column x positions
-const COL_INPUT = 100
-const COL_HIDDEN = 300
-const COL_OUTPUT = 500
+const COL_INPUT = 90
+const COL_HIDDEN = 280
+const COL_OUTPUT = 470
 
-// Node y positions
-const ROW_TOP = 150
-const ROW_BOT = 250
-const ROW_BIAS = 60
+// Node y positions — vertically centred in the tighter box
+const ROW_TOP = 120
+const ROW_BOT = 220
+const ROW_BIAS = 30
 
 // ---------------------------------------------------------------------------
 // Color coding: blue (0) → red (1) based on activation value
@@ -28,9 +29,10 @@ const ROW_BIAS = 60
 function activationColor(value: number | null): string {
   if (value === null) return '#94a3b8' // slate-400 for unknown
   const t = Math.max(0, Math.min(1, value))
-  const r = Math.round(t * 220 + (1 - t) * 59)
-  const g = Math.round(t * 38 + (1 - t) * 130)
-  const b = Math.round(t * 38 + (1 - t) * 246)
+  // UoA blue (low) → warm amber (high)
+  const r = Math.round(t * 245 + (1 - t) * 0)
+  const g = Math.round(t * 158 + (1 - t) * 70)
+  const b = Math.round(t * 11  + (1 - t) * 127)
   return `rgb(${r},${g},${b})`
 }
 
@@ -55,16 +57,17 @@ interface NodeProps {
   activation: number | null
   highlighted: boolean
   dashed?: boolean
+  glowClass?: string
 }
 
-function NetworkNode({ cx, cy, r, label, activation, highlighted, dashed = false }: NodeProps) {
+function NetworkNode({ cx, cy, r, label, activation, highlighted, dashed = false, glowClass }: NodeProps) {
   const fill = activationColor(activation)
-  const stroke = highlighted ? '#f59e0b' : '#1e293b'
+  const stroke = highlighted ? '#f59e0b' : '#00467F'
   const strokeWidth = highlighted ? 3 : 1.5
   const strokeDasharray = dashed ? '4 3' : undefined
 
   return (
-    <g>
+    <g className={glowClass}>
       <circle
         cx={cx}
         cy={cy}
@@ -117,7 +120,7 @@ function NetworkEdge({ x1, y1, x2, y2, weightLabel, gradientLabel, highlighted, 
   const mx = (x1 + x2) / 2
   const my = (y1 + y2) / 2
   // When an animation class is active, let CSS control stroke/width
-  const stroke = animationClass ? undefined : (highlighted ? '#f59e0b' : '#64748b')
+  const stroke = animationClass ? undefined : (highlighted ? '#f59e0b' : '#00467F')
   const strokeWidth = animationClass ? undefined : (highlighted ? 2.5 : 1.5)
   const strokeDasharray = dashed ? '5 4' : undefined
 
@@ -219,11 +222,24 @@ export function NetworkVisualization() {
     return undefined
   }
 
+  // Node glow class — in non-step mode, highlight relevant layer per phase
+  // forward: output nodes glow blue; backward: hidden nodes glow orange; update: all weight nodes glow green
+  function nodeGlowClass(nodeId: string): string | undefined {
+    if (highlightedNode) return undefined // step mode handles its own highlight via stroke
+    if (animationPhase === 'forward' && (nodeId === 'y1' || nodeId === 'y2' || nodeId === 'h1' || nodeId === 'h2')) return 'node-glow-forward'
+    if (animationPhase === 'backward' && (nodeId === 'h1' || nodeId === 'h2')) return 'node-glow-backward'
+    if (animationPhase === 'update' && (nodeId === 'h1' || nodeId === 'h2' || nodeId === 'y1' || nodeId === 'y2')) return 'node-glow-update'
+    return undefined
+  }
+
   return (
+    <div style={{ flex: 1, minHeight: 0, display: 'flex', alignItems: 'stretch' }}>
     <svg
       viewBox={`0 0 ${SVG_WIDTH} ${SVG_HEIGHT}`}
       width="100%"
-      style={{ maxWidth: SVG_WIDTH, display: 'block', margin: '0 auto' }}
+      height="100%"
+      preserveAspectRatio="xMidYMid meet"
+      style={{ display: 'block' }}
       aria-label="Neural network visualization"
       role="img"
     >
@@ -391,6 +407,7 @@ export function NetworkVisualization() {
         label="h1"
         activation={actH1}
         highlighted={highlightedNode === 'h1'}
+        glowClass={nodeGlowClass('h1')}
       />
       <NetworkNode
         cx={COL_HIDDEN} cy={ROW_BOT}
@@ -398,6 +415,7 @@ export function NetworkVisualization() {
         label="h2"
         activation={actH2}
         highlighted={highlightedNode === 'h2'}
+        glowClass={nodeGlowClass('h2')}
       />
 
       {/* ------------------------------------------------------------------ */}
@@ -410,6 +428,7 @@ export function NetworkVisualization() {
         label="y1"
         activation={actY1}
         highlighted={highlightedNode === 'y1'}
+        glowClass={nodeGlowClass('y1')}
       />
       <NetworkNode
         cx={COL_OUTPUT} cy={ROW_BOT}
@@ -417,15 +436,17 @@ export function NetworkVisualization() {
         label="y2"
         activation={actY2}
         highlighted={highlightedNode === 'y2'}
+        glowClass={nodeGlowClass('y2')}
       />
 
       {/* ------------------------------------------------------------------ */}
       {/* Column labels                                                        */}
       {/* ------------------------------------------------------------------ */}
 
-      <text x={COL_INPUT}  y={SVG_HEIGHT - 10} textAnchor="middle" fontSize={12} fill="#64748b">Input</text>
-      <text x={COL_HIDDEN} y={SVG_HEIGHT - 10} textAnchor="middle" fontSize={12} fill="#64748b">Hidden</text>
-      <text x={COL_OUTPUT} y={SVG_HEIGHT - 10} textAnchor="middle" fontSize={12} fill="#64748b">Output</text>
+      <text x={COL_INPUT}  y={SVG_HEIGHT - 10} textAnchor="middle" fontSize={12} fill="#00467F" fontWeight="600">Input</text>
+      <text x={COL_HIDDEN} y={SVG_HEIGHT - 10} textAnchor="middle" fontSize={12} fill="#00467F" fontWeight="600">Hidden</text>
+      <text x={COL_OUTPUT} y={SVG_HEIGHT - 10} textAnchor="middle" fontSize={12} fill="#00467F" fontWeight="600">Output</text>
     </svg>
+    </div>
   )
 }

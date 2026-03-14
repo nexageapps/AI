@@ -60,13 +60,14 @@ export default function LossGraph() {
   )
 
   return (
-    <div style={{ display: 'inline-block' }}>
+    <div style={{ flex: 1, minHeight: 0, display: 'flex', alignItems: 'stretch' }}>
       <svg
         viewBox={`0 0 ${VIEW_W} ${VIEW_H}`}
-        width={VIEW_W}
-        height={VIEW_H}
+        width="100%"
+        height="100%"
+        preserveAspectRatio="xMidYMid meet"
         aria-label="Loss over training iterations"
-        style={{ fontFamily: 'sans-serif', fontSize: 12 }}
+        style={{ fontFamily: 'sans-serif', fontSize: 12, display: 'block' }}
       >
         {/* Plot background */}
         <rect
@@ -142,7 +143,7 @@ export default function LossGraph() {
           <polyline
             points={polylinePoints}
             fill="none"
-            stroke="#3498db"
+            stroke="#0066CC"
             strokeWidth={2}
             strokeLinejoin="round"
           />
@@ -155,7 +156,7 @@ export default function LossGraph() {
             cx={toSvgX(i + 1, lossHistory.length)}
             cy={toSvgY(loss, maxLoss)}
             r={3}
-            fill="#3498db"
+            fill="#00467F"
           />
         ))}
 

@@ -1,0 +1,174 @@
+/* ============================================================
+   InfoPanel — formulas + learning rate + progress
+   ============================================================ */
+
+.ip-root {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 12px;
+}
+
+/* ── Section ─────────────────────────────────────────────── */
+.ip-section {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.ip-section-title {
+  font-size: 9px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.7px;
+  color: #00467F;
+  padding-bottom: 3px;
+  border-bottom: 1px solid #e8edf2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 6px;
+}
+
+.ip-phase-badge {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  padding: 2px 6px;
+  border-radius: 10px;
+  text-transform: none;
+  white-space: nowrap;
+}
+
+.ip-phase-badge[data-phase="forward"]  { background: #dbeafe; color: #1d4ed8; }
+.ip-phase-badge[data-phase="backward"] { background: #ffedd5; color: #c2410c; }
+.ip-phase-badge[data-phase="update"]   { background: #d1fae5; color: #065f46; }
+
+/* ── Learning rate visual ────────────────────────────────── */
+.ip-lr-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.ip-lr-track {
+  flex: 1;
+  height: 8px;
+  background: #e2e8f0;
+  border-radius: 4px;
+  position: relative;
+  overflow: visible;
+}
+
+.ip-lr-fill {
+  height: 100%;
+  border-radius: 4px;
+  transition: width 0.3s ease, background 0.3s;
+}
+
+.ip-lr-thumb {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.25);
+  transition: left 0.3s ease, background 0.3s;
+}
+
+.ip-lr-val {
+  font-family: 'Courier New', monospace;
+  font-size: 16px;
+  font-weight: 700;
+  min-width: 34px;
+  text-align: right;
+  transition: color 0.3s;
+}
+
+.ip-lr-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 9px;
+  color: #a0aec0;
+  margin-top: -2px;
+}
+
+/* ── Stats grid ──────────────────────────────────────────── */
+.ip-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 4px;
+}
+
+.ip-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #f7fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  padding: 5px 4px;
+  gap: 2px;
+}
+
+.ip-stat-val {
+  font-family: 'Courier New', monospace;
+  font-size: 13px;
+  font-weight: 700;
+  color: #1a202c;
+  line-height: 1;
+}
+
+.ip-stat-label {
+  font-size: 9px;
+  color: #718096;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  text-align: center;
+}
+
+/* ── Formulas ────────────────────────────────────────────── */
+.ip-formulas {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.ip-formula-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  border-left: 3px solid #d1d5db;
+  background: #f0f4f8;
+  border-radius: 0 4px 4px 0;
+  padding: 3px 8px 3px 7px;
+  transition: border-left-color 0.3s, background 0.3s, box-shadow 0.3s;
+}
+
+.ip-formula-row--active {
+  background: #fffbeb;
+  box-shadow: 0 0 0 1px rgba(245,158,11,0.25), 0 2px 6px rgba(0,0,0,0.08);
+  border-left-width: 4px;
+}
+
+.ip-formula-label {
+  font-size: 9px;
+  font-weight: 700;
+  min-width: 54px;
+  flex-shrink: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.ip-formula-code {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 10px;
+  font-weight: 600;
+  color: #1a202c;
+  background: transparent;
+  word-break: break-all;
+  line-height: 1.4;
+  white-space: normal;
+}

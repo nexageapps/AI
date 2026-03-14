@@ -1,0 +1,373 @@
+/* ============================================================
+   TrainingControls — compact single-page layout, UoA blue theme
+   ============================================================ */
+
+.training-controls {
+  font-family: inherit;
+  font-size: 12px;
+}
+
+/* ── Sections ──────────────────────────────────────────────── */
+.tc-section {
+  margin-bottom: 8px;
+}
+
+.tc-section-title {
+  margin: 0 0 4px;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.7px;
+  color: #00467F;
+}
+
+/* ── Compact inline group: label + inputs on one row ───────── */
+.tc-inline-group {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.tc-inline-label {
+  font-size: 10px;
+  font-weight: 700;
+  color: #718096;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  min-width: 52px;
+}
+
+/* ── Field layout ──────────────────────────────────────────── */
+.tc-row {
+  display: flex;
+  gap: 6px;
+}
+
+.tc-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 5px;
+}
+
+.tc-field {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.tc-label {
+  font-size: 10px;
+  font-weight: 600;
+  color: #4a5568;
+  font-family: 'Courier New', monospace;
+}
+
+.tc-input {
+  width: 100%;
+  padding: 3px 5px;
+  border: 1.5px solid #cbd5e0;
+  border-radius: 4px;
+  font-size: 11px;
+  font-family: 'Courier New', monospace;
+  color: #1a202c;
+  background: #fff;
+  transition: border-color 0.15s;
+  min-width: 0;
+}
+
+.tc-input:focus {
+  outline: none;
+  border-color: #00467F;
+  box-shadow: 0 0 0 2px rgba(0,70,127,0.12);
+}
+
+.tc-input--error {
+  border-color: #e53e3e;
+  background: #fff5f5;
+}
+
+.tc-error {
+  font-size: 9px;
+  color: #e53e3e;
+  font-weight: 500;
+}
+
+/* ── Learning rate ─────────────────────────────────────────── */
+.tc-lr-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.tc-slider {
+  flex: 1;
+  accent-color: #00467F;
+  cursor: pointer;
+  height: 4px;
+}
+
+.tc-lr-value {
+  font-family: 'Courier New', monospace;
+  font-size: 13px;
+  font-weight: 700;
+  color: #00467F;
+  min-width: 32px;
+  text-align: right;
+}
+
+/* ── Buttons ───────────────────────────────────────────────── */
+.tc-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 5px;
+}
+
+.tc-btn {
+  padding: 7px 8px;
+  border-radius: 6px;
+  border: none;
+  font-size: 11px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.15s;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  line-height: 1.2;
+}
+
+.tc-btn--primary {
+  background: linear-gradient(135deg, #00467F, #0066CC);
+  color: #fff;
+  box-shadow: 0 2px 6px rgba(0,70,127,0.2);
+}
+
+.tc-btn--primary:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 3px 10px rgba(0,70,127,0.3);
+}
+
+.tc-btn--primary:disabled {
+  background: #a0aec0;
+  box-shadow: none;
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+
+.tc-btn--secondary {
+  background: #edf2f7;
+  color: #2d3748;
+  border: 1.5px solid #cbd5e0;
+  grid-column: 1 / -1;
+}
+
+.tc-btn--secondary:hover {
+  background: #e2e8f0;
+}
+
+.tc-btn--toggle {
+  background: #edf2f7;
+  color: #4a5568;
+  border: 1.5px solid #cbd5e0;
+  width: 100%;
+  justify-content: center;
+  font-size: 11px;
+  padding: 6px 8px;
+}
+
+.tc-btn--active {
+  background: #ebf8ff;
+  color: #2b6cb0;
+  border-color: #90cdf4;
+}
+
+/* Step badge */
+.tc-step-badge {
+  font-size: 10px;
+  background: rgba(0,70,127,0.12);
+  color: #2b6cb0;
+  border-radius: 8px;
+  padding: 1px 6px;
+  font-weight: 600;
+}
+
+/* ── Phase indicator ───────────────────────────────────────── */
+.tc-phase {
+  display: flex;
+  gap: 3px;
+  margin-bottom: 6px;
+}
+
+.tc-phase-step {
+  flex: 1;
+  text-align: center;
+  font-size: 9px;
+  font-weight: 700;
+  padding: 3px 2px;
+  border-radius: 4px;
+  background: #e2e8f0;
+  color: #718096;
+  transition: all 0.2s;
+}
+
+.tc-phase-step--active {
+  background: #00467F;
+  color: #fff;
+}
+
+.tc-phase-step--done {
+  background: #c6f6d5;
+  color: #276749;
+}
+
+/* ── Warning ───────────────────────────────────────────────── */
+.tc-warning {
+  font-size: 10px;
+  color: #c05621;
+  background: #fffaf0;
+  border: 1px solid #fbd38d;
+  border-radius: 4px;
+  padding: 3px 7px;
+  font-weight: 500;
+  grid-column: 1 / -1;
+}
+
+/* ── Output display ────────────────────────────────────────── */
+.tc-output-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4px;
+}
+
+.tc-output-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f7fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 4px;
+  padding: 4px 8px;
+}
+
+.tc-output-item--total {
+  grid-column: 1 / -1;
+  background: #ebf8ff;
+  border-color: #90cdf4;
+}
+
+.tc-output-label {
+  font-family: 'Courier New', monospace;
+  font-size: 11px;
+  font-weight: 700;
+  color: #4a5568;
+}
+
+.tc-output-value {
+  font-family: 'Courier New', monospace;
+  font-size: 11px;
+  font-weight: 700;
+  color: #00467F;
+}
+
+/* ── Weight delta table ────────────────────────────────────── */
+.tc-delta-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 10px;
+  font-family: 'Courier New', monospace;
+}
+
+.tc-delta-table th {
+  background: #00467F;
+  color: #fff;
+  padding: 4px 6px;
+  text-align: left;
+  font-size: 9px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.tc-delta-table td {
+  padding: 3px 6px;
+  border-bottom: 1px solid #e2e8f0;
+  color: #2d3748;
+}
+
+.tc-delta-table tr:nth-child(even) td {
+  background: #f7fafc;
+}
+
+.tc-delta-table tr:hover td {
+  background: #ebf8ff;
+}
+
+/* ── Divider between sections ──────────────────────────────── */
+.tc-divider {
+  border: none;
+  border-top: 1px solid #e8edf2;
+  margin: 6px 0;
+}
+
+/* ── Formula strip — shown below TRAIN buttons ─────────────── */
+.tc-formula-strip {
+  margin-top: 8px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  padding: 6px 8px;
+}
+
+.tc-formula-strip-title {
+  font-size: 9px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  color: #00467F;
+  margin-bottom: 5px;
+  padding-bottom: 3px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.tc-formula-rows {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.tc-formula-item {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  border-left: 3px solid #00467F;
+  background: #fff;
+  border-radius: 0 4px 4px 0;
+  padding: 4px 7px 4px 6px;
+}
+
+.tc-formula-item-label {
+  font-family: 'Courier New', monospace;
+  font-size: 9px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.tc-formula-item-expr {
+  font-family: 'Courier New', monospace;
+  font-size: 10px;
+  color: #1a202c;
+  white-space: normal;
+  word-break: break-word;
+  line-height: 1.4;
+}
+
+.tc-formula-item-value {
+  font-family: 'Courier New', monospace;
+  font-size: 11px;
+  font-weight: 700;
+  white-space: nowrap;
+}

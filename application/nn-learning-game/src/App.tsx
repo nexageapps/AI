@@ -1,121 +1,79 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
+import { GameProvider, useGame } from './context/GameContext'
+import { NetworkVisualization } from './components/NetworkVisualization'
+import { TrainingControls } from './components/TrainingControls'
+import LossGraph from './components/LossGraph'
+import LevelManager from './components/LevelManager'
 import './App.css'
 
-function App() {
-  const [count, setCount] = useState(0)
+// ---------------------------------------------------------------------------
+// Inner layout — must be inside GameProvider to use useGame
+// ---------------------------------------------------------------------------
+
+function GameLayout() {
+  const { state } = useGame()
+  const { stepMode, stepQueue, highlightedNode, highlightedEdge } = state
+
+  // Show a hint about the currently highlighted node/edge when in step mode
+  const stepHint = stepMode && (highlightedNode || highlightedEdge)
+    ? `Highlighted: ${highlightedNode ?? highlightedEdge}`
+    : null
 
   return (
-    <>
-      <section id="center">
-        <div className="hero">
-          <img src={heroImg} className="base" width="170" height="179" alt="" />
-          <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
-        </div>
-        <div>
-          <h1>Get started</h1>
-          <p>
-            Edit <code>src/App.tsx</code> and save to test <code>HMR</code>
-          </p>
-        </div>
-        <button
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
-        >
-          Count is {count}
-        </button>
-      </section>
+    <div className="app-shell">
+      <header className="app-header">
+        <h1 className="app-title">Neural Network Learning Game</h1>
+        <p className="app-subtitle">
+          Explore forward propagation, backpropagation, and gradient descent step by step.
+        </p>
+      </header>
 
-      <div className="ticks"></div>
+      {/* Level navigation + info */}
+      <div className="app-level-bar">
+        <LevelManager />
+      </div>
 
-      <section id="next-steps">
-        <div id="docs">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#documentation-icon"></use>
-          </svg>
-          <h2>Documentation</h2>
-          <p>Your questions, answered</p>
-          <ul>
-            <li>
-              <a href="https://vite.dev/" target="_blank">
-                <img className="logo" src={viteLogo} alt="" />
-                Explore Vite
-              </a>
-            </li>
-            <li>
-              <a href="https://react.dev/" target="_blank">
-                <img className="button-icon" src={reactLogo} alt="" />
-                Learn more
-              </a>
-            </li>
-          </ul>
+      {/* Step mode hint */}
+      {stepHint && (
+        <div className="app-step-hint" role="status" aria-live="polite">
+          {stepHint}
         </div>
-        <div id="social">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#social-icon"></use>
-          </svg>
-          <h2>Connect with us</h2>
-          <p>Join the Vite community</p>
-          <ul>
-            <li>
-              <a href="https://github.com/vitejs/vite" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#github-icon"></use>
-                </svg>
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://chat.vite.dev/" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#discord-icon"></use>
-                </svg>
-                Discord
-              </a>
-            </li>
-            <li>
-              <a href="https://x.com/vite_js" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#x-icon"></use>
-                </svg>
-                X.com
-              </a>
-            </li>
-            <li>
-              <a href="https://bsky.app/profile/vite.dev" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#bluesky-icon"></use>
-                </svg>
-                Bluesky
-              </a>
-            </li>
-          </ul>
-        </div>
-      </section>
+      )}
 
-      <div className="ticks"></div>
-      <section id="spacer"></section>
-    </>
+      {/* Main two-column layout */}
+      <main className="app-main">
+        {/* Left column: network visualization + loss graph */}
+        <div className="app-left">
+          <section className="app-card" aria-label="Network visualization">
+            <h2 className="app-card-title">Network</h2>
+            <NetworkVisualization />
+          </section>
+
+          <section className="app-card" aria-label="Loss graph">
+            <h2 className="app-card-title">Loss over Iterations</h2>
+            <LossGraph />
+          </section>
+        </div>
+
+        {/* Right column: training controls */}
+        <div className="app-right">
+          <section className="app-card" aria-label="Training controls">
+            <h2 className="app-card-title">Training Controls</h2>
+            <TrainingControls />
+          </section>
+        </div>
+      </main>
+    </div>
   )
 }
 
-export default App
+// ---------------------------------------------------------------------------
+// Root App — wraps everything in GameProvider
+// ---------------------------------------------------------------------------
+
+export default function App() {
+  return (
+    <GameProvider>
+      <GameLayout />
+    </GameProvider>
+  )
+}

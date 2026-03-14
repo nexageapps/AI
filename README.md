@@ -94,6 +94,13 @@ AI/
 
 Interactive demonstrations of AI concepts in action:
 
+<div align="center">
+  <a href="https://nexageapps.github.io/AI/">
+    <img src="./landingpage/game_landingPage.png" alt="AI Games Landing Page" width="80%" style="border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);"/>
+  </a>
+  <p><em>Interactive AI demos — playable in your browser</em></p>
+</div>
+
 | Demo | Concept | Course | Course Page | Notebook | Link |
 |------|---------|--------|-------------|----------|------|
 | **Wumpus World** | Symbolic Logic & Knowledge Representation | UoA-COMPSCI 713 | [COMPSCI 713 – AI Fundamentals](#compsci-713) | — | [Play Online](https://nexageapps.github.io/AI/wumpus) |

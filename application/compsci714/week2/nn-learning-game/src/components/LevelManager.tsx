@@ -120,6 +120,13 @@ export default function LevelManager() {
           {currentProgress.completed && currentProgress.highScore > 0 && (
             <span className="lm-hs-pill">🏆 {currentProgress.highScore}pts</span>
           )}
+          <button
+            className="lm-reset-btn"
+            onClick={() => dispatch({ type: 'RESET_LEVEL' })}
+            title="Reset network and iteration count for a fresh attempt"
+          >
+            ↺ Reset
+          </button>
         </div>
 
         {/* Info / formula popover trigger */}

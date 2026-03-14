@@ -90,6 +90,7 @@ type Action =
   | { type: 'ADVANCE_STEP' }
   | { type: 'COMPLETE_LEVEL';   levelId: number; score: number }
   | { type: 'CHANGE_LEVEL';     levelId: number }
+  | { type: 'RESET_LEVEL' }
 
 // ---------------------------------------------------------------------------
 // Reducer
@@ -308,6 +309,36 @@ function reducer(state: GameState, action: Action): GameState {
         highlightedNode: null,
         highlightedEdge: null,
         stepQueue: [],
+      }
+    }
+
+    case 'RESET_LEVEL': {
+      const level = state.levels.find(l => l.id === state.currentLevel)
+      const newNetwork: NetworkState = {
+        ...INITIAL_NETWORK,
+        inputs: level?.presetInputs
+          ? { ...INITIAL_NETWORK.inputs, ...level.presetInputs }
+          : INITIAL_NETWORK.inputs,
+        weights: level?.presetWeights
+          ? { ...INITIAL_NETWORK.weights, ...level.presetWeights }
+          : INITIAL_NETWORK.weights,
+      }
+      return {
+        ...state,
+        network: newNetwork,
+        iterationPhase: 'ready',
+        animationPhase: 'idle',
+        highlightedNode: null,
+        highlightedEdge: null,
+        stepQueue: [],
+        progress: {
+          ...state.progress,
+          [state.currentLevel]: {
+            ...state.progress[state.currentLevel],
+            iterationCount: 0,
+            lossHistory: [],
+          },
+        },
       }
     }
 

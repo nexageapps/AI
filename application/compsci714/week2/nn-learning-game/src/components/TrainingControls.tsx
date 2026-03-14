@@ -292,8 +292,8 @@ export function TrainingControls() {
 
   function handleLearningRateChange(raw: string) {
     const n = parseFloat_(raw)
-    if (n !== null && n >= 0.01 && n <= 1.0) {
-      dispatch({ type: 'SET_LEARNING_RATE', value: n })
+    if (n !== null && n > 0 && n <= 1.0) {
+      dispatch({ type: 'SET_LEARNING_RATE', value: Math.round(n * 1000) / 1000 })
     }
   }
 
@@ -386,6 +386,15 @@ export function TrainingControls() {
             value={learningRate}
             onChange={e => handleLearningRateChange(e.target.value)}
             aria-label="Learning rate"
+          />
+          <input
+            type="number"
+            className="tc-input"
+            min={0.001} max={1.0} step={0.01}
+            value={learningRate}
+            onChange={e => handleLearningRateChange(e.target.value)}
+            aria-label="Learning rate value"
+            style={{ width: 64, marginLeft: 8 }}
           />
         </div>
       </section>

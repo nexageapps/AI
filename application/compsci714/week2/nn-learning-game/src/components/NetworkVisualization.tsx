@@ -28,9 +28,10 @@ const ROW_BIAS = 60
 function activationColor(value: number | null): string {
   if (value === null) return '#94a3b8' // slate-400 for unknown
   const t = Math.max(0, Math.min(1, value))
-  const r = Math.round(t * 220 + (1 - t) * 59)
-  const g = Math.round(t * 38 + (1 - t) * 130)
-  const b = Math.round(t * 38 + (1 - t) * 246)
+  // UoA blue (low) → warm amber (high)
+  const r = Math.round(t * 245 + (1 - t) * 0)
+  const g = Math.round(t * 158 + (1 - t) * 70)
+  const b = Math.round(t * 11  + (1 - t) * 127)
   return `rgb(${r},${g},${b})`
 }
 
@@ -59,7 +60,7 @@ interface NodeProps {
 
 function NetworkNode({ cx, cy, r, label, activation, highlighted, dashed = false }: NodeProps) {
   const fill = activationColor(activation)
-  const stroke = highlighted ? '#f59e0b' : '#1e293b'
+  const stroke = highlighted ? '#f59e0b' : '#00467F'
   const strokeWidth = highlighted ? 3 : 1.5
   const strokeDasharray = dashed ? '4 3' : undefined
 
@@ -117,7 +118,7 @@ function NetworkEdge({ x1, y1, x2, y2, weightLabel, gradientLabel, highlighted, 
   const mx = (x1 + x2) / 2
   const my = (y1 + y2) / 2
   // When an animation class is active, let CSS control stroke/width
-  const stroke = animationClass ? undefined : (highlighted ? '#f59e0b' : '#64748b')
+  const stroke = animationClass ? undefined : (highlighted ? '#f59e0b' : '#00467F')
   const strokeWidth = animationClass ? undefined : (highlighted ? 2.5 : 1.5)
   const strokeDasharray = dashed ? '5 4' : undefined
 
@@ -423,9 +424,9 @@ export function NetworkVisualization() {
       {/* Column labels                                                        */}
       {/* ------------------------------------------------------------------ */}
 
-      <text x={COL_INPUT}  y={SVG_HEIGHT - 10} textAnchor="middle" fontSize={12} fill="#64748b">Input</text>
-      <text x={COL_HIDDEN} y={SVG_HEIGHT - 10} textAnchor="middle" fontSize={12} fill="#64748b">Hidden</text>
-      <text x={COL_OUTPUT} y={SVG_HEIGHT - 10} textAnchor="middle" fontSize={12} fill="#64748b">Output</text>
+      <text x={COL_INPUT}  y={SVG_HEIGHT - 10} textAnchor="middle" fontSize={12} fill="#00467F" fontWeight="600">Input</text>
+      <text x={COL_HIDDEN} y={SVG_HEIGHT - 10} textAnchor="middle" fontSize={12} fill="#00467F" fontWeight="600">Hidden</text>
+      <text x={COL_OUTPUT} y={SVG_HEIGHT - 10} textAnchor="middle" fontSize={12} fill="#00467F" fontWeight="600">Output</text>
     </svg>
   )
 }

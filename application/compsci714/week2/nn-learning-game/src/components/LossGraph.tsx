@@ -142,7 +142,7 @@ export default function LossGraph() {
           <polyline
             points={polylinePoints}
             fill="none"
-            stroke="#3498db"
+            stroke="#0066CC"
             strokeWidth={2}
             strokeLinejoin="round"
           />
@@ -155,7 +155,7 @@ export default function LossGraph() {
             cx={toSvgX(i + 1, lossHistory.length)}
             cy={toSvgY(loss, maxLoss)}
             r={3}
-            fill="#3498db"
+            fill="#00467F"
           />
         ))}
 

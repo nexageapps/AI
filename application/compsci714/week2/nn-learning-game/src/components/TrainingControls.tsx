@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { useGame } from '../context/GameContext'
 import type { NetworkState } from '../types'
+import './TrainingControls.css'
 
 // Weight keys in display order
 const WEIGHT_KEYS = ['w1', 'w2', 'w3', 'w4', 'w5', 'w6', 'w7', 'w8'] as const
@@ -242,219 +243,152 @@ export function TrainingControls() {
 
   return (
     <div className="training-controls">
-      {/* Inputs section */}
+
+      {/* ── Inputs & Targets on one row ── */}
       <section className="tc-section" aria-labelledby="tc-inputs-heading">
-        <h3 id="tc-inputs-heading" className="tc-section-title">Inputs</h3>
-        <div className="tc-row">
-          <BoundedField
-            label="x1"
-            rawValue={inputs.x1}
-            onChange={raw => handleInputChange('x1', raw)}
-            min={0}
-            max={1}
-          />
-          <BoundedField
-            label="x2"
-            rawValue={inputs.x2}
-            onChange={raw => handleInputChange('x2', raw)}
-            min={0}
-            max={1}
-          />
+        <h3 id="tc-inputs-heading" className="tc-section-title">Inputs &amp; Targets</h3>
+        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 6 }}>
+          <div>
+            <div className="tc-inline-label">Inputs</div>
+            <div className="tc-row">
+              <BoundedField label="x1" rawValue={inputs.x1} onChange={raw => handleInputChange('x1', raw)} min={0} max={1} />
+              <BoundedField label="x2" rawValue={inputs.x2} onChange={raw => handleInputChange('x2', raw)} min={0} max={1} />
+            </div>
+          </div>
+          <div>
+            <div className="tc-inline-label">Targets</div>
+            <div className="tc-row">
+              <BoundedField label="t1" rawValue={targets.t1} onChange={raw => handleTargetChange('t1', raw)} min={0} max={1} />
+              <BoundedField label="t2" rawValue={targets.t2} onChange={raw => handleTargetChange('t2', raw)} min={0} max={1} />
+            </div>
+          </div>
         </div>
       </section>
 
-      {/* Targets section */}
-      <section className="tc-section" aria-labelledby="tc-targets-heading">
-        <h3 id="tc-targets-heading" className="tc-section-title">Targets</h3>
-        <div className="tc-row">
-          <BoundedField
-            label="t1"
-            rawValue={targets.t1}
-            onChange={raw => handleTargetChange('t1', raw)}
-            min={0}
-            max={1}
-          />
-          <BoundedField
-            label="t2"
-            rawValue={targets.t2}
-            onChange={raw => handleTargetChange('t2', raw)}
-            min={0}
-            max={1}
-          />
-        </div>
-      </section>
+      <hr className="tc-divider" />
 
-      {/* Weights section */}
+      {/* ── Weights ── */}
       <section className="tc-section" aria-labelledby="tc-weights-heading">
         <h3 id="tc-weights-heading" className="tc-section-title">Weights</h3>
         <div className="tc-grid">
           {WEIGHT_KEYS.map(key => (
-            <FreeField
-              key={key}
-              label={key}
-              rawValue={weights[key]}
-              onChange={raw => handleWeightChange(key, raw)}
-            />
+            <FreeField key={key} label={key} rawValue={weights[key]} onChange={raw => handleWeightChange(key, raw)} />
           ))}
         </div>
       </section>
 
-      {/* Biases section */}
+      {/* ── Biases ── */}
       <section className="tc-section" aria-labelledby="tc-biases-heading">
         <h3 id="tc-biases-heading" className="tc-section-title">Biases</h3>
         <div className="tc-row">
-          <FreeField
-            label="b1"
-            rawValue={biases.b1}
-            onChange={raw => handleBiasChange('b1', raw)}
-          />
-          <FreeField
-            label="b2"
-            rawValue={biases.b2}
-            onChange={raw => handleBiasChange('b2', raw)}
-          />
+          <FreeField label="b1" rawValue={biases.b1} onChange={raw => handleBiasChange('b1', raw)} />
+          <FreeField label="b2" rawValue={biases.b2} onChange={raw => handleBiasChange('b2', raw)} />
         </div>
       </section>
 
-      {/* Learning rate slider */}
+      <hr className="tc-divider" />
+
+      {/* ── Learning Rate + Step Mode on one row ── */}
       <section className="tc-section" aria-labelledby="tc-lr-heading">
-        <h3 id="tc-lr-heading" className="tc-section-title">Learning Rate (α)</h3>
+        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 4 }}>
+          <h3 id="tc-lr-heading" className="tc-section-title" style={{ margin: 0 }}>Learning Rate (α)</h3>
+          <button
+            className={`tc-btn tc-btn--toggle${stepMode ? ' tc-btn--active' : ''}`}
+            onClick={() => dispatch({ type: 'TOGGLE_STEP_MODE' })}
+            aria-pressed={stepMode}
+            style={{ padding: '3px 10px', fontSize: 10 }}
+          >
+            {stepMode ? '⏸ Step: ON' : '▶ Step: OFF'}
+          </button>
+        </div>
         <div className="tc-lr-row">
           <input
             type="range"
             className="tc-slider"
-            min={0.01}
-            max={1.0}
-            step={0.01}
+            min={0.01} max={1.0} step={0.01}
             value={learningRate}
             onChange={e => handleLearningRateChange(e.target.value)}
             aria-label="Learning rate"
-            aria-valuemin={0.01}
-            aria-valuemax={1.0}
-            aria-valuenow={learningRate}
           />
           <span className="tc-lr-value">{learningRate.toFixed(2)}</span>
         </div>
       </section>
 
-      {/* Step Mode toggle */}
-      <section className="tc-section" aria-labelledby="tc-stepmode-heading">
-        <h3 id="tc-stepmode-heading" className="tc-section-title">Step Mode</h3>
-        <button
-          className={`tc-btn tc-btn--toggle${stepMode ? ' tc-btn--active' : ''}`}
-          onClick={() => dispatch({ type: 'TOGGLE_STEP_MODE' })}
-          aria-pressed={stepMode}
-        >
-          {stepMode ? 'Step Mode: ON' : 'Step Mode: OFF'}
-        </button>
-      </section>
+      <hr className="tc-divider" />
 
-      {/* Action buttons */}
+      {/* ── Actions ── */}
       <section className="tc-section" aria-labelledby="tc-actions-heading">
-        <h3 id="tc-actions-heading" className="tc-section-title">Actions</h3>
+        <h3 id="tc-actions-heading" className="tc-section-title">Train</h3>
+        <div className="tc-phase" aria-label="Training phase">
+          <div className={`tc-phase-step ${iterationPhase === 'ready' ? 'tc-phase-step--active' : 'tc-phase-step--done'}`}>1. Forward</div>
+          <div className={`tc-phase-step ${iterationPhase === 'forward_done' ? 'tc-phase-step--active' : iterationPhase === 'backprop_done' ? 'tc-phase-step--done' : ''}`}>2. Backprop</div>
+          <div className={`tc-phase-step ${iterationPhase === 'backprop_done' ? 'tc-phase-step--active' : ''}`}>3. Update</div>
+        </div>
         <div className="tc-actions">
-          <button
-            className="tc-btn tc-btn--primary"
-            onClick={handleRunForward}
-            disabled={iterationPhase !== 'ready'}
-            aria-disabled={iterationPhase !== 'ready'}
-          >
-            Run Forward Pass
+          <button className="tc-btn tc-btn--primary" onClick={handleRunForward} disabled={iterationPhase !== 'ready'}>
+            ➡ Forward
           </button>
-
-          <button
-            className="tc-btn tc-btn--primary"
-            onClick={handleBackpropagate}
-            disabled={iterationPhase !== 'forward_done'}
-            aria-disabled={iterationPhase !== 'forward_done'}
-          >
-            Backpropagate
+          <button className="tc-btn tc-btn--primary" onClick={handleBackpropagate} disabled={iterationPhase !== 'forward_done'}>
+            ⬅ Backprop
           </button>
-          {backpropWarning && (
-            <span className="tc-warning" role="alert">
-              Run a forward pass first
-            </span>
-          )}
-
-          <button
-            className="tc-btn tc-btn--primary"
-            onClick={handleUpdateWeights}
-            disabled={iterationPhase !== 'backprop_done'}
-            aria-disabled={iterationPhase !== 'backprop_done'}
-          >
-            Update Weights
+          <button className="tc-btn tc-btn--primary" onClick={handleUpdateWeights} disabled={iterationPhase !== 'backprop_done'}>
+            ↻ Update
           </button>
-          {updateWarning && (
-            <span className="tc-warning" role="alert">
-              Run backpropagation first
-            </span>
-          )}
-
+          {backpropWarning && <span className="tc-warning">Run forward pass first</span>}
+          {updateWarning && <span className="tc-warning">Run backprop first</span>}
           {stepMode && stepQueue.length > 0 && (
-            <button
-              className="tc-btn tc-btn--secondary"
-              onClick={() => dispatch({ type: 'ADVANCE_STEP' })}
-            >
-              Next Step
+            <button className="tc-btn tc-btn--secondary" onClick={() => dispatch({ type: 'ADVANCE_STEP' })}>
+              ▶ Next Step <span className="tc-step-badge">{stepQueue.length}</span>
             </button>
           )}
         </div>
       </section>
 
-      {/* Output display — shown after forward pass */}
+      {/* ── Output — shown after forward pass ── */}
       {activations !== null && loss !== null && (
-        <section className="tc-section" aria-labelledby="tc-output-heading">
-          <h3 id="tc-output-heading" className="tc-section-title">Forward Pass Output</h3>
-          <div className="tc-output-grid">
-            <div className="tc-output-item">
-              <span className="tc-output-label">y1</span>
-              <span className="tc-output-value">{activations.y1.toFixed(6)}</span>
+        <>
+          <hr className="tc-divider" />
+          <section className="tc-section" aria-labelledby="tc-output-heading">
+            <h3 id="tc-output-heading" className="tc-section-title">Output</h3>
+            <div className="tc-output-grid">
+              <div className="tc-output-item"><span className="tc-output-label">y1</span><span className="tc-output-value">{activations.y1.toFixed(5)}</span></div>
+              <div className="tc-output-item"><span className="tc-output-label">y2</span><span className="tc-output-value">{activations.y2.toFixed(5)}</span></div>
+              <div className="tc-output-item"><span className="tc-output-label">E1</span><span className="tc-output-value">{loss.E1.toFixed(5)}</span></div>
+              <div className="tc-output-item"><span className="tc-output-label">E2</span><span className="tc-output-value">{loss.E2.toFixed(5)}</span></div>
+              <div className="tc-output-item tc-output-item--total"><span className="tc-output-label">E total</span><span className="tc-output-value">{loss.E.toFixed(5)}</span></div>
             </div>
-            <div className="tc-output-item">
-              <span className="tc-output-label">y2</span>
-              <span className="tc-output-value">{activations.y2.toFixed(6)}</span>
-            </div>
-            <div className="tc-output-item">
-              <span className="tc-output-label">E1</span>
-              <span className="tc-output-value">{loss.E1.toFixed(6)}</span>
-            </div>
-            <div className="tc-output-item">
-              <span className="tc-output-label">E2</span>
-              <span className="tc-output-value">{loss.E2.toFixed(6)}</span>
-            </div>
-            <div className="tc-output-item tc-output-item--total">
-              <span className="tc-output-label">E (total loss)</span>
-              <span className="tc-output-value">{loss.E.toFixed(6)}</span>
-            </div>
-          </div>
-        </section>
+          </section>
+        </>
       )}
 
-      {/* Weight delta table — shown when gradients are available */}
+      {/* ── Weight gradients — shown after backprop ── */}
       {weightDeltaRows !== null && (
-        <section className="tc-section" aria-labelledby="tc-deltas-heading">
-          <h3 id="tc-deltas-heading" className="tc-section-title">Weight Gradients</h3>
-          <table className="tc-delta-table" aria-label="Weight gradients">
-            <thead>
-              <tr>
-                <th>Weight</th>
-                <th>Current</th>
-                <th>Gradient</th>
-                <th>New (after update)</th>
-              </tr>
-            </thead>
-            <tbody>
-              {weightDeltaRows.map(({ key, current, grad, next }) => (
-                <tr key={key}>
-                  <td>{key}</td>
-                  <td>{current.toFixed(6)}</td>
-                  <td>{grad.toFixed(6)}</td>
-                  <td>{next.toFixed(6)}</td>
+        <>
+          <hr className="tc-divider" />
+          <section className="tc-section" aria-labelledby="tc-deltas-heading">
+            <h3 id="tc-deltas-heading" className="tc-section-title">Weight Gradients</h3>
+            <table className="tc-delta-table" aria-label="Weight gradients">
+              <thead>
+                <tr>
+                  <th>w</th>
+                  <th>Current</th>
+                  <th>∂E/∂w</th>
+                  <th>New</th>
                 </tr>
-              ))}
-            </tbody>
-          </table>
-        </section>
+              </thead>
+              <tbody>
+                {weightDeltaRows.map(({ key, current, grad, next }) => (
+                  <tr key={key}>
+                    <td>{key}</td>
+                    <td>{current.toFixed(4)}</td>
+                    <td>{grad.toFixed(4)}</td>
+                    <td>{next.toFixed(4)}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </section>
+        </>
       )}
     </div>
   )

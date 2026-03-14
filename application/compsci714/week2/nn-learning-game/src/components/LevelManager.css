@@ -1,0 +1,464 @@
+/* ============================================================
+   LevelManager — UoA blue theme
+   ============================================================ */
+
+.lm-root {
+  font-family: inherit;
+  position: relative;
+}
+
+/* ── Tabs ──────────────────────────────────────────────────── */
+.lm-tabs {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 14px;
+}
+
+.lm-tab {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 14px;
+  border: 2px solid #c8d6e5;
+  border-radius: 8px;
+  background: rgba(255,255,255,0.85);
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+  color: #4a5568;
+  transition: all 0.18s;
+  max-width: 220px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.lm-tab:hover:not(:disabled) {
+  border-color: #00467F;
+  background: #fff;
+  color: #00467F;
+  transform: translateY(-1px);
+  box-shadow: 0 3px 10px rgba(0,70,127,0.15);
+}
+
+.lm-tab--active {
+  border-color: #00467F !important;
+  background: #00467F !important;
+  color: #fff !important;
+  box-shadow: 0 3px 12px rgba(0,70,127,0.35);
+}
+
+.lm-tab--done:not(.lm-tab--active) {
+  border-color: #10b981;
+  background: #ecfdf5;
+  color: #065f46;
+}
+
+.lm-tab--locked {
+  opacity: 0.55;
+  cursor: not-allowed !important;
+  background: rgba(255,255,255,0.4) !important;
+  border-style: dashed !important;
+  border-color: #94a3b8 !important;
+  color: #64748b !important;
+}
+
+.lm-tab-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: rgba(0,0,0,0.12);
+  font-size: 11px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.lm-tab--active .lm-tab-num {
+  background: rgba(255,255,255,0.25);
+}
+
+.lm-tab-check {
+  color: #10b981;
+  font-weight: 700;
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
+.lm-tab--active .lm-tab-check {
+  color: #6ee7b7;
+}
+
+.lm-tab-lock {
+  font-size: 12px;
+  flex-shrink: 0;
+}
+
+.lm-tab-label {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.lm-tab-score {
+  font-size: 10px;
+  background: rgba(0,0,0,0.1);
+  padding: 1px 5px;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+/* ── Level info card ───────────────────────────────────────── */
+.lm-info {
+  background: #fff;
+  border: 1px solid #dde3ea;
+  border-left: 4px solid #00467F;
+  border-radius: 8px;
+  padding: 14px 16px;
+  margin-bottom: 10px;
+}
+
+.lm-info-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.lm-level-badge {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: #00467F;
+  background: #e8f0fb;
+  padding: 2px 8px;
+  border-radius: 10px;
+  margin-bottom: 6px;
+}
+
+.lm-level-name {
+  margin: 0 0 5px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #1a202c;
+}
+
+.lm-level-desc {
+  margin: 0;
+  font-size: 13px;
+  color: #4a5568;
+  line-height: 1.55;
+}
+
+/* ── Formula toggle button ─────────────────────────────────── */
+.lm-formula-btn {
+  flex-shrink: 0;
+  padding: 6px 12px;
+  border: 2px solid #00467F;
+  border-radius: 6px;
+  background: transparent;
+  color: #00467F;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.15s;
+  white-space: nowrap;
+}
+
+.lm-formula-btn:hover {
+  background: #00467F;
+  color: #fff;
+}
+
+/* ── Loss progress ─────────────────────────────────────────── */
+.lm-loss-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.lm-loss-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.lm-loss-label {
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #718096;
+}
+
+.lm-loss-val {
+  font-family: 'Courier New', monospace;
+  font-size: 18px;
+  font-weight: 700;
+  color: #e53e3e;
+  transition: color 0.3s;
+}
+
+.lm-loss-val--good {
+  color: #38a169;
+}
+
+.lm-loss-threshold {
+  font-family: 'Courier New', monospace;
+  font-size: 18px;
+  font-weight: 700;
+  color: #718096;
+}
+
+.lm-loss-bar-wrap {
+  flex: 1;
+  min-width: 80px;
+  height: 8px;
+  background: #e2e8f0;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.lm-loss-bar {
+  height: 100%;
+  background: linear-gradient(90deg, #f97316, #ef4444);
+  border-radius: 4px;
+  transition: width 0.4s ease, background 0.4s;
+}
+
+.lm-loss-bar--good {
+  background: linear-gradient(90deg, #10b981, #38a169);
+}
+
+.lm-highscore {
+  margin-top: 8px;
+  font-size: 12px;
+  color: #744210;
+  background: #fefcbf;
+  border: 1px solid #f6e05e;
+  border-radius: 6px;
+  padding: 4px 10px;
+  display: inline-block;
+}
+
+/* ── Locked hint ───────────────────────────────────────────── */
+.lm-locked-hint {
+  font-size: 12px;
+  color: rgba(255,255,255,0.7);
+  padding: 4px 0;
+  margin-top: 4px;
+}
+
+/* ── Formula panel ─────────────────────────────────────────── */
+.lm-formulas {
+  background: #fff;
+  border: 1px solid #dde3ea;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 10px;
+  animation: slideDown 0.2s ease;
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.lm-formulas-title {
+  margin: 0 0 12px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #00467F;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+}
+
+.lm-formula-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 10px;
+}
+
+.lm-formula-card {
+  border-left: 3px solid #00467F;
+  background: #f8fafc;
+  border-radius: 0 6px 6px 0;
+  padding: 10px 12px;
+}
+
+.lm-formula-card-title {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 5px;
+}
+
+.lm-formula-card-formula {
+  font-family: 'Courier New', monospace;
+  font-size: 13px;
+  font-weight: 600;
+  color: #1a202c;
+  margin-bottom: 4px;
+  word-break: break-word;
+}
+
+.lm-formula-card-note {
+  font-size: 11px;
+  color: #718096;
+  line-height: 1.4;
+}
+
+/* ── Modal ─────────────────────────────────────────────────── */
+.lm-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  backdrop-filter: blur(3px);
+}
+
+.lm-modal {
+  background: #fff;
+  border-radius: 16px;
+  padding: 32px 36px;
+  max-width: 460px;
+  width: 92%;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+  text-align: center;
+  animation: popIn 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+@keyframes popIn {
+  from { opacity: 0; transform: scale(0.85); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+.lm-modal-icon {
+  font-size: 48px;
+  margin-bottom: 8px;
+}
+
+.lm-modal-title {
+  margin: 0 0 6px;
+  font-size: 24px;
+  font-weight: 700;
+  color: #1a202c;
+}
+
+.lm-modal-sub {
+  margin: 0 0 20px;
+  color: #718096;
+  font-size: 14px;
+}
+
+/* Score grid */
+.lm-score-grid {
+  background: #f7fafc;
+  border-radius: 10px;
+  padding: 14px 16px;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.lm-score-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.lm-score-row-label {
+  font-size: 12px;
+  color: #4a5568;
+  width: 180px;
+  flex-shrink: 0;
+}
+
+.lm-score-row-bar-wrap {
+  flex: 1;
+  height: 6px;
+  background: #e2e8f0;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.lm-score-row-bar {
+  height: 100%;
+  background: linear-gradient(90deg, #00467F, #0066CC);
+  border-radius: 3px;
+  transition: width 0.5s ease;
+}
+
+.lm-score-row-val {
+  font-size: 12px;
+  font-weight: 700;
+  color: #00467F;
+  width: 44px;
+  text-align: right;
+  flex-shrink: 0;
+}
+
+.lm-score-total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 10px;
+  border-top: 2px solid #e2e8f0;
+  margin-top: 4px;
+  font-weight: 700;
+  font-size: 15px;
+  color: #1a202c;
+}
+
+.lm-score-total-val {
+  color: #00467F;
+  font-size: 20px;
+}
+
+/* Modal buttons */
+.lm-modal-btns {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.lm-btn {
+  padding: 10px 24px;
+  border-radius: 8px;
+  border: none;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.lm-btn--primary {
+  background: linear-gradient(135deg, #00467F, #0066CC);
+  color: #fff;
+  box-shadow: 0 3px 12px rgba(0,70,127,0.3);
+}
+
+.lm-btn--primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 16px rgba(0,70,127,0.4);
+}
+
+.lm-btn--secondary {
+  background: #edf2f7;
+  color: #4a5568;
+}
+
+.lm-btn--secondary:hover {
+  background: #e2e8f0;
+}

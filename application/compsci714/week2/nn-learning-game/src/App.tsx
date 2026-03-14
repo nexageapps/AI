@@ -25,6 +25,7 @@ function GameLayout() {
         <p className="app-subtitle">
           Explore forward propagation, backpropagation, and gradient descent step by step.
         </p>
+        
       </header>
 
       {/* Level navigation + info */}

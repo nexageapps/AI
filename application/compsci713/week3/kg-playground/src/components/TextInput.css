@@ -1,0 +1,93 @@
+.text-input-card {
+  background: var(--bg1);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 18px 20px;
+}
+
+.section-title {
+  font-size: 0.65rem;
+  font-weight: 800;
+  margin-bottom: 10px;
+  color: var(--cyan);
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+}
+
+.section-hint {
+  font-size: 0.82rem;
+  color: var(--text-md);   /* was #4a7fd4 — now clearly readable */
+  margin-bottom: 12px;
+  line-height: 1.6;
+}
+
+.text-area {
+  width: 100%;
+  background: var(--bg0);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  color: var(--text-hi);   /* bright white text in textarea */
+  font-size: 0.9rem;
+  padding: 10px 12px;
+  resize: vertical;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  font-family: inherit;
+  line-height: 1.65;
+}
+.text-area::placeholder { color: #334155; }
+.text-area:focus {
+  border-color: var(--cyan);
+  box-shadow: 0 0 0 2px rgba(56,189,248,0.15);
+}
+
+.input-actions { display: flex; gap: 10px; margin-top: 10px; }
+
+.btn-primary {
+  background: linear-gradient(135deg, #1a56db 0%, var(--cyan-dk) 100%);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 9px 22px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+  transition: opacity 0.2s, box-shadow 0.2s;
+  text-transform: uppercase;
+  box-shadow: 0 0 14px rgba(56,189,248,0.3);
+}
+.btn-primary:hover:not(:disabled) { opacity: 0.88; box-shadow: 0 0 22px rgba(56,189,248,0.5); }
+.btn-primary:disabled { opacity: 0.3; cursor: not-allowed; box-shadow: none; }
+
+.btn-ghost {
+  background: transparent;
+  color: var(--text-md);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 9px 14px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: border-color 0.2s, color 0.2s;
+}
+.btn-ghost:hover { border-color: var(--cyan); color: var(--text-hi); }
+
+.examples { margin-top: 12px; display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+.examples-label {
+  font-size: 0.68rem;
+  color: var(--text-lo);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-weight: 700;
+}
+.btn-example {
+  background: var(--bg0);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  color: var(--text-md);   /* was barely visible #4a7fd4 */
+  font-size: 0.72rem;
+  padding: 4px 10px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.btn-example:hover { border-color: var(--cyan); color: var(--text-hi); }

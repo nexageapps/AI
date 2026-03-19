@@ -1,0 +1,113 @@
+/* ── KG Playground — high-contrast vivid theme ───────────────────────────── */
+
+:root {
+  --cyan:    #38bdf8;
+  --cyan-dk: #0ea5e9;
+  --amber:   #fbbf24;
+  --purple:  #a78bfa;
+  --green:   #34d399;
+  --red:     #f87171;
+  --bg0:     #050c18;   /* deepest background */
+  --bg1:     #0a1628;   /* card background */
+  --bg2:     #0d1f3c;   /* elevated surface */
+  --border:  #1e3a6e;
+  --text-hi: #f1f5f9;   /* high-contrast body text */
+  --text-md: #94a3b8;   /* secondary text */
+  --text-lo: #4a7fd4;   /* muted / hint text */
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--bg0);
+}
+
+/* ── Header ─────────────────────────────────────────────────────────────── */
+.app-header {
+  background: linear-gradient(135deg, #0d1f3c 0%, #0a1628 100%);
+  border-bottom: 2px solid var(--cyan-dk);
+  padding: 16px 28px;
+  position: relative;
+  overflow: hidden;
+}
+.app-header::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(56,189,248,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(56,189,248,0.04) 1px, transparent 1px);
+  background-size: 28px 28px;
+  pointer-events: none;
+}
+.header-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  position: relative;
+}
+.app-title {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--text-hi);
+  letter-spacing: 0.01em;
+}
+.app-title span { color: var(--cyan); }
+.app-subtitle {
+  font-size: 0.78rem;
+  color: var(--text-lo);
+  margin-top: 3px;
+  letter-spacing: 0.04em;
+}
+.header-badges { display: flex; gap: 8px; flex-wrap: wrap; }
+.badge {
+  background: rgba(56,189,248,0.1);
+  border: 1px solid rgba(56,189,248,0.35);
+  border-radius: 4px;
+  color: var(--cyan);
+  font-size: 0.68rem;
+  padding: 4px 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+/* ── Layout ──────────────────────────────────────────────────────────────── */
+.app-main {
+  flex: 1;
+  max-width: 1280px;
+  width: 100%;
+  margin: 20px auto;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  align-items: start;
+}
+.col-left, .col-right { display: flex; flex-direction: column; gap: 16px; }
+
+.edu-wrapper {
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto 32px;
+  padding: 0 20px;
+}
+
+/* ── Shared section title ────────────────────────────────────────────────── */
+.section-title {
+  font-size: 0.65rem;
+  font-weight: 800;
+  margin-bottom: 12px;
+  color: var(--cyan);
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+}
+
+@media (max-width: 800px) {
+  .app-main { grid-template-columns: 1fr; }
+}

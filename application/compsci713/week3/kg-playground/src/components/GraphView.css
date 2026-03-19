@@ -1,0 +1,134 @@
+.graph-card {
+  background: var(--bg0);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 18px 20px;
+}
+
+.graph-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.graph-legend {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.7rem;
+  color: var(--text-md);   /* was barely visible */
+  letter-spacing: 0.04em;
+  flex-wrap: wrap;
+}
+.legend-dot {
+  display: inline-block;
+  width: 9px; height: 9px;
+  border-radius: 50%;
+  margin-right: 3px;
+  vertical-align: middle;
+}
+.legend-drag { color: var(--text-lo); font-style: italic; margin-left: 4px; }
+
+.graph-wrap { position: relative; }
+.graph-svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  border: 1px solid #0f2040;
+  background: var(--bg0);
+  touch-action: none;
+}
+
+.graph-empty {
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border: 1px dashed var(--border);
+  border-radius: 8px;
+  color: var(--text-md);
+  text-align: center;
+  padding: 20px;
+}
+.graph-empty-icon { font-size: 2rem; opacity: 0.2; }
+.graph-empty p    { font-size: 0.84rem; }
+.graph-empty-hint { font-size: 0.74rem; color: var(--text-lo); }
+
+/* ── Tooltip ─────────────────────────────────────────────────────────────── */
+.graph-tooltip {
+  position: absolute;
+  top: 10px; right: 10px;
+  background: var(--bg2);
+  border: 1px solid var(--cyan);
+  border-radius: 8px;
+  padding: 10px 13px;
+  min-width: 190px;
+  max-width: 260px;
+  box-shadow: 0 0 20px rgba(56,189,248,0.2);
+  pointer-events: none;
+  z-index: 10;
+}
+.tooltip-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 7px;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+.tooltip-name { font-size: 0.9rem; font-weight: 800; color: var(--text-hi); }
+.tooltip-role {
+  font-size: 0.62rem; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 0.06em;
+  color: var(--cyan);
+  background: rgba(56,189,248,0.12);
+  border: 1px solid rgba(56,189,248,0.3);
+  border-radius: 4px; padding: 2px 6px;
+}
+.tooltip-facts { display: flex; flex-direction: column; gap: 4px; }
+.tooltip-fact  { font-size: 0.78rem; color: var(--text-md); line-height: 1.55; }
+.tooltip-bullet { color: var(--cyan); font-size: 0.55rem; margin-right: 4px; }
+.tooltip-hint {
+  margin-top: 7px; font-size: 0.65rem; color: var(--text-lo);
+  font-style: italic; border-top: 1px solid var(--border); padding-top: 5px;
+}
+
+/* ── Plain-English strip ─────────────────────────────────────────────────── */
+.graph-sentences {
+  margin-top: 12px;
+  background: var(--bg1);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 10px 14px;
+}
+.graph-sentences-label {
+  font-size: 0.62rem; font-weight: 800;
+  text-transform: uppercase; letter-spacing: 0.1em;
+  color: var(--text-md);   /* was barely visible */
+  margin-bottom: 8px;
+}
+.graph-sentences-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 5px;
+}
+.graph-sentence {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.8rem;
+  flex-wrap: wrap;
+  background: var(--bg0);
+  border: 1px solid rgba(30,58,110,0.5);
+  border-radius: 5px;
+  padding: 6px 8px;
+}
+.gs-num    { font-size: 0.62rem; font-weight: 800; color: var(--border); min-width: 14px; }
+.gs-subject { color: #7dd3fc; font-weight: 700; }
+.gs-pred    { color: var(--text-md); font-style: italic; font-size: 0.76rem; }
+.gs-object  { color: #fde68a; font-weight: 700; }

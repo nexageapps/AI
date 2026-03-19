@@ -1,0 +1,77 @@
+.insight-card {
+  background: var(--bg1);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 18px 20px;
+}
+
+.stats-row { display: flex; gap: 10px; margin-bottom: 16px; flex-wrap: wrap; }
+
+.stat-box {
+  flex: 1;
+  min-width: 64px;
+  background: var(--bg0);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 12px 8px;
+  text-align: center;
+  transition: border-color 0.2s, transform 0.15s;
+}
+.stat-box:hover { border-color: var(--cyan); transform: translateY(-1px); }
+.stat-value { display: block; font-size: 1.6rem; font-weight: 800; }
+.stat-label {
+  display: block;
+  font-size: 0.6rem;
+  color: var(--text-md);   /* was barely visible */
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-top: 2px;
+  font-weight: 700;
+}
+
+.insight-section { margin-top: 14px; }
+.insight-sub {
+  font-size: 0.65rem;
+  font-weight: 800;
+  color: var(--cyan);
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.empty-msg { color: var(--text-md); font-size: 0.82rem; font-style: italic; }
+
+.suggestion-list { list-style: none; display: flex; flex-direction: column; gap: 6px; }
+.suggestion-item {
+  background: var(--bg0);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 8px 10px;
+  font-size: 0.82rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+.sug-triple { color: #93c5fd; }          /* bright blue — was barely visible */
+.sug-triple em { color: var(--purple); font-style: italic; }
+.sug-confidence { font-size: 0.68rem; color: var(--text-md); white-space: nowrap; }
+
+.prompt-list { display: flex; flex-wrap: wrap; gap: 6px; }
+.prompt-chip {
+  background: var(--bg0);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 5px 12px;
+  font-size: 0.68rem;
+  color: var(--text-md);   /* was barely visible */
+  cursor: default;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  transition: border-color 0.2s, color 0.2s;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 700;
+}
+.prompt-chip:hover { border-color: var(--cyan); color: var(--text-hi); }

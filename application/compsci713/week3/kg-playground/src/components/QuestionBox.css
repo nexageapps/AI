@@ -1,0 +1,85 @@
+.question-card {
+  background: var(--bg1);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 18px 20px;
+}
+
+.section-hint {
+  font-size: 0.82rem;
+  color: var(--text-md);
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
+.qa-row { display: flex; gap: 8px; margin-top: 10px; }
+
+.qa-input {
+  flex: 1;
+  background: var(--bg0);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  color: var(--text-hi);
+  font-size: 0.86rem;
+  padding: 9px 12px;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  font-family: inherit;
+}
+.qa-input::placeholder { color: #334155; }
+.qa-input:focus { border-color: var(--cyan); box-shadow: 0 0 0 2px rgba(56,189,248,0.15); }
+
+.btn-ask {
+  background: linear-gradient(135deg, var(--cyan-dk) 0%, var(--cyan) 100%);
+  color: #050c18;
+  border: none;
+  border-radius: 6px;
+  padding: 9px 20px;
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: opacity 0.2s, box-shadow 0.2s;
+  box-shadow: 0 0 14px rgba(56,189,248,0.35);
+}
+.btn-ask:hover:not(:disabled) { opacity: 0.88; box-shadow: 0 0 22px rgba(56,189,248,0.55); }
+.btn-ask:disabled { opacity: 0.3; cursor: not-allowed; box-shadow: none; }
+
+.answer-box { margin-top: 12px; border-radius: 8px; padding: 12px 14px; font-size: 0.86rem; }
+.answer-box.found    { background: rgba(16,185,129,0.1); border: 1px solid #10b981; }
+.answer-box.not-found { background: rgba(245,158,11,0.08); border: 1px solid var(--amber); color: var(--amber); }
+
+.answer-label {
+  color: #6ee7b7;
+  font-weight: 800;
+  margin-right: 6px;
+  text-transform: uppercase;
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
+}
+.answer-text { color: #d1fae5; font-weight: 700; font-size: 1rem; }
+.answer-source { margin-top: 6px; font-size: 0.72rem; color: #6ee7b7; opacity: 0.75; }
+
+.llm-prompt {
+  margin-top: 14px;
+  border: 1px dashed var(--border);
+  border-radius: 6px;
+  padding: 8px 12px;
+}
+.llm-prompt summary {
+  font-size: 0.7rem;
+  color: var(--text-lo);
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-weight: 700;
+}
+.llm-prompt pre {
+  margin-top: 8px;
+  font-size: 0.72rem;
+  color: var(--text-md);   /* was barely visible */
+  white-space: pre-wrap;
+  word-break: break-word;
+  line-height: 1.6;
+}

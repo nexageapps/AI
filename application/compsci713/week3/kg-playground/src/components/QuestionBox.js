@@ -98,11 +98,6 @@ function queryTriples(question, triples) {
     }
   }
 
-  // Find candidate subjects from question tokens
-  const candidateSubjects = triples
-    .map(t => t.subject.toLowerCase())
-    .filter(s => tokens.some(tok => s.includes(tok) || tok.includes(s)));
-
   // Score each triple
   let best = null;
   let bestScore = 0;

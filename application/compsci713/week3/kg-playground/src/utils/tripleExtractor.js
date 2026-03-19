@@ -198,6 +198,8 @@ function capWord(w) {
   if (!w) return '';
   // Preserve all-caps abbreviations (UoA, QS, NZ)
   if (/^[A-Z]{2,}$/.test(w)) return w;
+  // Preserve already-CamelCase words (e.g. "MarieCurie" passed back as lastSubject)
+  if (/[A-Z].*[A-Z]/.test(w)) return w;
   return w.charAt(0).toUpperCase() + w.slice(1).toLowerCase();
 }
 

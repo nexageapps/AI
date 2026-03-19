@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/AI/compsci713/week3/kg-playground/static/css/main.39cd2365.css",
+    "main.js": "/AI/compsci713/week3/kg-playground/static/js/main.943f98af.js",
+    "index.html": "/AI/compsci713/week3/kg-playground/index.html",
+    "main.39cd2365.css.map": "/AI/compsci713/week3/kg-playground/static/css/main.39cd2365.css.map",
+    "main.943f98af.js.map": "/AI/compsci713/week3/kg-playground/static/js/main.943f98af.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.39cd2365.css",
+    "static/js/main.943f98af.js"
+  ]
+}

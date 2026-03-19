@@ -8,7 +8,7 @@ import './TextInput.css';
  */
 const EXAMPLES = [
   'Einstein was born in Germany and worked in Physics.',
-  'University of Auckland (UoA) is New Zealand\'s top-ranked public research university, located primarily in Auckland with around 45,000 students. Known as Waipapa Taumata Rau in Māori, it was founded in 1883 and leads nationally in research output, ranked #65 in QS World University Rankings 2026.',
+  'University of Auckland (UoA) is located in Auckland. Auckland is located in New Zealand.',
   'Newton invented Calculus and studied Mathematics.',
   'Marie Curie was born in Poland and worked in Chemistry.',
   'Karthik was born in India and works in SAP and studies AI.',

@@ -7,13 +7,13 @@
   --purple:  #a78bfa;
   --green:   #34d399;
   --red:     #f87171;
-  --bg0:     #050c18;   /* deepest background */
-  --bg1:     #0a1628;   /* card background */
-  --bg2:     #0d1f3c;   /* elevated surface */
+  --bg0:     #050c18;
+  --bg1:     #0a1628;
+  --bg2:     #0d1f3c;
   --border:  #1e3a6e;
-  --text-hi: #f1f5f9;   /* high-contrast body text */
-  --text-md: #94a3b8;   /* secondary text */
-  --text-lo: #4a7fd4;   /* muted / hint text */
+  --text-hi: #f1f5f9;   /* primary body text */
+  --text-md: #b0c4de;   /* secondary text — lifted from #94a3b8 */
+  --text-lo: #7ab3f0;   /* hints/labels — lifted from #4a7fd4 */
 }
 
 .app {
@@ -52,14 +52,14 @@
   position: relative;
 }
 .app-title {
-  font-size: 1.35rem;
+  font-size: 1.4rem;
   font-weight: 800;
   color: var(--text-hi);
   letter-spacing: 0.01em;
 }
 .app-title span { color: var(--cyan); }
 .app-subtitle {
-  font-size: 0.78rem;
+  font-size: 0.85rem;
   color: var(--text-lo);
   margin-top: 3px;
   letter-spacing: 0.04em;
@@ -70,7 +70,7 @@
   border: 1px solid rgba(56,189,248,0.35);
   border-radius: 4px;
   color: var(--cyan);
-  font-size: 0.68rem;
+  font-size: 0.72rem;
   padding: 4px 12px;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -100,7 +100,7 @@
 
 /* ── Shared section title ────────────────────────────────────────────────── */
 .section-title {
-  font-size: 0.65rem;
+  font-size: 0.72rem;
   font-weight: 800;
   margin-bottom: 12px;
   color: var(--cyan);

@@ -7,40 +7,40 @@
 
 .empty-msg {
   color: var(--text-md);
-  font-size: 0.84rem;
+  font-size: 0.9rem;
   font-style: italic;
 }
 
 .triple-table {
   width: 100%;
   border-collapse: collapse;
-  font-size: 0.84rem;
+  font-size: 0.9rem;
   margin-top: 4px;
 }
 .triple-table th {
   text-align: left;
   padding: 7px 10px;
-  color: var(--text-md);   /* was barely visible #2a5298 */
+  color: var(--text-md);
   font-weight: 800;
   border-bottom: 1px solid var(--border);
-  font-size: 0.65rem;
+  font-size: 0.72rem;
   text-transform: uppercase;
   letter-spacing: 0.1em;
 }
 .triple-table td {
-  padding: 9px 10px;
+  padding: 10px 10px;
   border-bottom: 1px solid rgba(30,58,110,0.4);
+  font-size: 0.9rem;
 }
 .triple-table tr:last-child td { border-bottom: none; }
 .triple-table tr:hover td { background: var(--bg2); }
 
-/* Vivid, high-contrast triple colours */
-.subject   { color: #7dd3fc; font-weight: 700; }   /* bright sky blue */
-.predicate { color: #c4b5fd; font-style: italic; font-weight: 600; }  /* bright purple */
-.object    { color: #fde68a; font-weight: 700; }   /* bright amber */
+.subject   { color: #7dd3fc; font-weight: 700; }
+.predicate { color: #c4b5fd; font-style: italic; font-weight: 600; }
+.object    { color: #fde68a; font-weight: 700; }
 
 .triple-count {
-  font-size: 0.68rem;
+  font-size: 0.72rem;
   color: var(--text-lo);
   margin-top: 8px;
   text-align: right;
@@ -53,7 +53,7 @@
   background: rgba(127,29,29,0.25);
   border: 1px solid #ef4444;
   border-radius: 6px;
-  padding: 8px 12px;
-  font-size: 0.82rem;
+  padding: 9px 12px;
+  font-size: 0.88rem;
   color: #fca5a5;
 }

@@ -6,10 +6,10 @@
 }
 
 .section-hint {
-  font-size: 0.82rem;
+  font-size: 0.88rem;
   color: var(--text-md);
   margin-bottom: 10px;
-  line-height: 1.6;
+  line-height: 1.65;
 }
 
 .qa-row { display: flex; gap: 8px; margin-top: 10px; }
@@ -20,13 +20,13 @@
   border: 1px solid var(--border);
   border-radius: 6px;
   color: var(--text-hi);
-  font-size: 0.86rem;
-  padding: 9px 12px;
+  font-size: 0.92rem;
+  padding: 10px 12px;
   outline: none;
   transition: border-color 0.2s, box-shadow 0.2s;
   font-family: inherit;
 }
-.qa-input::placeholder { color: #334155; }
+.qa-input::placeholder { color: #3a5580; }
 .qa-input:focus { border-color: var(--cyan); box-shadow: 0 0 0 2px rgba(56,189,248,0.15); }
 
 .btn-ask {
@@ -34,8 +34,8 @@
   color: #050c18;
   border: none;
   border-radius: 6px;
-  padding: 9px 20px;
-  font-size: 0.8rem;
+  padding: 10px 20px;
+  font-size: 0.85rem;
   font-weight: 800;
   letter-spacing: 0.06em;
   text-transform: uppercase;
@@ -46,7 +46,7 @@
 .btn-ask:hover:not(:disabled) { opacity: 0.88; box-shadow: 0 0 22px rgba(56,189,248,0.55); }
 .btn-ask:disabled { opacity: 0.3; cursor: not-allowed; box-shadow: none; }
 
-.answer-box { margin-top: 12px; border-radius: 8px; padding: 12px 14px; font-size: 0.86rem; }
+.answer-box { margin-top: 12px; border-radius: 8px; padding: 12px 14px; font-size: 0.9rem; }
 .answer-box.found    { background: rgba(16,185,129,0.1); border: 1px solid #10b981; }
 .answer-box.not-found { background: rgba(245,158,11,0.08); border: 1px solid var(--amber); color: var(--amber); }
 
@@ -55,11 +55,11 @@
   font-weight: 800;
   margin-right: 6px;
   text-transform: uppercase;
-  font-size: 0.68rem;
+  font-size: 0.72rem;
   letter-spacing: 0.08em;
 }
-.answer-text { color: #d1fae5; font-weight: 700; font-size: 1rem; }
-.answer-source { margin-top: 6px; font-size: 0.72rem; color: #6ee7b7; opacity: 0.75; }
+.answer-text { color: #d1fae5; font-weight: 700; font-size: 1.05rem; }
+.answer-source { margin-top: 6px; font-size: 0.78rem; color: #6ee7b7; opacity: 0.85; }
 
 .llm-prompt {
   margin-top: 14px;
@@ -68,7 +68,7 @@
   padding: 8px 12px;
 }
 .llm-prompt summary {
-  font-size: 0.7rem;
+  font-size: 0.75rem;
   color: var(--text-lo);
   cursor: pointer;
   text-transform: uppercase;
@@ -77,9 +77,9 @@
 }
 .llm-prompt pre {
   margin-top: 8px;
-  font-size: 0.72rem;
-  color: var(--text-md);   /* was barely visible */
+  font-size: 0.78rem;
+  color: var(--text-md);
   white-space: pre-wrap;
   word-break: break-word;
-  line-height: 1.6;
+  line-height: 1.65;
 }

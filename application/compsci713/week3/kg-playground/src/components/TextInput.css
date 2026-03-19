@@ -6,7 +6,7 @@
 }
 
 .section-title {
-  font-size: 0.65rem;
+  font-size: 0.72rem;
   font-weight: 800;
   margin-bottom: 10px;
   color: var(--cyan);
@@ -15,10 +15,10 @@
 }
 
 .section-hint {
-  font-size: 0.82rem;
-  color: var(--text-md);   /* was #4a7fd4 — now clearly readable */
+  font-size: 0.88rem;
+  color: var(--text-md);
   margin-bottom: 12px;
-  line-height: 1.6;
+  line-height: 1.65;
 }
 
 .text-area {
@@ -26,16 +26,16 @@
   background: var(--bg0);
   border: 1px solid var(--border);
   border-radius: 6px;
-  color: var(--text-hi);   /* bright white text in textarea */
-  font-size: 0.9rem;
+  color: var(--text-hi);
+  font-size: 0.95rem;
   padding: 10px 12px;
   resize: vertical;
   outline: none;
   transition: border-color 0.2s, box-shadow 0.2s;
   font-family: inherit;
-  line-height: 1.65;
+  line-height: 1.7;
 }
-.text-area::placeholder { color: #334155; }
+.text-area::placeholder { color: #3a5580; }
 .text-area:focus {
   border-color: var(--cyan);
   box-shadow: 0 0 0 2px rgba(56,189,248,0.15);
@@ -48,8 +48,8 @@
   color: #fff;
   border: none;
   border-radius: 6px;
-  padding: 9px 22px;
-  font-size: 0.8rem;
+  padding: 10px 22px;
+  font-size: 0.85rem;
   font-weight: 700;
   letter-spacing: 0.06em;
   cursor: pointer;
@@ -65,8 +65,8 @@
   color: var(--text-md);
   border: 1px solid var(--border);
   border-radius: 6px;
-  padding: 9px 14px;
-  font-size: 0.8rem;
+  padding: 10px 14px;
+  font-size: 0.85rem;
   cursor: pointer;
   transition: border-color 0.2s, color 0.2s;
 }
@@ -74,7 +74,7 @@
 
 .examples { margin-top: 12px; display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
 .examples-label {
-  font-size: 0.68rem;
+  font-size: 0.72rem;
   color: var(--text-lo);
   text-transform: uppercase;
   letter-spacing: 0.06em;
@@ -84,9 +84,9 @@
   background: var(--bg0);
   border: 1px solid var(--border);
   border-radius: 4px;
-  color: var(--text-md);   /* was barely visible #4a7fd4 */
-  font-size: 0.72rem;
-  padding: 4px 10px;
+  color: var(--text-md);
+  font-size: 0.78rem;
+  padding: 5px 11px;
   cursor: pointer;
   transition: all 0.2s;
 }

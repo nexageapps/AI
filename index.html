@@ -1,451 +1,524 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI & ML Interactive Demos - University of Auckland</title>
-    <meta name="description" content="Interactive AI and Machine Learning demonstrations for University of Auckland COMPSCI courses">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI & ML Interactive Demos — University of Auckland</title>
+  <meta name="description" content="Interactive AI and Machine Learning demonstrations for University of Auckland COMPSCI courses" />
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            background: linear-gradient(135deg, #00467F 0%, #003366 50%, #001F3F 100%);
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 20px;
-        }
+    :root {
+      --navy:    #00467F;
+      --navy-dk: #002f5c;
+      --navy-lt: #0066CC;
+      --bg:      #f0f4f8;
+      --surface: #ffffff;
+      --border:  #dde3ea;
+      --text-hi: #1a2332;
+      --text-md: #4a5568;
+      --text-lo: #8a9ab0;
+      --cyan:    #0ea5e9;
+      --green:   #22c55e;
+      --amber:   #f59e0b;
+      --purple:  #8b5cf6;
+      --red:     #ef4444;
+      --radius:  14px;
+      --shadow:  0 2px 12px rgba(0,70,127,0.10);
+      --shadow-hover: 0 8px 28px rgba(0,70,127,0.18);
+    }
 
-        .container {
-            max-width: 1000px;
-            width: 100%;
-        }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: var(--bg);
+      min-height: 100vh;
+      color: var(--text-hi);
+    }
 
-        .uoa-badge {
-            text-align: center;
-            margin-bottom: 15px;
-        }
+    /* ── Shell bar ── */
+    .shell {
+      background: var(--navy);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 0 24px;
+      height: 52px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+    }
+    .shell-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 700;
+      font-size: 1rem;
+      letter-spacing: 0.3px;
+      flex-shrink: 0;
+    }
+    .shell-logo svg { opacity: 0.95; }
+    .shell-divider { width: 1px; height: 24px; background: rgba(255,255,255,0.25); }
+    .shell-title { font-size: 0.9rem; opacity: 0.85; font-weight: 400; }
+    .shell-spacer { flex: 1; }
+    .shell-count {
+      background: rgba(255,255,255,0.15);
+      border: 1px solid rgba(255,255,255,0.25);
+      border-radius: 20px;
+      padding: 4px 14px;
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      white-space: nowrap;
+    }
 
-        .uoa-badge img {
-            width: 50px;
-            height: 50px;
-            filter: brightness(0) invert(1);
-            opacity: 0.9;
-        }
+    /* ── Search bar ── */
+    .search-bar {
+      background: linear-gradient(135deg, var(--navy) 0%, var(--navy-dk) 100%);
+      padding: 28px 24px 32px;
+      text-align: center;
+    }
+    .search-bar h1 {
+      color: #fff;
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+    .search-bar p {
+      color: rgba(255,255,255,0.7);
+      font-size: 0.88rem;
+      margin-bottom: 20px;
+    }
+    .search-wrap {
+      position: relative;
+      max-width: 480px;
+      margin: 0 auto;
+    }
+    .search-wrap input {
+      width: 100%;
+      padding: 12px 44px 12px 18px;
+      border-radius: 30px;
+      border: none;
+      font-size: 0.95rem;
+      outline: none;
+      background: rgba(255,255,255,0.97);
+      color: var(--text-hi);
+      box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+    }
+    .search-wrap input::placeholder { color: var(--text-lo); }
+    .search-icon {
+      position: absolute;
+      right: 14px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--text-lo);
+      pointer-events: none;
+    }
 
-        .header {
-            text-align: center;
-            color: white;
-            margin-bottom: 30px;
-        }
+    /* ── Stats strip ── */
+    .stats-strip {
+      display: flex;
+      justify-content: center;
+      gap: 32px;
+      padding: 18px 24px;
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      flex-wrap: wrap;
+    }
+    .stat { text-align: center; }
+    .stat-num {
+      font-size: 1.6rem;
+      font-weight: 800;
+      color: var(--navy);
+      line-height: 1;
+    }
+    .stat-label {
+      font-size: 0.72rem;
+      color: var(--text-lo);
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      margin-top: 3px;
+    }
 
-        .header h1 {
-            font-size: 1.8rem;
-            margin-bottom: 8px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-            font-weight: 700;
-        }
+    /* ── Main content ── */
+    .main { max-width: 1100px; margin: 0 auto; padding: 28px 20px 60px; }
 
-        .header .subtitle {
-            font-size: 1rem;
-            opacity: 0.95;
-            font-weight: 500;
-            margin-bottom: 5px;
-        }
+    /* ── Group section ── */
+    .group { margin-bottom: 36px; }
+    .group-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 16px;
+    }
+    .group-dot {
+      width: 10px; height: 10px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+    .group-name {
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      color: var(--text-md);
+    }
+    .group-pill {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 2px 9px;
+      font-size: 0.7rem;
+      font-weight: 600;
+      color: var(--text-lo);
+    }
+    .group-line { flex: 1; height: 1px; background: var(--border); }
 
-        .header .institution {
-            font-size: 0.9rem;
-            opacity: 0.85;
-            font-weight: 400;
-        }
+    /* ── Tile grid ── */
+    .tile-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 16px;
+    }
 
-        .section-label {
-            text-align: center;
-            color: rgba(255,255,255,0.9);
-            margin-bottom: 16px;
-        }
+    /* ── Tile ── */
+    .tile {
+      background: var(--surface);
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
+      text-decoration: none;
+      color: inherit;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      position: relative;
+    }
+    .tile:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-hover);
+    }
+    .tile.hidden { display: none; }
 
-        .section-label h2 {
-            font-size: 1.1rem;
-            font-weight: 700;
-            letter-spacing: 0.5px;
-            margin-bottom: 4px;
-        }
+    .tile-accent {
+      height: 4px;
+      width: 100%;
+    }
+    .tile-body { padding: 18px 16px 14px; flex: 1; }
+    .tile-icon {
+      width: 44px; height: 44px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+      margin-bottom: 12px;
+    }
+    .tile-title {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--text-hi);
+      margin-bottom: 4px;
+      line-height: 1.3;
+    }
+    .tile-course {
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+      margin-bottom: 8px;
+    }
+    .tile-desc {
+      font-size: 0.8rem;
+      color: var(--text-md);
+      line-height: 1.5;
+    }
+    .tile-footer {
+      padding: 10px 16px;
+      border-top: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .tile-tags { display: flex; flex-wrap: wrap; gap: 4px; }
+    .tag {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 2px 7px;
+      font-size: 0.65rem;
+      color: var(--text-md);
+      font-weight: 500;
+    }
+    .tile-arrow {
+      font-size: 0.8rem;
+      color: var(--text-lo);
+      flex-shrink: 0;
+      margin-left: 6px;
+      transition: transform 0.2s;
+    }
+    .tile:hover .tile-arrow { transform: translateX(3px); }
 
-        .section-label p {
-            font-size: 0.8rem;
-            opacity: 0.7;
-        }
+    .live-badge {
+      position: absolute;
+      top: 12px; right: 12px;
+      background: rgba(34,197,94,0.12);
+      color: var(--green);
+      border: 1px solid rgba(34,197,94,0.3);
+      border-radius: 8px;
+      font-size: 0.6rem;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      padding: 2px 7px;
+    }
 
-        .section-divider {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            margin-bottom: 20px;
-            color: rgba(255,255,255,0.5);
-            font-size: 0.75rem;
-            font-weight: 600;
-            letter-spacing: 1.5px;
-            text-transform: uppercase;
-        }
+    /* ── No results ── */
+    .no-results {
+      text-align: center;
+      padding: 48px 20px;
+      color: var(--text-lo);
+      font-size: 0.9rem;
+      display: none;
+    }
 
-        .section-divider::before,
-        .section-divider::after {
-            content: '';
-            flex: 1;
-            height: 1px;
-            background: rgba(255,255,255,0.2);
-        }
+    /* ── Footer ── */
+    .footer {
+      text-align: center;
+      padding: 28px 20px;
+      border-top: 1px solid var(--border);
+      background: var(--surface);
+    }
+    .footer a {
+      display: inline-block;
+      padding: 10px 22px;
+      background: var(--navy);
+      color: #fff;
+      border-radius: 22px;
+      text-decoration: none;
+      font-size: 0.85rem;
+      font-weight: 600;
+      transition: background 0.2s;
+    }
+    .footer a:hover { background: var(--navy-lt); }
+    .footer p { margin-top: 14px; font-size: 0.8rem; color: var(--text-lo); }
 
-        .games-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-            margin-bottom: 30px;
-        }
-
-        .game-card {
-            background: white;
-            border-radius: 15px;
-            padding: 20px;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            cursor: pointer;
-            text-decoration: none;
-            color: inherit;
-            display: block;
-            border-top: 4px solid #00467F;
-        }
-
-        .game-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 12px 30px rgba(0,0,0,0.4);
-            border-top-color: #0066CC;
-        }
-
-        .game-icon {
-            font-size: 2.5rem;
-            margin-bottom: 12px;
-            text-align: center;
-        }
-
-        .game-title {
-            font-size: 1.4rem;
-            font-weight: bold;
-            margin-bottom: 8px;
-            color: #333;
-        }
-
-        .game-course {
-            font-size: 0.75rem;
-            color: #00467F;
-            font-weight: 700;
-            margin-bottom: 12px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            display: flex;
-            align-items: center;
-            gap: 6px;
-        }
-
-        .game-course::before {
-            content: "🎓";
-            font-size: 1rem;
-        }
-
-        .game-description {
-            color: #666;
-            line-height: 1.5;
-            margin-bottom: 15px;
-            font-size: 0.9rem;
-        }
-
-        .game-concepts {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 6px;
-            margin-bottom: 15px;
-        }
-
-        .concept-tag {
-            background: #f0f0f0;
-            padding: 4px 10px;
-            border-radius: 12px;
-            font-size: 0.75rem;
-            color: #555;
-        }
-
-        .play-button {
-            background: linear-gradient(135deg, #00467F 0%, #0066CC 100%);
-            color: white;
-            padding: 10px 24px;
-            border-radius: 20px;
-            border: none;
-            font-size: 0.9rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            display: inline-block;
-            box-shadow: 0 3px 12px rgba(0, 70, 127, 0.3);
-        }
-
-        .play-button:hover {
-            transform: translateX(3px);
-            box-shadow: 0 4px 15px rgba(0, 70, 127, 0.4);
-        }
-
-        .footer {
-            text-align: center;
-            color: white;
-            margin-top: 30px;
-            padding-top: 20px;
-            border-top: 1px solid rgba(255, 255, 255, 0.2);
-        }
-
-        .footer .repo-link {
-            display: inline-block;
-            margin: 10px 0;
-            padding: 10px 20px;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 20px;
-            text-decoration: none;
-            color: white;
-            font-weight: 600;
-            font-size: 0.9rem;
-            transition: all 0.3s ease;
-            backdrop-filter: blur(10px);
-        }
-
-        .footer .repo-link:hover {
-            background: rgba(255, 255, 255, 0.2);
-            transform: translateY(-2px);
-        }
-
-        .footer .credits {
-            margin-top: 15px;
-            opacity: 0.85;
-            font-size: 0.85rem;
-        }
-
-        .status-badge {
-            display: inline-block;
-            padding: 4px 10px;
-            background: rgba(76, 175, 80, 0.2);
-            color: #4CAF50;
-            border-radius: 12px;
-            font-size: 0.7rem;
-            font-weight: 600;
-            margin-left: 8px;
-            border: 1px solid rgba(76, 175, 80, 0.3);
-        }
-
-        @media (max-width: 768px) {
-            body {
-                padding: 15px;
-            }
-
-            .uoa-badge img {
-                width: 40px;
-                height: 40px;
-            }
-
-            .header {
-                margin-bottom: 20px;
-            }
-
-            .header h1 {
-                font-size: 1.5rem;
-            }
-
-            .header .subtitle {
-                font-size: 0.9rem;
-            }
-
-            .header .institution {
-                font-size: 0.8rem;
-            }
-
-            .games-grid {
-                grid-template-columns: 1fr;
-                gap: 15px;
-            }
-
-            .game-card {
-                padding: 18px;
-            }
-
-            .game-icon {
-                font-size: 2rem;
-                margin-bottom: 10px;
-            }
-
-            .game-title {
-                font-size: 1.2rem;
-            }
-
-            .game-course {
-                font-size: 0.7rem;
-            }
-
-            .game-description {
-                font-size: 0.85rem;
-                line-height: 1.4;
-            }
-
-            .concept-tag {
-                font-size: 0.7rem;
-                padding: 3px 8px;
-            }
-
-            .play-button {
-                padding: 8px 20px;
-                font-size: 0.85rem;
-            }
-
-            .footer .credits {
-                font-size: 0.8rem;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .header h1 {
-                font-size: 1.3rem;
-            }
-
-            .game-card {
-                padding: 15px;
-            }
-
-            .game-title {
-                font-size: 1.1rem;
-            }
-
-            .status-badge {
-                font-size: 0.65rem;
-                padding: 3px 8px;
-            }
-        }
-    </style>
+    @media (max-width: 600px) {
+      .shell { padding: 0 14px; }
+      .shell-title { display: none; }
+      .search-bar { padding: 20px 16px 24px; }
+      .search-bar h1 { font-size: 1.2rem; }
+      .stats-strip { gap: 20px; }
+      .main { padding: 20px 14px 48px; }
+      .tile-grid { grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 12px; }
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <div class="uoa-badge">
-            <svg width="50" height="50" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="50" cy="50" r="45" stroke="white" stroke-width="3" opacity="0.9"/>
-                <path d="M50 20 L60 45 L50 40 L40 45 Z" fill="white" opacity="0.9"/>
-                <rect x="35" y="50" width="30" height="25" fill="white" opacity="0.9"/>
-                <rect x="42" y="55" width="4" height="8" fill="#00467F"/>
-                <rect x="54" y="55" width="4" height="8" fill="#00467F"/>
-                <rect x="42" y="66" width="4" height="9" fill="#00467F"/>
-                <rect x="54" y="66" width="4" height="9" fill="#00467F"/>
-            </svg>
-        </div>
-        
-        <div class="header">
-            <h1>🎮 Interactive AI Demonstrations</h1>
-            <p class="subtitle">Hands-on Learning Experiences</p>
-            <p class="institution">University of Auckland • COMPSCI</p>
-        </div>
 
-        <div class="section-divider">Live Demos &amp; Practical Applications</div>
+<!-- Shell bar -->
+<header class="shell">
+  <div class="shell-logo">
+    <svg width="28" height="28" viewBox="0 0 100 100" fill="none">
+      <circle cx="50" cy="50" r="44" stroke="white" stroke-width="3" opacity="0.9"/>
+      <path d="M50 22 L61 46 L50 41 L39 46 Z" fill="white" opacity="0.9"/>
+      <rect x="34" y="50" width="32" height="24" fill="white" opacity="0.9"/>
+      <rect x="41" y="55" width="5" height="8" fill="#00467F"/>
+      <rect x="54" y="55" width="5" height="8" fill="#00467F"/>
+      <rect x="41" y="66" width="5" height="8" fill="#00467F"/>
+      <rect x="54" y="66" width="5" height="8" fill="#00467F"/>
+    </svg>
+    AI &amp; ML Demos
+  </div>
+  <div class="shell-divider"></div>
+  <span class="shell-title">University of Auckland · COMPSCI</span>
+  <div class="shell-spacer"></div>
+  <div class="shell-count" id="appCount">4 Apps</div>
+</header>
 
-        <div class="games-grid">
-            <!-- Wumpus World Game -->
-            <a href="./wumpus/" class="game-card">
-                <div class="game-icon">🏰</div>
-                <div class="game-title">
-                    Wumpus World
-                    <span class="status-badge">LIVE</span>
-                </div>
-                <div class="game-course">COMPSCI 713 • AI Fundamentals</div>
-                <div class="game-description">
-                    Navigate a dangerous cave using logical reasoning. Avoid pits and the Wumpus while finding gold!
-                </div>
-                <div class="game-concepts">
-                    <span class="concept-tag">Logic</span>
-                    <span class="concept-tag">Knowledge Rep</span>
-                    <span class="concept-tag">Inference</span>
-                    <span class="concept-tag">Agents</span>
-                </div>
-                <span class="play-button">Launch Game →</span>
-            </a>
+<!-- Search + hero -->
+<div class="search-bar">
+  <h1>Interactive AI Learning Demos</h1>
+  <p>Hands-on apps for COMPSCI courses — run in your browser, no setup needed</p>
+  <div class="search-wrap">
+    <input type="text" id="searchInput" placeholder="Search apps, concepts, courses…" autocomplete="off" />
+    <svg class="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
+    </svg>
+  </div>
+</div>
 
-            <!-- Gradient Descent Game -->
-            <a href="./gradient-descent/" class="game-card">
-                <div class="game-icon">⛰️</div>
-                <div class="game-title">
-                    Mountain Explorer
-                    <span class="status-badge">LIVE</span>
-                </div>
-                <div class="game-course">COMPSCI 714 • Neural Networks</div>
-                <div class="game-description">
-                    Guide a ball down a mountain to find the lowest valley. Learn gradient descent optimization!
-                </div>
-                <div class="game-concepts">
-                    <span class="concept-tag">Gradient Descent</span>
-                    <span class="concept-tag">Optimization</span>
-                    <span class="concept-tag">Learning Rate</span>
-                    <span class="concept-tag">Minima</span>
-                </div>
-                <span class="play-button">Launch Game →</span>
-            </a>
+<!-- Stats strip -->
+<div class="stats-strip">
+  <div class="stat"><div class="stat-num" id="statApps">4</div><div class="stat-label">Live Apps</div></div>
+  <div class="stat"><div class="stat-num">2</div><div class="stat-label">Courses</div></div>
+  <div class="stat"><div class="stat-num">3</div><div class="stat-label">Weeks</div></div>
+  <div class="stat"><div class="stat-num">60+</div><div class="stat-label">Notebooks</div></div>
+</div>
 
-            <!-- Neural Network Trainer -->
-            <a href="./nn-trainer/" class="game-card">
-                <div class="game-icon">🧠</div>
-                <div class="game-title">
-                    Neural Network Trainer
-                    <span class="status-badge">LIVE</span>
-                </div>
-                <div class="game-course">COMPSCI 714 • Deep Learning / NN</div>
-                <div class="game-description">
-                    Step through forward propagation and backpropagation on the exact network from Lecture 2. Watch gradients flow and weights update in real time.
-                </div>
-                <div class="game-concepts">
-                    <span class="concept-tag">Forward Pass</span>
-                    <span class="concept-tag">Backpropagation</span>
-                    <span class="concept-tag">Gradient Descent</span>
-                    <span class="concept-tag">Loss</span>
-                </div>
-                <span class="play-button">Launch Game →</span>
-            </a>
+<!-- Main launchpad -->
+<main class="main" id="launchpad">
 
-            <!-- KG Playground -->
-            <a href="./compsci713/week3/kg-playground/" class="game-card">
-                <div class="game-icon">🕸️</div>
-                <div class="game-title">
-                    KG Playground
-                    <span class="status-badge">LIVE</span>
-                </div>
-                <div class="game-course">COMPSCI 713 • Knowledge Representation</div>
-                <div class="game-description">
-                    Type any sentence and watch it become a live knowledge graph. Extract RDF triples, query facts, detect conflicts, and explore how RAG works — all in the browser.
-                </div>
-                <div class="game-concepts">
-                    <span class="concept-tag">RDF Triples</span>
-                    <span class="concept-tag">Knowledge Graph</span>
-                    <span class="concept-tag">RAG</span>
-                    <span class="concept-tag">Conflict Detection</span>
-                </div>
-                <span class="play-button">Launch Playground →</span>
-            </a>
-        </div>
-
-        <div class="footer">
-            <a href="https://github.com/nexageapps/AI" target="_blank" class="repo-link">
-                📚 View Full Roadmap on GitHub
-            </a>
-            <div class="credits">
-                <p>Open-source AI & ML learning roadmap</p>
-                <p style="margin-top: 5px;">Master of AI • University of Auckland</p>
-            </div>
-        </div>
+  <!-- Group: COMPSCI 713 -->
+  <section class="group" data-group="compsci713">
+    <div class="group-header">
+      <div class="group-dot" style="background:#0ea5e9"></div>
+      <span class="group-name">COMPSCI 713 — AI Fundamentals</span>
+      <span class="group-pill">2 apps</span>
+      <div class="group-line"></div>
     </div>
+    <div class="tile-grid">
+
+      <a href="./wumpus/" class="tile"
+         data-title="Wumpus World"
+         data-tags="logic inference agents knowledge wumpus compsci713 week2"
+         data-course="compsci713">
+        <div class="tile-accent" style="background:linear-gradient(90deg,#0ea5e9,#38bdf8)"></div>
+        <div class="tile-body">
+          <div class="tile-icon" style="background:#e0f2fe">🏰</div>
+          <div class="tile-title">Wumpus World</div>
+          <div class="tile-course" style="color:#0ea5e9">COMPSCI 713 · Week 2</div>
+          <div class="tile-desc">Navigate a dangerous cave using logical reasoning. Avoid pits and the Wumpus while finding gold.</div>
+        </div>
+        <div class="tile-footer">
+          <div class="tile-tags">
+            <span class="tag">Logic</span>
+            <span class="tag">Inference</span>
+            <span class="tag">Agents</span>
+          </div>
+          <span class="tile-arrow">→</span>
+        </div>
+        <span class="live-badge">LIVE</span>
+      </a>
+
+      <a href="./compsci713/week3/kg-playground/" class="tile"
+         data-title="KG Playground"
+         data-tags="rdf triples knowledge graph rag conflict detection compsci713 week3"
+         data-course="compsci713">
+        <div class="tile-accent" style="background:linear-gradient(90deg,#8b5cf6,#a78bfa)"></div>
+        <div class="tile-body">
+          <div class="tile-icon" style="background:#ede9fe">🕸️</div>
+          <div class="tile-title">KG Playground</div>
+          <div class="tile-course" style="color:#8b5cf6">COMPSCI 713 · Week 3</div>
+          <div class="tile-desc">Type any sentence and watch it become a live knowledge graph. Extract RDF triples, query facts, detect conflicts.</div>
+        </div>
+        <div class="tile-footer">
+          <div class="tile-tags">
+            <span class="tag">RDF</span>
+            <span class="tag">KG</span>
+            <span class="tag">RAG</span>
+          </div>
+          <span class="tile-arrow">→</span>
+        </div>
+        <span class="live-badge">LIVE</span>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- Group: COMPSCI 714 -->
+  <section class="group" data-group="compsci714">
+    <div class="group-header">
+      <div class="group-dot" style="background:#f59e0b"></div>
+      <span class="group-name">COMPSCI 714 — Neural Networks</span>
+      <span class="group-pill">2 apps</span>
+      <div class="group-line"></div>
+    </div>
+    <div class="tile-grid">
+
+      <a href="./gradient-descent/" class="tile"
+         data-title="Mountain Explorer"
+         data-tags="gradient descent optimization learning rate minima compsci714 week2"
+         data-course="compsci714">
+        <div class="tile-accent" style="background:linear-gradient(90deg,#f59e0b,#fbbf24)"></div>
+        <div class="tile-body">
+          <div class="tile-icon" style="background:#fef3c7">⛰️</div>
+          <div class="tile-title">Mountain Explorer</div>
+          <div class="tile-course" style="color:#f59e0b">COMPSCI 714 · Week 2</div>
+          <div class="tile-desc">Guide a ball down a mountain to find the lowest valley. Learn gradient descent optimization visually.</div>
+        </div>
+        <div class="tile-footer">
+          <div class="tile-tags">
+            <span class="tag">Gradient Descent</span>
+            <span class="tag">Optimization</span>
+          </div>
+          <span class="tile-arrow">→</span>
+        </div>
+        <span class="live-badge">LIVE</span>
+      </a>
+
+      <a href="./nn-trainer/" class="tile"
+         data-title="Neural Network Trainer"
+         data-tags="neural network backpropagation forward pass loss weights compsci714 week2"
+         data-course="compsci714">
+        <div class="tile-accent" style="background:linear-gradient(90deg,#ef4444,#f87171)"></div>
+        <div class="tile-body">
+          <div class="tile-icon" style="background:#fee2e2">🧠</div>
+          <div class="tile-title">Neural Network Trainer</div>
+          <div class="tile-course" style="color:#ef4444">COMPSCI 714 · Week 2</div>
+          <div class="tile-desc">Step through forward propagation and backpropagation. Watch gradients flow and weights update in real time.</div>
+        </div>
+        <div class="tile-footer">
+          <div class="tile-tags">
+            <span class="tag">Backprop</span>
+            <span class="tag">Forward Pass</span>
+          </div>
+          <span class="tile-arrow">→</span>
+        </div>
+        <span class="live-badge">LIVE</span>
+      </a>
+
+    </div>
+  </section>
+
+  <div class="no-results" id="noResults">No apps match your search.</div>
+</main>
+
+<footer class="footer">
+  <a href="https://github.com/nexageapps/AI" target="_blank">View Full Roadmap on GitHub</a>
+  <p>Open-source AI &amp; ML learning roadmap · Master of AI · University of Auckland</p>
+</footer>
+
+<script>
+  const input = document.getElementById('searchInput');
+  const tiles = document.querySelectorAll('.tile');
+  const groups = document.querySelectorAll('.group');
+  const noResults = document.getElementById('noResults');
+  const appCount = document.getElementById('appCount');
+  const statApps = document.getElementById('statApps');
+
+  // Update counts on load
+  const total = tiles.length;
+  appCount.textContent = total + ' Apps';
+  statApps.textContent = total;
+
+  input.addEventListener('input', () => {
+    const q = input.value.trim().toLowerCase();
+    let visible = 0;
+
+    tiles.forEach(tile => {
+      const haystack = [
+        tile.dataset.title,
+        tile.dataset.tags,
+        tile.dataset.course,
+        tile.querySelector('.tile-desc').textContent
+      ].join(' ').toLowerCase();
+
+      const match = !q || haystack.includes(q);
+      tile.classList.toggle('hidden', !match);
+      if (match) visible++;
+    });
+
+    // Hide groups with no visible tiles
+    groups.forEach(group => {
+      const anyVisible = [...group.querySelectorAll('.tile')].some(t => !t.classList.contains('hidden'));
+      group.style.display = anyVisible ? '' : 'none';
+    });
+
+    noResults.style.display = visible === 0 ? 'block' : 'none';
+    appCount.textContent = (q ? visible + '/' + total : total) + ' Apps';
+  });
+</script>
 </body>
 </html>

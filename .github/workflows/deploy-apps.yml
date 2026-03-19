@@ -19,14 +19,14 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  # Detect which apps changed
   detect-changes:
     runs-on: ubuntu-latest
     outputs:
-      wumpus: ${{ steps.filter.outputs.wumpus }}
-      gradient: ${{ steps.filter.outputs.gradient }}
+      wumpus:     ${{ steps.filter.outputs.wumpus }}
+      gradient:   ${{ steps.filter.outputs.gradient }}
       nn-trainer: ${{ steps.filter.outputs.nn-trainer }}
-      index: ${{ steps.filter.outputs.index }}
+      kg-playground: ${{ steps.filter.outputs.kg-playground }}
+      index:      ${{ steps.filter.outputs.index }}
     steps:
       - uses: actions/checkout@v4
       - uses: dorny/paths-filter@v2
@@ -39,26 +39,19 @@ jobs:
               - 'application/compsci714/week2/gradient-descent-game/**'
             nn-trainer:
               - 'application/compsci714/week2/nn-learning-game/**'
+            kg-playground:
+              - 'application/compsci713/week3/kg-playground/**'
             index:
               - 'index.html'
 
-  # Deploy landing page
   deploy-index:
     needs: detect-changes
     if: needs.detect-changes.outputs.index == 'true' || github.event_name == 'workflow_dispatch'
     runs-on: ubuntu-latest
-    
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-      
-      - name: Create deployment directory
-        run: |
-          mkdir -p deploy-temp
-          cp index.html deploy-temp/
-      
-      - name: Deploy index to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v4
+      - uses: actions/checkout@v4
+      - run: mkdir -p deploy-temp && cp index.html deploy-temp/
+      - uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./deploy-temp
@@ -66,33 +59,22 @@ jobs:
           user_name: 'github-actions[bot]'
           user_email: 'github-actions[bot]@users.noreply.github.com'
 
-  # Build and deploy Wumpus World
   deploy-wumpus:
     needs: detect-changes
     if: needs.detect-changes.outputs.wumpus == 'true' || github.event_name == 'workflow_dispatch'
     runs-on: ubuntu-latest
-    
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-      
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
         with:
           node-version: '18'
           cache: 'npm'
           cache-dependency-path: application/compsci713/week2/wumpus/package-lock.json
-      
-      - name: Install dependencies
+      - run: npm ci
         working-directory: application/compsci713/week2/wumpus
-        run: npm ci
-      
-      - name: Build
+      - run: npm run build
         working-directory: application/compsci713/week2/wumpus
-        run: npm run build
-      
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v4
+      - uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./application/compsci713/week2/wumpus/build
@@ -101,33 +83,22 @@ jobs:
           user_name: 'github-actions[bot]'
           user_email: 'github-actions[bot]@users.noreply.github.com'
 
-  # Build and deploy Neural Network Trainer
   deploy-nn-trainer:
     needs: detect-changes
     if: needs.detect-changes.outputs.nn-trainer == 'true' || github.event_name == 'workflow_dispatch'
     runs-on: ubuntu-latest
-    
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-      
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
         with:
           node-version: '20'
           cache: 'npm'
           cache-dependency-path: application/compsci714/week2/nn-learning-game/package-lock.json
-      
-      - name: Install dependencies
+      - run: npm ci
         working-directory: application/compsci714/week2/nn-learning-game
-        run: npm ci
-      
-      - name: Build
+      - run: npm run build
         working-directory: application/compsci714/week2/nn-learning-game
-        run: npm run build
-      
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v4
+      - uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./application/compsci714/week2/nn-learning-game/dist
@@ -136,37 +107,50 @@ jobs:
           user_name: 'github-actions[bot]'
           user_email: 'github-actions[bot]@users.noreply.github.com'
 
-  # Build and deploy Gradient Descent Game
   deploy-gradient:
     needs: detect-changes
     if: needs.detect-changes.outputs.gradient == 'true' || github.event_name == 'workflow_dispatch'
     runs-on: ubuntu-latest
-    
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-      
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
         with:
           node-version: '18'
           cache: 'npm'
           cache-dependency-path: application/compsci714/week2/gradient-descent-game/package-lock.json
-      
-      - name: Install dependencies
+      - run: npm ci
         working-directory: application/compsci714/week2/gradient-descent-game
-        run: npm ci
-      
-      - name: Build
+      - run: npm run build
         working-directory: application/compsci714/week2/gradient-descent-game
-        run: npm run build
-      
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v4
+      - uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./application/compsci714/week2/gradient-descent-game/docs
           destination_dir: gradient-descent
+          keep_files: true
+          user_name: 'github-actions[bot]'
+          user_email: 'github-actions[bot]@users.noreply.github.com'
+
+  deploy-kg-playground:
+    needs: detect-changes
+    if: needs.detect-changes.outputs.kg-playground == 'true' || github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+          cache-dependency-path: application/compsci713/week3/kg-playground/package-lock.json
+      - run: npm ci
+        working-directory: application/compsci713/week3/kg-playground
+      - run: npm run build
+        working-directory: application/compsci713/week3/kg-playground
+      - uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./application/compsci713/week3/kg-playground/build
+          destination_dir: compsci713/week3/kg-playground
           keep_files: true
           user_name: 'github-actions[bot]'
           user_email: 'github-actions[bot]@users.noreply.github.com'

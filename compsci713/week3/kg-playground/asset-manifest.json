@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/AI/compsci713/week3/kg-playground/static/css/main.f88ed558.css",
-    "main.js": "/AI/compsci713/week3/kg-playground/static/js/main.cfe3cc36.js",
+    "main.css": "/AI/compsci713/week3/kg-playground/static/css/main.9e127aa9.css",
+    "main.js": "/AI/compsci713/week3/kg-playground/static/js/main.b05b4db5.js",
     "index.html": "/AI/compsci713/week3/kg-playground/index.html",
-    "main.f88ed558.css.map": "/AI/compsci713/week3/kg-playground/static/css/main.f88ed558.css.map",
-    "main.cfe3cc36.js.map": "/AI/compsci713/week3/kg-playground/static/js/main.cfe3cc36.js.map"
+    "main.9e127aa9.css.map": "/AI/compsci713/week3/kg-playground/static/css/main.9e127aa9.css.map",
+    "main.b05b4db5.js.map": "/AI/compsci713/week3/kg-playground/static/js/main.b05b4db5.js.map"
   },
   "entrypoints": [
-    "static/css/main.f88ed558.css",
-    "static/js/main.cfe3cc36.js"
+    "static/css/main.9e127aa9.css",
+    "static/js/main.b05b4db5.js"
   ]
 }

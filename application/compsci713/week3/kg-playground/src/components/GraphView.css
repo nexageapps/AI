@@ -129,6 +129,6 @@
   padding: 6px 8px;
 }
 .gs-num    { font-size: 0.62rem; font-weight: 800; color: var(--border); min-width: 14px; }
-.gs-subject { color: #7dd3fc; font-weight: 700; }
+.gs-subject { color: #7dd3fc; font-weight: 700; word-break: break-word; }
 .gs-pred    { color: var(--text-md); font-style: italic; font-size: 0.76rem; }
-.gs-object  { color: #fde68a; font-weight: 700; }
+.gs-object  { color: #fde68a; font-weight: 700; word-break: break-word; }

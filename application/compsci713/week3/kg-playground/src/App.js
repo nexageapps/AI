@@ -25,7 +25,7 @@ export default function App() {
     const extracted = extractTriples(text);
     setTriples(extracted);
     setConflicts(detectConflicts(extracted));
-    setSuggestions(suggestMissingLinks(text, extracted));
+    setSuggestions(suggestMissingLinks(extracted));
   };
 
   return (

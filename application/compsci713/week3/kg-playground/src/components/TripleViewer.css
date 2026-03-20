@@ -31,6 +31,8 @@
   padding: 10px 10px;
   border-bottom: 1px solid rgba(30,58,110,0.4);
   font-size: 0.9rem;
+  word-break: break-word;
+  max-width: 250px;
 }
 .triple-table tr:last-child td { border-bottom: none; }
 .triple-table tr:hover td { background: var(--bg2); }

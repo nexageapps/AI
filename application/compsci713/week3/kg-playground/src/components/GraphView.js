@@ -64,18 +64,28 @@ function predLabel(p) {
   return PRED_LABEL[p] || p.replace(/_/g, ' ');
 }
 
-// ── Wrap a CamelCase label into ≤2 lines of ≤10 chars ────────────────────
+// ── Wrap a label into ≤2 lines for node display ──────────────────────────
 function wrapLabel(label) {
-  // Insert spaces before uppercase letters in CamelCase
-  const spaced = label.replace(/([a-z0-9])([A-Z])/g, '$1 $2');
-  const words  = spaced.split(' ');
-  if (words.length === 1) return [label];
+  // Split on spaces
+  const words = label.split(' ');
+  if (words.length === 1) {
+    // Single word - check if it's too long
+    if (label.length <= 12) return [label];
+    // Split long single words at reasonable points
+    const mid = Math.ceil(label.length / 2);
+    return [label.slice(0, mid), label.slice(mid)];
+  }
 
-  // Try to split into two roughly equal lines
+  // Multiple words - try to split into two roughly equal lines
   const mid = Math.ceil(words.length / 2);
+  const line1 = words.slice(0, mid).join(' ');
+  const line2 = words.slice(mid).join(' ');
+  
+  // If either line is too long, truncate with ellipsis
+  const maxLen = 15;
   return [
-    words.slice(0, mid).join(' '),
-    words.slice(mid).join(' '),
+    line1.length > maxLen ? line1.slice(0, maxLen) + '…' : line1,
+    line2.length > maxLen ? line2.slice(0, maxLen) + '…' : line2,
   ].filter(Boolean);
 }
 

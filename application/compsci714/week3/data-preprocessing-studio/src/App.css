@@ -281,6 +281,12 @@
 .info-box p {
   color: #555;
   line-height: 1.6;
+  margin-bottom: 8px;
+}
+
+.info-box ul {
+  color: #555;
+  line-height: 1.6;
 }
 
 .formula {

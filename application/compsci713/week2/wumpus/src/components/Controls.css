@@ -65,7 +65,7 @@ button:disabled {
 }
 
 .btn-turn {
-  background: #2196F3;
+  background: #00467F;
   color: white;
 }
 
@@ -96,7 +96,7 @@ button:disabled {
   padding: 15px;
   background: white;
   border-radius: 8px;
-  border-left: 4px solid #2196F3;
+  border-left: 4px solid #00467F;
 }
 
 .instructions h4 {

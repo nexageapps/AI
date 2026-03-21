@@ -18,10 +18,10 @@
 }
 
 .cell.agent-cell {
-  background: #e3f2fd;
-  border-color: #2196F3;
+  background: #e6f2ff;
+  border-color: #00467F;
   border-width: 3px;
-  box-shadow: 0 0 10px rgba(33, 150, 243, 0.5);
+  box-shadow: 0 0 10px rgba(0, 70, 127, 0.5);
 }
 
 .cell:hover {
@@ -80,10 +80,10 @@
 .agent-icon {
   font-size: 2.6rem;
   font-weight: bold;
-  color: #2196F3;
+  color: #00467F;
   animation: pulse 1.5s ease-in-out infinite;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  filter: drop-shadow(0 0 8px rgba(33, 150, 243, 0.6));
+  filter: drop-shadow(0 0 8px rgba(0, 70, 127, 0.6));
 }
 
 .agent-direction {
@@ -91,7 +91,7 @@
   bottom: 8px;
   right: 8px;
   font-size: 1.5rem;
-  color: #2196F3;
+  color: #00467F;
   font-weight: bold;
   background: white;
   border-radius: 50%;
@@ -101,7 +101,7 @@
   align-items: center;
   justify-content: center;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  border: 2px solid #2196F3;
+  border: 2px solid #00467F;
 }
 
 .item.agent {

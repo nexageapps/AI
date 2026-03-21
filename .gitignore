@@ -7,4 +7,5 @@ Basic/archive
 .kiro/
 ./application/compsci713/*node_module*
 application/compsci713/week3/kg-playground/*node_module*
+application/compsci713/week3/data-preprocessing-studio/*node_module*
 

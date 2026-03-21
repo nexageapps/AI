@@ -67,14 +67,14 @@
 .overlay-stat .stat-value {
   font-size: 1.5rem;
   font-weight: 700;
-  color: #2196F3;
+  color: #00467F;
 }
 
 .restart-button {
   padding: 12px 24px;
   font-size: 0.95rem;
   font-weight: 600;
-  background: #2196F3;
+  background: #00467F;
   color: white;
   border: none;
   border-radius: 8px;

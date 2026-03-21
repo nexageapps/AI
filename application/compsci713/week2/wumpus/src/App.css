@@ -32,7 +32,7 @@
 
 .game-title {
   text-align: center;
-  color: #1e3c72;
+  color: #00467F;
   margin-bottom: 2px;
   font-size: 1.5rem;
   font-weight: 700;
@@ -82,10 +82,10 @@
 
 .controls-section h3 {
   margin: 0 0 8px 0;
-  color: #1e3c72;
+  color: #00467F;
   font-size: 0.9rem;
   font-weight: 700;
-  border-bottom: 2px solid #2196F3;
+  border-bottom: 2px solid #00467F;
   padding-bottom: 4px;
 }
 
@@ -115,11 +115,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #e3f2fd;
-  border: 2px solid #2196F3;
+  background: #e6f2ff;
+  border: 2px solid #00467F;
   border-radius: 8px;
   font-size: 1.8rem;
-  color: #2196F3;
+  color: #00467F;
   font-weight: bold;
 }
 
@@ -141,7 +141,7 @@
   height: 50px;
   font-size: 1.5rem;
   padding: 0;
-  background: #2196F3;
+  background: #00467F;
   color: white;
   border: none;
   border-radius: 8px;
@@ -152,7 +152,7 @@
 }
 
 .btn-direction:hover:not(:disabled) {
-  background: #1976d2;
+  background: #003366;
   transform: scale(1.05);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
 }
@@ -195,10 +195,10 @@
 
 .legend-section h3 {
   margin: 0 0 8px 0;
-  color: #1e3c72;
+  color: #00467F;
   font-size: 0.9rem;
   font-weight: 700;
-  border-bottom: 2px solid #2196F3;
+  border-bottom: 2px solid #00467F;
   padding-bottom: 4px;
 }
 

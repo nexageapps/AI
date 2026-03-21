@@ -52,15 +52,15 @@ export function EnhancedMissingValuesTab({ data, setData, originalData, columns 
     <div className="content-grid">
       <div className="panel">
         <div className="panel-header">
-          <h3>📊 Data Overview</h3>
+          <h3><FiCheckCircle className="panel-icon" /> Data Overview</h3>
           <button className="export-button" onClick={handleExport} title="Export to CSV">
-            💾 Export
+            <FiDownload /> Export
           </button>
         </div>
         
         {!hasMissingValues && (
           <div className="success-message">
-            ✅ Great! No missing values detected in your dataset.
+            <FiCheckCircle /> Great! No missing values detected in your dataset.
           </div>
         )}
         
@@ -121,7 +121,7 @@ export function EnhancedMissingValuesTab({ data, setData, originalData, columns 
       </div>
 
       <div className="panel">
-        <h3>🔧 Imputation Controls</h3>
+        <h3><FiRefreshCw className="panel-icon" /> Imputation Controls</h3>
         <div className="controls">
           <div className="control-group">
             <label>Select Column</label>
@@ -178,7 +178,7 @@ export function EnhancedMissingValuesTab({ data, setData, originalData, columns 
         </div>
 
         <div className="info-box educational">
-          <h4>📚 Understanding Missing Values</h4>
+          <h4><FiBook className="panel-icon" /> Understanding Missing Values</h4>
           
           <div className="concept-section">
             <strong>What are Missing Values?</strong>
@@ -221,7 +221,8 @@ export function EnhancedMissingValuesTab({ data, setData, originalData, columns 
           </div>
           
           <div className="warning-box">
-            ⚠️ <strong>Important:</strong> Always analyze WHY data is missing before choosing a strategy. The best method depends on your specific dataset and problem domain.
+            <FiAlertCircle style={{ marginRight: '5px' }} />
+            <strong>Important:</strong> Always analyze WHY data is missing before choosing a strategy. The best method depends on your specific dataset and problem domain.
           </div>
         </div>
       </div>

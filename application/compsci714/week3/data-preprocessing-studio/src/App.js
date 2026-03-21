@@ -146,16 +146,23 @@ function App() {
   return (
     <div className="app">
       <div className="header">
-        <h1><MdOutlineScience className="header-icon" /> COMPSCI 714, 761, 762 - Data Preprocessing Studio</h1>
+        <h1><MdOutlineScience className="header-icon" /> UoA - COMPSCI 714, 761, 762 - Data Preprocessing Studio</h1>
         <p>Week 3: Interactive Data Preprocessing and Feature Engineering</p>
-        {dataQuality && (
-          <div className="data-quality-badge">
-            <span><FiDatabase /> {dataQuality.rowCount} rows × {dataQuality.columnCount} columns</span>
-            {dataQuality.warnings.length > 0 && (
-              <span className="warning-badge"><FiAlertTriangle /> {dataQuality.warnings.length} warnings</span>
-            )}
-          </div>
-        )}
+        <div className="header-actions">
+          {dataQuality && (
+            <div className="data-quality-badge">
+              <span><FiDatabase /> {dataQuality.rowCount} rows × {dataQuality.columnCount} columns</span>
+              {dataQuality.warnings.length > 0 && (
+                <span className="warning-badge"><FiAlertTriangle /> {dataQuality.warnings.length} warnings</span>
+              )}
+            </div>
+          )}
+          {data.length > 0 && (
+            <button className="export-csv-button" onClick={() => exportToCSV(data, 'cleaned_data.csv')} title="Export cleaned data">
+              <FiDownload /> Export CSV
+            </button>
+          )}
+        </div>
       </div>
 
       <div className="container">
@@ -384,7 +391,7 @@ function MissingValuesTab({ data, setData, originalData, columns }) {
 }
 
 // Scaling Tab Component
-function ScalingTab({ data, setData, originalData, columns }) {
+function ScalingTab({ data, setData, originalData, columns, addOperation }) {
   const [selectedColumns, setSelectedColumns] = useState([]);
   const [scalingMethod, setScalingMethod] = useState('standardization');
 
@@ -420,6 +427,16 @@ function ScalingTab({ data, setData, originalData, columns }) {
     });
 
     setData(newData);
+    
+    // Track operation for pipeline
+    if (addOperation) {
+      addOperation({
+        type: 'scaling',
+        description: `Applied ${scalingMethod} to columns: ${selectedColumns.join(', ')}`,
+        columns: selectedColumns,
+        method: scalingMethod
+      });
+    }
   };
 
   const resetData = () => {
@@ -596,7 +613,7 @@ function ScalingTab({ data, setData, originalData, columns }) {
 }
 
 // Encoding Tab Component
-function EncodingTab({ data, setData, originalData, columns }) {
+function EncodingTab({ data, setData, originalData, columns, addOperation }) {
   const [selectedColumn, setSelectedColumn] = useState('');
   const [encodingMethod, setEncodingMethod] = useState('label');
 
@@ -628,6 +645,17 @@ function EncodingTab({ data, setData, originalData, columns }) {
     }
 
     setData(newData);
+    
+    // Track operation for pipeline
+    if (addOperation) {
+      addOperation({
+        type: 'encoding',
+        description: `Applied ${encodingMethod} encoding to '${selectedColumn}'`,
+        column: selectedColumn,
+        method: encodingMethod,
+        categories: uniqueValues
+      });
+    }
   };
 
   const resetData = () => {
@@ -731,7 +759,7 @@ function EncodingTab({ data, setData, originalData, columns }) {
 }
 
 // Feature Engineering Tab Component
-function EngineeringTab({ data, setData, columns, setColumns }) {
+function EngineeringTab({ data, setData, columns, setColumns, addOperation }) {
   const [col1, setCol1] = useState('');
   const [col2, setCol2] = useState('');
   const [operation, setOperation] = useState('add');
@@ -778,6 +806,19 @@ function EngineeringTab({ data, setData, columns, setColumns }) {
     if (!columns.includes(newFeatureName)) {
       setColumns([...columns, newFeatureName]);
     }
+    
+    // Track operation for pipeline
+    if (addOperation) {
+      addOperation({
+        type: 'feature_engineering',
+        description: `Created feature '${newFeatureName}' = ${col1} ${operation} ${col2}`,
+        col1: col1,
+        col2: col2,
+        operation: operation,
+        newFeature: newFeatureName
+      });
+    }
+    
     setNewFeatureName('');
   };
 

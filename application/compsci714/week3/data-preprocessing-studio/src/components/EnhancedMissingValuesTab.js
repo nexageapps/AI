@@ -3,7 +3,7 @@ import { imputeMissingValues, calculateColumnStats, exportToCSV } from '../utils
 import { DistributionChart, ComparisonChart } from './DataVisualization';
 import { FiDownload, FiRefreshCw, FiCheckCircle, FiAlertCircle, FiBook } from 'react-icons/fi';
 
-export function EnhancedMissingValuesTab({ data, setData, originalData, columns }) {
+export function EnhancedMissingValuesTab({ data, setData, originalData, columns, addOperation }) {
   const [selectedColumn, setSelectedColumn] = useState('');
   const [strategy, setStrategy] = useState('mean');
   const [customValue, setCustomValue] = useState('');
@@ -34,6 +34,17 @@ export function EnhancedMissingValuesTab({ data, setData, originalData, columns 
     const newData = imputeMissingValues(data, selectedColumn, strategy, options);
     setData(newData);
     setShowVisualization(true);
+    
+    // Track operation for pipeline
+    if (addOperation) {
+      addOperation({
+        type: 'imputation',
+        description: `Imputed missing values in '${selectedColumn}' using ${strategy} strategy`,
+        column: selectedColumn,
+        strategy: strategy,
+        value: strategy === 'custom' ? parseFloat(customValue) || 0 : undefined
+      });
+    }
   };
 
   const resetData = () => {

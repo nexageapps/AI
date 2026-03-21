@@ -152,7 +152,7 @@ st.markdown("""
 # ── Header ──
 st.markdown("""
 <div class="uoa-header">
-    <h1>Model Evaluation Dashboard</h1>
+    <h1>UoA - Model Evaluation Dashboard</h1>
     <p>COMPSCI 713 Week 3 -- Basic Lesson 7: Model Evaluation and Performance Metrics</p>
 </div>
 """, unsafe_allow_html=True)

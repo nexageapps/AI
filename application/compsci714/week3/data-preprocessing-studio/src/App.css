@@ -1487,3 +1487,43 @@ button:disabled {
     grid-template-columns: 1fr;
   }
 }
+
+/* Quality Issues and Recommendations */
+.quality-issues,
+.quality-recommendations {
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  margin-top: 15px;
+}
+
+.quality-issues h4 {
+  color: #f57c00;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.quality-recommendations h4 {
+  color: #2e7d32;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.quality-issues ul,
+.quality-recommendations ul {
+  margin-left: 20px;
+  line-height: 1.8;
+  color: #555;
+}
+
+.quality-issues li {
+  color: #d84315;
+  margin: 8px 0;
+}
+
+.quality-recommendations li {
+  color: #1b5e20;
+  margin: 8px 0;
+}

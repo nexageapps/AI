@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { imputeMissingValues, calculateColumnStats, exportToCSV } from '../utils/dataProcessing';
 import { DistributionChart, ComparisonChart } from './DataVisualization';
+import { FiDownload, FiRefreshCw, FiCheckCircle, FiAlertCircle, FiBook } from 'react-icons/fi';
 
 export function EnhancedMissingValuesTab({ data, setData, originalData, columns }) {
   const [selectedColumn, setSelectedColumn] = useState('');

@@ -1,5 +1,5 @@
 import React from 'react';
-import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, ScatterChart, Scatter, LineChart, Line } from 'recharts';
+import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 
 /**
  * Distribution visualization for numerical columns
@@ -33,10 +33,17 @@ export function DistributionChart({ data, column, title }) {
   return (
     <div className="chart-container">
       <h4>{title || `Distribution of ${column}`}</h4>
-      <ResponsiveContainer width="100%" height={250}>
-        <BarChart data={bins}>
+      <ResponsiveContainer width="100%" height={300}>
+        <BarChart data={bins} margin={{ top: 5, right: 30, left: 20, bottom: 60 }}>
           <CartesianGrid strokeDasharray="3 3" />
-          <XAxis dataKey="range" angle={-45} textAnchor="end" height={80} />
+          <XAxis 
+            dataKey="range" 
+            angle={-45} 
+            textAnchor="end" 
+            height={100}
+            interval={0}
+            tick={{ fontSize: 11 }}
+          />
           <YAxis />
           <Tooltip />
           <Bar dataKey="count" fill="#00467F" />
@@ -85,10 +92,10 @@ export function ComparisonChart({ originalData, processedData, column }) {
   return (
     <div className="chart-container">
       <h4>Before vs After: {column}</h4>
-      <ResponsiveContainer width="100%" height={250}>
-        <BarChart data={comparisonData}>
+      <ResponsiveContainer width="100%" height={300}>
+        <BarChart data={comparisonData} margin={{ top: 5, right: 30, left: 20, bottom: 20 }}>
           <CartesianGrid strokeDasharray="3 3" />
-          <XAxis dataKey="metric" />
+          <XAxis dataKey="metric" tick={{ fontSize: 12 }} />
           <YAxis />
           <Tooltip />
           <Legend />

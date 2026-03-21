@@ -2,14 +2,14 @@ import React, { useState, useEffect } from 'react';
 import './App.css';
 import Papa from 'papaparse';
 import { EnhancedMissingValuesTab } from './components/EnhancedMissingValuesTab';
-import { DistributionChart, ComparisonChart, CorrelationMatrix } from './components/DataVisualization';
+import { DistributionChart, CorrelationMatrix } from './components/DataVisualization';
 import { PipelineManager } from './components/PipelineManager';
 import { DataQualityReport } from './components/DataQualityReport';
 import { validateDataQuality, exportToCSV } from './utils/dataProcessing';
 import { 
   FiUpload, FiSearch, FiBarChart2, FiCode, FiSettings, 
   FiPieChart, FiCheckCircle, FiAlertTriangle, FiFile,
-  FiDatabase, FiCheck, FiTarget, FiTrendingUp, FiZap
+  FiDatabase, FiCheck, FiTarget, FiTrendingUp, FiZap, FiDownload
 } from 'react-icons/fi';
 import { MdOutlineScience } from 'react-icons/md';
 
@@ -22,7 +22,6 @@ function App() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
   const [operations, setOperations] = useState([]);
-  const [showQuickActions, setShowQuickActions] = useState(true);
 
   // Validate data quality whenever data changes
   useEffect(() => {
@@ -78,7 +77,6 @@ function App() {
     }]);
     setActiveTab('quality');
     setLoading(false);
-    setShowQuickActions(true);
   };
 
   // File upload handler with validation
@@ -134,7 +132,6 @@ function App() {
         }]);
         setActiveTab('quality');
         setLoading(false);
-        setShowQuickActions(true);
       },
       error: (error) => {
         setError(`Failed to parse CSV: ${error.message}`);
@@ -207,7 +204,7 @@ function App() {
         {data.length > 0 && <PipelineManager operations={operations} onLoadPipeline={loadPipeline} />}
 
         {activeTab === 'upload' && <UploadTab onFileUpload={handleFileUpload} onLoadSample={loadSampleData} loading={loading} />}
-        {activeTab === 'quality' && <QualityTab data={data} columns={columns} />}
+        {activeTab === 'quality' && <QualityTab data={data} columns={columns} setActiveTab={setActiveTab} />}
         {activeTab === 'missing' && <EnhancedMissingValuesTab data={data} setData={setData} originalData={originalData} columns={columns} addOperation={addOperation} />}
         {activeTab === 'scaling' && <ScalingTab data={data} setData={setData} originalData={originalData} columns={columns} addOperation={addOperation} />}
         {activeTab === 'encoding' && <EncodingTab data={data} setData={setData} originalData={originalData} columns={columns} addOperation={addOperation} />}
@@ -267,7 +264,7 @@ function UploadTab({ onFileUpload, onLoadSample, loading }) {
 }
 
 // Quality Tab Component - NEW!
-function QualityTab({ data, columns }) {
+function QualityTab({ data, columns, setActiveTab }) {
   return (
     <div className="content-grid">
       <div className="panel">
@@ -278,19 +275,19 @@ function QualityTab({ data, columns }) {
         <div className="quick-actions">
           <h3><FiZap style={{ marginRight: '8px' }} />Quick Actions</h3>
           <div className="action-grid">
-            <div className="action-card">
+            <div className="action-card" onClick={() => setActiveTab('missing')}>
               <FiSearch />
               <h4>Handle Missing Values</h4>
             </div>
-            <div className="action-card">
+            <div className="action-card" onClick={() => setActiveTab('scaling')}>
               <FiBarChart2 />
               <h4>Scale Features</h4>
             </div>
-            <div className="action-card">
+            <div className="action-card" onClick={() => setActiveTab('encoding')}>
               <FiCode />
               <h4>Encode Categories</h4>
             </div>
-            <div className="action-card">
+            <div className="action-card" onClick={() => setActiveTab('engineering')}>
               <FiSettings />
               <h4>Engineer Features</h4>
             </div>
@@ -382,12 +379,6 @@ function AnalysisTab({ data, columns }) {
       </div>
     </div>
   );
-}
-
-// Missing Values Tab Component (keeping original for now, will be replaced by Enhanced version)
-function MissingValuesTab({ data, setData, originalData, columns }) {
-  // Use the enhanced version
-  return <EnhancedMissingValuesTab data={data} setData={setData} originalData={originalData} columns={columns} />;
 }
 
 // Scaling Tab Component

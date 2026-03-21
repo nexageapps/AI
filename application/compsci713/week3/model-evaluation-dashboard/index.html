@@ -1,37 +1,234 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Model Evaluation Dashboard | UoA COMPSCI 713</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@stlite/mountable@0.75.0/build/stlite.css" />
+    <script src="https://cdn.plot.ly/plotly-2.27.0.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: #0e1117; color: #e0e0e0; line-height: 1.6;
+            padding: 1rem; max-width: 1200px; margin: 0 auto;
+        }
+        .uoa-header {
+            background: linear-gradient(135deg, #00467F 0%, #0066B3 100%);
+            color: #fff; padding: 1.5rem 2rem; border-radius: 10px; margin-bottom: 1.5rem;
+        }
+        .uoa-header h1 { font-size: 1.6rem; font-weight: 700; }
+        .uoa-header p { opacity: 0.9; font-size: 0.9rem; color: #d0e4f5; margin-top: 0.3rem; }
+        .step-header {
+            display: flex; align-items: center; gap: 0.6rem;
+            margin: 1.5rem 0 0.5rem;
+        }
+        .step-num {
+            background: #00467F; color: #fff; width: 32px; height: 32px;
+            border-radius: 50%; display: flex; align-items: center; justify-content: center;
+            font-weight: 700; font-size: 0.85rem; flex-shrink: 0;
+        }
+        .step-title { font-size: 1.25rem; font-weight: 600; }
+        .step-lesson {
+            font-size: 0.75rem; color: #6c9dc6; background: rgba(0,70,127,0.12);
+            padding: 2px 8px; border-radius: 10px; margin-left: 0.5rem;
+        }
+        .explain-box {
+            background: rgba(0,70,127,0.08); border-left: 4px solid #00467F;
+            padding: 1rem 1.2rem; border-radius: 0 8px 8px 0;
+            margin: 0.5rem 0 1rem; font-size: 0.9rem; line-height: 1.7;
+        }
+        .explain-box strong { color: #4da6ff; }
+        .warn-box {
+            background: rgba(243,156,18,0.12); border-left: 4px solid #f39c12;
+            padding: 1rem 1.2rem; border-radius: 0 8px 8px 0;
+            margin: 0.5rem 0 1rem; font-size: 0.9rem; line-height: 1.6;
+        }
+        .warn-box strong { color: #f5b041; }
+        .success-box {
+            background: rgba(39,174,96,0.12); border-left: 4px solid #27ae60;
+            padding: 1rem 1.2rem; border-radius: 0 8px 8px 0;
+            margin: 0.5rem 0 1rem; font-size: 0.9rem;
+        }
+        .success-box strong { color: #2ecc71; }
+        .row { display: flex; gap: 1rem; flex-wrap: wrap; }
+        .col { flex: 1; min-width: 280px; }
+        .metric-card {
+            background: rgba(255,255,255,0.05); border: 2px solid rgba(255,255,255,0.12);
+            border-radius: 10px; padding: 1rem; text-align: center; transition: border-color 0.2s;
+        }
+        .metric-card.highlight {
+            border-color: #4da6ff; background: rgba(0,70,127,0.15);
+            box-shadow: 0 0 12px rgba(0,70,127,0.2);
+        }
+        .metric-card h3 {
+            font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.5px; opacity: 0.6;
+        }
+        .metric-card .value { font-size: 1.8rem; font-weight: 700; color: #4da6ff; margin: 0.3rem 0; }
+        .metric-card.highlight .value { color: #66b3ff; }
+        .metric-card .formula { font-family: 'SF Mono','Fira Code',monospace; font-size: 0.72rem; opacity: 0.5; }
+        .metrics-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 0.8rem; margin: 1rem 0; }
+        hr { border: none; border-top: 1px solid rgba(255,255,255,0.1); margin: 1.5rem 0; }
+        label { font-weight: 500; font-size: 0.9rem; display: block; margin-bottom: 0.3rem; }
+        select, input[type=range] { width: 100%; margin-bottom: 0.5rem; }
+        select {
+            background: #1a1d24; color: #e0e0e0; border: 1px solid rgba(255,255,255,0.2);
+            padding: 0.5rem; border-radius: 6px; font-size: 0.9rem;
+        }
+        input[type=range] { accent-color: #4da6ff; cursor: pointer; }
+        .sidebar {
+            background: #161b22; border-radius: 10px; padding: 1.2rem;
+            margin-bottom: 1rem;
+        }
+        .sidebar h2 { color: #4da6ff; font-size: 1rem; margin-bottom: 0.5rem; }
+        .sidebar .caption { font-size: 0.78rem; opacity: 0.6; white-space: pre-line; line-height: 1.5; }
+        table { width: 100%; border-collapse: collapse; font-size: 0.85rem; margin: 0.5rem 0; }
+        th, td { padding: 0.4rem 0.6rem; text-align: left; border-bottom: 1px solid rgba(255,255,255,0.08); }
+        th { opacity: 0.6; font-weight: 600; text-transform: uppercase; font-size: 0.75rem; }
+        .data-table-wrap { max-height: 300px; overflow-y: auto; border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; margin: 0.5rem 0; }
+        .data-table-wrap table { margin: 0; }
+        .cm-legend { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 0.5rem 0; }
+        .cm-legend-item { display: flex; align-items: center; gap: 0.4rem; font-size: 0.82rem; }
+        .cm-dot { width: 14px; height: 14px; border-radius: 3px; }
+        details { margin: 0.5rem 0; }
+        summary { cursor: pointer; font-weight: 600; color: #4da6ff; }
+        .footer { text-align: center; opacity: 0.5; font-size: 0.8rem; margin-top: 2rem; padding: 1rem; }
+        .controls-row { display: flex; gap: 1rem; flex-wrap: wrap; align-items: end; margin-bottom: 1rem; }
+        .controls-row > div { flex: 1; min-width: 200px; }
+        .threshold-val { font-weight: 700; color: #4da6ff; font-size: 1.1rem; }
+    </style>
 </head>
 <body>
-    <div id="root"></div>
-    <script src="https://cdn.jsdelivr.net/npm/@stlite/mountable@0.75.0/build/stlite.js"></script>
-    <script>
-        async function main() {
-            const response = await fetch("app.py");
-            const appCode = await response.text();
 
-            stlite.mount(
-                {
-                    requirements: [
-                        "pandas",
-                        "numpy",
-                        "scikit-learn",
-                        "plotly",
-                        "openpyxl",
-                    ],
-                    entrypoint: "app.py",
-                    files: {
-                        "app.py": appCode,
-                    },
-                },
-                document.getElementById("root")
-            );
-        }
-        main();
-    </script>
-</body>
-</html>
+<div class="uoa-header">
+    <h1>Model Evaluation Dashboard</h1>
+    <p>COMPSCI 713 Week 3 — Basic Lesson 7: Model Evaluation and Performance Metrics</p>
+</div>
+
+<div class="controls-row">
+    <div>
+        <label for="scenario">Scenario</label>
+        <select id="scenario">
+            <option value="cancer">Cancer Detection</option>
+            <option value="fraud">Fraud Detection</option>
+            <option value="spam">Spam Filter</option>
+        </select>
+    </div>
+    <div>
+        <label for="threshold">Decision Threshold: <span id="thresholdVal" class="threshold-val">0.50</span></label>
+        <input type="range" id="threshold" min="0" max="1" step="0.01" value="0.50">
+    </div>
+    <div>
+        <label for="nfolds">Cross-Validation Folds (K): <span id="foldsVal">5</span></label>
+        <input type="range" id="nfolds" min="2" max="10" step="1" value="5">
+    </div>
+</div>
+
+<div class="sidebar">
+    <h2>Lesson Map</h2>
+    <div class="caption">Step 1 — B07 Part 1: Accuracy Trap
+Step 2 — B07 Part 2: Threshold & Predictions
+Step 3 — B07 Part 2: Confusion Matrix
+Step 4 — B07 Part 2: Classification Metrics
+Step 5 — B07 Part 3: ROC Curve & AUC
+Step 6 — B07 Part 3: Precision-Recall Curve
+Step 7 — B07 Part 4: Threshold Optimisation
+Step 8 — B07 Part 5: Cross-Validation
+Step 9 — B07 Part 7: Exam Reference</div>
+</div>
+
+<!-- Step 1 -->
+<hr>
+<div class="step-header"><div class="step-num">1</div><span class="step-title">The Accuracy Trap</span><span class="step-lesson">B07 Part 1</span></div>
+<div id="step1-warn" class="warn-box"></div>
+<div class="row">
+    <div class="col"><div id="chart-dist" style="height:260px"></div></div>
+    <div class="col"><div id="step1-explain" class="explain-box"></div></div>
+</div>
+
+<!-- Step 2 -->
+<hr>
+<div class="step-header"><div class="step-num">2</div><span class="step-title">Your Data & Decision Threshold</span><span class="step-lesson">B07 Part 2</span></div>
+<div id="step2-explain" class="explain-box"></div>
+<div id="step2-summary" style="font-size:0.9rem; margin:0.5rem 0;"></div>
+<div class="data-table-wrap"><table id="data-table"></table></div>
+
+<!-- Step 3 -->
+<hr>
+<div class="step-header"><div class="step-num">3</div><span class="step-title">Confusion Matrix</span><span class="step-lesson">B07 Part 2</span></div>
+<div id="step3-explain" class="explain-box"></div>
+<div class="row">
+    <div class="col"><div id="chart-cm" style="height:340px"></div>
+        <div class="cm-legend">
+            <div class="cm-legend-item"><div class="cm-dot" style="background:#27ae60"></div> Correct prediction</div>
+            <div class="cm-legend-item"><div class="cm-dot" style="background:#e74c3c"></div> Error (misclassification)</div>
+        </div>
+    </div>
+    <div class="col"><div id="step3-detail"></div></div>
+</div>
+
+<!-- Step 4 -->
+<hr>
+<div class="step-header"><div class="step-num">4</div><span class="step-title">Classification Metrics</span><span class="step-lesson">B07 Part 2</span></div>
+<div id="step4-explain" class="explain-box"></div>
+<div class="metrics-grid" id="metrics-grid"></div>
+<div id="step4-trap"></div>
+<details><summary>What does each metric mean?</summary><div id="step4-table" style="margin-top:0.5rem;"></div></details>
+
+<!-- Step 5 -->
+<hr>
+<div class="step-header"><div class="step-num">5</div><span class="step-title">ROC Curve & AUC</span><span class="step-lesson">B07 Part 3</span></div>
+<div class="explain-box">The ROC curve plots <strong>True Positive Rate</strong> (Recall) vs <strong>False Positive Rate</strong> across all possible thresholds. AUC summarises this into one number: <strong>1.0 = perfect</strong>, <strong>0.5 = random coin flip</strong>. The red dot shows where your current threshold sits on the curve.</div>
+<div id="chart-roc" style="height:420px"></div>
+<div id="step5-auc"></div>
+
+<!-- Step 6 -->
+<hr>
+<div class="step-header"><div class="step-num">6</div><span class="step-title">Precision-Recall Curve</span><span class="step-lesson">B07 Part 3</span></div>
+<div id="step6-explain" class="explain-box"></div>
+<div id="chart-pr" style="height:400px"></div>
+<div class="row"><div class="col" id="step6-left"></div><div class="col" id="step6-right"></div></div>
+
+<!-- Step 7 -->
+<hr>
+<div class="step-header"><div class="step-num">7</div><span class="step-title">Threshold Optimisation</span><span class="step-lesson">B07 Part 4</span></div>
+<div class="explain-box">Different thresholds optimise different metrics. This chart sweeps all thresholds and shows how each metric changes. Use this to find the <strong>best threshold</strong> for your specific problem.</div>
+<div id="chart-sweep" style="height:400px"></div>
+<div class="row"><div class="col" id="step7-left"></div><div class="col" id="step7-right"></div></div>
+
+<!-- Step 8 -->
+<hr>
+<div class="step-header"><div class="step-num">8</div><span class="step-title">Cross-Validation Simulator</span><span class="step-lesson">B07 Part 5</span></div>
+<div class="explain-box"><strong>K-Fold Cross-Validation</strong> splits data into K parts, tests on each fold in turn, and averages the results. This gives a <strong>more reliable performance estimate</strong>. <strong>Stratified K-Fold</strong> ensures each fold has the same class distribution as the full dataset.</div>
+<div class="row">
+    <div class="col"><div id="chart-cv" style="height:350px"></div></div>
+    <div class="col"><div id="step8-table"></div><div id="step8-summary"></div></div>
+</div>
+<div id="step8-verdict"></div>
+
+<!-- Step 9 -->
+<hr>
+<div class="step-header"><div class="step-num">9</div><span class="step-title">Exam Quick Reference</span><span class="step-lesson">B07 Part 7</span></div>
+<div class="row"><div class="col" id="step9-left"></div><div class="col" id="step9-right"></div></div>
+<details style="margin-top:1rem;"><summary>Practice Problem (try it yourself)</summary>
+<div style="margin-top:0.5rem; font-size:0.9rem;">
+<p><strong>Given this confusion matrix, calculate all metrics:</strong></p>
+<pre style="background:rgba(255,255,255,0.05);padding:0.8rem;border-radius:6px;font-size:0.85rem;">
+                Predicted
+              Neg    Pos
+Actual Neg  [ 90     10 ]
+Actual Pos  [  5     95 ]</pre>
+<details><summary>Click to reveal answer</summary>
+<ul style="margin-top:0.5rem;">
+<li>TP = 95, TN = 90, FP = 10, FN = 5</li>
+<li>Accuracy = (95+90)/200 = <strong>92.5%</strong></li>
+<li>Precision = 95/(95+10) = <strong>90.5%</strong></li>
+<li>Recall = 95/(95+5) = <strong>95.0%</strong></li>
+<li>F1 = 2(0.905 × 0.950)/(0.905+0.950) = <strong>92.7%</strong></li>
+<li>Specificity = 90/(90+10) = <strong>90.0%</strong></li>
+</ul></details>
+</div></details>
+
+<div class="footer">University of Auckland | COMPSCI 713 | Model Evaluation and Performance Metrics</div>
+
+<script>

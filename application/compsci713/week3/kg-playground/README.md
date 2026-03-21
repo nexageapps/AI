@@ -19,10 +19,10 @@ Type any sentence (or paste a paragraph) and the app:
 | Feature | Detail |
 |---------|--------|
 | Triple Extractor | Clause-level matching with subject carry-forward across conjunctions |
-| Supported predicates | `born_in`, `works_in`, `located_in`, `founded_in`, `known_as`, `also_known_as`, `ranked_in`, `leads_in`, `received`, `studies`, `is_a` |
+| Supported predicates | `born_in`, `works_in`, `located_in`, `founded_in`, `known_as`, `also_known_as`, `ranked_in`, `leads_in`, `received`, `studies`, `is_a`, and 30+ more |
 | Parenthetical aliases | `University of Auckland (UoA)` → auto-adds `also_known_as` triple |
 | Graph | Draggable nodes (mouse + touch), hover tooltips, spring physics, no overlap |
-| QA | Keyword search over triples — simulates RAG retrieval step |
+| QA | **Enhanced semantic search** with fuzzy matching, n-gram overlap, question type detection, and confidence scoring |
 | Conflict Detection | Flags when the same subject+predicate maps to multiple objects |
 | Missing Link Suggestions | Confidence-scored suggestions for co-occurring entities |
 | Education Panel | School-friendly explanations of RDF, KG, and RAG |
@@ -56,7 +56,21 @@ Expected triples include: `(UniversityOfAuckland, located_in, Auckland)`, `(Univ
 - Subject carry-forward — how clauses share a subject across conjunctions
 - Conflict detection in triple stores (same predicate, multiple values)
 - Retrieval-Augmented Generation — retrieve relevant facts, then answer
+- **Enhanced semantic search** — fuzzy matching, n-gram analysis, question type detection
 - How rule-based NLP can simulate LLM behaviour for simple structured tasks
+
+## Recent Improvements
+
+### Enhanced Semantic Search (Latest)
+The question answering system now features:
+- **Multi-strategy scoring**: Combines entity matching, predicate mapping, n-gram overlap, and question type detection
+- **Fuzzy string matching**: Handles spelling variations and partial entity names using Jaccard similarity
+- **Question type detection**: Automatically identifies "where", "when", "who", "what", "how many" questions
+- **Confidence scoring**: Each answer includes a confidence percentage (0-99%)
+- **Expanded predicate mapping**: 40+ keyword mappings with synonym support
+- **N-gram analysis**: Bigram and trigram matching for better phrase understanding
+
+See [SEMANTIC_SEARCH_IMPROVEMENTS.md](./SEMANTIC_SEARCH_IMPROVEMENTS.md) for technical details and [TESTING_SEMANTIC_SEARCH.md](./TESTING_SEMANTIC_SEARCH.md) for test cases.
 
 ## Tech stack
 

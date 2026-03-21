@@ -59,6 +59,13 @@
   letter-spacing: 0.08em;
 }
 .answer-text { color: #d1fae5; font-weight: 700; font-size: 1.05rem; }
+.answer-confidence {
+  margin-top: 4px;
+  font-size: 0.75rem;
+  color: #6ee7b7;
+  opacity: 0.75;
+  font-weight: 600;
+}
 .answer-source { margin-top: 6px; font-size: 0.78rem; color: #6ee7b7; opacity: 0.85; }
 
 .llm-prompt {

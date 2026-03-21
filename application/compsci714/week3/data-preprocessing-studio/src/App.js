@@ -305,6 +305,22 @@ function ScalingTab({ data, setData, originalData, columns }) {
             </tbody>
           </table>
         </div>
+
+        <div className="info-box" style={{ marginTop: '20px' }}>
+          <h4>Understanding Feature Scaling</h4>
+          <p><strong>Why Scale Features?</strong></p>
+          <p>Neural networks and many ML algorithms work better when all features are on similar scales. Without scaling:</p>
+          <ul style={{ marginLeft: '20px', marginTop: '8px', lineHeight: '1.8' }}>
+            <li>Features with large ranges (e.g., salary: 50,000-75,000) dominate the learning</li>
+            <li>Features with small ranges (e.g., age: 25-45) get ignored</li>
+            <li>Gradient descent converges slowly or gets stuck</li>
+            <li>Model performance suffers significantly</li>
+          </ul>
+          
+          <p style={{ marginTop: '12px' }}><strong>When to Use Each Method:</strong></p>
+          <p><strong>Standardization:</strong> Use when data is normally distributed or has outliers. Results in mean=0, std=1. Best for most neural networks.</p>
+          <p><strong>Normalization:</strong> Use when you need values in a specific range [0,1]. Best for algorithms sensitive to feature magnitude like KNN or when features have different units.</p>
+        </div>
       </div>
 
       <div className="panel">
@@ -346,11 +362,18 @@ function ScalingTab({ data, setData, originalData, columns }) {
           <h4>Scaling Formulas</h4>
           <p><strong>Standardization:</strong></p>
           <div className="formula">z = (x - μ) / σ</div>
+          <p>Where μ = mean, σ = standard deviation</p>
           <p>Result: mean = 0, std = 1</p>
+          <p style={{ marginTop: '8px', fontSize: '0.85rem', color: '#555' }}>
+            Example: If age has mean=35 and std=8, then age=43 becomes z=(43-35)/8=1.0
+          </p>
           
           <p style={{ marginTop: '15px' }}><strong>Normalization:</strong></p>
           <div className="formula">x' = (x - min) / (max - min)</div>
           <p>Result: range [0, 1]</p>
+          <p style={{ marginTop: '8px', fontSize: '0.85rem', color: '#555' }}>
+            Example: If salary ranges from 50,000 to 75,000, then 60,000 becomes (60000-50000)/(75000-50000)=0.4
+          </p>
         </div>
       </div>
     </div>
@@ -423,6 +446,15 @@ function EncodingTab({ data, setData, originalData, columns }) {
             </tbody>
           </table>
         </div>
+
+        <div className="info-box" style={{ marginTop: '20px' }}>
+          <h4>Understanding Categorical Encoding</h4>
+          <p><strong>Why Encode Categories?</strong></p>
+          <p>Machine learning models only understand numbers, not text. We must convert categorical data (like "IT", "HR", "Finance") into numerical format.</p>
+          
+          <p style={{ marginTop: '12px' }}><strong>The Problem:</strong></p>
+          <p>You can't directly use text values like "red", "blue", "green" in mathematical operations. Models need numerical input to calculate predictions.</p>
+        </div>
       </div>
 
       <div className="panel">
@@ -456,11 +488,27 @@ function EncodingTab({ data, setData, originalData, columns }) {
 
         <div className="info-box">
           <h4>Encoding Methods</h4>
+          
           <p><strong>Label Encoding:</strong> Converts categories to integers (0, 1, 2...)</p>
-          <p>Warning: Implies ordering - use for ordinal data</p>
+          <div style={{ background: '#f5f5f5', padding: '10px', borderRadius: '5px', margin: '8px 0', fontSize: '0.85rem' }}>
+            Example: "IT"→0, "HR"→1, "Finance"→2
+          </div>
+          <p style={{ fontSize: '0.9rem', color: '#d97706', marginTop: '5px' }}>
+            <strong>Warning:</strong> Implies ordering (IT &lt; HR &lt; Finance). Only use for ordinal data like "Small" &lt; "Medium" &lt; "Large".
+          </p>
           
           <p style={{ marginTop: '15px' }}><strong>One-Hot Encoding:</strong> Creates binary columns for each category</p>
-          <p>Best: No ordering implied - use for nominal data</p>
+          <div style={{ background: '#f5f5f5', padding: '10px', borderRadius: '5px', margin: '8px 0', fontSize: '0.85rem' }}>
+            "IT" → department_IT=1, department_HR=0, department_Finance=0<br/>
+            "HR" → department_IT=0, department_HR=1, department_Finance=0
+          </div>
+          <p style={{ fontSize: '0.9rem', color: '#059669', marginTop: '5px' }}>
+            <strong>Best:</strong> No ordering implied. Use for nominal data (colors, countries, departments).
+          </p>
+          
+          <p style={{ marginTop: '12px', fontSize: '0.9rem', color: '#555' }}>
+            <strong>How it works:</strong> Each unique category becomes its own binary (0/1) column. A value of 1 means "this category is present", 0 means "not present".
+          </p>
         </div>
       </div>
     </div>
@@ -545,6 +593,20 @@ function EngineeringTab({ data, setData, columns, setColumns }) {
             </tbody>
           </table>
         </div>
+
+        <div className="info-box" style={{ marginTop: '20px' }}>
+          <h4>Understanding Feature Engineering</h4>
+          <p><strong>What is Feature Engineering?</strong></p>
+          <p>Creating new features from existing ones to help the model learn better patterns. Good features can improve model performance more than complex algorithms.</p>
+          
+          <p style={{ marginTop: '12px' }}><strong>Why Create New Features?</strong></p>
+          <ul style={{ marginLeft: '20px', marginTop: '8px', lineHeight: '1.8' }}>
+            <li>Reveal hidden relationships (e.g., salary per year of experience)</li>
+            <li>Combine related information (e.g., total rooms = bedrooms + bathrooms)</li>
+            <li>Make patterns more obvious to the model</li>
+            <li>Reduce complexity by summarizing multiple features</li>
+          </ul>
+        </div>
       </div>
 
       <div className="panel">
@@ -602,10 +664,27 @@ function EngineeringTab({ data, setData, columns, setColumns }) {
 
         <div className="info-box">
           <h4>Feature Engineering Tips</h4>
-          <p><strong>Ratios:</strong> salary / experience = salary per year</p>
-          <p><strong>Combinations:</strong> bedrooms + bathrooms = total rooms</p>
-          <p><strong>Interactions:</strong> area × price = total value</p>
-          <p>Good features can improve model performance significantly!</p>
+          
+          <p><strong>Common Operations:</strong></p>
+          
+          <div style={{ background: '#f5f5f5', padding: '10px', borderRadius: '5px', margin: '8px 0', fontSize: '0.85rem' }}>
+            <strong>Ratios:</strong> salary ÷ experience = salary_per_year<br/>
+            <em>Why:</em> Shows earning efficiency, normalizes salary by experience
+          </div>
+          
+          <div style={{ background: '#f5f5f5', padding: '10px', borderRadius: '5px', margin: '8px 0', fontSize: '0.85rem' }}>
+            <strong>Combinations:</strong> bedrooms + bathrooms = total_rooms<br/>
+            <em>Why:</em> Summarizes house size in one feature
+          </div>
+          
+          <div style={{ background: '#f5f5f5', padding: '10px', borderRadius: '5px', margin: '8px 0', fontSize: '0.85rem' }}>
+            <strong>Interactions:</strong> area × price = total_value<br/>
+            <em>Why:</em> Captures relationship between two features
+          </div>
+          
+          <p style={{ marginTop: '12px', fontSize: '0.9rem', color: '#555' }}>
+            <strong>Key Principle:</strong> Use domain knowledge! The best features come from understanding what matters in your problem domain.
+          </p>
         </div>
       </div>
     </div>

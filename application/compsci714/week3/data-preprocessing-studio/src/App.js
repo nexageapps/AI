@@ -788,6 +788,92 @@ function EngineeringTab({ data, setData, columns, setColumns }) {
             <strong>Key Principle:</strong> Use domain knowledge! The best features come from understanding what matters in your problem domain.
           </p>
         </div>
+
+        <div className="info-box" style={{ marginTop: '20px', background: '#f0f9ff', borderLeft: '4px solid #0ea5e9' }}>
+          <h4 style={{ color: '#0369a1' }}>Understanding Feature Selection</h4>
+          
+          <p><strong>What is Feature Selection?</strong></p>
+          <p style={{ marginBottom: '12px' }}>Feature selection is the process of choosing the most relevant features (columns) from your dataset while removing irrelevant or redundant ones. It's like cleaning your closet - keep what you need, remove what you don't.</p>
+          
+          <p><strong>Why Select Features?</strong></p>
+          <ul style={{ marginLeft: '20px', marginTop: '8px', lineHeight: '1.8', marginBottom: '12px' }}>
+            <li><strong>Reduce Overfitting:</strong> Fewer features = less chance of memorizing noise</li>
+            <li><strong>Improve Performance:</strong> Models train faster and often perform better</li>
+            <li><strong>Reduce Training Time:</strong> Less data to process = faster training</li>
+            <li><strong>Improve Interpretability:</strong> Easier to understand which features matter</li>
+            <li><strong>Reduce Storage:</strong> Smaller datasets are easier to store and manage</li>
+          </ul>
+          
+          <p><strong>Common Feature Selection Methods:</strong></p>
+          
+          <div style={{ background: 'white', padding: '10px', borderRadius: '5px', margin: '8px 0', fontSize: '0.85rem', border: '1px solid #e0e0e0' }}>
+            <strong>1. Correlation Analysis</strong><br/>
+            Remove features that are highly correlated with each other (e.g., correlation &gt; 0.9)<br/>
+            <br/>
+            <em>Example:</em> If "total_price" and "price_with_tax" have 0.99 correlation, keep only one.<br/>
+            <em>Why:</em> Redundant features don't add new information but increase complexity.
+          </div>
+          
+          <div style={{ background: 'white', padding: '10px', borderRadius: '5px', margin: '8px 0', fontSize: '0.85rem', border: '1px solid #e0e0e0' }}>
+            <strong>2. Variance Threshold</strong><br/>
+            Remove features with very low variance (almost constant values)<br/>
+            <br/>
+            <em>Example:</em> A "country" column where 99% of values are "USA" provides little information.<br/>
+            <em>Why:</em> Features that don't vary can't help distinguish between different outcomes.
+          </div>
+          
+          <div style={{ background: 'white', padding: '10px', borderRadius: '5px', margin: '8px 0', fontSize: '0.85rem', border: '1px solid #e0e0e0' }}>
+            <strong>3. Feature Importance</strong><br/>
+            Use model-based methods to rank features by importance<br/>
+            <br/>
+            <em>Example:</em> Random Forest can tell you which features contribute most to predictions.<br/>
+            <em>Why:</em> Keep features that actually help the model make better predictions.
+          </div>
+          
+          <div style={{ background: 'white', padding: '10px', borderRadius: '5px', margin: '8px 0', fontSize: '0.85rem', border: '1px solid #e0e0e0' }}>
+            <strong>4. Recursive Feature Elimination (RFE)</strong><br/>
+            Iteratively remove the least important features and retrain<br/>
+            <br/>
+            <em>Example:</em> Start with 20 features, remove the weakest one, retrain, repeat until you have 10.<br/>
+            <em>Why:</em> Finds the optimal subset of features through systematic elimination.
+          </div>
+          
+          <p><strong>Real-World Example:</strong></p>
+          <div style={{ background: '#fff3cd', padding: '10px', borderRadius: '5px', margin: '8px 0', fontSize: '0.85rem', border: '1px solid #ffc107' }}>
+            <strong>Scenario:</strong> Predicting customer churn with 50 features<br/>
+            <br/>
+            <strong>Before Selection:</strong><br/>
+            • 50 features (customer age, purchase history, support tickets, etc.)<br/>
+            • Training time: 10 minutes<br/>
+            • Accuracy: 85%<br/>
+            • Model is complex and hard to explain<br/>
+            <br/>
+            <strong>After Selection (kept 15 most important):</strong><br/>
+            • 15 features (recent purchases, support tickets, account age)<br/>
+            • Training time: 2 minutes (5x faster!)<br/>
+            • Accuracy: 87% (better!)<br/>
+            • Model is simple and explainable
+          </div>
+          
+          <p><strong>Feature Selection vs Feature Engineering:</strong></p>
+          <div style={{ background: '#e6f2ff', padding: '10px', borderRadius: '5px', margin: '8px 0', fontSize: '0.85rem' }}>
+            <strong>Feature Engineering:</strong> Creating NEW features from existing ones<br/>
+            <em>Example:</em> salary ÷ experience = salary_per_year<br/>
+            <br/>
+            <strong>Feature Selection:</strong> Choosing WHICH features to keep or remove<br/>
+            <em>Example:</em> Keep salary_per_year, remove raw salary and experience<br/>
+            <br/>
+            <strong>Together:</strong> First engineer useful features, then select the best ones!
+          </div>
+          
+          <p style={{ marginTop: '12px', fontSize: '0.9rem', color: '#059669' }}>
+            <strong>Best Practice:</strong> Start with feature engineering to create meaningful features, then use feature selection to remove redundant or irrelevant ones. This combination often gives the best results!
+          </p>
+          
+          <p style={{ marginTop: '12px', fontSize: '0.9rem', color: '#d97706' }}>
+            <strong>Warning:</strong> Don't remove features too aggressively! Sometimes features that seem unimportant individually become important when combined with others. Always validate your selection with cross-validation.
+          </p>
+        </div>
       </div>
     </div>
   );

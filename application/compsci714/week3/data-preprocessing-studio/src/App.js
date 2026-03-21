@@ -281,7 +281,7 @@ function ScalingTab({ data, setData, originalData, columns }) {
   return (
     <div className="content-grid">
       <div className="panel">
-        <h3>📊 Scaled Data Preview</h3>
+        <h3>Scaled Data Preview</h3>
         <div className="data-table">
           <table>
             <thead>
@@ -308,7 +308,7 @@ function ScalingTab({ data, setData, originalData, columns }) {
       </div>
 
       <div className="panel">
-        <h3>⚙️ Scaling Controls</h3>
+        <h3>Scaling Controls</h3>
         <div className="controls">
           <div className="control-group">
             <h4>Select Numerical Columns</h4>
@@ -343,7 +343,7 @@ function ScalingTab({ data, setData, originalData, columns }) {
         </div>
 
         <div className="info-box">
-          <h4>📐 Scaling Formulas</h4>
+          <h4>Scaling Formulas</h4>
           <p><strong>Standardization:</strong></p>
           <div className="formula">z = (x - μ) / σ</div>
           <p>Result: mean = 0, std = 1</p>

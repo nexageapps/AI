@@ -1,8 +1,8 @@
-# 🔬 Data Preprocessing Studio
+# Data Preprocessing Studio
 
 An interactive web application to learn and apply data preprocessing and feature engineering techniques - concepts from **Basic Lesson B06**.
 
-## 🎯 Learning Objectives
+## Learning Objectives
 
 This application helps you understand:
 - **Missing Value Handling**: Different imputation strategies (mean, median, mode)
@@ -10,7 +10,7 @@ This application helps you understand:
 - **Categorical Encoding**: Label encoding and One-Hot encoding
 - **Feature Engineering**: Creating new features from existing ones
 
-## 🚀 Features
+## Features
 
 ### 1. Missing Values Tab
 - Visualize missing data in your dataset
@@ -47,7 +47,7 @@ This application helps you understand:
   - Division/Ratio (e.g., price_per_sqft = price / area)
 - Name your custom features
 
-## 📦 Installation
+## Installation
 
 ```bash
 # Navigate to the project directory
@@ -62,7 +62,7 @@ npm start
 
 The app will open at `http://localhost:3000`
 
-## 🎮 How to Use
+## How to Use
 
 1. **Upload Data**: 
    - Click "Choose CSV File" to upload your own dataset
@@ -78,7 +78,7 @@ The app will open at `http://localhost:3000`
    - Formulas and best practices are displayed
    - Experiment with different strategies
 
-## 📊 Sample Dataset
+## Sample Dataset
 
 The built-in sample dataset includes:
 - **age**: Employee age (with some missing values)
@@ -87,7 +87,7 @@ The built-in sample dataset includes:
 - **department**: Department name (IT, HR, Finance)
 - **performance**: Performance score (0-100)
 
-## 🎓 Educational Value
+## Educational Value
 
 This tool demonstrates concepts from **B06 - Data Preprocessing and Feature Engineering**:
 
@@ -96,14 +96,14 @@ This tool demonstrates concepts from **B06 - Data Preprocessing and Feature Engi
 3. **Impact on Models**: Good preprocessing improves model performance more than fancy algorithms
 4. **Best Practices**: Fit on training data, document steps, validate improvements
 
-## 🏗️ Technical Stack
+## Technical Stack
 
 - **React 18**: Modern UI framework
 - **PapaParse**: CSV parsing library
 - **Recharts**: Data visualization
 - **CSS3**: Custom styling with gradients and animations
 
-## 📚 Related Concepts
+## Related Concepts
 
 ### From B06 Notebook:
 - **Missing Data Types**: MCAR, MAR, MNAR
@@ -112,7 +112,7 @@ This tool demonstrates concepts from **B06 - Data Preprocessing and Feature Engi
 - **Feature Selection**: Correlation analysis, variance threshold
 - **Domain Knowledge**: Creating meaningful features
 
-## 🚀 Deployment
+## Deployment
 
 This app is configured for GitHub Pages deployment:
 
@@ -124,11 +124,11 @@ npm run build
 git push origin main
 ```
 
-## 🔗 Live Demo
+## Live Demo
 
 Visit the live application: [Data Preprocessing Studio](https://nexageapps.github.io/AI/compsci714/week3/data-preprocessing-studio)
 
-## 📖 Learning Path
+## Learning Path
 
 1. Start with the **Upload** tab - load sample data
 2. Explore **Missing Values** - understand different imputation strategies
@@ -136,7 +136,7 @@ Visit the live application: [Data Preprocessing Studio](https://nexageapps.githu
 4. Experiment with **Encoding** - convert categorical to numerical
 5. Create features in **Feature Engineering** - combine columns meaningfully
 
-## 🎯 Key Takeaways
+## Key Takeaways
 
 - **Missing values** must be handled before training
 - **Feature scaling** improves convergence and performance
@@ -144,7 +144,7 @@ Visit the live application: [Data Preprocessing Studio](https://nexageapps.githu
 - **Feature engineering** requires domain knowledge
 - **Always validate** that preprocessing improves model performance
 
-## 🤝 Contributing
+## Contributing
 
 This is an educational project. Feel free to:
 - Add new preprocessing techniques
@@ -152,11 +152,11 @@ This is an educational project. Feel free to:
 - Add more sample datasets
 - Enhance the UI/UX
 
-## 📝 License
+## License
 
 MIT License - feel free to use for educational purposes
 
-## 🔗 References
+## References
 
 - [Scikit-learn Preprocessing](https://scikit-learn.org/stable/modules/preprocessing.html)
 - [Feature Engineering Book](https://www.oreilly.com/library/view/feature-engineering-for/9781491953235/)

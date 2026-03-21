@@ -49,7 +49,7 @@ jobs:
 
   deploy-index:
     needs: detect-changes
-    if: needs.detect-changes.outputs.index == 'true' || github.event_name == 'workflow_dispatch'
+    if: always() && !cancelled() && !failure() && (needs.detect-changes.outputs.index == 'true' || github.event_name == 'workflow_dispatch')
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -63,8 +63,8 @@ jobs:
           user_email: 'github-actions[bot]@users.noreply.github.com'
 
   deploy-wumpus:
-    needs: detect-changes
-    if: needs.detect-changes.outputs.wumpus == 'true' || github.event_name == 'workflow_dispatch'
+    needs: [detect-changes, deploy-index]
+    if: always() && !cancelled() && !failure() && (needs.detect-changes.outputs.wumpus == 'true' || github.event_name == 'workflow_dispatch')
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -87,8 +87,8 @@ jobs:
           user_email: 'github-actions[bot]@users.noreply.github.com'
 
   deploy-nn-trainer:
-    needs: detect-changes
-    if: needs.detect-changes.outputs.nn-trainer == 'true' || github.event_name == 'workflow_dispatch'
+    needs: [detect-changes, deploy-wumpus]
+    if: always() && !cancelled() && !failure() && (needs.detect-changes.outputs.nn-trainer == 'true' || github.event_name == 'workflow_dispatch')
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -111,8 +111,8 @@ jobs:
           user_email: 'github-actions[bot]@users.noreply.github.com'
 
   deploy-gradient:
-    needs: detect-changes
-    if: needs.detect-changes.outputs.gradient == 'true' || github.event_name == 'workflow_dispatch'
+    needs: [detect-changes, deploy-nn-trainer]
+    if: always() && !cancelled() && !failure() && (needs.detect-changes.outputs.gradient == 'true' || github.event_name == 'workflow_dispatch')
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -135,8 +135,8 @@ jobs:
           user_email: 'github-actions[bot]@users.noreply.github.com'
 
   deploy-kg-playground:
-    needs: detect-changes
-    if: needs.detect-changes.outputs.kg-playground == 'true' || github.event_name == 'workflow_dispatch'
+    needs: [detect-changes, deploy-gradient]
+    if: always() && !cancelled() && !failure() && (needs.detect-changes.outputs.kg-playground == 'true' || github.event_name == 'workflow_dispatch')
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -157,8 +157,8 @@ jobs:
           user_email: 'github-actions[bot]@users.noreply.github.com'
 
   deploy-model-eval:
-    needs: detect-changes
-    if: needs.detect-changes.outputs.model-eval == 'true' || github.event_name == 'workflow_dispatch'
+    needs: [detect-changes, deploy-kg-playground]
+    if: always() && !cancelled() && !failure() && (needs.detect-changes.outputs.model-eval == 'true' || github.event_name == 'workflow_dispatch')
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4

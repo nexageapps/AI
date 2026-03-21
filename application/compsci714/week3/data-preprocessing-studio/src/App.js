@@ -219,10 +219,51 @@ function MissingValuesTab({ data, setData, originalData, columns }) {
 
         <div className="info-box">
           <h4>About Missing Values</h4>
-          <p><strong>Mean:</strong> Best for normally distributed numerical data</p>
-          <p><strong>Median:</strong> Better when data has outliers</p>
-          <p><strong>Mode:</strong> Use for categorical data</p>
-          <p><strong>Zero Fill:</strong> When zero is a meaningful value</p>
+          
+          <p><strong>What are Missing Values?</strong></p>
+          <p style={{ marginBottom: '12px' }}>Missing values are data points that are absent from your dataset. They appear as NULL, NaN, empty cells, or undefined values.</p>
+          
+          <p><strong>Why Do They Occur?</strong></p>
+          <ul style={{ marginLeft: '20px', marginTop: '8px', lineHeight: '1.8', marginBottom: '12px' }}>
+            <li>Data collection errors or system failures</li>
+            <li>Survey respondents skipping questions</li>
+            <li>Sensor malfunctions in IoT devices</li>
+            <li>Data integration from multiple sources</li>
+            <li>Privacy concerns (intentionally withheld)</li>
+          </ul>
+          
+          <p><strong>Why Can't We Ignore Them?</strong></p>
+          <p style={{ marginBottom: '12px' }}>Most machine learning algorithms cannot handle missing values. They will either crash or produce incorrect results. We must handle them before training.</p>
+          
+          <p><strong>Imputation Strategies Explained:</strong></p>
+          
+          <div style={{ background: '#f5f5f5', padding: '10px', borderRadius: '5px', margin: '8px 0', fontSize: '0.85rem' }}>
+            <strong>Mean:</strong> Replace with average value<br/>
+            <em>Best for:</em> Normally distributed numerical data without outliers<br/>
+            <em>Example:</em> Ages [25, 30, NULL, 40] → Replace NULL with (25+30+40)/3 = 31.67
+          </div>
+          
+          <div style={{ background: '#f5f5f5', padding: '10px', borderRadius: '5px', margin: '8px 0', fontSize: '0.85rem' }}>
+            <strong>Median:</strong> Replace with middle value<br/>
+            <em>Best for:</em> Data with outliers or skewed distributions<br/>
+            <em>Example:</em> Salaries [50k, 60k, NULL, 200k] → Use median (60k) not mean (103k)
+          </div>
+          
+          <div style={{ background: '#f5f5f5', padding: '10px', borderRadius: '5px', margin: '8px 0', fontSize: '0.85rem' }}>
+            <strong>Mode:</strong> Replace with most frequent value<br/>
+            <em>Best for:</em> Categorical data (colors, categories, labels)<br/>
+            <em>Example:</em> Departments [IT, HR, NULL, IT, IT] → Replace NULL with IT (most common)
+          </div>
+          
+          <div style={{ background: '#f5f5f5', padding: '10px', borderRadius: '5px', margin: '8px 0', fontSize: '0.85rem' }}>
+            <strong>Zero Fill:</strong> Replace with 0<br/>
+            <em>Best for:</em> When zero is meaningful (e.g., number of purchases, clicks)<br/>
+            <em>Warning:</em> Can distort statistics if zero isn't a natural value
+          </div>
+          
+          <p style={{ marginTop: '12px', fontSize: '0.9rem', color: '#d97706' }}>
+            <strong>Important:</strong> Always analyze why data is missing before choosing a strategy. The best method depends on your specific dataset and problem.
+          </p>
         </div>
       </div>
     </div>
@@ -308,18 +349,79 @@ function ScalingTab({ data, setData, originalData, columns }) {
 
         <div className="info-box" style={{ marginTop: '20px' }}>
           <h4>Understanding Feature Scaling</h4>
+          
+          <p><strong>What is Feature Scaling?</strong></p>
+          <p style={{ marginBottom: '12px' }}>Feature scaling transforms numerical features to a similar scale. It's like converting different units (meters, feet, miles) to a common measurement system.</p>
+          
+          <p><strong>The Problem Without Scaling:</strong></p>
+          <div style={{ background: '#fff3cd', padding: '10px', borderRadius: '5px', margin: '8px 0', fontSize: '0.85rem', border: '1px solid #ffc107' }}>
+            Imagine predicting house prices using:<br/>
+            • Area: 1000-3000 sq ft (range: 2000)<br/>
+            • Bedrooms: 1-5 (range: 4)<br/>
+            • Year built: 1950-2020 (range: 70)<br/>
+            <br/>
+            <strong>Problem:</strong> Area dominates because its range is 500x larger than bedrooms! The model will mostly ignore bedrooms and year.
+          </div>
+          
           <p><strong>Why Scale Features?</strong></p>
-          <p>Neural networks and many ML algorithms work better when all features are on similar scales. Without scaling:</p>
-          <ul style={{ marginLeft: '20px', marginTop: '8px', lineHeight: '1.8' }}>
-            <li>Features with large ranges (e.g., salary: 50,000-75,000) dominate the learning</li>
-            <li>Features with small ranges (e.g., age: 25-45) get ignored</li>
-            <li>Gradient descent converges slowly or gets stuck</li>
-            <li>Model performance suffers significantly</li>
+          <ul style={{ marginLeft: '20px', marginTop: '8px', lineHeight: '1.8', marginBottom: '12px' }}>
+            <li><strong>Equal Importance:</strong> All features contribute equally to learning</li>
+            <li><strong>Faster Training:</strong> Gradient descent converges much faster</li>
+            <li><strong>Better Performance:</strong> Models learn patterns more effectively</li>
+            <li><strong>Numerical Stability:</strong> Prevents overflow/underflow errors</li>
           </ul>
           
-          <p style={{ marginTop: '12px' }}><strong>When to Use Each Method:</strong></p>
-          <p><strong>Standardization:</strong> Use when data is normally distributed or has outliers. Results in mean=0, std=1. Best for most neural networks.</p>
-          <p><strong>Normalization:</strong> Use when you need values in a specific range [0,1]. Best for algorithms sensitive to feature magnitude like KNN or when features have different units.</p>
+          <p><strong>Standardization (Z-score Normalization):</strong></p>
+          <div style={{ background: '#f5f5f5', padding: '10px', borderRadius: '5px', margin: '8px 0', fontSize: '0.85rem' }}>
+            <strong>Formula:</strong> z = (x - μ) / σ<br/>
+            Where μ = mean, σ = standard deviation<br/>
+            <br/>
+            <strong>Result:</strong> Mean = 0, Standard Deviation = 1<br/>
+            <br/>
+            <strong>Example:</strong><br/>
+            Ages: [25, 30, 35, 40, 45]<br/>
+            Mean (μ) = 35, Std (σ) = 7.07<br/>
+            Age 25 → z = (25-35)/7.07 = -1.41<br/>
+            Age 35 → z = (35-35)/7.07 = 0<br/>
+            Age 45 → z = (45-35)/7.07 = +1.41<br/>
+            <br/>
+            <em>Interpretation:</em> Negative = below average, 0 = average, Positive = above average
+          </div>
+          
+          <p><strong>Normalization (Min-Max Scaling):</strong></p>
+          <div style={{ background: '#f5f5f5', padding: '10px', borderRadius: '5px', margin: '8px 0', fontSize: '0.85rem' }}>
+            <strong>Formula:</strong> x' = (x - min) / (max - min)<br/>
+            <br/>
+            <strong>Result:</strong> All values between 0 and 1<br/>
+            <br/>
+            <strong>Example:</strong><br/>
+            Salaries: [50000, 60000, 70000, 80000]<br/>
+            Min = 50000, Max = 80000<br/>
+            $50k → (50000-50000)/(80000-50000) = 0.0<br/>
+            $65k → (65000-50000)/(80000-50000) = 0.5<br/>
+            $80k → (80000-50000)/(80000-50000) = 1.0<br/>
+            <br/>
+            <em>Interpretation:</em> 0 = minimum value, 0.5 = halfway, 1 = maximum value
+          </div>
+          
+          <p><strong>When to Use Each Method:</strong></p>
+          <div style={{ background: '#e6f2ff', padding: '10px', borderRadius: '5px', margin: '8px 0', fontSize: '0.85rem' }}>
+            <strong>Use Standardization when:</strong><br/>
+            • Data is normally distributed (bell curve)<br/>
+            • You have outliers (median/mean differ significantly)<br/>
+            • Using algorithms like Neural Networks, SVM, Logistic Regression<br/>
+            • You don't need a specific range<br/>
+            <br/>
+            <strong>Use Normalization when:</strong><br/>
+            • You need values in a specific range [0,1]<br/>
+            • Using algorithms like KNN, Neural Networks with sigmoid/tanh<br/>
+            • Features have different units (meters, kilograms, seconds)<br/>
+            • You want to preserve zero values
+          </div>
+          
+          <p style={{ marginTop: '12px', fontSize: '0.9rem', color: '#059669' }}>
+            <strong>Pro Tip:</strong> Always fit the scaler on training data only, then transform both training and test data using the same scaler. This prevents data leakage!
+          </p>
         </div>
       </div>
 
@@ -684,6 +786,92 @@ function EngineeringTab({ data, setData, columns, setColumns }) {
           
           <p style={{ marginTop: '12px', fontSize: '0.9rem', color: '#555' }}>
             <strong>Key Principle:</strong> Use domain knowledge! The best features come from understanding what matters in your problem domain.
+          </p>
+        </div>
+
+        <div className="info-box" style={{ marginTop: '20px', background: '#f0f9ff', borderLeft: '4px solid #0ea5e9' }}>
+          <h4 style={{ color: '#0369a1' }}>Understanding Feature Selection</h4>
+          
+          <p><strong>What is Feature Selection?</strong></p>
+          <p style={{ marginBottom: '12px' }}>Feature selection is the process of choosing the most relevant features (columns) from your dataset while removing irrelevant or redundant ones. It's like cleaning your closet - keep what you need, remove what you don't.</p>
+          
+          <p><strong>Why Select Features?</strong></p>
+          <ul style={{ marginLeft: '20px', marginTop: '8px', lineHeight: '1.8', marginBottom: '12px' }}>
+            <li><strong>Reduce Overfitting:</strong> Fewer features = less chance of memorizing noise</li>
+            <li><strong>Improve Performance:</strong> Models train faster and often perform better</li>
+            <li><strong>Reduce Training Time:</strong> Less data to process = faster training</li>
+            <li><strong>Improve Interpretability:</strong> Easier to understand which features matter</li>
+            <li><strong>Reduce Storage:</strong> Smaller datasets are easier to store and manage</li>
+          </ul>
+          
+          <p><strong>Common Feature Selection Methods:</strong></p>
+          
+          <div style={{ background: 'white', padding: '10px', borderRadius: '5px', margin: '8px 0', fontSize: '0.85rem', border: '1px solid #e0e0e0' }}>
+            <strong>1. Correlation Analysis</strong><br/>
+            Remove features that are highly correlated with each other (e.g., correlation &gt; 0.9)<br/>
+            <br/>
+            <em>Example:</em> If "total_price" and "price_with_tax" have 0.99 correlation, keep only one.<br/>
+            <em>Why:</em> Redundant features don't add new information but increase complexity.
+          </div>
+          
+          <div style={{ background: 'white', padding: '10px', borderRadius: '5px', margin: '8px 0', fontSize: '0.85rem', border: '1px solid #e0e0e0' }}>
+            <strong>2. Variance Threshold</strong><br/>
+            Remove features with very low variance (almost constant values)<br/>
+            <br/>
+            <em>Example:</em> A "country" column where 99% of values are "USA" provides little information.<br/>
+            <em>Why:</em> Features that don't vary can't help distinguish between different outcomes.
+          </div>
+          
+          <div style={{ background: 'white', padding: '10px', borderRadius: '5px', margin: '8px 0', fontSize: '0.85rem', border: '1px solid #e0e0e0' }}>
+            <strong>3. Feature Importance</strong><br/>
+            Use model-based methods to rank features by importance<br/>
+            <br/>
+            <em>Example:</em> Random Forest can tell you which features contribute most to predictions.<br/>
+            <em>Why:</em> Keep features that actually help the model make better predictions.
+          </div>
+          
+          <div style={{ background: 'white', padding: '10px', borderRadius: '5px', margin: '8px 0', fontSize: '0.85rem', border: '1px solid #e0e0e0' }}>
+            <strong>4. Recursive Feature Elimination (RFE)</strong><br/>
+            Iteratively remove the least important features and retrain<br/>
+            <br/>
+            <em>Example:</em> Start with 20 features, remove the weakest one, retrain, repeat until you have 10.<br/>
+            <em>Why:</em> Finds the optimal subset of features through systematic elimination.
+          </div>
+          
+          <p><strong>Real-World Example:</strong></p>
+          <div style={{ background: '#fff3cd', padding: '10px', borderRadius: '5px', margin: '8px 0', fontSize: '0.85rem', border: '1px solid #ffc107' }}>
+            <strong>Scenario:</strong> Predicting customer churn with 50 features<br/>
+            <br/>
+            <strong>Before Selection:</strong><br/>
+            • 50 features (customer age, purchase history, support tickets, etc.)<br/>
+            • Training time: 10 minutes<br/>
+            • Accuracy: 85%<br/>
+            • Model is complex and hard to explain<br/>
+            <br/>
+            <strong>After Selection (kept 15 most important):</strong><br/>
+            • 15 features (recent purchases, support tickets, account age)<br/>
+            • Training time: 2 minutes (5x faster!)<br/>
+            • Accuracy: 87% (better!)<br/>
+            • Model is simple and explainable
+          </div>
+          
+          <p><strong>Feature Selection vs Feature Engineering:</strong></p>
+          <div style={{ background: '#e6f2ff', padding: '10px', borderRadius: '5px', margin: '8px 0', fontSize: '0.85rem' }}>
+            <strong>Feature Engineering:</strong> Creating NEW features from existing ones<br/>
+            <em>Example:</em> salary ÷ experience = salary_per_year<br/>
+            <br/>
+            <strong>Feature Selection:</strong> Choosing WHICH features to keep or remove<br/>
+            <em>Example:</em> Keep salary_per_year, remove raw salary and experience<br/>
+            <br/>
+            <strong>Together:</strong> First engineer useful features, then select the best ones!
+          </div>
+          
+          <p style={{ marginTop: '12px', fontSize: '0.9rem', color: '#059669' }}>
+            <strong>Best Practice:</strong> Start with feature engineering to create meaningful features, then use feature selection to remove redundant or irrelevant ones. This combination often gives the best results!
+          </p>
+          
+          <p style={{ marginTop: '12px', fontSize: '0.9rem', color: '#d97706' }}>
+            <strong>Warning:</strong> Don't remove features too aggressively! Sometimes features that seem unimportant individually become important when combined with others. Always validate your selection with cross-validation.
           </p>
         </div>
       </div>

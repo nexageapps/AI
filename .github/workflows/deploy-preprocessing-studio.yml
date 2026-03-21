@@ -13,7 +13,7 @@ permissions:
   id-token: write
 
 concurrency:
-  group: "pages-preprocessing-studio"
+  group: "pages"
   cancel-in-progress: false
 
 jobs:
@@ -37,11 +37,13 @@ jobs:
 
       - name: Build application
         working-directory: ./application/compsci714/week3/data-preprocessing-studio
-        run: |
-          npm run build
+        run: npm run build
         env:
           PUBLIC_URL: /AI/compsci714/week3/data-preprocessing-studio
           CI: false
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
@@ -51,7 +53,7 @@ jobs:
   deploy:
     environment:
       name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}compsci714/week3/data-preprocessing-studio
+      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     needs: build
     

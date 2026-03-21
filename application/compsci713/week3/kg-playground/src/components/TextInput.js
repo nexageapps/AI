@@ -7,11 +7,11 @@ import './TextInput.css';
  *   onExtract(text) – called when the user clicks "Generate Triples"
  */
 const EXAMPLES = [
-  'Einstein was born in Germany and worked in Physics.',
-  'University of Auckland (UoA) is located in Auckland. Auckland is located in New Zealand.',
-  'Newton invented Calculus and studied Mathematics.',
-  'Marie Curie was born in Poland and worked in Chemistry.',
-  'Karthik was born in India and works in SAP and studies AI.',
+  'Einstein was born in Germany and worked in Physics. Germany is part of Europe. Europe is known for Physics.',
+  'University of Auckland (UoA) was founded in 1883 and is located in Auckland. Auckland is part of New Zealand.',
+  'Marie Curie was born in Poland and worked in Chemistry. Poland is part of Europe. Marie Curie received the Nobel Prize in 1903.',
+  'Newton invented Calculus and studied Mathematics at Cambridge University. Cambridge University is located in England.',
+  'Steve Jobs founded Apple in 1976. Apple is located in California. California is part of the United States.',
 ];
 
 export default function TextInput({ onExtract }) {
@@ -31,13 +31,13 @@ export default function TextInput({ onExtract }) {
       <h2 className="section-title">Text Input</h2>
       <p className="section-hint">
         Type any sentence with facts — who did what, where they are, what they invented.
-        The app breaks it into Subject → Predicate → Object triples and draws the graph.
+        Include hierarchical relationships (e.g., "Germany is part of Europe") to enable multi-hop queries.
       </p>
 
       <textarea
         className="text-area"
         rows={4}
-        placeholder='e.g. "Einstein was born in Germany and worked in Physics."'
+        placeholder='e.g. "Einstein was born in Germany and worked in Physics. Germany is part of Europe."'
         value={text}
         onChange={(e) => setText(e.target.value)}
         onKeyDown={(e) => {

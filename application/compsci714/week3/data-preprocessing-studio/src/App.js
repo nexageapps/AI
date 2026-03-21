@@ -1,273 +1,297 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
 import Papa from 'papaparse';
-import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, ScatterChart, Scatter } from 'recharts';
+import { EnhancedMissingValuesTab } from './components/EnhancedMissingValuesTab';
+import { DistributionChart, ComparisonChart, CorrelationMatrix } from './components/DataVisualization';
+import { validateDataQuality, exportToCSV } from './utils/dataProcessing';
+import { 
+  FiUpload, FiSearch, FiBarChart2, FiCode, FiSettings, 
+  FiPieChart, FiCheckCircle, FiAlertTriangle, FiFile,
+  FiDatabase, FiCheck, FiTarget, FiTrendingUp
+} from 'react-icons/fi';
+import { MdOutlineScience } from 'react-icons/md';
 
 function App() {
   const [data, setData] = useState([]);
   const [originalData, setOriginalData] = useState([]);
   const [activeTab, setActiveTab] = useState('upload');
   const [columns, setColumns] = useState([]);
+  const [dataQuality, setDataQuality] = useState(null);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null);
+  const [history, setHistory] = useState([]);
 
-  // Sample dataset
+  // Validate data quality whenever data changes
+  useEffect(() => {
+    if (data.length > 0) {
+      const quality = validateDataQuality(data);
+      setDataQuality(quality);
+    }
+  }, [data]);
+
+  // Sample dataset with more realistic data
   const loadSampleData = () => {
+    setLoading(true);
+    setError(null);
+    
     const sampleData = [
-      { age: 25, salary: 50000, experience: 2, department: 'IT', performance: 85 },
-      { age: 30, salary: 60000, experience: 5, department: 'HR', performance: 90 },
-      { age: null, salary: 55000, experience: 3, department: 'IT', performance: 88 },
-      { age: 35, salary: null, experience: 7, department: 'Finance', performance: 92 },
-      { age: 40, salary: 70000, experience: 10, department: 'IT', performance: 95 },
-      { age: 28, salary: 65000, experience: null, department: 'HR', performance: 87 },
-      { age: 45, salary: 75000, experience: 12, department: 'Finance', performance: 93 },
-      { age: 32, salary: 58000, experience: 6, department: 'IT', performance: 89 },
-      { age: 38, salary: 68000, experience: 9, department: null, performance: 91 },
-      { age: 29, salary: 62000, experience: 4, department: 'HR', performance: 86 }
+      { age: 25, salary: 50000, experience: 2, department: 'IT', performance: 85, education: 'Bachelor' },
+      { age: 30, salary: 60000, experience: 5, department: 'HR', performance: 90, education: 'Master' },
+      { age: null, salary: 55000, experience: 3, department: 'IT', performance: 88, education: 'Bachelor' },
+      { age: 35, salary: null, experience: 7, department: 'Finance', performance: 92, education: 'Master' },
+      { age: 40, salary: 70000, experience: 10, department: 'IT', performance: 95, education: 'PhD' },
+      { age: 28, salary: 65000, experience: null, department: 'HR', performance: 87, education: 'Bachelor' },
+      { age: 45, salary: 75000, experience: 12, department: 'Finance', performance: 93, education: 'Master' },
+      { age: 32, salary: 58000, experience: 6, department: 'IT', performance: 89, education: 'Bachelor' },
+      { age: 38, salary: 68000, experience: 9, department: null, performance: 91, education: 'Master' },
+      { age: 29, salary: 62000, experience: 4, department: 'HR', performance: 86, education: 'Bachelor' },
+      { age: 42, salary: 72000, experience: 11, department: 'Finance', performance: 94, education: 'PhD' },
+      { age: 27, salary: 53000, experience: 3, department: 'IT', performance: 84, education: 'Bachelor' },
+      { age: 36, salary: null, experience: 8, department: 'HR', performance: 90, education: 'Master' },
+      { age: 31, salary: 61000, experience: 5, department: 'Finance', performance: 88, education: 'Bachelor' },
+      { age: null, salary: 69000, experience: 9, department: 'IT', performance: 92, education: 'Master' }
     ];
+    
     setData(sampleData);
     setOriginalData(JSON.parse(JSON.stringify(sampleData)));
     setColumns(Object.keys(sampleData[0]));
+    setHistory([{ action: 'Loaded sample data', timestamp: new Date() }]);
     setActiveTab('missing');
+    setLoading(false);
   };
 
-  // File upload handler
+  // File upload handler with validation
   const handleFileUpload = (event) => {
     const file = event.target.files[0];
-    if (file) {
-      Papa.parse(file, {
-        header: true,
-        dynamicTyping: true,
-        complete: (results) => {
-          setData(results.data.filter(row => Object.values(row).some(val => val !== null && val !== '')));
-          setOriginalData(JSON.parse(JSON.stringify(results.data.filter(row => Object.values(row).some(val => val !== null && val !== '')))));
-          setColumns(Object.keys(results.data[0]));
-          setActiveTab('missing');
-        }
-      });
+    if (!file) return;
+    
+    setLoading(true);
+    setError(null);
+    
+    // Validate file type
+    if (!file.name.endsWith('.csv')) {
+      setError('Please upload a CSV file');
+      setLoading(false);
+      return;
     }
+    
+    // Validate file size (max 5MB)
+    if (file.size > 5 * 1024 * 1024) {
+      setError('File size must be less than 5MB');
+      setLoading(false);
+      return;
+    }
+    
+    Papa.parse(file, {
+      header: true,
+      dynamicTyping: true,
+      skipEmptyLines: true,
+      complete: (results) => {
+        if (results.errors.length > 0) {
+          setError(`CSV parsing error: ${results.errors[0].message}`);
+          setLoading(false);
+          return;
+        }
+        
+        const filteredData = results.data.filter(row => 
+          Object.values(row).some(val => val !== null && val !== '')
+        );
+        
+        if (filteredData.length === 0) {
+          setError('No valid data found in CSV file');
+          setLoading(false);
+          return;
+        }
+        
+        setData(filteredData);
+        setOriginalData(JSON.parse(JSON.stringify(filteredData)));
+        setColumns(Object.keys(filteredData[0]));
+        setHistory([{ action: `Loaded ${file.name}`, timestamp: new Date() }]);
+        setActiveTab('missing');
+        setLoading(false);
+      },
+      error: (error) => {
+        setError(`Failed to parse CSV: ${error.message}`);
+        setLoading(false);
+      }
+    });
   };
 
   return (
     <div className="app">
       <div className="header">
-        <h1>UoA COMPSCI 714 - Data Preprocessing Studio</h1>
+        <h1><MdOutlineScience className="header-icon" /> UoA COMPSCI 714 - Data Preprocessing Studio</h1>
         <p>Week 3: Interactive Data Preprocessing and Feature Engineering</p>
+        {dataQuality && (
+          <div className="data-quality-badge">
+            <span><FiDatabase /> {dataQuality.rowCount} rows × {dataQuality.columnCount} columns</span>
+            {dataQuality.warnings.length > 0 && (
+              <span className="warning-badge"><FiAlertTriangle /> {dataQuality.warnings.length} warnings</span>
+            )}
+          </div>
+        )}
       </div>
 
       <div className="container">
+        {error && (
+          <div className="error-message">
+            <FiAlertTriangle /> {error}
+            <button onClick={() => setError(null)}>×</button>
+          </div>
+        )}
+        
+        {loading && (
+          <div className="loading-overlay">
+            <div className="spinner"></div>
+            <p>Processing data...</p>
+          </div>
+        )}
+
         <div className="tabs">
           <button className={`tab ${activeTab === 'upload' ? 'active' : ''}`} onClick={() => setActiveTab('upload')}>
-            Upload Data
+            <FiUpload /> Upload Data
           </button>
           <button className={`tab ${activeTab === 'missing' ? 'active' : ''}`} onClick={() => setActiveTab('missing')} disabled={data.length === 0}>
-            Missing Values
+            <FiSearch /> Missing Values
           </button>
           <button className={`tab ${activeTab === 'scaling' ? 'active' : ''}`} onClick={() => setActiveTab('scaling')} disabled={data.length === 0}>
-            Feature Scaling
+            <FiBarChart2 /> Feature Scaling
           </button>
           <button className={`tab ${activeTab === 'encoding' ? 'active' : ''}`} onClick={() => setActiveTab('encoding')} disabled={data.length === 0}>
-            Encoding
+            <FiCode /> Encoding
           </button>
           <button className={`tab ${activeTab === 'engineering' ? 'active' : ''}`} onClick={() => setActiveTab('engineering')} disabled={data.length === 0}>
-            Feature Engineering
+            <FiSettings /> Feature Engineering
+          </button>
+          <button className={`tab ${activeTab === 'analysis' ? 'active' : ''}`} onClick={() => setActiveTab('analysis')} disabled={data.length === 0}>
+            <FiPieChart /> Analysis
           </button>
         </div>
 
-        {activeTab === 'upload' && <UploadTab onFileUpload={handleFileUpload} onLoadSample={loadSampleData} />}
-        {activeTab === 'missing' && <MissingValuesTab data={data} setData={setData} originalData={originalData} columns={columns} />}
+        {activeTab === 'upload' && <UploadTab onFileUpload={handleFileUpload} onLoadSample={loadSampleData} loading={loading} />}
+        {activeTab === 'missing' && <EnhancedMissingValuesTab data={data} setData={setData} originalData={originalData} columns={columns} />}
         {activeTab === 'scaling' && <ScalingTab data={data} setData={setData} originalData={originalData} columns={columns} />}
         {activeTab === 'encoding' && <EncodingTab data={data} setData={setData} originalData={originalData} columns={columns} />}
         {activeTab === 'engineering' && <EngineeringTab data={data} setData={setData} columns={columns} setColumns={setColumns} />}
+        {activeTab === 'analysis' && <AnalysisTab data={data} columns={columns} />}
       </div>
     </div>
   );
 }
 
-// Upload Tab Component
-function UploadTab({ onFileUpload, onLoadSample }) {
+// Upload Tab Component with loading state
+function UploadTab({ onFileUpload, onLoadSample, loading }) {
   return (
     <div className="upload-section">
-      <h2>Upload Your Dataset</h2>
-      <p style={{ marginBottom: '20px', color: '#666' }}>Upload a CSV file or use sample data to get started</p>
-      <input type="file" id="file-upload" accept=".csv" onChange={onFileUpload} />
+      <h2><FiUpload className="section-icon" /> Upload Your Dataset</h2>
+      <p style={{ marginBottom: '20px', color: '#666' }}>
+        Upload a CSV file or use sample data to get started with data preprocessing
+      </p>
+      
+      <div className="upload-info">
+        <div className="info-item">
+          <FiFile className="icon" />
+          <span>CSV files only</span>
+        </div>
+        <div className="info-item">
+          <FiDatabase className="icon" />
+          <span>Max 5MB</span>
+        </div>
+        <div className="info-item">
+          <FiCheck className="icon" />
+          <span>Headers required</span>
+        </div>
+      </div>
+      
+      <input type="file" id="file-upload" accept=".csv" onChange={onFileUpload} disabled={loading} />
       <label htmlFor="file-upload">
-        <button className="upload-button" onClick={() => document.getElementById('file-upload').click()}>
-          Choose CSV File
+        <button className="upload-button" onClick={() => document.getElementById('file-upload').click()} disabled={loading}>
+          {loading ? <><div className="button-spinner"></div> Processing...</> : <><FiUpload /> Choose CSV File</>}
         </button>
       </label>
-      <button className="sample-data-button" onClick={onLoadSample}>
-        Use Sample Data
+      <button className="sample-data-button" onClick={onLoadSample} disabled={loading}>
+        <FiTarget /> Use Sample Data
       </button>
+      
+      <div className="info-box" style={{ marginTop: '30px', textAlign: 'left' }}>
+        <h4><FiTrendingUp style={{ marginRight: '8px' }} /> What You'll Learn</h4>
+        <ul style={{ lineHeight: '2', marginLeft: '20px' }}>
+          <li><strong>Missing Values:</strong> Handle NULL values with different imputation strategies</li>
+          <li><strong>Feature Scaling:</strong> Normalize and standardize numerical features</li>
+          <li><strong>Encoding:</strong> Convert categorical data to numerical format</li>
+          <li><strong>Feature Engineering:</strong> Create new features from existing ones</li>
+          <li><strong>Data Analysis:</strong> Visualize correlations and distributions</li>
+        </ul>
+      </div>
     </div>
   );
 }
 
-// Missing Values Tab Component
-function MissingValuesTab({ data, setData, originalData, columns }) {
+// Analysis Tab Component - NEW!
+function AnalysisTab({ data, columns }) {
   const [selectedColumn, setSelectedColumn] = useState('');
-  const [strategy, setStrategy] = useState('mean');
-
-  const getMissingStats = () => {
-    const stats = {};
-    columns.forEach(col => {
-      const missing = data.filter(row => row[col] === null || row[col] === undefined || row[col] === '').length;
-      stats[col] = { missing, percentage: ((missing / data.length) * 100).toFixed(2) };
-    });
-    return stats;
-  };
-
-  const handleImputation = () => {
-    if (!selectedColumn) return;
-
-    const newData = [...data];
-    const values = newData.map(row => row[selectedColumn]).filter(val => val !== null && val !== undefined && val !== '');
-
-    newData.forEach(row => {
-      if (row[selectedColumn] === null || row[selectedColumn] === undefined || row[selectedColumn] === '') {
-        if (strategy === 'mean') {
-          const sum = values.reduce((a, b) => a + b, 0);
-          row[selectedColumn] = sum / values.length;
-        } else if (strategy === 'median') {
-          const sorted = [...values].sort((a, b) => a - b);
-          row[selectedColumn] = sorted[Math.floor(sorted.length / 2)];
-        } else if (strategy === 'mode') {
-          const frequency = {};
-          values.forEach(val => frequency[val] = (frequency[val] || 0) + 1);
-          row[selectedColumn] = Object.keys(frequency).reduce((a, b) => frequency[a] > frequency[b] ? a : b);
-        } else if (strategy === 'zero') {
-          row[selectedColumn] = 0;
-        }
-      }
-    });
-
-    setData(newData);
-  };
-
-  const resetData = () => {
-    setData(JSON.parse(JSON.stringify(originalData)));
-  };
-
-  const missingStats = getMissingStats();
-
+  
+  const numericalColumns = columns.filter(col => 
+    typeof data[0]?.[col] === 'number'
+  );
+  
   return (
     <div className="content-grid">
       <div className="panel">
-        <h3>Data Preview</h3>
-        <div className="data-table">
-          <table>
-            <thead>
-              <tr>
-                {columns.map(col => <th key={col}>{col}</th>)}
-              </tr>
-            </thead>
-            <tbody>
-              {data.slice(0, 10).map((row, idx) => (
-                <tr key={idx}>
-                  {columns.map(col => (
-                    <td key={col}>
-                      {row[col] === null || row[col] === undefined || row[col] === '' ? 
-                        <span className="missing-indicator">NULL</span> : 
-                        typeof row[col] === 'number' ? row[col].toFixed(2) : row[col]
-                      }
-                    </td>
-                  ))}
-                </tr>
-              ))}
-            </tbody>
-          </table>
+        <h3><FiBarChart2 className="panel-icon" /> Data Distribution</h3>
+        <div className="control-group">
+          <label>Select Column to Visualize</label>
+          <select value={selectedColumn} onChange={(e) => setSelectedColumn(e.target.value)}>
+            <option value="">Choose a column...</option>
+            {numericalColumns.map(col => (
+              <option key={col} value={col}>{col}</option>
+            ))}
+          </select>
         </div>
-
-        <div className="stats-grid">
-          {Object.entries(missingStats).map(([col, stats]) => (
-            <div key={col} className="stat-card">
-              <h4>{col}</h4>
-              <p>{stats.missing} missing ({stats.percentage}%)</p>
-            </div>
-          ))}
+        
+        {selectedColumn && (
+          <DistributionChart 
+            data={data} 
+            column={selectedColumn} 
+            title={`Distribution of ${selectedColumn}`}
+          />
+        )}
+        
+        <div className="info-box">
+          <h4>Understanding Distributions</h4>
+          <p><strong>Normal Distribution:</strong> Bell-shaped curve, most values near the mean</p>
+          <p><strong>Skewed Distribution:</strong> Tail on one side, indicates outliers</p>
+          <p><strong>Uniform Distribution:</strong> All values equally likely</p>
+          <p style={{ marginTop: '10px', fontSize: '0.9rem', color: '#555' }}>
+            Understanding your data's distribution helps choose the right preprocessing techniques!
+          </p>
         </div>
       </div>
-
+      
       <div className="panel">
-        <h3>Imputation Controls</h3>
-        <div className="controls">
-          <div className="control-group">
-            <h4>Select Column</h4>
-            <select value={selectedColumn} onChange={(e) => setSelectedColumn(e.target.value)}>
-              <option value="">Choose a column...</option>
-              {columns.map(col => (
-                <option key={col} value={col}>{col}</option>
-              ))}
-            </select>
-          </div>
-
-          <div className="control-group">
-            <h4>Imputation Strategy</h4>
-            <select value={strategy} onChange={(e) => setStrategy(e.target.value)}>
-              <option value="mean">Mean (Average)</option>
-              <option value="median">Median (Middle value)</option>
-              <option value="mode">Mode (Most frequent)</option>
-              <option value="zero">Zero Fill</option>
-            </select>
-          </div>
-
-          <button className="action-button" onClick={handleImputation} disabled={!selectedColumn}>
-            Apply Imputation
-          </button>
-          <button className="action-button" onClick={resetData} style={{ background: '#f44336' }}>
-            Reset to Original
-          </button>
-        </div>
-
+        <h3><FiPieChart className="panel-icon" /> Feature Correlations</h3>
+        <CorrelationMatrix data={data} columns={numericalColumns} />
+        
         <div className="info-box">
-          <h4>About Missing Values</h4>
+          <h4>Understanding Correlations</h4>
+          <p><strong>Positive Correlation (+1):</strong> Features increase together</p>
+          <p><strong>Negative Correlation (-1):</strong> One increases, other decreases</p>
+          <p><strong>No Correlation (0):</strong> Features are independent</p>
           
-          <p><strong>What are Missing Values?</strong></p>
-          <p style={{ marginBottom: '12px' }}>Missing values are data points that are absent from your dataset. They appear as NULL, NaN, empty cells, or undefined values.</p>
-          
-          <p><strong>Why Do They Occur?</strong></p>
-          <ul style={{ marginLeft: '20px', marginTop: '8px', lineHeight: '1.8', marginBottom: '12px' }}>
-            <li>Data collection errors or system failures</li>
-            <li>Survey respondents skipping questions</li>
-            <li>Sensor malfunctions in IoT devices</li>
-            <li>Data integration from multiple sources</li>
-            <li>Privacy concerns (intentionally withheld)</li>
-          </ul>
-          
-          <p><strong>Why Can't We Ignore Them?</strong></p>
-          <p style={{ marginBottom: '12px' }}>Most machine learning algorithms cannot handle missing values. They will either crash or produce incorrect results. We must handle them before training.</p>
-          
-          <p><strong>Imputation Strategies Explained:</strong></p>
-          
-          <div style={{ background: '#f5f5f5', padding: '10px', borderRadius: '5px', margin: '8px 0', fontSize: '0.85rem' }}>
-            <strong>Mean:</strong> Replace with average value<br/>
-            <em>Best for:</em> Normally distributed numerical data without outliers<br/>
-            <em>Example:</em> Ages [25, 30, NULL, 40] → Replace NULL with (25+30+40)/3 = 31.67
+          <div style={{ background: '#fff3cd', padding: '10px', borderRadius: '5px', marginTop: '10px', fontSize: '0.85rem' }}>
+            <FiAlertTriangle style={{ marginRight: '5px' }} />
+            <strong>Feature Selection Tip:</strong> If two features have correlation &gt; 0.9, consider removing one to reduce redundancy!
           </div>
-          
-          <div style={{ background: '#f5f5f5', padding: '10px', borderRadius: '5px', margin: '8px 0', fontSize: '0.85rem' }}>
-            <strong>Median:</strong> Replace with middle value<br/>
-            <em>Best for:</em> Data with outliers or skewed distributions<br/>
-            <em>Example:</em> Salaries [50k, 60k, NULL, 200k] → Use median (60k) not mean (103k)
-          </div>
-          
-          <div style={{ background: '#f5f5f5', padding: '10px', borderRadius: '5px', margin: '8px 0', fontSize: '0.85rem' }}>
-            <strong>Mode:</strong> Replace with most frequent value<br/>
-            <em>Best for:</em> Categorical data (colors, categories, labels)<br/>
-            <em>Example:</em> Departments [IT, HR, NULL, IT, IT] → Replace NULL with IT (most common)
-          </div>
-          
-          <div style={{ background: '#f5f5f5', padding: '10px', borderRadius: '5px', margin: '8px 0', fontSize: '0.85rem' }}>
-            <strong>Zero Fill:</strong> Replace with 0<br/>
-            <em>Best for:</em> When zero is meaningful (e.g., number of purchases, clicks)<br/>
-            <em>Warning:</em> Can distort statistics if zero isn't a natural value
-          </div>
-          
-          <p style={{ marginTop: '12px', fontSize: '0.9rem', color: '#d97706' }}>
-            <strong>Important:</strong> Always analyze why data is missing before choosing a strategy. The best method depends on your specific dataset and problem.
-          </p>
         </div>
       </div>
     </div>
   );
+}
+
+// Missing Values Tab Component (keeping original for now, will be replaced by Enhanced version)
+function MissingValuesTab({ data, setData, originalData, columns }) {
+  // Use the enhanced version
+  return <EnhancedMissingValuesTab data={data} setData={setData} originalData={originalData} columns={columns} />;
 }
 
 // Scaling Tab Component

@@ -1,102 +1,222 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
 import Papa from 'papaparse';
-import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, ScatterChart, Scatter } from 'recharts';
+import { EnhancedMissingValuesTab } from './components/EnhancedMissingValuesTab';
+import { DistributionChart, ComparisonChart, CorrelationMatrix } from './components/DataVisualization';
+import { validateDataQuality, exportToCSV } from './utils/dataProcessing';
 
 function App() {
   const [data, setData] = useState([]);
   const [originalData, setOriginalData] = useState([]);
   const [activeTab, setActiveTab] = useState('upload');
   const [columns, setColumns] = useState([]);
+  const [dataQuality, setDataQuality] = useState(null);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null);
+  const [history, setHistory] = useState([]);
 
-  // Sample dataset
+  // Validate data quality whenever data changes
+  useEffect(() => {
+    if (data.length > 0) {
+      const quality = validateDataQuality(data);
+      setDataQuality(quality);
+    }
+  }, [data]);
+
+  // Sample dataset with more realistic data
   const loadSampleData = () => {
+    setLoading(true);
+    setError(null);
+    
     const sampleData = [
-      { age: 25, salary: 50000, experience: 2, department: 'IT', performance: 85 },
-      { age: 30, salary: 60000, experience: 5, department: 'HR', performance: 90 },
-      { age: null, salary: 55000, experience: 3, department: 'IT', performance: 88 },
-      { age: 35, salary: null, experience: 7, department: 'Finance', performance: 92 },
-      { age: 40, salary: 70000, experience: 10, department: 'IT', performance: 95 },
-      { age: 28, salary: 65000, experience: null, department: 'HR', performance: 87 },
-      { age: 45, salary: 75000, experience: 12, department: 'Finance', performance: 93 },
-      { age: 32, salary: 58000, experience: 6, department: 'IT', performance: 89 },
-      { age: 38, salary: 68000, experience: 9, department: null, performance: 91 },
-      { age: 29, salary: 62000, experience: 4, department: 'HR', performance: 86 }
+      { age: 25, salary: 50000, experience: 2, department: 'IT', performance: 85, education: 'Bachelor' },
+      { age: 30, salary: 60000, experience: 5, department: 'HR', performance: 90, education: 'Master' },
+      { age: null, salary: 55000, experience: 3, department: 'IT', performance: 88, education: 'Bachelor' },
+      { age: 35, salary: null, experience: 7, department: 'Finance', performance: 92, education: 'Master' },
+      { age: 40, salary: 70000, experience: 10, department: 'IT', performance: 95, education: 'PhD' },
+      { age: 28, salary: 65000, experience: null, department: 'HR', performance: 87, education: 'Bachelor' },
+      { age: 45, salary: 75000, experience: 12, department: 'Finance', performance: 93, education: 'Master' },
+      { age: 32, salary: 58000, experience: 6, department: 'IT', performance: 89, education: 'Bachelor' },
+      { age: 38, salary: 68000, experience: 9, department: null, performance: 91, education: 'Master' },
+      { age: 29, salary: 62000, experience: 4, department: 'HR', performance: 86, education: 'Bachelor' },
+      { age: 42, salary: 72000, experience: 11, department: 'Finance', performance: 94, education: 'PhD' },
+      { age: 27, salary: 53000, experience: 3, department: 'IT', performance: 84, education: 'Bachelor' },
+      { age: 36, salary: null, experience: 8, department: 'HR', performance: 90, education: 'Master' },
+      { age: 31, salary: 61000, experience: 5, department: 'Finance', performance: 88, education: 'Bachelor' },
+      { age: null, salary: 69000, experience: 9, department: 'IT', performance: 92, education: 'Master' }
     ];
+    
     setData(sampleData);
     setOriginalData(JSON.parse(JSON.stringify(sampleData)));
     setColumns(Object.keys(sampleData[0]));
+    setHistory([{ action: 'Loaded sample data', timestamp: new Date() }]);
     setActiveTab('missing');
+    setLoading(false);
   };
 
-  // File upload handler
+  // File upload handler with validation
   const handleFileUpload = (event) => {
     const file = event.target.files[0];
-    if (file) {
-      Papa.parse(file, {
-        header: true,
-        dynamicTyping: true,
-        complete: (results) => {
-          setData(results.data.filter(row => Object.values(row).some(val => val !== null && val !== '')));
-          setOriginalData(JSON.parse(JSON.stringify(results.data.filter(row => Object.values(row).some(val => val !== null && val !== '')))));
-          setColumns(Object.keys(results.data[0]));
-          setActiveTab('missing');
-        }
-      });
+    if (!file) return;
+    
+    setLoading(true);
+    setError(null);
+    
+    // Validate file type
+    if (!file.name.endsWith('.csv')) {
+      setError('Please upload a CSV file');
+      setLoading(false);
+      return;
     }
+    
+    // Validate file size (max 5MB)
+    if (file.size > 5 * 1024 * 1024) {
+      setError('File size must be less than 5MB');
+      setLoading(false);
+      return;
+    }
+    
+    Papa.parse(file, {
+      header: true,
+      dynamicTyping: true,
+      skipEmptyLines: true,
+      complete: (results) => {
+        if (results.errors.length > 0) {
+          setError(`CSV parsing error: ${results.errors[0].message}`);
+          setLoading(false);
+          return;
+        }
+        
+        const filteredData = results.data.filter(row => 
+          Object.values(row).some(val => val !== null && val !== '')
+        );
+        
+        if (filteredData.length === 0) {
+          setError('No valid data found in CSV file');
+          setLoading(false);
+          return;
+        }
+        
+        setData(filteredData);
+        setOriginalData(JSON.parse(JSON.stringify(filteredData)));
+        setColumns(Object.keys(filteredData[0]));
+        setHistory([{ action: `Loaded ${file.name}`, timestamp: new Date() }]);
+        setActiveTab('missing');
+        setLoading(false);
+      },
+      error: (error) => {
+        setError(`Failed to parse CSV: ${error.message}`);
+        setLoading(false);
+      }
+    });
   };
 
   return (
     <div className="app">
       <div className="header">
-        <h1>UoA COMPSCI 714 - Data Preprocessing Studio</h1>
+        <h1>🎓 UoA COMPSCI 714 - Data Preprocessing Studio</h1>
         <p>Week 3: Interactive Data Preprocessing and Feature Engineering</p>
+        {dataQuality && (
+          <div className="data-quality-badge">
+            <span>📊 {dataQuality.rowCount} rows × {dataQuality.columnCount} columns</span>
+            {dataQuality.warnings.length > 0 && (
+              <span className="warning-badge">⚠️ {dataQuality.warnings.length} warnings</span>
+            )}
+          </div>
+        )}
       </div>
 
       <div className="container">
+        {error && (
+          <div className="error-message">
+            ❌ {error}
+            <button onClick={() => setError(null)}>×</button>
+          </div>
+        )}
+        
+        {loading && (
+          <div className="loading-overlay">
+            <div className="spinner"></div>
+            <p>Processing data...</p>
+          </div>
+        )}
+
         <div className="tabs">
           <button className={`tab ${activeTab === 'upload' ? 'active' : ''}`} onClick={() => setActiveTab('upload')}>
-            Upload Data
+            📁 Upload Data
           </button>
           <button className={`tab ${activeTab === 'missing' ? 'active' : ''}`} onClick={() => setActiveTab('missing')} disabled={data.length === 0}>
-            Missing Values
+            🔍 Missing Values
           </button>
           <button className={`tab ${activeTab === 'scaling' ? 'active' : ''}`} onClick={() => setActiveTab('scaling')} disabled={data.length === 0}>
-            Feature Scaling
+            📏 Feature Scaling
           </button>
           <button className={`tab ${activeTab === 'encoding' ? 'active' : ''}`} onClick={() => setActiveTab('encoding')} disabled={data.length === 0}>
-            Encoding
+            🔤 Encoding
           </button>
           <button className={`tab ${activeTab === 'engineering' ? 'active' : ''}`} onClick={() => setActiveTab('engineering')} disabled={data.length === 0}>
-            Feature Engineering
+            ⚙️ Feature Engineering
+          </button>
+          <button className={`tab ${activeTab === 'analysis' ? 'active' : ''}`} onClick={() => setActiveTab('analysis')} disabled={data.length === 0}>
+            📊 Analysis
           </button>
         </div>
 
-        {activeTab === 'upload' && <UploadTab onFileUpload={handleFileUpload} onLoadSample={loadSampleData} />}
-        {activeTab === 'missing' && <MissingValuesTab data={data} setData={setData} originalData={originalData} columns={columns} />}
+        {activeTab === 'upload' && <UploadTab onFileUpload={handleFileUpload} onLoadSample={loadSampleData} loading={loading} />}
+        {activeTab === 'missing' && <EnhancedMissingValuesTab data={data} setData={setData} originalData={originalData} columns={columns} />}
         {activeTab === 'scaling' && <ScalingTab data={data} setData={setData} originalData={originalData} columns={columns} />}
         {activeTab === 'encoding' && <EncodingTab data={data} setData={setData} originalData={originalData} columns={columns} />}
         {activeTab === 'engineering' && <EngineeringTab data={data} setData={setData} columns={columns} setColumns={setColumns} />}
+        {activeTab === 'analysis' && <AnalysisTab data={data} columns={columns} />}
       </div>
     </div>
   );
 }
 
-// Upload Tab Component
-function UploadTab({ onFileUpload, onLoadSample }) {
+// Upload Tab Component with loading state
+function UploadTab({ onFileUpload, onLoadSample, loading }) {
   return (
     <div className="upload-section">
-      <h2>Upload Your Dataset</h2>
-      <p style={{ marginBottom: '20px', color: '#666' }}>Upload a CSV file or use sample data to get started</p>
-      <input type="file" id="file-upload" accept=".csv" onChange={onFileUpload} />
+      <h2>📁 Upload Your Dataset</h2>
+      <p style={{ marginBottom: '20px', color: '#666' }}>
+        Upload a CSV file or use sample data to get started with data preprocessing
+      </p>
+      
+      <div className="upload-info">
+        <div className="info-item">
+          <span className="icon">📄</span>
+          <span>CSV files only</span>
+        </div>
+        <div className="info-item">
+          <span className="icon">💾</span>
+          <span>Max 5MB</span>
+        </div>
+        <div className="info-item">
+          <span className="icon">✅</span>
+          <span>Headers required</span>
+        </div>
+      </div>
+      
+      <input type="file" id="file-upload" accept=".csv" onChange={onFileUpload} disabled={loading} />
       <label htmlFor="file-upload">
-        <button className="upload-button" onClick={() => document.getElementById('file-upload').click()}>
-          Choose CSV File
+        <button className="upload-button" onClick={() => document.getElementById('file-upload').click()} disabled={loading}>
+          {loading ? '⏳ Processing...' : '📤 Choose CSV File'}
         </button>
       </label>
-      <button className="sample-data-button" onClick={onLoadSample}>
-        Use Sample Data
+      <button className="sample-data-button" onClick={onLoadSample} disabled={loading}>
+        🎯 Use Sample Data
       </button>
+      
+      <div className="info-box" style={{ marginTop: '30px', textAlign: 'left' }}>
+        <h4>💡 What You'll Learn</h4>
+        <ul style={{ lineHeight: '2', marginLeft: '20px' }}>
+          <li><strong>Missing Values:</strong> Handle NULL values with different imputation strategies</li>
+          <li><strong>Feature Scaling:</strong> Normalize and standardize numerical features</li>
+          <li><strong>Encoding:</strong> Convert categorical data to numerical format</li>
+          <li><strong>Feature Engineering:</strong> Create new features from existing ones</li>
+          <li><strong>Data Analysis:</strong> Visualize correlations and distributions</li>
+        </ul>
+      </div>
     </div>
   );
 }

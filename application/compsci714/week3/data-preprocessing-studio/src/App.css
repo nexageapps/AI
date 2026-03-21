@@ -143,10 +143,14 @@
   width: 100%;
   border-collapse: collapse;
   font-size: 0.9rem;
-  overflow-x: auto;
   display: block;
   max-height: 400px;
-  overflow-y: auto;
+  overflow: auto;
+}
+
+.data-table table {
+  width: 100%;
+  min-width: 600px;
 }
 
 .data-table th,

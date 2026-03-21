@@ -399,7 +399,7 @@ function EncodingTab({ data, setData, originalData, columns }) {
   return (
     <div className="content-grid">
       <div className="panel">
-        <h3>🏷️ Encoded Data Preview</h3>
+        <h3>Encoded Data Preview</h3>
         <div className="data-table">
           <table>
             <thead>
@@ -426,7 +426,7 @@ function EncodingTab({ data, setData, originalData, columns }) {
       </div>
 
       <div className="panel">
-        <h3>🔧 Encoding Controls</h3>
+        <h3>Encoding Controls</h3>
         <div className="controls">
           <div className="control-group">
             <h4>Select Categorical Column</h4>
@@ -455,12 +455,12 @@ function EncodingTab({ data, setData, originalData, columns }) {
         </div>
 
         <div className="info-box">
-          <h4>🎯 Encoding Methods</h4>
+          <h4>Encoding Methods</h4>
           <p><strong>Label Encoding:</strong> Converts categories to integers (0, 1, 2...)</p>
-          <p>⚠️ Implies ordering - use for ordinal data</p>
+          <p>Warning: Implies ordering - use for ordinal data</p>
           
           <p style={{ marginTop: '15px' }}><strong>One-Hot Encoding:</strong> Creates binary columns for each category</p>
-          <p>✅ No ordering implied - use for nominal data</p>
+          <p>Best: No ordering implied - use for nominal data</p>
         </div>
       </div>
     </div>
@@ -521,7 +521,7 @@ function EngineeringTab({ data, setData, columns, setColumns }) {
   return (
     <div className="content-grid">
       <div className="panel">
-        <h3>⚙️ Engineered Data Preview</h3>
+        <h3>Engineered Data Preview</h3>
         <div className="data-table">
           <table>
             <thead>
@@ -548,7 +548,7 @@ function EngineeringTab({ data, setData, columns, setColumns }) {
       </div>
 
       <div className="panel">
-        <h3>🛠️ Feature Engineering</h3>
+        <h3>Feature Engineering</h3>
         <div className="controls">
           <div className="control-group">
             <h4>Select First Column</h4>
@@ -601,7 +601,7 @@ function EngineeringTab({ data, setData, columns, setColumns }) {
         </div>
 
         <div className="info-box">
-          <h4>💡 Feature Engineering Tips</h4>
+          <h4>Feature Engineering Tips</h4>
           <p><strong>Ratios:</strong> salary / experience = salary per year</p>
           <p><strong>Combinations:</strong> bedrooms + bathrooms = total rooms</p>
           <p><strong>Interactions:</strong> area × price = total value</p>

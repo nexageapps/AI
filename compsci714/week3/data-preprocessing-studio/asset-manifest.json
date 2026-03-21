@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/AI/compsci714/week3/data-preprocessing-studio/static/css/main.dabbdd4e.css",
+    "main.js": "/AI/compsci714/week3/data-preprocessing-studio/static/js/main.3af85f0f.js",
+    "index.html": "/AI/compsci714/week3/data-preprocessing-studio/index.html",
+    "main.dabbdd4e.css.map": "/AI/compsci714/week3/data-preprocessing-studio/static/css/main.dabbdd4e.css.map",
+    "main.3af85f0f.js.map": "/AI/compsci714/week3/data-preprocessing-studio/static/js/main.3af85f0f.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.dabbdd4e.css",
+    "static/js/main.3af85f0f.js"
+  ]
+}

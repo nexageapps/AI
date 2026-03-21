@@ -18,9 +18,9 @@
 
 .sidebar-section h3 {
   margin: 0 0 10px 0;
-  color: #1e3c72;
+  color: #00467F;
   font-size: 0.95rem;
-  border-bottom: 2px solid #2196F3;
+  border-bottom: 2px solid #00467F;
   padding-bottom: 5px;
   font-weight: 700;
 }
@@ -38,7 +38,7 @@
 }
 
 .stat-value {
-  color: #2196F3;
+  color: #00467F;
   font-weight: 700;
 }
 
@@ -107,7 +107,7 @@
   width: 16px;
   height: 16px;
   border-radius: 50%;
-  background: #2196F3;
+  background: #00467F;
   cursor: pointer;
 }
 
@@ -115,7 +115,7 @@
   width: 16px;
   height: 16px;
   border-radius: 50%;
-  background: #2196F3;
+  background: #00467F;
   cursor: pointer;
   border: none;
 }
@@ -167,7 +167,7 @@
 }
 
 .btn-turn {
-  background: #2196F3;
+  background: #00467F;
   color: white;
 }
 

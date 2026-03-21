@@ -7,7 +7,7 @@
 
 body {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  background: linear-gradient(135deg, #dbeafe 0%, #e0e7ff 100%);
+  background: linear-gradient(135deg, #00467F 0%, #003366 50%, #001F3F 100%);
   min-height: 100vh;
 }
 
@@ -157,7 +157,7 @@ body {
 }
 
 .btn-primary {
-  background-color: #3b82f6;
+  background-color: #00467F;
   color: #ffffff;
   font-weight: 600;
   padding: 0.5rem 1rem;
@@ -171,7 +171,7 @@ body {
 }
 
 .btn-primary:hover:not(:disabled) {
-  background-color: #2563eb;
+  background-color: #003366;
   transform: scale(1.02);
 }
 

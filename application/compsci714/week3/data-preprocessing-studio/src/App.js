@@ -238,7 +238,7 @@ function AnalysisTab({ data, columns }) {
   return (
     <div className="content-grid">
       <div className="panel">
-        <h3>📊 Data Distribution</h3>
+        <h3><FiBarChart2 className="panel-icon" /> Data Distribution</h3>
         <div className="control-group">
           <label>Select Column to Visualize</label>
           <select value={selectedColumn} onChange={(e) => setSelectedColumn(e.target.value)}>
@@ -269,7 +269,7 @@ function AnalysisTab({ data, columns }) {
       </div>
       
       <div className="panel">
-        <h3>🔗 Feature Correlations</h3>
+        <h3><FiPieChart className="panel-icon" /> Feature Correlations</h3>
         <CorrelationMatrix data={data} columns={numericalColumns} />
         
         <div className="info-box">
@@ -279,6 +279,7 @@ function AnalysisTab({ data, columns }) {
           <p><strong>No Correlation (0):</strong> Features are independent</p>
           
           <div style={{ background: '#fff3cd', padding: '10px', borderRadius: '5px', marginTop: '10px', fontSize: '0.85rem' }}>
+            <FiAlertTriangle style={{ marginRight: '5px' }} />
             <strong>Feature Selection Tip:</strong> If two features have correlation &gt; 0.9, consider removing one to reduce redundancy!
           </div>
         </div>

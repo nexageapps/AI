@@ -162,19 +162,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version: '18'
-          cache: 'npm'
-          cache-dependency-path: application/compsci713/week3/model-evaluation-dashboard/package-lock.json
-      - run: npm ci
-        working-directory: application/compsci713/week3/model-evaluation-dashboard
-      - run: npm run build
-        working-directory: application/compsci713/week3/model-evaluation-dashboard
+      - name: Prepare stlite static files
+        run: |
+          mkdir -p deploy-model-eval
+          cp application/compsci713/week3/model-evaluation-dashboard/index.html deploy-model-eval/
+          cp application/compsci713/week3/model-evaluation-dashboard/app.py deploy-model-eval/
       - uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./application/compsci713/week3/model-evaluation-dashboard/build
+          publish_dir: ./deploy-model-eval
           destination_dir: compsci713/week3/model-evaluation
           keep_files: true
           user_name: 'github-actions[bot]'

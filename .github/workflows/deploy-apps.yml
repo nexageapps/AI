@@ -26,6 +26,7 @@ jobs:
       gradient:   ${{ steps.filter.outputs.gradient }}
       nn-trainer: ${{ steps.filter.outputs.nn-trainer }}
       kg-playground: ${{ steps.filter.outputs.kg-playground }}
+      model-eval: ${{ steps.filter.outputs.model-eval }}
       index:      ${{ steps.filter.outputs.index }}
     steps:
       - uses: actions/checkout@v4
@@ -41,6 +42,8 @@ jobs:
               - 'application/compsci714/week2/nn-learning-game/**'
             kg-playground:
               - 'application/compsci713/week3/kg-playground/**'
+            model-eval:
+              - 'application/compsci713/week3/model-evaluation-dashboard/**'
             index:
               - 'index.html'
 
@@ -149,6 +152,30 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./application/compsci713/week3/kg-playground/build
           destination_dir: compsci713/week3/kg-playground
+          keep_files: true
+          user_name: 'github-actions[bot]'
+          user_email: 'github-actions[bot]@users.noreply.github.com'
+
+  deploy-model-eval:
+    needs: detect-changes
+    if: needs.detect-changes.outputs.model-eval == 'true' || github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+          cache-dependency-path: application/compsci713/week3/model-evaluation-dashboard/package-lock.json
+      - run: npm ci
+        working-directory: application/compsci713/week3/model-evaluation-dashboard
+      - run: npm run build
+        working-directory: application/compsci713/week3/model-evaluation-dashboard
+      - uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./application/compsci713/week3/model-evaluation-dashboard/build
+          destination_dir: compsci713/week3/model-evaluation
           keep_files: true
           user_name: 'github-actions[bot]'
           user_email: 'github-actions[bot]@users.noreply.github.com'

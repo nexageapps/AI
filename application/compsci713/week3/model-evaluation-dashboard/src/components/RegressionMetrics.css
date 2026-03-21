@@ -1,0 +1,138 @@
+.regression-metrics {
+  position: relative;
+}
+
+.noise-control {
+  margin-bottom: 20px;
+}
+
+.noise-control label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.noise-control span {
+  font-weight: 600;
+  color: #2c3e50;
+  font-size: 0.9rem;
+}
+
+.noise-slider {
+  width: 100%;
+  height: 8px;
+  border-radius: 4px;
+  outline: none;
+  -webkit-appearance: none;
+  appearance: none;
+  background: linear-gradient(to right, #2ecc71 0%, #e74c3c 100%);
+  cursor: pointer;
+}
+
+.noise-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: white;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  border: 2px solid #667eea;
+}
+
+.noise-slider::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: white;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  border: 2px solid #667eea;
+}
+
+.regression-metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.regression-metric {
+  background: #f8f9fa;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 16px;
+  text-align: center;
+  transition: transform 0.2s;
+}
+
+.regression-metric:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.regression-metric-name {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 8px;
+}
+
+.regression-metric-value {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #3498db;
+  margin-bottom: 4px;
+}
+
+.regression-metric-formula {
+  font-size: 0.75rem;
+  color: #7f8c8d;
+  margin-bottom: 4px;
+  font-weight: 600;
+}
+
+.regression-metric-desc {
+  font-size: 0.8rem;
+  color: #555;
+  line-height: 1.3;
+}
+
+.regression-explanation {
+  margin-top: 20px;
+  padding: 16px;
+  background: #f8f9fa;
+  border-radius: 8px;
+}
+
+.regression-explanation h4 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 12px;
+}
+
+.explanation-grid {
+  display: grid;
+  gap: 8px;
+}
+
+.explanation-item {
+  font-size: 0.85rem;
+  color: #555;
+  line-height: 1.4;
+  padding: 8px;
+  background: white;
+  border-radius: 4px;
+}
+
+.explanation-item strong {
+  color: #2c3e50;
+}
+
+@media (max-width: 768px) {
+  .regression-metrics-grid {
+    grid-template-columns: 1fr;
+  }
+}

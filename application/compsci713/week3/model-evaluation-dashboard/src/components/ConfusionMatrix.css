@@ -1,0 +1,143 @@
+.confusion-matrix {
+  position: relative;
+}
+
+.matrix-container {
+  position: relative;
+}
+
+.matrix-labels {
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.label-horizontal {
+  text-align: center;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+.label-vertical {
+  position: absolute;
+  left: -30px;
+  top: 50%;
+  transform: rotate(-90deg) translateX(-50%);
+  transform-origin: left center;
+  font-weight: 600;
+  color: #2c3e50;
+  white-space: nowrap;
+}
+
+.matrix-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.matrix-headers {
+  display: grid;
+  grid-template-columns: 100px 1fr 1fr;
+  gap: 8px;
+}
+
+.matrix-row {
+  display: grid;
+  grid-template-columns: 100px 1fr 1fr;
+  gap: 8px;
+}
+
+.header-cell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  color: #2c3e50;
+  font-size: 0.9rem;
+}
+
+.matrix-cell {
+  border-radius: 8px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  min-height: 140px;
+  transition: transform 0.2s;
+}
+
+.matrix-cell:hover {
+  transform: scale(1.05);
+}
+
+.cell-label {
+  font-size: 0.8rem;
+  font-weight: 700;
+  opacity: 0.9;
+  margin-bottom: 4px;
+}
+
+.cell-value {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.cell-description {
+  font-size: 0.75rem;
+  opacity: 0.9;
+  text-align: center;
+}
+
+.cell-error {
+  font-size: 0.7rem;
+  opacity: 0.8;
+  margin-top: 4px;
+  font-style: italic;
+}
+
+.matrix-summary {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 2px solid #e0e0e0;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.summary-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.summary-label {
+  font-size: 0.85rem;
+  color: #7f8c8d;
+}
+
+.summary-value {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #2c3e50;
+}
+
+@media (max-width: 768px) {
+  .matrix-headers,
+  .matrix-row {
+    grid-template-columns: 80px 1fr 1fr;
+  }
+
+  .cell-value {
+    font-size: 1.5rem;
+  }
+
+  .matrix-cell {
+    min-height: 120px;
+    padding: 15px;
+  }
+}

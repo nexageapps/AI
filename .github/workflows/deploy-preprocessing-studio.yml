@@ -1,0 +1,61 @@
+name: Deploy Data Preprocessing Studio
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - 'application/compsci714/week3/data-preprocessing-studio/**'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages-preprocessing-studio"
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+          cache-dependency-path: application/compsci714/week3/data-preprocessing-studio/package-lock.json
+
+      - name: Install dependencies
+        working-directory: ./application/compsci714/week3/data-preprocessing-studio
+        run: npm ci
+
+      - name: Build application
+        working-directory: ./application/compsci714/week3/data-preprocessing-studio
+        run: |
+          npm run build
+        env:
+          PUBLIC_URL: /AI/compsci714/week3/data-preprocessing-studio
+          CI: false
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./application/compsci714/week3/data-preprocessing-studio/build
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}compsci714/week3/data-preprocessing-studio
+    runs-on: ubuntu-latest
+    needs: build
+    
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

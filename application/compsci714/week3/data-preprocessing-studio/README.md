@@ -1,4 +1,4 @@
-# UoA COMPSCI 714 - Data Preprocessing Studio
+# UoA - COMPSCI 714, 761, 762 - Data Preprocessing Studio
 
 **Week 3: Data Preprocessing and Feature Engineering**
 

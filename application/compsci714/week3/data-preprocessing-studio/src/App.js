@@ -2,12 +2,14 @@ import React, { useState, useEffect } from 'react';
 import './App.css';
 import Papa from 'papaparse';
 import { EnhancedMissingValuesTab } from './components/EnhancedMissingValuesTab';
-import { DistributionChart, ComparisonChart, CorrelationMatrix } from './components/DataVisualization';
+import { DistributionChart, CorrelationMatrix } from './components/DataVisualization';
+import { PipelineManager } from './components/PipelineManager';
+import { DataQualityReport } from './components/DataQualityReport';
 import { validateDataQuality, exportToCSV } from './utils/dataProcessing';
 import { 
   FiUpload, FiSearch, FiBarChart2, FiCode, FiSettings, 
   FiPieChart, FiCheckCircle, FiAlertTriangle, FiFile,
-  FiDatabase, FiCheck, FiTarget, FiTrendingUp
+  FiDatabase, FiCheck, FiTarget, FiTrendingUp, FiZap, FiDownload
 } from 'react-icons/fi';
 import { MdOutlineScience } from 'react-icons/md';
 
@@ -19,7 +21,7 @@ function App() {
   const [dataQuality, setDataQuality] = useState(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
-  const [history, setHistory] = useState([]);
+  const [operations, setOperations] = useState([]);
 
   // Validate data quality whenever data changes
   useEffect(() => {
@@ -28,6 +30,19 @@ function App() {
       setDataQuality(quality);
     }
   }, [data]);
+
+  // Track operations for pipeline
+  const addOperation = (operation) => {
+    setOperations(prev => [...prev, {
+      ...operation,
+      timestamp: new Date().toISOString()
+    }]);
+  };
+
+  const loadPipeline = (pipelineOperations) => {
+    setOperations(pipelineOperations);
+    // TODO: Apply operations to data
+  };
 
   // Sample dataset with more realistic data
   const loadSampleData = () => {
@@ -55,8 +70,12 @@ function App() {
     setData(sampleData);
     setOriginalData(JSON.parse(JSON.stringify(sampleData)));
     setColumns(Object.keys(sampleData[0]));
-    setHistory([{ action: 'Loaded sample data', timestamp: new Date() }]);
-    setActiveTab('missing');
+    setOperations([{ 
+      type: 'upload', 
+      description: 'Loaded sample data',
+      details: { rows: sampleData.length, columns: Object.keys(sampleData[0]).length }
+    }]);
+    setActiveTab('quality');
     setLoading(false);
   };
 
@@ -106,8 +125,12 @@ function App() {
         setData(filteredData);
         setOriginalData(JSON.parse(JSON.stringify(filteredData)));
         setColumns(Object.keys(filteredData[0]));
-        setHistory([{ action: `Loaded ${file.name}`, timestamp: new Date() }]);
-        setActiveTab('missing');
+        setOperations([{ 
+          type: 'upload', 
+          description: `Loaded ${file.name}`,
+          details: { filename: file.name, rows: filteredData.length, columns: Object.keys(filteredData[0]).length }
+        }]);
+        setActiveTab('quality');
         setLoading(false);
       },
       error: (error) => {
@@ -120,16 +143,23 @@ function App() {
   return (
     <div className="app">
       <div className="header">
-        <h1><MdOutlineScience className="header-icon" /> UoA COMPSCI 714 - Data Preprocessing Studio</h1>
+        <h1><MdOutlineScience className="header-icon" /> UoA - COMPSCI 714, 761, 762 - Data Preprocessing Studio</h1>
         <p>Week 3: Interactive Data Preprocessing and Feature Engineering</p>
-        {dataQuality && (
-          <div className="data-quality-badge">
-            <span><FiDatabase /> {dataQuality.rowCount} rows × {dataQuality.columnCount} columns</span>
-            {dataQuality.warnings.length > 0 && (
-              <span className="warning-badge"><FiAlertTriangle /> {dataQuality.warnings.length} warnings</span>
-            )}
-          </div>
-        )}
+        <div className="header-actions">
+          {dataQuality && (
+            <div className="data-quality-badge">
+              <span><FiDatabase /> {dataQuality.rowCount} rows × {dataQuality.columnCount} columns</span>
+              {dataQuality.warnings.length > 0 && (
+                <span className="warning-badge"><FiAlertTriangle /> {dataQuality.warnings.length} warnings</span>
+              )}
+            </div>
+          )}
+          {data.length > 0 && (
+            <button className="export-csv-button" onClick={() => exportToCSV(data, 'cleaned_data.csv')} title="Export cleaned data">
+              <FiDownload /> Export CSV
+            </button>
+          )}
+        </div>
       </div>
 
       <div className="container">
@@ -151,6 +181,9 @@ function App() {
           <button className={`tab ${activeTab === 'upload' ? 'active' : ''}`} onClick={() => setActiveTab('upload')}>
             <FiUpload /> Upload Data
           </button>
+          <button className={`tab ${activeTab === 'quality' ? 'active' : ''}`} onClick={() => setActiveTab('quality')} disabled={data.length === 0}>
+            <FiCheckCircle /> Data Quality
+          </button>
           <button className={`tab ${activeTab === 'missing' ? 'active' : ''}`} onClick={() => setActiveTab('missing')} disabled={data.length === 0}>
             <FiSearch /> Missing Values
           </button>
@@ -168,11 +201,14 @@ function App() {
           </button>
         </div>
 
+        {data.length > 0 && <PipelineManager operations={operations} onLoadPipeline={loadPipeline} />}
+
         {activeTab === 'upload' && <UploadTab onFileUpload={handleFileUpload} onLoadSample={loadSampleData} loading={loading} />}
-        {activeTab === 'missing' && <EnhancedMissingValuesTab data={data} setData={setData} originalData={originalData} columns={columns} />}
-        {activeTab === 'scaling' && <ScalingTab data={data} setData={setData} originalData={originalData} columns={columns} />}
-        {activeTab === 'encoding' && <EncodingTab data={data} setData={setData} originalData={originalData} columns={columns} />}
-        {activeTab === 'engineering' && <EngineeringTab data={data} setData={setData} columns={columns} setColumns={setColumns} />}
+        {activeTab === 'quality' && <QualityTab data={data} columns={columns} setActiveTab={setActiveTab} />}
+        {activeTab === 'missing' && <EnhancedMissingValuesTab data={data} setData={setData} originalData={originalData} columns={columns} addOperation={addOperation} />}
+        {activeTab === 'scaling' && <ScalingTab data={data} setData={setData} originalData={originalData} columns={columns} addOperation={addOperation} />}
+        {activeTab === 'encoding' && <EncodingTab data={data} setData={setData} originalData={originalData} columns={columns} addOperation={addOperation} />}
+        {activeTab === 'engineering' && <EngineeringTab data={data} setData={setData} columns={columns} setColumns={setColumns} addOperation={addOperation} />}
         {activeTab === 'analysis' && <AnalysisTab data={data} columns={columns} />}
       </div>
     </div>
@@ -222,6 +258,63 @@ function UploadTab({ onFileUpload, onLoadSample, loading }) {
           <li><strong>Feature Engineering:</strong> Create new features from existing ones</li>
           <li><strong>Data Analysis:</strong> Visualize correlations and distributions</li>
         </ul>
+      </div>
+    </div>
+  );
+}
+
+// Quality Tab Component - NEW!
+function QualityTab({ data, columns, setActiveTab }) {
+  return (
+    <div className="content-grid">
+      <div className="panel">
+        <DataQualityReport data={data} columns={columns} />
+      </div>
+      
+      <div className="panel">
+        <div className="quick-actions">
+          <h3><FiZap style={{ marginRight: '8px' }} />Quick Actions</h3>
+          <div className="action-grid">
+            <div className="action-card" onClick={() => setActiveTab('missing')}>
+              <FiSearch />
+              <h4>Handle Missing Values</h4>
+            </div>
+            <div className="action-card" onClick={() => setActiveTab('scaling')}>
+              <FiBarChart2 />
+              <h4>Scale Features</h4>
+            </div>
+            <div className="action-card" onClick={() => setActiveTab('encoding')}>
+              <FiCode />
+              <h4>Encode Categories</h4>
+            </div>
+            <div className="action-card" onClick={() => setActiveTab('engineering')}>
+              <FiSettings />
+              <h4>Engineer Features</h4>
+            </div>
+          </div>
+        </div>
+        
+        <div className="info-box" style={{ marginTop: '20px' }}>
+          <h4>Production-Ready Data Cleaning</h4>
+          <p><strong>This tool is designed for real-world data preprocessing:</strong></p>
+          <ul style={{ marginLeft: '20px', lineHeight: '1.8' }}>
+            <li>✅ Upload your CSV files (up to 5MB)</li>
+            <li>✅ Get instant data quality assessment</li>
+            <li>✅ Apply professional preprocessing techniques</li>
+            <li>✅ Export cleaned data as CSV</li>
+            <li>✅ Download Python/R code to reproduce your pipeline</li>
+            <li>✅ Save and load preprocessing configurations</li>
+          </ul>
+          
+          <p style={{ marginTop: '15px' }}><strong>Best Practices:</strong></p>
+          <ul style={{ marginLeft: '20px', lineHeight: '1.8' }}>
+            <li>Always backup your original data</li>
+            <li>Review the quality report before preprocessing</li>
+            <li>Test on a small sample first</li>
+            <li>Export your pipeline for reproducibility</li>
+            <li>Validate results before using in production</li>
+          </ul>
+        </div>
       </div>
     </div>
   );
@@ -288,14 +381,8 @@ function AnalysisTab({ data, columns }) {
   );
 }
 
-// Missing Values Tab Component (keeping original for now, will be replaced by Enhanced version)
-function MissingValuesTab({ data, setData, originalData, columns }) {
-  // Use the enhanced version
-  return <EnhancedMissingValuesTab data={data} setData={setData} originalData={originalData} columns={columns} />;
-}
-
 // Scaling Tab Component
-function ScalingTab({ data, setData, originalData, columns }) {
+function ScalingTab({ data, setData, originalData, columns, addOperation }) {
   const [selectedColumns, setSelectedColumns] = useState([]);
   const [scalingMethod, setScalingMethod] = useState('standardization');
 
@@ -331,6 +418,16 @@ function ScalingTab({ data, setData, originalData, columns }) {
     });
 
     setData(newData);
+    
+    // Track operation for pipeline
+    if (addOperation) {
+      addOperation({
+        type: 'scaling',
+        description: `Applied ${scalingMethod} to columns: ${selectedColumns.join(', ')}`,
+        columns: selectedColumns,
+        method: scalingMethod
+      });
+    }
   };
 
   const resetData = () => {
@@ -507,7 +604,7 @@ function ScalingTab({ data, setData, originalData, columns }) {
 }
 
 // Encoding Tab Component
-function EncodingTab({ data, setData, originalData, columns }) {
+function EncodingTab({ data, setData, originalData, columns, addOperation }) {
   const [selectedColumn, setSelectedColumn] = useState('');
   const [encodingMethod, setEncodingMethod] = useState('label');
 
@@ -539,6 +636,17 @@ function EncodingTab({ data, setData, originalData, columns }) {
     }
 
     setData(newData);
+    
+    // Track operation for pipeline
+    if (addOperation) {
+      addOperation({
+        type: 'encoding',
+        description: `Applied ${encodingMethod} encoding to '${selectedColumn}'`,
+        column: selectedColumn,
+        method: encodingMethod,
+        categories: uniqueValues
+      });
+    }
   };
 
   const resetData = () => {
@@ -642,7 +750,7 @@ function EncodingTab({ data, setData, originalData, columns }) {
 }
 
 // Feature Engineering Tab Component
-function EngineeringTab({ data, setData, columns, setColumns }) {
+function EngineeringTab({ data, setData, columns, setColumns, addOperation }) {
   const [col1, setCol1] = useState('');
   const [col2, setCol2] = useState('');
   const [operation, setOperation] = useState('add');
@@ -689,6 +797,19 @@ function EngineeringTab({ data, setData, columns, setColumns }) {
     if (!columns.includes(newFeatureName)) {
       setColumns([...columns, newFeatureName]);
     }
+    
+    // Track operation for pipeline
+    if (addOperation) {
+      addOperation({
+        type: 'feature_engineering',
+        description: `Created feature '${newFeatureName}' = ${col1} ${operation} ${col2}`,
+        col1: col1,
+        col2: col2,
+        operation: operation,
+        newFeature: newFeatureName
+      });
+    }
+    
     setNewFeatureName('');
   };
 

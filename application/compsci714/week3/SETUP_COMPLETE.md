@@ -10,7 +10,7 @@ Successfully created an interactive web application for UoA COMPSCI 714 Week 3 -
 - **React Application**: Full-featured data preprocessing studio
 - **Location**: `application/compsci714/week3/data-preprocessing-studio/`
 - **Theme**: University of Auckland blue (#00467F)
-- **Title**: UoA COMPSCI 714 - Data Preprocessing Studio
+- **Title**: COMPSCI 714, 761, 762 - Data Preprocessing Studio
 
 ### Features Implemented
 

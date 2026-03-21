@@ -3,7 +3,7 @@
 ## Completed Successfully
 
 ### Application Created
-- **Name**: UoA COMPSCI 714 - Data Preprocessing Studio
+- **Name**: COMPSCI 714, 761, 762 - Data Preprocessing Studio
 - **Location**: `application/compsci714/week3/data-preprocessing-studio/`
 - **Theme**: University of Auckland Blue (#00467F)
 - **Status**: Ready for deployment

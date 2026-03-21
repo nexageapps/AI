@@ -3,11 +3,13 @@ import './App.css';
 import Papa from 'papaparse';
 import { EnhancedMissingValuesTab } from './components/EnhancedMissingValuesTab';
 import { DistributionChart, ComparisonChart, CorrelationMatrix } from './components/DataVisualization';
+import { PipelineManager } from './components/PipelineManager';
+import { DataQualityReport } from './components/DataQualityReport';
 import { validateDataQuality, exportToCSV } from './utils/dataProcessing';
 import { 
   FiUpload, FiSearch, FiBarChart2, FiCode, FiSettings, 
   FiPieChart, FiCheckCircle, FiAlertTriangle, FiFile,
-  FiDatabase, FiCheck, FiTarget, FiTrendingUp
+  FiDatabase, FiCheck, FiTarget, FiTrendingUp, FiZap
 } from 'react-icons/fi';
 import { MdOutlineScience } from 'react-icons/md';
 
@@ -19,7 +21,8 @@ function App() {
   const [dataQuality, setDataQuality] = useState(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
-  const [history, setHistory] = useState([]);
+  const [operations, setOperations] = useState([]);
+  const [showQuickActions, setShowQuickActions] = useState(true);
 
   // Validate data quality whenever data changes
   useEffect(() => {
@@ -28,6 +31,19 @@ function App() {
       setDataQuality(quality);
     }
   }, [data]);
+
+  // Track operations for pipeline
+  const addOperation = (operation) => {
+    setOperations(prev => [...prev, {
+      ...operation,
+      timestamp: new Date().toISOString()
+    }]);
+  };
+
+  const loadPipeline = (pipelineOperations) => {
+    setOperations(pipelineOperations);
+    // TODO: Apply operations to data
+  };
 
   // Sample dataset with more realistic data
   const loadSampleData = () => {
@@ -55,9 +71,14 @@ function App() {
     setData(sampleData);
     setOriginalData(JSON.parse(JSON.stringify(sampleData)));
     setColumns(Object.keys(sampleData[0]));
-    setHistory([{ action: 'Loaded sample data', timestamp: new Date() }]);
-    setActiveTab('missing');
+    setOperations([{ 
+      type: 'upload', 
+      description: 'Loaded sample data',
+      details: { rows: sampleData.length, columns: Object.keys(sampleData[0]).length }
+    }]);
+    setActiveTab('quality');
     setLoading(false);
+    setShowQuickActions(true);
   };
 
   // File upload handler with validation
@@ -106,9 +127,14 @@ function App() {
         setData(filteredData);
         setOriginalData(JSON.parse(JSON.stringify(filteredData)));
         setColumns(Object.keys(filteredData[0]));
-        setHistory([{ action: `Loaded ${file.name}`, timestamp: new Date() }]);
-        setActiveTab('missing');
+        setOperations([{ 
+          type: 'upload', 
+          description: `Loaded ${file.name}`,
+          details: { filename: file.name, rows: filteredData.length, columns: Object.keys(filteredData[0]).length }
+        }]);
+        setActiveTab('quality');
         setLoading(false);
+        setShowQuickActions(true);
       },
       error: (error) => {
         setError(`Failed to parse CSV: ${error.message}`);
@@ -120,7 +146,7 @@ function App() {
   return (
     <div className="app">
       <div className="header">
-        <h1><MdOutlineScience className="header-icon" /> UoA COMPSCI 714 - Data Preprocessing Studio</h1>
+        <h1><MdOutlineScience className="header-icon" /> COMPSCI 714, 761, 762 - Data Preprocessing Studio</h1>
         <p>Week 3: Interactive Data Preprocessing and Feature Engineering</p>
         {dataQuality && (
           <div className="data-quality-badge">
@@ -151,6 +177,9 @@ function App() {
           <button className={`tab ${activeTab === 'upload' ? 'active' : ''}`} onClick={() => setActiveTab('upload')}>
             <FiUpload /> Upload Data
           </button>
+          <button className={`tab ${activeTab === 'quality' ? 'active' : ''}`} onClick={() => setActiveTab('quality')} disabled={data.length === 0}>
+            <FiCheckCircle /> Data Quality
+          </button>
           <button className={`tab ${activeTab === 'missing' ? 'active' : ''}`} onClick={() => setActiveTab('missing')} disabled={data.length === 0}>
             <FiSearch /> Missing Values
           </button>
@@ -168,11 +197,14 @@ function App() {
           </button>
         </div>
 
+        {data.length > 0 && <PipelineManager operations={operations} onLoadPipeline={loadPipeline} />}
+
         {activeTab === 'upload' && <UploadTab onFileUpload={handleFileUpload} onLoadSample={loadSampleData} loading={loading} />}
-        {activeTab === 'missing' && <EnhancedMissingValuesTab data={data} setData={setData} originalData={originalData} columns={columns} />}
-        {activeTab === 'scaling' && <ScalingTab data={data} setData={setData} originalData={originalData} columns={columns} />}
-        {activeTab === 'encoding' && <EncodingTab data={data} setData={setData} originalData={originalData} columns={columns} />}
-        {activeTab === 'engineering' && <EngineeringTab data={data} setData={setData} columns={columns} setColumns={setColumns} />}
+        {activeTab === 'quality' && <QualityTab data={data} columns={columns} />}
+        {activeTab === 'missing' && <EnhancedMissingValuesTab data={data} setData={setData} originalData={originalData} columns={columns} addOperation={addOperation} />}
+        {activeTab === 'scaling' && <ScalingTab data={data} setData={setData} originalData={originalData} columns={columns} addOperation={addOperation} />}
+        {activeTab === 'encoding' && <EncodingTab data={data} setData={setData} originalData={originalData} columns={columns} addOperation={addOperation} />}
+        {activeTab === 'engineering' && <EngineeringTab data={data} setData={setData} columns={columns} setColumns={setColumns} addOperation={addOperation} />}
         {activeTab === 'analysis' && <AnalysisTab data={data} columns={columns} />}
       </div>
     </div>

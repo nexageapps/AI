@@ -1,20 +1,20 @@
-# COMPSCI 714 - Week 3: Data Preprocessing & Feature Engineering
+# UoA COMPSCI 714 - Week 3: Data Preprocessing & Feature Engineering
 
-## 📚 Overview
+## Overview
 
 This week focuses on **data preprocessing and feature engineering** - the foundation of successful machine learning projects. As the saying goes: *"80% of data science is data preparation, 20% is complaining about data preparation."*
 
-## 🎯 Learning Objectives
+## Learning Objectives
 
 By the end of this week, you will:
-- ✅ Handle missing values effectively using various imputation strategies
-- ✅ Master feature scaling techniques (standardization and normalization)
-- ✅ Encode categorical variables for machine learning models
-- ✅ Perform feature selection to reduce dimensionality
-- ✅ Create new features through feature engineering
-- ✅ Build complete preprocessing pipelines
+- Handle missing values effectively using various imputation strategies
+- Master feature scaling techniques (standardization and normalization)
+- Encode categorical variables for machine learning models
+- Perform feature selection to reduce dimensionality
+- Create new features through feature engineering
+- Build complete preprocessing pipelines
 
-## 📖 Related Notebook
+## Related Notebook
 
 **Basic/B06 - Data Preprocessing and Feature Engineering.ipynb**
 
@@ -26,7 +26,7 @@ This notebook covers:
 5. Feature Engineering (Polynomial, Binning, Domain-specific)
 6. Complete Preprocessing Pipelines
 
-## 🔬 Interactive Application
+## Interactive Application
 
 ### Data Preprocessing Studio
 
@@ -38,7 +38,7 @@ A hands-on web application to practice and visualize preprocessing techniques.
 
 ### Features
 
-#### 1. Missing Values Tab 🔍
+#### 1. Missing Values Tab
 - Visualize missing data statistics
 - Apply imputation strategies:
   - **Mean**: Best for normally distributed data
@@ -47,7 +47,7 @@ A hands-on web application to practice and visualize preprocessing techniques.
   - **Zero Fill**: When zero is meaningful
 - See real-time impact on dataset
 
-#### 2. Feature Scaling Tab 📊
+#### 2. Feature Scaling Tab
 - **Standardization (Z-score)**:
   - Formula: `z = (x - μ) / σ`
   - Result: mean = 0, std = 1
@@ -58,7 +58,7 @@ A hands-on web application to practice and visualize preprocessing techniques.
   - Result: range [0, 1]
   - Use: Bounded features, distance-based algorithms
 
-#### 3. Categorical Encoding Tab 🏷️
+#### 3. Categorical Encoding Tab
 - **Label Encoding**:
   - Converts categories to integers (0, 1, 2...)
   - Use for: Ordinal data (small, medium, large)
@@ -69,7 +69,7 @@ A hands-on web application to practice and visualize preprocessing techniques.
   - Use for: Nominal data (colors, countries)
   - Warning: Increases dimensionality
 
-#### 4. Feature Engineering Tab ⚙️
+#### 4. Feature Engineering Tab
 - Create new features by combining existing ones
 - Operations: Add, Subtract, Multiply, Divide, Ratio
 - Examples:
@@ -77,7 +77,7 @@ A hands-on web application to practice and visualize preprocessing techniques.
   - `total_rooms = bedrooms + bathrooms`
   - `price_per_sqft = price / area`
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Quick Start (3 Steps)
 
@@ -92,7 +92,7 @@ npm install
 npm start
 ```
 
-Visit `http://localhost:3000` 🎉
+Visit `http://localhost:3000`
 
 ### Using the Application
 
@@ -102,7 +102,7 @@ Visit `http://localhost:3000` 🎉
 4. **Observe Results**: See changes in real-time
 5. **Reset Anytime**: Experiment freely with reset button
 
-## 📊 Sample Dataset
+## Sample Dataset
 
 The built-in dataset simulates employee data:
 
@@ -114,15 +114,15 @@ The built-in dataset simulates employee data:
 | department | Categorical | IT, HR, Finance | Yes (~10%) |
 | performance | Numerical | Performance score (85-95) | No |
 
-## 🎓 Key Concepts
+## Key Concepts
 
 ### Why Preprocessing Matters
 
 Real-world data is messy:
-- ❌ Missing values
-- ❌ Different scales (age: 0-100, salary: 0-1,000,000)
-- ❌ Categorical data (colors, countries)
-- ❌ Outliers and noise
+- Missing values
+- Different scales (age: 0-100, salary: 0-1,000,000)
+- Categorical data (colors, countries)
+- Outliers and noise
 
 Good preprocessing can improve model performance more than fancy algorithms!
 
@@ -136,13 +136,13 @@ Good preprocessing can improve model performance more than fancy algorithms!
 
 ### Common Mistakes to Avoid
 
-- ❌ Normalizing test data with test statistics (use training stats!)
-- ❌ Applying data augmentation to test set
-- ❌ Not handling missing data before training
-- ❌ Using label encoding for nominal data
-- ❌ Forgetting to scale features for neural networks
+- Normalizing test data with test statistics (use training stats!)
+- Applying data augmentation to test set
+- Not handling missing data before training
+- Using label encoding for nominal data
+- Forgetting to scale features for neural networks
 
-## 📚 Educational Resources
+## Educational Resources
 
 ### Documentation
 - [Scikit-learn Preprocessing](https://scikit-learn.org/stable/modules/preprocessing.html)
@@ -159,7 +159,7 @@ Good preprocessing can improve model performance more than fancy algorithms!
 - `DEPLOYMENT_GUIDE.md` - Detailed deployment instructions
 - `README.md` - This file
 
-## 🎯 Learning Path
+## Learning Path
 
 ### Beginner
 1. Load sample data
@@ -179,7 +179,7 @@ Good preprocessing can improve model performance more than fancy algorithms!
 3. Document your decisions
 4. Validate improvements on a model
 
-## 🔧 Technical Details
+## Technical Details
 
 ### Tech Stack
 - **React 18**: Modern UI framework
@@ -198,7 +198,7 @@ Good preprocessing can improve model performance more than fancy algorithms!
 - Load time: <2s on average connection
 - All processing is client-side (no server needed)
 
-## 🚀 Deployment
+## Deployment
 
 ### GitHub Pages (Automatic)
 
@@ -210,7 +210,7 @@ The application is configured for automatic deployment:
 
 See `DEPLOYMENT_GUIDE.md` for details.
 
-## 🎨 Customization
+## Customization
 
 ### Add Your Own Dataset
 Modify `loadSampleData()` in `src/App.js`:
@@ -231,7 +231,7 @@ Edit `src/App.css` to customize colors, layout, and components.
 ### Add New Features
 The modular structure makes it easy to add new preprocessing techniques.
 
-## 📈 Assessment Ideas
+## Assessment Ideas
 
 ### For Students
 1. **Lab Exercise**: Preprocess a given dataset and document decisions
@@ -245,17 +245,17 @@ The modular structure makes it easy to add new preprocessing techniques.
 3. Discuss trade-offs between different techniques
 4. Assign preprocessing challenges
 
-## 🎯 Learning Outcomes
+## Learning Outcomes
 
 After completing this week, students can:
-- ✅ Identify and handle missing data appropriately
-- ✅ Choose correct scaling method for different scenarios
-- ✅ Encode categorical variables correctly
-- ✅ Create meaningful engineered features
-- ✅ Build reproducible preprocessing pipelines
-- ✅ Explain preprocessing decisions and trade-offs
+- Identify and handle missing data appropriately
+- Choose correct scaling method for different scenarios
+- Encode categorical variables correctly
+- Create meaningful engineered features
+- Build reproducible preprocessing pipelines
+- Explain preprocessing decisions and trade-offs
 
-## 🔗 Related Topics
+## Related Topics
 
 ### Previous Weeks
 - Week 1: Introduction to ML
@@ -270,7 +270,7 @@ After completing this week, students can:
 - **B08**: Regularization and Overfitting
 - **I02**: Advanced Regularization Techniques
 
-## 🤝 Contributing
+## Contributing
 
 Improvements welcome:
 - Add new preprocessing techniques
@@ -278,17 +278,18 @@ Improvements welcome:
 - Improve documentation
 - Add more sample datasets
 
-## 📝 License
+## License
 
 MIT License - Free for educational use
 
-## 🎉 Have Fun Learning!
+## Have Fun Learning!
 
-Remember: Good preprocessing is the foundation of successful ML projects. Master these techniques and you'll be ahead of 80% of the work! 🚀
+Remember: Good preprocessing is the foundation of successful ML projects. Master these techniques and you'll be ahead of 80% of the work!
 
 ---
 
 **COMPSCI 714 - Week 3**  
 **Topic**: Data Preprocessing and Feature Engineering  
 **Related Notebook**: Basic/B06  
-**Application**: Data Preprocessing Studio
+**Application**: Data Preprocessing Studio  
+**University of Auckland**

@@ -50,27 +50,27 @@
 }
 
 .tab:hover {
-  color: #667eea;
+  color: #00467F;
 }
 
 .tab.active {
-  color: #667eea;
-  border-bottom-color: #667eea;
+  color: #00467F;
+  border-bottom-color: #00467F;
 }
 
 .upload-section {
   text-align: center;
   padding: 40px;
-  border: 3px dashed #667eea;
+  border: 3px dashed #00467F;
   border-radius: 15px;
   margin-bottom: 30px;
-  background: #f8f9ff;
+  background: #f0f7ff;
   transition: all 0.3s;
 }
 
 .upload-section:hover {
-  background: #f0f2ff;
-  border-color: #764ba2;
+  background: #e6f2ff;
+  border-color: #003366;
 }
 
 .upload-section input[type="file"] {
@@ -79,7 +79,7 @@
 
 .upload-button {
   padding: 15px 40px;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #00467F 0%, #003366 100%);
   color: white;
   border: none;
   border-radius: 10px;
@@ -90,15 +90,15 @@
 
 .upload-button:hover {
   transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+  box-shadow: 0 5px 15px rgba(0, 70, 127, 0.4);
 }
 
 .sample-data-button {
   margin-left: 15px;
   padding: 15px 40px;
   background: white;
-  color: #667eea;
-  border: 2px solid #667eea;
+  color: #00467F;
+  border: 2px solid #00467F;
   border-radius: 10px;
   font-size: 1.1rem;
   cursor: pointer;
@@ -106,7 +106,7 @@
 }
 
 .sample-data-button:hover {
-  background: #667eea;
+  background: #00467F;
   color: white;
 }
 
@@ -157,7 +157,7 @@
 }
 
 .data-table th {
-  background: #667eea;
+  background: #00467F;
   color: white;
   position: sticky;
   top: 0;
@@ -165,7 +165,7 @@
 }
 
 .data-table tr:hover {
-  background: #f0f2ff;
+  background: #f0f7ff;
 }
 
 .controls {
@@ -182,7 +182,7 @@
 }
 
 .control-group h4 {
-  color: #667eea;
+  color: #00467F;
   margin-bottom: 15px;
   font-size: 1.1rem;
 }
@@ -207,13 +207,13 @@
 .control-group select:focus,
 .control-group input:focus {
   outline: none;
-  border-color: #667eea;
+  border-color: #00467F;
 }
 
 .action-button {
   width: 100%;
   padding: 12px;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #00467F 0%, #003366 100%);
   color: white;
   border: none;
   border-radius: 8px;
@@ -225,7 +225,7 @@
 
 .action-button:hover {
   transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+  box-shadow: 0 5px 15px rgba(0, 70, 127, 0.4);
 }
 
 .action-button:disabled {
@@ -245,7 +245,7 @@
   background: white;
   padding: 20px;
   border-radius: 10px;
-  border-left: 4px solid #667eea;
+  border-left: 4px solid #00467F;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 

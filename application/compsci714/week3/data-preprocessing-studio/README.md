@@ -1,4 +1,6 @@
-# Data Preprocessing Studio
+# UoA COMPSCI 714 - Data Preprocessing Studio
+
+**Week 3: Data Preprocessing and Feature Engineering**
 
 An interactive web application to learn and apply data preprocessing and feature engineering techniques - concepts from **Basic Lesson B06**.
 
@@ -164,4 +166,4 @@ MIT License - feel free to use for educational purposes
 
 ---
 
-**Part of the AI Learning Repository** - COMPSCI 714 Week 3
+**Part of the AI Learning Repository** - UoA COMPSCI 714 Week 3

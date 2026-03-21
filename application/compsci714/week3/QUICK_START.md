@@ -1,10 +1,10 @@
-# ⚡ Quick Start Guide - Data Preprocessing Studio
+# Quick Start Guide - Data Preprocessing Studio
 
-## 🎯 What is This?
+## What is This?
 
 An interactive web app that teaches **data preprocessing and feature engineering** concepts from Basic Lesson B06. Upload data, apply transformations, and see results instantly!
 
-## 🚀 Run Locally (3 Steps)
+## Run Locally (3 Steps)
 
 ```bash
 # 1. Navigate to the app
@@ -17,13 +17,13 @@ npm install
 npm start
 ```
 
-Opens at: `http://localhost:3000` 🎉
+Opens at: `http://localhost:3000`
 
-## 🌐 View Online
+## View Online
 
 **Live Demo**: https://nexageapps.github.io/AI/compsci714/week3/data-preprocessing-studio
 
-## 📖 How to Use
+## How to Use
 
 ### Step 1: Load Data
 - Click **"Use Sample Data"** for a quick start
@@ -31,27 +31,27 @@ Opens at: `http://localhost:3000` 🎉
 
 ### Step 2: Explore Tabs
 
-#### 🔍 Missing Values
+#### Missing Values
 - See which columns have missing data
 - Choose imputation strategy (mean, median, mode, zero)
 - Apply and see results
 
-#### 📊 Feature Scaling
+#### Feature Scaling
 - Select numerical columns
 - Choose standardization or normalization
 - Compare before/after values
 
-#### 🏷️ Encoding
+#### Encoding
 - Select categorical columns
 - Apply label or one-hot encoding
 - See new encoded columns
 
-#### ⚙️ Feature Engineering
+#### Feature Engineering
 - Pick two columns
 - Choose operation (+, -, ×, ÷)
 - Create new feature with custom name
 
-## 💡 Example Workflow
+## Example Workflow
 
 ```
 1. Load sample data (employee dataset)
@@ -61,7 +61,7 @@ Opens at: `http://localhost:3000` 🎉
 5. Go to Engineering → Create 'salary_per_year' = salary ÷ experience
 ```
 
-## 🎓 Learning Concepts
+## Learning Concepts
 
 | Tab | Concept | Formula | Use Case |
 |-----|---------|---------|----------|
@@ -72,7 +72,7 @@ Opens at: `http://localhost:3000` 🎉
 | Encoding | One-Hot | Categories → Binary columns | Nominal data |
 | Engineering | Operations | Combine features | Domain knowledge |
 
-## 📊 Sample Dataset
+## Sample Dataset
 
 Built-in dataset includes:
 - **age**: 25-45 years (some missing)
@@ -81,15 +81,15 @@ Built-in dataset includes:
 - **department**: IT, HR, Finance (some missing)
 - **performance**: 85-95 scores
 
-## 🎯 Key Features
+## Key Features
 
-✅ **No coding required** - Visual interface  
-✅ **Real-time results** - See changes instantly  
-✅ **Educational** - Learn by doing  
-✅ **Safe** - All processing in browser  
-✅ **Reset anytime** - Experiment freely  
+- **No coding required** - Visual interface  
+- **Real-time results** - See changes instantly  
+- **Educational** - Learn by doing  
+- **Safe** - All processing in browser  
+- **Reset anytime** - Experiment freely  
 
-## 🔧 Troubleshooting
+## Troubleshooting
 
 ### App won't start?
 ```bash
@@ -106,7 +106,7 @@ npm install
 - Check file is valid CSV format
 - Try the sample data first
 
-## 📚 Related Lesson
+## Related Lesson
 
 This app demonstrates concepts from:
 **Basic/B06 - Data Preprocessing and Feature Engineering.ipynb**
@@ -118,24 +118,7 @@ Topics covered:
 4. Feature selection (Section 4)
 5. Feature engineering (Section 5)
 
-## 🎨 Screenshots
-
-### Upload Screen
-Clean interface to load your data or use samples
-
-### Missing Values Tab
-See statistics and apply imputation strategies
-
-### Scaling Tab
-Compare original vs scaled data side-by-side
-
-### Encoding Tab
-Transform categorical data to numerical
-
-### Engineering Tab
-Create new features from existing ones
-
-## 🚀 Deploy Your Own
+## Deploy Your Own
 
 ```bash
 # Build for production
@@ -148,21 +131,21 @@ git commit -m "Deploy preprocessing studio"
 git push origin main
 ```
 
-## 💻 Tech Stack
+## Tech Stack
 
 - **React 18** - UI framework
 - **PapaParse** - CSV parsing
 - **Recharts** - Visualizations
 - **CSS3** - Styling
 
-## 🎯 Perfect For
+## Perfect For
 
-- 📚 **Students** learning data preprocessing
-- 👨‍🏫 **Teachers** demonstrating concepts
-- 🔬 **Researchers** exploring data quickly
-- 💼 **Professionals** prototyping pipelines
+- **Students** learning data preprocessing
+- **Teachers** demonstrating concepts
+- **Researchers** exploring data quickly
+- **Professionals** prototyping pipelines
 
-## 📝 Tips
+## Tips
 
 1. **Start with sample data** to understand features
 2. **Reset often** to try different strategies
@@ -170,16 +153,16 @@ git push origin main
 4. **Read info boxes** for best practices
 5. **Experiment freely** - it's all client-side!
 
-## 🤝 Need Help?
+## Need Help?
 
 - Check the full README.md for detailed docs
 - Review DEPLOYMENT_GUIDE.md for setup issues
 - Refer to B06 notebook for theory
 
-## 🎉 Have Fun Learning!
+## Have Fun Learning!
 
-Data preprocessing is 80% of data science - master it here! 🚀
+Data preprocessing is 80% of data science - master it here!
 
 ---
 
-**COMPSCI 714 - Week 3** | Data Preprocessing & Feature Engineering
+**COMPSCI 714 - Week 3** | Data Preprocessing & Feature Engineering | University of Auckland

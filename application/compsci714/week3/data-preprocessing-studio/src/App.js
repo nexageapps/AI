@@ -49,8 +49,8 @@ function App() {
   return (
     <div className="app">
       <div className="header">
-        <h1>Data Preprocessing Studio</h1>
-        <p>Interactive tool to learn and apply data preprocessing techniques</p>
+        <h1>UoA COMPSCI 714 - Data Preprocessing Studio</h1>
+        <p>Week 3: Interactive Data Preprocessing and Feature Engineering</p>
       </div>
 
       <div className="container">

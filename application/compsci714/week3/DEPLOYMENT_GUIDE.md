@@ -1,6 +1,6 @@
-# 🚀 Data Preprocessing Studio - Deployment Guide
+# Data Preprocessing Studio - Deployment Guide
 
-## 📋 Quick Start
+## Quick Start
 
 ### Local Development
 
@@ -17,7 +17,7 @@ npm start
 
 Visit `http://localhost:3000` to see the app running locally.
 
-## 🌐 GitHub Pages Deployment
+## GitHub Pages Deployment
 
 ### Automatic Deployment (Recommended)
 
@@ -56,7 +56,7 @@ npm install --save-dev gh-pages
 npm run deploy
 ```
 
-## 🔧 Configuration
+## Configuration
 
 ### GitHub Repository Settings
 
@@ -70,7 +70,7 @@ The build uses:
 - `PUBLIC_URL`: `/AI/compsci714/week3/data-preprocessing-studio`
 - `CI`: `false` (to avoid treating warnings as errors)
 
-## 📦 Build Output
+## Build Output
 
 The production build creates:
 - Optimized JavaScript bundles
@@ -78,7 +78,7 @@ The production build creates:
 - Static HTML files
 - All assets in the `build/` directory
 
-## 🎯 Features Included
+## Features Included
 
 ### 1. Data Upload
 - CSV file parsing with PapaParse
@@ -108,7 +108,7 @@ The production build creates:
 - Custom feature naming
 - Real-time preview
 
-## 🎨 Customization
+## Customization
 
 ### Styling
 Edit `src/App.css` to customize:
@@ -133,7 +133,7 @@ function NewFeatureTab({ data, setData, columns }) {
 }
 ```
 
-## 📊 Data Format
+## Data Format
 
 ### CSV Requirements
 - First row should contain column headers
@@ -150,7 +150,7 @@ age,salary,experience,department,performance
 35,,7,Finance,92
 ```
 
-## 🐛 Troubleshooting
+## Troubleshooting
 
 ### Build Fails
 ```bash
@@ -174,7 +174,7 @@ node --version
 npm install -g npm@latest
 ```
 
-## 📚 Educational Integration
+## Educational Integration
 
 ### Link to B06 Notebook
 The app demonstrates concepts from:
@@ -195,27 +195,27 @@ The app demonstrates concepts from:
 - Create meaningful engineered features
 - Document preprocessing pipeline decisions
 
-## 🔗 Related Resources
+## Related Resources
 
 - [React Documentation](https://react.dev/)
 - [PapaParse Docs](https://www.papaparse.com/)
 - [Recharts Examples](https://recharts.org/)
 - [GitHub Pages Guide](https://docs.github.com/en/pages)
 
-## 📈 Performance
+## Performance
 
 - **Bundle Size**: ~500KB (optimized)
 - **Load Time**: <2s on average connection
 - **Browser Support**: Modern browsers (Chrome, Firefox, Safari, Edge)
 
-## 🔐 Security
+## Security
 
 - No data is sent to servers (all processing is client-side)
 - CSV files are parsed locally in the browser
 - No external API calls
 - Safe for sensitive educational data
 
-## 🎓 Learning Outcomes
+## Learning Outcomes
 
 After using this application, students will:
 1. Understand different missing value strategies
@@ -224,19 +224,19 @@ After using this application, students will:
 4. Create meaningful engineered features
 5. Appreciate the importance of data preprocessing
 
-## 🚀 Future Enhancements
+## Future Enhancements
 
 Potential additions:
-- [ ] Data visualization charts (histograms, scatter plots)
-- [ ] Export processed data as CSV
-- [ ] Undo/redo functionality
-- [ ] Preprocessing pipeline builder
-- [ ] Correlation matrix visualization
-- [ ] Outlier detection and handling
-- [ ] Feature importance analysis
-- [ ] Batch processing multiple files
+- Data visualization charts (histograms, scatter plots)
+- Export processed data as CSV
+- Undo/redo functionality
+- Preprocessing pipeline builder
+- Correlation matrix visualization
+- Outlier detection and handling
+- Feature importance analysis
+- Batch processing multiple files
 
-## 📝 Maintenance
+## Maintenance
 
 ### Update Dependencies
 ```bash
@@ -251,5 +251,5 @@ npm audit fix
 
 ---
 
-**Created for COMPSCI 714 - Week 3**  
+**Created for UoA COMPSCI 714 - Week 3**  
 **Topic**: Data Preprocessing and Feature Engineering (B06)

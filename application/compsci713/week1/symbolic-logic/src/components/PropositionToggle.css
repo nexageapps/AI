@@ -1,0 +1,124 @@
+.prop-toggle-row {
+  border-radius: 12px;
+  transition: all 0.3s;
+  overflow: hidden;
+}
+
+.prop-toggle-row.is-true {
+  background: linear-gradient(135deg, #dcfce7 0%, #bbf7d0 100%);
+  border: 2px solid #22c55e;
+}
+
+.prop-toggle-row.is-false {
+  background: linear-gradient(135deg, #fee2e2 0%, #fecaca 100%);
+  border: 2px solid #ef4444;
+}
+
+.prop-toggle-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  text-align: left;
+  transition: transform 0.15s;
+}
+
+.prop-toggle-btn:hover {
+  transform: scale(1.01);
+}
+
+.prop-toggle-btn:active {
+  transform: scale(0.98);
+}
+
+.prop-emoji {
+  font-size: 1.6rem;
+  flex-shrink: 0;
+}
+
+.prop-icon {
+  font-size: 1.4rem;
+  flex-shrink: 0;
+  color: #00467F;
+}
+
+.prop-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.prop-letter {
+  font-weight: 800;
+  font-size: 1rem;
+  color: #1f2937;
+  font-family: 'Georgia', serif;
+}
+
+.prop-meaning {
+  font-size: 0.75rem;
+  color: #6b7280;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Toggle switch */
+.toggle-switch {
+  flex-shrink: 0;
+}
+
+.toggle-track {
+  width: 44px;
+  height: 24px;
+  border-radius: 12px;
+  position: relative;
+  transition: background 0.3s;
+}
+
+.toggle-track.on {
+  background: #22c55e;
+}
+
+.toggle-track.off {
+  background: #d1d5db;
+}
+
+.toggle-thumb {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: white;
+  position: absolute;
+  top: 2px;
+  transition: left 0.3s;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+
+.toggle-track.on .toggle-thumb {
+  left: 22px;
+}
+
+.toggle-track.off .toggle-thumb {
+  left: 2px;
+}
+
+.prop-state-text {
+  font-weight: 700;
+  font-size: 0.8rem;
+  min-width: 65px;
+  text-align: right;
+}
+
+.is-true .prop-state-text {
+  color: #16a34a;
+}
+
+.is-false .prop-state-text {
+  color: #dc2626;
+}

@@ -2,85 +2,28 @@
 
 Interactive visualization of the Wumpus World problem from COMPSCI 713 Week 2: Symbolic Logic.
 
-[![React](https://img.shields.io/badge/React-18.2.0-blue.svg)](https://reactjs.org/)
-[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+**🔗 Related Resources:**
+- [Symbolic Logic Explorer](https://nexageapps.github.io/AI/symbolic-logic/) — Learn the propositional and first-order logic that powers the Wumpus agent
+- [B01 - Symbolic Logic Fundamentals](../../../Basic/B01%20-%20Symbolic%20Logic%20Fundamentals.ipynb) — Notebook covering logic theory
 
 ## Overview
 
-This React application provides an interactive visualization of the classic Wumpus World AI problem, featuring:
-- Intelligent agent with directional movement
-- Wumpus (monster to avoid)
-- Pits (deadly hazards)
-- Gold (treasure to collect)
-- Stench and Breeze (perceptions)
-- Fog of war exploration
-- Real-time score tracking
+This React application visualizes a 4x4 grid representing the Wumpus World environment with:
+- Agent starting position
+- Wumpus (monster)
+- Pits (hazards)
+- Gold (treasure)
+- Perceptions (stench, breeze)
 
-## Quick Start
-
-### Installation
+## Setup
 
 ```bash
 cd application/compsci713/week2/wumpus
 npm install
-```
-
-### Development
-
-```bash
 npm start
 ```
 
 The application will open at `http://localhost:3000`
-
-### Build for Production
-
-```bash
-npm run build
-```
-
-This creates an optimized production build in the `build/` folder.
-
-### Deploy to GitHub Pages
-
-```bash
-npm run deploy
-```
-
-## Live Demo
-
-**Play Online**: https://nexageapps.github.io/AI/wumpus
-
-*Part of COMPSCI 713 (Symbolic Logic) - University of Auckland, Master of AI*
-
-## Symbolic Logic & Knowledge Representation
-
-This implementation demonstrates key concepts from COMPSCI 713 (University of Auckland, Master of AI):
-
-### Propositional Logic Formulas
-
-The agent uses logical inference to reason about the world:
-
-**Perception Rules:**
-- `Breeze(x,y) ⟹ ∃adjacent(x',y'). Pit(x',y')` - Breeze indicates adjacent pit
-- `Stench(x,y) ⟹ ∃adjacent(x',y'). Wumpus(x',y')` - Stench indicates adjacent Wumpus
-
-**Safety Inference:**
-- `¬Breeze(x,y) ⟹ ∀adjacent(x',y'). ¬Pit(x',y')` - No breeze means no adjacent pits
-- `¬Stench(x,y) ⟹ ∀adjacent(x',y'). ¬Wumpus(x',y')` - No stench means no adjacent Wumpus
-
-**Knowledge Base:**
-- Agent maintains KB of visited cells and their perceptions
-- Uses forward/backward chaining for safe move inference
-- Implements modus ponens: `(P ⟹ Q) ∧ P ⊢ Q`
-
-### First-Order Logic (FOL)
-
-```
-∀x,y. Pit(x,y) ⟹ Breeze(x-1,y) ∧ Breeze(x+1,y) ∧ Breeze(x,y-1) ∧ Breeze(x,y+1)
-∀x,y. Wumpus(x,y) ⟹ Stench(x-1,y) ∧ Stench(x+1,y) ∧ Stench(x,y-1) ∧ Stench(x,y+1)
-∀x,y. Safe(x,y) ⟺ ¬Pit(x,y) ∧ ¬Wumpus(x,y)
-```
 
 ## Grid Layout
 

@@ -69,7 +69,8 @@ graph LR
     end
     
     subgraph "Repository Lessons"
-        B01["B01<br/>Arithmetic<br/>(Tensors, Matrix Ops)"]
+        B01["B01<br/>Symbolic Logic<br/>(Propositional Logic)"]
+        B01a["B01a<br/>Arithmetic<br/>(Tensors, Matrix Ops)"]
         B02["B02<br/>Linear Regression<br/>(Gradient Descent)"]
         B03["B03<br/>Binary Classification<br/>(Perceptron Intro)"]
         B05a["B05a<br/>Neural Networks Theory<br/>(COMPSCI 714)"]
@@ -77,7 +78,7 @@ graph LR
         I01["I01<br/>Advanced<br/>Optimization"]
     end
     
-    L2 -.->|"Artificial Neuron<br/>Linear Algebra"| B01
+    L2 -.->|"Artificial Neuron<br/>Linear Algebra"| B01a
     L2 -.->|"Gradient Descent<br/>Basics"| B02
     L2 -.->|"Perceptron<br/>(1958)"| B03
     L2 ==>|"Complete<br/>Coverage"| B05a
@@ -87,7 +88,7 @@ graph LR
     L3 ==>|"Backpropagation<br/>All GD Variants"| B05
     L3 -.->|"Advanced<br/>Optimizers"| I01
     
-    B01 --> B02 --> B03 --> B05a --> B05
+    B01 --> B01a --> B02 --> B03 --> B05a --> B05
     
     style L2 fill:#FFE5B4,stroke:#D4A574,stroke-width:3px,color:#000
     style L3 fill:#FFE5B4,stroke:#D4A574,stroke-width:3px,color:#000
@@ -119,7 +120,19 @@ graph LR
 ### Foundation Stage (B01-B03) - Start Here
 **Duration:** 3-4 hours | **Goal:** Master the basics
 
-1. **B01 - Arithmetic** - TensorFlow basics and tensor operations
+1. **B01 - Symbolic Logic Fundamentals** - Propositional logic and First-Order Logic for AI
+   - Propositions and logical connectives (¬, ∧, ∨, →, ↔)
+   - Truth tables and logical equivalences
+   - Inference rules (Modus Ponens, Modus Tollens)
+   - First-Order Logic: predicates, quantifiers (∀, ∃), free/bound variables
+   - Satisfaction relation, models, and FOL equivalences
+   - Kinship domain: defining Mother, Grandparent, Sibling from Parent
+   - Connection to neural networks (perceptrons as logic gates)
+   - **Why it matters:** Foundation for knowledge representation, reasoning, and AI agents
+   - 🔗 [Interactive App: Symbolic Logic Explorer](https://nexageapps.github.io/AI/symbolic-logic/)
+   - 🔗 [Wumpus World: FOL in Action](https://nexageapps.github.io/AI/wumpus/)
+
+1a. **B01a - Arithmetic** - TensorFlow basics and tensor operations
    - Tensor creation and manipulation
    - Basic operations (add, multiply, reshape)
    - Understanding computational graphs
@@ -249,7 +262,7 @@ Choose the path that matches your goals:
 
 ```mermaid
 graph TD
-    A["Start<br/>B01 Arithmetic"] --> B["B02<br/>Linear Regression"]
+    A["Start<br/>B01 Symbolic Logic"] --> B["B02<br/>Linear Regression"]
     B --> C["B03<br/>Binary Classification"]
     C --> D{"Choose Your Path"}
     D -->|"Complete Path"| E["B04 Multi-Class"]
@@ -288,7 +301,7 @@ graph TD
 **Timeline:** 8-12 weeks (5-7 hours/week)
 
 ```
-Week 1-2:   B01 → B02 → B03 (Foundation)
+Week 1-2:   B01 → B01a → B02 → B03 (Foundation)
 Week 3-4:   B04 → B05 (Core ML)
 Week 5-6:   B06 → B07 (Data & Evaluation)
 Week 7-8:   B09 → B10 (Deep Learning)
@@ -325,7 +338,7 @@ graph LR
 ```
 
 ```
-Week 1:     B01 → B02 → B03 (Quick foundation)
+Week 1:     B01 → B01a → B02 → B03 (Quick foundation)
 Week 2:     B04 → B05 (Neural networks)
 Week 3:     B06 → B07 (Data handling)
 Week 4-5:   B10 → B11 (RNNs & Transformers)
@@ -357,7 +370,7 @@ graph LR
 ```
 
 ```
-Week 1:     B01 → B02 → B03 (Quick foundation)
+Week 1:     B01 → B01a → B02 → B03 (Quick foundation)
 Week 2:     B04 → B05 (Neural networks)
 Week 3:     B06 → B07 (Data handling)
 Week 4-5:   B09 (CNNs - deep dive)
@@ -648,7 +661,7 @@ graph TD
     B -->|"Conceptual"| E["Re-read Explanations<br/>Watch Videos<br/>Discuss with Peers"]
     B -->|"Motivation"| F["Join Study Group<br/>Adjust Pace<br/>Take Breaks"]
     
-    D -->|"Shape Error"| G["Check Tensor Dimensions<br/>Use print statements<br/>Review B01"]
+    D -->|"Shape Error"| G["Check Tensor Dimensions<br/>Use print statements<br/>Review B01a"]
     D -->|"Loss Not Decreasing"| H["Check Learning Rate<br/>Verify Data Preprocessing<br/>Review B02"]
     D -->|"Overfitting"| I["Add Regularization<br/>More Data<br/>Review B07"]
     D -->|"Other"| J["Read Error Message<br/>Search Online<br/>Ask ChatGPT"]
@@ -675,7 +688,7 @@ graph TD
 
 ### Challenge 2: "I don't know where to start"
 **Solution:**
-- Follow the sequential order: B01 → B02 → ... → B15
+- Follow the sequential order: B01 → B01a → B02 → ... → B15
 - Don't skip fundamentals (B01-B04)
 - Each lesson builds on previous ones
 - Use the learning paths above
@@ -746,7 +759,8 @@ graph LR
 ```
 
 ### Checklist: Foundation Stage
-- [ ] B01: Understand tensors and basic operations
+- [ ] B01: Understand propositions, connectives, and truth tables
+- [ ] B01a: Understand tensors and basic operations
 - [ ] B02: Implement linear regression from scratch
 - [ ] B03: Build a binary classifier
 - [ ] Can explain gradient descent to someone else

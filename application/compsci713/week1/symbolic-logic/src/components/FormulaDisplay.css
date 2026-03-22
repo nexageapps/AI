@@ -1,0 +1,73 @@
+.formula-display {
+  background: linear-gradient(135deg, #eef5ff 0%, #dbeafe 100%);
+  border: 2px solid #00467F;
+  border-radius: 14px;
+  padding: 14px 18px;
+  margin-bottom: 14px;
+  text-align: center;
+}
+
+.formula-main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.formula-label {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: #6b7280;
+  font-weight: 700;
+}
+
+.formula-text {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #00467F;
+  font-family: 'Georgia', serif;
+  letter-spacing: 3px;
+}
+
+.formula-equiv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 1px dashed #93c5fd;
+}
+
+.equiv-symbol {
+  font-size: 1.2rem;
+  color: #6b7280;
+}
+
+.equiv-text {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #374151;
+  font-family: 'Georgia', serif;
+  letter-spacing: 2px;
+}
+
+.equiv-badge {
+  font-size: 0.65rem;
+  background: #22c55e;
+  color: white;
+  padding: 2px 8px;
+  border-radius: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+@media (max-width: 600px) {
+  .formula-text {
+    font-size: 1.4rem;
+  }
+  .equiv-text {
+    font-size: 1.1rem;
+  }
+}

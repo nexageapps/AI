@@ -1,0 +1,219 @@
+.expression-builder {
+  background: #f8f9fa;
+  border-radius: 10px;
+  padding: 14px;
+  border: 1px solid #dee2e6;
+  margin-bottom: 16px;
+}
+
+.builder-section {
+  margin-bottom: 14px;
+}
+
+.builder-section:last-child {
+  margin-bottom: 0;
+}
+
+.builder-section h3 {
+  color: #00467F;
+  font-size: 0.85rem;
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+
+.prop-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 8px;
+}
+
+.prop-chip {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: #e6f2ff;
+  border: 1px solid #00467F;
+  border-radius: 16px;
+  padding: 4px 12px;
+  font-size: 0.8rem;
+  color: #00467F;
+  font-weight: 600;
+}
+
+.remove-btn {
+  background: none;
+  border: none;
+  color: #dc3545;
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 0 2px;
+  font-weight: 700;
+}
+
+.add-prop-form {
+  display: flex;
+  gap: 6px;
+}
+
+.prop-input {
+  width: 60px;
+  padding: 6px 8px;
+  border: 1px solid #dee2e6;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+}
+
+.meaning-input {
+  flex: 1;
+  padding: 6px 8px;
+  border: 1px solid #dee2e6;
+  border-radius: 6px;
+  font-size: 0.85rem;
+}
+
+.add-btn {
+  padding: 6px 14px;
+  background: #00467F;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.add-btn:hover {
+  background: #003366;
+}
+
+.current-expr {
+  background: #f0f4ff;
+  border: 2px solid #00467F;
+  border-radius: 8px;
+  padding: 8px 12px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.expr-label {
+  color: #6c757d;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.expr-formula {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #00467F;
+  font-family: 'Georgia', serif;
+}
+
+.builder-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.control-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.control-group label {
+  color: #495057;
+  font-size: 0.8rem;
+  font-weight: 600;
+  min-width: 60px;
+}
+
+.op-buttons {
+  display: flex;
+  gap: 4px;
+}
+
+.op-btn {
+  width: 40px;
+  height: 36px;
+  border: 2px solid #dee2e6;
+  background: white;
+  border-radius: 6px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  color: #495057;
+  font-weight: 700;
+}
+
+.op-btn:hover {
+  border-color: #00467F;
+  color: #00467F;
+}
+
+.op-btn.active {
+  background: #00467F;
+  color: white;
+  border-color: #00467F;
+}
+
+.operand-selectors {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.prop-select-buttons {
+  display: flex;
+  gap: 4px;
+}
+
+.prop-select-btn {
+  padding: 4px 12px;
+  border: 2px solid #dee2e6;
+  background: white;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-family: 'Georgia', serif;
+}
+
+.prop-select-btn:hover {
+  border-color: #00467F;
+}
+
+.prop-select-btn.active {
+  background: #00467F;
+  color: white;
+  border-color: #00467F;
+}
+
+.compose-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.compose-btn {
+  padding: 4px 10px;
+  border: 1px solid #dee2e6;
+  background: #e9ecef;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  color: #495057;
+}
+
+.compose-btn:hover {
+  background: #00467F;
+  color: white;
+  border-color: #00467F;
+}

@@ -27,6 +27,7 @@ jobs:
       nn-trainer: ${{ steps.filter.outputs.nn-trainer }}
       kg-playground: ${{ steps.filter.outputs.kg-playground }}
       model-eval: ${{ steps.filter.outputs.model-eval }}
+      symbolic-logic: ${{ steps.filter.outputs.symbolic-logic }}
       index:      ${{ steps.filter.outputs.index }}
     steps:
       - uses: actions/checkout@v4
@@ -44,6 +45,8 @@ jobs:
               - 'application/compsci713/week3/kg-playground/**'
             model-eval:
               - 'application/compsci713/week3/model-evaluation-dashboard/**'
+            symbolic-logic:
+              - 'application/compsci713/week1/symbolic-logic/**'
             index:
               - 'index.html'
 
@@ -162,16 +165,40 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Prepare stlite static files
+      - name: Prepare static files
         run: |
           mkdir -p deploy-model-eval
           cp application/compsci713/week3/model-evaluation-dashboard/index.html deploy-model-eval/
-          cp application/compsci713/week3/model-evaluation-dashboard/app.py deploy-model-eval/
+          cp application/compsci713/week3/model-evaluation-dashboard/app.js deploy-model-eval/
       - uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./deploy-model-eval
           destination_dir: compsci713/week3/model-evaluation
+          keep_files: true
+          user_name: 'github-actions[bot]'
+          user_email: 'github-actions[bot]@users.noreply.github.com'
+
+  deploy-symbolic-logic:
+    needs: [detect-changes, deploy-model-eval]
+    if: always() && !cancelled() && !failure() && (needs.detect-changes.outputs.symbolic-logic == 'true' || github.event_name == 'workflow_dispatch')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+          cache-dependency-path: application/compsci713/week1/symbolic-logic/package-lock.json
+      - run: npm ci
+        working-directory: application/compsci713/week1/symbolic-logic
+      - run: npm run build
+        working-directory: application/compsci713/week1/symbolic-logic
+      - uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./application/compsci713/week1/symbolic-logic/build
+          destination_dir: symbolic-logic
           keep_files: true
           user_name: 'github-actions[bot]'
           user_email: 'github-actions[bot]@users.noreply.github.com'

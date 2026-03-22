@@ -1,4 +1,8 @@
 import React, { useState } from 'react';
+import { Icon } from '../iconMap';
+import { FaTrophy, FaThumbsUp, FaBook, FaFistRaised, FaRedo,
+  FaCheckCircle, FaTimesCircle } from 'react-icons/fa';
+import { GiPartyPopper } from 'react-icons/gi';
 import './QuizPanel.css';
 
 function QuizPanel({ questions }) {
@@ -42,11 +46,11 @@ function QuizPanel({ questions }) {
 
   if (finished) {
     const pct = Math.round((score / questions.length) * 100);
-    const emoji = pct >= 80 ? '🏆' : pct >= 60 ? '👍' : pct >= 40 ? '📚' : '💪';
+    const ResultIcon = pct >= 80 ? FaTrophy : pct >= 60 ? FaThumbsUp : pct >= 40 ? FaBook : FaFistRaised;
     return (
       <div className="quiz-panel">
         <div className="quiz-result">
-          <span className="result-big-emoji">{emoji}</span>
+          <span className="result-big-icon"><ResultIcon /></span>
           <h2 className="result-title">
             {pct >= 80 ? 'Amazing!' : pct >= 60 ? 'Good job!' : pct >= 40 ? 'Keep learning!' : 'Don\'t give up!'}
           </h2>
@@ -54,7 +58,7 @@ function QuizPanel({ questions }) {
           <div className="result-bar-bg">
             <div className="result-bar-fill" style={{ width: `${pct}%` }} />
           </div>
-          <button className="quiz-restart-btn" onClick={handleRestart}>🔄 Try Again</button>
+          <button className="quiz-restart-btn" onClick={handleRestart}><FaRedo style={{ marginRight: 6 }} /> Try Again</button>
         </div>
       </div>
     );
@@ -73,11 +77,11 @@ function QuizPanel({ questions }) {
       <div className="quiz-card">
         <div className="quiz-difficulty">
           <span className={`diff-badge ${q.difficulty}`}>
-            {q.difficulty === 'beginner' ? '🟢 Easy' : q.difficulty === 'intermediate' ? '🟡 Medium' : '🔴 Hard'}
+            {q.difficulty === 'beginner' ? <><span className="diff-dot green" /> Easy</> : q.difficulty === 'intermediate' ? <><span className="diff-dot yellow" /> Medium</> : <><span className="diff-dot red" /> Hard</>}
           </span>
         </div>
         <div className="quiz-question">
-          <span className="q-emoji">{q.emoji}</span>
+          <Icon emoji={q.emoji} className="q-icon" size="1.8rem" />
           <p className="q-text">{q.question}</p>
         </div>
 
@@ -100,14 +104,14 @@ function QuizPanel({ questions }) {
 
         {showAnswer && (
           <div className={`quiz-explanation ${q.options[selected]?.correct ? 'is-correct' : 'is-wrong'}`}>
-            <span className="explain-icon">{q.options[selected]?.correct ? '✅' : '❌'}</span>
+            <span className="explain-icon">{q.options[selected]?.correct ? <FaCheckCircle /> : <FaTimesCircle />}</span>
             <p>{q.explanation}</p>
           </div>
         )}
 
         {showAnswer && (
           <button className="quiz-next-btn" onClick={handleNext}>
-            {currentQ < questions.length - 1 ? 'Next Question →' : 'See Results 🎉'}
+            {currentQ < questions.length - 1 ? 'Next Question →' : <>See Results <GiPartyPopper style={{ marginLeft: 4 }} /></>}
           </button>
         )}
       </div>

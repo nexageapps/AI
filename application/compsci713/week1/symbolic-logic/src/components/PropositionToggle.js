@@ -1,4 +1,5 @@
 import React from 'react';
+import { Icon } from '../iconMap';
 import './PropositionToggle.css';
 
 function PropositionToggle({ prop, value, onToggle }) {
@@ -10,7 +11,7 @@ function PropositionToggle({ prop, value, onToggle }) {
         aria-label={`Toggle ${prop.name}: ${prop.meaning}`}
         aria-pressed={value}
       >
-        <span className="prop-emoji">{prop.emoji}</span>
+        <Icon emoji={prop.emoji} className="prop-icon" size="1.4rem" />
         <div className="prop-info">
           <span className="prop-letter">{prop.name}</span>
           <span className="prop-meaning">{prop.meaning}</span>

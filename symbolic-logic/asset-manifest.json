@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/AI/symbolic-logic/static/css/main.1830a6ec.css",
-    "main.js": "/AI/symbolic-logic/static/js/main.0700d831.js",
+    "main.css": "/AI/symbolic-logic/static/css/main.6b8e5a58.css",
+    "main.js": "/AI/symbolic-logic/static/js/main.d52b1960.js",
     "index.html": "/AI/symbolic-logic/index.html",
-    "main.1830a6ec.css.map": "/AI/symbolic-logic/static/css/main.1830a6ec.css.map",
-    "main.0700d831.js.map": "/AI/symbolic-logic/static/js/main.0700d831.js.map"
+    "main.6b8e5a58.css.map": "/AI/symbolic-logic/static/css/main.6b8e5a58.css.map",
+    "main.d52b1960.js.map": "/AI/symbolic-logic/static/js/main.d52b1960.js.map"
   },
   "entrypoints": [
-    "static/css/main.1830a6ec.css",
-    "static/js/main.0700d831.js"
+    "static/css/main.6b8e5a58.css",
+    "static/js/main.d52b1960.js"
   ]
 }

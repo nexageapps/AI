@@ -110,6 +110,53 @@
   overflow-y: auto;
 }
 
+.learn-body-scroll {
+  flex: 1;
+  overflow-y: auto;
+  padding-right: 4px;
+}
+
+.lesson-sections {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.lesson-section {
+  background: white;
+  border-radius: 10px;
+  padding: 14px 16px;
+  border: 1px solid #e2e8f0;
+}
+
+.lesson-section-heading {
+  color: #00467F;
+  font-size: 0.92rem;
+  font-weight: 700;
+  margin: 0 0 8px 0;
+}
+
+.lesson-section-body {
+  white-space: pre-wrap;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  font-size: 0.85rem;
+  line-height: 1.7;
+  color: #374151;
+  margin: 0;
+}
+
+.lesson-section-list {
+  margin: 0;
+  padding-left: 20px;
+  font-size: 0.85rem;
+  line-height: 1.8;
+  color: #374151;
+}
+
+.lesson-section-list li {
+  margin-bottom: 4px;
+}
+
 .learn-nav-arrows {
   display: flex;
   justify-content: space-between;

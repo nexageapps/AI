@@ -21,18 +21,6 @@ function ExpressionBuilder({ propositions, setPropositions, expression, setExpre
     }
   };
 
-  const buildExpression = (op, left, right) => {
-    if (op === 'NOT') {
-      setExpression({ type: 'not', operand: left || expression });
-    } else {
-      setExpression({
-        type: 'op', op,
-        left: left || { type: 'prop', name: propositions[0]?.name || 'P' },
-        right: right || { type: 'prop', name: propositions[1]?.name || 'Q' },
-      });
-    }
-  };
-
   const setLeftProp = (name) => {
     if (expression.type === 'op') {
       setExpression({ ...expression, left: { type: 'prop', name } });

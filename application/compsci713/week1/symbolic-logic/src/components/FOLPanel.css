@@ -39,7 +39,50 @@
 /* Kinship */
 .kinship-intro { margin-bottom: 12px; }
 .kinship-intro h3 { color: #00467F; font-size: 1.1rem; }
-.kinship-intro p { color: #6b7280; font-size: 0.85rem; margin-top: 4px; }
+.kinship-intro p { color: #6b7280; font-size: 0.85rem; margin-top: 4px; line-height: 1.5; }
+
+.fol-intro-banner {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 12px 16px;
+  background: linear-gradient(135deg, #eef5ff 0%, #dbeafe 100%);
+  border: 1px solid #93c5fd;
+  border-radius: 10px;
+  font-size: 0.85rem;
+  color: #1e40af;
+  line-height: 1.5;
+}
+
+.fol-intro-banner p { margin: 0; }
+
+.fol-intro-icon {
+  flex-shrink: 0;
+  font-size: 1.1rem;
+  margin-top: 2px;
+}
+
+.queries-hint {
+  font-size: 0.75rem;
+  color: #9ca3af;
+  margin-bottom: 6px;
+  font-style: italic;
+}
+
+.query-kid-explain {
+  font-size: 0.76rem;
+  color: #4b5563;
+  display: block;
+  margin-top: 2px;
+  line-height: 1.4;
+}
+
+.var-plain {
+  font-size: 0.8rem;
+  color: #6b7280;
+  margin: 0 0 8px 0;
+  font-style: italic;
+}
 
 .kinship-layout { display: flex; gap: 16px; }
 

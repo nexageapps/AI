@@ -299,3 +299,77 @@ function FOLPanel() {
           </div>
         </div>
       )}
+
+      {activeSection === 'variables' && (
+        <div className="variables-section">
+          <div className="var-intro">
+            <h3><FaKey style={{ marginRight: 6 }} /> Free vs Bound Variables</h3>
+            <p>Think of quantifiers (∀ and ∃) as "bosses" for variables. A <span className="bound-tag">BOUND</span> variable has a boss telling it what to do. A <span className="free-tag">FREE</span> variable is on its own — we don't know what it refers to! Only formulas where ALL variables have a boss (a <span className="sentence-tag">SENTENCE</span>) can be true or false.</p>
+          </div>
+          <div className="var-examples">
+            {VARIABLE_EXAMPLES.map((ex, i) => (
+              <div
+                key={i}
+                className={`var-card ${selectedExample === i ? 'selected' : ''}`}
+                onClick={() => setSelectedExample(i)}
+              >
+                <div className="var-formula">{ex.formula}</div>
+                <p className="var-plain">{ex.plain}</p>
+                <div className="var-tags">
+                  {ex.variables.map((v, j) => (
+                    <span key={j} className={`var-tag ${v.bound ? 'bound' : 'free'}`}>
+                      {v.name}: {v.bound ? `Bound by ${v.by}` : 'Free (no boss!)'}
+                    </span>
+                  ))}
+                </div>
+                <div className={`var-sentence-badge ${ex.isSentence ? 'yes' : 'no'}`}>
+                  {ex.isSentence ? <><FaCheckCircle style={{ marginRight: 4 }} /> Sentence — can be TRUE or FALSE</> : <><FaTimesCircle style={{ marginRight: 4 }} /> Not a sentence — has free variables</>}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {activeSection === 'equivalence' && (
+        <div className="equiv-section">
+          <div className="equiv-intro">
+            <h3><FaExchangeAlt style={{ marginRight: 6 }} /> FOL Rewrite Rules</h3>
+            <p>Just like in basic logic, some FOL sentences can be rewritten in different ways that mean the exact same thing. But be careful — some rewrites look similar but change the meaning!</p>
+          </div>
+          <div className="equiv-cards">
+            {[
+              { left: '¬∀x P(x)', right: '∃x ¬P(x)', name: 'NOT all = SOME are not',
+                example: '"Not all students passed the test" means the same as "At least one student failed."', iconKey: '🔀' },
+              { left: '¬∃x P(x)', right: '∀x ¬P(x)', name: 'NONE = ALL are not',
+                example: '"No dog can fly" means the same as "Every dog can\'t fly."', iconKey: '🔀' },
+              { left: '∀x (P(x) ∧ Q(x))', right: '(∀x P(x)) ∧ (∀x Q(x))', name: 'ALL with AND — safe to split',
+                example: '"All cats are furry AND cute" = "All cats are furry" AND "All cats are cute." You can split AND apart!', iconKey: '📦' },
+              { left: '∃x (P(x) ∨ Q(x))', right: '(∃x P(x)) ∨ (∃x Q(x))', name: 'SOME with OR — safe to split',
+                example: '"Some animal is a cat or a dog" = "Some animal is a cat" OR "Some animal is a dog."', iconKey: '📦' },
+              { left: '∀x ∀y P(x,y)', right: '∀y ∀x P(x,y)', name: 'Same quantifiers — order doesn\'t matter',
+                example: 'When both quantifiers are the same type (both ∀ or both ∃), you can swap their order freely.', iconKey: '🔃' },
+              { left: '∀x ∃y P(x,y)', right: '∃y ∀x P(x,y)', name: 'DANGER: Different quantifiers — order MATTERS!',
+                example: '"Everyone loves someone" (each person loves a different someone) is NOT the same as "There\'s one person everyone loves" (one specific person).', iconKey: '⚠️', notEquiv: true },
+            ].map((eq, i) => (
+              <div key={i} className={`equiv-card ${eq.notEquiv ? 'not-equiv' : ''}`}>
+                <div className="equiv-card-header">
+                  <Icon emoji={eq.iconKey} className="equiv-icon" size="1.1rem" />
+                  <span className="equiv-name">{eq.name}</span>
+                </div>
+                <div className="equiv-formulas">
+                  <span className="equiv-left">{eq.left}</span>
+                  <span className="equiv-symbol">{eq.notEquiv ? '≢' : '≡'}</span>
+                  <span className="equiv-right">{eq.right}</span>
+                </div>
+                <p className="equiv-example">{eq.example}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
+
+export default FOLPanel;

@@ -1,14 +1,14 @@
 import React from 'react';
 import {
   FaSearch, FaBook, FaFlask, FaWrench, FaStar, FaCircle,
-  FaCheck, FaTimes, FaTrophy, FaThumbsUp, FaFistRaised,
+  FaTrophy, FaThumbsUp, FaFistRaised,
   FaRedo, FaCloudRain, FaSun, FaRainbow, FaPizzaSlice,
   FaDog, FaCat, FaBookOpen, FaGamepad, FaLightbulb,
   FaSmile, FaToggleOn, FaGraduationCap, FaHandPointUp,
-  FaLink, FaChartBar, FaBalanceScale, FaBrain, FaMicroscope,
+  FaLink, FaChartBar, FaBalanceScale, FaBrain,
   FaKey, FaExchangeAlt, FaCube, FaSyncAlt, FaExclamationTriangle,
   FaUsers, FaBaby, FaFemale, FaUserFriends, FaQuestionCircle,
-  FaCommentDots, FaCheckCircle, FaTimesCircle, FaArrowRight,
+  FaCommentDots, FaCheckCircle, FaTimesCircle,
 } from 'react-icons/fa';
 import {
   IoSparkles,

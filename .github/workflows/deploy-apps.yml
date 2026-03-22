@@ -28,6 +28,7 @@ jobs:
       kg-playground: ${{ steps.filter.outputs.kg-playground }}
       model-eval: ${{ steps.filter.outputs.model-eval }}
       symbolic-logic: ${{ steps.filter.outputs.symbolic-logic }}
+      neural-network: ${{ steps.filter.outputs.neural-network }}
       index:      ${{ steps.filter.outputs.index }}
     steps:
       - uses: actions/checkout@v4
@@ -47,6 +48,8 @@ jobs:
               - 'application/compsci713/week3/model-evaluation-dashboard/**'
             symbolic-logic:
               - 'application/compsci713/week1/symbolic-logic/**'
+            neural-network:
+              - 'application/compsci713/week2/neural-network/**'
             index:
               - 'index.html'
 
@@ -199,6 +202,30 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./application/compsci713/week1/symbolic-logic/build
           destination_dir: symbolic-logic
+          keep_files: true
+          user_name: 'github-actions[bot]'
+          user_email: 'github-actions[bot]@users.noreply.github.com'
+
+  deploy-neural-network:
+    needs: [detect-changes, deploy-symbolic-logic]
+    if: always() && !cancelled() && !failure() && (needs.detect-changes.outputs.neural-network == 'true' || github.event_name == 'workflow_dispatch')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+          cache-dependency-path: application/compsci713/week2/neural-network/package-lock.json
+      - run: npm ci
+        working-directory: application/compsci713/week2/neural-network
+      - run: npm run build
+        working-directory: application/compsci713/week2/neural-network
+      - uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./application/compsci713/week2/neural-network/build
+          destination_dir: neural-network
           keep_files: true
           user_name: 'github-actions[bot]'
           user_email: 'github-actions[bot]@users.noreply.github.com'

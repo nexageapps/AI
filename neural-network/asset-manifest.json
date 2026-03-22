@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/AI/neural-network/static/css/main.7d1ece9a.css",
+    "main.js": "/AI/neural-network/static/js/main.191a296b.js",
+    "index.html": "/AI/neural-network/index.html",
+    "main.7d1ece9a.css.map": "/AI/neural-network/static/css/main.7d1ece9a.css.map",
+    "main.191a296b.js.map": "/AI/neural-network/static/js/main.191a296b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7d1ece9a.css",
+    "static/js/main.191a296b.js"
+  ]
+}

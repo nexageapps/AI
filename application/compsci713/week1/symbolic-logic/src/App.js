@@ -202,6 +202,13 @@ function App() {
               setExpression={setCustomExpression}
             />
             <div className="build-workspace">
+              <div className="build-header">
+                <FaLightbulb className="build-header-icon" />
+                <div>
+                  <p className="build-header-title">Your Expression</p>
+                  <p className="build-header-hint">Build a formula on the left, then toggle values to see how it evaluates.</p>
+                </div>
+              </div>
               <FormulaDisplay formula={expressionToString(customExpression)} />
               <div className="interactive-area">
                 <div className="toggle-section">

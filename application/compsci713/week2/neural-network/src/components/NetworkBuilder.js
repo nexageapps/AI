@@ -2,7 +2,7 @@ import { useState, useCallback, useRef, useEffect } from 'react';
 import { ACTIVATIONS } from '../neuralNet';
 import {
   FaPlus, FaMinus, FaPlay, FaRedo, FaLightbulb, FaInfoCircle,
-  FaStepForward, FaCog, FaMousePointer, FaCalculator,
+  FaStepForward, FaCog, FaMousePointer, FaCalculator, FaArrowRight,
 } from 'react-icons/fa';
 import './NetworkBuilder.css';
 

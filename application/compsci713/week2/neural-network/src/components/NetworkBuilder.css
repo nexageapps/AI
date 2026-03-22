@@ -158,6 +158,18 @@
 .hint-title { font-weight: 700; font-size: 0.82rem; color: #00467F; margin: 0; }
 .hint-text { font-size: 0.78rem; color: #4b5563; line-height: 1.4; margin: 2px 0 0 0; }
 
+/* Reference banner */
+.builder-reference {
+  display: flex; align-items: flex-start; gap: 10px;
+  padding: 10px 14px; background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+  border: 1px solid #f59e0b; border-radius: 10px;
+}
+.ref-icon { color: #92400e; font-size: 1rem; flex-shrink: 0; margin-top: 2px; }
+.ref-title { font-weight: 700; font-size: 0.82rem; color: #92400e; margin: 0; }
+.ref-text { font-size: 0.78rem; color: #78350f; line-height: 1.5; margin: 2px 0 0 0; }
+.ref-link { color: #00467F; font-weight: 700; text-decoration: underline; }
+.ref-link:hover { color: #003560; }
+
 @media (max-width: 768px) {
   .network-builder { flex-direction: column; }
   .builder-sidebar { width: 100%; max-height: none; }

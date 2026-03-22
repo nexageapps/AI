@@ -2,6 +2,10 @@
 
 Interactive visualization of the Wumpus World problem from COMPSCI 713 Week 2: Symbolic Logic.
 
+**🔗 Related Resources:**
+- [Symbolic Logic Explorer](https://nexageapps.github.io/AI/symbolic-logic/) — Learn the propositional and first-order logic that powers the Wumpus agent
+- [B01 - Symbolic Logic Fundamentals](../../../Basic/B01%20-%20Symbolic%20Logic%20Fundamentals.ipynb) — Notebook covering logic theory
+
 ## Overview
 
 This React application visualizes a 4x4 grid representing the Wumpus World environment with:

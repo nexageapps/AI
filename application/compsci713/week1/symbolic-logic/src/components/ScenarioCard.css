@@ -1,0 +1,52 @@
+.scenario-card {
+  width: 100%;
+  text-align: left;
+  padding: 10px 12px;
+  border: 2px solid #e5e7eb;
+  border-radius: 10px;
+  background: white;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.scenario-card:hover {
+  border-color: #00467F;
+  transform: translateX(3px);
+  box-shadow: 0 2px 8px rgba(0,70,127,0.15);
+}
+
+.scenario-card.selected {
+  border-color: #00467F;
+  background: #eef5ff;
+  box-shadow: 0 2px 12px rgba(0,70,127,0.2);
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4px;
+}
+
+.card-name {
+  font-weight: 700;
+  font-size: 0.85rem;
+  color: #1f2937;
+}
+
+.card-diff {
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: white;
+  padding: 2px 8px;
+  border-radius: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.card-formula {
+  font-family: 'Georgia', serif;
+  font-size: 0.9rem;
+  color: #00467F;
+  font-weight: 600;
+}

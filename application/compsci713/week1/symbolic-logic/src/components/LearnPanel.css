@@ -1,0 +1,148 @@
+.learn-panel {
+  display: flex;
+  gap: 16px;
+  min-height: 500px;
+}
+
+.learn-sidebar {
+  width: 240px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  overflow-y: auto;
+  max-height: 70vh;
+}
+
+.learn-sidebar-title {
+  color: #00467F;
+  font-size: 0.9rem;
+  margin-bottom: 6px;
+  padding: 0 8px;
+}
+
+.learn-nav-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 10px;
+  border: none;
+  background: transparent;
+  border-radius: 8px;
+  cursor: pointer;
+  text-align: left;
+  transition: all 0.2s;
+  font-size: 0.78rem;
+  color: #4b5563;
+}
+
+.learn-nav-btn:hover {
+  background: #f0f4ff;
+}
+
+.learn-nav-btn.active {
+  background: #00467F;
+  color: white;
+  font-weight: 600;
+}
+
+.learn-nav-emoji {
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+.learn-nav-text {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.learn-content {
+  flex: 1;
+  background: #f8fafc;
+  border-radius: 12px;
+  padding: 20px;
+  border: 1px solid #e2e8f0;
+  display: flex;
+  flex-direction: column;
+}
+
+.learn-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid #00467F;
+}
+
+.learn-emoji {
+  font-size: 1.8rem;
+}
+
+.learn-title {
+  color: #00467F;
+  font-size: 1.2rem;
+}
+
+.learn-body {
+  flex: 1;
+  white-space: pre-wrap;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  font-size: 0.88rem;
+  line-height: 1.7;
+  color: #1f2937;
+  overflow-y: auto;
+}
+
+.learn-nav-arrows {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 16px;
+  padding-top: 12px;
+  border-top: 1px solid #e2e8f0;
+}
+
+.nav-arrow-btn {
+  padding: 8px 18px;
+  border: 2px solid #00467F;
+  background: white;
+  color: #00467F;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.nav-arrow-btn:hover:not(:disabled) {
+  background: #00467F;
+  color: white;
+}
+
+.nav-arrow-btn:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.lesson-counter {
+  color: #6b7280;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .learn-panel {
+    flex-direction: column;
+  }
+  .learn-sidebar {
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-height: none;
+  }
+  .learn-nav-btn {
+    flex: 0 0 auto;
+  }
+}

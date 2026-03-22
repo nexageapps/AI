@@ -203,3 +203,117 @@ function GradientDescentDemo() {
     </div>
   );
 }
+
+/* ─── Mini interactive: Overfitting Slider ─── */
+function OverfitDemo() {
+  const [complexity, setComplexity] = useState(1);
+  const labels = ['Underfitting', 'Good fit', 'Overfitting'];
+  const trainLoss = [0.8, 0.15, 0.01];
+  const valLoss = [0.85, 0.2, 0.9];
+  const idx = complexity;
+
+  return (
+    <div className="interactive-widget">
+      <div className="widget-label"><FaBalanceScale style={{ marginRight: 4 }} /> Try it: Model complexity slider</div>
+      <input type="range" min={0} max={2} value={complexity} onChange={e => setComplexity(+e.target.value)} className="widget-slider" />
+      <div className="overfit-bars">
+        <div className="overfit-bar">
+          <div className="bar-label">Train Loss</div>
+          <div className="bar-track"><div className="bar-fill train" style={{ width: `${trainLoss[idx] * 100}%` }} /></div>
+          <div className="bar-val">{trainLoss[idx].toFixed(2)}</div>
+        </div>
+        <div className="overfit-bar">
+          <div className="bar-label">Val Loss</div>
+          <div className="bar-track"><div className="bar-fill val" style={{ width: `${valLoss[idx] * 100}%` }} /></div>
+          <div className="bar-val">{valLoss[idx].toFixed(2)}</div>
+        </div>
+      </div>
+      <div className={`widget-result overfit-label-${idx}`}>{labels[idx]}</div>
+    </div>
+  );
+}
+
+/* ─── Mini interactive: Dropout Visualiser ─── */
+function DropoutDemo() {
+  const [rate, setRate] = useState(0.3);
+  const [mask, setMask] = useState(Array(12).fill(1));
+
+  const resample = () => {
+    setMask(Array.from({ length: 12 }, () => Math.random() >= rate ? 1 : 0));
+  };
+
+  return (
+    <div className="interactive-widget">
+      <div className="widget-label"><FaShieldAlt style={{ marginRight: 4 }} /> Try it: Dropout visualiser</div>
+      <div className="widget-row">
+        <label className="widget-sm-label">Rate: {(rate * 100).toFixed(0)}%</label>
+        <input type="range" min="0" max="0.8" step="0.1" value={rate} onChange={e => setRate(+e.target.value)} className="widget-slider-sm" />
+      </div>
+      <div className="dropout-grid">
+        {mask.map((v, i) => (
+          <div key={i} className={`dropout-cell ${v ? 'active' : 'dropped'}`}>
+            {v ? <FaCheckCircle /> : <FaTimesCircle />}
+          </div>
+        ))}
+      </div>
+      <button className="widget-btn" onClick={resample}>Resample</button>
+      <div className="widget-result">
+        {mask.filter(v => v).length} of 12 neurons active ({mask.filter(v => !v).length} dropped)
+      </div>
+    </div>
+  );
+}
+
+/* ─── Quiz Component ─── */
+function Quiz({ questions }) {
+  const [answers, setAnswers] = useState({});
+  const [showResults, setShowResults] = useState(false);
+
+  const select = (qi, oi) => {
+    if (showResults) return;
+    setAnswers({ ...answers, [qi]: oi });
+  };
+
+  const score = questions.reduce((s, q, i) => s + (answers[i] === q.correct ? 1 : 0), 0);
+
+  return (
+    <div className="quiz-widget">
+      <div className="quiz-title"><FaCheckCircle style={{ marginRight: 4 }} /> Quick Quiz</div>
+      {questions.map((q, qi) => (
+        <div key={qi} className="quiz-question">
+          <div className="quiz-q-text">{q.question}</div>
+          <div className="quiz-options">
+            {q.options.map((opt, oi) => {
+              let cls = 'quiz-opt';
+              if (answers[qi] === oi) cls += ' selected';
+              if (showResults && oi === q.correct) cls += ' correct';
+              if (showResults && answers[qi] === oi && oi !== q.correct) cls += ' wrong';
+              return (
+                <button key={oi} className={cls} onClick={() => select(qi, oi)}>
+                  {opt}
+                </button>
+              );
+            })}
+          </div>
+          {showResults && answers[qi] !== undefined && answers[qi] !== q.correct && (
+            <div className="quiz-explanation">{q.explanation}</div>
+          )}
+        </div>
+      ))}
+      <div className="quiz-actions">
+        {!showResults ? (
+          <button className="widget-btn" onClick={() => setShowResults(true)} disabled={Object.keys(answers).length < questions.length}>
+            Check Answers
+          </button>
+        ) : (
+          <div className="quiz-score">
+            Score: {score}/{questions.length}
+            <button className="widget-btn" onClick={() => { setAnswers({}); setShowResults(false); }} style={{ marginLeft: 8 }}>
+              Retry
+            </button>
+          </div>
+        )}
+      </div>
+    </div>
+  );
+}

@@ -519,6 +519,20 @@ export default function NetworkBuilder() {
             </p>
           </div>
         </div>
+
+        <div className="builder-reference">
+          <FaArrowRight className="ref-icon" />
+          <div>
+            <p className="ref-title">Want to learn how weights are updated?</p>
+            <p className="ref-text">
+              This builder shows forward propagation — how data flows through the network using current weights.
+              To see the full picture of how weights are <strong>calculated and updated</strong> through
+              backpropagation (loss computation, gradient calculation, weight updates via the chain rule),
+              check out the <a href="../nn-trainer/" className="ref-link">Neural Network Trainer</a> (COMPSCI 714 · Week 2)
+              for a detailed step-by-step walkthrough.
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   );

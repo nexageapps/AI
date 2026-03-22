@@ -1,11 +1,22 @@
-import React, { useState, useCallback, useRef, useEffect } from 'react';
+import { useState, useCallback, useRef, useEffect } from 'react';
 import { ACTIVATIONS } from '../neuralNet';
-import { FaPlus, FaMinus, FaPlay, FaRedo, FaLightbulb, FaInfoCircle } from 'react-icons/fa';
+import {
+  FaPlus, FaMinus, FaPlay, FaRedo, FaLightbulb, FaInfoCircle,
+  FaStepForward, FaCog, FaMousePointer, FaCalculator,
+} from 'react-icons/fa';
 import './NetworkBuilder.css';
 
 const MAX_LAYERS = 5;
 const MAX_NEURONS = 8;
 const MIN_NEURONS = 1;
+
+const PRESETS = [
+  { name: 'Simple Classifier', input: 2, hidden: [4], output: 2, activation: 'relu' },
+  { name: 'Deep Network', input: 3, hidden: [6, 4, 3], output: 2, activation: 'relu' },
+  { name: 'Wide Network', input: 4, hidden: [8, 8], output: 3, activation: 'relu' },
+  { name: 'XOR Solver', input: 2, hidden: [3], output: 1, activation: 'tanh' },
+  { name: 'Autoencoder', input: 6, hidden: [3, 6], output: 6, activation: 'sigmoid' },
+];
 
 function randomWeight() {
   return (Math.random() * 2 - 1) * 0.8;
@@ -45,9 +56,10 @@ function forwardPass(input, weights, activationFn) {
   return activations;
 }
 
-
-function NetworkCanvas({ layers, weights, activations, dropout, dropoutMask }) {
+/* ─── Canvas with hover-to-inspect ─── */
+function NetworkCanvas({ layers, weights, activations, dropout, dropoutMask, animLayer, onHoverNeuron }) {
   const canvasRef = useRef(null);
+  const positionsRef = useRef([]);
 
   const draw = useCallback(() => {
     const canvas = canvasRef.current;
@@ -70,20 +82,32 @@ function NetworkCanvas({ layers, weights, activations, dropout, dropoutMask }) {
         y: PAD_TOP + (drawH / (count + 1)) * (ni + 1),
       }));
     });
+    positionsRef.current = positions;
 
     // connections
     for (let li = 0; li < positions.length - 1; li++) {
+      const isAnimated = animLayer !== null && li < animLayer;
+      const isCurrent = animLayer !== null && li === animLayer - 1;
+      const isFuture = animLayer !== null && li >= animLayer;
+
       for (let ni = 0; ni < positions[li].length; ni++) {
         for (let ni2 = 0; ni2 < positions[li + 1].length; ni2++) {
           const w = weights[li]?.[ni]?.[ni2] ?? 0;
-          const isDropped =
-            dropout > 0 && dropoutMask[li + 1]?.[ni2] === 0 && li + 1 < layers.length - 1;
-          ctx.strokeStyle = isDropped
-            ? '#e5e7eb'
-            : w > 0
-            ? `rgba(37,99,235,${Math.min(Math.abs(w), 1)})`
-            : `rgba(220,38,38,${Math.min(Math.abs(w), 1)})`;
-          ctx.lineWidth = Math.max(0.5, Math.abs(w) * 2.5);
+          const isDropped = dropout > 0 && dropoutMask[li + 1]?.[ni2] === 0 && li + 1 < layers.length - 1;
+
+          if (isFuture && animLayer !== null) {
+            ctx.strokeStyle = '#e5e7eb';
+            ctx.lineWidth = 0.5;
+          } else if (isDropped) {
+            ctx.strokeStyle = '#e5e7eb';
+            ctx.lineWidth = 0.5;
+          } else {
+            const alpha = isCurrent ? 1 : Math.min(Math.abs(w), 1);
+            ctx.strokeStyle = w > 0
+              ? `rgba(37,99,235,${alpha})`
+              : `rgba(220,38,38,${alpha})`;
+            ctx.lineWidth = isCurrent ? Math.max(1.5, Math.abs(w) * 3.5) : Math.max(0.5, Math.abs(w) * 2.5);
+          }
           ctx.beginPath();
           ctx.moveTo(positions[li][ni].x, positions[li][ni].y);
           ctx.lineTo(positions[li + 1][ni2].x, positions[li + 1][ni2].y);
@@ -94,23 +118,25 @@ function NetworkCanvas({ layers, weights, activations, dropout, dropoutMask }) {
 
     // neurons
     for (let li = 0; li < positions.length; li++) {
+      const isFuture = animLayer !== null && li > animLayer;
       for (let ni = 0; ni < positions[li].length; ni++) {
         const { x, y } = positions[li][ni];
         const val = activations?.[li]?.[ni];
-        const isDropped =
-          dropout > 0 && dropoutMask[li]?.[ni] === 0 && li > 0 && li < layers.length - 1;
+        const isDropped = dropout > 0 && dropoutMask[li]?.[ni] === 0 && li > 0 && li < layers.length - 1;
 
         ctx.beginPath();
         ctx.arc(x, y, 14, 0, Math.PI * 2);
-        if (isDropped) {
+        if (isFuture) {
+          ctx.fillStyle = '#f8fafc';
+          ctx.strokeStyle = '#e2e8f0';
+          ctx.setLineDash([]);
+        } else if (isDropped) {
           ctx.fillStyle = '#f1f5f9';
           ctx.strokeStyle = '#cbd5e1';
           ctx.setLineDash([3, 3]);
         } else {
-          ctx.fillStyle =
-            li === 0 ? '#dbeafe' : li === layers.length - 1 ? '#fee2e2' : '#dcfce7';
-          ctx.strokeStyle =
-            li === 0 ? '#3b82f6' : li === layers.length - 1 ? '#ef4444' : '#22c55e';
+          ctx.fillStyle = li === 0 ? '#dbeafe' : li === layers.length - 1 ? '#fee2e2' : '#dcfce7';
+          ctx.strokeStyle = li === 0 ? '#3b82f6' : li === layers.length - 1 ? '#ef4444' : '#22c55e';
           ctx.setLineDash([]);
         }
         ctx.lineWidth = 2;
@@ -118,7 +144,7 @@ function NetworkCanvas({ layers, weights, activations, dropout, dropoutMask }) {
         ctx.stroke();
         ctx.setLineDash([]);
 
-        if (val !== undefined && !isDropped) {
+        if (val !== undefined && !isDropped && !isFuture) {
           ctx.fillStyle = '#1f2937';
           ctx.font = 'bold 9px sans-serif';
           ctx.textAlign = 'center';
@@ -152,49 +178,113 @@ function NetworkCanvas({ layers, weights, activations, dropout, dropoutMask }) {
     positions.forEach((layer, li) => {
       ctx.fillText(`(${layers[li]})`, layer[0].x, 12);
     });
-  }, [layers, weights, activations, dropout, dropoutMask]);
+  }, [layers, weights, activations, dropout, dropoutMask, animLayer]);
 
   useEffect(() => { draw(); }, [draw]);
 
-  return <canvas ref={canvasRef} width={600} height={360} className="network-canvas" />;
+  const handleMouseMove = (e) => {
+    const canvas = canvasRef.current;
+    if (!canvas || !activations) return;
+    const rect = canvas.getBoundingClientRect();
+    const mx = (e.clientX - rect.left) * (canvas.width / rect.width);
+    const my = (e.clientY - rect.top) * (canvas.height / rect.height);
+
+    for (let li = 0; li < positionsRef.current.length; li++) {
+      for (let ni = 0; ni < positionsRef.current[li].length; ni++) {
+        const { x, y } = positionsRef.current[li][ni];
+        if (Math.hypot(mx - x, my - y) < 16) {
+          onHoverNeuron({ layer: li, neuron: ni });
+          canvas.style.cursor = 'pointer';
+          return;
+        }
+      }
+    }
+    onHoverNeuron(null);
+    canvas.style.cursor = 'default';
+  };
+
+  return (
+    <canvas
+      ref={canvasRef}
+      width={600}
+      height={360}
+      className="network-canvas"
+      onMouseMove={handleMouseMove}
+      onMouseLeave={() => onHoverNeuron(null)}
+    />
+  );
 }
 
-
+/* ─── Stats Bar ─── */
 function NetworkStats({ layers, activation, dropout }) {
   const totalParams = layers.reduce((sum, n, i) => {
     if (i === 0) return 0;
-    return sum + layers[i - 1] * n + n; // weights + biases
+    return sum + layers[i - 1] * n + n;
   }, 0);
   const totalNeurons = layers.reduce((a, b) => a + b, 0);
 
   return (
     <div className="network-stats">
-      <div className="stat">
-        <span className="stat-label">Layers</span>
-        <span className="stat-value">{layers.length}</span>
+      <div className="stat"><span className="stat-label">Layers</span><span className="stat-value">{layers.length}</span></div>
+      <div className="stat"><span className="stat-label">Neurons</span><span className="stat-value">{totalNeurons}</span></div>
+      <div className="stat"><span className="stat-label">Parameters</span><span className="stat-value">{totalParams.toLocaleString()}</span></div>
+      <div className="stat"><span className="stat-label">Activation</span><span className="stat-value">{ACTIVATIONS[activation].name}</span></div>
+      {dropout > 0 && <div className="stat"><span className="stat-label">Dropout</span><span className="stat-value">{(dropout * 100).toFixed(0)}%</span></div>}
+    </div>
+  );
+}
+
+/* ─── Neuron Inspector Tooltip ─── */
+function NeuronInspector({ info, layers, activations, weights, activation }) {
+  if (!info || !activations) return null;
+  const { layer, neuron } = info;
+  const val = activations[layer]?.[neuron];
+  const layerLabel = layer === 0 ? 'Input' : layer === layers.length - 1 ? 'Output' : `Hidden ${layer}`;
+
+  // compute incoming weighted sums for non-input neurons
+  let incoming = null;
+  if (layer > 0 && weights[layer - 1]) {
+    incoming = activations[layer - 1].map((prevVal, pi) => ({
+      from: pi,
+      weight: weights[layer - 1][pi]?.[neuron] ?? 0,
+      contribution: prevVal * (weights[layer - 1][pi]?.[neuron] ?? 0),
+    }));
+  }
+
+  return (
+    <div className="neuron-inspector">
+      <div className="inspector-header">
+        <FaMousePointer style={{ marginRight: 4 }} />
+        {layerLabel} — Neuron {neuron + 1}
       </div>
-      <div className="stat">
-        <span className="stat-label">Neurons</span>
-        <span className="stat-value">{totalNeurons}</span>
+      <div className="inspector-val">
+        <FaCalculator style={{ marginRight: 4 }} />
+        Value: {val !== undefined ? val.toFixed(4) : '—'}
       </div>
-      <div className="stat">
-        <span className="stat-label">Parameters</span>
-        <span className="stat-value">{totalParams.toLocaleString()}</span>
-      </div>
-      <div className="stat">
-        <span className="stat-label">Activation</span>
-        <span className="stat-value">{ACTIVATIONS[activation].name}</span>
-      </div>
-      {dropout > 0 && (
-        <div className="stat">
-          <span className="stat-label">Dropout</span>
-          <span className="stat-value">{(dropout * 100).toFixed(0)}%</span>
+      {incoming && (
+        <div className="inspector-breakdown">
+          <div className="inspector-sub">Incoming connections:</div>
+          {incoming.map((c, i) => (
+            <div key={i} className="inspector-row">
+              <span className="insp-from">n{c.from + 1}</span>
+              <span className="insp-w" style={{ color: c.weight >= 0 ? '#2563eb' : '#dc2626' }}>
+                w={c.weight.toFixed(3)}
+              </span>
+              <span className="insp-contrib">
+                {c.contribution >= 0 ? '+' : ''}{c.contribution.toFixed(3)}
+              </span>
+            </div>
+          ))}
+          <div className="inspector-sub" style={{ marginTop: 4 }}>
+            Activation: {ACTIVATIONS[activation].name}
+          </div>
         </div>
       )}
     </div>
   );
 }
 
+/* ─── Main Component ─── */
 export default function NetworkBuilder() {
   const [hiddenLayers, setHiddenLayers] = useState([4, 3]);
   const [inputSize, setInputSize] = useState(3);
@@ -205,6 +295,11 @@ export default function NetworkBuilder() {
   const [weights, setWeights] = useState([]);
   const [dropoutMask, setDropoutMask] = useState([]);
   const [passCount, setPassCount] = useState(0);
+  const [customInputs, setCustomInputs] = useState(null);
+  const [animLayer, setAnimLayer] = useState(null);
+  const [hoveredNeuron, setHoveredNeuron] = useState(null);
+  const [inputMode, setInputMode] = useState('random'); // 'random' | 'custom'
+  const animRef = useRef(null);
 
   const layers = [inputSize, ...hiddenLayers, outputSize];
 
@@ -214,26 +309,61 @@ export default function NetworkBuilder() {
     setActivations(null);
     setDropoutMask(l.map((n) => Array(n).fill(1)));
     setPassCount(0);
+    setAnimLayer(null);
+    setCustomInputs(Array(inputSize).fill(0));
   }, [inputSize, hiddenLayers, outputSize]);
 
   useEffect(() => { resetWeights(); }, [resetWeights]);
 
-  const runForward = () => {
-    const input = Array.from({ length: inputSize }, () => +(Math.random() * 2 - 1).toFixed(2));
+  const doForwardPass = (animated) => {
+    const input = inputMode === 'custom' && customInputs
+      ? customInputs.map(v => +v)
+      : Array.from({ length: inputSize }, () => +(Math.random() * 2 - 1).toFixed(2));
+
+    if (inputMode === 'custom') setCustomInputs(input);
+
     const mask = layers.map((n, li) =>
       Array.from({ length: n }, () =>
         li > 0 && li < layers.length - 1 && Math.random() < dropout ? 0 : 1
       )
     );
     setDropoutMask(mask);
+
     const acts = forwardPass(input, weights, ACTIVATIONS[activation].fn);
     for (let li = 1; li < acts.length - 1; li++) {
       for (let ni = 0; ni < acts[li].length; ni++) {
         if (mask[li][ni] === 0) acts[li][ni] = 0;
       }
     }
-    setActivations(acts);
+
+    if (animated) {
+      // animate layer by layer
+      if (animRef.current) clearInterval(animRef.current);
+      setAnimLayer(0);
+      setActivations(acts);
+      let step = 0;
+      animRef.current = setInterval(() => {
+        step++;
+        if (step > layers.length) {
+          clearInterval(animRef.current);
+          animRef.current = null;
+          setAnimLayer(null);
+        } else {
+          setAnimLayer(step);
+        }
+      }, 400);
+    } else {
+      setAnimLayer(null);
+      setActivations(acts);
+    }
     setPassCount((c) => c + 1);
+  };
+
+  const applyPreset = (preset) => {
+    setInputSize(preset.input);
+    setHiddenLayers([...preset.hidden]);
+    setOutputSize(preset.output);
+    setActivation(preset.activation);
   };
 
   const addLayer = () => {
@@ -247,11 +377,26 @@ export default function NetworkBuilder() {
     next[idx] = Math.max(MIN_NEURONS, Math.min(MAX_NEURONS, next[idx] + delta));
     setHiddenLayers(next);
   };
+  const updateCustomInput = (idx, val) => {
+    const next = [...(customInputs || Array(inputSize).fill(0))];
+    next[idx] = Math.max(-2, Math.min(2, +val || 0));
+    setCustomInputs(next);
+  };
 
   return (
     <div className="network-builder">
       <div className="builder-sidebar">
-        <h3 className="sidebar-title">Network Architecture</h3>
+        <h3 className="sidebar-title"><FaCog style={{ marginRight: 4 }} /> Architecture</h3>
+
+        {/* Presets */}
+        <div className="preset-section">
+          <label className="config-label">Presets</label>
+          <div className="preset-chips">
+            {PRESETS.map((p, i) => (
+              <button key={i} className="preset-chip" onClick={() => applyPreset(p)}>{p.name}</button>
+            ))}
+          </div>
+        </div>
 
         <div className="config-group">
           <label>Input neurons</label>
@@ -274,12 +419,8 @@ export default function NetworkBuilder() {
         ))}
 
         <div className="layer-actions">
-          <button className="small-btn" onClick={addLayer} disabled={hiddenLayers.length >= MAX_LAYERS}>
-            <FaPlus /> Layer
-          </button>
-          <button className="small-btn" onClick={removeLayer} disabled={hiddenLayers.length <= 1}>
-            <FaMinus /> Layer
-          </button>
+          <button className="small-btn" onClick={addLayer} disabled={hiddenLayers.length >= MAX_LAYERS}><FaPlus /> Layer</button>
+          <button className="small-btn" onClick={removeLayer} disabled={hiddenLayers.length <= 1}><FaMinus /> Layer</button>
         </div>
 
         <div className="config-group">
@@ -302,46 +443,80 @@ export default function NetworkBuilder() {
 
         <div className="config-group">
           <label>Dropout: {(dropout * 100).toFixed(0)}%</label>
-          <input
-            type="range" min="0" max="0.5" step="0.05"
-            value={dropout}
-            onChange={(e) => setDropout(+e.target.value)}
-            aria-label="Dropout rate"
-          />
+          <input type="range" min="0" max="0.5" step="0.05" value={dropout} onChange={(e) => setDropout(+e.target.value)} aria-label="Dropout rate" />
         </div>
+
+        {/* Input mode */}
+        <div className="config-group">
+          <label>Input values</label>
+          <div className="input-mode-toggle">
+            <button className={`mode-btn ${inputMode === 'random' ? 'active' : ''}`} onClick={() => setInputMode('random')}>Random</button>
+            <button className={`mode-btn ${inputMode === 'custom' ? 'active' : ''}`} onClick={() => setInputMode('custom')}>Custom</button>
+          </div>
+        </div>
+
+        {inputMode === 'custom' && (
+          <div className="custom-inputs">
+            {Array.from({ length: inputSize }, (_, i) => (
+              <div key={i} className="custom-input-row">
+                <label>x{i + 1}</label>
+                <input
+                  type="number"
+                  step="0.1"
+                  min="-2"
+                  max="2"
+                  value={customInputs?.[i] ?? 0}
+                  onChange={(e) => updateCustomInput(i, e.target.value)}
+                  className="custom-input-field"
+                />
+              </div>
+            ))}
+          </div>
+        )}
 
         <div className="action-btns">
-          <button className="run-btn" onClick={runForward}><FaPlay /> Forward Pass</button>
-          <button className="reset-btn" onClick={resetWeights}><FaRedo /> Reset</button>
+          <button className="run-btn" onClick={() => doForwardPass(false)}><FaPlay /> Run</button>
+          <button className="run-btn animate-btn" onClick={() => doForwardPass(true)}><FaStepForward /> Animate</button>
         </div>
+        <button className="reset-btn-full" onClick={resetWeights}><FaRedo /> Reset Weights</button>
 
         {passCount > 0 && (
-          <div className="pass-counter">
-            <FaInfoCircle /> {passCount} pass{passCount !== 1 ? 'es' : ''} run
-          </div>
+          <div className="pass-counter"><FaInfoCircle /> {passCount} pass{passCount !== 1 ? 'es' : ''} run</div>
         )}
       </div>
 
       <div className="builder-main">
         <NetworkStats layers={layers} activation={activation} dropout={dropout} />
 
-        <NetworkCanvas
-          layers={layers}
-          weights={weights}
-          activations={activations}
-          dropout={dropout}
-          dropoutMask={dropoutMask}
-        />
+        <div className="canvas-wrapper">
+          <NetworkCanvas
+            layers={layers}
+            weights={weights}
+            activations={activations}
+            dropout={dropout}
+            dropoutMask={dropoutMask}
+            animLayer={animLayer}
+            onHoverNeuron={setHoveredNeuron}
+          />
+          {hoveredNeuron && (
+            <NeuronInspector
+              info={hoveredNeuron}
+              layers={layers}
+              activations={activations}
+              weights={weights}
+              activation={activation}
+            />
+          )}
+        </div>
 
         <div className="builder-hint">
           <FaLightbulb className="hint-icon" />
           <div>
             <p className="hint-title">How to use</p>
             <p className="hint-text">
-              Adjust the architecture on the left, then click Forward Pass to send random inputs
-              through the network. Blue connections = positive weights, red = negative. Thicker
-              lines = stronger weights. Enable dropout to see neurons randomly deactivated (shown
-              with dashed outlines and X marks).
+              Pick a preset or build your own architecture. Use Custom inputs to set specific values, or Random for quick tests.
+              Click Animate to watch data flow layer-by-layer. Hover over any neuron to inspect its value and incoming connections.
+              Blue connections = positive weights, red = negative. Thicker = stronger.
             </p>
           </div>
         </div>

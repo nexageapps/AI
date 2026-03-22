@@ -1,0 +1,62 @@
+.activation-explorer { display: flex; gap: 16px; min-height: 420px; }
+
+/* Sidebar */
+.act-sidebar {
+  width: 210px; flex-shrink: 0;
+  display: flex; flex-direction: column; gap: 6px;
+}
+.sidebar-title { font-size: 0.82rem; font-weight: 700; color: #00467F; margin-bottom: 4px; }
+.act-btn {
+  display: flex; flex-direction: column; gap: 2px;
+  padding: 8px 10px; border: 1px solid #e5e7eb; border-left: 3px solid;
+  border-radius: 8px; background: white; cursor: pointer;
+  text-align: left; transition: all 0.15s;
+}
+.act-btn:hover { background: #f8fafc; }
+.act-btn.active { background: #eef5ff; border-color: #93c5fd; }
+.act-name { font-size: 0.82rem; font-weight: 700; color: #1f2937; }
+.act-formula { font-size: 0.68rem; color: #6b7280; font-family: monospace; }
+
+/* Main */
+.act-main { flex: 1; display: flex; flex-direction: column; gap: 10px; }
+.act-info-bar {
+  display: flex; align-items: flex-start; gap: 8px;
+  padding: 10px 12px; background: #f0f9ff; border: 1px solid #bae6fd;
+  border-radius: 8px; font-size: 0.82rem; color: #0c4a6e; line-height: 1.4;
+}
+.act-desc { flex: 1; }
+
+.act-canvas {
+  width: 100%; max-width: 520px; height: auto;
+  border: 1px solid #e5e7eb; border-radius: 8px;
+  cursor: crosshair;
+}
+
+.act-controls {
+  display: flex; align-items: center; justify-content: space-between;
+}
+.deriv-toggle {
+  display: flex; align-items: center; gap: 6px;
+  font-size: 0.78rem; color: #374151; cursor: pointer;
+}
+.deriv-toggle input { accent-color: #00467F; }
+.legend { display: flex; gap: 12px; }
+.legend-item { display: flex; align-items: center; gap: 4px; font-size: 0.72rem; color: #6b7280; }
+.legend-swatch { width: 16px; height: 3px; border-radius: 2px; }
+.legend-swatch.dashed {
+  background: transparent !important;
+  border-top: 2px dashed;
+  border-color: inherit;
+  height: 0;
+}
+
+.act-hover-hint {
+  display: flex; align-items: center; gap: 6px;
+  font-size: 0.72rem; color: #9ca3af; font-style: italic;
+}
+.hover-hint-icon { font-size: 0.7rem; }
+
+@media (max-width: 768px) {
+  .activation-explorer { flex-direction: column; }
+  .act-sidebar { width: 100%; flex-direction: row; overflow-x: auto; }
+}

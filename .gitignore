@@ -7,6 +7,7 @@ Basic/archive
 .kiro/
 ./application/compsci713/*node_module*
 application/compsci713/week1/symbolic-logic/*node_module*
+application/compsci713/week2/neural-network/*node_module*
 application/compsci713/week3/kg-playground/*node_module*
 application/compsci713/week3/data-preprocessing-studio/*node_module*
 application/compsci713/week3/model-evaluation-dashboard/*node_module*

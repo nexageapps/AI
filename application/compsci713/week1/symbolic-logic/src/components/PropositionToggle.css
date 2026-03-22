@@ -40,6 +40,12 @@
   flex-shrink: 0;
 }
 
+.prop-icon {
+  font-size: 1.4rem;
+  flex-shrink: 0;
+  color: #00467F;
+}
+
 .prop-info {
   flex: 1;
   display: flex;

@@ -2,6 +2,8 @@
   display: flex;
   flex-direction: column;
   gap: 16px;
+  width: 100%;
+  min-height: 520px;
 }
 
 .fol-section-tabs {
@@ -302,4 +304,30 @@
   .kinship-layout { flex-direction: column; }
   .fol-section-tabs { flex-direction: column; }
   .fol-section-btn { min-width: auto; }
+}
+
+/* Icon replacements */
+.fact-icon-active {
+  color: #22c55e;
+  font-size: 0.75rem;
+  margin-right: 3px;
+  vertical-align: middle;
+}
+
+.fact-icon-inactive {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border: 2px solid #d1d5db;
+  border-radius: 3px;
+  margin-right: 3px;
+  vertical-align: middle;
+}
+
+.query-icon {
+  flex-shrink: 0;
+}
+
+.equiv-icon {
+  flex-shrink: 0;
 }

@@ -92,6 +92,7 @@ function App() {
           ))}
         </nav>
 
+        <div className="tab-content">
         {activeTab === 'learn' && <LearnPanel />}
         {activeTab === 'quiz' && <QuizPanel questions={QUIZ_QUESTIONS} />}
         {activeTab === 'fol' && <FOLPanel />}
@@ -236,6 +237,7 @@ function App() {
             </div>
           </div>
         )}
+        </div>
 
         <footer className="app-footer">
           <span><FaGraduationCap style={{ marginRight: 4 }} /> COMPSCI 713 — University of Auckland</span>

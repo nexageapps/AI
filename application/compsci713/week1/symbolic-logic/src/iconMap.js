@@ -9,13 +9,12 @@ import {
   FaKey, FaExchangeAlt, FaCube, FaSyncAlt, FaExclamationTriangle,
   FaUsers, FaBaby, FaFemale, FaUserFriends, FaQuestionCircle,
   FaCommentDots, FaCheckCircle, FaTimesCircle, FaArrowRight,
-  FaParty,
 } from 'react-icons/fa';
 import {
   IoSparkles,
 } from 'react-icons/io5';
 import {
-  GiPasta, GiPartyPopper,
+  GiNoodles, GiPartyPopper,
 } from 'react-icons/gi';
 import {
   MdElderly,
@@ -42,7 +41,7 @@ const ICON_MAP = {
   '☀️': FaSun,
   '🌈': FaRainbow,
   '🍕': FaPizzaSlice,
-  '🍝': GiPasta,
+  '🍝': GiNoodles,
   '🐕': FaDog,
   '🐈': FaCat,
   '📚': FaBook,

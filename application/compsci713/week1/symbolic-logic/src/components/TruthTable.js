@@ -21,7 +21,7 @@ function TruthTable({ truthTable, expression, assignment, formulaStr, equivalent
 
   return (
     <div className="truth-table-container">
-      <div className="table-header-bar"></div>
+      <div className="table-header-bar">
         <h3 className="table-title">Truth Table</h3>
         <div className="table-stats">
           <span className="stat stat-true"><FaCheckCircle /> {trueCount} true</span>

@@ -1,19 +1,21 @@
 import React, { useState } from 'react';
+import { Icon } from '../iconMap';
+import { FaBookOpen } from 'react-icons/fa';
 import './LearnPanel.css';
 
 const LESSONS = [
   {
     id: 'prop',
     title: '1. What is a Proposition?',
-    emoji: '💬',
+    icon: '💬',
     content: `A proposition is a statement that is either TRUE or FALSE — nothing in between.
 
-✅ Propositions:
+Propositions:
   • "It is raining" → could be true or false
   • "2 + 2 = 4" → always true
   • "Dogs can fly" → always false
 
-❌ NOT propositions:
+NOT propositions:
   • "What time is it?" → it's a question
   • "Close the door!" → it's a command
   • "x + 1 = 5" → depends on x
@@ -26,7 +28,7 @@ We use letters like A, B, C to represent propositions:
   {
     id: 'connectives',
     title: '2. Logical Connectives',
-    emoji: '🔗',
+    icon: '🔗',
     content: `Connectives join propositions together:
 
 ¬ NOT (Negation) — flips the value
@@ -52,7 +54,7 @@ We use letters like A, B, C to represent propositions:
   {
     id: 'truthtables',
     title: '3. Truth Tables',
-    emoji: '📊',
+    icon: '📊',
     content: `A truth table shows EVERY possible combination of true/false values.
 
 For 2 propositions (A, B) → 4 rows (2² = 4)
@@ -73,7 +75,7 @@ Truth tables help us:
   {
     id: 'equivalences',
     title: '4. Logical Equivalences',
-    emoji: '⚖️',
+    icon: '⚖️',
     content: `Two formulas are equivalent (≡) if they have the same truth table.
 
 De Morgan's Laws:
@@ -96,7 +98,7 @@ Material Implication:
   {
     id: 'inference',
     title: '5. Inference Rules',
-    emoji: '🧠',
+    icon: '🧠',
     content: `Inference rules let us derive NEW truths from existing ones.
 
 Modus Ponens:
@@ -118,7 +120,7 @@ Disjunctive Syllogism:
   {
     id: 'fol-intro',
     title: '6. First-Order Logic (FOL)',
-    emoji: '🔬',
+    icon: '🔬',
     content: `Propositional logic has limits — it can't talk about "all" or "some" things.
 
 First-Order Logic adds:
@@ -143,7 +145,7 @@ Examples:
   {
     id: 'fol-variables',
     title: '7. Free Variables & Sentences',
-    emoji: '🔓',
+    icon: '🔓',
     content: `A variable is BOUND if it's inside a quantifier (∀ or ∃).
 A variable is FREE if it's NOT inside any quantifier.
 
@@ -157,8 +159,8 @@ Examples:
   → This is NOT a sentence (it's a formula with free variables)
 
 A SENTENCE is a formula with NO free variables:
-  ✅ ∀x ∃y Loves(x, y) — sentence (all variables bound)
-  ❌ ∀x Loves(x, y) — NOT a sentence (y is free)
+  ∀x ∃y Loves(x, y) — sentence (all variables bound)
+  ∀x Loves(x, y) — NOT a sentence (y is free)
 
 Only sentences can be TRUE or FALSE.
 Formulas with free variables need an assignment to evaluate.`,
@@ -166,7 +168,7 @@ Formulas with free variables need an assignment to evaluate.`,
   {
     id: 'fol-satisfaction',
     title: '8. Satisfaction & Models',
-    emoji: '✅',
+    icon: '✅',
     content: `A MODEL is a "mini world" that gives meaning to our logic:
   • A domain (set of objects)
   • Interpretations for predicates and constants
@@ -180,8 +182,8 @@ Example model (Family):
 SATISFACTION: A model M satisfies a sentence φ if φ is TRUE in M.
   We write: M ⊨ φ ("M models φ" or "M satisfies φ")
 
-  M ⊨ ∃x ∃y Parent(x,y)  ✅ (Alice is parent of Bob)
-  M ⊨ ∀x ∃y Parent(x,y)  ❌ (Charlie has no child)
+  M ⊨ ∃x ∃y Parent(x,y)  (Alice is parent of Bob)
+  M ⊨ ∀x ∃y Parent(x,y)  (Charlie has no child)
 
 A sentence is:
   • VALID (tautology) if true in ALL models
@@ -191,7 +193,7 @@ A sentence is:
   {
     id: 'fol-equivalence',
     title: '9. FOL Logical Equivalence',
-    emoji: '🔄',
+    icon: '🔄',
     content: `Two FOL sentences are equivalent if they're true in exactly the same models.
 
 Key equivalences:
@@ -207,14 +209,14 @@ Quantifier distribution:
   ∀x (P(x) ∧ Q(x)) ≡ (∀x P(x)) ∧ (∀x Q(x))
   ∃x (P(x) ∨ Q(x)) ≡ (∃x P(x)) ∨ (∃x Q(x))
 
-  ⚠️ But NOT:
+  But NOT:
   ∀x (P(x) ∨ Q(x)) ≢ (∀x P(x)) ∨ (∀x Q(x))
   ∃x (P(x) ∧ Q(x)) ≢ (∃x P(x)) ∧ (∃x Q(x))`,
   },
   {
     id: 'fol-kinship',
     title: '10. FOL with Kinship',
-    emoji: '👨‍👩‍👧‍👦',
+    icon: '👨‍👩‍👧‍👦',
     content: `Kinship (family relationships) is a classic FOL domain.
 
 Constants: Alice, Bob, Charlie, Diana
@@ -247,21 +249,21 @@ function LearnPanel() {
   return (
     <div className="learn-panel">
       <div className="learn-sidebar">
-        <h3 className="learn-sidebar-title">📖 Lessons</h3>
+        <h3 className="learn-sidebar-title"><FaBookOpen style={{ marginRight: 6 }} /> Lessons</h3>
         {LESSONS.map((lesson, i) => (
           <button
             key={lesson.id}
             className={`learn-nav-btn ${activeLesson === i ? 'active' : ''}`}
             onClick={() => setActiveLesson(i)}
           >
-            <span className="learn-nav-emoji">{lesson.emoji}</span>
+            <Icon emoji={lesson.icon} className="learn-nav-icon" size="1.1rem" />
             <span className="learn-nav-text">{lesson.title}</span>
           </button>
         ))}
       </div>
       <div className="learn-content">
         <div className="learn-header">
-          <span className="learn-emoji">{LESSONS[activeLesson].emoji}</span>
+          <Icon emoji={LESSONS[activeLesson].icon} className="learn-icon" size="1.6rem" />
           <h2 className="learn-title">{LESSONS[activeLesson].title}</h2>
         </div>
         <pre className="learn-body">{LESSONS[activeLesson].content}</pre>

@@ -73,6 +73,11 @@
 
 .q-emoji { font-size: 2rem; }
 
+.q-icon {
+  flex-shrink: 0;
+  color: #00467F;
+}
+
 .q-text {
   font-size: 1.1rem;
   font-weight: 600;
@@ -160,6 +165,13 @@
 .quiz-result {
   text-align: center;
   padding: 40px 20px;
+}
+
+.result-big-icon {
+  font-size: 3.5rem;
+  color: #00467F;
+  display: flex;
+  justify-content: center;
 }
 
 .result-big-emoji { font-size: 4rem; }

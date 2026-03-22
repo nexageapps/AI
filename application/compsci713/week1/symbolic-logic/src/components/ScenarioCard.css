@@ -50,3 +50,9 @@
   color: #00467F;
   font-weight: 600;
 }
+
+.card-icon {
+  margin-right: 5px;
+  vertical-align: middle;
+  color: #00467F;
+}

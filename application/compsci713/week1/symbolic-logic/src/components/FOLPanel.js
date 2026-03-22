@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { Icon } from '../iconMap';
+import { FaUsers, FaKey, FaExchangeAlt, FaSearch, FaBook, FaCheckCircle, FaTimesCircle } from 'react-icons/fa';
 import './FOLPanel.css';
 
 const KINSHIP_PEOPLE = ['Alice', 'Bob', 'Charlie', 'Diana', 'Eve'];
@@ -20,7 +22,7 @@ const FOL_EXAMPLES = [
     id: 'forall-parent',
     title: '∀x ∃y Parent(x, y)',
     meaning: 'Everyone is a parent of someone',
-    emoji: '👨‍👩‍👧',
+    icon: '👨‍👩‍👧',
     evaluate: (facts) => {
       return KINSHIP_PEOPLE.every(x =>
         KINSHIP_PEOPLE.some(y => facts[`Parent(${x},${y})`])
@@ -38,7 +40,7 @@ const FOL_EXAMPLES = [
     id: 'exists-parent',
     title: '∃x ∃y Parent(x, y)',
     meaning: 'Someone is a parent of someone',
-    emoji: '👶',
+    icon: '👶',
     evaluate: (facts) => {
       return KINSHIP_PEOPLE.some(x =>
         KINSHIP_PEOPLE.some(y => facts[`Parent(${x},${y})`])
@@ -58,7 +60,7 @@ const FOL_EXAMPLES = [
     id: 'mother',
     title: '∃x ∃y Mother(x, y)',
     meaning: 'Someone is a mother (Female AND Parent)',
-    emoji: '👩',
+    icon: '👩',
     evaluate: (facts) => {
       return KINSHIP_PEOPLE.some(x =>
         facts[`Female(${x})`] && KINSHIP_PEOPLE.some(y => facts[`Parent(${x},${y})`])
@@ -80,7 +82,7 @@ const FOL_EXAMPLES = [
     id: 'grandparent',
     title: '∃x ∃y Grandparent(x, y)',
     meaning: '∃x ∃y ∃z Parent(x,z) ∧ Parent(z,y)',
-    emoji: '👵',
+    icon: '👵',
     evaluate: (facts) => {
       return KINSHIP_PEOPLE.some(x =>
         KINSHIP_PEOPLE.some(z =>
@@ -106,7 +108,7 @@ const FOL_EXAMPLES = [
     id: 'sibling',
     title: '∃x ∃y Sibling(x, y)',
     meaning: '∃x ∃y (x≠y) ∧ ∃z Parent(z,x) ∧ Parent(z,y)',
-    emoji: '👫',
+    icon: '👫',
     evaluate: (facts) => {
       return KINSHIP_PEOPLE.some(x =>
         KINSHIP_PEOPLE.some(y =>
@@ -136,7 +138,7 @@ const FOL_EXAMPLES = [
     id: 'all-female-parent',
     title: '∀x Female(x) → ∃y Parent(x,y)',
     meaning: 'Every female is a parent of someone',
-    emoji: '👩‍👧',
+    icon: '👩‍👧',
     evaluate: (facts) => {
       return KINSHIP_PEOPLE.every(x => {
         if (!facts[`Female(${x})`]) return true;
@@ -174,9 +176,9 @@ function FOLPanel() {
   const resetFacts = () => setFacts({ ...INITIAL_FACTS });
 
   const sections = [
-    { id: 'kinship', label: '👨‍👩‍👧‍👦 Kinship World', desc: 'Build a family and query it' },
-    { id: 'variables', label: '🔓 Free & Bound', desc: 'Identify variable types' },
-    { id: 'equivalence', label: '🔄 FOL Equivalence', desc: 'Quantifier equivalences' },
+    { id: 'kinship', label: 'Kinship World', icon: <FaUsers />, desc: 'Build a family and query it' },
+    { id: 'variables', label: 'Free & Bound', icon: <FaKey />, desc: 'Identify variable types' },
+    { id: 'equivalence', label: 'FOL Equivalence', icon: <FaExchangeAlt />, desc: 'Quantifier equivalences' },
   ];
 
   return (
@@ -188,7 +190,7 @@ function FOLPanel() {
             className={`fol-section-btn ${activeSection === s.id ? 'active' : ''}`}
             onClick={() => setActiveSection(s.id)}
           >
-            <span className="fol-btn-label">{s.label}</span>
+            <span className="fol-btn-label">{s.icon} {s.label}</span>
             <span className="fol-btn-desc">{s.desc}</span>
           </button>
         ))}
@@ -197,14 +199,14 @@ function FOLPanel() {
       {activeSection === 'kinship' && (
         <div className="kinship-section">
           <div className="kinship-intro">
-            <h3>👨‍👩‍👧‍👦 Build a Family, Query with Logic</h3>
+            <h3><FaUsers style={{ marginRight: 6 }} /> Build a Family, Query with Logic</h3>
             <p>Toggle family relationships below, then see how FOL sentences evaluate in your world.</p>
           </div>
 
           <div className="kinship-layout">
             <div className="facts-panel">
               <div className="facts-header">
-                <h4>📋 Facts (click to toggle)</h4>
+                <h4><FaBook style={{ marginRight: 4 }} /> Facts (click to toggle)</h4>
                 <button className="reset-btn" onClick={resetFacts}>Reset</button>
               </div>
 
@@ -221,7 +223,7 @@ function FOLPanel() {
                           className={`fact-chip ${active ? 'active' : ''}`}
                           onClick={() => toggleFact(key)}
                         >
-                          {active ? '✅' : '⬜'} Parent({x},{y})
+                          {active ? <FaCheckCircle className="fact-icon-active" /> : <span className="fact-icon-inactive" />} Parent({x},{y})
                         </button>
                       );
                     })
@@ -241,7 +243,7 @@ function FOLPanel() {
                           if (!facts[`Male(${x})`]) setFacts(prev => ({ ...prev, [`Female(${x})`]: false }));
                         }}
                       >
-                        {facts[`Male(${x})`] ? '✅' : '⬜'} Male({x})
+                        {facts[`Male(${x})`] ? <FaCheckCircle className="fact-icon-active" /> : <span className="fact-icon-inactive" />} Male({x})
                       </button>
                       <button
                         className={`fact-chip ${facts[`Female(${x})`] ? 'active' : ''}`}
@@ -250,7 +252,7 @@ function FOLPanel() {
                           if (!facts[`Female(${x})`]) setFacts(prev => ({ ...prev, [`Male(${x})`]: false }));
                         }}
                       >
-                        {facts[`Female(${x})`] ? '✅' : '⬜'} Female({x})
+                        {facts[`Female(${x})`] ? <FaCheckCircle className="fact-icon-active" /> : <span className="fact-icon-inactive" />} Female({x})
                       </button>
                     </React.Fragment>
                   ))}
@@ -259,7 +261,7 @@ function FOLPanel() {
             </div>
 
             <div className="queries-panel">
-              <h4>🔍 FOL Queries</h4>
+              <h4><FaSearch style={{ marginRight: 4 }} /> FOL Queries</h4>
               <div className="query-list">
                 {FOL_EXAMPLES.map(ex => {
                   const result = ex.evaluate(facts);
@@ -267,7 +269,7 @@ function FOLPanel() {
                   return (
                     <div key={ex.id} className={`query-card ${result ? 'is-true' : 'is-false'}`}>
                       <div className="query-header">
-                        <span className="query-emoji">{ex.emoji}</span>
+                        <Icon emoji={ex.icon} className="query-icon" size="1.2rem" />
                         <div className="query-info">
                           <span className="query-formula">{ex.title}</span>
                           <span className="query-meaning">{ex.meaning}</span>
@@ -289,7 +291,7 @@ function FOLPanel() {
       {activeSection === 'variables' && (
         <div className="variables-section">
           <div className="var-intro">
-            <h3>🔓 Free Variables vs Bound Variables</h3>
+            <h3><FaKey style={{ marginRight: 6 }} /> Free Variables vs Bound Variables</h3>
             <p>A variable is <span className="bound-tag">BOUND</span> if it's inside a quantifier (∀ or ∃). A variable is <span className="free-tag">FREE</span> if it's not. A formula with no free variables is a <span className="sentence-tag">SENTENCE</span>.</p>
           </div>
           <div className="var-examples">
@@ -308,7 +310,7 @@ function FOLPanel() {
                   ))}
                 </div>
                 <div className={`var-sentence-badge ${ex.isSentence ? 'yes' : 'no'}`}>
-                  {ex.isSentence ? '✅ Sentence (can be T/F)' : '❌ Not a sentence (has free variables)'}
+                  {ex.isSentence ? <><FaCheckCircle style={{ marginRight: 4 }} /> Sentence (can be T/F)</> : <><FaTimesCircle style={{ marginRight: 4 }} /> Not a sentence (has free variables)</>}
                 </div>
               </div>
             ))}
@@ -319,27 +321,27 @@ function FOLPanel() {
       {activeSection === 'equivalence' && (
         <div className="equiv-section">
           <div className="equiv-intro">
-            <h3>🔄 FOL Logical Equivalences</h3>
+            <h3><FaExchangeAlt style={{ marginRight: 6 }} /> FOL Logical Equivalences</h3>
             <p>These equivalences let you transform quantified statements while preserving meaning.</p>
           </div>
           <div className="equiv-cards">
             {[
               { left: '¬∀x P(x)', right: '∃x ¬P(x)', name: 'Quantifier Negation 1',
-                example: '"Not all students passed" ≡ "Some student didn\'t pass"', emoji: '🔀' },
+                example: '"Not all students passed" ≡ "Some student didn\'t pass"', iconKey: '🔀' },
               { left: '¬∃x P(x)', right: '∀x ¬P(x)', name: 'Quantifier Negation 2',
-                example: '"No dog can fly" ≡ "All dogs can\'t fly"', emoji: '🔀' },
+                example: '"No dog can fly" ≡ "All dogs can\'t fly"', iconKey: '🔀' },
               { left: '∀x (P(x) ∧ Q(x))', right: '(∀x P(x)) ∧ (∀x Q(x))', name: '∀ distributes over ∧',
-                example: '"All cats are furry and cute" ≡ "All cats are furry AND all cats are cute"', emoji: '📦' },
+                example: '"All cats are furry and cute" ≡ "All cats are furry AND all cats are cute"', iconKey: '📦' },
               { left: '∃x (P(x) ∨ Q(x))', right: '(∃x P(x)) ∨ (∃x Q(x))', name: '∃ distributes over ∨',
-                example: '"Some animal is a cat or dog" ≡ "Some animal is a cat OR some animal is a dog"', emoji: '📦' },
+                example: '"Some animal is a cat or dog" ≡ "Some animal is a cat OR some animal is a dog"', iconKey: '📦' },
               { left: '∀x ∀y P(x,y)', right: '∀y ∀x P(x,y)', name: 'Quantifier Reordering (same type)',
-                example: 'Order doesn\'t matter for same quantifier type', emoji: '🔃' },
-              { left: '∀x ∃y P(x,y)', right: '∃y ∀x P(x,y)', name: '⚠️ NOT equivalent!',
-                example: '"Everyone loves someone" ≠ "Someone is loved by everyone"', emoji: '⚠️', notEquiv: true },
+                example: 'Order doesn\'t matter for same quantifier type', iconKey: '🔃' },
+              { left: '∀x ∃y P(x,y)', right: '∃y ∀x P(x,y)', name: 'NOT equivalent!',
+                example: '"Everyone loves someone" ≠ "Someone is loved by everyone"', iconKey: '⚠️', notEquiv: true },
             ].map((eq, i) => (
               <div key={i} className={`equiv-card ${eq.notEquiv ? 'not-equiv' : ''}`}>
                 <div className="equiv-card-header">
-                  <span className="equiv-emoji">{eq.emoji}</span>
+                  <Icon emoji={eq.iconKey} className="equiv-icon" size="1.1rem" />
                   <span className="equiv-name">{eq.name}</span>
                 </div>
                 <div className="equiv-formulas">

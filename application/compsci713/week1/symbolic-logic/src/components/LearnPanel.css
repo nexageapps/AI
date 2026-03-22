@@ -1,7 +1,8 @@
 .learn-panel {
   display: flex;
   gap: 16px;
-  min-height: 500px;
+  min-height: 520px;
+  width: 100%;
 }
 
 .learn-sidebar {
@@ -51,6 +52,15 @@
   flex-shrink: 0;
 }
 
+.learn-nav-icon {
+  flex-shrink: 0;
+  color: #6b7280;
+}
+
+.learn-nav-btn.active .learn-nav-icon {
+  color: white;
+}
+
 .learn-nav-text {
   white-space: nowrap;
   overflow: hidden;
@@ -78,6 +88,11 @@
 
 .learn-emoji {
   font-size: 1.8rem;
+}
+
+.learn-icon {
+  color: #00467F;
+  flex-shrink: 0;
 }
 
 .learn-title {

@@ -86,7 +86,6 @@ function NetworkCanvas({ layers, weights, activations, dropout, dropoutMask, ani
 
     // connections
     for (let li = 0; li < positions.length - 1; li++) {
-      const isAnimated = animLayer !== null && li < animLayer;
       const isCurrent = animLayer !== null && li === animLayer - 1;
       const isFuture = animLayer !== null && li >= animLayer;
 

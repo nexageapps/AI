@@ -1,5 +1,7 @@
 import React from 'react';
 import { evaluate } from '../logic';
+import { Icon } from '../iconMap';
+import { FaCheckCircle, FaTimesCircle } from 'react-icons/fa';
 import './TruthTable.css';
 
 function TruthTable({ truthTable, expression, assignment, formulaStr, equivalent, equivalentFormula, propositions }) {
@@ -14,9 +16,18 @@ function TruthTable({ truthTable, expression, assignment, formulaStr, equivalent
     return p?.emoji || '';
   };
 
+  const trueCount = rows.filter(r => r.result).length;
+  const falseCount = rows.length - trueCount;
+
   return (
     <div className="truth-table-container">
-      <h3 className="table-title">Truth Table</h3>
+      <div className="table-header-bar"></div>
+        <h3 className="table-title">Truth Table</h3>
+        <div className="table-stats">
+          <span className="stat stat-true"><FaCheckCircle /> {trueCount} true</span>
+          <span className="stat stat-false"><FaTimesCircle /> {falseCount} false</span>
+        </div>
+      </div>
       <p className="table-hint">The highlighted row matches your current toggles above</p>
       <div className="table-scroll">
         <table className="truth-table" role="table">
@@ -24,7 +35,7 @@ function TruthTable({ truthTable, expression, assignment, formulaStr, equivalent
             <tr>
               {props.map(p => (
                 <th key={p}>
-                  <span className="th-emoji">{getPropEmoji(p)}</span>
+                  <Icon emoji={getPropEmoji(p)} className="th-icon" size="0.85rem" />
                   <span>{p}</span>
                 </th>
               ))}
@@ -49,11 +60,17 @@ function TruthTable({ truthTable, expression, assignment, formulaStr, equivalent
                       {row.assignment[p] ? 'T' : 'F'}
                     </td>
                   ))}
-                  <td className={`result-col ${row.result ? 'val-true' : 'val-false'}`}>
+                  <td className={`result-col result-cell ${row.result ? 'val-true' : 'val-false'}`}>
+                    <span className="result-icon-inline">
+                      {row.result ? <FaCheckCircle /> : <FaTimesCircle />}
+                    </span>
                     {row.result ? 'T' : 'F'}
                   </td>
                   {equivalent && (
-                    <td className={`result-col equiv-col ${equivResult ? 'val-true' : 'val-false'}`}>
+                    <td className={`result-col equiv-col result-cell ${equivResult ? 'val-true' : 'val-false'}`}>
+                      <span className="result-icon-inline">
+                        {equivResult ? <FaCheckCircle /> : <FaTimesCircle />}
+                      </span>
                       {equivResult ? 'T' : 'F'}
                     </td>
                   )}
@@ -65,6 +82,7 @@ function TruthTable({ truthTable, expression, assignment, formulaStr, equivalent
       </div>
       {equivalent && (
         <p className="equiv-note">
+          <FaCheckCircle style={{ marginRight: 6 }} />
           Notice: both columns are identical — the expressions are logically equivalent.
         </p>
       )}

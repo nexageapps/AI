@@ -9,6 +9,7 @@ import {
   FaPuzzlePiece,
   FaWaveSquare,
   FaExchangeAlt,
+  FaCrosshairs,
 } from 'react-icons/fa';
 import LearnPanel from './components/LearnPanel';
 import RNNVisualizer from './components/RNNVisualizer';
@@ -16,6 +17,7 @@ import GateExplorer from './components/GateExplorer';
 import SequencePlayground from './components/SequencePlayground';
 import VanishingGradient from './components/VanishingGradient';
 import BPTTVisualizer from './components/BPTTVisualizer';
+import SelfAttentionViz from './components/SelfAttentionViz';
 import QuizPanel from './components/QuizPanel';
 import './App.css';
 
@@ -28,6 +30,7 @@ function App() {
     { id: 'gates', label: 'Gates', icon: <FaChartLine />, desc: 'LSTM & GRU gates' },
     { id: 'vanishing', label: 'Gradients', icon: <FaWaveSquare />, desc: 'Vanishing gradient' },
     { id: 'bptt', label: 'BPTT', icon: <FaExchangeAlt />, desc: 'Backprop through time' },
+    { id: 'selfattn', label: 'Attention', icon: <FaCrosshairs />, desc: 'Self-attention viz' },
     { id: 'playground', label: 'Playground', icon: <FaGamepad />, desc: 'Try it yourself' },
     { id: 'quiz', label: 'Quiz', icon: <FaPuzzlePiece />, desc: 'Test knowledge' },
   ];
@@ -69,6 +72,7 @@ function App() {
           {activeTab === 'gates' && <GateExplorer />}
           {activeTab === 'vanishing' && <VanishingGradient />}
           {activeTab === 'bptt' && <BPTTVisualizer />}
+          {activeTab === 'selfattn' && <SelfAttentionViz />}
           {activeTab === 'playground' && <SequencePlayground />}
           {activeTab === 'quiz' && <QuizPanel />}
         </div>
@@ -81,7 +85,7 @@ function App() {
           <span>Recurrent Neural Networks</span>
           <span className="footer-sep">|</span>
           <span className="footer-ref">
-            Adapted from <a href="https://stanford.edu/~shervine/teaching/cs-230/" target="_blank" rel="noopener noreferrer">Stanford CS230</a> &amp; <a href="https://cs231n.stanford.edu/" target="_blank" rel="noopener noreferrer">CS231n</a>
+            Adapted from <a href="https://stanford.edu/~shervine/teaching/cs-230/" target="_blank" rel="noopener noreferrer">Stanford CS230</a>, <a href="https://cs231n.stanford.edu/" target="_blank" rel="noopener noreferrer">CS231n</a> &amp; <a href="https://sebastianraschka.com/blog/2023/self-attention-from-scratch.html" target="_blank" rel="noopener noreferrer">Raschka 2023</a>
           </span>
         </footer>
       </div>

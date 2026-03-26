@@ -130,6 +130,50 @@ const QUESTIONS = [
     explanation: 'LSTM has 4 weight computations (forget, input, gate, output), each with weights for input and hidden state plus bias: 4 x (hidden x (input + hidden) + hidden) = 4 x (20 x 30 + 20) = 4 x 620 = 2,480.',
   },
   {
+    q: 'In scaled dot-product self-attention, why do we divide by sqrt(d_k) before softmax (Raschka, 2023)?',
+    options: [
+      'To make the computation faster',
+      'To reduce the number of parameters',
+      'Because the dot product variance grows linearly with d_k, and dividing by sqrt(d_k) brings variance back to ~1',
+      'To convert the scores to probabilities',
+    ],
+    correct: 2,
+    explanation: 'The dot product between q and k sums d_k independent terms, each with variance ~1. So the total variance grows linearly with d_k. Dividing by sqrt(d_k) cancels this growth, preventing softmax from saturating into extreme values (Raschka, 2023).',
+  },
+  {
+    q: 'In self-attention, what are the three learned weight matrices and what do they produce (Raschka, 2023)?',
+    options: [
+      'W_f, W_i, W_o producing forget, input, output gates',
+      'W_q, W_k, W_v producing query, key, value vectors',
+      'W_h, W_x, W_y producing hidden, input, output vectors',
+      'W_z, W_r, W_h producing update, reset, hidden vectors',
+    ],
+    correct: 1,
+    explanation: 'Self-attention uses three weight matrices: W_q (query), W_k (key), and W_v (value). Each input x^(i) is projected into q^(i) = W_q * x^(i), k^(i) = W_k * x^(i), v^(i) = W_v * x^(i). The query-key dot product determines attention weights, and values are weighted-summed to produce context vectors (Raschka, 2023).',
+  },
+  {
+    q: 'What is the key difference between self-attention and cross-attention (Raschka, 2023)?',
+    options: [
+      'Self-attention uses more parameters',
+      'Cross-attention is faster',
+      'In self-attention, Q/K/V come from the same sequence; in cross-attention, Q comes from one sequence and K/V from another',
+      'Cross-attention does not use softmax',
+    ],
+    correct: 2,
+    explanation: 'In self-attention, queries, keys, and values all come from the same input sequence. In cross-attention, queries come from one sequence (e.g., decoder) while keys and values come from a different sequence (e.g., encoder). Setting both sequences equal reduces cross-attention to self-attention (Raschka, 2023).',
+  },
+  {
+    q: 'In multi-head attention, what is the purpose of having multiple heads (Raschka, 2023)?',
+    options: [
+      'To process the sequence faster',
+      'Each head has its own W_q, W_k, W_v and can learn to attend to different types of relationships',
+      'To reduce the total number of parameters',
+      'To avoid the vanishing gradient problem',
+    ],
+    correct: 1,
+    explanation: 'Multi-head attention runs multiple attention heads in parallel, each with its own set of W_q, W_k, W_v matrices. This is analogous to multiple kernels in CNNs -- each head can learn different attention patterns (e.g., one head for syntactic relationships, another for semantic ones). The outputs are concatenated and projected (Raschka, 2023).',
+  },
+  {
     q: 'Which evaluation metric is used for machine translation quality (CS230)?',
     options: [
       'Accuracy',

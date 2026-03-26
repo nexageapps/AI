@@ -1,0 +1,368 @@
+.sa-viz {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.sa-intro {
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+  padding: 10px 14px;
+  background: #eef5ff;
+  border-radius: 8px;
+  font-size: 0.82rem;
+  color: #1e40af;
+  line-height: 1.5;
+}
+
+.sa-intro a { color: #00467F; font-weight: 600; }
+
+.sa-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.sa-sent-selector {
+  display: flex;
+  gap: 4px;
+  flex-wrap: wrap;
+}
+
+.sa-sent-btn {
+  padding: 5px 12px;
+  border: 2px solid #e5e7eb;
+  border-radius: 8px;
+  background: white;
+  cursor: pointer;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #374151;
+  transition: all 0.2s;
+}
+
+.sa-sent-btn:hover { border-color: #00467F; }
+.sa-sent-btn.active { border-color: #00467F; background: #eef5ff; color: #00467F; }
+
+.sa-params {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.sa-param {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #374151;
+}
+
+.sa-param input[type="range"] { width: 60px; accent-color: #00467F; }
+.sa-param input[type="checkbox"] { accent-color: #00467F; }
+
+.sa-reseed-btn {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 10px;
+  border: 2px solid #e5e7eb;
+  border-radius: 8px;
+  background: white;
+  cursor: pointer;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #6b7280;
+  transition: all 0.2s;
+}
+
+.sa-reseed-btn:hover { border-color: #00467F; color: #00467F; }
+
+/* Query selector */
+.sa-query-selector {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.sa-qs-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #6b7280;
+  display: flex;
+  align-items: center;
+}
+
+.sa-word-row { display: flex; gap: 4px; }
+
+.sa-word-btn {
+  padding: 6px 14px;
+  border: 2px solid #e5e7eb;
+  border-radius: 8px;
+  background: white;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #374151;
+  transition: all 0.2s;
+}
+
+.sa-word-btn:hover { border-color: #8b5cf6; background: #f5f3ff; }
+.sa-word-btn.query-active { border-color: #8b5cf6; background: #ede9fe; color: #5b21b6; box-shadow: 0 0 0 2px rgba(139,92,246,0.2); }
+
+/* Main layout */
+.sa-main-layout {
+  display: flex;
+  gap: 16px;
+}
+
+.sa-qkv-panel {
+  width: 260px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-height: 380px;
+  overflow-y: auto;
+}
+
+.sa-qkv-section {
+  padding: 8px 10px;
+  background: #f8fafc;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+}
+
+.sa-qkv-header {
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #6b7280;
+  margin-bottom: 4px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.sa-qkv-icon { font-size: 0.7rem; }
+.query-color { color: #8b5cf6; }
+.key-color { color: #f59e0b; }
+.value-color { color: #22c55e; }
+
+.sa-vec {
+  display: flex;
+  gap: 3px;
+  flex-wrap: wrap;
+}
+
+.sa-vec-val {
+  padding: 2px 5px;
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 4px;
+  font-size: 0.65rem;
+  font-family: monospace;
+  color: #374151;
+}
+
+.sa-key-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 3px;
+}
+
+.sa-key-word {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: #374151;
+  min-width: 50px;
+}
+
+.sa-vec-mini { display: flex; gap: 2px; }
+
+.sa-vec-val-sm {
+  padding: 1px 3px;
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 3px;
+  font-size: 0.55rem;
+  font-family: monospace;
+  color: #6b7280;
+}
+
+/* Attention panel */
+.sa-attention-panel {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.sa-attn-title {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #00467F;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.sa-scale-badge {
+  font-size: 0.62rem;
+  background: #f1f5f9;
+  padding: 2px 8px;
+  border-radius: 10px;
+  color: #6b7280;
+  font-weight: 600;
+}
+
+.sa-attn-bars {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.sa-attn-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 8px;
+  border-radius: 6px;
+  transition: background 0.2s;
+}
+
+.sa-attn-row.max-attn { background: #eef5ff; }
+
+.sa-attn-word {
+  min-width: 60px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #374151;
+}
+
+.sa-attn-bar-track {
+  flex: 1;
+  height: 22px;
+  background: #f1f5f9;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.sa-attn-bar-fill {
+  height: 100%;
+  border-radius: 4px;
+  transition: width 0.3s;
+}
+
+.sa-attn-pct {
+  min-width: 48px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #00467F;
+  text-align: right;
+  font-family: monospace;
+}
+
+.sa-attn-raw {
+  font-size: 0.6rem;
+  color: #9ca3af;
+  min-width: 60px;
+  font-family: monospace;
+}
+
+/* Context */
+.sa-context-section {
+  padding: 10px 14px;
+  background: #f0fdf4;
+  border: 1px solid #86efac;
+  border-radius: 8px;
+}
+
+.sa-ctx-header {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #166534;
+  margin-bottom: 6px;
+}
+
+.ctx-val { background: #dcfce7; border-color: #86efac; color: #166534; }
+
+.sa-ctx-desc {
+  font-size: 0.72rem;
+  color: #166534;
+  margin: 6px 0 0;
+  line-height: 1.4;
+}
+
+.sa-multihead-note {
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+  padding: 10px 14px;
+  background: #fffbeb;
+  border: 1px solid #fde68a;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  color: #78350f;
+  line-height: 1.5;
+}
+
+/* Formula panel */
+.sa-formula-panel {
+  padding: 12px 16px;
+  background: #f1f5f9;
+  border-radius: 10px;
+  border-left: 3px solid #00467F;
+}
+
+.sa-formula-title {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #00467F;
+  margin-bottom: 8px;
+}
+
+.sa-formula-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.sa-step {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 0.78rem;
+  color: #475569;
+  line-height: 1.4;
+}
+
+.sa-step-num {
+  width: 22px;
+  height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #00467F;
+  color: white;
+  border-radius: 50%;
+  font-size: 0.65rem;
+  font-weight: 800;
+  flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+  .sa-main-layout { flex-direction: column; }
+  .sa-qkv-panel { width: 100%; max-height: none; }
+  .sa-word-row { flex-wrap: wrap; }
+}

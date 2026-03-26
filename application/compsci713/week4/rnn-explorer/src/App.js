@@ -10,6 +10,7 @@ import {
   FaWaveSquare,
   FaExchangeAlt,
   FaCrosshairs,
+  FaFont,
 } from 'react-icons/fa';
 import LearnPanel from './components/LearnPanel';
 import RNNVisualizer from './components/RNNVisualizer';
@@ -18,6 +19,7 @@ import SequencePlayground from './components/SequencePlayground';
 import VanishingGradient from './components/VanishingGradient';
 import BPTTVisualizer from './components/BPTTVisualizer';
 import SelfAttentionViz from './components/SelfAttentionViz';
+import NLPEmbeddings from './components/NLPEmbeddings';
 import QuizPanel from './components/QuizPanel';
 import './App.css';
 
@@ -31,6 +33,7 @@ function App() {
     { id: 'vanishing', label: 'Gradients', icon: <FaWaveSquare />, desc: 'Vanishing gradient' },
     { id: 'bptt', label: 'BPTT', icon: <FaExchangeAlt />, desc: 'Backprop through time' },
     { id: 'selfattn', label: 'Attention', icon: <FaCrosshairs />, desc: 'Self-attention viz' },
+    { id: 'nlp', label: 'NLP', icon: <FaFont />, desc: 'Embeddings & metrics' },
     { id: 'playground', label: 'Playground', icon: <FaGamepad />, desc: 'Try it yourself' },
     { id: 'quiz', label: 'Quiz', icon: <FaPuzzlePiece />, desc: 'Test knowledge' },
   ];
@@ -73,6 +76,7 @@ function App() {
           {activeTab === 'vanishing' && <VanishingGradient />}
           {activeTab === 'bptt' && <BPTTVisualizer />}
           {activeTab === 'selfattn' && <SelfAttentionViz />}
+          {activeTab === 'nlp' && <NLPEmbeddings />}
           {activeTab === 'playground' && <SequencePlayground />}
           {activeTab === 'quiz' && <QuizPanel />}
         </div>

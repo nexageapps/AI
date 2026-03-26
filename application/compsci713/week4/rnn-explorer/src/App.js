@@ -11,7 +11,9 @@ import {
   FaExchangeAlt,
   FaCrosshairs,
   FaFont,
+  FaRocket,
 } from 'react-icons/fa';
+import IntroPanel from './components/IntroPanel';
 import LearnPanel from './components/LearnPanel';
 import RNNVisualizer from './components/RNNVisualizer';
 import GateExplorer from './components/GateExplorer';
@@ -23,20 +25,35 @@ import NLPEmbeddings from './components/NLPEmbeddings';
 import QuizPanel from './components/QuizPanel';
 import './App.css';
 
-function App() {
-  const [activeTab, setActiveTab] = useState('visualizer');
+const LEVELS = [
+  { id: 'beginner', label: 'Beginner', icon: FaRocket, desc: 'New to AI' },
+  { id: 'intermediate', label: 'Student', icon: FaBookOpen, desc: 'Some background' },
+  { id: 'advanced', label: 'Advanced', icon: FaGraduationCap, desc: 'University level' },
+];
 
-  const tabs = [
-    { id: 'visualizer', label: 'RNN Flow', icon: <FaProjectDiagram />, desc: 'Data flow through time' },
-    { id: 'learn', label: 'Learn', icon: <FaBookOpen />, desc: 'Core concepts' },
-    { id: 'gates', label: 'Gates', icon: <FaChartLine />, desc: 'LSTM & GRU gates' },
-    { id: 'vanishing', label: 'Gradients', icon: <FaWaveSquare />, desc: 'Vanishing gradient' },
-    { id: 'bptt', label: 'BPTT', icon: <FaExchangeAlt />, desc: 'Backprop through time' },
-    { id: 'selfattn', label: 'Attention', icon: <FaCrosshairs />, desc: 'Self-attention viz' },
-    { id: 'nlp', label: 'NLP', icon: <FaFont />, desc: 'Embeddings & metrics' },
-    { id: 'playground', label: 'Playground', icon: <FaGamepad />, desc: 'Try it yourself' },
-    { id: 'quiz', label: 'Quiz', icon: <FaPuzzlePiece />, desc: 'Test knowledge' },
+function App() {
+  const [activeTab, setActiveTab] = useState('intro');
+  const [level, setLevel] = useState('beginner');
+
+  const allTabs = [
+    { id: 'intro', label: 'Start Here', icon: <FaRocket />, desc: 'Fun intro to RNNs', levels: ['beginner', 'intermediate', 'advanced'] },
+    { id: 'visualizer', label: 'RNN Flow', icon: <FaProjectDiagram />, desc: 'Data flow through time', levels: ['beginner', 'intermediate', 'advanced'] },
+    { id: 'learn', label: 'Learn', icon: <FaBookOpen />, desc: 'Core concepts', levels: ['intermediate', 'advanced'] },
+    { id: 'gates', label: 'Gates', icon: <FaChartLine />, desc: 'LSTM & GRU gates', levels: ['intermediate', 'advanced'] },
+    { id: 'vanishing', label: 'Gradients', icon: <FaWaveSquare />, desc: 'Vanishing gradient', levels: ['advanced'] },
+    { id: 'bptt', label: 'BPTT', icon: <FaExchangeAlt />, desc: 'Backprop through time', levels: ['advanced'] },
+    { id: 'selfattn', label: 'Attention', icon: <FaCrosshairs />, desc: 'Self-attention viz', levels: ['intermediate', 'advanced'] },
+    { id: 'nlp', label: 'NLP', icon: <FaFont />, desc: 'Embeddings & metrics', levels: ['advanced'] },
+    { id: 'playground', label: 'Playground', icon: <FaGamepad />, desc: 'Try it yourself', levels: ['beginner', 'intermediate', 'advanced'] },
+    { id: 'quiz', label: 'Quiz', icon: <FaPuzzlePiece />, desc: 'Test knowledge', levels: ['beginner', 'intermediate', 'advanced'] },
   ];
+
+  const tabs = allTabs.filter(t => t.levels.includes(level));
+
+  // If current tab is hidden by level change, reset to intro
+  if (!tabs.find(t => t.id === activeTab)) {
+    setActiveTab('intro');
+  }
 
   return (
     <div className="App">
@@ -44,11 +61,24 @@ function App() {
         <header className="app-header">
           <div className="header-icon">UoA</div>
           <div className="header-text">
-            <h1 className="app-title">UoA — Master of Artificial Intelligence</h1>
+            <h1 className="app-title">UoA -- Master of Artificial Intelligence</h1>
             <p className="app-subtitle">
               <FaBrain style={{ marginRight: 4, verticalAlign: 'middle' }} />
               Recurrent Neural Networks Explorer
             </p>
+          </div>
+          <div className="level-selector">
+            {LEVELS.map(l => {
+              const LIcon = l.icon;
+              return (
+                <button key={l.id}
+                  className={`level-btn ${level === l.id ? 'active' : ''}`}
+                  onClick={() => setLevel(l.id)}
+                  title={l.desc}>
+                  <LIcon style={{ marginRight: 4 }} /> {l.label}
+                </button>
+              );
+            })}
           </div>
           <div className="header-badge">COMPSCI 713</div>
         </header>
@@ -70,6 +100,7 @@ function App() {
         </nav>
 
         <div className="tab-content">
+          {activeTab === 'intro' && <IntroPanel onNavigate={(tab, lvl) => { if (lvl) setLevel(lvl); setActiveTab(tab); }} />}
           {activeTab === 'visualizer' && <RNNVisualizer />}
           {activeTab === 'learn' && <LearnPanel />}
           {activeTab === 'gates' && <GateExplorer />}
@@ -83,7 +114,7 @@ function App() {
 
         <footer className="app-footer">
           <span>
-            <FaGraduationCap style={{ marginRight: 4 }} /> COMPSCI 713 — University of Auckland
+            <FaGraduationCap style={{ marginRight: 4 }} /> COMPSCI 713 -- University of Auckland
           </span>
           <span className="footer-sep">|</span>
           <span>Recurrent Neural Networks</span>

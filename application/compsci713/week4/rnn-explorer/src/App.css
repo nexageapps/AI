@@ -72,6 +72,37 @@
   letter-spacing: 0.5px;
 }
 
+/* Level selector */
+.level-selector {
+  display: flex;
+  gap: 3px;
+  background: #f1f5f9;
+  border-radius: 10px;
+  padding: 3px;
+  flex-shrink: 0;
+}
+
+.level-btn {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 8px;
+  background: transparent;
+  cursor: pointer;
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: #6b7280;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.level-btn:hover { background: rgba(0,70,127,0.08); }
+
+.level-btn.active {
+  background: white;
+  color: #00467F;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+}
+
 /* Tabs */
 .tab-bar {
   display: flex;

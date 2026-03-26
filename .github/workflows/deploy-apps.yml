@@ -29,6 +29,7 @@ jobs:
       model-eval: ${{ steps.filter.outputs.model-eval }}
       symbolic-logic: ${{ steps.filter.outputs.symbolic-logic }}
       neural-network: ${{ steps.filter.outputs.neural-network }}
+      rnn-explorer: ${{ steps.filter.outputs.rnn-explorer }}
       index:      ${{ steps.filter.outputs.index }}
     steps:
       - uses: actions/checkout@v4
@@ -50,6 +51,8 @@ jobs:
               - 'application/compsci713/week1/symbolic-logic/**'
             neural-network:
               - 'application/compsci713/week2/neural-network/**'
+            rnn-explorer:
+              - 'application/compsci713/week4/rnn-explorer/**'
             index:
               - 'index.html'
 
@@ -226,6 +229,30 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./application/compsci713/week2/neural-network/build
           destination_dir: neural-network
+          keep_files: true
+          user_name: 'github-actions[bot]'
+          user_email: 'github-actions[bot]@users.noreply.github.com'
+
+  deploy-rnn-explorer:
+    needs: [detect-changes, deploy-neural-network]
+    if: always() && !cancelled() && !failure() && (needs.detect-changes.outputs.rnn-explorer == 'true' || github.event_name == 'workflow_dispatch')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+          cache-dependency-path: application/compsci713/week4/rnn-explorer/package-lock.json
+      - run: npm ci
+        working-directory: application/compsci713/week4/rnn-explorer
+      - run: npm run build
+        working-directory: application/compsci713/week4/rnn-explorer
+      - uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./application/compsci713/week4/rnn-explorer/build
+          destination_dir: rnn-explorer
           keep_files: true
           user_name: 'github-actions[bot]'
           user_email: 'github-actions[bot]@users.noreply.github.com'

@@ -126,8 +126,6 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
-  max-height: 380px;
-  overflow-y: auto;
 }
 
 .sa-qkv-section {
@@ -363,6 +361,6 @@
 
 @media (max-width: 768px) {
   .sa-main-layout { flex-direction: column; }
-  .sa-qkv-panel { width: 100%; max-height: none; }
+  .sa-qkv-panel { width: 100%; }
   .sa-word-row { flex-wrap: wrap; }
 }

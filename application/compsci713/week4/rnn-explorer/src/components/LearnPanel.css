@@ -1,0 +1,248 @@
+.learn-panel {
+  display: flex;
+  gap: 16px;
+  min-height: 520px;
+}
+
+.lesson-sidebar {
+  width: 200px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.sidebar-title {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #6b7280;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 4px;
+}
+
+.lesson-nav-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 10px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  background: white;
+  cursor: pointer;
+  transition: all 0.2s;
+  text-align: left;
+  width: 100%;
+}
+
+.lesson-nav-btn:hover { border-color: #00467F; background: #f8fafc; }
+.lesson-nav-btn.active { border-color: #00467F; background: #eef5ff; }
+.lesson-nav-btn.completed { border-color: #22c55e; }
+
+.lesson-nav-icon { font-size: 0.9rem; color: #00467F; flex-shrink: 0; }
+.lesson-nav-text { flex: 1; font-size: 0.78rem; font-weight: 600; color: #374151; }
+.lesson-check { color: #22c55e; font-size: 0.8rem; }
+.lesson-arrow { color: #00467F; font-size: 0.7rem; }
+
+.lesson-progress {
+  margin-top: 8px;
+  font-size: 0.72rem;
+  color: #9ca3af;
+  text-align: center;
+  padding: 6px;
+  background: #f8fafc;
+  border-radius: 6px;
+}
+
+/* Content */
+.lesson-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.lesson-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #eef5ff;
+}
+
+.lesson-icon-big { font-size: 1.5rem; color: #00467F; }
+.lesson-title { color: #00467F; font-size: 1.3rem; font-weight: 800; margin: 0; }
+
+.lesson-body {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-height: 420px;
+  overflow-y: auto;
+  padding-right: 8px;
+}
+
+.content-block p { font-size: 0.88rem; color: #374151; line-height: 1.6; }
+
+/* Examples */
+.examples-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 8px;
+}
+
+.example-card {
+  display: flex;
+  gap: 8px;
+  padding: 10px;
+  background: #f8fafc;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+}
+
+.example-icon { font-size: 1.1rem; flex-shrink: 0; color: #00467F; margin-top: 2px; }
+.example-card strong { font-size: 0.82rem; color: #00467F; }
+.example-card p { font-size: 0.75rem; color: #6b7280; margin: 2px 0 0; line-height: 1.4; }
+
+/* Problem / Warning */
+.problem-box {
+  padding: 10px 14px;
+  background: #fffbeb;
+  border: 1px solid #fbbf24;
+  border-radius: 8px;
+}
+
+.problem-box h4 { font-size: 0.85rem; color: #92400e; margin-bottom: 6px; }
+.problem-box ul { padding-left: 18px; }
+.problem-box li { font-size: 0.82rem; color: #78350f; margin-bottom: 3px; }
+
+.warning-box {
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+  padding: 10px 14px;
+  background: #fef2f2;
+  border: 1px solid #fca5a5;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  color: #991b1b;
+}
+
+/* Solution / Keypoint */
+.solution-box {
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+  padding: 10px 14px;
+  background: #f0fdf4;
+  border: 1px solid #86efac;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  color: #166534;
+}
+
+.keypoint-box {
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+  padding: 10px 14px;
+  background: #fffbeb;
+  border: 1px solid #fde68a;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  color: #78350f;
+}
+
+/* Equations */
+.equation-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 14px;
+  background: #f1f5f9;
+  border-radius: 8px;
+  border-left: 3px solid #00467F;
+}
+
+.eq-label { font-size: 0.78rem; font-weight: 700; color: #00467F; white-space: nowrap; }
+.eq-formula { font-size: 0.82rem; color: #1e293b; background: white; padding: 4px 10px; border-radius: 4px; }
+
+/* Diagram */
+.diagram-box {
+  font-family: 'Courier New', monospace;
+  font-size: 0.82rem;
+  padding: 12px 16px;
+  background: #1e293b;
+  color: #e2e8f0;
+  border-radius: 8px;
+  overflow-x: auto;
+  line-height: 1.6;
+}
+
+/* Gates */
+.gates-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.gate-card {
+  padding: 10px 14px;
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-left: 4px solid;
+  border-radius: 8px;
+}
+
+.gate-header { display: flex; align-items: center; gap: 8px; margin-bottom: 4px; }
+.gate-name { font-weight: 700; font-size: 0.88rem; }
+.gate-symbol { font-size: 0.75rem; background: #f1f5f9; padding: 2px 6px; border-radius: 4px; }
+.gate-desc { font-size: 0.8rem; color: #6b7280; margin: 0; }
+.gate-formula { font-size: 0.75rem; color: #374151; display: block; margin-top: 4px; background: #f8fafc; padding: 4px 8px; border-radius: 4px; }
+
+/* Comparison table */
+.comparison-table-wrap h4 { font-size: 0.88rem; color: #00467F; margin-bottom: 8px; }
+
+.comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.8rem;
+}
+
+.comparison-table th {
+  background: #00467F;
+  color: white;
+  padding: 6px 10px;
+  text-align: left;
+  font-weight: 700;
+}
+
+.comparison-table td {
+  padding: 6px 10px;
+  border-bottom: 1px solid #e5e7eb;
+  color: #374151;
+}
+
+.comparison-table tr:nth-child(even) td { background: #f8fafc; }
+.aspect-cell { font-weight: 600; color: #00467F; }
+
+/* Complete button */
+.mark-complete-btn {
+  margin-top: 14px;
+  padding: 10px 24px;
+  background: #00467F;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.88rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.mark-complete-btn:hover { background: #003366; }
+
+@media (max-width: 768px) {
+  .learn-panel { flex-direction: column; }
+  .lesson-sidebar { width: 100%; flex-direction: row; overflow-x: auto; }
+  .lesson-nav-btn { min-width: 120px; }
+}

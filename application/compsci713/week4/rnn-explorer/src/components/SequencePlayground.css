@@ -1,0 +1,380 @@
+.seq-playground {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.sp-mode-bar {
+  display: flex;
+  gap: 4px;
+  background: #f1f5f9;
+  border-radius: 8px;
+  padding: 3px;
+}
+
+.sp-mode-btn {
+  flex: 1;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #6b7280;
+  background: transparent;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.sp-mode-btn:hover { background: rgba(0,70,127,0.06); }
+.sp-mode-btn.active { background: white; color: #00467F; box-shadow: 0 1px 4px rgba(0,0,0,0.1); }
+
+.sp-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #6b7280;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  display: block;
+  margin-bottom: 6px;
+}
+
+.sp-input-area {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.sp-input-row {
+  display: flex;
+  gap: 6px;
+}
+
+.sp-input {
+  flex: 1;
+  padding: 8px 12px;
+  border: 2px solid #e5e7eb;
+  border-radius: 8px;
+  font-size: 0.88rem;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.sp-input:focus { border-color: #00467F; }
+
+.sp-textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 2px solid #e5e7eb;
+  border-radius: 8px;
+  font-size: 0.88rem;
+  font-family: inherit;
+  outline: none;
+  resize: vertical;
+  transition: border-color 0.2s;
+}
+
+.sp-textarea:focus { border-color: #00467F; }
+
+.sp-gen-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  background: #00467F;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s;
+  white-space: nowrap;
+}
+
+.sp-gen-btn:hover { background: #003366; }
+.sp-gen-btn:disabled { opacity: 0.5; cursor: not-allowed; }
+
+.sp-reset-btn {
+  padding: 8px 12px;
+  border: 2px solid #e5e7eb;
+  border-radius: 8px;
+  background: white;
+  cursor: pointer;
+  color: #6b7280;
+  transition: all 0.2s;
+}
+
+.sp-reset-btn:hover { border-color: #00467F; color: #00467F; }
+
+/* Temperature */
+.sp-temp-control {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  background: #f8fafc;
+  border-radius: 8px;
+  font-size: 0.82rem;
+  color: #374151;
+}
+
+.sp-temp-control input[type="range"] {
+  flex: 1;
+  accent-color: #00467F;
+}
+
+.sp-temp-hint {
+  font-size: 0.75rem;
+  font-weight: 600;
+  min-width: 100px;
+}
+
+/* Output */
+.sp-output-box {
+  padding: 14px 16px;
+  background: #1e293b;
+  border-radius: 8px;
+  font-family: 'Courier New', monospace;
+  font-size: 0.92rem;
+  line-height: 1.6;
+  min-height: 80px;
+  color: #e2e8f0;
+}
+
+.sp-seed { color: #94a3b8; }
+.sp-generated { color: #22c55e; }
+.sp-cursor { color: #22c55e; animation: blink 0.8s infinite; }
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* Predictions */
+.sp-pred-bars {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.sp-pred-bar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.sp-pred-char {
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f1f5f9;
+  border-radius: 6px;
+  font-family: monospace;
+  font-weight: 700;
+  font-size: 0.85rem;
+  color: #374151;
+}
+
+.sp-pred-track {
+  flex: 1;
+  height: 20px;
+  background: #f1f5f9;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.sp-pred-fill {
+  height: 100%;
+  border-radius: 4px;
+  transition: width 0.3s;
+}
+
+.sp-pred-pct {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #6b7280;
+  min-width: 42px;
+  text-align: right;
+  font-family: monospace;
+}
+
+/* Info */
+.sp-info {
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+  padding: 10px 14px;
+  background: #eef5ff;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  color: #1e40af;
+  line-height: 1.5;
+}
+
+/* Sine */
+.sp-sine-mode {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.sine-canvas {
+  display: flex;
+  align-items: flex-end;
+  gap: 3px;
+  height: 160px;
+  padding: 10px;
+  background: #f8fafc;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+}
+
+.sine-bar-wrap {
+  flex: 1;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  position: relative;
+}
+
+.sine-bar {
+  width: 100%;
+  border-radius: 3px 3px 0 0;
+  transition: height 0.3s;
+  min-height: 2px;
+}
+
+.sine-divider {
+  position: absolute;
+  right: -2px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: #ef4444;
+}
+
+.sine-legend {
+  display: flex;
+  gap: 16px;
+  font-size: 0.72rem;
+  color: #6b7280;
+  justify-content: center;
+}
+
+.sine-dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-right: 4px;
+  vertical-align: middle;
+}
+
+/* Sentiment */
+.sp-sentiment-mode {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.sp-sentiment-result {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.sp-sentiment-badge {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 18px;
+  border-radius: 10px;
+  border: 2px solid;
+}
+
+.sp-sentiment-badge.positive { background: #dcfce7; border-color: #22c55e; }
+.sp-sentiment-badge.negative { background: #fee2e2; border-color: #ef4444; }
+.sp-sentiment-badge.neutral { background: #f1f5f9; border-color: #94a3b8; }
+
+.sp-sent-label { font-size: 1.2rem; font-weight: 800; }
+.sp-sentiment-badge.positive .sp-sent-label { color: #166534; }
+.sp-sentiment-badge.negative .sp-sent-label { color: #991b1b; }
+.sp-sentiment-badge.neutral .sp-sent-label { color: #374151; }
+
+.sp-sent-score { font-size: 0.82rem; color: #6b7280; font-family: monospace; }
+
+.sp-sentiment-meter {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.72rem;
+  color: #6b7280;
+}
+
+.sp-meter-track {
+  flex: 1;
+  height: 8px;
+  background: linear-gradient(to right, #ef4444, #f59e0b, #22c55e);
+  border-radius: 4px;
+  position: relative;
+}
+
+.sp-meter-fill {
+  position: absolute;
+  top: -4px;
+  width: 16px;
+  height: 16px;
+  background: white;
+  border: 3px solid #00467F;
+  border-radius: 50%;
+  transform: translateX(-50%);
+  transition: left 0.3s;
+}
+
+.sp-highlighted-text {
+  padding: 10px 14px;
+  background: #f8fafc;
+  border-radius: 8px;
+  line-height: 1.8;
+}
+
+.sp-word { font-size: 0.88rem; }
+.sp-word-pos { background: #dcfce7; padding: 2px 4px; border-radius: 4px; color: #166534; font-weight: 600; }
+.sp-word-neg { background: #fee2e2; padding: 2px 4px; border-radius: 4px; color: #991b1b; font-weight: 600; }
+.sp-word-neutral { color: #374151; }
+
+@media (max-width: 768px) {
+  .sp-input-row { flex-direction: column; }
+  .sp-mode-bar { flex-direction: column; }
+}
+
+.sp-two-col { display: flex; gap: 14px; }
+.sp-two-col > * { flex: 1; min-width: 0; }
+
+.sp-confidence-chart { display: flex; flex-direction: column; }
+.sp-conf-bars { display: flex; gap: 2px; align-items: flex-end; height: 80px; background: #f8fafc; border-radius: 6px; padding: 4px; }
+.sp-conf-bar-wrap { flex: 1; height: 100%; display: flex; align-items: flex-end; }
+.sp-conf-bar { width: 100%; border-radius: 2px 2px 0 0; transition: height 0.2s; min-height: 2px; }
+
+.sp-sent-icon { font-size: 1.3rem; }
+.sp-word-flow { display: flex; flex-wrap: wrap; align-items: center; gap: 4px; padding: 10px 14px; background: #f8fafc; border-radius: 8px; }
+.sp-word-arrow { font-size: 0.55rem; color: #9ca3af; flex-shrink: 0; }
+
+.sp-state-evolution { display: flex; flex-direction: column; gap: 4px; }
+.sp-state-bars { display: flex; gap: 2px; height: 60px; background: #f8fafc; border-radius: 6px; padding: 4px; align-items: center; }
+.sp-state-bar-wrap { flex: 1; height: 100%; display: flex; flex-direction: column; justify-content: center; }
+.sp-state-bar { width: 100%; border-radius: 2px; transition: height 0.2s; min-height: 2px; }
+.sp-state-axis { display: flex; justify-content: space-between; font-size: 0.62rem; color: #9ca3af; }
+
+.spinning { animation: spin 1s linear infinite; }
+@keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+
+@media (max-width: 768px) {
+  .sp-two-col { flex-direction: column; }
+}

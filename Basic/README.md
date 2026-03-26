@@ -68,6 +68,10 @@ graph LR
         L3["Lecture 3<br/>Training & Optimization"]
     end
     
+    subgraph "COMPSCI 714 Lecture 4: RNNs"
+        L4["Lecture 4<br/>Learning with Sequences"]
+    end
+    
     subgraph "Repository Lessons"
         B01["B01<br/>Symbolic Logic<br/>(Propositional Logic)"]
         B01a["B01a<br/>Arithmetic<br/>(Tensors, Matrix Ops)"]
@@ -75,6 +79,8 @@ graph LR
         B03["B03<br/>Binary Classification<br/>(Perceptron Intro)"]
         B05a["B05a<br/>Neural Networks Theory<br/>(COMPSCI 714)"]
         B05["B05<br/>Neural Network<br/>Fundamentals"]
+        B10a["B10a<br/>RNNs<br/>(COMPSCI 714)"]
+        B10["B10<br/>Recurrent Neural<br/>Networks"]
         I01["I01<br/>Advanced<br/>Optimization"]
     end
     
@@ -88,17 +94,24 @@ graph LR
     L3 ==>|"Backpropagation<br/>All GD Variants"| B05
     L3 -.->|"Advanced<br/>Optimizers"| I01
     
+    L4 ==>|"Complete<br/>Coverage"| B10a
+    L4 -.->|"RNN/LSTM/GRU<br/>Implementation"| B10
+    
     B01 --> B01a --> B02 --> B03 --> B05a --> B05
+    B05 --> B10a --> B10
     
     style L2 fill:#FFE5B4,stroke:#D4A574,stroke-width:3px
     style L3 fill:#FFE5B4,stroke:#D4A574,stroke-width:3px
+    style L4 fill:#FFE5B4,stroke:#D4A574,stroke-width:3px
     style B05a fill:#90EE90,stroke:#2d5016,stroke-width:3px
+    style B10a fill:#90EE90,stroke:#2d5016,stroke-width:3px
     style B05 fill:#B4E5FF,stroke:#74A5D4,stroke-width:2px
+    style B10 fill:#B4E5FF,stroke:#74A5D4,stroke-width:2px
 ```
 
 **Legend:**
 - 🟡 Orange: COMPSCI 714 Lectures
-- 🟢 Green: Dedicated course notebook (B05a)
+- 🟢 Green: Dedicated course notebooks (B05a, B10a)
 - 🔵 Blue: Core implementation lessons
 - Solid arrows (⇒): Primary coverage
 - Dashed arrows (⇢): Supporting concepts
@@ -206,6 +219,17 @@ graph LR
     - LSTM and GRU cells
     - Sequence modeling
     - **Why it matters:** Essential for time series and NLP
+
+10a. **B10a - Recurrent Neural Networks (COMPSCI 714)** - Lecture 4 aligned
+    - Sequential data, various sequence tasks, dealing with sequences
+    - Typical RNN architecture and RNN process (step-by-step)
+    - Several types of RNNs: Vanilla, LSTM, GRU
+    - Character-level language model (worked example)
+    - Backpropagation Through Time (BPTT) and vanishing/exploding gradients
+    - Deep RNNs: stacking several layers
+    - Visualising RNNs: hidden state trajectories, gate activations, character selectivity
+    - **Course Alignment:** COMPSCI 714 Lecture 4
+    - **Why it matters:** Directly maps to Week 4 lecture content
 
 11. **B11 - Attention and Transformers** - Modern attention mechanisms
     - Self-attention mechanism

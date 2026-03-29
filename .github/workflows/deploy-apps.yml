@@ -226,7 +226,7 @@ jobs:
         working-directory: application/compsci713/week2/neural-network
       - uses: peaceiris/actions-gh-pages@v4
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.GITHUB_TOKEN }} 
           publish_dir: ./application/compsci713/week2/neural-network/build
           destination_dir: neural-network
           keep_files: true

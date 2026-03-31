@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/AI/compsci714/week4/transformer-explorer/static/css/main.b64189d9.css",
+    "main.js": "/AI/compsci714/week4/transformer-explorer/static/js/main.374b9b4e.js",
+    "index.html": "/AI/compsci714/week4/transformer-explorer/index.html",
+    "main.b64189d9.css.map": "/AI/compsci714/week4/transformer-explorer/static/css/main.b64189d9.css.map",
+    "main.374b9b4e.js.map": "/AI/compsci714/week4/transformer-explorer/static/js/main.374b9b4e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b64189d9.css",
+    "static/js/main.374b9b4e.js"
+  ]
+}

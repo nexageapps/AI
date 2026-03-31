@@ -339,7 +339,7 @@ graph TD
 
 After completing Advanced level:
 
-1. **Expert Level:** Research and innovation
+1. **[Expert Level](../Expert/):** Research and innovation (E01-E15)
 2. **Industry:** Senior ML Engineer or MLOps roles
 3. **Certifications:** AWS ML Specialty, GCP ML Engineer
 4. **Open Source:** Contribute to major ML frameworks

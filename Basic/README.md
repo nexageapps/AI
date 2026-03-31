@@ -119,7 +119,6 @@ graph LR
 **Quick Links:**
 - [COMPSCI 714 Complete Guide](../documentation/courses/COMPSCI_714_COMPLETE_GUIDE.md)
 - [Lecture 2: Neural Networks](../documentation/courses/COMPSCI_714_LECTURE_2.md)
-- [Lecture 3: Training & Optimization](../documentation/courses/COMPSCI_714_LECTURE_3.md)
 
 ---
 
@@ -181,7 +180,14 @@ graph LR
    - Gradient descent and steepest descent mathematics
    - **Why it matters:** Deep theoretical understanding for advanced study
    - **Course Alignment:** COMPSCI 714 Lecture 2
-   - **Supplement:** [COMPSCI 714 Lecture 2 Guide](../documentation/COMPSCI_714_LECTURE_2_SUPPLEMENT.md)
+
+5b. **B05b - Training and Optimization (COMPSCI 714)** - Training deep networks
+   - Learning as optimization (loss functions, objective functions)
+   - Gradient descent algorithm and learning rate selection
+   - Gradient descent variants (batch, mini-batch, stochastic)
+   - Backpropagation and automatic differentiation
+   - **Why it matters:** Core training techniques for all neural networks
+   - **Course Alignment:** COMPSCI 714 Lecture 3
 
 6. **B06 - Data Preprocessing and Feature Engineering** - Data preparation techniques
    - Handling missing values
@@ -907,7 +913,7 @@ After completing all Basic lessons:
 1. **Build Portfolio:** Complete 2-3 projects from B15
 2. **Share Work:** Post on GitHub and LinkedIn
 3. **Get Feedback:** Join communities and ask for reviews
-4. **Move Forward:** Start Intermediate level (coming soon)
+4. **Move Forward:** Start [Intermediate level](../Intermediate/)
 5. **Keep Learning:** Follow latest research and trends
 
 ---

@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/AI/compsci714/week4/bpe-explorer/static/css/main.8db8de4f.css",
+    "main.js": "/AI/compsci714/week4/bpe-explorer/static/js/main.9588b475.js",
+    "index.html": "/AI/compsci714/week4/bpe-explorer/index.html",
+    "main.8db8de4f.css.map": "/AI/compsci714/week4/bpe-explorer/static/css/main.8db8de4f.css.map",
+    "main.9588b475.js.map": "/AI/compsci714/week4/bpe-explorer/static/js/main.9588b475.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8db8de4f.css",
+    "static/js/main.9588b475.js"
+  ]
+}

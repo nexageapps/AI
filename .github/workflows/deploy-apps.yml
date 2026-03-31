@@ -67,7 +67,7 @@ jobs:
 
   deploy-index:
     needs: detect-changes
-    if: always() && !cancelled() && !failure() && (needs.detect-changes.outputs.index == 'true' || github.event_name == 'workflow_dispatch')
+    if: always() && !cancelled() && needs.detect-changes.result == 'success' && (needs.detect-changes.outputs.index == 'true' || github.event_name == 'workflow_dispatch')
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -82,7 +82,7 @@ jobs:
 
   deploy-wumpus:
     needs: [detect-changes, deploy-index]
-    if: always() && !cancelled() && !failure() && (needs.detect-changes.outputs.wumpus == 'true' || github.event_name == 'workflow_dispatch')
+    if: always() && !cancelled() && needs.detect-changes.result == 'success' && (needs.detect-changes.outputs.wumpus == 'true' || github.event_name == 'workflow_dispatch')
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -106,7 +106,7 @@ jobs:
 
   deploy-nn-trainer:
     needs: [detect-changes, deploy-wumpus]
-    if: always() && !cancelled() && !failure() && (needs.detect-changes.outputs.nn-trainer == 'true' || github.event_name == 'workflow_dispatch')
+    if: always() && !cancelled() && needs.detect-changes.result == 'success' && (needs.detect-changes.outputs.nn-trainer == 'true' || github.event_name == 'workflow_dispatch')
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -130,7 +130,7 @@ jobs:
 
   deploy-gradient:
     needs: [detect-changes, deploy-nn-trainer]
-    if: always() && !cancelled() && !failure() && (needs.detect-changes.outputs.gradient == 'true' || github.event_name == 'workflow_dispatch')
+    if: always() && !cancelled() && needs.detect-changes.result == 'success' && (needs.detect-changes.outputs.gradient == 'true' || github.event_name == 'workflow_dispatch')
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -154,7 +154,7 @@ jobs:
 
   deploy-kg-playground:
     needs: [detect-changes, deploy-gradient]
-    if: always() && !cancelled() && !failure() && (needs.detect-changes.outputs.kg-playground == 'true' || github.event_name == 'workflow_dispatch')
+    if: always() && !cancelled() && needs.detect-changes.result == 'success' && (needs.detect-changes.outputs.kg-playground == 'true' || github.event_name == 'workflow_dispatch')
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -176,7 +176,7 @@ jobs:
 
   deploy-model-eval:
     needs: [detect-changes, deploy-kg-playground]
-    if: always() && !cancelled() && !failure() && (needs.detect-changes.outputs.model-eval == 'true' || github.event_name == 'workflow_dispatch')
+    if: always() && !cancelled() && needs.detect-changes.result == 'success' && (needs.detect-changes.outputs.model-eval == 'true' || github.event_name == 'workflow_dispatch')
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -196,7 +196,7 @@ jobs:
 
   deploy-symbolic-logic:
     needs: [detect-changes, deploy-model-eval]
-    if: always() && !cancelled() && !failure() && (needs.detect-changes.outputs.symbolic-logic == 'true' || github.event_name == 'workflow_dispatch')
+    if: always() && !cancelled() && needs.detect-changes.result == 'success' && (needs.detect-changes.outputs.symbolic-logic == 'true' || github.event_name == 'workflow_dispatch')
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -220,7 +220,7 @@ jobs:
 
   deploy-neural-network:
     needs: [detect-changes, deploy-symbolic-logic]
-    if: always() && !cancelled() && !failure() && (needs.detect-changes.outputs.neural-network == 'true' || github.event_name == 'workflow_dispatch')
+    if: always() && !cancelled() && needs.detect-changes.result == 'success' && (needs.detect-changes.outputs.neural-network == 'true' || github.event_name == 'workflow_dispatch')
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -235,7 +235,7 @@ jobs:
         working-directory: application/compsci713/week2/neural-network
       - uses: peaceiris/actions-gh-pages@v4
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }} 
+          github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./application/compsci713/week2/neural-network/build
           destination_dir: neural-network
           keep_files: true
@@ -244,7 +244,7 @@ jobs:
 
   deploy-rnn-explorer:
     needs: [detect-changes, deploy-neural-network]
-    if: always() && !cancelled() && !failure() && (needs.detect-changes.outputs.rnn-explorer == 'true' || github.event_name == 'workflow_dispatch')
+    if: always() && !cancelled() && needs.detect-changes.result == 'success' && (needs.detect-changes.outputs.rnn-explorer == 'true' || github.event_name == 'workflow_dispatch')
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -268,7 +268,7 @@ jobs:
 
   deploy-cnn-explorer:
     needs: [detect-changes, deploy-rnn-explorer]
-    if: always() && !cancelled() && !failure() && (needs.detect-changes.outputs.cnn-explorer == 'true' || github.event_name == 'workflow_dispatch')
+    if: always() && !cancelled() && needs.detect-changes.result == 'success' && (needs.detect-changes.outputs.cnn-explorer == 'true' || github.event_name == 'workflow_dispatch')
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -292,7 +292,7 @@ jobs:
 
   deploy-transformer-explorer:
     needs: [detect-changes, deploy-cnn-explorer]
-    if: always() && !cancelled() && !failure() && (needs.detect-changes.outputs.transformer-explorer == 'true' || github.event_name == 'workflow_dispatch')
+    if: always() && !cancelled() && needs.detect-changes.result == 'success' && (needs.detect-changes.outputs.transformer-explorer == 'true' || github.event_name == 'workflow_dispatch')
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -316,7 +316,7 @@ jobs:
 
   deploy-bpe-explorer:
     needs: [detect-changes, deploy-transformer-explorer]
-    if: always() && !cancelled() && !failure() && (needs.detect-changes.outputs.bpe-explorer == 'true' || github.event_name == 'workflow_dispatch')
+    if: always() && !cancelled() && needs.detect-changes.result == 'success' && (needs.detect-changes.outputs.bpe-explorer == 'true' || github.event_name == 'workflow_dispatch')
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4

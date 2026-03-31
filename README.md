@@ -8,13 +8,13 @@
 
 **Open-source AI education built by a student, for students and learners worldwide.**
 
-Basic to Expert. Zero to Language Models. 60+ lessons. 100% hands-on.
+Basic to Expert. Zero to Language Models. 64 lessons. 100% hands-on.
 
 [Quick Start](#quick-start) • [Student Guide](./documentation/MAI_STUDENT_GUIDE.md) • [Exam Prep](./documentation/EXAM_PREPARATION_GUIDE.md) • [LinkedIn](https://www.linkedin.com/in/karthik-arjun-a5b4a258/) • [Support Project](https://buymeacoffee.com/fcc4sbsx5f6)
 
 [![Python](https://img.shields.io/badge/Python-3.8+-orange.svg)](https://www.python.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](./LICENSE)
-[![Lessons](https://img.shields.io/badge/Lessons-60+-brightgreen.svg)](./Basic/)
+[![Lessons](https://img.shields.io/badge/Lessons-64-brightgreen.svg)](./Basic/)
 [![Sponsored by nexageapps](https://img.shields.io/badge/Sponsored%20by-nexageapps-blue.svg)](https://nexageapps.com)
 [![Buy me a book](https://img.shields.io/badge/Buy%20Me%20A%20Book-Support-yellow.svg)](https://buymeacoffee.com/fcc4sbsx5f6)
 
@@ -30,7 +30,7 @@ This is an **independent learning project**, NOT official University of Auckland
 
 ## What Is This?
 
-A structured, hands-on learning path from basic arithmetic to complete language models. **60+ lessons** with runnable code, visualizations, and practical projects.
+A structured, hands-on learning path from basic arithmetic to complete language models. **64 lessons** with runnable code, visualizations, and practical projects.
 
 **Perfect for:**
 - University students learning AI/ML
@@ -44,12 +44,12 @@ A structured, hands-on learning path from basic arithmetic to complete language 
 
 ### 1. Choose Your Path
 
-| Level | Duration | Best For |
-|-------|----------|----------|
-| **Basic (B01-B15)** | 2-3 weeks | Foundations & core concepts |
-| **Intermediate (I01-I15)** | 4-6 weeks | Advanced techniques |
-| **Advanced (A01-A15)** | 6-8 weeks | Production systems |
-| **Expert (E01-E15)** | 8-10 weeks | Research & innovation |
+| Level | Lessons | Duration | Best For |
+|-------|---------|----------|----------|
+| **Basic (B01-B15)** | 19 | 2-3 weeks | Foundations & core concepts |
+| **Intermediate (I01-I15)** | 15 | 4-6 weeks | Advanced techniques |
+| **Advanced (A01-A15)** | 15 | 6-8 weeks | Production systems |
+| **Expert (E01-E15)** | 15 | 8-10 weeks | Research & innovation |
 
 ### 2. Set Up
 
@@ -78,15 +78,14 @@ jupyter lab
 
 ```
 AI/
-├── Basic/              # 15 Lessons (B01-B15) ✅
+├── Basic/              # 19 Lessons (B01-B15 + B01a, B05a, B05b, B10a) ✅
 ├── Intermediate/       # 15 Lessons (I01-I15) ✅
 ├── Advanced/           # 15 Lessons (A01-A15) ✅
 ├── Expert/             # 15 Lessons (E01-E15) ✅
 ├── application/        # Live demos & practical implementations
-└── documentation/      # Guides & resources
+├── documentation/      # Guides & resources
+└── landingpage/        # Landing page assets
 ```
-
-**[View Full Learning Path Diagram](./documentation/LEARNING_PATH_DIAGRAM.md)**
 
 ---
 
@@ -108,6 +107,9 @@ Interactive demonstrations of AI concepts in action:
 | **Neural Network Trainer** | Forward Propagation, Backpropagation & Gradient Descent | UoA-COMPSCI 714 | [COMPSCI 714 – Neural Networks](./documentation/courses/COMPSCI_714_COMPLETE_GUIDE.md) | [B05 - Neural Network Fundamentals](https://github.com/nexageapps/AI/blob/main/Basic/B05%20-%20Neural%20Network%20Fundamentals.ipynb) · [B05a - Neural Networks Theory](https://github.com/nexageapps/AI/blob/main/Basic/B05a%20-%20Neural%20Networks%20Theory%20(COMPSCI%20714).ipynb) | [Play Online](https://nexageapps.github.io/AI/nn-trainer/) |
 | **Data Preprocessing Studio** | Missing Values, Feature Scaling, Encoding & Feature Engineering | UoA-COMPSCI 714 | [COMPSCI 714 – Neural Networks](./documentation/courses/COMPSCI_714_COMPLETE_GUIDE.md) | [B06 - Data Preprocessing and Feature Engineering](https://github.com/nexageapps/AI/blob/main/Basic/B06%20-%20Data%20Preprocessing%20and%20Feature%20Engineering.ipynb) | [Play Online](https://nexageapps.github.io/AI/compsci714/week3/data-preprocessing-studio) |
 | **KG Playground** | RDF Triples, Knowledge Graphs, RAG & Conflict Detection | UoA-COMPSCI 713 | [COMPSCI 713 – AI Fundamentals](#compsci-713) | [A03 - Retrieval-Augmented Generation](https://github.com/nexageapps/AI/blob/main/Advanced/A03%20-%20Retrieval-Augmented%20Generation%20(RAG).ipynb) | [Play Online](https://nexageapps.github.io/AI/compsci713/week3/kg-playground/) |
+| **CNN Explorer** | Convolution, Pooling, Feature Maps, Architecture & Playground | UoA-COMPSCI 714 | [COMPSCI 714 – Neural Networks](./documentation/courses/COMPSCI_714_COMPLETE_GUIDE.md) | [B09 - CNNs](https://github.com/nexageapps/AI/blob/main/Basic/B09%20-%20Convolutional%20Neural%20Networks.ipynb) | [Play Online](https://nexageapps.github.io/AI/compsci714/week3/cnn-explorer/) |
+| **Transformer Explorer** | Self-Attention, Multi-Head Attention, Q/K/V & Architecture | UoA-COMPSCI 714 | [COMPSCI 714 – Neural Networks](./documentation/courses/COMPSCI_714_COMPLETE_GUIDE.md) | [B11 - Attention & Transformers](https://github.com/nexageapps/AI/blob/main/Basic/B11%20-%20Attention%20and%20Transformers.ipynb) | [Play Online](https://nexageapps.github.io/AI/compsci714/week4/transformer-explorer/) |
+| **BPE Explorer** | Byte Pair Encoding, Tokenization, Subwords & Vocabulary | UoA-COMPSCI 714 | [COMPSCI 714 – Neural Networks](./documentation/courses/COMPSCI_714_COMPLETE_GUIDE.md) | [B12 - BPE](https://github.com/nexageapps/AI/blob/main/Basic/B12%20-%20Byte%20Pair%20Encoding%20(BPE).ipynb) | [Play Online](https://nexageapps.github.io/AI/compsci714/week4/bpe-explorer/) |
 
 **[View All Games](https://nexageapps.github.io/AI/)** • Explore the `application/` folder for source code and deployment guides.
 
@@ -119,13 +121,13 @@ Interactive demonstrations of AI concepts in action:
 
 | Course | Focus | Examples |
 |--------|-------|----------|
-| **COMPSCI 713** | AI Fundamentals | [Agents, Knowledge, Game AI](./documentation/UNIVERSITY_OF_AUCKLAND_EXTENSIONS.md#compsci-713--ai-fundamentals) |
-| **COMPSCI 714** | Neural Networks | [Networks, Gradient Descent, CNNs, Attention](./documentation/COMPSCI_714_EXTENSIONS.md) |
-| **COMPSCI 762** | ML Foundations | [Regression, Classification, Tuning](./documentation/UNIVERSITY_OF_AUCKLAND_EXTENSIONS.md#compsci-762--machine-learning-foundations) |
-| **COMPSCI 703** | Generalising AI | [Transfer Learning, Domain Adaptation](./documentation/UNIVERSITY_OF_AUCKLAND_EXTENSIONS.md#compsci-703--generalising-ai) |
-| **COMPSYS 721** | Deep Learning | [Detection, Time Series, NLP, GANs](./documentation/UNIVERSITY_OF_AUCKLAND_EXTENSIONS.md#compsys-721--deep-learning) |
+| **COMPSCI 713** | AI Fundamentals | Agents, Knowledge, Game AI |
+| **COMPSCI 714** | Neural Networks | [Networks, Gradient Descent, CNNs, Attention](./documentation/courses/COMPSCI_714_COMPLETE_GUIDE.md) |
+| **COMPSCI 762** | ML Foundations | Regression, Classification, Tuning |
+| **COMPSCI 703** | Generalising AI | Transfer Learning, Domain Adaptation |
+| **COMPSYS 721** | Deep Learning | Detection, Time Series, NLP, GANs |
 
-**[Full University of Auckland Guide](./documentation/UNIVERSITY_OF_AUCKLAND_EXTENSIONS.md)**
+**[COMPSCI 714 Complete Guide](./documentation/courses/COMPSCI_714_COMPLETE_GUIDE.md)**
 
 ### Study Tips
 
@@ -144,9 +146,7 @@ Interactive demonstrations of AI concepts in action:
 |----------|---------|
 | [Student Guide](./documentation/MAI_STUDENT_GUIDE.md) | Course mapping, semester planning, study strategies |
 | [Exam Prep Guide](./documentation/EXAM_PREPARATION_GUIDE.md) | Exam strategies, practice problems, concept review |
-| [University of Auckland Extensions](./documentation/UNIVERSITY_OF_AUCKLAND_EXTENSIONS.md) | Practical examples for 5 courses |
-| [COMPSCI 714 Detailed Examples](./documentation/COMPSCI_714_EXTENSIONS.md) | 4 detailed neural network projects |
-| [Learning Path](./documentation/LEARNING_PATH.md) | Full learning path diagram & explanation |
+| [COMPSCI 714 Complete Guide](./documentation/courses/COMPSCI_714_COMPLETE_GUIDE.md) | Neural network course guide with lecture alignment |
 | [Documentation Index](./documentation/DOCUMENTATION_INDEX.md) | Complete guide to all documentation |
 | [Academic Integrity](./documentation/ACADEMIC_INTEGRITY.md) | Responsible use guidelines |
 
@@ -155,11 +155,14 @@ Interactive demonstrations of AI concepts in action:
 ## What You'll Learn
 
 ### Basic Level (B01-B15)
+- Symbolic logic & first-order logic
 - Tensors & linear algebra
 - Linear regression & gradient descent
 - Binary & multi-class classification
 - Neural networks from scratch
+- Training & optimization theory (COMPSCI 714)
 - Data preprocessing & evaluation
+- Regularization & overfitting
 - CNNs, RNNs, Transformers
 - Tokenization & language models
 
@@ -201,8 +204,6 @@ Interactive demonstrations of AI concepts in action:
 **Advanced:** RAG system, domain-specific LLM, multi-modal search, code reviewer, real-time detection
 
 **Research:** Novel architecture, paper reproduction, bias detection, model compression, federated learning
-
-**[Full Project Ideas List](./documentation/PROJECT_IDEAS.md)**
 
 ---
 

@@ -30,6 +30,9 @@ jobs:
       symbolic-logic: ${{ steps.filter.outputs.symbolic-logic }}
       neural-network: ${{ steps.filter.outputs.neural-network }}
       rnn-explorer: ${{ steps.filter.outputs.rnn-explorer }}
+      cnn-explorer: ${{ steps.filter.outputs.cnn-explorer }}
+      transformer-explorer: ${{ steps.filter.outputs.transformer-explorer }}
+      bpe-explorer: ${{ steps.filter.outputs.bpe-explorer }}
       index:      ${{ steps.filter.outputs.index }}
     steps:
       - uses: actions/checkout@v4
@@ -53,6 +56,12 @@ jobs:
               - 'application/compsci713/week2/neural-network/**'
             rnn-explorer:
               - 'application/compsci713/week4/rnn-explorer/**'
+            cnn-explorer:
+              - 'application/compsci714/week3/cnn-explorer/**'
+            transformer-explorer:
+              - 'application/compsci714/week4/transformer-explorer/**'
+            bpe-explorer:
+              - 'application/compsci714/week4/bpe-explorer/**'
             index:
               - 'index.html'
 
@@ -253,6 +262,78 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./application/compsci713/week4/rnn-explorer/build
           destination_dir: rnn-explorer
+          keep_files: true
+          user_name: 'github-actions[bot]'
+          user_email: 'github-actions[bot]@users.noreply.github.com'
+
+  deploy-cnn-explorer:
+    needs: [detect-changes, deploy-rnn-explorer]
+    if: always() && !cancelled() && !failure() && (needs.detect-changes.outputs.cnn-explorer == 'true' || github.event_name == 'workflow_dispatch')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+          cache-dependency-path: application/compsci714/week3/cnn-explorer/package-lock.json
+      - run: npm ci
+        working-directory: application/compsci714/week3/cnn-explorer
+      - run: npm run build
+        working-directory: application/compsci714/week3/cnn-explorer
+      - uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./application/compsci714/week3/cnn-explorer/build
+          destination_dir: compsci714/week3/cnn-explorer
+          keep_files: true
+          user_name: 'github-actions[bot]'
+          user_email: 'github-actions[bot]@users.noreply.github.com'
+
+  deploy-transformer-explorer:
+    needs: [detect-changes, deploy-cnn-explorer]
+    if: always() && !cancelled() && !failure() && (needs.detect-changes.outputs.transformer-explorer == 'true' || github.event_name == 'workflow_dispatch')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+          cache-dependency-path: application/compsci714/week4/transformer-explorer/package-lock.json
+      - run: npm ci
+        working-directory: application/compsci714/week4/transformer-explorer
+      - run: npm run build
+        working-directory: application/compsci714/week4/transformer-explorer
+      - uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./application/compsci714/week4/transformer-explorer/build
+          destination_dir: compsci714/week4/transformer-explorer
+          keep_files: true
+          user_name: 'github-actions[bot]'
+          user_email: 'github-actions[bot]@users.noreply.github.com'
+
+  deploy-bpe-explorer:
+    needs: [detect-changes, deploy-transformer-explorer]
+    if: always() && !cancelled() && !failure() && (needs.detect-changes.outputs.bpe-explorer == 'true' || github.event_name == 'workflow_dispatch')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+          cache-dependency-path: application/compsci714/week4/bpe-explorer/package-lock.json
+      - run: npm ci
+        working-directory: application/compsci714/week4/bpe-explorer
+      - run: npm run build
+        working-directory: application/compsci714/week4/bpe-explorer
+      - uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./application/compsci714/week4/bpe-explorer/build
+          destination_dir: compsci714/week4/bpe-explorer
           keep_files: true
           user_name: 'github-actions[bot]'
           user_email: 'github-actions[bot]@users.noreply.github.com'

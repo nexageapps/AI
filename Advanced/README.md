@@ -174,37 +174,6 @@ This is an independent, open-source educational project created by a student for
 
 ---
 
-## Current Status
-
-✅ **All Notebooks Created!**
-
-**Large Language Models (A01-A03):**
-- A01 - Fine-tuning Large Language Models ✅
-- A02 - Prompt Engineering and In-Context Learning ✅
-- A03 - Retrieval-Augmented Generation (RAG) ✅
-
-**Multi-Modal AI (A04-A06):**
-- A04 - Vision-Language Models ✅
-- A05 - Audio and Speech Processing ✅
-- A06 - Multi-Modal Fusion and Integration ✅
-
-**Distributed & Scalable Training (A07-A09):**
-- A07 - Distributed Training Strategies ✅
-- A08 - Mixed Precision and Optimization ✅
-- A09 - Model Serving and Inference Optimization ✅
-
-**Production MLOps (A10-A15):**
-- A10 - ML Pipeline Architecture ✅
-- A11 - Containerization and Deployment ✅
-- A12 - Monitoring and Observability ✅
-- A13 - CI-CD for Machine Learning ✅
-- A14 - Responsible AI and Governance ✅
-- A15 - Production Case Studies and Capstone ✅
-
-🎉 **All tracks complete! Ready for production ML engineering.**
-
----
-
 ## Learning Paths
 
 ### Path 1: Complete Advanced (Recommended)
@@ -370,7 +339,7 @@ graph TD
 
 After completing Advanced level:
 
-1. **Expert Level:** Research and innovation
+1. **[Expert Level](../Expert/):** Research and innovation (E01-E15)
 2. **Industry:** Senior ML Engineer or MLOps roles
 3. **Certifications:** AWS ML Specialty, GCP ML Engineer
 4. **Open Source:** Contribute to major ML frameworks

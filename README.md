@@ -8,13 +8,13 @@
 
 **Open-source AI education built by a student, for students and learners worldwide.**
 
-Basic to Expert. Zero to Language Models. 60+ lessons. 100% hands-on.
+Basic to Expert. Zero to Language Models. 64 lessons. 100% hands-on.
 
 [Quick Start](#quick-start) • [Student Guide](./documentation/MAI_STUDENT_GUIDE.md) • [Exam Prep](./documentation/EXAM_PREPARATION_GUIDE.md) • [LinkedIn](https://www.linkedin.com/in/karthik-arjun-a5b4a258/) • [Support Project](https://buymeacoffee.com/fcc4sbsx5f6)
 
 [![Python](https://img.shields.io/badge/Python-3.8+-orange.svg)](https://www.python.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](./LICENSE)
-[![Lessons](https://img.shields.io/badge/Lessons-60+-brightgreen.svg)](./Basic/)
+[![Lessons](https://img.shields.io/badge/Lessons-64-brightgreen.svg)](./Basic/)
 [![Sponsored by nexageapps](https://img.shields.io/badge/Sponsored%20by-nexageapps-blue.svg)](https://nexageapps.com)
 [![Buy me a book](https://img.shields.io/badge/Buy%20Me%20A%20Book-Support-yellow.svg)](https://buymeacoffee.com/fcc4sbsx5f6)
 
@@ -30,7 +30,7 @@ This is an **independent learning project**, NOT official University of Auckland
 
 ## What Is This?
 
-A structured, hands-on learning path from basic arithmetic to complete language models. **60+ lessons** with runnable code, visualizations, and practical projects.
+A structured, hands-on learning path from basic arithmetic to complete language models. **64 lessons** with runnable code, visualizations, and practical projects.
 
 **Perfect for:**
 - University students learning AI/ML
@@ -44,12 +44,12 @@ A structured, hands-on learning path from basic arithmetic to complete language 
 
 ### 1. Choose Your Path
 
-| Level | Duration | Best For |
-|-------|----------|----------|
-| **Basic (B01-B15)** | 2-3 weeks | Foundations & core concepts |
-| **Intermediate (I01-I15)** | 4-6 weeks | Advanced techniques |
-| **Advanced (A01-A15)** | 6-8 weeks | Production systems |
-| **Expert (E01-E15)** | 8-10 weeks | Research & innovation |
+| Level | Lessons | Duration | Best For |
+|-------|---------|----------|----------|
+| **Basic (B01-B15)** | 19 | 2-3 weeks | Foundations & core concepts |
+| **Intermediate (I01-I15)** | 15 | 4-6 weeks | Advanced techniques |
+| **Advanced (A01-A15)** | 15 | 6-8 weeks | Production systems |
+| **Expert (E01-E15)** | 15 | 8-10 weeks | Research & innovation |
 
 ### 2. Set Up
 

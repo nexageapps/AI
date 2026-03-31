@@ -78,6 +78,7 @@ graph LR
         B02["B02<br/>Linear Regression<br/>(Gradient Descent)"]
         B03["B03<br/>Binary Classification<br/>(Perceptron Intro)"]
         B05a["B05a<br/>Neural Networks Theory<br/>(COMPSCI 714)"]
+        B05b["B05b<br/>Training & Optimization<br/>(COMPSCI 714)"]
         B05["B05<br/>Neural Network<br/>Fundamentals"]
         B10a["B10a<br/>RNNs<br/>(COMPSCI 714)"]
         B10["B10<br/>Recurrent Neural<br/>Networks"]
@@ -91,19 +92,21 @@ graph LR
     L2 -.->|"MLP, DNN<br/>Implementation"| B05
     
     L3 -.->|"Optimization<br/>Algorithms"| B02
-    L3 ==>|"Backpropagation<br/>All GD Variants"| B05
+    L3 ==>|"Complete<br/>Coverage"| B05b
+    L3 -.->|"Backpropagation<br/>All GD Variants"| B05
     L3 -.->|"Advanced<br/>Optimizers"| I01
     
     L4 ==>|"Complete<br/>Coverage"| B10a
     L4 -.->|"RNN/LSTM/GRU<br/>Implementation"| B10
     
-    B01 --> B01a --> B02 --> B03 --> B05a --> B05
+    B01 --> B01a --> B02 --> B03 --> B05a --> B05b --> B05
     B05 --> B10a --> B10
     
     style L2 fill:#FFE5B4,stroke:#D4A574,stroke-width:3px
     style L3 fill:#FFE5B4,stroke:#D4A574,stroke-width:3px
     style L4 fill:#FFE5B4,stroke:#D4A574,stroke-width:3px
     style B05a fill:#90EE90,stroke:#2d5016,stroke-width:3px
+    style B05b fill:#90EE90,stroke:#2d5016,stroke-width:3px
     style B10a fill:#90EE90,stroke:#2d5016,stroke-width:3px
     style B05 fill:#B4E5FF,stroke:#74A5D4,stroke-width:2px
     style B10 fill:#B4E5FF,stroke:#74A5D4,stroke-width:2px
@@ -111,7 +114,7 @@ graph LR
 
 **Legend:**
 - 🟡 Orange: COMPSCI 714 Lectures
-- 🟢 Green: Dedicated course notebooks (B05a, B10a)
+- 🟢 Green: Dedicated course notebooks (B05a, B05b, B10a)
 - 🔵 Blue: Core implementation lessons
 - Solid arrows (⇒): Primary coverage
 - Dashed arrows (⇢): Supporting concepts
@@ -275,7 +278,7 @@ graph LR
     - Deployment strategies
     - **Why it matters:** Showcase your skills to employers
 
-**Total Learning Time:** 40-60 hours for complete mastery
+**Total Learning Time:** 50-70 hours for complete mastery (19 notebooks)
 
 ---
 
@@ -327,9 +330,9 @@ graph TD
 
 ```
 Week 1-2:   B01 → B01a → B02 → B03 (Foundation)
-Week 3-4:   B04 → B05 (Core ML)
-Week 5-6:   B06 → B07 (Data & Evaluation)
-Week 7-8:   B09 → B10 (Deep Learning)
+Week 3-4:   B04 → B05a → B05b → B05 (Core ML)
+Week 5-6:   B06 → B07 → B08 (Data & Evaluation)
+Week 7-8:   B09 → B10 → B10a (Deep Learning)
 Week 9-10:  B11 → B12 (Transformers & Tokenization)
 Week 11:    B13 (Language Model)
 Week 12+:   B14 → B15 (Projects)
@@ -364,9 +367,9 @@ graph LR
 
 ```
 Week 1:     B01 → B01a → B02 → B03 (Quick foundation)
-Week 2:     B04 → B05 (Neural networks)
+Week 2:     B04 → B05a → B05b → B05 (Neural networks)
 Week 3:     B06 → B07 (Data handling)
-Week 4-5:   B10 → B11 (RNNs & Transformers)
+Week 4-5:   B10 → B10a → B11 (RNNs & Transformers)
 Week 6:     B12 → B13 (Tokenization & LLMs)
 Week 7-8:   B14 (Assignments 7-10) → B15 (NLP projects)
 ```
@@ -793,6 +796,8 @@ graph LR
 
 ### Checklist: Core ML Stage
 - [ ] B04: Build multi-class classifier
+- [ ] B05a: Understand neural network theory
+- [ ] B05b: Master training and optimization
 - [ ] B05: Understand backpropagation
 - [ ] B06: Clean and preprocess real dataset
 - [ ] B07: Evaluate model with multiple metrics

@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/AI/compsci714/week3/cnn-explorer/static/css/main.40d093aa.css",
+    "main.js": "/AI/compsci714/week3/cnn-explorer/static/js/main.9c944fb3.js",
+    "index.html": "/AI/compsci714/week3/cnn-explorer/index.html",
+    "main.40d093aa.css.map": "/AI/compsci714/week3/cnn-explorer/static/css/main.40d093aa.css.map",
+    "main.9c944fb3.js.map": "/AI/compsci714/week3/cnn-explorer/static/js/main.9c944fb3.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.40d093aa.css",
+    "static/js/main.9c944fb3.js"
+  ]
+}

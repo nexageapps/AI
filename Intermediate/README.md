@@ -283,7 +283,7 @@ Track your progress as you complete each lesson:
 ## Next Steps
 
 After completing Intermediate level:
-1. **Advanced Level** - Production AI systems (A01-A15)
+1. **[Advanced Level](../Advanced/)** - Production AI systems (A01-A15)
 2. **Build Projects** - Apply to real-world problems
 3. **Contribute** - Share your implementations
 4. **Specialize** - Deep dive into your area of interest

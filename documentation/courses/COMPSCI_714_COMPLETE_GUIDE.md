@@ -101,6 +101,7 @@ This supplement provides theoretical foundations and practical implementations f
 **Week 5-6: Training & Optimization (Lecture 3)**
 - Read [Training & Optimization Supplement](./COMPSCI_714_TRAINING_OPTIMIZATION_SUPPLEMENT.md)
 - Work through B05b notebook (when available)
+- Work through **B05c** notebook — PyTorch end-to-end: tabular MLP, Optuna tuning, FashionMNIST CNN, saliency maps
 - Experiment with different optimizers
 
 **Week 7+: Advanced Topics**
@@ -149,7 +150,10 @@ This supplement provides theoretical foundations and practical implementations f
 ### Practical Notebooks
 
 - **B05a**: Neural Networks Theory (Lecture 2)
-- **B05b**: Training & Optimization (Lecture 3) - Coming soon
+- **B05b**: Training & Optimization (Lecture 3)
+- **B05c**: PyTorch MLP on Tabular Data + CNN + Optuna + Saliency Maps (Coding Assignment 1)
+  - Part 1: Tabular MLP — German Credit Risk dataset, stratified splitting, BCEWithLogitsLoss, Optuna tuning
+  - Part 2: FashionMNIST CNN — Conv2d architecture, CrossEntropyLoss, gradient saliency maps
 - **B14**: Practice assignments
 - **B15**: Capstone projects
 

@@ -79,6 +79,7 @@ graph LR
         B03["B03<br/>Binary Classification<br/>(Perceptron Intro)"]
         B05a["B05a<br/>Neural Networks Theory<br/>(COMPSCI 714)"]
         B05b["B05b<br/>Training & Optimization<br/>(COMPSCI 714)"]
+        B05c["B05c<br/>PyTorch MLP + CNN<br/>+ Optuna + Saliency<br/>(COMPSCI 714)"]
         B05["B05<br/>Neural Network<br/>Fundamentals"]
         B10a["B10a<br/>RNNs<br/>(COMPSCI 714)"]
         B10["B10<br/>Recurrent Neural<br/>Networks"]
@@ -95,11 +96,12 @@ graph LR
     L3 ==>|"Complete<br/>Coverage"| B05b
     L3 -.->|"Backpropagation<br/>All GD Variants"| B05
     L3 -.->|"Advanced<br/>Optimizers"| I01
+    L3 ==>|"PyTorch Practice<br/>Assignment 1"| B05c
     
     L4 ==>|"Complete<br/>Coverage"| B10a
     L4 -.->|"RNN/LSTM/GRU<br/>Implementation"| B10
     
-    B01 --> B01a --> B02 --> B03 --> B05a --> B05b --> B05
+    B01 --> B01a --> B02 --> B03 --> B05a --> B05b --> B05c --> B05
     B05 --> B10a --> B10
     
     style L2 fill:#FFE5B4,stroke:#D4A574,stroke-width:3px
@@ -107,6 +109,7 @@ graph LR
     style L4 fill:#FFE5B4,stroke:#D4A574,stroke-width:3px
     style B05a fill:#90EE90,stroke:#2d5016,stroke-width:3px
     style B05b fill:#90EE90,stroke:#2d5016,stroke-width:3px
+    style B05c fill:#90EE90,stroke:#2d5016,stroke-width:3px
     style B10a fill:#90EE90,stroke:#2d5016,stroke-width:3px
     style B05 fill:#B4E5FF,stroke:#74A5D4,stroke-width:2px
     style B10 fill:#B4E5FF,stroke:#74A5D4,stroke-width:2px
@@ -114,7 +117,7 @@ graph LR
 
 **Legend:**
 - 🟡 Orange: COMPSCI 714 Lectures
-- 🟢 Green: Dedicated course notebooks (B05a, B05b, B10a)
+- 🟢 Green: Dedicated course notebooks (B05a, B05b, B05c, B10a)
 - 🔵 Blue: Core implementation lessons
 - Solid arrows (⇒): Primary coverage
 - Dashed arrows (⇢): Supporting concepts
@@ -191,6 +194,19 @@ graph LR
    - Backpropagation and automatic differentiation
    - **Why it matters:** Core training techniques for all neural networks
    - **Course Alignment:** COMPSCI 714 Lecture 3
+
+5c. **B05c - MLP on Tabular Data with PyTorch (COMPSCI 714)** - PyTorch end-to-end practice notebook
+   - Tabular data preprocessing with ColumnTransformer (imputation, scaling, one-hot encoding)
+   - Stratified vs random splitting — why class balance matters for imbalanced datasets
+   - PyTorch MLP for binary classification with BCEWithLogitsLoss and DataLoader
+   - Training loop patterns — tracking train/val loss and accuracy per epoch
+   - Evaluation metrics — accuracy, precision, recall, F1, confusion matrix
+   - Decision threshold analysis — precision-recall trade-off with PR curve
+   - Optuna hyperparameter tuning — TPESampler, 100 trials, param importance
+   - FashionMNIST CNN — Conv2d → ReLU → MaxPool2d architecture in PyTorch
+   - Gradient saliency maps — correct vs incorrect example analysis
+   - **Why it matters:** Bridges theory to full PyTorch assignment-style workflow
+   - **Course Alignment:** COMPSCI 714 Coding Assignment 1 (Parts 1 & 2)
 
 6. **B06 - Data Preprocessing and Feature Engineering** - Data preparation techniques
    - Handling missing values
@@ -798,6 +814,7 @@ graph LR
 - [ ] B04: Build multi-class classifier
 - [ ] B05a: Understand neural network theory
 - [ ] B05b: Master training and optimization
+- [ ] B05c: Complete PyTorch MLP + CNN + Optuna + saliency maps end-to-end
 - [ ] B05: Understand backpropagation
 - [ ] B06: Clean and preprocess real dataset
 - [ ] B07: Evaluate model with multiple metrics

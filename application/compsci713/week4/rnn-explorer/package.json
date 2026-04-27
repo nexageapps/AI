@@ -2,7 +2,7 @@
   "name": "rnn-explorer",
   "version": "1.0.0",
   "private": true,
-  "homepage": "/AI/rnn-explorer",
+  "homepage": "https://nexageapps.github.io/AI/rnn-explorer/",
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

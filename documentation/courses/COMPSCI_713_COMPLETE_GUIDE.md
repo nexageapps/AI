@@ -115,8 +115,8 @@ Study focus:
 
 | Repository Resource | Type |
 |---|---|
-| [B04 – Multi-Class Classification](../Basic/B04%20-%20Multi-Class%20Classification.ipynb) | Notebook |
-| [I05 – Transfer Learning and Fine-tuning](../Intermediate/I05%20-%20Transfer%20Learning%20and%20Fine-tuning.ipynb) | Notebook |
+| [B04b – Expert Systems and Knowledge Bases](../Basic/B04b%20-%20Expert%20Systems%20and%20Knowledge%20Bases.ipynb) | Notebook *(new)* |
+| [B04a – Decision Trees and XGBoost](../Basic/B04a%20-%20Decision%20Trees%20and%20XGBoost.ipynb) | Notebook *(new)* |
 
 Study focus:
 - IF-THEN rule bases and inference engines
@@ -131,8 +131,7 @@ Study focus:
 
 | Repository Resource | Type |
 |---|---|
-| [B07 – Model Evaluation and Performance Metrics](../Basic/B07%20-%20Model%20Evaluation%20and%20Performance%20Metrics.ipynb) | Notebook |
-| [I02 – Regularization Techniques](../Intermediate/I02%20-%20Regularization%20Techniques.ipynb) | Notebook |
+| [B05d – Soft Computing: Bayesian and Fuzzy Logic](../Basic/B05d%20-%20Soft%20Computing%20(Bayesian%20and%20Fuzzy%20Logic).ipynb) | Notebook *(new)* |
 
 Study focus:
 - Bayes' theorem and probabilistic inference
@@ -149,8 +148,8 @@ Study focus:
 
 | Repository Resource | Type |
 |---|---|
+| [I13a – Genetic Algorithms and Evolutionary Computing](../Intermediate/I13a%20-%20Genetic%20Algorithms%20and%20Evolutionary%20Computing.ipynb) | Notebook *(new)* |
 | [I13 – Multi-Task and Meta-Learning](../Intermediate/I13%20-%20Multi-Task%20and%20Meta-Learning.ipynb) | Notebook |
-| [E07 – Meta-Learning and Few-Shot Learning](../Expert/E07%20-%20Meta-Learning%20and%20Few-Shot%20Learning.ipynb) | Notebook |
 
 Study focus:
 - Evolutionary computation: selection, crossover, mutation
@@ -176,6 +175,7 @@ Use this week to:
 
 | Repository Resource | Type |
 |---|---|
+| [I01a – Search Algorithms: BFS, DFS, A*, MCTS](../Intermediate/I01a%20-%20Search%20Algorithms%20(BFS%2C%20DFS%2C%20A-Star%2C%20MCTS).ipynb) | Notebook *(new)* |
 | [B05 – Neural Network Fundamentals](../Basic/B05%20-%20Neural%20Network%20Fundamentals.ipynb) | Notebook |
 | [B05a – Neural Networks Theory](../Basic/B05a%20-%20Neural%20Networks%20Theory%20(COMPSCI%20714).ipynb) | Notebook |
 | [B05b – Training and Optimization](../Basic/B05b%20-%20Training%20and%20Optimization%20(COMPSCI%20714).ipynb) | Notebook |
@@ -196,6 +196,7 @@ Study focus:
 
 | Repository Resource | Type |
 |---|---|
+| [I01a – Search Algorithms (MCTS section)](../Intermediate/I01a%20-%20Search%20Algorithms%20(BFS%2C%20DFS%2C%20A-Star%2C%20MCTS).ipynb) | Notebook *(new)* |
 | [E10 – Deep Reinforcement Learning](../Expert/E10%20-%20Deep%20Reinforcement%20Learning.ipynb) | Notebook |
 | [E11 – Reinforcement Learning from Human Feedback (RLHF)](../Expert/E11%20-%20Reinforcement%20Learning%20from%20Human%20Feedback%20(RLHF).ipynb) | Notebook |
 
@@ -215,7 +216,7 @@ Study focus:
 
 | Repository Resource | Type |
 |---|---|
-| [A10 – ML Pipeline Architecture](../Advanced/A10%20-%20ML%20Pipeline%20Architecture.ipynb) | Notebook |
+| [I15a – Graph Neural Networks](../Intermediate/I15a%20-%20Graph%20Neural%20Networks.ipynb) | Notebook *(new)* |
 | [E14 – Efficient and Green AI](../Expert/E14%20-%20Efficient%20and%20Green%20AI.ipynb) | Notebook |
 
 Study focus:
@@ -231,6 +232,7 @@ Study focus:
 
 | Repository Resource | Type |
 |---|---|
+| [E08a – Data Streams and Continual Learning](../Expert/E08a%20-%20Data%20Streams%20and%20Continual%20Learning.ipynb) | Notebook *(new)* |
 | [E09 – Self-Supervised and Contrastive Learning](../Expert/E09%20-%20Self-Supervised%20and%20Contrastive%20Learning.ipynb) | Notebook |
 | [E08 – Continual and Lifelong Learning](../Expert/E08%20-%20Continual%20and%20Lifelong%20Learning.ipynb) | Notebook |
 | [A12 – Monitoring and Observability](../Advanced/A12%20-%20Monitoring%20and%20Observability.ipynb) | Notebook |

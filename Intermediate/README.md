@@ -50,6 +50,15 @@ This is an independent, open-source educational project created by a student for
 - Comparing optimizer performance
 - **Duration:** 2-3 hours
 
+**I01a - Search Algorithms: BFS, DFS, A*, and MCTS** *(COMPSCI 713 Weeks 8–9)*
+- Uninformed search: BFS (queue) and DFS (stack)
+- Informed search: A* with admissible heuristics (Manhattan distance)
+- Adversarial search: Minimax with alpha-beta pruning
+- Monte Carlo Tree Search (MCTS) — the engine behind AlphaGo
+- Algorithm comparison: completeness, optimality, time/space complexity
+- **Course Alignment:** COMPSCI 713 Week 8 Thursday + Week 9 Monday
+- **Duration:** 3-4 hours
+
 **I02 - Regularization Techniques** ✅
 - L1 and L2 regularization
 - Dropout and its variants
@@ -140,6 +149,15 @@ This is an independent, open-source educational project created by a student for
 - Zero-shot learning
 - **Duration:** 3-4 hours
 
+**I13a - Genetic Algorithms and Evolutionary Computing** *(COMPSCI 713 Week 6)*
+- Genetic algorithm framework: selection, crossover, mutation, elitism
+- Tournament selection and fitness landscapes
+- Real-valued GA with blend crossover for continuous optimisation
+- NEAT (NeuroEvolution of Augmenting Topologies): evolving network weights and topology
+- GA vs gradient descent: when to use each
+- **Course Alignment:** COMPSCI 713 Week 6 Monday (NEAT, genetic algorithms)
+- **Duration:** 3-4 hours
+
 **I14 - Explainable AI and Interpretability** ✅
 - SHAP (SHapley Additive exPlanations)
 - LIME (Local Interpretable Model-agnostic Explanations)
@@ -153,6 +171,16 @@ This is an independent, open-source educational project created by a student for
 - Model monitoring and drift detection
 - Serving models (TensorFlow Serving, FastAPI)
 - **Duration:** 4-5 hours
+
+**I15a - Graph Neural Networks** *(COMPSCI 713 Week 10)*
+- Graph representations: nodes, edges, adjacency matrices
+- Message passing from scratch (GCN normalisation)
+- Graph Convolutional Networks (GCN) with PyTorch
+- Node classification and community detection
+- GraphCast: GNNs for global weather prediction
+- GNN variants: GCN, GraphSAGE, GAT, GIN
+- **Course Alignment:** COMPSCI 713 Week 10 Thursday (GraphCast, GNNs)
+- **Duration:** 3-4 hours
 
 ---
 

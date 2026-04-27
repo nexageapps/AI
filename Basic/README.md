@@ -62,13 +62,14 @@ This section shows how Basic lessons align with COMPSCI 713 (AI Fundamentals, S1
 |------|-------|-------------------|
 | W1–W2 | What is AI? Symbolic Logic, FOL | **B01** – Symbolic Logic Fundamentals |
 | W3 | Knowledge Representation | KG Playground app + **A03** RAG |
-| W4 | Expert Systems, Decision Trees, XGBoost | **B04** – Multi-Class Classification |
-| W5 | Soft Computing (Bayesian, Fuzzy) | **B07** – Model Evaluation & Metrics |
-| W6 | Genetic Algorithms, Embodied AI | **I13** – Multi-Task & Meta-Learning |
-| W8 | Deep Learning, AlphaGo, Search I (A*) | **B05**, **B05a**, **B05b** – Neural Networks |
-| W9 | Search II (MCTS), Reinforcement Learning | **E10** – Deep RL · **E11** – RLHF |
-| W10 | AI & Sustainability: GraphCast, GNNs | **A10** – ML Pipeline Architecture |
-| W11 | Self-supervised Learning, Data Streams | **E09** – SSL · **E08** – Continual Learning |
+| W4 Mon | Expert Systems (MYCIN), Rule Bases | **B04b** – Expert Systems and Knowledge Bases *(new)* |
+| W4 Thu | Decision Trees, ID3, XGBoost | **B04a** – Decision Trees and XGBoost *(new)* |
+| W5 | Soft Computing (Bayesian, Fuzzy) | **B05d** – Soft Computing *(new)* |
+| W6 | Genetic Algorithms, NEAT, Embodied AI | **I13a** – Genetic Algorithms *(new)* |
+| W8 | Deep Learning, AlphaGo, Search I (A*) | **B05**, **B05a**, **B05b** + **I01a** Search Algorithms *(new)* |
+| W9 | Search II (MCTS), Reinforcement Learning | **I01a** MCTS + **E10** Deep RL · **E11** RLHF |
+| W10 | AI & Sustainability: GraphCast, GNNs | **I15a** – Graph Neural Networks *(new)* |
+| W11 | Self-supervised Learning, Data Streams | **E09** SSL · **E08** Continual Learning · **E08a** Data Streams *(new)* |
 
 **[COMPSCI 713 Complete Guide](../documentation/courses/COMPSCI_713_COMPLETE_GUIDE.md)** — week-by-week breakdown with key dates, assessment details, and exam checklists.
 
@@ -192,6 +193,22 @@ graph LR
    - One-hot encoding
    - **Why it matters:** Real-world problems have multiple classes
 
+4a. **B04a - Decision Trees and XGBoost** *(COMPSCI 713 Week 4)*
+   - ID3 algorithm and information gain
+   - Decision tree visualisation and rule extraction
+   - Overfitting, pruning, and depth control
+   - Ensemble methods: Random Forest (bagging) and XGBoost (boosting)
+   - **Why it matters:** Bridge between symbolic expert systems and modern ML
+   - **Course Alignment:** COMPSCI 713 Week 4 Thursday
+
+4b. **B04b - Expert Systems and Knowledge Bases** *(COMPSCI 713 Week 4)*
+   - Expert system architecture: knowledge base, inference engine, working memory
+   - Forward chaining (data-driven) and backward chaining (goal-driven)
+   - MYCIN-style certainty factors for uncertainty handling
+   - Frames and inheritance for knowledge representation
+   - **Why it matters:** Foundation of symbolic AI; predecessor to modern LLMs
+   - **Course Alignment:** COMPSCI 713 Week 4 Monday (MYCIN)
+
 5. **B05 - Neural Network Fundamentals** - Deep dive into NN architecture
    - Multi-layer perceptrons (MLPs)
    - Activation functions (ReLU, tanh, sigmoid)
@@ -227,6 +244,15 @@ graph LR
    - Gradient saliency maps — correct vs incorrect example analysis
    - **Why it matters:** Bridges theory to full PyTorch assignment-style workflow
    - **Course Alignment:** COMPSCI 714 Coding Assignment 1 (Parts 1 & 2)
+
+5d. **B05d - Soft Computing: Bayesian and Fuzzy Logic** *(COMPSCI 713 Week 5)*
+   - Bayes' theorem and sequential belief updates
+   - Naive Bayes classifier from scratch
+   - Fuzzy sets and membership functions (triangular, trapezoidal)
+   - Mamdani fuzzy inference system with defuzzification
+   - Bayesian vs fuzzy: when to use which
+   - **Why it matters:** Principled uncertainty handling beyond crisp logic
+   - **Course Alignment:** COMPSCI 713 Week 5 (Soft Computing)
 
 6. **B06 - Data Preprocessing and Feature Engineering** - Data preparation techniques
    - Handling missing values

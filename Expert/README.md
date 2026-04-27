@@ -121,6 +121,17 @@ This is an independent, open-source educational project created by a student for
    - Memory-based continual learning
    - **Why it matters:** Build systems that learn continuously
 
+8a. **E08a - Data Streams and Continual Learning** *(COMPSCI 713 Week 11)*
+   - Data streams: volume, velocity, concept drift
+   - Types of drift: sudden, gradual, incremental, recurring
+   - Online vs batch learning under drift
+   - ADWIN drift detection (adaptive windowing)
+   - Catastrophic forgetting demonstration
+   - EWC (Elastic Weight Consolidation) from scratch
+   - Sustainability: why continual learning reduces CO₂
+   - **Course Alignment:** COMPSCI 713 Week 11 Thursday (Data Streams/C-Learning)
+   - **Why it matters:** Real-world AI must adapt to changing data without full retraining
+
 9. **E09 - Self-Supervised and Contrastive Learning**
    - SimCLR, MoCo, and BYOL
    - Contrastive loss functions

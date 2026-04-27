@@ -54,6 +54,26 @@ This is an independent, open-source educational project created by a student for
 
 ## Complete Lesson List
 
+### COMPSCI 713 Course Alignment
+
+This section shows how Basic lessons align with COMPSCI 713 (AI Fundamentals, S1 2026):
+
+| Week | Topic | Repository Lesson |
+|------|-------|-------------------|
+| W1–W2 | What is AI? Symbolic Logic, FOL | **B01** – Symbolic Logic Fundamentals |
+| W3 | Knowledge Representation | KG Playground app + **A03** RAG |
+| W4 | Expert Systems, Decision Trees, XGBoost | **B04** – Multi-Class Classification |
+| W5 | Soft Computing (Bayesian, Fuzzy) | **B07** – Model Evaluation & Metrics |
+| W6 | Genetic Algorithms, Embodied AI | **I13** – Multi-Task & Meta-Learning |
+| W8 | Deep Learning, AlphaGo, Search I (A*) | **B05**, **B05a**, **B05b** – Neural Networks |
+| W9 | Search II (MCTS), Reinforcement Learning | **E10** – Deep RL · **E11** – RLHF |
+| W10 | AI & Sustainability: GraphCast, GNNs | **A10** – ML Pipeline Architecture |
+| W11 | Self-supervised Learning, Data Streams | **E09** – SSL · **E08** – Continual Learning |
+
+**[COMPSCI 713 Complete Guide](../documentation/courses/COMPSCI_713_COMPLETE_GUIDE.md)** — week-by-week breakdown with key dates, assessment details, and exam checklists.
+
+---
+
 ### COMPSCI 714 Course Alignment
 
 This section shows how Basic lessons align with COMPSCI 714 (AI Architecture and Design):

@@ -44,7 +44,7 @@ Use this table to quickly find which lessons support each course:
 | Course Code | Course Name | Relevant Lessons | Focus Area |
 |-------------|-------------|------------------|------------|
 | COMPSCI 712 | AI Agency, Ethics and Society | B06, B07, B14, B15 | Ethics & Bias |
-| COMPSCI 713 | AI Fundamentals | B01-B05, B14 | Core Algorithms |
+| COMPSCI 713 | AI Fundamentals | B01, B04, B05, B05a, B05b, B07, E08, E09, E10, E11 | Symbolic AI, Search, RL — [Full Guide](./courses/COMPSCI_713_COMPLETE_GUIDE.md) |
 | COMPSCI 714 | AI Architecture and Design | B09-B11, B13-B15 | System Design |
 | INFOSYS 703 | Information Systems | - | Systems Thinking |
 

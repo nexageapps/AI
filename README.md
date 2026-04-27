@@ -122,13 +122,13 @@ Interactive demonstrations of AI concepts in action:
 
 | Course | Focus | Examples |
 |--------|-------|----------|
-| **COMPSCI 713** | AI Fundamentals | Agents, Knowledge, Game AI |
+| **COMPSCI 713** | AI Fundamentals | [Symbolic Logic, Knowledge Representation, Search, RL, Sustainability](./documentation/courses/COMPSCI_713_COMPLETE_GUIDE.md) |
 | **COMPSCI 714** | Neural Networks | [Networks, Gradient Descent, CNNs, Attention](./documentation/courses/COMPSCI_714_COMPLETE_GUIDE.md) |
 | **COMPSCI 762** | ML Foundations | Regression, Classification, Tuning |
 | **COMPSCI 703** | Generalising AI | Transfer Learning, Domain Adaptation |
 | **COMPSYS 721** | Deep Learning | Detection, Time Series, NLP, GANs |
 
-**[COMPSCI 714 Complete Guide](./documentation/courses/COMPSCI_714_COMPLETE_GUIDE.md)**
+**[COMPSCI 713 Complete Guide](./documentation/courses/COMPSCI_713_COMPLETE_GUIDE.md)** · **[COMPSCI 714 Complete Guide](./documentation/courses/COMPSCI_714_COMPLETE_GUIDE.md)**
 
 ### Study Tips
 
@@ -147,6 +147,7 @@ Interactive demonstrations of AI concepts in action:
 |----------|---------|
 | [Student Guide](./documentation/MAI_STUDENT_GUIDE.md) | Course mapping, semester planning, study strategies |
 | [Exam Prep Guide](./documentation/EXAM_PREPARATION_GUIDE.md) | Exam strategies, practice problems, concept review |
+| [COMPSCI 713 Complete Guide](./documentation/courses/COMPSCI_713_COMPLETE_GUIDE.md) | AI Fundamentals course guide with week-by-week lesson alignment |
 | [COMPSCI 714 Complete Guide](./documentation/courses/COMPSCI_714_COMPLETE_GUIDE.md) | Neural network course guide with lecture alignment |
 | [Documentation Index](./documentation/DOCUMENTATION_INDEX.md) | Complete guide to all documentation |
 | [Academic Integrity](./documentation/ACADEMIC_INTEGRITY.md) | Responsible use guidelines |

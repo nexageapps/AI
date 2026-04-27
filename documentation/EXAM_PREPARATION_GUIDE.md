@@ -68,19 +68,41 @@ Shows which UoA courses each lesson supports:
 ## Course-Specific Guidance
 
 ### COMPSCI 713 (AI Fundamentals)
-Relevant Lessons: B01-B05, I01-I02
+Relevant Lessons: B01, B04, B05, B05a, B05b, B07, E08, E09, E10, E11, A03, A10
 
-Focus Areas:
-- Tensor operations and shapes
-- Neural network fundamentals
-- Gradient descent and optimization
-- Loss functions and backpropagation
+Full course guide: [COMPSCI 713 Complete Guide](./courses/COMPSCI_713_COMPLETE_GUIDE.md)
+
+Focus Areas (by theme):
+- **Foundations of Intelligence:** Symbolic logic (B01), knowledge representation (KG Playground), expert systems & decision trees (B04), Bayesian/fuzzy reasoning (B07)
+- **Learning & Adaptation:** Genetic algorithms, deep learning (B05, B05a, B05b), reinforcement learning (E10, E11)
+- **Search & Decision Making:** Tree search, A*, adversarial search, MCTS, MDPs
+- **Embodied & Real-World AI:** Graph Neural Networks (A10), self-supervised learning (E09), continual learning (E08)
+
+Mid-Semester Test (Weeks 1–6):
+- Weak vs Strong AI definitions
+- Propositional logic and FOL inference rules
+- Knowledge graphs and RDF triples
+- Expert systems (MYCIN), rule bases, certainty factors
+- Decision trees: ID3, information gain, XGBoost
+- Bayesian inference, Naive Bayes, fuzzy logic
+- Genetic algorithms: selection, crossover, mutation, NEAT
+
+Final Exam (all weeks except guest lectures):
+- All mid-semester topics plus:
+- Deep learning and AlphaGo
+- Uninformed and informed search (BFS, DFS, A*)
+- Minimax, alpha-beta pruning, MCTS
+- Markov Decision Processes and Q-learning
+- Graph Neural Networks
+- Self-supervised learning (pretext tasks, contrastive)
+- Continual learning and data streams
 
 Exam Tips:
-- Master shape calculations
-- Understand gradient flow
-- Practice deriving gradients by hand
-- Know activation function properties
+- You may bring one A4 two-sided handwritten notes sheet — use it wisely
+- No calculators allowed
+- Practice drawing search trees and logic proofs by hand
+- Know the difference between Weak AI and Strong AI cold
+- Understand the full pipeline: perception → representation → reasoning → action
 
 ### COMPSCI 714 (AI Architecture & Design)
 Relevant Lessons: B09-B15

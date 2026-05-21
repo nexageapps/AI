@@ -73,6 +73,17 @@ This is an independent, open-source educational project created by a student for
 - Transfer learning basics
 - **Duration:** 3-4 hours
 
+**I04a - Pretrained Foundation Models in CV (COMPSCI 714)** ✅
+- Pre-training and fine-tuning paradigm (foundation/base models)
+- Self-supervised learning tasks: Image Colorization, Contrastive Learning (SimCLR), Masked Image Modeling (MAE), Rotation Prediction, Jigsaw Puzzle
+- ResNet: residual blocks, skip connections, gradient flow
+- Vision Transformer (ViT): patches → tokens → Transformer encoder
+- BEiT: BERT-style masked prediction with visual tokens
+- CLIP: Contrastive Language-Image Pre-training, zero-shot classification
+- Practical: using pretrained models from torchvision
+- **Course Alignment:** COMPSCI 714 Lecture 8-2
+- **Duration:** 3-4 hours
+
 **I05 - Transfer Learning and Fine-tuning** ✅
 - Pre-trained models (ImageNet)
 - Feature extraction vs fine-tuning

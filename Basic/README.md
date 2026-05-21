@@ -259,6 +259,17 @@ graph LR
    - Transfer learning basics
    - **Why it matters:** State-of-the-art for computer vision
 
+9a. **B09a - Transfer Learning Fundamentals (COMPSCI 714)** - Transfer learning methods
+   - Model fine-tuning (source → target adaptation)
+   - Conservation learning (L2 parameter constraints)
+   - Layer transfer (freeze early/late layers)
+   - Multitask learning (shared backbone, task-specific heads)
+   - Domain-adversarial training (gradient reversal layer)
+   - Zero-shot and few-shot learning (prototypical networks)
+   - Practical fine-tuning with pretrained ResNet-18
+   - **Course Alignment:** COMPSCI 714 Lecture 7-2
+   - **Why it matters:** Foundation for using pretrained models in any domain
+
 10. **B10 - Recurrent Neural Networks** - RNNs for sequential data
     - RNN architecture
     - LSTM and GRU cells

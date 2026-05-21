@@ -70,6 +70,20 @@ This is an independent, open-source educational project created by a student for
    - LangChain and prompt frameworks
    - **Why it matters:** Maximize LLM performance without fine-tuning
 
+2a. **A02a - LLM-based Agents**
+   - Agent architecture: LLM + reasoning + memory + planning + tools + skills
+   - The ReAct pattern (Reason + Act + Observe loop)
+   - Chatbot vs Agent: same model, different scaffolding
+   - Reasoning patterns: ReAct, Plan-then-Execute, Reflexion
+   - Tool calling mechanics (Define, Decide, Run, Return)
+   - Memory: short-term (context window) vs long-term (files, vector stores)
+   - Skills: progressive disclosure of capabilities
+   - Agent failure modes: lost-in-the-middle, plan drift, tool confusion
+   - Building agents: code-first (OpenAI SDK, LangGraph) vs low-code (Dify, n8n)
+   - Complete working ReAct agent implementation
+   - **Course Alignment:** COMPSCI 714 Guest Lecture (Ziqin Zhu, May 2026)
+   - **Why it matters:** Agents are the next evolution of LLM applications
+
 3. **A03 - Retrieval-Augmented Generation (RAG)**
    - Vector databases (Pinecone, Weaviate, ChromaDB)
    - Embedding models and semantic search

@@ -67,7 +67,7 @@ This section shows how Basic lessons align with COMPSCI 713 (AI Fundamentals, S1
 | W6 | Genetic Algorithms, Embodied AI | **I13** – Multi-Task & Meta-Learning |
 | W8 | Deep Learning, AlphaGo, Search I (A*) | **B05**, **B05a**, **B05b** – Neural Networks |
 | W9 | Search II (MCTS), Reinforcement Learning | **E10** – Deep RL · **E11** – RLHF |
-| W10 | AI & Sustainability: GraphCast, GNNs | **A10** – ML Pipeline Architecture |
+| W10 | AI & Sustainability: GraphCast, GNNs | **B09b** – Graph Neural Networks (COMPSCI 713) |
 | W11 | Self-supervised Learning, Data Streams | **E09** – SSL · **E08** – Continual Learning |
 
 **[COMPSCI 713 Complete Guide](../documentation/courses/COMPSCI_713_COMPLETE_GUIDE.md)** — week-by-week breakdown with key dates, assessment details, and exam checklists.
@@ -270,6 +270,17 @@ graph LR
    - **Course Alignment:** COMPSCI 714 Lecture 7-2
    - **Why it matters:** Foundation for using pretrained models in any domain
 
+9b. **B09b - Graph Neural Networks (COMPSCI 713)** - GNNs and GraphCast
+   - AI for sustainability vs sustainability of AI (the "4Ms")
+   - GraphCast case study: GNN-based weather forecasting
+   - Graph fundamentals: nodes, edges, adjacency matrices
+   - Graph Convolutional Networks (GCN layer formulation)
+   - Permutation invariance and equivariance
+   - GNN tasks: graph/node/edge classification and prediction
+   - Hands-on: building a simple GCN in PyTorch
+   - **Course Alignment:** COMPSCI 713 Week 10
+   - **Why it matters:** Graphs are everywhere; GNNs unlock learning on relational data
+
 10. **B10 - Recurrent Neural Networks** - RNNs for sequential data
     - RNN architecture
     - LSTM and GRU cells
@@ -325,7 +336,7 @@ graph LR
     - Deployment strategies
     - **Why it matters:** Showcase your skills to employers
 
-**Total Learning Time:** 50-70 hours for complete mastery (19 notebooks)
+**Total Learning Time:** 50-70 hours for complete mastery (20 notebooks)
 
 ---
 

@@ -215,14 +215,18 @@ Study focus:
 
 | Repository Resource | Type |
 |---|---|
+| [B09b – Graph Neural Networks (COMPSCI 713)](../Basic/B09b%20-%20Graph%20Neural%20Networks%20(COMPSCI%20713).ipynb) | Notebook |
 | [A10 – ML Pipeline Architecture](../Advanced/A10%20-%20ML%20Pipeline%20Architecture.ipynb) | Notebook |
 | [E14 – Efficient and Green AI](../Expert/E14%20-%20Efficient%20and%20Green%20AI.ipynb) | Notebook |
 
 Study focus:
-- Graph representation: nodes, edges, adjacency matrices
-- Message passing in GNNs
-- GraphCast for weather prediction
-- Environmental cost of AI training
+- AI for sustainability vs sustainability of AI (the "4Ms")
+- GraphCast: GNN-based weather prediction (encoder-processor-decoder)
+- Graph representation: nodes, edges, adjacency matrices, node embeddings
+- Graph Neural Networks and Graph Convolutional Networks (GCNs)
+- GCN layer update rule (Kipf & Welling 2016)
+- Permutation invariance and equivariance
+- GNN tasks: graph classification, node classification, edge prediction
 
 ---
 

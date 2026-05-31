@@ -1,10 +1,22 @@
-# NEAT Explainer App
+# Detailed NEAT Explainer App
 
-A simple presentable React app to explain **NEAT — NeuroEvolution of Augmenting Topologies**.
+A more detailed React presentation app for **NEAT — NeuroEvolution of Augmenting Topologies**.
 
-## Important fix included
+## New sections added
 
-This version pins Tailwind CSS to version 3.4.17, so the normal `postcss.config.js` setup works without the Tailwind v4 PostCSS plugin error.
+- Interactive network growth up to generation 4
+- NEAT lifecycle explanation
+- Clickable concept cards:
+  - Genome
+  - Connection weight
+  - Topology
+  - Mutation
+  - Crossover
+  - Speciation
+  - Innovation number
+- Mutation type explanation
+- Detailed quiz
+- Presentation summary
 
 ## Run in VS Code
 
@@ -19,18 +31,15 @@ Open the URL shown in the terminal, usually:
 http://localhost:5173
 ```
 
-## If you already installed dependencies before
+## Important Tailwind note
 
-Delete `node_modules` and `package-lock.json`, then run:
+This project uses Tailwind CSS `^3.4.17` to avoid the Tailwind v4 PostCSS plugin issue.
 
-```bash
+If you copied this into an existing project, delete old dependencies first:
+
+```powershell
+Remove-Item -Recurse -Force node_modules
+Remove-Item -Force package-lock.json
 npm install
 npm run dev
 ```
-
-## Main files
-
-- `src/App.jsx` — main React app
-- `src/main.jsx` — React entry point
-- `src/styles.css` — Tailwind CSS setup
-- `package.json` — dependencies and scripts

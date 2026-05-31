@@ -1,472 +1,223 @@
 """
-Q-Learning on a 5x5 Grid World
-================================
-COMPSCI 713 - Reinforcement Learning Basics
+Q-Learning for Beginners — A Simple Grid World Example
+========================================================
 
-Q-Learning is a MODEL-FREE, OFF-POLICY reinforcement learning algorithm.
-- Model-free: The agent doesn't need to know the environment's transition probabilities.
-- Off-policy: It learns the optimal policy regardless of the agent's current behavior.
+Imagine you're a robot in a small room (a grid).
+You start in one corner and want to reach the opposite corner.
+You don't have a map — you have to LEARN the best path by trial and error.
 
-The core idea:
-  The agent maintains a Q-table that stores the expected cumulative reward
-  for taking action 'a' in state 's', then following the optimal policy thereafter.
+That's Q-Learning in a nutshell!
 
-  Q(s, a) = "How good is it to take action 'a' when I'm in state 's'?"
+HOW IT WORKS (plain English):
+1. You have a "cheat sheet" (Q-table) that starts empty.
+2. You try random moves, and when something works, you write it down.
+3. Over time, your cheat sheet tells you the best move from any position.
 
-The Bellman Update Equation:
-  Q(s, a) ← Q(s, a) + α * [r + γ * max_a' Q(s', a') - Q(s, a)]
-  
-  Where:
-    α (alpha)  = learning rate (how much we trust new info vs old)
-    γ (gamma)  = discount factor (how much we value future rewards)
-    r          = immediate reward received after taking action 'a'
-    s'         = next state after taking action 'a'
-    max_a' Q(s', a') = best Q-value achievable from the next state
+The magic formula:
+   Q(state, action) = Q(state, action) + learning_rate * (reward + discount * best_future - Q(state, action))
 
-Exploration vs Exploitation (ε-greedy):
-  - With probability ε: explore (pick a random action)
-  - With probability 1-ε: exploit (pick the action with highest Q-value)
-  This ensures the agent doesn't get stuck in suboptimal policies early on.
+   Translation: "Update my notes based on what just happened and what I expect next."
 """
 
 import numpy as np
 import random
-import pandas as pd
-import matplotlib.pyplot as plt
-import matplotlib.patches as mpatches
-from matplotlib.colors import LinearSegmentedColormap
-
 
 # ============================================================
-# PART 1: ENVIRONMENT DEFINITION
+# STEP 1: Create a tiny world for our agent to explore
 # ============================================================
-# We define a simple 5x5 grid world:
 #
-#   (0,0) (0,1) (0,2) (0,3) (0,4)
-#   (1,0) (1,1) (1,2) (1,3) (1,4)
-#   (2,0) (2,1) (2,2) (2,3) (2,4)
-#   (3,0) (3,1) (3,2) (3,3) (3,4)
-#   (4,0) (4,1) (4,2) (4,3) (4,4)
+#  Our grid looks like this (3x3 to keep it simple):
 #
-# Start: top-left (0,0)  |  Goal: bottom-right (4,4)
-# The agent must learn to navigate from Start to Goal.
-# Reward: +100 for reaching the goal, -1 for every step (encourages shortest path).
-# ============================================================
-
-class GridWorld:
-    """
-    A simple deterministic grid world environment.
-    
-    The agent starts at (0,0) and must reach (4,4).
-    At each step, the agent chooses one of 4 actions:
-      0 = Up, 1 = Right, 2 = Down, 3 = Left
-    
-    If the agent tries to move off the grid, it stays in place
-    (but still pays the -1 step penalty).
-    """
-    
-    def __init__(self, size=5):
-        self.size = size
-        self.start = (0, 0)       # Top-left corner
-        self.goal = (size-1, size-1)  # Bottom-right corner
-        self.reset()
-    
-    def reset(self):
-        """Reset the agent back to the start position."""
-        self.state = self.start
-        return self.state
-    
-    def step(self, action):
-        """
-        Execute one action in the environment.
-        
-        Parameters:
-            action (int): 0=up, 1=right, 2=down, 3=left
-        
-        Returns:
-            next_state (tuple): new (row, col) position
-            reward (float): +100 if goal reached, -1 otherwise
-            done (bool): True if episode is over (goal reached)
-        """
-        row, col = self.state
-        
-        # Move the agent (clamp to grid boundaries)
-        if action == 0:    # Up: decrease row
-            row = max(0, row - 1)
-        elif action == 1:  # Right: increase column
-            col = min(self.size - 1, col + 1)
-        elif action == 2:  # Down: increase row
-            row = min(self.size - 1, row + 1)
-        elif action == 3:  # Left: decrease column
-            col = max(0, col - 1)
-        
-        self.state = (row, col)
-        
-        # Check if we reached the goal
-        if self.state == self.goal:
-            return self.state, 100, True   # Big reward for reaching goal
-        else:
-            return self.state, -1, False   # Small penalty per step
-    
-    def get_valid_actions(self):
-        """
-        Returns actions that actually move the agent (not into walls).
-        This prevents wasting time bumping into boundaries.
-        """
-        row, col = self.state
-        valid = [0, 1, 2, 3]  # Start with all actions
-        if row == 0:              valid.remove(0)  # Can't go up from top row
-        if row == self.size - 1:  valid.remove(2)  # Can't go down from bottom row
-        if col == 0:              valid.remove(3)  # Can't go left from leftmost col
-        if col == self.size - 1:  valid.remove(1)  # Can't go right from rightmost col
-        return valid
-
-
-# ============================================================
-# PART 2: Q-LEARNING HYPERPARAMETERS
-# ============================================================
-# These control how the agent learns. Tuning these is important!
-
-alpha = 0.1       # Learning rate (α): How quickly we update Q-values.
-                  #   High α (e.g., 0.9) → fast learning but unstable
-                  #   Low α (e.g., 0.01) → slow but stable learning
-
-gamma = 0.9       # Discount factor (γ): How much we value future rewards.
-                  #   γ = 0 → agent is "myopic", only cares about immediate reward
-                  #   γ = 1 → agent values future rewards equally to immediate ones
-                  #   γ = 0.9 → future rewards are worth 90% of current ones per step
-
-epsilon = 0.1     # Exploration rate (ε): Probability of taking a random action.
-                  #   High ε → more exploration (good early in training)
-                  #   Low ε → more exploitation (good later in training)
-
-n_episodes = 1000  # Number of complete episodes (start→goal or timeout) to train
-max_steps = 100    # Maximum steps per episode (prevents infinite loops)
-
-size = 5
-
-# ============================================================
-# PART 3: Q-TABLE INITIALIZATION
-# ============================================================
-# The Q-table stores a value for every (state, action) pair.
-# Shape: (5 rows, 5 cols, 4 actions) = 100 entries total.
-# Initialized to zeros → agent starts with no knowledge.
+#     [S][ ][ ]       S = Start (top-left)
+#     [ ][ ][ ]       G = Goal  (bottom-right)
+#     [ ][ ][G]
 #
-# Conceptually:
-#   q_table[row][col][action] = "Expected total reward if I'm at (row,col)
-#                                 and I take this action, then act optimally"
+#  The agent can move: Up(0), Right(1), Down(2), Left(3)
 
-q_table = np.zeros((size, size, 4))
+GRID_SIZE = 3
+START = (0, 0)
+GOAL = (2, 2)
 
-# Create the environment
-env = GridWorld(size)
+def move(state, action):
+    """Move the agent. If it hits a wall, it stays put."""
+    row, col = state
 
-# Track rewards per episode to monitor learning progress
-rewards_per_episode = []
-# Track steps per episode to see if agent gets faster
-steps_per_episode = []
+    if action == 0:  row -= 1  # Up
+    if action == 1:  col += 1  # Right
+    if action == 2:  row += 1  # Down
+    if action == 3:  col -= 1  # Left
+
+    # Keep inside the grid (can't walk through walls)
+    row = max(0, min(GRID_SIZE - 1, row))
+    col = max(0, min(GRID_SIZE - 1, col))
+
+    return (row, col)
+
+def get_reward(state):
+    """Reached the goal? Big reward! Otherwise, small penalty to encourage speed."""
+    if state == GOAL:
+        return 10   # Yay! Found the goal!
+    else:
+        return -1   # Small nudge: "keep moving, don't dawdle"
 
 
 # ============================================================
-# PART 4: TRAINING LOOP
+# STEP 2: Set up the Q-table (the agent's "cheat sheet")
 # ============================================================
-# Each episode:
-#   1. Start at (0,0)
-#   2. Choose action (ε-greedy)
-#   3. Take action, observe reward and next state
-#   4. Update Q-table using Bellman equation
-#   5. Repeat until goal reached or max_steps exceeded
+#
+#  The Q-table has one entry for every (position, action) combo.
+#  It starts at all zeros because the agent knows NOTHING yet.
+#
+#  Shape: 3 rows × 3 cols × 4 actions = 36 entries
 
-print("=" * 60)
-print("  Q-LEARNING TRAINING ON 5x5 GRID WORLD")
-print("=" * 60)
-print(f"  Episodes: {n_episodes} | Max steps/episode: {max_steps}")
-print(f"  α={alpha}, γ={gamma}, ε={epsilon}")
-print("=" * 60)
+q_table = np.zeros((GRID_SIZE, GRID_SIZE, 4))
 
-for episode in range(n_episodes):
-    state = env.reset()       # Reset agent to start
+# ============================================================
+# STEP 3: Set the learning settings (hyperparameters)
+# ============================================================
+
+learning_rate = 0.1   # How much to trust new experience (0 = ignore, 1 = fully trust)
+discount = 0.9        # How much to care about future rewards (0 = short-sighted, 1 = far-sighted)
+epsilon = 0.5         # How often to explore randomly (starts high, decreases over time)
+episodes = 500        # How many times the agent practices (start → goal = 1 episode)
+
+
+# ============================================================
+# STEP 4: Train the agent! (This is where the learning happens)
+# ============================================================
+
+print("Training the agent...\n")
+
+for episode in range(episodes):
+    state = START  # Always start at the beginning
+    done = False
     total_reward = 0
     steps = 0
-    
-    for step in range(max_steps):
+
+    while not done and steps < 50:  # Safety limit so it doesn't loop forever
         steps += 1
-        
-        # --- ACTION SELECTION: ε-greedy strategy ---
-        # With probability ε: EXPLORE (random action)
-        # With probability 1-ε: EXPLOIT (best known action)
+
+        # --- DECIDE: Explore or Exploit? ---
         if random.random() < epsilon:
-            # Exploration: try a random valid action
-            action = random.choice(env.get_valid_actions())
+            # EXPLORE: pick a random action (try something new!)
+            action = random.randint(0, 3)
         else:
-            # Exploitation: pick the action with highest Q-value
+            # EXPLOIT: pick the best action we know so far
             row, col = state
             action = np.argmax(q_table[row, col])
-        
-        # --- TAKE ACTION: interact with environment ---
-        next_state, reward, done = env.step(action)
+
+        # --- ACT: Take the action, see what happens ---
+        next_state = move(state, action)
+        reward = get_reward(next_state)
         total_reward += reward
-        
-        # --- Q-TABLE UPDATE: Bellman equation ---
-        # This is the CORE of Q-learning!
-        #
-        # Formula: Q(s,a) ← Q(s,a) + α * [r + γ * max Q(s',a') - Q(s,a)]
-        #                                   \_________TD Target__________/
-        #                              \____________TD Error_________________/
-        #
-        # TD Target = what we THINK the value should be (based on new info)
-        # TD Error  = difference between target and current estimate
-        # We nudge Q(s,a) toward the target by a fraction α
-        
+
+        # --- LEARN: Update the Q-table ---
+        # "How good was this move, considering what comes next?"
         row, col = state
         next_row, next_col = next_state
-        
-        # Best Q-value achievable from the NEXT state (greedy lookahead)
-        best_next_q = np.max(q_table[next_row, next_col])
-        
-        # The temporal difference (TD) target
-        td_target = reward + gamma * best_next_q
-        
-        # The TD error (how wrong our current estimate is)
-        td_error = td_target - q_table[row, col, action]
-        
-        # Update the Q-value (move it toward the target)
-        q_table[row, col, action] += alpha * td_error
-        
-        # Move to next state
+
+        old_value = q_table[row, col, action]
+        best_future = np.max(q_table[next_row, next_col])
+
+        # The Q-Learning update formula:
+        new_value = old_value + learning_rate * (reward + discount * best_future - old_value)
+        q_table[row, col, action] = new_value
+
+        # --- MOVE: Go to the next state ---
         state = next_state
-        
-        if done:
-            break
-    
-    rewards_per_episode.append(total_reward)
-    steps_per_episode.append(steps)
-    
-    # --- EPSILON DECAY ---
-    # Gradually reduce exploration as the agent learns.
-    # Early: explore a lot (find good paths)
-    # Later: exploit what we've learned (follow best paths)
+
+        # --- CHECK: Did we reach the goal? ---
+        if state == GOAL:
+            done = True
+
+    # Reduce exploration over time (explore less as we learn more)
+    epsilon = max(0.01, epsilon * 0.99)
+
+    # Print progress every 100 episodes
     if episode % 100 == 0:
-        epsilon = max(0.01, epsilon * 0.95)  # Never go below 1% exploration
-        if episode % 200 == 0:
-            avg_reward = np.mean(rewards_per_episode[-100:]) if len(rewards_per_episode) >= 100 else np.mean(rewards_per_episode)
-            print(f"  Episode {episode:4d} | Avg Reward (last 100): {avg_reward:7.1f} | ε: {epsilon:.4f}")
+        print(f"  Episode {episode:3d} | Steps: {steps:2d} | Reward: {total_reward:.0f} | Explore rate: {epsilon:.2f}")
 
-print(f"\n  Episode {n_episodes:4d} | Final Avg Reward (last 100): {np.mean(rewards_per_episode[-100:]):.1f}")
-print("  Training complete!")
+print(f"  Episode {episodes:3d} | Training complete!\n")
 
 
 # ============================================================
-# PART 5: DISPLAY LEARNED POLICY (TEXT)
+# STEP 5: Show what the agent learned
 # ============================================================
-# The policy is derived from the Q-table:
-#   π(s) = argmax_a Q(s, a)
-# i.e., at each state, pick the action with the highest Q-value.
 
-print("\n" + "=" * 60)
-print("  LEARNED OPTIMAL POLICY")
-print("  (Arrow shows best action at each cell)")
-print("=" * 60)
+arrows = ['↑', '→', '↓', '←']
 
-action_names = ['↑', '→', '↓', '←']
-for i in range(size):
-    row_str = []
-    for j in range(size):
-        if (i, j) == env.goal:
-            row_str.append(' G ')  # Goal
-        elif (i, j) == env.start:
-            row_str.append(' S ')  # Start
+print("=" * 35)
+print("  LEARNED POLICY (best move at each cell)")
+print("=" * 35)
+print()
+
+for i in range(GRID_SIZE):
+    row_display = []
+    for j in range(GRID_SIZE):
+        if (i, j) == START:
+            row_display.append(" S ")
+        elif (i, j) == GOAL:
+            row_display.append(" G ")
         else:
             best_action = np.argmax(q_table[i, j])
-            row_str.append(f' {action_names[best_action]} ')
-    print("  " + " | ".join(row_str))
-    if i < size - 1:
-        print("  " + "-----" * size)
+            row_display.append(f" {arrows[best_action]} ")
+    print("    " + " | ".join(row_display))
+    if i < GRID_SIZE - 1:
+        print("    " + "----" * GRID_SIZE)
 
-# Show Q-values at start state
-print("\n  Q-values at start state (0,0):")
-print(f"    Up:    {q_table[0, 0, 0]:7.2f}")
-print(f"    Right: {q_table[0, 0, 1]:7.2f}")
-print(f"    Down:  {q_table[0, 0, 2]:7.2f}")
-print(f"    Left:  {q_table[0, 0, 3]:7.2f}")
-print(f"  → Best action: {action_names[np.argmax(q_table[0, 0])]}")
+print()
+print("  S = Start, G = Goal")
+print("  Arrows show the best direction to move from each cell")
+print()
 
 
 # ============================================================
-# PART 6: VISUALIZATIONS
+# STEP 6: Watch the agent solve the maze!
 # ============================================================
-# We create 4 plots to understand what the agent learned:
-#   1. Reward curve over episodes (did the agent improve?)
-#   2. Steps per episode (did the agent get faster?)
-#   3. Heatmap of max Q-values (which states are most valuable?)
-#   4. Policy visualization (what does the agent do at each cell?)
 
-fig, axes = plt.subplots(2, 2, figsize=(14, 11))
-fig.suptitle("Q-Learning on 5×5 Grid World", fontsize=16, fontweight='bold')
+print("=" * 35)
+print("  AGENT SOLVING THE GRID (no exploration)")
+print("=" * 35)
+print()
 
-# --- Plot 1: Reward per Episode (smoothed) ---
-ax1 = axes[0, 0]
-window = 50  # Smoothing window
-smoothed_rewards = pd.Series(rewards_per_episode).rolling(window=window, min_periods=1).mean()
-ax1.plot(rewards_per_episode, alpha=0.2, color='blue', label='Raw')
-ax1.plot(smoothed_rewards, color='blue', linewidth=2, label=f'Smoothed (window={window})')
-ax1.axhline(y=92, color='green', linestyle='--', alpha=0.7, label='Optimal (8 steps = 92)')
-ax1.set_xlabel('Episode')
-ax1.set_ylabel('Total Reward')
-ax1.set_title('Learning Curve: Reward per Episode')
-ax1.legend()
-ax1.grid(True, alpha=0.3)
+state = START
+path = [state]
 
-# --- Plot 2: Steps per Episode (smoothed) ---
-ax2 = axes[0, 1]
-smoothed_steps = pd.Series(steps_per_episode).rolling(window=window, min_periods=1).mean()
-ax2.plot(steps_per_episode, alpha=0.2, color='orange', label='Raw')
-ax2.plot(smoothed_steps, color='orange', linewidth=2, label=f'Smoothed (window={window})')
-ax2.axhline(y=8, color='green', linestyle='--', alpha=0.7, label='Optimal (8 steps)')
-ax2.set_xlabel('Episode')
-ax2.set_ylabel('Steps to Goal')
-ax2.set_title('Efficiency: Steps per Episode')
-ax2.legend()
-ax2.grid(True, alpha=0.3)
+for _ in range(20):  # Safety limit
+    row, col = state
+    action = np.argmax(q_table[row, col])  # Always pick the best action
+    state = move(state, action)
+    path.append(state)
+    if state == GOAL:
+        break
 
-# --- Plot 3: Heatmap of Max Q-values ---
-# Shows the "value" of each state (how good it is to be there)
-ax3 = axes[1, 0]
-max_q_values = np.max(q_table, axis=2)  # Best Q-value at each cell
-im = ax3.imshow(max_q_values, cmap='YlOrRd', interpolation='nearest')
-ax3.set_title('State Value Heatmap\n(max Q-value at each cell)')
-ax3.set_xlabel('Column')
-ax3.set_ylabel('Row')
+print(f"  Path taken: {' → '.join(str(p) for p in path)}")
+print(f"  Steps: {len(path) - 1}")
+print(f"  Optimal steps: {(GRID_SIZE - 1) * 2}")  # Manhattan distance
+print()
 
-# Annotate each cell with its value
-for i in range(size):
-    for j in range(size):
-        text_color = 'white' if max_q_values[i, j] > max_q_values.max() * 0.6 else 'black'
-        ax3.text(j, i, f'{max_q_values[i, j]:.1f}', ha='center', va='center',
-                 fontsize=10, color=text_color, fontweight='bold')
-
-# Mark start and goal
-ax3.text(0, 0, '\nS', ha='center', va='center', fontsize=8, color='blue')
-ax3.text(size-1, size-1, '\nG', ha='center', va='center', fontsize=8, color='green')
-plt.colorbar(im, ax=ax3, shrink=0.8)
-
-# --- Plot 4: Policy Visualization (arrows on grid) ---
-ax4 = axes[1, 1]
-ax4.set_xlim(-0.5, size - 0.5)
-ax4.set_ylim(size - 0.5, -0.5)  # Invert y-axis so (0,0) is top-left
-ax4.set_aspect('equal')
-ax4.set_title('Learned Policy\n(arrows show best action)')
-ax4.set_xlabel('Column')
-ax4.set_ylabel('Row')
-
-# Draw grid
-for i in range(size + 1):
-    ax4.axhline(y=i - 0.5, color='gray', linewidth=0.5)
-    ax4.axvline(x=i - 0.5, color='gray', linewidth=0.5)
-
-# Arrow directions for each action: (dx, dy) in plot coordinates
-# action 0=up (dy=-1), 1=right (dx=+1), 2=down (dy=+1), 3=left (dx=-1)
-arrow_dx = [0, 0.3, 0, -0.3]
-arrow_dy = [-0.3, 0, 0.3, 0]
-
-for i in range(size):
-    for j in range(size):
-        if (i, j) == env.goal:
-            # Draw goal as a green square
-            rect = mpatches.FancyBboxPatch((j - 0.4, i - 0.4), 0.8, 0.8,
-                                            boxstyle="round,pad=0.05",
-                                            facecolor='lightgreen', edgecolor='green', linewidth=2)
-            ax4.add_patch(rect)
-            ax4.text(j, i, 'GOAL', ha='center', va='center', fontsize=8, fontweight='bold', color='darkgreen')
-        elif (i, j) == env.start:
-            # Draw start as a blue square
-            rect = mpatches.FancyBboxPatch((j - 0.4, i - 0.4), 0.8, 0.8,
-                                            boxstyle="round,pad=0.05",
-                                            facecolor='lightblue', edgecolor='blue', linewidth=2)
-            ax4.add_patch(rect)
-            ax4.text(j, i - 0.15, 'START', ha='center', va='center', fontsize=7, fontweight='bold', color='darkblue')
-            # Still show the arrow for start
-            best_action = np.argmax(q_table[i, j])
-            ax4.arrow(j, i + 0.1, arrow_dx[best_action] * 0.7, arrow_dy[best_action] * 0.7,
-                     head_width=0.12, head_length=0.08, fc='darkblue', ec='darkblue')
-        else:
-            # Draw arrow showing best action
-            best_action = np.argmax(q_table[i, j])
-            ax4.arrow(j, i, arrow_dx[best_action], arrow_dy[best_action],
-                     head_width=0.15, head_length=0.1, fc='red', ec='darkred', linewidth=1.5)
-
-ax4.set_xticks(range(size))
-ax4.set_yticks(range(size))
-
-plt.tight_layout()
-plt.savefig('qlearning_results.png', dpi=150, bbox_inches='tight')
-plt.show()
-print("\n  Visualization saved to 'qlearning_results.png'")
+if len(path) - 1 == (GRID_SIZE - 1) * 2:
+    print("  ✓ The agent found the shortest path!")
+else:
+    print("  The agent found a path (may not be shortest — try more episodes)")
 
 
 # ============================================================
-# PART 7: SAVE Q-TABLE TO CSV
+# RECAP: What just happened?
 # ============================================================
-# Export the full Q-table for inspection or further analysis.
-
-q_data = []
-for i in range(size):
-    for j in range(size):
-        for a in range(4):
-            q_data.append({
-                'row': i,
-                'col': j,
-                'action': action_names[a],
-                'action_id': a,
-                'q_value': round(q_table[i, j, a], 4)
-            })
-
-df_q = pd.DataFrame(q_data)
-df_q.to_csv('q_table_gridworld.csv', index=False)
-print("  Q-table saved to 'q_table_gridworld.csv'")
-
-
-# ============================================================
-# PART 8: SUMMARY OF KEY CONCEPTS
-# ============================================================
-print("\n" + "=" * 60)
-print("  KEY CONCEPTS SUMMARY")
-print("=" * 60)
+print()
+print("=" * 35)
+print("  RECAP")
+print("=" * 35)
 print("""
-  ┌─────────────────────────────────────────────────────────┐
-  │  Q-LEARNING ALGORITHM                                   │
-  ├─────────────────────────────────────────────────────────┤
-  │                                                         │
-  │  1. Initialize Q(s,a) = 0 for all states and actions    │
-  │                                                         │
-  │  2. For each episode:                                   │
-  │     a. Start in initial state s                         │
-  │     b. Choose action a using ε-greedy:                  │
-  │        - Random action with prob ε (explore)            │
-  │        - Best action with prob 1-ε (exploit)            │
-  │     c. Take action a, observe reward r and next state s'│
-  │     d. Update Q-value:                                  │
-  │                                                         │
-  │        Q(s,a) ← Q(s,a) + α[r + γ·max Q(s',a') - Q(s,a)]│
-  │                           ↑       ↑                     │
-  │                        learning  discount               │
-  │                          rate    factor                  │
-  │                                                         │
-  │     e. s ← s' (move to next state)                     │
-  │     f. Repeat until terminal state                      │
-  │                                                         │
-  │  3. After enough episodes, Q-table converges to         │
-  │     optimal values → extract optimal policy:            │
-  │     π*(s) = argmax_a Q(s,a)                             │
-  │                                                         │
-  └─────────────────────────────────────────────────────────┘
+  1. We made a 3×3 grid with a Start and Goal.
+  2. The agent tried random moves at first (exploration).
+  3. Each time it moved, it updated its Q-table:
+     "Was this move good? How good is the next spot?"
+  4. Over 500 episodes, it figured out the best path.
+  5. Now it can go from Start to Goal efficiently!
 
-  WHY IT WORKS:
-  • The Bellman equation guarantees convergence to optimal Q*
-    under certain conditions (all state-action pairs visited
-    infinitely often, learning rate decays appropriately).
-  • Each update propagates reward information backward from
-    the goal through the state space.
-  • After training, cells near the goal have high Q-values,
-    and the policy naturally points toward the goal.
+  KEY IDEA:
+  Q-Learning = Trial and error + keeping notes
+  The Q-table IS the knowledge the agent builds up.
 """)

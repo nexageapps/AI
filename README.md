@@ -78,11 +78,13 @@ jupyter lab
 
 ```
 AI/
-├── Basic/              # 20 Lessons (B01-B15 + B01a, B05a, B05b, B05c, B10a) ✅
+├── Basic/              # 20 Lessons (B01-B15 + B01a, B05a, B05b, B05c, B09a, B09b, B10a) ✅
 ├── Intermediate/       # 15 Lessons (I01-I15) ✅
 ├── Advanced/           # 15 Lessons (A01-A15) ✅
 ├── Expert/             # 15 Lessons (E01-E15) ✅
 ├── application/        # Live demos & practical implementations
+│   ├── compsci713/     # COMPSCI 713 weekly apps (Wumpus, KG, RNN, NEAT, Q-Learning)
+│   └── compsci714/     # COMPSCI 714 weekly apps (Gradient Descent, CNN, Transformer, BPE)
 ├── documentation/      # Guides & resources
 └── landingpage/        # Landing page assets
 ```
@@ -104,13 +106,18 @@ Interactive demonstrations of AI concepts in action:
 |------|---------|--------|-------------|----------|------|
 | **Wumpus World** | Symbolic Logic & Knowledge Representation | UoA-COMPSCI 713 | [COMPSCI 713 – AI Fundamentals](#compsci-713) | — | [Play Online](https://nexageapps.github.io/AI/wumpus) |
 | **Mountain Explorer** | Gradient Descent & Optimization | UoA-COMPSCI 714 | [COMPSCI 714 – Neural Networks](./documentation/courses/COMPSCI_714_COMPLETE_GUIDE.md) | [B02 - Linear Regression](https://github.com/nexageapps/AI/blob/main/Basic/B02%20-%20Linear%20Regression.ipynb) · [B05b - Training & Optimization](https://github.com/nexageapps/AI/blob/main/Basic/B05b%20-%20Training%20and%20Optimization%20(COMPSCI%20714).ipynb) | [Play Online](https://nexageapps.github.io/AI/gradient-descent) |
+| **Blindfold Hill** | Gradient Descent, Learning Rate & Convergence | UoA-COMPSCI 714 | [COMPSCI 714 – Neural Networks](./documentation/courses/COMPSCI_714_COMPLETE_GUIDE.md) | [B02 - Linear Regression](https://github.com/nexageapps/AI/blob/main/Basic/B02%20-%20Linear%20Regression.ipynb) · [B05b - Training & Optimization](https://github.com/nexageapps/AI/blob/main/Basic/B05b%20-%20Training%20and%20Optimization%20(COMPSCI%20714).ipynb) | [Play Online](https://nexageapps.github.io/AI/compsci714/week2/blindfold-hill) |
 | **Neural Network Trainer** | Forward Propagation, Backpropagation & Gradient Descent | UoA-COMPSCI 714 | [COMPSCI 714 – Neural Networks](./documentation/courses/COMPSCI_714_COMPLETE_GUIDE.md) | [B05 - Neural Network Fundamentals](https://github.com/nexageapps/AI/blob/main/Basic/B05%20-%20Neural%20Network%20Fundamentals.ipynb) · [B05a - Neural Networks Theory](https://github.com/nexageapps/AI/blob/main/Basic/B05a%20-%20Neural%20Networks%20Theory%20(COMPSCI%20714).ipynb) | [Play Online](https://nexageapps.github.io/AI/nn-trainer/) |
 | **Data Preprocessing Studio** | Missing Values, Feature Scaling, Encoding & Feature Engineering | UoA-COMPSCI 714 | [COMPSCI 714 – Neural Networks](./documentation/courses/COMPSCI_714_COMPLETE_GUIDE.md) | [B06 - Data Preprocessing and Feature Engineering](https://github.com/nexageapps/AI/blob/main/Basic/B06%20-%20Data%20Preprocessing%20and%20Feature%20Engineering.ipynb) | [Play Online](https://nexageapps.github.io/AI/compsci714/week3/data-preprocessing-studio) |
 | **PyTorch Assignment Practice** | Tabular MLP, BCEWithLogitsLoss, Optuna, FashionMNIST CNN, Saliency Maps | UoA-COMPSCI 714 | [COMPSCI 714 – Neural Networks](./documentation/courses/COMPSCI_714_COMPLETE_GUIDE.md) | [B05c - MLP on Tabular Data with PyTorch](https://github.com/nexageapps/AI/blob/main/Basic/B05c%20-%20MLP%20on%20Tabular%20Data%20with%20PyTorch%20(COMPSCI%20714).ipynb) | — |
+| **Model Evaluation Dashboard** | Confusion Matrix, ROC/AUC, Precision-Recall & Cross-Validation | UoA-COMPSCI 713 | [COMPSCI 713 – AI Fundamentals](#compsci-713) | [B07 - Model Evaluation](https://github.com/nexageapps/AI/blob/main/Basic/B07%20-%20Model%20Evaluation%20and%20Performance%20Metrics.ipynb) | — |
 | **KG Playground** | RDF Triples, Knowledge Graphs, RAG & Conflict Detection | UoA-COMPSCI 713 | [COMPSCI 713 – AI Fundamentals](#compsci-713) | [A03 - Retrieval-Augmented Generation](https://github.com/nexageapps/AI/blob/main/Advanced/A03%20-%20Retrieval-Augmented%20Generation%20(RAG).ipynb) | [Play Online](https://nexageapps.github.io/AI/compsci713/week3/kg-playground/) |
+| **RNN Explorer** | RNN/LSTM/GRU Architecture, Gates & Sequence Modelling | UoA-COMPSCI 713 | [COMPSCI 713 – AI Fundamentals](#compsci-713) | [B10 - RNNs](https://github.com/nexageapps/AI/blob/main/Basic/B10%20-%20Recurrent%20Neural%20Networks.ipynb) · [B10a - RNNs (714)](https://github.com/nexageapps/AI/blob/main/Basic/B10a%20-%20Recurrent%20Neural%20Networks%20(COMPSCI%20714).ipynb) | [Play Online](https://nexageapps.github.io/AI/compsci713/week4/rnn-explorer/) |
 | **CNN Explorer** | Convolution, Pooling, Feature Maps, Architecture & Playground | UoA-COMPSCI 714 | [COMPSCI 714 – Neural Networks](./documentation/courses/COMPSCI_714_COMPLETE_GUIDE.md) | [B09 - CNNs](https://github.com/nexageapps/AI/blob/main/Basic/B09%20-%20Convolutional%20Neural%20Networks.ipynb) | [Play Online](https://nexageapps.github.io/AI/compsci714/week3/cnn-explorer/) |
+| **NEAT Explainer** | NeuroEvolution, Topology Mutation, Speciation & Crossover | UoA-COMPSCI 713 | [COMPSCI 713 – AI Fundamentals](#compsci-713) | — | — |
 | **Transformer Explorer** | Self-Attention, Multi-Head Attention, Q/K/V & Architecture | UoA-COMPSCI 714 | [COMPSCI 714 – Neural Networks](./documentation/courses/COMPSCI_714_COMPLETE_GUIDE.md) | [B11 - Attention & Transformers](https://github.com/nexageapps/AI/blob/main/Basic/B11%20-%20Attention%20and%20Transformers.ipynb) | [Play Online](https://nexageapps.github.io/AI/compsci714/week4/transformer-explorer/) |
 | **BPE Explorer** | Byte Pair Encoding, Tokenization, Subwords & Vocabulary | UoA-COMPSCI 714 | [COMPSCI 714 – Neural Networks](./documentation/courses/COMPSCI_714_COMPLETE_GUIDE.md) | [B12 - BPE](https://github.com/nexageapps/AI/blob/main/Basic/B12%20-%20Byte%20Pair%20Encoding%20(BPE).ipynb) | [Play Online](https://nexageapps.github.io/AI/compsci714/week4/bpe-explorer/) |
+| **Q-Learning Grid World** | Reinforcement Learning, Q-Tables, Exploration vs Exploitation | UoA-COMPSCI 713 | [COMPSCI 713 – AI Fundamentals](#compsci-713) | — | — |
 
 **[View All Games](https://nexageapps.github.io/AI/)** • Explore the `application/` folder for source code and deployment guides.
 
@@ -122,7 +129,7 @@ Interactive demonstrations of AI concepts in action:
 
 | Course | Focus | Examples |
 |--------|-------|----------|
-| **COMPSCI 713** | AI Fundamentals | [Symbolic Logic, Knowledge Representation, Search, RL, Sustainability](./documentation/courses/COMPSCI_713_COMPLETE_GUIDE.md) |
+| **COMPSCI 713** | AI Fundamentals | [Symbolic Logic, Knowledge Representation, Search, RL, Neuroevolution, Sustainability](./documentation/courses/COMPSCI_713_COMPLETE_GUIDE.md) |
 | **COMPSCI 714** | Neural Networks | [Networks, Gradient Descent, CNNs, Attention](./documentation/courses/COMPSCI_714_COMPLETE_GUIDE.md) |
 | **COMPSCI 762** | ML Foundations | Regression, Classification, Tuning |
 | **COMPSCI 703** | Generalising AI | Transfer Learning, Domain Adaptation |
@@ -194,6 +201,15 @@ Interactive demonstrations of AI concepts in action:
 - RLHF & alignment
 - Federated learning
 - Cutting-edge research
+
+### Practical Applications
+- Q-Learning & reinforcement learning (grid world)
+- NeuroEvolution (NEAT) for topology search
+- Interactive model evaluation dashboards
+- RNN/LSTM/GRU sequence modelling
+- CNN feature map visualization
+- Transformer attention visualization
+- BPE tokenization exploration
 
 ---
 

@@ -26,21 +26,9 @@ const steps = [
 ]
 
 const quiz = [
-  {
-    question: 'What does NEAT evolve?',
-    options: ['Only weights', 'Only data', 'Both network structure and weights'],
-    answer: 2,
-  },
-  {
-    question: 'Why does NEAT start with simple networks?',
-    options: ['To reduce complexity', 'To avoid learning', 'To make networks random forever'],
-    answer: 0,
-  },
-  {
-    question: 'What is speciation used for?',
-    options: ['Deleting all new ideas', 'Protecting new innovations', 'Making one fixed model'],
-    answer: 1,
-  },
+  { question: 'What does NEAT evolve?', options: ['Only weights', 'Only data', 'Both network structure and weights'], answer: 2 },
+  { question: 'Why does NEAT start with simple networks?', options: ['To reduce complexity', 'To avoid learning', 'To make networks random forever'], answer: 0 },
+  { question: 'What is speciation used for?', options: ['Deleting all new ideas', 'Protecting new innovations', 'Making one fixed model'], answer: 1 },
 ]
 
 function Card({ children, className = '' }) {
@@ -51,6 +39,7 @@ function Button({ children, variant = 'primary', className = '', ...props }) {
   const style = variant === 'outline'
     ? 'border border-slate-300 bg-white text-slate-900 hover:bg-slate-50'
     : 'bg-slate-950 text-white hover:bg-slate-800'
+
   return (
     <button className={`inline-flex items-center justify-center rounded-2xl px-4 py-2 font-semibold transition ${style} ${className}`} {...props}>
       {children}
@@ -126,9 +115,7 @@ export default function App() {
         <motion.div className="mb-8 rounded-3xl bg-white/80 p-8 shadow-xl backdrop-blur" initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }}>
           <div className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
             <div>
-              <p className="mb-2 inline-flex items-center gap-2 rounded-full bg-sky-100 px-3 py-1 text-sm font-medium text-sky-700">
-                <Network className="h-4 w-4" /> AI Concept Explainer
-              </p>
+              <p className="mb-2 inline-flex items-center gap-2 rounded-full bg-sky-100 px-3 py-1 text-sm font-medium text-sky-700"><Network className="h-4 w-4" /> AI Concept Explainer</p>
               <h1 className="text-4xl font-bold tracking-tight md:text-6xl">Understand NEAT</h1>
               <p className="mt-4 max-w-2xl text-lg text-slate-600">
                 NEAT means <strong>NeuroEvolution of Augmenting Topologies</strong>. It is an AI method that evolves neural networks by improving both their connection weights and their structure over generations.
@@ -148,9 +135,7 @@ export default function App() {
               <NetworkDiagram generation={generation} />
               <div className="mt-5 flex flex-wrap gap-3">
                 <Button onClick={() => setGeneration((g) => Math.min(3, g + 1))}>Next generation</Button>
-                <Button variant="outline" onClick={() => setGeneration(1)}>
-                  <RefreshCw className="mr-2 h-4 w-4" /> Reset
-                </Button>
+                <Button variant="outline" onClick={() => setGeneration(1)}><RefreshCw className="mr-2 h-4 w-4" /> Reset</Button>
               </div>
             </div>
           </Card>
@@ -162,13 +147,8 @@ export default function App() {
                 <motion.div key={step.title} initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: index * 0.08 }}>
                   <Card className="shadow-md">
                     <div className="flex gap-4 p-5">
-                      <div className="rounded-2xl bg-indigo-100 p-3 text-indigo-700">
-                        <Icon className="h-6 w-6" />
-                      </div>
-                      <div>
-                        <h3 className="font-bold">{step.title}</h3>
-                        <p className="mt-1 text-sm text-slate-600">{step.text}</p>
-                      </div>
+                      <div className="rounded-2xl bg-indigo-100 p-3 text-indigo-700"><Icon className="h-6 w-6" /></div>
+                      <div><h3 className="font-bold">{step.title}</h3><p className="mt-1 text-sm text-slate-600">{step.text}</p></div>
                     </div>
                   </Card>
                 </motion.div>
@@ -190,15 +170,7 @@ export default function App() {
                       {item.options.map((option, optionIndex) => {
                         const isSelected = selected[qIndex] === optionIndex
                         const isCorrect = item.answer === optionIndex
-                        return (
-                          <button
-                            key={option}
-                            onClick={() => setSelected({ ...selected, [qIndex]: optionIndex })}
-                            className={`rounded-2xl border p-3 text-left text-sm transition ${isSelected && isCorrect ? 'border-emerald-400 bg-emerald-50' : isSelected ? 'border-rose-400 bg-rose-50' : 'border-slate-200 bg-white hover:border-sky-300'}`}
-                          >
-                            {option}
-                          </button>
-                        )
+                        return <button key={option} onClick={() => setSelected({ ...selected, [qIndex]: optionIndex })} className={`rounded-2xl border p-3 text-left text-sm transition ${isSelected && isCorrect ? 'border-emerald-400 bg-emerald-50' : isSelected ? 'border-rose-400 bg-rose-50' : 'border-slate-200 bg-white hover:border-sky-300'}`}>{option}</button>
                       })}
                     </div>
                   </div>
@@ -217,10 +189,7 @@ export default function App() {
                 <li>• It starts simple and becomes complex only when needed.</li>
                 <li>• Speciation protects new network structures.</li>
               </ul>
-              <div className="mt-6 rounded-2xl bg-white/10 p-4">
-                <p className="text-sm text-slate-300">Quiz score</p>
-                <p className="text-4xl font-bold">{score}/{quiz.length}</p>
-              </div>
+              <div className="mt-6 rounded-2xl bg-white/10 p-4"><p className="text-sm text-slate-300">Quiz score</p><p className="text-4xl font-bold">{score}/{quiz.length}</p></div>
             </div>
           </Card>
         </section>

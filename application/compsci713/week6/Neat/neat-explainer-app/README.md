@@ -2,40 +2,30 @@
 
 A simple presentable React app to explain **NEAT — NeuroEvolution of Augmenting Topologies**.
 
-## What the app includes
+## Important fix included
 
-- Clean landing section for presentation
-- Interactive neural network evolution diagram
-- Four-step explanation of the NEAT process
-- Mini quiz to check understanding
-- Summary card for quick revision
+This version pins Tailwind CSS to version 3.4.17, so the normal `postcss.config.js` setup works without the Tailwind v4 PostCSS plugin error.
 
 ## Run in VS Code
 
-1. Open this folder in VS Code.
-2. Open the terminal in VS Code.
-3. Install dependencies:
-
 ```bash
 npm install
-```
-
-4. Start the app:
-
-```bash
 npm run dev
 ```
 
-5. Open the local URL shown in the terminal, usually:
+Open the URL shown in the terminal, usually:
 
 ```text
 http://localhost:5173
 ```
 
-## Build for production
+## If you already installed dependencies before
+
+Delete `node_modules` and `package-lock.json`, then run:
 
 ```bash
-npm run build
+npm install
+npm run dev
 ```
 
 ## Main files

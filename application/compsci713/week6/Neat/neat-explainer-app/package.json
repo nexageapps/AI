@@ -1,4 +1,8 @@
 {
+  "name": "neat-explainer-app",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
   "scripts": {
     "dev": "vite --host 0.0.0.0",
     "build": "vite build",
@@ -13,7 +17,7 @@
     "framer-motion": "latest"
   },
   "devDependencies": {
-    "tailwindcss": "latest",
+    "tailwindcss": "^3.4.17",
     "postcss": "latest",
     "autoprefixer": "latest"
   }

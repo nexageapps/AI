@@ -36,7 +36,7 @@ import random
 
 GRID_SIZE = 3
 START = (0, 0)
-GOAL = (2, 2)
+GOAL = (1, 1)
 
 def move(state, action):
     """Move the agent. If it hits a wall, it stays put."""

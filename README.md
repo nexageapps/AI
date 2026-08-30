@@ -287,6 +287,10 @@ Interactive demonstrations of AI concepts in action:
 
 **[📖 Full Agents Curriculum](./Agents/README.md)** • **[🚀 Getting Started Guide](./Agents/GETTING_STARTED.md)**
 
+**📍 Current Status:** Foundation Complete (AG01-AG03) | **[View Roadmap →](./Agents/ROADMAP.md)**
+
+**Next Up:** AG04 (Tools & Function Calling) → AG05 (First Agent) → AG06 (RAG Agents)
+
 ### Practical Applications
 - Q-Learning & reinforcement learning (grid world)
 - NeuroEvolution (NEAT) for topology search

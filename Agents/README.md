@@ -42,15 +42,110 @@ This is an independent, open-source educational project created by a student for
 ## Table of Contents
 
 - [Complete Lesson List](#complete-lesson-list)
+- [Current Progress & Roadmap](#current-progress--roadmap)
 - [Learning Paths](#learning-paths)
 - [Prerequisites](#prerequisites)
 - [How to Use These Lessons](#how-to-use-these-lessons)
 - [Agent Architecture Evolution](#agent-architecture-evolution)
 - [Study Strategies](#study-strategies)
+- [Practice Exercises](#practice-exercises)
 - [Additional Resources](#additional-resources)
 - [Common Challenges & Solutions](#common-challenges--solutions)
 - [Progress Tracking](#progress-tracking)
 - [Getting Help](#getting-help)
+
+---
+
+## Current Progress & Roadmap
+
+### ✅ Phase 1: Foundation COMPLETE (3/3 lessons)
+
+**Ready to learn now:**
+- ✅ **AG01** - Introduction to AI Agents (45 min) - Conceptual foundation
+- ✅ **AG02** - LangChain Basics (1.5 hours) - Complete with 15+ code examples
+- ✅ **AG03** - Memory Systems (2 hours) - All memory types with code
+
+**What you can build right now:** Basic chatbots, chains with memory, structured output parsers
+
+---
+
+### 🔥 Phase 2: Core Development (Next Priority)
+
+**Target:** Enable students to build functional agents
+**Timeline:** 3-4 weeks
+
+- **AG04 - Tools and Function Calling** ⭐⭐⭐⭐⭐ CRITICAL
+  - Custom tools, built-in tools, error handling
+  - **Unlocks:** Agent capabilities
+  
+- **AG05 - Building Your First Agent** ⭐⭐⭐⭐⭐ CRITICAL  
+  - ReAct agents, agent executors, debugging
+  - **Unlocks:** Complete functional agents
+  
+- **AG06 - RAG Agents** ⭐⭐⭐⭐⭐ MOST REQUESTED
+  - Document loading, vector stores, retrieval strategies
+  - **Unlocks:** Knowledge-grounded agents
+  
+- **AG07 - Agent Evaluation** ⭐⭐⭐⭐
+  - Testing, metrics, cost tracking
+  - **Unlocks:** Production readiness
+
+**What you'll be able to build:** Research assistants, Q&A systems, document analyzers
+
+---
+
+### 🚀 Phase 3: Advanced Orchestration (After Phase 2)
+
+**Target:** Master complex workflows
+**Timeline:** 2-3 weeks
+
+- **AG08 - LangGraph** ⭐⭐⭐⭐⭐ CRITICAL
+  - State machines, conditional routing
+  - **Unlocks:** Complex workflows
+  
+- **AG09 - Multi-Step Workflows** ⭐⭐⭐⭐
+  - Plan-and-execute, task decomposition
+  
+- **AG10 - Human-in-the-Loop** ⭐⭐⭐⭐
+  - Breakpoints, approvals, safety
+  
+- **AG11 - Multi-Agent Systems** ⭐⭐⭐⭐⭐ HIGH DEMAND
+  - Agent teams, supervisor patterns
+  - **Unlocks:** Collaborative agent systems
+
+**What you'll be able to build:** Agent teams, complex workflows, production systems
+
+---
+
+### 💼 Phase 4: Applications (After Phase 3)
+
+- **AG12** - Code Generation Agents
+- **AG13** - Data Analysis Agents  
+- **AG14** - Research & Content Agents
+
+**What you'll be able to build:** Specialized production applications
+
+---
+
+### 🚢 Phase 5: Production (After Phase 3-4)
+
+- **AG15** - Agent APIs ⭐⭐⭐⭐⭐ CRITICAL
+- **AG16** - Agent UIs ⭐⭐⭐⭐
+- **AG17** - Monitoring & Production ⭐⭐⭐⭐⭐
+
+**What you'll be able to build:** Deployed, monitored production systems
+
+---
+
+### 🎓 Phase 6: Capstone
+
+- **AG18** - 5 Portfolio Projects ⭐⭐⭐⭐⭐
+
+**What you'll have:** Production-ready portfolio showcasing your skills
+
+---
+
+**[📋 View Detailed Roadmap →](./ROADMAP.md)** | **[💪 Practice Exercises →](./EXERCISES.md)**
 
 ---
 
@@ -649,6 +744,52 @@ graph TD
 
 **"Tools not being called"**
 - Solution: Improve tool names/descriptions, add examples, verify tool schemas
+
+---
+
+## Practice Exercises
+
+Master each lesson with hands-on exercises! **[View All Exercises →](./EXERCISES.md)**
+
+### Available Now ✅
+
+**AG01 Exercises:**
+- Identify the right approach (LLM vs Chain vs Agent)
+- Design ReAct flows
+- Calculate agent costs
+- Identify and fix failure modes
+- Design your own agent
+
+**AG02 Exercises:**
+- Build translation chains
+- Extract structured data with Pydantic
+- Create parallel chains
+- Few-shot prompt engineering
+- Build complete applications
+
+**AG03 Exercises:**
+- Build preference trackers
+- Compare memory types
+- Implement semantic search
+- Create persistent chat history
+- Build session-based chatbots
+
+**Challenge Projects:**
+- Multi-memory agent systems
+- Memory optimization
+- Cross-session knowledge bases
+
+### Coming Soon 📝
+
+**AG04-AG18:** Exercises will be added as lessons are completed
+
+Each lesson includes:
+- 5+ practice exercises
+- Complete solutions
+- Real-world applications
+- Tips for success
+
+**[Start Practicing →](./EXERCISES.md)**
 
 ---
 

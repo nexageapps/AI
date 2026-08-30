@@ -8,13 +8,13 @@
 
 **Open-source AI education built by a student, for students and learners worldwide.**
 
-Basic to Expert. Zero to Language Models. 64 lessons. 100% hands-on.
+Basic to Expert. Zero to Language Models to AI Agents. 82 lessons. 100% hands-on.
 
 [Quick Start](#quick-start) • [Student Guide](./documentation/MAI_STUDENT_GUIDE.md) • [Exam Prep](./documentation/EXAM_PREPARATION_GUIDE.md) • [LinkedIn](https://www.linkedin.com/in/karthik-arjun-a5b4a258/) • [Support Project](https://buymeacoffee.com/fcc4sbsx5f6)
 
 [![Python](https://img.shields.io/badge/Python-3.8+-orange.svg)](https://www.python.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](./LICENSE)
-[![Lessons](https://img.shields.io/badge/Lessons-64-brightgreen.svg)](./Basic/)
+[![Lessons](https://img.shields.io/badge/Lessons-82-brightgreen.svg)](./Basic/)
 [![Sponsored by nexageapps](https://img.shields.io/badge/Sponsored%20by-nexageapps-blue.svg)](https://nexageapps.com)
 [![Buy me a book](https://img.shields.io/badge/Buy%20Me%20A%20Book-Support-yellow.svg)](https://buymeacoffee.com/fcc4sbsx5f6)
 
@@ -30,13 +30,46 @@ This is an **independent learning project**, NOT official University of Auckland
 
 ## What Is This?
 
-A structured, hands-on learning path from basic arithmetic to complete language models. **64 lessons** with runnable code, visualizations, and practical projects.
+A structured, hands-on learning path from basic arithmetic to complete language models and intelligent AI agents. **82 lessons** with runnable code, visualizations, and practical projects.
 
 **Perfect for:**
 - University students learning AI/ML
 - Self-learners building AI skills
 - Professionals upskilling in deep learning
 - Anyone wanting to understand AI from first principles
+
+---
+
+## 🆕 New: AI Agents with LangChain & LangGraph
+
+Build intelligent agents that reason, plan, and act! The new **Agents** sector teaches you how to create production-ready AI agents using industry-standard frameworks.
+
+**What You'll Build:**
+- 🤖 Conversational agents with memory
+- 🔍 RAG systems for knowledge retrieval
+- 🔧 Multi-agent systems with specialized roles
+- 🚀 Production APIs and user interfaces
+- 📊 Real applications: code assistants, data analysts, research agents
+
+**18 comprehensive lessons** | **4-6 hours of complete content ready now** | **[Start Learning →](./Agents/)**
+
+<details>
+<summary><b>Quick Preview: What's Inside?</b></summary>
+
+### Foundation (Ready Now! ✅)
+- **AG01** - Introduction to AI Agents (ReAct pattern, agent vs LLM)
+- **AG02** - LangChain Basics (chains, prompts, parsers, complete app)
+- **AG03** - Memory Systems (buffer, summary, vector stores)
+
+### Coming Soon
+- **AG04-AG07** - Tools, Agents, RAG, Evaluation
+- **AG08-AG11** - LangGraph, Multi-step workflows, Multi-agent systems
+- **AG12-AG14** - Code, Data Analysis, Research Agents
+- **AG15-AG17** - Production APIs, UIs, Monitoring
+- **AG18** - 5 Portfolio Capstone Projects
+
+**[View Complete Curriculum →](./Agents/README.md)** | **[Getting Started Guide →](./Agents/GETTING_STARTED.md)**
+</details>
 
 ---
 
@@ -50,6 +83,7 @@ A structured, hands-on learning path from basic arithmetic to complete language 
 | **Intermediate (I01-I15)** | 15 | 4-6 weeks | Advanced techniques |
 | **Advanced (A01-A15)** | 15 | 6-8 weeks | Production systems |
 | **Expert (E01-E15)** | 15 | 8-10 weeks | Research & innovation |
+| **Agents (AG01-AG18)** | 18 | 8-12 weeks | LangChain, LangGraph & agent development 🆕 |
 
 ### 2. Set Up
 
@@ -74,6 +108,31 @@ jupyter lab
 
 ---
 
+## Complete Learning Journey
+
+```mermaid
+graph LR
+    A[Start Here<br/>Basic<br/>20 lessons] --> B[Intermediate<br/>15 lessons]
+    B --> C[Advanced<br/>15 lessons]
+    C --> D[Expert<br/>15 lessons]
+    
+    B --> E[Agents 🆕<br/>18 lessons]
+    C --> E
+    
+    style A fill:#90EE90,stroke:#2d5016,stroke-width:3px
+    style B fill:#87CEEB,stroke:#4682b4,stroke-width:2px
+    style C fill:#FFB6C1,stroke:#c71585,stroke-width:2px
+    style D fill:#DDA0DD,stroke:#8b008b,stroke-width:2px
+    style E fill:#FFD700,stroke:#b8860b,stroke-width:3px
+```
+
+**Learning Paths:**
+- **Traditional ML/DL:** Basic → Intermediate → Advanced → Expert
+- **Agent Development:** Basic → Intermediate → **Agents** 🆕
+- **Full Stack AI:** Basic → Intermediate → Advanced → **Agents** → Expert
+
+---
+
 ## Repository Structure
 
 ```
@@ -82,12 +141,23 @@ AI/
 ├── Intermediate/       # 15 Lessons (I01-I15) ✅
 ├── Advanced/           # 15 Lessons (A01-A15) ✅
 ├── Expert/             # 15 Lessons (E01-E15) ✅
+├── Agents/             # 18 Lessons (AG01-AG18) - LangChain & LangGraph 🆕
 ├── application/        # Live demos & practical implementations
 │   ├── compsci713/     # COMPSCI 713 weekly apps (Wumpus, KG, RNN, NEAT, Q-Learning)
 │   └── compsci714/     # COMPSCI 714 weekly apps (Gradient Descent, CNN, Transformer, BPE)
 ├── documentation/      # Guides & resources
 └── landingpage/        # Landing page assets
 ```
+
+### What Each Level Teaches
+
+| Level | Focus | You'll Learn | Best For |
+|-------|-------|--------------|----------|
+| **Basic** | Foundations | Neural networks, CNNs, RNNs, Transformers from scratch | Understanding how AI works |
+| **Intermediate** | Advanced ML | Transfer learning, GANs, VAEs, optimization | Building better models |
+| **Advanced** | Production ML | Fine-tuning LLMs, RAG, deployment, monitoring | Shipping ML systems |
+| **Expert** | Research | Implementing papers, RL, meta-learning, NAS | Innovation & research |
+| **Agents 🆕** | Applications | Building intelligent agents with LangChain/LangGraph | **Shipping AI products** |
 
 ---
 
@@ -131,11 +201,12 @@ Interactive demonstrations of AI concepts in action:
 |--------|-------|----------|
 | **COMPSCI 713** | AI Fundamentals | [Symbolic Logic, Knowledge Representation, Search, RL, Neuroevolution, Sustainability](./documentation/courses/COMPSCI_713_COMPLETE_GUIDE.md) |
 | **COMPSCI 714** | Neural Networks | [Networks, Gradient Descent, CNNs, Attention](./documentation/courses/COMPSCI_714_COMPLETE_GUIDE.md) |
+| **COMPSCI 769** | Natural Language Processing | [Semantic Representation, LLMs, RAG, Question Answering, Knowledge Graphs](./documentation/courses/COMPSCI_769_COMPLETE_GUIDE.md) |
 | **COMPSCI 762** | ML Foundations | Regression, Classification, Tuning |
 | **COMPSCI 703** | Generalising AI | Transfer Learning, Domain Adaptation |
 | **COMPSYS 721** | Deep Learning | Detection, Time Series, NLP, GANs |
 
-**[COMPSCI 713 Complete Guide](./documentation/courses/COMPSCI_713_COMPLETE_GUIDE.md)** · **[COMPSCI 714 Complete Guide](./documentation/courses/COMPSCI_714_COMPLETE_GUIDE.md)**
+**[COMPSCI 713 Complete Guide](./documentation/courses/COMPSCI_713_COMPLETE_GUIDE.md)** · **[COMPSCI 714 Complete Guide](./documentation/courses/COMPSCI_714_COMPLETE_GUIDE.md)** · **[COMPSCI 769 Complete Guide](./documentation/courses/COMPSCI_769_COMPLETE_GUIDE.md)**
 
 ### Study Tips
 
@@ -202,6 +273,20 @@ Interactive demonstrations of AI concepts in action:
 - Federated learning
 - Cutting-edge research
 
+### Agents Level (AG01-AG18) 🆕
+- AI agent fundamentals & ReAct pattern
+- LangChain basics: chains, prompts, parsers
+- Memory systems (buffer, summary, vector)
+- Tools and function calling
+- Building RAG agents
+- LangGraph state machines
+- Multi-agent systems
+- Human-in-the-loop patterns
+- Production deployment (APIs, UIs, monitoring)
+- Real-world applications: code assistants, data analysts, research agents
+
+**[📖 Full Agents Curriculum](./Agents/README.md)** • **[🚀 Getting Started Guide](./Agents/GETTING_STARTED.md)**
+
 ### Practical Applications
 - Q-Learning & reinforcement learning (grid world)
 - NeuroEvolution (NEAT) for topology search
@@ -220,6 +305,49 @@ Interactive demonstrations of AI concepts in action:
 **Intermediate:** Medical image analysis, chatbot, stock predictor, document summarizer, multi-label classification
 
 **Advanced:** RAG system, domain-specific LLM, multi-modal search, code reviewer, real-time detection
+
+**Agents:** Personal research assistant, automated code review agent, customer support system, data analysis agent, content creation pipeline
+
+<details>
+<summary><b>Agent Project Examples (Click to Expand)</b></summary>
+
+### 🔍 Research Assistant Agent
+- Searches web for relevant papers
+- Summarizes findings
+- Cites sources automatically
+- Answers follow-up questions
+- **Teaches:** RAG, web tools, memory
+
+### 💻 Code Review Agent
+- Analyzes code for bugs
+- Suggests improvements
+- Generates tests
+- Explains complex code
+- **Teaches:** Multi-step workflows, code tools
+
+### 💬 Customer Support System
+- Multi-agent: triage → specialist → escalation
+- Accesses knowledge base
+- Creates support tickets
+- Human-in-the-loop for complex issues
+- **Teaches:** Multi-agent systems, databases
+
+### 📊 Data Analysis Agent
+- Queries databases (SQL)
+- Analyzes with pandas
+- Generates visualizations
+- Creates reports
+- **Teaches:** Tool integration, structured output
+
+### ✍️ Content Creation Pipeline
+- Research agent → Writer agent → Editor agent
+- SEO optimization
+- Fact checking
+- Citation management
+- **Teaches:** Agent collaboration, quality control
+
+**[See AG18 for complete project guides →](./Agents/AG18%20-%20Capstone%20Agent%20Projects.ipynb)**
+</details>
 
 **Research:** Novel architecture, paper reproduction, bias detection, model compression, federated learning
 

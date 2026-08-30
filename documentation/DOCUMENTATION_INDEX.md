@@ -148,6 +148,26 @@ Best for: Lecture 3 preparation, understanding optimization, backpropagation mas
 
 [View Lecture 3 Guide](./courses/COMPSCI_714_LECTURE_3.md)
 
+### COMPSCI 769 Complete Guide
+Comprehensive guide for COMPSCI 769 - Natural Language Processing course.
+
+Contents:
+- Course overview and philosophy
+- Teaching team and contact information
+- Week-by-week topics (Foundations, NLP Tasks, Advanced Topics, Presentations)
+- Assessment structure (Coding, Essay, Group Presentation, Exam)
+- Learning objectives and prerequisites
+- Repository lesson mapping for all 12 weeks
+- Study guide and success tips
+- Academic integrity and AI usage policies
+- NLP fundamentals (What is NLP, Evolution, Key Concepts)
+- Career paths and industry applications
+- Important dates and deadlines
+
+Best for: COMPSCI 769 students, NLP course preparation, semester planning, understanding modern NLP
+
+[View COMPSCI 769 Guide](./courses/COMPSCI_769_COMPLETE_GUIDE.md)
+
 ## Policy Documentation
 
 ### Academic Integrity Policy

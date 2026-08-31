@@ -410,13 +410,13 @@ graph TD
 **Timeline:** 8-12 weeks (6-8 hours/week)
 
 ```
-Week 1-2:   AG01 → AG02 → AG03 (Foundation)
-Week 3-4:   AG04 → AG05 (Core Agents)
-Week 5:     AG06 → AG07 (RAG & Evaluation)
-Week 6-7:   AG08 → AG09 (LangGraph Basics)
-Week 8-9:   AG10 → AG11 (Advanced Patterns)
+Week 1-2:   AG01 to AG02 to AG03 (Foundation)
+Week 3-4:   AG04 to AG05 (Core Agents)
+Week 5:     AG06 to AG07 (RAG & Evaluation)
+Week 6-7:   AG08 to AG09 (LangGraph Basics)
+Week 8-9:   AG10 to AG11 (Advanced Patterns)
 Week 10:    AG12 OR AG13 OR AG14 (Choose one application)
-Week 11:    AG15 → AG16 → AG17 (Production)
+Week 11:    AG15 to AG16 to AG17 (Production)
 Week 12+:   AG18 (Capstone Projects)
 ```
 
@@ -446,12 +446,12 @@ graph LR
 ```
 
 ```
-Week 1-2:   AG01 → AG02 → AG03 (Quick foundation)
-Week 3:     AG04 → AG05 (Basic agents)
+Week 1-2:   AG01 to AG02 to AG03 (Quick foundation)
+Week 3:     AG04 to AG05 (Basic agents)
 Week 4-5:   AG06 (RAG deep dive + variations)
-Week 6:     AG08 → AG09 (Complex RAG workflows)
+Week 6:     AG08 to AG09 (Complex RAG workflows)
 Week 7:     AG14 (Research agent application)
-Week 8:     AG15 → AG16 → AG17 (Deploy RAG system)
+Week 8:     AG15 to AG16 to AG17 (Deploy RAG system)
 ```
 
 ---
@@ -474,12 +474,12 @@ graph LR
 ```
 
 ```
-Week 1-2:   AG01 → AG02 → AG03 (Foundation)
-Week 3:     AG04 → AG05 (Basic agents)
-Week 4:     AG08 → AG09 (LangGraph patterns)
+Week 1-2:   AG01 to AG02 to AG03 (Foundation)
+Week 3:     AG04 to AG05 (Basic agents)
+Week 4:     AG08 to AG09 (LangGraph patterns)
 Week 5-6:   AG11 (Multi-agent deep dive)
 Week 7:     AG13 (Build agent team application)
-Week 8:     AG15 → AG16 → AG17 (Production deployment)
+Week 8:     AG15 to AG16 to AG17 (Production deployment)
 ```
 
 ---
@@ -503,9 +503,9 @@ graph LR
 
 ```
 Week 1:     AG01-AG05 (Skim basics, focus on gaps)
-Week 2:     AG06 → AG08 (RAG + LangGraph)
+Week 2:     AG06 to AG08 (RAG + LangGraph)
 Week 3:     Choose AG12, AG13, or AG14 (Application focus)
-Week 4:     AG15 → AG16 (API + UI)
+Week 4:     AG15 to AG16 (API + UI)
 Week 5:     AG17 (Production setup)
 Week 6:     AG18 (Complete and deploy capstone)
 ```
@@ -715,14 +715,14 @@ graph TD
     B -->|"Slow Performance"| G["Parallel Tool Calls<br/>Reduce Context Size<br/>Optimize Retrievals"]
     B -->|"Wrong Outputs"| H["Improve Prompts<br/>Add Examples<br/>Use Better Tools"]
     
-    style A fill:#ffebee,stroke:#c62828,stroke-width:3px
-    style B fill:#e3f2fd,stroke:#1976d2,stroke-width:2px
-    style C fill:#fff9c4,stroke:#f9a825,stroke-width:2px
-    style D fill:#fff9c4,stroke:#f9a825,stroke-width:2px
-    style E fill:#fff9c4,stroke:#f9a825,stroke-width:2px
-    style F fill:#fff9c4,stroke:#f9a825,stroke-width:2px
-    style G fill:#fff9c4,stroke:#f9a825,stroke-width:2px
-    style H fill:#fff9c4,stroke:#f9a825,stroke-width:2px
+    style A fill:#ffffff,stroke:#000000,stroke-width:3px,color:#000000
+    style B fill:#f0f0f0,stroke:#000000,stroke-width:2px,color:#000000
+    style C fill:#e8e8e8,stroke:#000000,stroke-width:2px,color:#000000
+    style D fill:#e8e8e8,stroke:#000000,stroke-width:2px,color:#000000
+    style E fill:#e8e8e8,stroke:#000000,stroke-width:2px,color:#000000
+    style F fill:#e8e8e8,stroke:#000000,stroke-width:2px,color:#000000
+    style G fill:#e8e8e8,stroke:#000000,stroke-width:2px,color:#000000
+    style H fill:#e8e8e8,stroke:#000000,stroke-width:2px,color:#000000
 ```
 
 ### Common Issues
@@ -922,11 +922,11 @@ Built with:
 ## Support This Project
 
 If these lessons helped you:
-- ⭐ Star the repository
-- 📣 Share with others
-- 🐛 Report issues
-- 💡 Contribute improvements
-- ☕ [Buy me a book](https://buymeacoffee.com/fcc4sbsx5f6)
+- Star the repository
+- Share with others
+- Report issues
+- Contribute improvements
+- [Buy me a book](https://buymeacoffee.com/fcc4sbsx5f6)
 
 ---
 

@@ -127,9 +127,9 @@ graph LR
 ```
 
 **Learning Paths:**
-- **Traditional ML/DL:** Basic → Intermediate → Advanced → Expert
-- **Agent Development:** Basic → Intermediate → Agents (NEW)
-- **Full Stack AI:** Basic → Intermediate → Advanced → Agents → Expert
+- **Traditional ML/DL:** Basic to Intermediate to Advanced to Expert
+- **Agent Development:** Basic to Intermediate to Agents (NEW)
+- **Full Stack AI:** Basic to Intermediate to Advanced to Agents to Expert
 
 ---
 
@@ -137,10 +137,10 @@ graph LR
 
 ```
 AI/
-├── Basic/              # 20 Lessons (B01-B15 + B01a, B05a, B05b, B05c, B09a, B09b, B10a) ✅
-├── Intermediate/       # 15 Lessons (I01-I15) ✅
-├── Advanced/           # 15 Lessons (A01-A15) ✅
-├── Expert/             # 15 Lessons (E01-E15) ✅
+├── Basic/              # 20 Lessons (B01-B15 + B01a, B05a, B05b, B05c, B09a, B09b, B10a) [COMPLETE]
+├── Intermediate/       # 15 Lessons (I01-I15) [COMPLETE]
+├── Advanced/           # 15 Lessons (A01-A15) [COMPLETE]
+├── Expert/             # 15 Lessons (E01-E15) [COMPLETE]
 ├── Agents/             # 18 Lessons (AG01-AG18) - LangChain & LangGraph [NEW]
 ├── application/        # Live demos & practical implementations
 │   ├── compsci713/     # COMPSCI 713 weekly apps (Wumpus, KG, RNN, NEAT, Q-Learning)
@@ -330,7 +330,7 @@ Interactive demonstrations of AI concepts in action:
 - **Teaches:** Multi-step workflows, code tools
 
 ### 💬 Customer Support System
-- Multi-agent: triage → specialist → escalation
+- Multi-agent: triage to specialist to escalation
 - Accesses knowledge base
 - Creates support tickets
 - Human-in-the-loop for complex issues
@@ -344,7 +344,7 @@ Interactive demonstrations of AI concepts in action:
 - **Teaches:** Tool integration, structured output
 
 ### ✍️ Content Creation Pipeline
-- Research agent → Writer agent → Editor agent
+- Research agent to Writer agent to Editor agent
 - SEO optimization
 - Fact checking
 - Citation management
@@ -359,7 +359,7 @@ Interactive demonstrations of AI concepts in action:
 
 ## Academic Integrity
 
-✅ **Appropriate Use:**
+**Appropriate Use:**
 - Learning concepts and understanding implementations
 - Preparing for lectures and exams
 - Using as inspiration for original projects
@@ -427,7 +427,7 @@ MIT License - See [LICENSE](./LICENSE) for details.
 
 ---
 
-### ⭐ If you find this helpful, please star the repository! ⭐
+### If you find this helpful, please star the repository!
 *Made by a student, for students*
 **Happy Learning!**
 

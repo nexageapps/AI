@@ -58,35 +58,35 @@ This is an independent, open-source educational project created by a student for
 
 ## Current Progress & Roadmap
 
-### ✅ Phase 1: Foundation COMPLETE (3/3 lessons)
+### Phase 1: Foundation COMPLETE (3/3 lessons)
 
 **Ready to learn now:**
-- ✅ **AG01** - Introduction to AI Agents (45 min) - Conceptual foundation
-- ✅ **AG02** - LangChain Basics (1.5 hours) - Complete with 15+ code examples
-- ✅ **AG03** - Memory Systems (2 hours) - All memory types with code
+- COMPLETE: AG01 - Introduction to AI Agents (45 min) - Conceptual foundation
+- COMPLETE: AG02 - LangChain Basics (1.5 hours) - Complete with 15+ code examples
+- COMPLETE: AG03 - Memory Systems (2 hours) - All memory types with code
 
 **What you can build right now:** Basic chatbots, chains with memory, structured output parsers
 
 ---
 
-### 🔥 Phase 2: Core Development (Next Priority)
+### Phase 2: Core Development (Next Priority)
 
 **Target:** Enable students to build functional agents
 **Timeline:** 3-4 weeks
 
-- **AG04 - Tools and Function Calling** ⭐⭐⭐⭐⭐ CRITICAL
+- **AG04 - Tools and Function Calling** [CRITICAL PRIORITY]
   - Custom tools, built-in tools, error handling
   - **Unlocks:** Agent capabilities
   
-- **AG05 - Building Your First Agent** ⭐⭐⭐⭐⭐ CRITICAL  
+- **AG05 - Building Your First Agent** [CRITICAL PRIORITY]
   - ReAct agents, agent executors, debugging
   - **Unlocks:** Complete functional agents
   
-- **AG06 - RAG Agents** ⭐⭐⭐⭐⭐ MOST REQUESTED
+- **AG06 - RAG Agents** [MOST REQUESTED]
   - Document loading, vector stores, retrieval strategies
   - **Unlocks:** Knowledge-grounded agents
   
-- **AG07 - Agent Evaluation** ⭐⭐⭐⭐
+- **AG07 - Agent Evaluation** [IMPORTANT]
   - Testing, metrics, cost tracking
   - **Unlocks:** Production readiness
 
@@ -94,22 +94,22 @@ This is an independent, open-source educational project created by a student for
 
 ---
 
-### 🚀 Phase 3: Advanced Orchestration (After Phase 2)
+### Phase 3: Advanced Orchestration (After Phase 2)
 
 **Target:** Master complex workflows
 **Timeline:** 2-3 weeks
 
-- **AG08 - LangGraph** ⭐⭐⭐⭐⭐ CRITICAL
+- **AG08 - LangGraph** [CRITICAL PRIORITY]
   - State machines, conditional routing
   - **Unlocks:** Complex workflows
   
-- **AG09 - Multi-Step Workflows** ⭐⭐⭐⭐
+- **AG09 - Multi-Step Workflows** [IMPORTANT]
   - Plan-and-execute, task decomposition
   
-- **AG10 - Human-in-the-Loop** ⭐⭐⭐⭐
+- **AG10 - Human-in-the-Loop** [IMPORTANT]
   - Breakpoints, approvals, safety
   
-- **AG11 - Multi-Agent Systems** ⭐⭐⭐⭐⭐ HIGH DEMAND
+- **AG11 - Multi-Agent Systems** [HIGH DEMAND]
   - Agent teams, supervisor patterns
   - **Unlocks:** Collaborative agent systems
 
@@ -117,7 +117,7 @@ This is an independent, open-source educational project created by a student for
 
 ---
 
-### 💼 Phase 4: Applications (After Phase 3)
+### Phase 4: Applications (After Phase 3)
 
 - **AG12** - Code Generation Agents
 - **AG13** - Data Analysis Agents  
@@ -127,25 +127,25 @@ This is an independent, open-source educational project created by a student for
 
 ---
 
-### 🚢 Phase 5: Production (After Phase 3-4)
+### Phase 5: Production (After Phase 3-4)
 
-- **AG15** - Agent APIs ⭐⭐⭐⭐⭐ CRITICAL
-- **AG16** - Agent UIs ⭐⭐⭐⭐
-- **AG17** - Monitoring & Production ⭐⭐⭐⭐⭐
+- **AG15** - Agent APIs [CRITICAL PRIORITY]
+- **AG16** - Agent UIs [IMPORTANT]
+- **AG17** - Monitoring & Production [CRITICAL PRIORITY]
 
 **What you'll be able to build:** Deployed, monitored production systems
 
 ---
 
-### 🎓 Phase 6: Capstone
+### Phase 6: Capstone
 
-- **AG18** - 5 Portfolio Projects ⭐⭐⭐⭐⭐
+- **AG18** - 5 Portfolio Projects [CRITICAL PRIORITY]
 
 **What you'll have:** Production-ready portfolio showcasing your skills
 
 ---
 
-**[📋 View Detailed Roadmap →](./ROADMAP.md)** | **[💪 Practice Exercises →](./EXERCISES.md)**
+**[View Detailed Roadmap](./ROADMAP.md)** | **[Practice Exercises](./EXERCISES.md)**
 
 ---
 
@@ -371,10 +371,10 @@ Choose the path that matches your goals:
 
 ```mermaid
 graph TD
-    A["Start<br/>AG01 Agent Concepts"] --> B["AG02<br/>LangChain Basics"]
+    A["Start Here<br/>AG01: Agent Concepts"] --> B["AG02<br/>LangChain Basics"]
     B --> C["AG03<br/>Memory Systems"]
     C --> D{"Choose Your Path"}
-    D -->|"Complete Path"| E["AG04 Tools"]
+    D -->|"Complete Path"| E["AG04: Tools"]
     D -->|"Quick Start"| F["Skip to AG05"]
     D -->|"RAG Focus"| G["Jump to AG06"]
     
@@ -394,12 +394,12 @@ graph TD
     P --> Q["AG17<br/>Production"]
     Q --> R["AG18<br/>Capstone Projects"]
     
-    style A fill:#90EE90,stroke:#2d5016,stroke-width:3px
-    style R fill:#FFD700,stroke:#b8860b,stroke-width:3px
-    style D fill:#87CEEB,stroke:#4682b4,stroke-width:2px
-    style L fill:#87CEEB,stroke:#4682b4,stroke-width:2px
-    style M fill:#FFB6C1,stroke:#c71585,stroke-width:2px
-    style N fill:#DDA0DD,stroke:#8b008b,stroke-width:2px
+    style A fill:#ffffff,stroke:#000000,stroke-width:3px,color:#000000
+    style R fill:#d0d0d0,stroke:#000000,stroke-width:3px,color:#000000
+    style D fill:#f0f0f0,stroke:#000000,stroke-width:2px,color:#000000
+    style L fill:#f0f0f0,stroke:#000000,stroke-width:2px,color:#000000
+    style M fill:#e8e8e8,stroke:#000000,stroke-width:2px,color:#000000
+    style N fill:#e0e0e0,stroke:#000000,stroke-width:2px,color:#000000
 ```
 
 ---
@@ -516,20 +516,20 @@ Week 6:     AG18 (Complete and deploy capstone)
 
 ```mermaid
 graph TD
-    A["AG02: Simple LLM Chain<br/>Prompt → LLM → Response"] --> B["AG03: Chain with Memory<br/>History + Prompt → LLM"]
+    A["AG02: Simple LLM Chain<br/>Prompt to LLM to Response"] --> B["AG03: Chain with Memory<br/>History + Prompt to LLM"]
     B --> C["AG05: ReAct Agent<br/>Thought-Action-Observation Loop"]
     C --> D["AG06: RAG Agent<br/>Retrieval + Tools + Memory"]
     D --> E["AG08: LangGraph Agent<br/>State Machine + Conditional Flow"]
     E --> F["AG11: Multi-Agent System<br/>Specialized Agents + Orchestration"]
     F --> G["AG18: Production System<br/>Multi-Agent + API + UI + Monitoring"]
     
-    style A fill:#e8eaf6,stroke:#3f51b5,stroke-width:2px
-    style B fill:#e1f5fe,stroke:#0277bd,stroke-width:2px
-    style C fill:#fff3e0,stroke:#ff9800,stroke-width:2px
-    style D fill:#f3e5f5,stroke:#9c27b0,stroke-width:2px
-    style E fill:#e8f5e9,stroke:#4caf50,stroke-width:2px
-    style F fill:#fff9c4,stroke:#f57f17,stroke-width:2px
-    style G fill:#FFD700,stroke:#b8860b,stroke-width:3px
+    style A fill:#ffffff,stroke:#000000,stroke-width:2px,color:#000000
+    style B fill:#f5f5f5,stroke:#000000,stroke-width:2px,color:#000000
+    style C fill:#ebebeb,stroke:#000000,stroke-width:2px,color:#000000
+    style D fill:#e0e0e0,stroke:#000000,stroke-width:2px,color:#000000
+    style E fill:#d6d6d6,stroke:#000000,stroke-width:2px,color:#000000
+    style F fill:#cccccc,stroke:#000000,stroke-width:2px,color:#000000
+    style G fill:#c0c0c0,stroke:#000000,stroke-width:3px,color:#000000
 ```
 
 ---
@@ -749,9 +749,9 @@ graph TD
 
 ## Practice Exercises
 
-Master each lesson with hands-on exercises! **[View All Exercises →](./EXERCISES.md)**
+Master each lesson with hands-on exercises! **[View All Exercises](./EXERCISES.md)**
 
-### Available Now ✅
+### Available Now (COMPLETE)
 
 **AG01 Exercises:**
 - Identify the right approach (LLM vs Chain vs Agent)
@@ -779,7 +779,7 @@ Master each lesson with hands-on exercises! **[View All Exercises →](./EXERCIS
 - Memory optimization
 - Cross-session knowledge bases
 
-### Coming Soon 📝
+### Coming Soon (PLANNED)
 
 **AG04-AG18:** Exercises will be added as lessons are completed
 
@@ -789,7 +789,7 @@ Each lesson includes:
 - Real-world applications
 - Tips for success
 
-**[Start Practicing →](./EXERCISES.md)**
+**[Start Practicing](./EXERCISES.md)**
 
 ---
 

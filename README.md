@@ -40,23 +40,23 @@ A structured, hands-on learning path from basic arithmetic to complete language 
 
 ---
 
-## 🆕 New: AI Agents with LangChain & LangGraph
+## NEW: AI Agents with LangChain & LangGraph
 
 Build intelligent agents that reason, plan, and act! The new **Agents** sector teaches you how to create production-ready AI agents using industry-standard frameworks.
 
 **What You'll Build:**
-- 🤖 Conversational agents with memory
-- 🔍 RAG systems for knowledge retrieval
-- 🔧 Multi-agent systems with specialized roles
-- 🚀 Production APIs and user interfaces
-- 📊 Real applications: code assistants, data analysts, research agents
+- Conversational agents with memory
+- RAG systems for knowledge retrieval
+- Multi-agent systems with specialized roles
+- Production APIs and user interfaces
+- Real applications: code assistants, data analysts, research agents
 
-**18 comprehensive lessons** | **4-6 hours of complete content ready now** | **[Start Learning →](./Agents/)**
+**18 comprehensive lessons** | **4-6 hours of complete content ready now** | **[Start Learning - Agents Sector](./Agents/)**
 
 <details>
 <summary><b>Quick Preview: What's Inside?</b></summary>
 
-### Foundation (Ready Now! ✅)
+### Foundation (Ready Now - COMPLETE)
 - **AG01** - Introduction to AI Agents (ReAct pattern, agent vs LLM)
 - **AG02** - LangChain Basics (chains, prompts, parsers, complete app)
 - **AG03** - Memory Systems (buffer, summary, vector stores)
@@ -68,7 +68,7 @@ Build intelligent agents that reason, plan, and act! The new **Agents** sector t
 - **AG15-AG17** - Production APIs, UIs, Monitoring
 - **AG18** - 5 Portfolio Capstone Projects
 
-**[View Complete Curriculum →](./Agents/README.md)** | **[Getting Started Guide →](./Agents/GETTING_STARTED.md)**
+**[View Complete Curriculum](./Agents/README.md)** | **[Getting Started Guide](./Agents/GETTING_STARTED.md)**
 </details>
 
 ---
@@ -83,7 +83,7 @@ Build intelligent agents that reason, plan, and act! The new **Agents** sector t
 | **Intermediate (I01-I15)** | 15 | 4-6 weeks | Advanced techniques |
 | **Advanced (A01-A15)** | 15 | 6-8 weeks | Production systems |
 | **Expert (E01-E15)** | 15 | 8-10 weeks | Research & innovation |
-| **Agents (AG01-AG18)** | 18 | 8-12 weeks | LangChain, LangGraph & agent development 🆕 |
+| **Agents (AG01-AG18)** | 18 | 8-12 weeks | LangChain, LangGraph & agent development (NEW) |
 
 ### 2. Set Up
 
@@ -112,24 +112,24 @@ jupyter lab
 
 ```mermaid
 graph LR
-    A[Start Here<br/>Basic<br/>20 lessons] --> B[Intermediate<br/>15 lessons]
-    B --> C[Advanced<br/>15 lessons]
-    C --> D[Expert<br/>15 lessons]
+    A["Basic<br/>(20 lessons)<br/>Foundations"] --> B["Intermediate<br/>(15 lessons)<br/>Advanced ML"]
+    B --> C["Advanced<br/>(15 lessons)<br/>Production ML"]
+    C --> D["Expert<br/>(15 lessons)<br/>Research"]
     
-    B --> E[Agents 🆕<br/>18 lessons]
+    B --> E["Agents - NEW<br/>(18 lessons)<br/>LangChain/LangGraph"]
     C --> E
     
-    style A fill:#90EE90,stroke:#2d5016,stroke-width:3px
-    style B fill:#87CEEB,stroke:#4682b4,stroke-width:2px
-    style C fill:#FFB6C1,stroke:#c71585,stroke-width:2px
-    style D fill:#DDA0DD,stroke:#8b008b,stroke-width:2px
-    style E fill:#FFD700,stroke:#b8860b,stroke-width:3px
+    style A fill:#ffffff,stroke:#000000,stroke-width:2px,color:#000000
+    style B fill:#f0f0f0,stroke:#000000,stroke-width:2px,color:#000000
+    style C fill:#e0e0e0,stroke:#000000,stroke-width:2px,color:#000000
+    style D fill:#d0d0d0,stroke:#000000,stroke-width:2px,color:#000000
+    style E fill:#c0c0c0,stroke:#000000,stroke-width:3px,color:#000000
 ```
 
 **Learning Paths:**
 - **Traditional ML/DL:** Basic → Intermediate → Advanced → Expert
-- **Agent Development:** Basic → Intermediate → **Agents** 🆕
-- **Full Stack AI:** Basic → Intermediate → Advanced → **Agents** → Expert
+- **Agent Development:** Basic → Intermediate → Agents (NEW)
+- **Full Stack AI:** Basic → Intermediate → Advanced → Agents → Expert
 
 ---
 
@@ -141,7 +141,7 @@ AI/
 ├── Intermediate/       # 15 Lessons (I01-I15) ✅
 ├── Advanced/           # 15 Lessons (A01-A15) ✅
 ├── Expert/             # 15 Lessons (E01-E15) ✅
-├── Agents/             # 18 Lessons (AG01-AG18) - LangChain & LangGraph 🆕
+├── Agents/             # 18 Lessons (AG01-AG18) - LangChain & LangGraph [NEW]
 ├── application/        # Live demos & practical implementations
 │   ├── compsci713/     # COMPSCI 713 weekly apps (Wumpus, KG, RNN, NEAT, Q-Learning)
 │   └── compsci714/     # COMPSCI 714 weekly apps (Gradient Descent, CNN, Transformer, BPE)
@@ -157,7 +157,7 @@ AI/
 | **Intermediate** | Advanced ML | Transfer learning, GANs, VAEs, optimization | Building better models |
 | **Advanced** | Production ML | Fine-tuning LLMs, RAG, deployment, monitoring | Shipping ML systems |
 | **Expert** | Research | Implementing papers, RL, meta-learning, NAS | Innovation & research |
-| **Agents 🆕** | Applications | Building intelligent agents with LangChain/LangGraph | **Shipping AI products** |
+| **Agents [NEW]** | Applications | Building intelligent agents with LangChain/LangGraph | **Shipping AI products** |
 
 ---
 
@@ -273,7 +273,7 @@ Interactive demonstrations of AI concepts in action:
 - Federated learning
 - Cutting-edge research
 
-### Agents Level (AG01-AG18) 🆕
+### Agents Level (AG01-AG18) [NEW]
 - AI agent fundamentals & ReAct pattern
 - LangChain basics: chains, prompts, parsers
 - Memory systems (buffer, summary, vector)
@@ -285,11 +285,11 @@ Interactive demonstrations of AI concepts in action:
 - Production deployment (APIs, UIs, monitoring)
 - Real-world applications: code assistants, data analysts, research agents
 
-**[📖 Full Agents Curriculum](./Agents/README.md)** • **[🚀 Getting Started Guide](./Agents/GETTING_STARTED.md)**
+**[Full Agents Curriculum](./Agents/README.md)** | **[Getting Started Guide](./Agents/GETTING_STARTED.md)**
 
-**📍 Current Status:** Foundation Complete (AG01-AG03) | **[View Roadmap →](./Agents/ROADMAP.md)**
+**Current Status:** Foundation Complete (AG01-AG03) | **[View Roadmap](./Agents/ROADMAP.md)**
 
-**Next Up:** AG04 (Tools & Function Calling) → AG05 (First Agent) → AG06 (RAG Agents)
+**Next Up:** AG04 (Tools & Function Calling) then AG05 (First Agent) then AG06 (RAG Agents)
 
 ### Practical Applications
 - Q-Learning & reinforcement learning (grid world)
@@ -350,7 +350,7 @@ Interactive demonstrations of AI concepts in action:
 - Citation management
 - **Teaches:** Agent collaboration, quality control
 
-**[See AG18 for complete project guides →](./Agents/AG18%20-%20Capstone%20Agent%20Projects.ipynb)**
+**[See AG18 for complete project guides](./Agents/AG18%20-%20Capstone%20Agent%20Projects.ipynb)**
 </details>
 
 **Research:** Novel architecture, paper reproduction, bias detection, model compression, federated learning

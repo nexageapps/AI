@@ -7,6 +7,8 @@
 [![Sponsored by nexageapps](https://img.shields.io/badge/Sponsored%20by-nexageapps-blue?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNMTIgMkw0IDdWMTdMMTIgMjJMMjAgMTdWN0wxMiAyWiIgZmlsbD0id2hpdGUiLz48L3N2Zz4=)](https://nexageapps.com)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Karthik%20Arjun-0077B5?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/karthik-arjun-a5b4a258/)
 
+**Content Updated: 2024-2025 | LLMs: Llama 3.1, Gemini 1.5 Pro, Claude 3 | LangChain 0.1+ | vLLM 0.2+**
+
 **Production-ready AI systems aligned with industry best practices and enterprise deployment**
 
 From LLMs to MLOps. From fine-tuning to monitoring. Build AI systems that scale in production.
@@ -231,6 +233,42 @@ Week 3-5:   A04 → A05 → A06 (Multi-modal deep dive)
 Week 6-7:   A09 → A11 (Deployment)
 Week 8-10:  A12 → A15 (Production)
 ```
+
+---
+
+## Prerequisites
+
+### Required Knowledge
+- **Completion of Basic (B01-B15):** Essential foundation in neural networks, CNNs, RNNs, Transformers
+- **Completion of Intermediate (I01-I15):** Advanced architectures, optimization, transfer learning
+- **Programming:** Strong Python, PyTorch/TensorFlow proficiency
+- **Mathematics:** Linear algebra, calculus, probability, statistics
+- **Development:** Git, command line, Jupyter notebooks
+
+### Recommended Experience
+- Trained models from scratch
+- Used pre-trained models and fine-tuned them
+- Worked with GPUs (local or Colab)
+- Built end-to-end ML projects
+- Familiar with cloud platforms (AWS/GCP/Azure basics)
+
+### Technical Setup
+- **GPU:** Recommended for training (Colab Pro, local GPU, or cloud)
+- **RAM:** 16GB+ for local development
+- **Storage:** 50GB+ for models and datasets
+- **Python:** 3.8+ with virtual environments
+
+### Learning Path
+This level assumes you can:
+- Implement neural networks from scratch
+- Train and evaluate models independently
+- Debug training issues (overfitting, underfitting, convergence)
+- Use transfer learning effectively
+- Understand transformer architecture
+
+**Not ready?** Complete [Basic](../Basic/README.md) and [Intermediate](../Intermediate/README.md) first.
+
+**See full learning sequence:** [LEARNING_SEQUENCE.md](../LEARNING_SEQUENCE.md)
 
 ---
 

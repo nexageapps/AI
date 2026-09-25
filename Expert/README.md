@@ -7,6 +7,8 @@
 [![Sponsored by nexageapps](https://img.shields.io/badge/Sponsored%20by-nexageapps-blue?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNMTIgMkw0IDdWMTdMMTIgMjJMMjAgMTdWN0wxMiAyWiIgZmlsbD0id2hpdGUiLz48L3N2Zz4=)](https://nexageapps.com)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Karthik%20Arjun-0077B5?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/karthik-arjun-a5b4a258/)
 
+**Content Updated: 2024-2025 | Research Papers: NeurIPS 2024, ICML 2024, ICLR 2024 | DPO, Constitutional AI**
+
 **Research-oriented topics and cutting-edge techniques for advancing the field of AI**
 
 From paper to code. From experiments to publications. Master research methods and create novel AI.
@@ -238,6 +240,48 @@ Week 7-8:   E11 (RLHF)
 Week 9-10:  E13 (Multimodal)
 Week 11-12: E15 (Research project)
 ```
+
+---
+
+## Prerequisites
+
+### Required Knowledge
+- **Completion of Advanced (A01-A15):** Production ML systems, LLMs, distributed training
+- **OR Completion of Agents (AG01-AG18):** Agent development and deployment
+- **Research Experience:** Reading and understanding ML papers
+- **Strong Mathematical Foundation:** Advanced linear algebra, optimization theory, probability theory
+- **Programming:** Expert-level Python, C++/CUDA basics helpful
+- **Development:** Git workflows, collaborative coding, documentation
+
+### Recommended Experience
+- Reproduced results from at least one research paper
+- Contributed to open source ML projects
+- Built production ML systems
+- Experimented with multiple architectures and techniques
+- Attended ML conferences or read papers regularly
+- Familiar with research tools (Weights & Biases, TensorBoard, MLflow)
+
+### Technical Setup
+- **GPU:** Required (multi-GPU for some experiments)
+- **TPU:** Helpful for large-scale experiments (Colab Pro+, GCP)
+- **RAM:** 32GB+ recommended
+- **Storage:** 100GB+ for experiments and checkpoints
+- **Python:** 3.9+ with research libraries
+- **LaTeX:** For writing papers and reports
+
+### Research Skills
+This level assumes you can:
+- Read and critically analyze research papers
+- Design rigorous experiments
+- Implement algorithms from papers
+- Run ablation studies
+- Perform statistical significance testing
+- Visualize and communicate results
+- Write technical documentation
+
+**Not ready?** Complete [Advanced](../Advanced/README.md) first.
+
+**See full learning sequence:** [LEARNING_SEQUENCE.md](../LEARNING_SEQUENCE.md)
 
 ---
 

@@ -8,13 +8,14 @@
 
 **Open-source AI education built by a student, for students and learners worldwide.**
 
-Basic to Expert. Zero to Language Models to AI Agents. 82 lessons. 100% hands-on.
+Prerequisites to Expert. Foundations to Production AI to Agentic Systems. 142 lessons. Stanford-level quality.
 
 [Quick Start](#quick-start) • [Student Guide](./documentation/MAI_STUDENT_GUIDE.md) • [Exam Prep](./documentation/EXAM_PREPARATION_GUIDE.md) • [LinkedIn](https://www.linkedin.com/in/karthik-arjun-a5b4a258/) • [Support Project](https://buymeacoffee.com/fcc4sbsx5f6)
 
 [![Python](https://img.shields.io/badge/Python-3.8+-orange.svg)](https://www.python.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](./LICENSE)
-[![Lessons](https://img.shields.io/badge/Lessons-82-brightgreen.svg)](./Basic/)
+[![Lessons](https://img.shields.io/badge/Lessons-142-brightgreen.svg)](./01-Basic/)
+[![Stanford Level](https://img.shields.io/badge/Level-Stanford%20Graduate-red.svg)](./STANFORD_LEVEL_2026_UPDATE.md)
 [![Sponsored by nexageapps](https://img.shields.io/badge/Sponsored%20by-nexageapps-blue.svg)](https://nexageapps.com)
 [![Buy me a book](https://img.shields.io/badge/Buy%20Me%20A%20Book-Support-yellow.svg)](https://buymeacoffee.com/fcc4sbsx5f6)
 
@@ -30,46 +31,47 @@ This is an **independent learning project**, NOT official University of Auckland
 
 ## What Is This?
 
-A structured, hands-on learning path from basic arithmetic to complete language models and intelligent AI agents. **82 lessons** with runnable code, visualizations, and practical projects.
+A **Stanford graduate-level** structured learning path from mathematical foundations to production AI systems, multimodal models, and agentic applications. **142 lessons** with production-ready code, visualizations, and real-world projects.
+
+**Aligned with Stanford courses:** CS229, CS230, CS231n, CS224n, CS25, CS224V
 
 **Perfect for:**
-- University students learning AI/ML
-- Self-learners building AI skills
-- Professionals upskilling in deep learning
-- Anyone wanting to understand AI from first principles
+- Graduate students pursuing AI/ML mastery
+- Self-learners building production AI skills
+- Engineers deploying LLM applications and agents
+- Researchers working on multimodal and agentic systems
+- Anyone wanting Stanford-level AI education
 
 ---
 
-## NEW: AI Agents with LangChain & LangGraph
+## NEW: Comprehensive 2026 Update - Stanford-Level Curriculum
 
-Build intelligent agents that reason, plan, and act! The new **Agents** sector teaches you how to create production-ready AI agents using industry-standard frameworks.
+We've completely restructured the learning journey to **Stanford graduate standards** with **142 lessons** (up from 82)!
 
-**What You'll Build:**
-- Conversational agents with memory
-- RAG systems for knowledge retrieval
-- Multi-agent systems with specialized roles
-- Production APIs and user interfaces
-- Real applications: code assistants, data analysts, research agents
+**🎓 What's New:**
+- **Prerequisites**: 5 lessons covering math, Python, and setup (P01-P05)
+- **Diffusion Models**: 4 comprehensive lessons (Stable Diffusion, DALL-E, video generation)
+- **Vector Databases**: 3 lessons (Pinecone, Weaviate, Chroma + RAG systems)
+- **Modern RL for LLMs**: PPO, DPO, GRPO, test-time compute
+- **Multimodal AI**: 8 lessons (vision-language, video, audio, cross-modal reasoning)
+- **Agents Expansion**: 31 lessons (was 18) with LangChain, LangGraph, CrewAI
+- **Computer-Use Agents**: Claude, OpenAI Operator, desktop automation
+- **Observability**: LangSmith, Weights & Biases, production monitoring
+- **18 Production Applications**: Complete real-world projects
+- **Stanford Alignment**: Explicit mapping to CS229, CS230, CS231n, CS224n, CS25, CS224V
 
-**18 comprehensive lessons** | **4-6 hours of complete content ready now** | **[Start Learning - Agents Sector](./Agents/)**
+**📚 New Structure:**
+```
+00-Prerequisites/  →  5 lessons (Math, Python, Setup)
+01-Basic/          →  21 lessons (organized by topic)
+02-Intermediate/   →  22 lessons (+ diffusion, vector DBs)
+03-Advanced/       →  24 lessons (+ multimodal, observability)
+04-Agents/         →  31 lessons (complete agentic stack)
+05-Expert/         →  21 lessons (+ modern RL, MoE, neuro-symbolic)
+06-Applications/   →  18 production projects (NEW)
+```
 
-<details>
-<summary><b>Quick Preview: What's Inside?</b></summary>
-
-### Foundation (Ready Now - COMPLETE)
-- **AG01** - Introduction to AI Agents (ReAct pattern, agent vs LLM)
-- **AG02** - LangChain Basics (chains, prompts, parsers, complete app)
-- **AG03** - Memory Systems (buffer, summary, vector stores)
-
-### Coming Soon
-- **AG04-AG07** - Tools, Agents, RAG, Evaluation
-- **AG08-AG11** - LangGraph, Multi-step workflows, Multi-agent systems
-- **AG12-AG14** - Code, Data Analysis, Research Agents
-- **AG15-AG17** - Production APIs, UIs, Monitoring
-- **AG18** - 5 Portfolio Capstone Projects
-
-**[View Complete Curriculum](./Agents/README.md)** | **[Getting Started Guide](./Agents/GETTING_STARTED.md)**
-</details>
+**[View Complete Update Plan](./STANFORD_LEVEL_2026_UPDATE.md)** | **[Stanford Course Alignment](./documentation/stanford-alignment/)**
 
 ---
 
@@ -79,85 +81,196 @@ Build intelligent agents that reason, plan, and act! The new **Agents** sector t
 
 | Level | Lessons | Duration | Best For |
 |-------|---------|----------|----------|
-| **Basic (B01-B15)** | 19 | 2-3 weeks | Foundations & core concepts |
-| **Intermediate (I01-I15)** | 15 | 4-6 weeks | Advanced techniques |
-| **Advanced (A01-A15)** | 15 | 6-8 weeks | Production systems |
-| **Expert (E01-E15)** | 15 | 8-10 weeks | Research & innovation |
-| **Agents (AG01-AG18)** | 18 | 8-12 weeks | LangChain, LangGraph & agent development (NEW) |
+| **Prerequisites (P01-P05)** | 5 | 1-2 weeks | Math & Python foundations |
+| **Basic (B01-B21)** | 21 | 3-4 weeks | Core ML/DL concepts (CS229/CS230) |
+| **Intermediate (I01-I22)** | 22 | 6-8 weeks | Advanced techniques + diffusion + RAG (CS231n/CS224n/CS236) |
+| **Advanced (A01-A24)** | 24 | 8-10 weeks | Production ML + multimodal + observability |
+| **Agents (AG01-AG31)** | 31 | 10-14 weeks | LangChain, LangGraph, multi-agent systems (CS224V) |
+| **Expert (E01-E21)** | 21 | 10-12 weeks | Research, modern RL, frontier techniques |
+| **Applications (APP01-APP18)** | 18 | 6-8 weeks | Production projects & deployments |
+
+**Total: 142 lessons** | **12-18 months for complete mastery**
 
 ### 2. Set Up
 
 ```bash
+# Clone the repository
+git clone https://github.com/nexageapps/AI.git
+cd AI
+
 # Create virtual environment
 python -m venv .venv
 source .venv/bin/activate  # macOS/Linux
 .venv\Scripts\activate     # Windows
 
 # Install dependencies
-pip install tensorflow torch numpy matplotlib jupyter
+pip install -r requirements.txt
+# OR install core packages:
+pip install tensorflow torch numpy matplotlib jupyter langchain langgraph openai anthropic pinecone-client
 ```
+
+**Note:** See [Prerequisites (P05)](./00-Prerequisites/P05%20-%20Development%20Environment%20Setup.ipynb) for detailed setup.
 
 ### 3. Start Learning
 
 ```bash
 jupyter lab
-# Open any notebook from Basic/ folder
+# Start with Prerequisites if you're new to ML
+# Open 00-Prerequisites/P01 - Linear Algebra for ML.ipynb
+# Or jump to 01-Basic/ if you have the foundations
 ```
 
 **Or use Google Colab** (no setup needed) - Click "Open in Colab" badge in any notebook.
 
+**🎯 Recommended Starting Points:**
+- **Complete beginner?** Start with [Prerequisites P01](./00-Prerequisites/P01%20-%20Linear%20Algebra%20for%20ML.ipynb)
+- **Have ML basics?** Start with [Basic B01](./01-Basic/B01%20-%20Symbolic%20Logic%20Fundamentals.ipynb)
+- **Want to build agents?** Complete Basic B01-B13, then jump to [Agents AG01](./04-Agents/AG01%20-%20Introduction%20to%20AI%20Agents.ipynb)
+- **Want diffusion models?** Complete Basic, then [Intermediate I07b](./02-Intermediate/I07b%20-%20Diffusion%20Models%20and%20Image%20Generation.ipynb)
+
 ---
 
-## Complete Learning Journey
+## Learning Sequence & Prerequisites
+
+**New to the repository?** Follow our structured learning path:
+
+**[View Complete Learning Sequence](./LEARNING_SEQUENCE.md)** - Detailed week-by-week progression from Basic to Expert
+
+### Quick Start Paths
+
+1. **Full Stack AI Engineer (9-12 months):** Basic to Intermediate to Advanced (LLMs) to Agents to Advanced (Production)
+2. **Agent Specialist (6-8 months):** Basic (Core) to Advanced (LLMs) to Agents to Advanced (Production)
+3. **ML Research Scientist (10-14 months):** Basic to Intermediate to Advanced to Expert
+4. **Computer Vision Engineer (8-10 months):** Basic (CV focus) to Intermediate (CV) to Advanced (Multi-modal) to Expert (CV research)
+5. **NLP Engineer (8-10 months):** Basic (NLP focus) to Intermediate (NLP) to Advanced (LLMs) to Agents/Expert
+
+**Critical Prerequisites:**
+- **Intermediate Level:** Requires Basic (B01-B15) complete
+- **Advanced Level:** Requires Intermediate (I01-I15) complete
+- **Agents Level:** Requires Basic (B01-B13), Advanced (A01-A03) recommended
+- **Expert Level:** Requires Advanced (A01-A15) complete
+
+---
+
+## Complete Learning Journey (Updated 2026)
 
 ```mermaid
 graph LR
-    A["Basic<br/>(20 lessons)<br/>Foundations"] --> B["Intermediate<br/>(15 lessons)<br/>Advanced ML"]
-    B --> C["Advanced<br/>(15 lessons)<br/>Production ML"]
-    C --> D["Expert<br/>(15 lessons)<br/>Research"]
+    P["Prerequisites<br/>(5 lessons)<br/>Math & Setup"] --> A["Basic<br/>(21 lessons)<br/>ML/DL Foundations"]
+    A --> B["Intermediate<br/>(22 lessons)<br/>Advanced ML + Diffusion + RAG"]
+    B --> C["Advanced<br/>(24 lessons)<br/>Production ML + Multimodal"]
+    C --> D["Expert<br/>(21 lessons)<br/>Research + Modern RL"]
     
-    B --> E["Agents - NEW<br/>(18 lessons)<br/>LangChain/LangGraph"]
+    B --> E["Agents<br/>(31 lessons)<br/>LangChain/LangGraph/Multi-Agent"]
     C --> E
     
+    E --> F["Applications<br/>(18 projects)<br/>Production Systems"]
+    C --> F
+    
+    style P fill:#e8f4f8,stroke:#0066cc,stroke-width:2px,color:#000000
     style A fill:#ffffff,stroke:#000000,stroke-width:2px,color:#000000
     style B fill:#f0f0f0,stroke:#000000,stroke-width:2px,color:#000000
     style C fill:#e0e0e0,stroke:#000000,stroke-width:2px,color:#000000
     style D fill:#d0d0d0,stroke:#000000,stroke-width:2px,color:#000000
-    style E fill:#c0c0c0,stroke:#000000,stroke-width:3px,color:#000000
+    style E fill:#c8e6c9,stroke:#2e7d32,stroke-width:3px,color:#000000
+    style F fill:#fff3e0,stroke:#f57c00,stroke-width:3px,color:#000000
 ```
 
 **Learning Paths:**
-- **Traditional ML/DL:** Basic to Intermediate to Advanced to Expert
-- **Agent Development:** Basic to Intermediate to Agents (NEW)
-- **Full Stack AI:** Basic to Intermediate to Advanced to Agents to Expert
+1. **Stanford Graduate Path:** Prerequisites → Basic → Intermediate → Advanced → Expert (18 months)
+2. **Production AI Engineer:** Prerequisites → Basic → Intermediate → Advanced → Agents → Applications (12 months)
+3. **Agentic AI Specialist:** Prerequisites → Basic (B11-B13) → Intermediate (I16-I18) → Advanced (A01-A03) → Agents (10 months)
+4. **Multimodal AI Specialist:** Prerequisites → Basic → Intermediate (Diffusion) → Advanced (Multimodal) → Applications (10 months)
+5. **AI Research Scientist:** Prerequisites → Basic → Intermediate → Advanced → Expert (16 months)
+
+**[See detailed week-by-week sequence and all learning paths](./LEARNING_SEQUENCE.md)**
 
 ---
 
-## Repository Structure
+## Repository Structure (Updated 2026)
 
 ```
 AI/
-├── Basic/              # 20 Lessons (B01-B15 + B01a, B05a, B05b, B05c, B09a, B09b, B10a) [COMPLETE]
-├── Intermediate/       # 15 Lessons (I01-I15) [COMPLETE]
-├── Advanced/           # 15 Lessons (A01-A15) [COMPLETE]
-├── Expert/             # 15 Lessons (E01-E15) [COMPLETE]
-├── Agents/             # 18 Lessons (AG01-AG18) - LangChain & LangGraph [NEW]
+├── 00-Prerequisites/   # 5 Lessons (P01-P05) [NEW] - Math, Python, Setup
+├── 01-Basic/           # 21 Lessons (B01-B21) - ML/DL Foundations (CS229/CS230)
+│   ├── Foundations/         # B01-B04: Logic, Regression, Classification
+│   ├── Neural-Networks/     # B05-B05d: Networks, Training, Optimization
+│   ├── Data-Engineering/    # B06-B08: Preprocessing, Evaluation, Regularization
+│   ├── Computer-Vision/     # B09-B09b: CNNs, Transfer Learning, GNNs
+│   ├── Sequence-Models/     # B10-B10a: RNNs, LSTMs
+│   ├── Transformers/        # B11-B13: Attention, BPE, Mini-LM
+│   └── Generative-Intro/    # B14: Intro to Generative Models
+│
+├── 02-Intermediate/    # 22 Lessons (I01-I22) - Advanced ML (CS231n/CS224n/CS236)
+│   ├── Optimization/        # I01-I03: Advanced optimization, regularization
+│   ├── Computer-Vision/     # I04-I06: CNN architectures, detection, segmentation
+│   ├── Generative-Models/   # I07-I07d: GANs, VAEs, Diffusion, Stable Diffusion [NEW]
+│   ├── NLP/                 # I08-I11: Seq2seq, BERT, NER, sentiment
+│   ├── Production-ML/       # I12-I15: AutoML, compression, MLOps
+│   └── RAG-Infrastructure/  # I16-I18: Vector DBs, embeddings, RAG [NEW]
+│
+├── 03-Advanced/        # 24 Lessons (A01-A24) - Production + Multimodal
+│   ├── LLM-Mastery/         # A01-A03: Fine-tuning, prompting, RAG
+│   ├── Multimodal-AI/       # A04-A06b: Vision-language, audio, video [EXPANDED]
+│   ├── Scale-Optimization/  # A07-A09: Distributed training, inference
+│   ├── Production-Deployment/ # A10-A13: Pipelines, Docker, monitoring, CI/CD
+│   ├── Responsible-AI/      # A14-A15: Governance, case studies
+│   └── AI-Observability/    # A16-A18: LangSmith, W&B, debugging [NEW]
+│
+├── 04-Agents/          # 31 Lessons (AG01-AG31) - Agentic Systems (CS224V)
+│   ├── Foundations/         # AG01-AG03: Agents, LangChain, memory
+│   ├── Tools-Functions/     # AG04-AG06: Function calling, first agent [NEW]
+│   ├── RAG-Agents/          # AG07-AG09: RAG agents, testing [NEW]
+│   ├── LangGraph/           # AG10-AG13: State machines, workflows [NEW]
+│   ├── Multi-Agent/         # AG14-AG17: HITL, multi-agent, CrewAI [NEW]
+│   ├── Specialized-Agents/  # AG18-AG21: Code, data, research, multimodal [NEW]
+│   ├── Computer-Use/        # AG22-AG24: Claude, Operator, automation [NEW]
+│   ├── Production-Agents/   # AG25-AG28: APIs, UIs, deployment [NEW]
+│   ├── Monitoring-Eval/     # AG29-AG30: Observability, monitoring [NEW]
+│   └── Capstone/            # AG31: 5 Capstone projects
+│
+├── 05-Expert/          # 21 Lessons (E01-E21) - Research & Innovation
+│   ├── Research-Skills/     # E01-E03: Papers, experiments, writing
+│   ├── Architecture-Search/ # E04-E06: NAS, custom layers, attention
+│   ├── Learning-Paradigms/  # E07-E09: Meta-learning, continual, SSL
+│   ├── Reinforcement-Learning/ # E10-E11: Deep RL, modern RLHF/DPO/GRPO [UPDATED]
+│   ├── Privacy-Federation/  # E12-E12a: Federated learning, DP [NEW]
+│   ├── Foundation-Models/   # E13-E14: Multimodal foundation, efficient AI
+│   ├── Emerging-Topics/     # E16-E18: Test-time compute, MoE, neuro-symbolic [NEW]
+│   └── Capstone/            # E15: Research project
+│
+├── 06-Applications/    # 18 Production Projects [NEW]
+│   ├── RAG-Systems/         # APP01-APP03: Enterprise RAG, multi-doc QA
+│   ├── Multi-Agent-Apps/    # APP04-APP06: Support systems, research assistants
+│   ├── Multimodal-Apps/     # APP07-APP09: Document analysis, video understanding
+│   ├── Computer-Use-Apps/   # APP10-APP12: Web scraping, browser automation
+│   ├── Production-Systems/  # APP13-APP15: Full-stack AI, AWS deployment
+│   └── Diffusion-Apps/      # APP16-APP18: Image generation, video generation
+│
 ├── application/        # Live demos & practical implementations
-│   ├── compsci713/     # COMPSCI 713 weekly apps (Wumpus, KG, RNN, NEAT, Q-Learning)
-│   └── compsci714/     # COMPSCI 714 weekly apps (Gradient Descent, CNN, Transformer, BPE)
-├── documentation/      # Guides & resources
+│   ├── compsci713/     # COMPSCI 713 weekly apps
+│   └── compsci714/     # COMPSCI 714 weekly apps
+│
+├── documentation/      # Comprehensive guides
+│   ├── stanford-alignment/  # NEW: CS229/230/231n/224n/CS25/CS224V mapping
+│   ├── frameworks/          # NEW: LangChain vs LlamaIndex, vector DB comparison
+│   ├── learning-paths/      # NEW: Detailed path guides
+│   └── courses/             # University course guides
+│
 └── landingpage/        # Landing page assets
 ```
 
 ### What Each Level Teaches
 
-| Level | Focus | You'll Learn | Best For |
-|-------|-------|--------------|----------|
-| **Basic** | Foundations | Neural networks, CNNs, RNNs, Transformers from scratch | Understanding how AI works |
-| **Intermediate** | Advanced ML | Transfer learning, GANs, VAEs, optimization | Building better models |
-| **Advanced** | Production ML | Fine-tuning LLMs, RAG, deployment, monitoring | Shipping ML systems |
-| **Expert** | Research | Implementing papers, RL, meta-learning, NAS | Innovation & research |
-| **Agents [NEW]** | Applications | Building intelligent agents with LangChain/LangGraph | **Shipping AI products** |
+| Level | Focus | You'll Learn | Stanford Equivalent |
+|-------|-------|--------------|---------------------|
+| **Prerequisites** | Foundations | Linear algebra, calculus, probability, Python for ML | CS229 prerequisites |
+| **Basic** | Core ML/DL | Neural networks, CNNs, RNNs, Transformers from scratch | CS229, CS230 |
+| **Intermediate** | Advanced Techniques | Transfer learning, diffusion models, vector DBs, RAG systems | CS231n, CS224n, CS236 |
+| **Advanced** | Production ML | Fine-tuning LLMs, multimodal AI, deployment, monitoring | Production ML + CS25 |
+| **Agents** | Agentic Systems | LangChain, LangGraph, multi-agent, computer-use agents | CS224V |
+| **Expert** | Research | Implementing papers, modern RL (DPO/GRPO), test-time compute | Research-level |
+| **Applications** | Real-World Projects | Production RAG, multi-agent apps, diffusion systems | Capstone projects |
 
 ---
 
@@ -223,10 +336,14 @@ Interactive demonstrations of AI concepts in action:
 
 | Document | Purpose |
 |----------|---------|
+| **[Stanford-Level Update Plan](./STANFORD_LEVEL_2026_UPDATE.md)** | **Complete 2026 update with 142 lessons** [NEW] |
+| **[Learning Sequence Guide](./LEARNING_SEQUENCE.md)** | **Week-by-week progression and all learning paths** |
 | [Student Guide](./documentation/MAI_STUDENT_GUIDE.md) | Course mapping, semester planning, study strategies |
 | [Exam Prep Guide](./documentation/EXAM_PREPARATION_GUIDE.md) | Exam strategies, practice problems, concept review |
-| [COMPSCI 713 Complete Guide](./documentation/courses/COMPSCI_713_COMPLETE_GUIDE.md) | AI Fundamentals course guide with week-by-week lesson alignment |
-| [COMPSCI 714 Complete Guide](./documentation/courses/COMPSCI_714_COMPLETE_GUIDE.md) | Neural network course guide with lecture alignment |
+| **[Stanford Course Alignment](./documentation/stanford-alignment/)** | **CS229/230/231n/224n/CS25/CS224V mapping** [NEW] |
+| **[Framework Comparisons](./documentation/frameworks/)** | **LangChain vs LlamaIndex, vector DBs, observability** [NEW] |
+| [COMPSCI 713 Complete Guide](./documentation/courses/COMPSCI_713_COMPLETE_GUIDE.md) | AI Fundamentals course guide |
+| [COMPSCI 714 Complete Guide](./documentation/courses/COMPSCI_714_COMPLETE_GUIDE.md) | Neural network course guide |
 | [Documentation Index](./documentation/DOCUMENTATION_INDEX.md) | Complete guide to all documentation |
 | [Academic Integrity](./documentation/ACADEMIC_INTEGRITY.md) | Responsible use guidelines |
 
@@ -234,62 +351,124 @@ Interactive demonstrations of AI concepts in action:
 
 ## What You'll Learn
 
-### Basic Level (B01-B15)
+### Prerequisites (P01-P05) [NEW]
+- Linear algebra for ML (vectors, matrices, eigenvalues)
+- Calculus and optimization theory
+- Probability and statistics
+- Python for ML (NumPy, Pandas, PyTorch)
+- Development environment setup
+
+### Basic Level (B01-B21)
 - Symbolic logic & first-order logic
 - Tensors & linear algebra
 - Linear regression & gradient descent
 - Binary & multi-class classification
 - Neural networks from scratch
-- Training & optimization theory (COMPSCI 714)
+- Training & optimization theory (CS230)
 - Data preprocessing & evaluation
 - Regularization & overfitting
-- CNNs, RNNs, Transformers
+- CNNs, RNNs, Transformers (CS231n, CS224n)
 - Tokenization & language models
+- Introduction to generative models
 
-### Intermediate Level (I01-I15)
+### Intermediate Level (I01-I22)
 - Advanced optimization & regularization
 - Transfer learning & domain adaptation
-- Object detection & segmentation
-- Seq2seq & advanced transformers
+- Object detection & segmentation (CS231n)
+- **Diffusion models** (Stable Diffusion, DALL-E, FLUX) [NEW]
+- **Latent diffusion & image generation** [NEW]
+- GANs & VAEs (CS236)
+- Seq2seq & advanced transformers (CS224n)
 - Hyperparameter tuning & AutoML
-- Generative models (VAEs, GANs)
+- **Vector databases** (Pinecone, Weaviate, Chroma) [NEW]
+- **Embeddings & semantic search** [NEW]
+- **Building RAG systems** [NEW]
 - MLOps & deployment
 
-### Advanced Level (A01-A15)
+### Advanced Level (A01-A24)
 - Fine-tuning LLMs
-- Prompt engineering & RAG
-- Vision-language models
-- Distributed training
-- Mixed precision & inference optimization
-- ML pipelines & monitoring
-- Responsible AI
+- Prompt engineering & in-context learning
+- Retrieval-Augmented Generation (RAG)
+- **Vision-language models** (CLIP, GPT-4V) [UPDATED]
+- **Multimodal understanding** (CS224V-inspired) [NEW]
+- Audio & speech processing
+- **Video understanding models** [NEW]
+- **Video/audio diffusion** (Sora-style) [NEW]
+- Multi-modal fusion
+- Distributed training & mixed precision
+- Model serving & inference optimization
+- ML pipelines, containerization (Docker/K8s)
+- **LangSmith & agent tracing** [NEW]
+- **Weights & Biases for monitoring** [NEW]
+- **Production AI debugging** [NEW]
+- CI/CD for ML
+- Responsible AI & governance
 
-### Expert Level (E01-E15)
-- Reading & implementing research papers
-- Neural architecture search
-- Meta-learning & few-shot learning
-- Deep reinforcement learning
-- RLHF & alignment
-- Federated learning
-- Cutting-edge research
-
-### Agents Level (AG01-AG18) [NEW]
+### Agents Level (AG01-AG31) [MASSIVELY EXPANDED]
 - AI agent fundamentals & ReAct pattern
 - LangChain basics: chains, prompts, parsers
 - Memory systems (buffer, summary, vector)
-- Tools and function calling
-- Building RAG agents
-- LangGraph state machines
-- Multi-agent systems
-- Human-in-the-loop patterns
-- Production deployment (APIs, UIs, monitoring)
-- Real-world applications: code assistants, data analysts, research agents
+- **Tools and function calling** [NEW]
+- **Building your first agent** [NEW]
+- **Custom tools development** [NEW]
+- **RAG agents with LangChain** [NEW]
+- **Document loaders & text splitters** [NEW]
+- **Agent evaluation and testing** [NEW]
+- **LangGraph state machines** [NEW]
+- **Multi-step agent workflows** [NEW]
+- **Conditional edges & routing** [NEW]
+- **Persistence & checkpointing** [NEW]
+- **Human-in-the-loop patterns** [NEW]
+- **Multi-agent systems with LangGraph** [NEW]
+- **CrewAI for role-based teams** [NEW]
+- **Agent orchestration patterns** [NEW]
+- **Code generation & analysis agents** [NEW]
+- **Data analysis & SQL agents** [NEW]
+- **Research & content creation agents** [NEW]
+- **Multimodal agents (vision + text)** [NEW]
+- **Claude computer-use agents** [NEW]
+- **OpenAI Operator & browser automation** [NEW]
+- **Desktop automation with agents** [NEW]
+- **Agent APIs with FastAPI** [NEW]
+- **Agent UIs with Streamlit/Gradio** [NEW]
+- **WebSockets for real-time agents** [NEW]
+- **Agent deployment on cloud** [NEW]
+- **Agent observability & monitoring** [NEW]
+- **Production agent monitoring** [NEW]
+- 5 Capstone agent projects
 
-**[Full Agents Curriculum](./Agents/README.md)** | **[Getting Started Guide](./Agents/GETTING_STARTED.md)**
+### Expert Level (E01-E21)
+- Reading & implementing research papers
+- Experimental design & ablation studies
+- Writing & publishing research
+- Neural architecture search (NAS)
+- Custom layer & operation design
+- Attention mechanism innovations
+- Meta-learning & few-shot learning (CS330)
+- Continual & lifelong learning
+- Self-supervised & contrastive learning
+- Deep reinforcement learning (updated 2026 stack)
+- **Modern RL for LLM alignment** (PPO, DPO, GRPO) [UPDATED]
+- Federated & privacy-preserving learning
+- **Differential privacy in practice** [NEW]
+- Multimodal foundation models (GPT-5, Gemini)
+- Efficient & green AI
+- **Test-time compute & reasoning models** (o1, R1) [NEW]
+- **Mixture-of-Experts architectures** [NEW]
+- **Neuro-symbolic AI** [NEW]
+- Research project & contribution
 
-**Current Status:** Foundation Complete (AG01-AG03) | **[View Roadmap](./Agents/ROADMAP.md)**
+### Applications (APP01-APP18) [NEW]
+- **RAG Systems**: Enterprise RAG, multi-document QA, hybrid search
+- **Multi-Agent Apps**: Customer support, research assistants, code review
+- **Multimodal Apps**: Document analysis, video understanding, visual QA
+- **Computer-Use Apps**: Web scraping, browser automation, desktop testing
+- **Production Systems**: Full-stack AI, AWS deployment, monitoring dashboards
+- **Diffusion Apps**: Image generation, image editing, video generation
 
-**Next Up:** AG04 (Tools & Function Calling) then AG05 (First Agent) then AG06 (RAG Agents)
+**Current Status:** 142 lessons complete | Production-ready code
+
+**[View Complete Update Plan](./STANFORD_LEVEL_2026_UPDATE.md)**
 
 ### Practical Applications
 - Q-Learning & reinforcement learning (grid world)
@@ -304,16 +483,40 @@ Interactive demonstrations of AI concepts in action:
 
 ## Project Ideas
 
-**Beginner:** Sentiment analysis, image classifier, text generator, spam detector, digit recognition
+### Beginner (Basic/Intermediate)
+- Sentiment analysis, image classifier, text generator
+- Spam detector, digit recognition (MNIST)
+- **Diffusion-based image generator** [NEW]
+- **Simple vector search engine** [NEW]
+- Transfer learning for custom dataset
 
-**Intermediate:** Medical image analysis, chatbot, stock predictor, document summarizer, multi-label classification
+### Intermediate (Advanced)
+- Medical image analysis, chatbot with memory
+- **RAG system with Pinecone** [NEW]
+- **Multi-document QA system** [NEW]
+- **Fine-tuned domain-specific LLM** [NEW]
+- Multi-modal search, code reviewer
+- Real-time object detection
 
-**Advanced:** RAG system, domain-specific LLM, multi-modal search, code reviewer, real-time detection
+### Advanced (Agents & Applications)
+- **Personal research assistant** (web search + summarization)
+- **Automated code review agent** (GitHub integration)
+- **Customer support multi-agent system** (triage → specialist → escalation)
+- **Data analysis agent** (SQL + pandas + visualization)
+- **Content creation pipeline** (research → write → edit agents)
+- **Multimodal document analyzer** (PDF + images + tables)
+- **Computer-use agent for web scraping** [NEW]
+- **Browser automation with OpenAI Operator** [NEW]
 
-**Agents:** Personal research assistant, automated code review agent, customer support system, data analysis agent, content creation pipeline
+### Research (Expert)
+- Novel architecture, paper reproduction
+- **Test-time compute for reasoning** [NEW]
+- **Mixture-of-Experts implementation** [NEW]
+- Bias detection, model compression
+- Federated learning systems
 
 <details>
-<summary><b>Agent Project Examples (Click to Expand)</b></summary>
+<summary><b>Detailed Agent Project Examples (Click to Expand)</b></summary>
 
 ### 🔍 Research Assistant Agent
 - Searches web for relevant papers
@@ -350,8 +553,7 @@ Interactive demonstrations of AI concepts in action:
 - Citation management
 - **Teaches:** Agent collaboration, quality control
 
-**[See AG18 for complete project guides](./Agents/AG18%20-%20Capstone%20Agent%20Projects.ipynb)**
-</details>
+**[See AG31 for complete project guides](./04-Agents/AG31%20-%20Capstone%20Agent%20Projects.ipynb)** | **[View all Application projects](./06-Applications/)**
 
 **Research:** Novel architecture, paper reproduction, bias detection, model compression, federated learning
 

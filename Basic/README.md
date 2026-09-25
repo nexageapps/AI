@@ -7,6 +7,8 @@
 [![Sponsored by: nexageapps](https://img.shields.io/badge/Sponsored%20by-nexageapps-blue.svg)](https://nexageapps.com)
 [![Buy me a book](https://img.shields.io/badge/Buy%20Me%20A%20Book-Support-yellow.svg)](https://buymeacoffee.com/fcc4sbsx5f6)
 
+**Content Updated: 2024-2025 | Python 3.9+ | PyTorch 2.1+ | TensorFlow 2.15+**
+
 **Complete foundation in Artificial Intelligence and Machine Learning through 15 hands-on lessons**
 
 From tensors to transformers. From theory to code. Build your AI foundation with practical implementations.

@@ -7,6 +7,8 @@
 [![Sponsored by: nexageapps](https://img.shields.io/badge/Sponsored%20by-nexageapps-blue.svg)](https://nexageapps.com)
 [![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%20A%20Coffee-Support-yellow.svg)](https://buymeacoffee.com/fcc4sbsx5f6)
 
+**Content Updated: 2024-2025 | PyTorch 2.1+ | timm 0.9+ | transformers 4.36+**
+
 **Advanced techniques building on basic concepts**
 
 From ResNet to BERT. From optimization to deployment. Master the techniques that power modern AI.

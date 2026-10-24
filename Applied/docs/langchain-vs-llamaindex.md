@@ -621,5 +621,5 @@ agent = create_react_agent(
 ---
 
 *Part of the Applied AI module*  
-*Master of Artificial Intelligence - University of Auckland*  
+*Open-source AI study material*  
 *Last updated: January 2025*

@@ -2,7 +2,7 @@
 
 ## Overview
 
-This document summarizes all the enhancements made to the AI & Machine Learning Roadmap repository to help University of Auckland students succeed in their COMPSCI courses.
+This document summarizes all the enhancements made to the AI & Machine Learning Roadmap repository to help university students succeed in their COMPSCI courses.
 
 ## Updates Completed
 
@@ -108,7 +108,7 @@ Practice Problems:
 - Application problems
 
 Course Mapping:
-- Shows which UoA courses each lesson supports
+- Shows which university courses each lesson supports
 - Direct connection to your coursework
 - Helps prioritize study time
 
@@ -183,7 +183,7 @@ After:
 
 Before:
 - General AI/ML content
-- Not specifically tied to UoA courses
+- Not specifically tied to university courses
 
 After:
 - Explicit course mapping (713, 714, 761, 762, 703, 721)
@@ -225,32 +225,32 @@ After:
 
 ## Course-Specific Benefits
 
-### COMPSCI 713 (AI Fundamentals)
+### AI Fundamentals (AI Fundamentals)
 - Lessons: B01-B05, I01-I02
 - Focus: Tensor operations, neural networks, optimization
 - Exam Help: Shape calculations, gradient derivations, backpropagation
 
-### COMPSCI 714 (AI Architecture & Design)
+### Neural Networks (AI Architecture & Design)
 - Lessons: B09-B15
 - Focus: CNNs, transformers, language models
 - Exam Help: Architecture design, parameter counts, system design
 
-### COMPSCI 761 (Advanced AI Topics)
+### Machine Learning (Advanced AI Topics)
 - Lessons: B06, B12, B14, E01, E10-E11
 - Focus: Preprocessing, tokenization, research, RL
 - Exam Help: Paper analysis, experimental design, advanced methods
 
-### COMPSCI 762 (ML Foundations)
+### ML Foundations (ML Foundations)
 - Lessons: B02-B08, I01-I03
 - Focus: Regression, classification, evaluation, regularization
 - Exam Help: Mathematical foundations, metrics, optimization
 
-### COMPSCI 703 (Generalising AI)
+### Generalising AI (Generalising AI)
 - Lessons: B11-B13, B15, I09, E11
 - Focus: Attention, transformers, LLMs, alignment
 - Exam Help: Attention calculations, generation, RLHF
 
-### COMPSYS 721 (Deep Learning)
+### Deep Learning (Deep Learning)
 - Lessons: B09-B11, I03, I09
 - Focus: CNNs, RNNs, transformers, normalization
 - Exam Help: Architecture details, convolution math, recurrence
@@ -308,7 +308,7 @@ If you find these updates helpful or have suggestions:
 ## Acknowledgments
 
 These updates were created based on:
-- University of Auckland MAI curriculum
+- university MAI curriculum
 - Student feedback and common questions
 - Exam patterns and question types
 - Best practices in AI/ML education
@@ -345,7 +345,7 @@ These resources are for learning, not for copying:
 
 Happy Learning! You've got this! 
 
-*Made by a MAI student, for MAI students and all AI/ML learners*
+*Made by a MAI student, for students and all AI/ML learners*
 
 ---
 
@@ -354,7 +354,7 @@ Happy Learning! You've got this!
 - [README.md](./README.md) - Main repository overview with progress tracker
 - [PROGRESS_TRACKER_GUIDE.md](./PROGRESS_TRACKER_GUIDE.md) - How to use progress trackers
 - [EXAM_PREPARATION_GUIDE.md](./EXAM_PREPARATION_GUIDE.md) - Comprehensive exam prep guide
-- [MAI_STUDENT_GUIDE.md](./MAI_STUDENT_GUIDE.md) - Complete guide for MAI students
+- [STUDENT_GUIDE.md](./STUDENT_GUIDE.md) - Complete guide for students
 - [ACADEMIC_INTEGRITY.md](./ACADEMIC_INTEGRITY.md) - Academic integrity policy
 
 ## Version History
@@ -369,6 +369,6 @@ Last Updated: March 1, 2026
 ## Related Documentation
 
 - [README.md](./README.md) - Main repository overview and learning paths
-- [MAI Student Guide](./MAI_STUDENT_GUIDE.md) - Complete guide for UoA MAI students
+- [Student Guide](./STUDENT_GUIDE.md) - Complete guide for Master's-level students
 - [Exam Preparation Guide](./EXAM_PREPARATION_GUIDE.md) - Study strategies and exam tips
 - [Progress Tracker Guide](./PROGRESS_TRACKER_GUIDE.md) - How to track your learning progress

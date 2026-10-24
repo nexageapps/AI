@@ -235,8 +235,8 @@ AI/
 │       └── APP18 - Video Generation System.ipynb
 │
 ├── application/                # Existing demos (keep as-is)
-│   ├── compsci713/
-│   └── compsci714/
+│   ├── ai-fundamentals/
+│   └── neural-networks/
 │
 └── documentation/              # Enhanced documentation
     ├── stanford-alignment/     # NEW

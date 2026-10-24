@@ -17,7 +17,7 @@ Or trigger manually in GitHub Actions: **Actions** â†’ **Deploy Applications** â
 
 ### Wumpus World
 ```bash
-cd application/compsci713/week2/wumpus
+cd application/ai-fundamentals/week2/wumpus
 npm install
 npm run build
 npx gh-pages -d build -e wumpus
@@ -25,7 +25,7 @@ npx gh-pages -d build -e wumpus
 
 ### Gradient Descent Game
 ```bash
-cd application/compsci714/week2/gradient-descent-game
+cd application/neural-networks/week2/gradient-descent-game
 npm install
 npm run build
 npx gh-pages -d docs -e gradient-descent
@@ -51,14 +51,14 @@ npx gh-pages -d . -e . --src index.html
 
 ### Wumpus World
 ```bash
-cd application/compsci713/week2/wumpus
+cd application/ai-fundamentals/week2/wumpus
 npm start
 # Opens at http://localhost:3000
 ```
 
 ### Gradient Descent Game
 ```bash
-cd application/compsci714/week2/gradient-descent-game
+cd application/neural-networks/week2/gradient-descent-game
 npm run dev
 # Opens at http://localhost:5173
 ```
@@ -69,14 +69,14 @@ npm run dev
 
 ### Wumpus World
 ```bash
-cd application/compsci713/week2/wumpus
+cd application/ai-fundamentals/week2/wumpus
 npm run build
 # Output: build/
 ```
 
 ### Gradient Descent Game
 ```bash
-cd application/compsci714/week2/gradient-descent-game
+cd application/neural-networks/week2/gradient-descent-game
 npm run build
 # Output: docs/
 ```

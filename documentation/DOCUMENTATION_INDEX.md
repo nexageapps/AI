@@ -9,9 +9,9 @@
 
 | Guide | Purpose |
 |---|---|
-| [MAI_STUDENT_GUIDE.md](./MAI_STUDENT_GUIDE.md) | Semester planning and study strategies for the University of Auckland MAI programme |
+| [STUDENT_GUIDE.md](./STUDENT_GUIDE.md) | Semester planning and study strategies for the university MAI programme |
 | [EXAM_PREPARATION_GUIDE.md](./EXAM_PREPARATION_GUIDE.md) | Exam strategy and concept review |
-| [courses/](./courses) | COMPSCI 713 / 714 / 769 course guides |
+| [courses/](./courses) | AI Fundamentals / 714 / 769 course guides |
 | [PROJECT_IDEAS.md](./PROJECT_IDEAS.md) | Project ideas by level |
 | [PROGRESS_TRACKER_GUIDE.md](./PROGRESS_TRACKER_GUIDE.md) | Tracking your progress |
 | [ACADEMIC_INTEGRITY.md](./ACADEMIC_INTEGRITY.md) · [SECURITY.md](./SECURITY.md) · [CONTRIBUTING.md](./CONTRIBUTING.md) | Policies |

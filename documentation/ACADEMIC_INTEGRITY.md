@@ -2,7 +2,7 @@
 
 ---
 
-**IMPORTANT DISCLAIMER:** This is a **personal learning project** created by an independent student currently studying in the Master of Artificial Intelligence (MAI) program at the University of Auckland. This repository is **NOT officially affiliated with, endorsed by, or sponsored by the University of Auckland**. It is not official course material, not created by university faculty, and does not represent the views or policies of the University of Auckland.
+**IMPORTANT DISCLAIMER:** This is a **personal learning project** created by an independent student currently studying AI at university. This repository is **NOT officially affiliated with, endorsed by, or sponsored by the university**. It is not official course material, not created by university faculty, and does not represent the views or policies of the university.
 
 **This is one student's personal study notes and implementations, shared publicly to help fellow learners.**
 
@@ -121,7 +121,7 @@ This repository is designed as a **personal learning resource** to help students
 
 ---
 
-## For University of Auckland MAI Students
+## For university MAI Students
 
 ### Critical Understanding
 
@@ -132,7 +132,7 @@ This repository is created by a **fellow MAI student** (not a professor, not uni
 **What This Means:**
 
 1. **Not Official Course Material**
-   - This is NOT created or endorsed by University of Auckland faculty
+   - This is NOT created or endorsed by university faculty
    - This is NOT part of any official course curriculum
    - This is NOT a substitute for attending lectures or doing coursework
    - This is one student's interpretation and implementation
@@ -144,10 +144,10 @@ This repository is created by a **fellow MAI student** (not a professor, not uni
    - Use them as you would use a classmate's study notes
 
 3. **Your Responsibility**
-   - **You are responsible for following University of Auckland policies**
+   - **You are responsible for following university policies**
    - Your assignments are designed to test YOUR understanding
    - Your professors expect YOUR original work
-   - Academic misconduct has serious consequences at UoA
+   - Academic misconduct has serious consequences at university
 
 4. **Assignment Work**
    - Use this repository to **learn concepts**, not to find answers
@@ -162,14 +162,14 @@ This repository is created by a **fellow MAI student** (not a professor, not uni
    - Properly cite any ideas or code you reference
 
 6. **University Policies Apply**
-   - Follow the [University of Auckland Academic Integrity Policy](https://www.auckland.ac.nz/en/students/academic-information/academic-integrity.html)
+   - Follow the [university Academic Integrity Policy](https://www.auckland.ac.nz/en/students/academic-information/academic-integrity.html)
    - Understand what constitutes academic misconduct
    - Know the consequences of violations
    - When in doubt, ask YOUR instructors (not me)
 
 ### What the University Expects
 
-From the University of Auckland Academic Integrity Policy:
+From the university Academic Integrity Policy:
 
 > "Academic integrity means being honest in your studying and assessments. It is the basis for ethical decision-making and behaviour in an academic context."
 

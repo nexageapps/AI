@@ -389,7 +389,7 @@ After completing this sector, students will be able to:
 
 ## Credits
 
-**Created by:** Master of Artificial Intelligence Student, University of Auckland
+**Created by:** AI students and open-source contributors
 **Framework:** LangChain & LangGraph
 **License:** MIT
 **Sponsored by:** nexageapps

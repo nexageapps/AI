@@ -45,13 +45,13 @@ Each notebook includes:
 - Implementation code cells
 - Placeholder for detailed content
 
-## Alignment with UoA MAI Courses
+## Alignment with university MAI Courses
 
 | MAI Course | Relevant Lessons |
 |------------|------------------|
-| COMPSCI 714 (Architecture) | A01-A15 (All lessons) |
-| COMPSCI 703 (General AI) | A01-A06, A14 |
-| COMPSYS 721 (Deep Learning) | A07-A09 |
+| Neural Networks (Architecture) | A01-A15 (All lessons) |
+| Generalising AI (General AI) | A01-A06, A14 |
+| Deep Learning (Deep Learning) | A07-A09 |
 
 ## Next Steps
 
@@ -112,7 +112,7 @@ All levels share:
 - Similar notebook structure
 - Progressive difficulty
 - Hands-on implementations
-- UoA MAI course alignment
+- university MAI course alignment
 
 ## Repository Status
 

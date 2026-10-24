@@ -4,11 +4,11 @@ Use this checklist before making your repository public to ensure everything is 
 
 ## ✅ Legal & Compliance
 
-- [x] **Disclaimer added** - Clear statement that this is NOT official UoA material
+- [x] **Disclaimer added** - Clear statement that this is NOT official university material
 - [x] **MIT License** - Already present in LICENSE file
 - [x] **Academic Integrity Policy** - Comprehensive policy in ACADEMIC_INTEGRITY.md
 - [x] **Contributing Guidelines** - Clear guidelines in CONTRIBUTING.md
-- [ ] **Verify with University** - Check UoA policies on sharing personal study materials
+- [ ] **Verify with University** - Check university policies on sharing personal study materials
   - Contact: Your academic advisor or Student Learning Services
   - Question: "Can I share my personal study notes and code implementations publicly?"
   - Note: This is YOUR work, not university materials, but good to confirm
@@ -31,7 +31,7 @@ Use this checklist before making your repository public to ensure everything is 
 
 - [ ] **Check Documentation**
   - [ ] README.md is clear and welcoming
-  - [ ] MAI_STUDENT_GUIDE.md has accurate course information
+  - [ ] STUDENT_GUIDE.md has accurate course information
   - [ ] All links work correctly
   - [ ] Table of contents is up to date
 
@@ -94,7 +94,7 @@ Use this checklist before making your repository public to ensure everything is 
   - [ ] Prepare for potential feedback/criticism
   - [ ] Have a plan for handling inappropriate use reports
 
-## ✅ University-Specific Checks (University of Auckland)
+## ✅ University-Specific Checks (university)
 
 - [ ] **Verify Compliance**
   - [ ] Check Student Charter regarding sharing personal work

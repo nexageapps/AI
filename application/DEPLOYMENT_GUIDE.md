@@ -15,8 +15,8 @@ AI/
 ├── index.html                                    # Landing page (root)
 ├── .github/workflows/deploy-apps.yml            # Deployment automation
 ├── application/
-│   ├── compsci713/week2/wumpus/                # Wumpus World (React)
-│   └── compsci714/week2/gradient-descent-game/ # Gradient Descent (Vite + React)
+│   ├── ai-fundamentals/week2/wumpus/                # Wumpus World (React)
+│   └── neural-networks/week2/gradient-descent-game/ # Gradient Descent (Vite + React)
 ```
 
 ## 🔄 Deployment Architecture
@@ -56,7 +56,7 @@ The GitHub Actions workflow (`.github/workflows/deploy-apps.yml`) automatically:
 **Deployment:**
 ```yaml
 - Build: npm run build
-- Output: ./application/compsci713/week2/wumpus/build
+- Output: ./application/ai-fundamentals/week2/wumpus/build
 - Destination: wumpus/
 ```
 
@@ -75,7 +75,7 @@ The GitHub Actions workflow (`.github/workflows/deploy-apps.yml`) automatically:
 **Deployment:**
 ```yaml
 - Build: npm run build
-- Output: ./application/compsci714/week2/gradient-descent-game/docs
+- Output: ./application/neural-networks/week2/gradient-descent-game/docs
 - Destination: gradient-descent/
 ```
 
@@ -95,7 +95,7 @@ npm install -g gh-pages
 
 ### Deploy Wumpus World
 ```bash
-cd application/compsci713/week2/wumpus
+cd application/ai-fundamentals/week2/wumpus
 npm install
 npm run build
 npx gh-pages -d build -e wumpus
@@ -103,7 +103,7 @@ npx gh-pages -d build -e wumpus
 
 ### Deploy Gradient Descent Game
 ```bash
-cd application/compsci714/week2/gradient-descent-game
+cd application/neural-networks/week2/gradient-descent-game
 npm install
 npm run build
 npx gh-pages -d docs -e gradient-descent

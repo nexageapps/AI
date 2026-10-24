@@ -4,9 +4,9 @@ Optional notebooks from the earlier curriculum. They are **not** on the 65-lesso
 
 | Folder | Contents | Pairs well with |
 |---|---|---|
-| `Classical-AI/` | symbolic logic, expert systems, soft computing (Bayesian/fuzzy), search (BFS/DFS/A*/MCTS), genetic algorithms | COMPSCI 713; before Agents (planning/search intuition) |
+| `Classical-AI/` | symbolic logic, expert systems, soft computing (Bayesian/fuzzy), search (BFS/DFS/A*/MCTS), genetic algorithms | AI Fundamentals; before Agents (planning/search intuition) |
 | `Deep-Learning/` | advanced optimizers, regularization, normalization, advanced CNNs, detection/segmentation, advanced RNNs/transformers, GNNs, pretrained vision models | after Intermediate |
-| `University-Courses/` | COMPSCI 714 companions (NN theory, training, PyTorch MLP, transfer learning, RNNs), practical projects | the matching Auckland courses |
+| `Course-Companions/` | Neural Networks companions (NN theory, training, PyTorch MLP, transfer learning, RNNs), practical projects | the matching Auckland courses |
 | `Research/` | continual / lifelong learning, data streams | with Expert E06 |
 | `Frameworks/` | LlamaIndex lessons and an earlier LLM-agents notebook | history only |
 

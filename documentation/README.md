@@ -81,13 +81,13 @@ Complete guide to all documentation in the AI learning journey.
 
 ## 🎓 University Course Guides
 
-### UoA Course Integration
+### university Course Integration
 
 | Course | Guide | Focus |
 |--------|-------|-------|
-| **COMPSCI 713** | [courses/COMPSCI_713_COMPLETE_GUIDE.md](courses/COMPSCI_713_COMPLETE_GUIDE.md) | AI Fundamentals |
-| **COMPSCI 714** | [courses/COMPSCI_714_COMPLETE_GUIDE.md](courses/COMPSCI_714_COMPLETE_GUIDE.md) | Neural Networks |
-| **COMPSCI 769** | [courses/COMPSCI_769_COMPLETE_GUIDE.md](courses/COMPSCI_769_COMPLETE_GUIDE.md) | Natural Language Processing |
+| **AI Fundamentals** | [courses/AI_FUNDAMENTALS_GUIDE.md](courses/AI_FUNDAMENTALS_GUIDE.md) | AI Fundamentals |
+| **Neural Networks** | [courses/NEURAL_NETWORKS_GUIDE.md](courses/NEURAL_NETWORKS_GUIDE.md) | Neural Networks |
+| **NLP** | [courses/NLP_GUIDE.md](courses/NLP_GUIDE.md) | Natural Language Processing |
 
 ---
 
@@ -95,7 +95,7 @@ Complete guide to all documentation in the AI learning journey.
 
 | Guide | Purpose |
 |-------|---------|
-| [Student Guide](MAI_STUDENT_GUIDE.md) | Course mapping, semester planning |
+| [Student Guide](STUDENT_GUIDE.md) | Course mapping, semester planning |
 | [Exam Preparation Guide](EXAM_PREPARATION_GUIDE.md) | Exam strategies, practice problems |
 
 ---
@@ -122,7 +122,7 @@ Historical documents and previous updates:
 ```
 documentation/
 ├── README.md (this file)
-├── MAI_STUDENT_GUIDE.md
+├── STUDENT_GUIDE.md
 ├── EXAM_PREPARATION_GUIDE.md
 ├── DOCUMENTATION_INDEX.md
 ├── ACADEMIC_INTEGRITY.md
@@ -156,9 +156,9 @@ documentation/
 │   └── AGENTIC_AI_SPECIALIST_PATH.md
 │
 ├── courses/                     # University Course Guides
-│   ├── COMPSCI_713_COMPLETE_GUIDE.md
-│   ├── COMPSCI_714_COMPLETE_GUIDE.md
-│   └── COMPSCI_769_COMPLETE_GUIDE.md
+│   ├── AI_FUNDAMENTALS_GUIDE.md
+│   ├── NEURAL_NETWORKS_GUIDE.md
+│   └── NLP_GUIDE.md
 │
 ├── updates/                     # Update Announcements
 │   └── AGENTS_SECTOR_ADDED.md
@@ -194,7 +194,7 @@ documentation/
 1. Review [Stanford Course Alignment](stanford-alignment/)
 2. Map your course to our lessons
 3. Use as supplementary material
-4. Follow [Student Guide](MAI_STUDENT_GUIDE.md)
+4. Follow [Student Guide](STUDENT_GUIDE.md)
 
 ### For Developers Building Agents
 1. Start with [Agents Expansion Plan](planning/AGENTS_2026_EXPANSION_PLAN.md)

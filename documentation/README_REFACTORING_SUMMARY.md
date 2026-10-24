@@ -13,13 +13,13 @@ The main README.md has been refactored to be more concise and maintainable by su
 
 ### Key Improvements
 
-1. **University of Auckland Section Moved**
+1. **university Section Moved**
    - Moved from inline in README to dedicated file
-   - File: `documentation/UNIVERSITY_OF_AUCKLAND_EXTENSIONS.md`
+   - File: `documentation/UNIVERSITY_COURSE_EXTENSIONS.md`
    - Includes all 5 courses with detailed practical examples
 
 2. **Course-Specific Details Extracted**
-   - COMPSCI 714 detailed examples moved to `documentation/COMPSCI_714_EXTENSIONS.md`
+   - Neural Networks detailed examples moved to `documentation/NEURAL_NETWORKS_EXTENSIONS.md`
    - Other courses referenced with links to main extensions file
    - Keeps README focused on high-level overview
 
@@ -32,8 +32,8 @@ The main README.md has been refactored to be more concise and maintainable by su
 
 ```
 documentation/
-├── UNIVERSITY_OF_AUCKLAND_EXTENSIONS.md    # Main UoA section (all 5 courses)
-├── COMPSCI_714_EXTENSIONS.md               # Detailed COMPSCI 714 examples
+├── UNIVERSITY_COURSE_EXTENSIONS.md    # Main university section (all 5 courses)
+├── NEURAL_NETWORKS_EXTENSIONS.md               # Detailed Neural Networks examples
 ├── README_REFACTORING_SUMMARY.md           # This file
 └── [other existing documentation files]
 ```
@@ -47,20 +47,20 @@ documentation/
 - Getting started guide
 - Usage tips
 - Academic integrity guidelines
-- **NEW:** Quick links to University of Auckland courses
+- **NEW:** Quick links to university courses
 
-### UNIVERSITY_OF_AUCKLAND_EXTENSIONS.md
-- Complete UoA section overview
-- COMPSCI 713 with 3 detailed examples
-- COMPSCI 714 with link to detailed file
-- COMPSCI 762 with overview
-- COMPSCI 703 with overview
-- COMPSYS 721 with overview
+### UNIVERSITY_COURSE_EXTENSIONS.md
+- Complete university section overview
+- AI Fundamentals with 3 detailed examples
+- Neural Networks with link to detailed file
+- ML Foundations with overview
+- Generalising AI with overview
+- Deep Learning with overview
 - How to use section
 - Tips for success
 - Important reminders
 
-### COMPSCI_714_EXTENSIONS.md
+### NEURAL_NETWORKS_EXTENSIONS.md
 - 4 detailed practical examples:
   1. Neural Network from Scratch with Visualization
   2. Gradient Descent Variants Comparison
@@ -94,9 +94,9 @@ Finds comprehensive examples and guidance
 ## Future Improvements
 
 1. **Create Additional Course Files**
-   - `COMPSCI_762_EXTENSIONS.md` - ML Foundations detailed examples
-   - `COMPSCI_703_EXTENSIONS.md` - Generalising AI detailed examples
-   - `COMPSYS_721_EXTENSIONS.md` - Deep Learning detailed examples
+   - `ML Foundations_EXTENSIONS.md` - ML Foundations detailed examples
+   - `Generalising AI_EXTENSIONS.md` - Generalising AI detailed examples
+   - `Deep Learning_EXTENSIONS.md` - Deep Learning detailed examples
 
 2. **Create Specialized Guides**
    - `GETTING_STARTED_FOR_STUDENTS.md` - Student-specific quick start

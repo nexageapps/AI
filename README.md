@@ -10,7 +10,7 @@
 
 From machine-learning fundamentals to shipping agentic AI systems: 65 lessons, one standard pattern, every lesson runnable.
 
-[Curriculum](./CURRICULUM.md) • [Quick Start](#quick-start) • [Student Guide](./documentation/MAI_STUDENT_GUIDE.md) • [Exam Prep](./documentation/EXAM_PREPARATION_GUIDE.md) • [LinkedIn](https://www.linkedin.com/in/karthik-arjun-a5b4a258/) • [Support Project](https://buymeacoffee.com/fcc4sbsx5f6)
+[Curriculum](./CURRICULUM.md) • [Quick Start](#quick-start) • [Student Guide](./documentation/STUDENT_GUIDE.md) • [Exam Prep](./documentation/EXAM_PREPARATION_GUIDE.md) • [LinkedIn](https://www.linkedin.com/in/karthik-arjun-a5b4a258/) • [Support Project](https://buymeacoffee.com/fcc4sbsx5f6)
 
 [![Python](https://img.shields.io/badge/Python-3.10+-orange.svg)](https://www.python.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](./LICENSE)
@@ -24,7 +24,7 @@ From machine-learning fundamentals to shipping agentic AI systems: 65 lessons, o
 
 ## ⚠️ Important Disclaimer
 
-This is an **independent learning project**, NOT official University of Auckland, material. Use responsibly and follow your institution's academic integrity policies. See [Academic Integrity Policy](./documentation/ACADEMIC_INTEGRITY.md) for details.
+This is an **independent learning project**, NOT official university material. Use responsibly and follow your institution's academic integrity policies. See [Academic Integrity Policy](./documentation/ACADEMIC_INTEGRITY.md) for details.
 
 ---
 
@@ -106,7 +106,7 @@ Two 3-hour lesson sessions + one 2-hour review/project block. One lesson = one s
 ```
 AI/
 ├── Basic/ Intermediate/ Advanced/ Agents/ Applied/ Expert/   # the 65-lesson core
-├── Electives/            # kept, off-path notebooks (classical AI, COMPSCI 713/714 companions, older frameworks)
+├── Electives/            # kept, off-path notebooks (classical AI, AI Fundamentals/714 companions, older frameworks)
 ├── agentkit/             # tiny library behind every agent lesson (LIVE/OFFLINE model, @tool, tracing, run_agent)
 ├── tools/                # curriculum.json (source of truth), nbbuild.py, nbtest.py, gen_readmes.py, LESSON_AUTHORING.md
 ├── application/          # interactive browser demos (source + deploy guides)
@@ -129,20 +129,20 @@ Interactive demonstrations of AI concepts in action:
 
 | Demo | Concept | Course | Course Page | Notebook | Link |
 |------|---------|--------|-------------|----------|------|
-| **Wumpus World** | Symbolic Logic & Knowledge Representation | UoA-COMPSCI 713 | [COMPSCI 713 – AI Fundamentals](#compsci-713) | — | [Play Online](https://nexageapps.github.io/AI/wumpus) |
-| **Mountain Explorer** | Gradient Descent & Optimization | UoA-COMPSCI 714 | [COMPSCI 714 – Neural Networks](./documentation/courses/COMPSCI_714_COMPLETE_GUIDE.md) | [B02 - Linear Regression](https://github.com/nexageapps/AI/blob/main/Basic/B02%20-%20Linear%20Regression%20and%20Gradient%20Descent.ipynb) · [B05b - Training & Optimization](https://github.com/nexageapps/AI/blob/main/Electives/University-Courses/B05b%20-%20Training%20and%20Optimization%20(COMPSCI%20714).ipynb) | [Play Online](https://nexageapps.github.io/AI/gradient-descent) |
-| **Blindfold Hill** | Gradient Descent, Learning Rate & Convergence | UoA-COMPSCI 714 | [COMPSCI 714 – Neural Networks](./documentation/courses/COMPSCI_714_COMPLETE_GUIDE.md) | [B02 - Linear Regression](https://github.com/nexageapps/AI/blob/main/Basic/B02%20-%20Linear%20Regression%20and%20Gradient%20Descent.ipynb) · [B05b - Training & Optimization](https://github.com/nexageapps/AI/blob/main/Electives/University-Courses/B05b%20-%20Training%20and%20Optimization%20(COMPSCI%20714).ipynb) | [Play Online](https://nexageapps.github.io/AI/compsci714/week2/blindfold-hill) |
-| **Neural Network Trainer** | Forward Propagation, Backpropagation & Gradient Descent | UoA-COMPSCI 714 | [COMPSCI 714 – Neural Networks](./documentation/courses/COMPSCI_714_COMPLETE_GUIDE.md) | [B05 - Neural Network Fundamentals](https://github.com/nexageapps/AI/blob/main/Basic/B09%20-%20Neural%20Networks%20from%20Scratch.ipynb) · [B05a - Neural Networks Theory](https://github.com/nexageapps/AI/blob/main/Electives/University-Courses/B05a%20-%20Neural%20Networks%20Theory%20(COMPSCI%20714).ipynb) | [Play Online](https://nexageapps.github.io/AI/nn-trainer/) |
-| **Data Preprocessing Studio** | Missing Values, Feature Scaling, Encoding & Feature Engineering | UoA-COMPSCI 714 | [COMPSCI 714 – Neural Networks](./documentation/courses/COMPSCI_714_COMPLETE_GUIDE.md) | [B06 - Data Preprocessing and Feature Engineering](https://github.com/nexageapps/AI/blob/main/Basic/B05%20-%20Data%20Preprocessing%20and%20Feature%20Engineering.ipynb) | [Play Online](https://nexageapps.github.io/AI/compsci714/week3/data-preprocessing-studio) |
-| **PyTorch Assignment Practice** | Tabular MLP, BCEWithLogitsLoss, Optuna, FashionMNIST CNN, Saliency Maps | UoA-COMPSCI 714 | [COMPSCI 714 – Neural Networks](./documentation/courses/COMPSCI_714_COMPLETE_GUIDE.md) | [B05c - MLP on Tabular Data with PyTorch](https://github.com/nexageapps/AI/blob/main/Electives/University-Courses/B05c%20-%20MLP%20on%20Tabular%20Data%20with%20PyTorch%20(COMPSCI%20714).ipynb) | — |
-| **Model Evaluation Dashboard** | Confusion Matrix, ROC/AUC, Precision-Recall & Cross-Validation | UoA-COMPSCI 713 | [COMPSCI 713 – AI Fundamentals](#compsci-713) | [B07 - Model Evaluation](https://github.com/nexageapps/AI/blob/main/Basic/B06%20-%20Model%20Evaluation%20and%20Metrics.ipynb) | — |
-| **KG Playground** | RDF Triples, Knowledge Graphs, RAG & Conflict Detection | UoA-COMPSCI 713 | [COMPSCI 713 – AI Fundamentals](#compsci-713) | [A03 - Retrieval-Augmented Generation](https://github.com/nexageapps/AI/blob/main/Advanced/A03%20-%20Retrieval-Augmented%20Generation%20(RAG).ipynb) | [Play Online](https://nexageapps.github.io/AI/compsci713/week3/kg-playground/) |
-| **RNN Explorer** | RNN/LSTM/GRU Architecture, Gates & Sequence Modelling | UoA-COMPSCI 713 | [COMPSCI 713 – AI Fundamentals](#compsci-713) | [B10 - RNNs](https://github.com/nexageapps/AI/blob/main/Intermediate/I03%20-%20Recurrent%20Neural%20Networks.ipynb) · [B10a - RNNs (714)](https://github.com/nexageapps/AI/blob/main/Electives/University-Courses/B10a%20-%20Recurrent%20Neural%20Networks%20(COMPSCI%20714).ipynb) | [Play Online](https://nexageapps.github.io/AI/compsci713/week4/rnn-explorer/) |
-| **CNN Explorer** | Convolution, Pooling, Feature Maps, Architecture & Playground | UoA-COMPSCI 714 | [COMPSCI 714 – Neural Networks](./documentation/courses/COMPSCI_714_COMPLETE_GUIDE.md) | [B09 - CNNs](https://github.com/nexageapps/AI/blob/main/Intermediate/I01%20-%20Convolutional%20Neural%20Networks.ipynb) | [Play Online](https://nexageapps.github.io/AI/compsci714/week3/cnn-explorer/) |
-| **NEAT Explainer** | NeuroEvolution, Topology Mutation, Speciation & Crossover | UoA-COMPSCI 713 | [COMPSCI 713 – AI Fundamentals](#compsci-713) | — | — |
-| **Transformer Explorer** | Self-Attention, Multi-Head Attention, Q/K/V & Architecture | UoA-COMPSCI 714 | [COMPSCI 714 – Neural Networks](./documentation/courses/COMPSCI_714_COMPLETE_GUIDE.md) | [B11 - Attention & Transformers](https://github.com/nexageapps/AI/blob/main/Intermediate/I04%20-%20Attention%20and%20Transformers.ipynb) | [Play Online](https://nexageapps.github.io/AI/compsci714/week4/transformer-explorer/) |
-| **BPE Explorer** | Byte Pair Encoding, Tokenization, Subwords & Vocabulary | UoA-COMPSCI 714 | [COMPSCI 714 – Neural Networks](./documentation/courses/COMPSCI_714_COMPLETE_GUIDE.md) | [B12 - BPE](https://github.com/nexageapps/AI/blob/main/Intermediate/I05%20-%20Tokenization%20and%20Byte%20Pair%20Encoding.ipynb) | [Play Online](https://nexageapps.github.io/AI/compsci714/week4/bpe-explorer/) |
-| **Q-Learning Grid World** | Reinforcement Learning, Q-Tables, Exploration vs Exploitation | UoA-COMPSCI 713 | [COMPSCI 713 – AI Fundamentals](#compsci-713) | — | — |
+| **Wumpus World** | Symbolic Logic & Knowledge Representation | AI Fundamentals | [AI Fundamentals](#compsci-713) | — | [Play Online](https://nexageapps.github.io/AI/wumpus) |
+| **Mountain Explorer** | Gradient Descent & Optimization | Neural Networks | [Neural Networks](./documentation/courses/NEURAL_NETWORKS_GUIDE.md) | [B02 - Linear Regression](https://github.com/nexageapps/AI/blob/main/Basic/B02%20-%20Linear%20Regression%20and%20Gradient%20Descent.ipynb) · [B05b - Training & Optimization](https://github.com/nexageapps/AI/blob/main/Electives/Course-Companions/B05b%20-%20Training%20and%20Optimization.ipynb) | [Play Online](https://nexageapps.github.io/AI/gradient-descent) |
+| **Blindfold Hill** | Gradient Descent, Learning Rate & Convergence | Neural Networks | [Neural Networks](./documentation/courses/NEURAL_NETWORKS_GUIDE.md) | [B02 - Linear Regression](https://github.com/nexageapps/AI/blob/main/Basic/B02%20-%20Linear%20Regression%20and%20Gradient%20Descent.ipynb) · [B05b - Training & Optimization](https://github.com/nexageapps/AI/blob/main/Electives/Course-Companions/B05b%20-%20Training%20and%20Optimization.ipynb) | [Play Online](https://nexageapps.github.io/AI/neural-networks/week2/blindfold-hill) |
+| **Neural Network Trainer** | Forward Propagation, Backpropagation & Gradient Descent | Neural Networks | [Neural Networks](./documentation/courses/NEURAL_NETWORKS_GUIDE.md) | [B05 - Neural Network Fundamentals](https://github.com/nexageapps/AI/blob/main/Basic/B09%20-%20Neural%20Networks%20from%20Scratch.ipynb) · [B05a - Neural Networks Theory](https://github.com/nexageapps/AI/blob/main/Electives/Course-Companions/B05a%20-%20Neural%20Networks%20Theory.ipynb) | [Play Online](https://nexageapps.github.io/AI/nn-trainer/) |
+| **Data Preprocessing Studio** | Missing Values, Feature Scaling, Encoding & Feature Engineering | Neural Networks | [Neural Networks](./documentation/courses/NEURAL_NETWORKS_GUIDE.md) | [B06 - Data Preprocessing and Feature Engineering](https://github.com/nexageapps/AI/blob/main/Basic/B05%20-%20Data%20Preprocessing%20and%20Feature%20Engineering.ipynb) | [Play Online](https://nexageapps.github.io/AI/neural-networks/week3/data-preprocessing-studio) |
+| **PyTorch Assignment Practice** | Tabular MLP, BCEWithLogitsLoss, Optuna, FashionMNIST CNN, Saliency Maps | Neural Networks | [Neural Networks](./documentation/courses/NEURAL_NETWORKS_GUIDE.md) | [B05c - MLP on Tabular Data with PyTorch](https://github.com/nexageapps/AI/blob/main/Electives/Course-Companions/B05c%20-%20MLP%20on%20Tabular%20Data%20with%20PyTorch.ipynb) | — |
+| **Model Evaluation Dashboard** | Confusion Matrix, ROC/AUC, Precision-Recall & Cross-Validation | AI Fundamentals | [AI Fundamentals](#compsci-713) | [B07 - Model Evaluation](https://github.com/nexageapps/AI/blob/main/Basic/B06%20-%20Model%20Evaluation%20and%20Metrics.ipynb) | — |
+| **KG Playground** | RDF Triples, Knowledge Graphs, RAG & Conflict Detection | AI Fundamentals | [AI Fundamentals](#compsci-713) | [A03 - Retrieval-Augmented Generation](https://github.com/nexageapps/AI/blob/main/Advanced/A03%20-%20Retrieval-Augmented%20Generation%20(RAG).ipynb) | [Play Online](https://nexageapps.github.io/AI/ai-fundamentals/week3/kg-playground/) |
+| **RNN Explorer** | RNN/LSTM/GRU Architecture, Gates & Sequence Modelling | AI Fundamentals | [AI Fundamentals](#compsci-713) | [B10 - RNNs](https://github.com/nexageapps/AI/blob/main/Intermediate/I03%20-%20Recurrent%20Neural%20Networks.ipynb) · [B10a - RNNs (714)](https://github.com/nexageapps/AI/blob/main/Electives/Course-Companions/B10a%20-%20Recurrent%20Neural%20Networks.ipynb) | [Play Online](https://nexageapps.github.io/AI/ai-fundamentals/week4/rnn-explorer/) |
+| **CNN Explorer** | Convolution, Pooling, Feature Maps, Architecture & Playground | Neural Networks | [Neural Networks](./documentation/courses/NEURAL_NETWORKS_GUIDE.md) | [B09 - CNNs](https://github.com/nexageapps/AI/blob/main/Intermediate/I01%20-%20Convolutional%20Neural%20Networks.ipynb) | [Play Online](https://nexageapps.github.io/AI/neural-networks/week3/cnn-explorer/) |
+| **NEAT Explainer** | NeuroEvolution, Topology Mutation, Speciation & Crossover | AI Fundamentals | [AI Fundamentals](#compsci-713) | — | — |
+| **Transformer Explorer** | Self-Attention, Multi-Head Attention, Q/K/V & Architecture | Neural Networks | [Neural Networks](./documentation/courses/NEURAL_NETWORKS_GUIDE.md) | [B11 - Attention & Transformers](https://github.com/nexageapps/AI/blob/main/Intermediate/I04%20-%20Attention%20and%20Transformers.ipynb) | [Play Online](https://nexageapps.github.io/AI/neural-networks/week4/transformer-explorer/) |
+| **BPE Explorer** | Byte Pair Encoding, Tokenization, Subwords & Vocabulary | Neural Networks | [Neural Networks](./documentation/courses/NEURAL_NETWORKS_GUIDE.md) | [B12 - BPE](https://github.com/nexageapps/AI/blob/main/Intermediate/I05%20-%20Tokenization%20and%20Byte%20Pair%20Encoding.ipynb) | [Play Online](https://nexageapps.github.io/AI/neural-networks/week4/bpe-explorer/) |
+| **Q-Learning Grid World** | Reinforcement Learning, Q-Tables, Exploration vs Exploitation | AI Fundamentals | [AI Fundamentals](#compsci-713) | — | — |
 
 **[View All Games](https://nexageapps.github.io/AI/)** • Explore the `application/` folder for source code and deployment guides.
 
@@ -152,18 +152,18 @@ Interactive demonstrations of AI concepts in action:
 
 ## For University Students
 
-### University of Auckland Courses
+### University Course Companions
 
 | Course | Focus | Examples |
 |--------|-------|----------|
-| **COMPSCI 713** | AI Fundamentals | [Symbolic Logic, Knowledge Representation, Search, RL, Neuroevolution, Sustainability](./documentation/courses/COMPSCI_713_COMPLETE_GUIDE.md) |
-| **COMPSCI 714** | Neural Networks | [Networks, Gradient Descent, CNNs, Attention](./documentation/courses/COMPSCI_714_COMPLETE_GUIDE.md) |
-| **COMPSCI 769** | Natural Language Processing | [Semantic Representation, LLMs, RAG, Question Answering, Knowledge Graphs](./documentation/courses/COMPSCI_769_COMPLETE_GUIDE.md) |
-| **COMPSCI 762** | ML Foundations | Regression, Classification, Tuning |
-| **COMPSCI 703** | Generalising AI | Transfer Learning, Domain Adaptation |
-| **COMPSYS 721** | Deep Learning | Detection, Time Series, NLP, GANs |
+| **AI Fundamentals** | AI Fundamentals | [Symbolic Logic, Knowledge Representation, Search, RL, Neuroevolution, Sustainability](./documentation/courses/AI_FUNDAMENTALS_GUIDE.md) |
+| **Neural Networks** | Neural Networks | [Networks, Gradient Descent, CNNs, Attention](./documentation/courses/NEURAL_NETWORKS_GUIDE.md) |
+| **NLP** | Natural Language Processing | [Semantic Representation, LLMs, RAG, Question Answering, Knowledge Graphs](./documentation/courses/NLP_GUIDE.md) |
+| **ML Foundations** | ML Foundations | Regression, Classification, Tuning |
+| **Generalising AI** | Generalising AI | Transfer Learning, Domain Adaptation |
+| **Deep Learning** | Deep Learning | Detection, Time Series, NLP, GANs |
 
-**[COMPSCI 713 Complete Guide](./documentation/courses/COMPSCI_713_COMPLETE_GUIDE.md)** · **[COMPSCI 714 Complete Guide](./documentation/courses/COMPSCI_714_COMPLETE_GUIDE.md)** · **[COMPSCI 769 Complete Guide](./documentation/courses/COMPSCI_769_COMPLETE_GUIDE.md)**
+**[AI Fundamentals Complete Guide](./documentation/courses/AI_FUNDAMENTALS_GUIDE.md)** · **[Neural Networks Complete Guide](./documentation/courses/NEURAL_NETWORKS_GUIDE.md)** · **[NLP Complete Guide](./documentation/courses/NLP_GUIDE.md)**
 
 ### Study Tips
 
@@ -172,7 +172,7 @@ Interactive demonstrations of AI concepts in action:
 - **For assignments:** Use as reference, implement your own
 - **For exams:** Review all concepts in relevant lessons
 
-**[Complete Student Guide](./documentation/MAI_STUDENT_GUIDE.md)**
+**[Complete Student Guide](./documentation/STUDENT_GUIDE.md)**
 
 ---
 
@@ -206,7 +206,7 @@ A lesson is **ready** only if it follows the template and `python tools/nbtest.p
 
 ## Support & Author
 
-Created by a student pursuing a Master of Artificial Intelligence at the University of Auckland; independent of any institution.
+Created by students and open-source contributors; independent of any institution.
 [LinkedIn](https://www.linkedin.com/in/karthik-arjun-a5b4a258/) · [Discord](https://discord.com/channels/1482175575488598109/1482175576168206590) · [Buy me a book](https://buymeacoffee.com/fcc4sbsx5f6)
 
 MIT License: see [LICENSE](./LICENSE).

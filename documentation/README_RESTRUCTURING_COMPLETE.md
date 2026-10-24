@@ -25,7 +25,7 @@ The README has been completely restructured to be concise, focused, and user-fri
 - Project header & badges
 - Quick start guide (3 simple steps)
 - Repository structure overview
-- University of Auckland course links
+- University course companion links
 - Documentation index
 - Project ideas summary
 - Academic integrity guidelines
@@ -33,11 +33,11 @@ The README has been completely restructured to be concise, focused, and user-fri
 
 **Moved to separate files:**
 - Learning path diagram → documentation/LEARNING_PATH_DIAGRAM.md
-- Detailed course content → documentation/UNIVERSITY_OF_AUCKLAND_EXTENSIONS.md
-- COMPSCI 714 examples → documentation/COMPSCI_714_EXTENSIONS.md
+- Detailed course content → documentation/UNIVERSITY_COURSE_EXTENSIONS.md
+- Neural Networks examples → documentation/NEURAL_NETWORKS_EXTENSIONS.md
 - Project ideas details → documentation/PROJECT_IDEAS.md
 - Lesson descriptions → documentation/LESSON_DESCRIPTIONS.md
-- Study strategies → documentation/MAI_STUDENT_GUIDE.md
+- Study strategies → documentation/STUDENT_GUIDE.md
 
 ---
 
@@ -49,9 +49,9 @@ documentation/
 ├── LEARNING_PATH_DIAGRAM.md            (Full learning path)
 ├── LESSON_DESCRIPTIONS.md              (All 60 lessons)
 ├── PROJECT_IDEAS.md                    (Detailed projects)
-├── UNIVERSITY_OF_AUCKLAND_EXTENSIONS.md (All 5 courses)
-├── COMPSCI_714_EXTENSIONS.md           (4 detailed examples)
-├── MAI_STUDENT_GUIDE.md                (Study strategies)
+├── UNIVERSITY_COURSE_EXTENSIONS.md (All 5 courses)
+├── NEURAL_NETWORKS_EXTENSIONS.md           (4 detailed examples)
+├── STUDENT_GUIDE.md                (Study strategies)
 ├── EXAM_PREPARATION_GUIDE.md           (Exam prep)
 ├── ACADEMIC_INTEGRITY.md               (Responsible use)
 ├── CONTRIBUTING.md                     (How to contribute)
@@ -85,7 +85,7 @@ README.md (See course table)
 Click your course link
     |
     v
-UNIVERSITY_OF_AUCKLAND_EXTENSIONS.md (Course details)
+UNIVERSITY_COURSE_EXTENSIONS.md (Course details)
     |
     v
 Click specific example
@@ -159,17 +159,17 @@ Review relevant lessons
 - Prerequisites
 - Learning paths by interest
 
-### UNIVERSITY_OF_AUCKLAND_EXTENSIONS.md
+### UNIVERSITY_COURSE_EXTENSIONS.md
 **All 5 courses with:**
-- COMPSCI 713 (3 detailed examples)
-- COMPSCI 714 (link to detailed file)
-- COMPSCI 762 (overview)
-- COMPSCI 703 (overview)
-- COMPSYS 721 (overview)
+- AI Fundamentals (3 detailed examples)
+- Neural Networks (link to detailed file)
+- ML Foundations (overview)
+- Generalising AI (overview)
+- Deep Learning (overview)
 - How to use section
 - Tips for success
 
-### COMPSCI_714_EXTENSIONS.md
+### NEURAL_NETWORKS_EXTENSIONS.md
 **4 detailed neural network projects:**
 1. Neural Network from Scratch
 2. Gradient Descent Variants
@@ -184,7 +184,7 @@ Each with:
 - Common challenges
 - Extension ideas
 
-### MAI_STUDENT_GUIDE.md
+### STUDENT_GUIDE.md
 **For university students:**
 - Course mapping
 - Semester planning
@@ -280,9 +280,9 @@ Each with:
 ## Future Improvements
 
 ### Phase 2: Course-Specific Files
-- Create COMPSCI_762_EXTENSIONS.md
-- Create COMPSCI_703_EXTENSIONS.md
-- Create COMPSYS_721_EXTENSIONS.md
+- Create ML Foundations_EXTENSIONS.md
+- Create Generalising AI_EXTENSIONS.md
+- Create Deep Learning_EXTENSIONS.md
 
 ### Phase 3: Enhanced Navigation
 - Add breadcrumb navigation

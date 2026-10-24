@@ -2,7 +2,7 @@
 
 Thank you for your interest in contributing! 
 
-**About This Project:** This is a **personal learning repository** created by a student in the Master of Artificial Intelligence program at the University of Auckland. It's **not official university material** - just one student's study notes and implementations shared publicly to help fellow learners.
+**About This Project:** This is a **personal learning repository** created by a student in the Master of Artificial Intelligence program at the university. It's **not official university material** - just one student's study notes and implementations shared publicly to help fellow learners.
 
 This repository is built by students, for students, and we welcome contributions from the community.
 
@@ -305,7 +305,7 @@ def calc(p,t):
 2. **Update documentation**
    - Update README.md if needed
    - Add your lesson to the table of contents
-   - Update the MAI_STUDENT_GUIDE.md if relevant
+   - Update the STUDENT_GUIDE.md if relevant
 
 3. **Clean up**
    - Remove unnecessary files

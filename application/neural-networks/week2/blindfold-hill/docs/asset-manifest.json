@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/neural-networks/week2/blindfold-hill/static/css/main.6cdda337.css",
+    "main.js": "/neural-networks/week2/blindfold-hill/static/js/main.b58b19d9.js",
+    "index.html": "/neural-networks/week2/blindfold-hill/index.html",
+    "main.6cdda337.css.map": "/neural-networks/week2/blindfold-hill/static/css/main.6cdda337.css.map",
+    "main.b58b19d9.js.map": "/neural-networks/week2/blindfold-hill/static/js/main.b58b19d9.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6cdda337.css",
+    "static/js/main.b58b19d9.js"
+  ]
+}

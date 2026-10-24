@@ -1,8 +1,8 @@
-# Exam Preparation Guide for UoA Students
+# Exam Preparation Guide for university Students
 
 ## Overview
 
-Every lesson notebook now includes comprehensive exam preparation sections specifically designed to help University of Auckland students succeed in their COMPSCI courses. These sections bridge the gap between theoretical lectures and practical implementation.
+Every lesson notebook now includes comprehensive exam preparation sections specifically designed to help university students succeed in their COMPSCI courses. These sections bridge the gap between theoretical lectures and practical implementation.
 
 ## What's Included in Each Notebook
 
@@ -44,13 +44,13 @@ Each notebook includes a comprehensive exam prep section with:
 - Application problems
 
 #### 4. Course Mapping
-Shows which UoA courses each lesson supports:
-- COMPSCI 713: AI Fundamentals
-- COMPSCI 714: AI Architecture & Design
-- COMPSCI 761: Advanced AI Topics
-- COMPSCI 762: ML Foundations
-- COMPSCI 703: Generalising AI
-- COMPSYS 721: Deep Learning
+Shows which university courses each lesson supports:
+- AI Fundamentals: AI Fundamentals
+- Neural Networks: AI Architecture & Design
+- Machine Learning: Advanced AI Topics
+- ML Foundations: ML Foundations
+- Generalising AI: Generalising AI
+- Deep Learning: Deep Learning
 
 #### 5. Study Tips
 - How to approach the material
@@ -67,10 +67,10 @@ Shows which UoA courses each lesson supports:
 
 ## Course-Specific Guidance
 
-### COMPSCI 713 (AI Fundamentals)
+### AI Fundamentals (AI Fundamentals)
 Relevant Lessons: B01, B04, B05, B05a, B05b, B07, E08, E09, E10, E11, A03, A10
 
-Full course guide: [COMPSCI 713 Complete Guide](./courses/COMPSCI_713_COMPLETE_GUIDE.md)
+Full course guide: [AI Fundamentals Complete Guide](./courses/AI_FUNDAMENTALS_GUIDE.md)
 
 Focus Areas (by theme):
 - **Foundations of Intelligence:** Symbolic logic (B01), knowledge representation (KG Playground), expert systems & decision trees (B04), Bayesian/fuzzy reasoning (B07)
@@ -104,7 +104,7 @@ Exam Tips:
 - Know the difference between Weak AI and Strong AI cold
 - Understand the full pipeline: perception → representation → reasoning → action
 
-### COMPSCI 714 (AI Architecture & Design)
+### Neural Networks (AI Architecture & Design)
 Relevant Lessons: B09-B15
 
 Focus Areas:
@@ -119,7 +119,7 @@ Exam Tips:
 - Compare different architectures
 - Design systems for specific tasks
 
-### COMPSCI 761 (Advanced AI Topics)
+### Machine Learning (Advanced AI Topics)
 Relevant Lessons: B06, B12, B14, E01, E10-E11
 
 Focus Areas:
@@ -134,7 +134,7 @@ Exam Tips:
 - Know state-of-the-art methods
 - Critical thinking about approaches
 
-### COMPSCI 762 (ML Foundations)
+### ML Foundations (ML Foundations)
 Relevant Lessons: B02-B08, I01-I03
 
 Focus Areas:
@@ -149,7 +149,7 @@ Exam Tips:
 - Understand bias-variance tradeoff
 - Know when to apply which technique
 
-### COMPSCI 703 (Generalising AI)
+### Generalising AI (Generalising AI)
 Relevant Lessons: B11-B13, B15, I09, E11
 
 Focus Areas:
@@ -164,7 +164,7 @@ Exam Tips:
 - Explain generation process
 - Understand alignment techniques
 
-### COMPSYS 721 (Deep Learning)
+### Deep Learning (Deep Learning)
 Relevant Lessons: B09-B11, I03, I09
 
 Focus Areas:
@@ -290,7 +290,7 @@ Exam Tips:
 
 - README.md: Overall progress tracker
 - PROGRESS_TRACKER_GUIDE.md: How to track your learning
-- MAI_STUDENT_GUIDE.md: Comprehensive guide for MAI students
+- STUDENT_GUIDE.md: Comprehensive guide for students
 - Individual Notebooks: Detailed implementations with exam prep
 
 ### External Resources
@@ -355,5 +355,5 @@ Remember: Understanding > Memorization. Focus on why things work, not just what 
 
 - [README.md](./README.md) - Main repository overview and learning paths
 - [Progress Tracker Guide](./PROGRESS_TRACKER_GUIDE.md) - How to track your learning progress
-- [MAI Student Guide](./MAI_STUDENT_GUIDE.md) - Complete guide for UoA MAI students
+- [Student Guide](./STUDENT_GUIDE.md) - Complete guide for Master's-level students
 - [Updates Summary](./UPDATES_SUMMARY.md) - Recent repository enhancements

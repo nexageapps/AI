@@ -128,5 +128,5 @@ Happy Learning and Tracking!
 
 - [README.md](./README.md) - Main repository overview with complete progress tracker
 - [Exam Preparation Guide](./EXAM_PREPARATION_GUIDE.md) - Study strategies and exam tips
-- [MAI Student Guide](./MAI_STUDENT_GUIDE.md) - Course mappings and semester planning
+- [Student Guide](./STUDENT_GUIDE.md) - Course mappings and semester planning
 - [Updates Summary](./UPDATES_SUMMARY.md) - Recent enhancements and features

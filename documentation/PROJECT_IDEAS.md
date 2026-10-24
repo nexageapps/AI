@@ -438,8 +438,8 @@ Have you built something amazing? Share it with the community!
 
 - [Project Planning Template](./CONTRIBUTING.md)
 - [Code Review Checklist](./CONTRIBUTING.md)
-- [Deployment Guide](./MAI_STUDENT_GUIDE.md)
-- [Portfolio Building Tips](./MAI_STUDENT_GUIDE.md)
+- [Deployment Guide](./STUDENT_GUIDE.md)
+- [Portfolio Building Tips](./STUDENT_GUIDE.md)
 
 ---
 
@@ -447,6 +447,6 @@ Have you built something amazing? Share it with the community!
 
 **Ready to build? Pick a project and start coding!**
 
-[Back to Main README](../README.md) • [Student Guide](./MAI_STUDENT_GUIDE.md) • [Documentation Index](./DOCUMENTATION_INDEX.md)
+[Back to Main README](../README.md) • [Student Guide](./STUDENT_GUIDE.md) • [Documentation Index](./DOCUMENTATION_INDEX.md)
 
 </div>

@@ -509,7 +509,7 @@ After completing this sector, students will:
 
 ## 🎖️ Credits
 
-**Created by:** Master of Artificial Intelligence Student, University of Auckland
+**Created by:** AI students and open-source contributors
 **Framework:** LangChain & LangGraph  
 **License:** MIT
 **Sponsored by:** nexageapps
@@ -561,7 +561,7 @@ This sector represents a significant addition to the repository:
 
 ### File Locations
 ```
-/Users/arjunkarthik/Applications/MAI/AI/AI/
+./
 ├── Agents/                          # New sector
 │   ├── README.md                    # Course overview
 │   ├── GETTING_STARTED.md           # Quick start guide

@@ -145,7 +145,7 @@ Status legend: ✅ ready · 🆕 new in this revision · ♻️ retained from th
 ### Electives (kept, off the main path)
 `Electives/Classical-AI` (logic, expert systems, search, genetic algorithms, fuzzy/Bayesian) ·
 `Electives/Deep-Learning` (advanced optimizers, normalization, detection, GNNs, advanced transformers) ·
-`Electives/University-Courses` (COMPSCI 713/714 companions) · `Electives/Research` (continual learning) ·
+`Electives/Course-Companions` (AI Fundamentals/714 companions) · `Electives/Research` (continual learning) ·
 `Electives/Frameworks` (LlamaIndex, earlier agent notes; **written against older APIs: read as history, use AG06/AG08 for current practice**).
 
 ## 4. Detailed specs for lessons marked 🆕

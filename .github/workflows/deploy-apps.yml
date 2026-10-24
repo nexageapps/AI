@@ -41,27 +41,27 @@ jobs:
         with:
           filters: |
             wumpus:
-              - 'application/compsci713/week2/wumpus/**'
+              - 'application/ai-fundamentals/week2/wumpus/**'
             gradient:
-              - 'application/compsci714/week2/gradient-descent-game/**'
+              - 'application/neural-networks/week2/gradient-descent-game/**'
             nn-trainer:
-              - 'application/compsci714/week2/nn-learning-game/**'
+              - 'application/neural-networks/week2/nn-learning-game/**'
             kg-playground:
-              - 'application/compsci713/week3/kg-playground/**'
+              - 'application/ai-fundamentals/week3/kg-playground/**'
             model-eval:
-              - 'application/compsci713/week3/model-evaluation-dashboard/**'
+              - 'application/ai-fundamentals/week3/model-evaluation-dashboard/**'
             symbolic-logic:
-              - 'application/compsci713/week1/symbolic-logic/**'
+              - 'application/ai-fundamentals/week1/symbolic-logic/**'
             neural-network:
-              - 'application/compsci713/week2/neural-network/**'
+              - 'application/ai-fundamentals/week2/neural-network/**'
             rnn-explorer:
-              - 'application/compsci713/week4/rnn-explorer/**'
+              - 'application/ai-fundamentals/week4/rnn-explorer/**'
             cnn-explorer:
-              - 'application/compsci714/week3/cnn-explorer/**'
+              - 'application/neural-networks/week3/cnn-explorer/**'
             transformer-explorer:
-              - 'application/compsci714/week4/transformer-explorer/**'
+              - 'application/neural-networks/week4/transformer-explorer/**'
             bpe-explorer:
-              - 'application/compsci714/week4/bpe-explorer/**'
+              - 'application/neural-networks/week4/bpe-explorer/**'
             index:
               - 'index.html'
 
@@ -90,15 +90,15 @@ jobs:
         with:
           node-version: '18'
           cache: 'npm'
-          cache-dependency-path: application/compsci713/week2/wumpus/package-lock.json
+          cache-dependency-path: application/ai-fundamentals/week2/wumpus/package-lock.json
       - run: npm ci
-        working-directory: application/compsci713/week2/wumpus
+        working-directory: application/ai-fundamentals/week2/wumpus
       - run: npm run build
-        working-directory: application/compsci713/week2/wumpus
+        working-directory: application/ai-fundamentals/week2/wumpus
       - uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./application/compsci713/week2/wumpus/build
+          publish_dir: ./application/ai-fundamentals/week2/wumpus/build
           destination_dir: wumpus
           keep_files: true
           user_name: 'github-actions[bot]'
@@ -114,15 +114,15 @@ jobs:
         with:
           node-version: '20'
           cache: 'npm'
-          cache-dependency-path: application/compsci714/week2/nn-learning-game/package-lock.json
+          cache-dependency-path: application/neural-networks/week2/nn-learning-game/package-lock.json
       - run: npm ci
-        working-directory: application/compsci714/week2/nn-learning-game
+        working-directory: application/neural-networks/week2/nn-learning-game
       - run: npm run build
-        working-directory: application/compsci714/week2/nn-learning-game
+        working-directory: application/neural-networks/week2/nn-learning-game
       - uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./application/compsci714/week2/nn-learning-game/dist
+          publish_dir: ./application/neural-networks/week2/nn-learning-game/dist
           destination_dir: nn-trainer
           keep_files: true
           user_name: 'github-actions[bot]'
@@ -138,15 +138,15 @@ jobs:
         with:
           node-version: '18'
           cache: 'npm'
-          cache-dependency-path: application/compsci714/week2/gradient-descent-game/package-lock.json
+          cache-dependency-path: application/neural-networks/week2/gradient-descent-game/package-lock.json
       - run: npm ci
-        working-directory: application/compsci714/week2/gradient-descent-game
+        working-directory: application/neural-networks/week2/gradient-descent-game
       - run: npm run build
-        working-directory: application/compsci714/week2/gradient-descent-game
+        working-directory: application/neural-networks/week2/gradient-descent-game
       - uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./application/compsci714/week2/gradient-descent-game/docs
+          publish_dir: ./application/neural-networks/week2/gradient-descent-game/docs
           destination_dir: gradient-descent
           keep_files: true
           user_name: 'github-actions[bot]'
@@ -162,14 +162,14 @@ jobs:
         with:
           node-version: '20'
       - run: npm install
-        working-directory: application/compsci713/week3/kg-playground
+        working-directory: application/ai-fundamentals/week3/kg-playground
       - run: npm run build
-        working-directory: application/compsci713/week3/kg-playground
+        working-directory: application/ai-fundamentals/week3/kg-playground
       - uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./application/compsci713/week3/kg-playground/build
-          destination_dir: compsci713/week3/kg-playground
+          publish_dir: ./application/ai-fundamentals/week3/kg-playground/build
+          destination_dir: ai-fundamentals/week3/kg-playground
           keep_files: true
           user_name: 'github-actions[bot]'
           user_email: 'github-actions[bot]@users.noreply.github.com'
@@ -183,13 +183,13 @@ jobs:
       - name: Prepare static files
         run: |
           mkdir -p deploy-model-eval
-          cp application/compsci713/week3/model-evaluation-dashboard/index.html deploy-model-eval/
-          cp application/compsci713/week3/model-evaluation-dashboard/app.js deploy-model-eval/
+          cp application/ai-fundamentals/week3/model-evaluation-dashboard/index.html deploy-model-eval/
+          cp application/ai-fundamentals/week3/model-evaluation-dashboard/app.js deploy-model-eval/
       - uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./deploy-model-eval
-          destination_dir: compsci713/week3/model-evaluation
+          destination_dir: ai-fundamentals/week3/model-evaluation
           keep_files: true
           user_name: 'github-actions[bot]'
           user_email: 'github-actions[bot]@users.noreply.github.com'
@@ -204,15 +204,15 @@ jobs:
         with:
           node-version: '18'
           cache: 'npm'
-          cache-dependency-path: application/compsci713/week1/symbolic-logic/package-lock.json
+          cache-dependency-path: application/ai-fundamentals/week1/symbolic-logic/package-lock.json
       - run: npm ci
-        working-directory: application/compsci713/week1/symbolic-logic
+        working-directory: application/ai-fundamentals/week1/symbolic-logic
       - run: npm run build
-        working-directory: application/compsci713/week1/symbolic-logic
+        working-directory: application/ai-fundamentals/week1/symbolic-logic
       - uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./application/compsci713/week1/symbolic-logic/build
+          publish_dir: ./application/ai-fundamentals/week1/symbolic-logic/build
           destination_dir: symbolic-logic
           keep_files: true
           user_name: 'github-actions[bot]'
@@ -228,15 +228,15 @@ jobs:
         with:
           node-version: '18'
           cache: 'npm'
-          cache-dependency-path: application/compsci713/week2/neural-network/package-lock.json
+          cache-dependency-path: application/ai-fundamentals/week2/neural-network/package-lock.json
       - run: npm ci
-        working-directory: application/compsci713/week2/neural-network
+        working-directory: application/ai-fundamentals/week2/neural-network
       - run: npm run build
-        working-directory: application/compsci713/week2/neural-network
+        working-directory: application/ai-fundamentals/week2/neural-network
       - uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./application/compsci713/week2/neural-network/build
+          publish_dir: ./application/ai-fundamentals/week2/neural-network/build
           destination_dir: neural-network
           keep_files: true
           user_name: 'github-actions[bot]'
@@ -252,15 +252,15 @@ jobs:
         with:
           node-version: '18'
           cache: 'npm'
-          cache-dependency-path: application/compsci713/week4/rnn-explorer/package-lock.json
+          cache-dependency-path: application/ai-fundamentals/week4/rnn-explorer/package-lock.json
       - run: npm ci
-        working-directory: application/compsci713/week4/rnn-explorer
+        working-directory: application/ai-fundamentals/week4/rnn-explorer
       - run: npm run build
-        working-directory: application/compsci713/week4/rnn-explorer
+        working-directory: application/ai-fundamentals/week4/rnn-explorer
       - uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./application/compsci713/week4/rnn-explorer/build
+          publish_dir: ./application/ai-fundamentals/week4/rnn-explorer/build
           destination_dir: rnn-explorer
           keep_files: true
           user_name: 'github-actions[bot]'
@@ -276,16 +276,16 @@ jobs:
         with:
           node-version: '18'
           cache: 'npm'
-          cache-dependency-path: application/compsci714/week3/cnn-explorer/package-lock.json
+          cache-dependency-path: application/neural-networks/week3/cnn-explorer/package-lock.json
       - run: npm ci
-        working-directory: application/compsci714/week3/cnn-explorer
+        working-directory: application/neural-networks/week3/cnn-explorer
       - run: npm run build
-        working-directory: application/compsci714/week3/cnn-explorer
+        working-directory: application/neural-networks/week3/cnn-explorer
       - uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./application/compsci714/week3/cnn-explorer/build
-          destination_dir: compsci714/week3/cnn-explorer
+          publish_dir: ./application/neural-networks/week3/cnn-explorer/build
+          destination_dir: neural-networks/week3/cnn-explorer
           keep_files: true
           user_name: 'github-actions[bot]'
           user_email: 'github-actions[bot]@users.noreply.github.com'
@@ -300,16 +300,16 @@ jobs:
         with:
           node-version: '18'
           cache: 'npm'
-          cache-dependency-path: application/compsci714/week4/transformer-explorer/package-lock.json
+          cache-dependency-path: application/neural-networks/week4/transformer-explorer/package-lock.json
       - run: npm ci
-        working-directory: application/compsci714/week4/transformer-explorer
+        working-directory: application/neural-networks/week4/transformer-explorer
       - run: npm run build
-        working-directory: application/compsci714/week4/transformer-explorer
+        working-directory: application/neural-networks/week4/transformer-explorer
       - uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./application/compsci714/week4/transformer-explorer/build
-          destination_dir: compsci714/week4/transformer-explorer
+          publish_dir: ./application/neural-networks/week4/transformer-explorer/build
+          destination_dir: neural-networks/week4/transformer-explorer
           keep_files: true
           user_name: 'github-actions[bot]'
           user_email: 'github-actions[bot]@users.noreply.github.com'
@@ -324,16 +324,16 @@ jobs:
         with:
           node-version: '18'
           cache: 'npm'
-          cache-dependency-path: application/compsci714/week4/bpe-explorer/package-lock.json
+          cache-dependency-path: application/neural-networks/week4/bpe-explorer/package-lock.json
       - run: npm ci
-        working-directory: application/compsci714/week4/bpe-explorer
+        working-directory: application/neural-networks/week4/bpe-explorer
       - run: npm run build
-        working-directory: application/compsci714/week4/bpe-explorer
+        working-directory: application/neural-networks/week4/bpe-explorer
       - uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./application/compsci714/week4/bpe-explorer/build
-          destination_dir: compsci714/week4/bpe-explorer
+          publish_dir: ./application/neural-networks/week4/bpe-explorer/build
+          destination_dir: neural-networks/week4/bpe-explorer
           keep_files: true
           user_name: 'github-actions[bot]'
           user_email: 'github-actions[bot]@users.noreply.github.com'

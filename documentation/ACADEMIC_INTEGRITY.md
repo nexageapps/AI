@@ -1,6 +1,6 @@
 # Academic Integrity Policy
 
-> **Independence notice:** this is personal learning material shared as open-source study notes. It is not from, reviewed by, or endorsed by the University of Auckland or any other institution, and contains no official course content.
+> **Independence notice:** this is personal learning material shared as open-source study notes. It is an independent educational project.
 
 
 ---

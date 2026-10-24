@@ -212,7 +212,7 @@ A lesson is **ready** only if it follows the template and `python tools/nbtest.p
 
 ## Support & Author
 
-Created by a student as personal learning material to understand AI better, and shared as open-source study material. It is independent of any institution: **not from, reviewed by, or endorsed by the University of Auckland** or any other university, and it contains no official course content.
+Open-source AI education built for learners worldwide. Independent educational project.
 [LinkedIn](https://www.linkedin.com/in/karthik-arjun-a5b4a258/) · [Discord](https://discord.com/channels/1482175575488598109/1482175576168206590) · [Buy me a book](https://buymeacoffee.com/fcc4sbsx5f6)
 
 MIT License: see [LICENSE](./LICENSE).

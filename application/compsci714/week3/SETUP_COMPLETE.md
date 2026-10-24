@@ -132,7 +132,7 @@ Students can:
 4. `application/compsci714/week3/data-preprocessing-studio/package.json`
 5. `application/compsci714/week3/data-preprocessing-studio/public/index.html`
 6. `README.md` (main repository)
-7. `Basic/B06 - Data Preprocessing and Feature Engineering.ipynb`
+7. `Basic/B05 - Data Preprocessing and Feature Engineering.ipynb`
 8. `.github/workflows/deploy-preprocessing-studio.yml`
 
 ## Next Steps

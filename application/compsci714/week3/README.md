@@ -16,7 +16,7 @@ By the end of this week, you will:
 
 ## Related Notebook
 
-**Basic/B06 - Data Preprocessing and Feature Engineering.ipynb**
+**Basic/B05 - Data Preprocessing and Feature Engineering.ipynb**
 
 This notebook covers:
 1. Handling Missing Values (MCAR, MAR, MNAR)

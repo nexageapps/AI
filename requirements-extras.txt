@@ -1,0 +1,13 @@
+# Optional per-lesson extras. Install only what a lesson tells you to.
+torch>=2.2               # Intermediate/Expert deep-learning cells
+torchvision>=0.17
+transformers>=4.40
+sentence-transformers>=3.0   # I07 / A03 optional dense embeddings
+langgraph>=0.2           # AG08 reference cells
+mcp>=1.0                 # AG10 reference cells (official Python SDK)
+fastapi>=0.110           # AG15 / AP09
+uvicorn>=0.29
+dspy>=2.5                # AP08 (package was formerly 'dspy-ai')
+chromadb>=0.5            # AP10 (alternative local vector store)
+pinecone>=5.0            # AP10 (formerly 'pinecone-client')
+streamlit>=1.35

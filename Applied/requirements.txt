@@ -1,0 +1,8 @@
+# Applied track: see ../requirements.txt for the core set and ../requirements-extras.txt for per-lesson extras.
+# Versions are lower bounds, not pins: re-check each framework's changelog when a lesson's code stops working.
+-r ../requirements.txt
+fastapi>=0.110
+uvicorn>=0.29
+dspy>=2.5
+chromadb>=0.5
+pinecone>=5.0

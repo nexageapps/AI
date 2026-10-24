@@ -103,8 +103,8 @@ Use this checklist before making your repository public to ensure everything is 
   - [ ] Ensure no copyrighted university materials included
 
 - [ ] **Contact Points** (if needed)
-  - Student Learning Services: https://www.auckland.ac.nz/en/students/student-support/student-learning.html
-  - Academic Integrity Office: integrity@auckland.ac.nz
+  - Your institution's learning support services
+  - Academic integrity office
   - Your academic advisor or course coordinator
 
 ## 📝 Notes

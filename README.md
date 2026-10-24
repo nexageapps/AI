@@ -38,7 +38,16 @@ This is an **independent learning project**, shared openly as educational materi
 
 ## What Is This?
 
-A **graduate-level, hands-on path** from ML fundamentals to *building, evaluating and shipping agentic systems*, designed for Master's students. The repo follows one **standard pattern**: six tiers, each with the same lesson template, each ending in a capstone.
+A **comprehensive AI engineering curriculum** from ML fundamentals to production AI agents and intelligent systems.
+
+**What you'll build:**
+- 🤖 **AI Agents** with LangChain, LangGraph, and LlamaIndex
+- 🔍 **RAG Systems** with vector databases (Pinecone, Weaviate, Chroma)
+- ⚡ **Production APIs** with FastAPI and modern deployment
+- 🧠 **LLM Applications** with prompt engineering and DSPy
+- 🎯 **Real Projects** - from notebooks to deployed systems
+
+**Learning path:** Basic ML → Deep Learning → LLMs & RAG → AI Agents → Production Systems → Advanced Research
 
 | | |
 |---|---|
@@ -61,11 +70,29 @@ A **graduate-level, hands-on path** from ML fundamentals to *building, evaluatin
 | **Total** | **65** | **214** | **32** | **20** | **13** | |
 <!-- STATUS:END -->
 
-Details and per-lesson specs: **[CURRICULUM.md](./CURRICULUM.md)** · week-by-week plan: **[LEARNING_SEQUENCE.md](./LEARNING_SEQUENCE.md)**
+### Tech Stack Covered
 
 ```
-Basic ─▶ Intermediate ─▶ Advanced ─▶ Agents ─▶ Applied ─▶ Expert
-(learn)   (represent)     (engineer)  (act)     (deliver)  (advance)
+🎯 Foundations          🤖 AI Agents              🚀 Production
+├─ PyTorch              ├─ LangChain              ├─ FastAPI
+├─ TensorFlow           ├─ LangGraph              ├─ Docker
+├─ scikit-learn         ├─ LlamaIndex             ├─ Kubernetes
+├─ NumPy/Pandas         ├─ DSPy                   ├─ CI/CD
+└─ Transformers         └─ CrewAI                 └─ Monitoring
+
+🗄️ Vector DBs           💬 LLMs                   📊 Frameworks
+├─ Pinecone             ├─ OpenAI                 ├─ Haystack  
+├─ Weaviate             ├─ Anthropic Claude       ├─ Semantic Kernel
+├─ Qdrant               ├─ Open Source LLMs       └─ Guardrails AI
+└─ Chroma               └─ Fine-tuning            
+```
+
+### Learning Path
+
+```
+Basic (ML/DL)  →  Intermediate (Vision/NLP)  →  Advanced (LLMs)
+      ↓                    ↓                           ↓
+   Agents (LangChain/LlamaIndex)  ←  Applied (Production)  →  Expert (Research)
 ```
 
 ---

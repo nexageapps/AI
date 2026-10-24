@@ -30,7 +30,7 @@ This repository is **free, open-source educational material** (MIT). Use it to t
 
 ## ⚠️ Important Disclaimer
 
-This is **my personal learning material**, written to understand AI myself and shared openly as study notes. It is **independent**: it was **not created, reviewed, endorsed or sponsored by the University of Auckland** (or any other institution), it contains **no official course content**, and it does not represent any university's views. Use it responsibly and follow your own institution's academic integrity policy; see [Academic Integrity](./documentation/ACADEMIC_INTEGRITY.md).
+This is an **independent learning project**, shared openly as educational material. Use responsibly and follow your institution's academic integrity policies. See [Academic Integrity Policy](./documentation/ACADEMIC_INTEGRITY.md) for details.
 
 ---
 

@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/AI/neural-networks/week4/transformer-explorer/static/css/main.b64189d9.css",
+    "main.js": "/AI/neural-networks/week4/transformer-explorer/static/js/main.4a9bc5c9.js",
+    "index.html": "/AI/neural-networks/week4/transformer-explorer/index.html",
+    "main.b64189d9.css.map": "/AI/neural-networks/week4/transformer-explorer/static/css/main.b64189d9.css.map",
+    "main.4a9bc5c9.js.map": "/AI/neural-networks/week4/transformer-explorer/static/js/main.4a9bc5c9.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b64189d9.css",
+    "static/js/main.4a9bc5c9.js"
+  ]
+}

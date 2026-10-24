@@ -2,7 +2,7 @@
 
 ## Overview
 
-This document summarizes all the enhancements made to the AI & Machine Learning Roadmap repository to help university students succeed in their COMPSCI courses.
+This document summarizes all the enhancements made to the AI & Machine Learning Roadmap repository to help university students succeed in their university courses.
 
 ## Updates Completed
 
@@ -308,11 +308,11 @@ If you find these updates helpful or have suggestions:
 ## Acknowledgments
 
 These updates were created based on:
-- university MAI curriculum
+- university Master's-level AI curriculum
 - Student feedback and common questions
 - Exam patterns and question types
 - Best practices in AI/ML education
-- Personal experience as a MAI student
+- Personal experience as a student
 
 ## Final Notes
 
@@ -345,7 +345,7 @@ These resources are for learning, not for copying:
 
 Happy Learning! You've got this! 
 
-*Made by a MAI student, for students and all AI/ML learners*
+*Made by a student, for students and all AI/ML learners*
 
 ---
 

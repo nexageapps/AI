@@ -22,6 +22,12 @@ From machine-learning fundamentals to shipping agentic AI systems: 65 lessons, o
 
 ---
 
+## 🌍 Open-source study material
+
+This repository is **free, open-source educational material** (MIT). Use it to teach yourself, run a study group or a course; fork it, translate it, send improvements. See [CONTRIBUTING.md](./CONTRIBUTING.md) and the [Code of Conduct](./CODE_OF_CONDUCT.md). If it helps you, please cite it ([CITATION.cff](./CITATION.cff)) and star the repo.
+
+---
+
 ## ⚠️ Important Disclaimer
 
 This is an **independent learning project**, NOT official university material. Use responsibly and follow your institution's academic integrity policies. See [Academic Integrity Policy](./documentation/ACADEMIC_INTEGRITY.md) for details.
@@ -129,20 +135,20 @@ Interactive demonstrations of AI concepts in action:
 
 | Demo | Concept | Course | Course Page | Notebook | Link |
 |------|---------|--------|-------------|----------|------|
-| **Wumpus World** | Symbolic Logic & Knowledge Representation | AI Fundamentals | [AI Fundamentals](#compsci-713) | — | [Play Online](https://nexageapps.github.io/AI/wumpus) |
+| **Wumpus World** | Symbolic Logic & Knowledge Representation | AI Fundamentals | [AI Fundamentals](#ai-fundamentals) | — | [Play Online](https://nexageapps.github.io/AI/wumpus) |
 | **Mountain Explorer** | Gradient Descent & Optimization | Neural Networks | [Neural Networks](./documentation/courses/NEURAL_NETWORKS_GUIDE.md) | [B02 - Linear Regression](https://github.com/nexageapps/AI/blob/main/Basic/B02%20-%20Linear%20Regression%20and%20Gradient%20Descent.ipynb) · [B05b - Training & Optimization](https://github.com/nexageapps/AI/blob/main/Electives/Course-Companions/B05b%20-%20Training%20and%20Optimization.ipynb) | [Play Online](https://nexageapps.github.io/AI/gradient-descent) |
 | **Blindfold Hill** | Gradient Descent, Learning Rate & Convergence | Neural Networks | [Neural Networks](./documentation/courses/NEURAL_NETWORKS_GUIDE.md) | [B02 - Linear Regression](https://github.com/nexageapps/AI/blob/main/Basic/B02%20-%20Linear%20Regression%20and%20Gradient%20Descent.ipynb) · [B05b - Training & Optimization](https://github.com/nexageapps/AI/blob/main/Electives/Course-Companions/B05b%20-%20Training%20and%20Optimization.ipynb) | [Play Online](https://nexageapps.github.io/AI/neural-networks/week2/blindfold-hill) |
 | **Neural Network Trainer** | Forward Propagation, Backpropagation & Gradient Descent | Neural Networks | [Neural Networks](./documentation/courses/NEURAL_NETWORKS_GUIDE.md) | [B05 - Neural Network Fundamentals](https://github.com/nexageapps/AI/blob/main/Basic/B09%20-%20Neural%20Networks%20from%20Scratch.ipynb) · [B05a - Neural Networks Theory](https://github.com/nexageapps/AI/blob/main/Electives/Course-Companions/B05a%20-%20Neural%20Networks%20Theory.ipynb) | [Play Online](https://nexageapps.github.io/AI/nn-trainer/) |
 | **Data Preprocessing Studio** | Missing Values, Feature Scaling, Encoding & Feature Engineering | Neural Networks | [Neural Networks](./documentation/courses/NEURAL_NETWORKS_GUIDE.md) | [B06 - Data Preprocessing and Feature Engineering](https://github.com/nexageapps/AI/blob/main/Basic/B05%20-%20Data%20Preprocessing%20and%20Feature%20Engineering.ipynb) | [Play Online](https://nexageapps.github.io/AI/neural-networks/week3/data-preprocessing-studio) |
 | **PyTorch Assignment Practice** | Tabular MLP, BCEWithLogitsLoss, Optuna, FashionMNIST CNN, Saliency Maps | Neural Networks | [Neural Networks](./documentation/courses/NEURAL_NETWORKS_GUIDE.md) | [B05c - MLP on Tabular Data with PyTorch](https://github.com/nexageapps/AI/blob/main/Electives/Course-Companions/B05c%20-%20MLP%20on%20Tabular%20Data%20with%20PyTorch.ipynb) | — |
-| **Model Evaluation Dashboard** | Confusion Matrix, ROC/AUC, Precision-Recall & Cross-Validation | AI Fundamentals | [AI Fundamentals](#compsci-713) | [B07 - Model Evaluation](https://github.com/nexageapps/AI/blob/main/Basic/B06%20-%20Model%20Evaluation%20and%20Metrics.ipynb) | — |
-| **KG Playground** | RDF Triples, Knowledge Graphs, RAG & Conflict Detection | AI Fundamentals | [AI Fundamentals](#compsci-713) | [A03 - Retrieval-Augmented Generation](https://github.com/nexageapps/AI/blob/main/Advanced/A03%20-%20Retrieval-Augmented%20Generation%20(RAG).ipynb) | [Play Online](https://nexageapps.github.io/AI/ai-fundamentals/week3/kg-playground/) |
-| **RNN Explorer** | RNN/LSTM/GRU Architecture, Gates & Sequence Modelling | AI Fundamentals | [AI Fundamentals](#compsci-713) | [B10 - RNNs](https://github.com/nexageapps/AI/blob/main/Intermediate/I03%20-%20Recurrent%20Neural%20Networks.ipynb) · [B10a - RNNs (714)](https://github.com/nexageapps/AI/blob/main/Electives/Course-Companions/B10a%20-%20Recurrent%20Neural%20Networks.ipynb) | [Play Online](https://nexageapps.github.io/AI/ai-fundamentals/week4/rnn-explorer/) |
+| **Model Evaluation Dashboard** | Confusion Matrix, ROC/AUC, Precision-Recall & Cross-Validation | AI Fundamentals | [AI Fundamentals](#ai-fundamentals) | [B07 - Model Evaluation](https://github.com/nexageapps/AI/blob/main/Basic/B06%20-%20Model%20Evaluation%20and%20Metrics.ipynb) | — |
+| **KG Playground** | RDF Triples, Knowledge Graphs, RAG & Conflict Detection | AI Fundamentals | [AI Fundamentals](#ai-fundamentals) | [A03 - Retrieval-Augmented Generation](https://github.com/nexageapps/AI/blob/main/Advanced/A03%20-%20Retrieval-Augmented%20Generation%20(RAG).ipynb) | [Play Online](https://nexageapps.github.io/AI/ai-fundamentals/week3/kg-playground/) |
+| **RNN Explorer** | RNN/LSTM/GRU Architecture, Gates & Sequence Modelling | AI Fundamentals | [AI Fundamentals](#ai-fundamentals) | [B10 - RNNs](https://github.com/nexageapps/AI/blob/main/Intermediate/I03%20-%20Recurrent%20Neural%20Networks.ipynb) · [B10a - RNNs (714)](https://github.com/nexageapps/AI/blob/main/Electives/Course-Companions/B10a%20-%20Recurrent%20Neural%20Networks.ipynb) | [Play Online](https://nexageapps.github.io/AI/ai-fundamentals/week4/rnn-explorer/) |
 | **CNN Explorer** | Convolution, Pooling, Feature Maps, Architecture & Playground | Neural Networks | [Neural Networks](./documentation/courses/NEURAL_NETWORKS_GUIDE.md) | [B09 - CNNs](https://github.com/nexageapps/AI/blob/main/Intermediate/I01%20-%20Convolutional%20Neural%20Networks.ipynb) | [Play Online](https://nexageapps.github.io/AI/neural-networks/week3/cnn-explorer/) |
-| **NEAT Explainer** | NeuroEvolution, Topology Mutation, Speciation & Crossover | AI Fundamentals | [AI Fundamentals](#compsci-713) | — | — |
+| **NEAT Explainer** | NeuroEvolution, Topology Mutation, Speciation & Crossover | AI Fundamentals | [AI Fundamentals](#ai-fundamentals) | — | — |
 | **Transformer Explorer** | Self-Attention, Multi-Head Attention, Q/K/V & Architecture | Neural Networks | [Neural Networks](./documentation/courses/NEURAL_NETWORKS_GUIDE.md) | [B11 - Attention & Transformers](https://github.com/nexageapps/AI/blob/main/Intermediate/I04%20-%20Attention%20and%20Transformers.ipynb) | [Play Online](https://nexageapps.github.io/AI/neural-networks/week4/transformer-explorer/) |
 | **BPE Explorer** | Byte Pair Encoding, Tokenization, Subwords & Vocabulary | Neural Networks | [Neural Networks](./documentation/courses/NEURAL_NETWORKS_GUIDE.md) | [B12 - BPE](https://github.com/nexageapps/AI/blob/main/Intermediate/I05%20-%20Tokenization%20and%20Byte%20Pair%20Encoding.ipynb) | [Play Online](https://nexageapps.github.io/AI/neural-networks/week4/bpe-explorer/) |
-| **Q-Learning Grid World** | Reinforcement Learning, Q-Tables, Exploration vs Exploitation | AI Fundamentals | [AI Fundamentals](#compsci-713) | — | — |
+| **Q-Learning Grid World** | Reinforcement Learning, Q-Tables, Exploration vs Exploitation | AI Fundamentals | [AI Fundamentals](#ai-fundamentals) | — | — |
 
 **[View All Games](https://nexageapps.github.io/AI/)** • Explore the `application/` folder for source code and deployment guides.
 

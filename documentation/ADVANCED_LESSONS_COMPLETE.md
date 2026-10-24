@@ -45,9 +45,9 @@ Each notebook includes:
 - Implementation code cells
 - Placeholder for detailed content
 
-## Alignment with university MAI Courses
+## Alignment with university Master's-level AI Courses
 
-| MAI Course | Relevant Lessons |
+| Master's-level AI Course | Relevant Lessons |
 |------------|------------------|
 | Neural Networks (Architecture) | A01-A15 (All lessons) |
 | Generalising AI (General AI) | A01-A06, A14 |
@@ -112,7 +112,7 @@ All levels share:
 - Similar notebook structure
 - Progressive difficulty
 - Hands-on implementations
-- university MAI course alignment
+- university Master's-level AI course alignment
 
 ## Repository Status
 

@@ -4,7 +4,7 @@
 
 ## Overview
 
-This section shows how you can extend lecture concepts from the university Master of Artificial Intelligence program into small, practical MVP-style projects using this repository. The goal is to transform theory into practice by building small, working products that deepen your understanding beyond the lecture hall.
+This section shows how you can extend lecture concepts from the university a Master's-level AI programme into small, practical MVP-style projects using this repository. The goal is to transform theory into practice by building small, working products that deepen your understanding beyond the lecture hall.
 
 **Key Principles:**
 - Turn lecture theory into working code

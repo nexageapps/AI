@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+message: "If you use this open study material, please cite it."
+title: "AI & Machine Learning Roadmap: From Basics to Agentic AI (open study material)"
+type: software
+authors:
+  - name: "Karthik Arjun and contributors"
+repository-code: "https://github.com/nexageapps/AI"
+license: MIT
+keywords: [machine-learning, deep-learning, llm, agents, education, open-educational-resources]

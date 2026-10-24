@@ -118,7 +118,7 @@ Use this checklist before making your repository public to ensure everything is 
 
 **What to Say if Asked:**
 
-> "This is my personal learning repository where I document my journey through the MAI program. It contains my own implementations and study notes, not official course materials or assignment solutions. I'm sharing it to help other students learn AI/ML concepts, with clear academic integrity guidelines to prevent misuse."
+> "This is my personal learning repository where I document my journey through my studies. It contains my own implementations and study notes, not official course materials or assignment solutions. I'm sharing it to help other students learn AI/ML concepts, with clear academic integrity guidelines to prevent misuse."
 
 ## 🚀 Ready to Go Public?
 

@@ -1,10 +1,10 @@
-# Guide for university MAI Students
+# Guide for university Master's-level AI Students
 
-**How This Repository Complements Your MAI Journey**
+**How This Repository Complements Your Master's-level AI Journey**
 
 ---
 
-**DISCLAIMER:** This guide is created by an independent student and is not officially affiliated with, endorsed by, or sponsored by the university. This is a personal learning resource created by a current MAI student to share study strategies and materials with fellow students. Use of the university name is solely to provide context about the author's academic program. Course references and study strategies are provided based on personal experience to help fellow students. Always refer to official course materials and consult with your professors for authoritative guidance. The content and opinions expressed here are solely those of the author and do not represent the views or policies of the university.
+**DISCLAIMER:** This guide is created by an independent student and is not officially affiliated with, endorsed by, or sponsored by the university. This is a personal learning resource created by a current student to share study strategies and materials with fellow students. Use of the university name is solely to provide context about the author's academic program. Course references and study strategies are provided based on personal experience to help fellow students. Always refer to official course materials and consult with your professors for authoritative guidance. The content and opinions expressed here are solely those of the author and do not represent the views or policies of the university.
 
 ---
 
@@ -24,7 +24,7 @@
 
 ## Overview
 
-This repository is designed by a fellow MAI student at the university to complement your coursework and provide hands-on practice for the concepts you're learning in class. Think of it as your practical companion to the theoretical foundations taught in your courses.
+This repository is designed by a fellow student at the university to complement your coursework and provide hands-on practice for the concepts you're learning in class. Think of it as your practical companion to the theoretical foundations taught in your courses.
 
 **Key Benefits:**
 - Practical implementations of lecture concepts
@@ -104,11 +104,11 @@ Use this table to quickly find which lessons support each course:
 
 ## Learning Path Flowchart
 
-**Your Complete MAI Journey Visualized (180 Points)**
+**Your Complete Master's-level AI Journey Visualized (180 Points)**
 
 ```mermaid
 graph TB
-    Start([START MAI PROGRAM<br/>university<br/>180 Points Total]):::startNode
+    Start([START Master's-level AI PROGRAM<br/>university<br/>180 Points Total]):::startNode
     
     subgraph Core["CORE REQUIRED - 60 Points"]
         direction TB
@@ -575,7 +575,7 @@ Traditional methods → Specialized architectures (CNN/RNN) → Attention mechan
 
 ```mermaid
 gantt
-    title MAI Study Plan - Updated Course Schedule
+    title Master's-level AI Study Plan - Updated Course Schedule
     dateFormat YYYY-MM-DD
     section Preparation
     Complete B01-B07           :prep1, 2026-01-01, 21d
@@ -777,7 +777,7 @@ graph TD
 
 ## Frequently Asked Questions
 
-### Q: Should I complete this repo before starting MAI?
+### Q: Should I complete this repo before starting Master's-level AI?
 **A:** Not necessary, but B01-B07 will give you a strong foundation. Focus on B01-B04 if you're new to ML.
 
 ### Q: Can I use code from this repo in my assignments?
@@ -799,7 +799,7 @@ graph TD
 
 ## Contributing
 
-As a fellow MAI student, contributions are welcome:
+As a fellow student, contributions are welcome:
 
 **Ways to Contribute:**
 1. Fix errors or bugs
@@ -825,7 +825,7 @@ As a fellow MAI student, contributions are welcome:
 
 **Author:**
 - Karthik Arjun
-- MAI Student, university
+- Master's-level AI Student, university
 - LinkedIn: [karthik-arjun-a5b4a258](https://www.linkedin.com/in/karthik-arjun-a5b4a258/)
 
 **Note:** This is an independent student project, not officially affiliated with the university.
@@ -839,7 +839,7 @@ As a fellow MAI student, contributions are welcome:
 
 ## Final Thoughts
 
-This repository grows alongside my MAI journey. As I learn new concepts in class, I add practical implementations here. Use it as your companion throughout the program.
+This repository grows alongside my Master's-level AI journey. As I learn new concepts in class, I add practical implementations here. Use it as your companion throughout the program.
 
 **Remember:**
 - Theory + Practice = Mastery
@@ -847,13 +847,13 @@ This repository grows alongside my MAI journey. As I learn new concepts in class
 - Collaboration accelerates learning
 - Building projects solidifies understanding
 
-**Let's learn together and make the most of our MAI experience!**
+**Let's learn together and make the most of our Master's-level AI experience!**
 
 ---
 
 *Last Updated: March 2026*  
-*Aligned with: university MAI 2026 Curriculum*
+*Aligned with: university Master's-level AI 2026 Curriculum*
 
 ---
 
-**Good luck with your MAI studies!**
+**Good luck with your Master's-level AI studies!**

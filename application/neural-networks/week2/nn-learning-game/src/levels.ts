@@ -1,6 +1,6 @@
 import type { LevelConfig } from './types'
 
-// Fixed inputs used for levels 1–3 (from the COMPSCI 714 lecture example).
+// Fixed inputs used for levels 1–3 (from the Neural Networks lecture example).
 const FIXED_INPUTS: LevelConfig['presetInputs'] = { x1: 0.05, x2: 0.10 }
 
 // Fixed weights used for levels 2 and 3 (from the lecture example).

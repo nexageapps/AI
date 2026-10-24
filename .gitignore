@@ -5,15 +5,15 @@ Expert/archive
 Advanced/archive
 Basic/archive
 .kiro/
-./application/compsci713/*node_module*
-application/compsci713/week1/symbolic-logic/*node_module*
-application/compsci713/week2/neural-network/*node_module*
-application/compsci713/week3/kg-playground/*node_module*
-application/compsci713/week6/Neat/neat-explainer-app/*node_module*
-application/compsci713/week3/data-preprocessing-studio/*node_module*
-application/compsci713/week3/model-evaluation-dashboard/*node_module*
-application/compsci713/week4/rnn-explorer/*node_module*
-application/compsci714/week3/cnn-explorer/*node_module*
+./application/ai-fundamentals/*node_module*
+application/ai-fundamentals/week1/symbolic-logic/*node_module*
+application/ai-fundamentals/week2/neural-network/*node_module*
+application/ai-fundamentals/week3/kg-playground/*node_module*
+application/ai-fundamentals/week6/Neat/neat-explainer-app/*node_module*
+application/ai-fundamentals/week3/data-preprocessing-studio/*node_module*
+application/ai-fundamentals/week3/model-evaluation-dashboard/*node_module*
+application/ai-fundamentals/week4/rnn-explorer/*node_module*
+application/neural-networks/week3/cnn-explorer/*node_module*
 # Secrets (never commit API keys)
 .env
 .env.*

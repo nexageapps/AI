@@ -1,6 +1,6 @@
 // References:
 //   - Russell, S. & Norvig, P. (2022). Artificial Intelligence: A Modern Approach (4th ed.), Chapter 21: Deep Learning.
-//   - UoA COMPSCI 714 lecture materials.
+//   - Neural Networks lecture materials.
 
 import { GameProvider, useGame } from './context/GameContext'
 import { NetworkVisualization } from './components/NetworkVisualization'
@@ -22,7 +22,7 @@ function GameLayout() {
     <div className="app-shell">
 
       <header className="app-header">
-        <h1 className="app-title"> UoA COMPSCI 714 — Neural Network Trainer</h1>
+        <h1 className="app-title"> Neural Networks — Neural Network Trainer</h1>
         <p className="app-subtitle">Forward propagation · Backpropagation · Gradient descent</p>
       </header>
 

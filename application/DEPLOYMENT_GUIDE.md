@@ -117,7 +117,7 @@ npx gh-pages -d . -e . --src index.html
 
 ## 🔧 Adding a New Game
 
-1. **Create your app** in `application/compsciXXX/weekX/your-game/`
+1. **Create your app** in `application/course-name/weekX/your-game/`
 
 2. **Configure build output:**
    - For Vite: Use `--outDir docs --base=/AI/your-game/`
@@ -127,7 +127,7 @@ npx gh-pages -d . -e . --src index.html
    ```yaml
    # Add to detect-changes job
    your-game:
-     - 'application/compsciXXX/weekX/your-game/**'
+     - 'application/course-name/weekX/your-game/**'
    
    # Add new deployment job
    deploy-your-game:

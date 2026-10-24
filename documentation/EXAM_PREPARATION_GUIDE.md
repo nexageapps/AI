@@ -2,7 +2,7 @@
 
 ## Overview
 
-Every lesson notebook now includes comprehensive exam preparation sections specifically designed to help university students succeed in their COMPSCI courses. These sections bridge the gap between theoretical lectures and practical implementation.
+Every lesson notebook now includes comprehensive exam preparation sections specifically designed to help university students succeed in their university courses. These sections bridge the gap between theoretical lectures and practical implementation.
 
 ## What's Included in Each Notebook
 

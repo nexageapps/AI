@@ -29,7 +29,7 @@ const ROW_BIAS = 30
 function activationColor(value: number | null): string {
   if (value === null) return '#94a3b8' // slate-400 for unknown
   const t = Math.max(0, Math.min(1, value))
-  // UoA blue (low) → warm amber (high)
+  // university blue (low) → warm amber (high)
   const r = Math.round(t * 245 + (1 - t) * 0)
   const g = Math.round(t * 158 + (1 - t) * 70)
   const b = Math.round(t * 11  + (1 - t) * 127)

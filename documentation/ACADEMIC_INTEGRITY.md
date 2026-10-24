@@ -121,13 +121,13 @@ This repository is designed as a **personal learning resource** to help students
 
 ---
 
-## For university MAI Students
+## For University Students
 
 ### Critical Understanding
 
 **⚠️ THIS IS NOT OFFICIAL UNIVERSITY MATERIAL ⚠️**
 
-This repository is created by a **fellow MAI student** (not a professor, not university staff, not an official resource). It represents one student's personal learning journey and study notes.
+This repository is created by a **fellow student** (not a professor, not university staff, not an official resource). It represents one student's personal learning journey and study notes.
 
 **What This Means:**
 
@@ -139,7 +139,7 @@ This repository is created by a **fellow MAI student** (not a professor, not uni
 
 2. **Personal Study Notes**
    - These are my personal notes as I learn AI/ML concepts
-   - The lessons align with MAI courses because I'm taking those courses
+   - The lessons align with university courses because I'm taking those courses
    - I'm sharing what helps me learn, hoping it helps others too
    - Use them as you would use a classmate's study notes
 

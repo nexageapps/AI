@@ -9,7 +9,7 @@
 
 | Guide | Purpose |
 |---|---|
-| [STUDENT_GUIDE.md](./STUDENT_GUIDE.md) | Semester planning and study strategies for the university MAI programme |
+| [STUDENT_GUIDE.md](./STUDENT_GUIDE.md) | Semester planning and study strategies for the university my studies |
 | [EXAM_PREPARATION_GUIDE.md](./EXAM_PREPARATION_GUIDE.md) | Exam strategy and concept review |
 | [courses/](./courses) | AI Fundamentals / 714 / 769 course guides |
 | [PROJECT_IDEAS.md](./PROJECT_IDEAS.md) | Project ideas by level |

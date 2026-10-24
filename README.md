@@ -2,19 +2,21 @@
 
 <img src="./logo/logo_v1.png" width="220" height="220" alt="AI & ML Roadmap Logo" style="border-radius: 50%; object-fit: cover; box-shadow: 0 4px 12px rgba(0,0,0,0.15);"/>
 
-# AI & Machine Learning Roadmap: From Basics to LLMs
+# AI Engineering: From Foundations to Production Agents
 
-### Learn by doing. Build by understanding. Master by creating.
+### Master AI, LLMs, Agents & Modern Frameworks
 
-**Open-source AI education built by a student, for students and learners worldwide.**
+**Open-source AI engineering curriculum for building intelligent systems.**
 
-From machine-learning fundamentals to shipping agentic AI systems: 65 lessons, one standard pattern, every lesson runnable.
+From ML Fundamentals → LLMs & RAG → AI Agents → Production Deployment. Hands-on lessons with PyTorch, LangChain, LlamaIndex, DSPy, FastAPI & more.
 
 [Curriculum](./CURRICULUM.md) • [Quick Start](#quick-start) • [Student Guide](./documentation/STUDENT_GUIDE.md) • [Exam Prep](./documentation/EXAM_PREPARATION_GUIDE.md) • [LinkedIn](https://www.linkedin.com/in/karthik-arjun-a5b4a258/) • [Support Project](https://buymeacoffee.com/fcc4sbsx5f6)
 
 [![Python](https://img.shields.io/badge/Python-3.10+-orange.svg)](https://www.python.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](./LICENSE)
 [![Lessons](https://img.shields.io/badge/Lessons-65-brightgreen.svg)](./CURRICULUM.md)
+[![AI Agents](https://img.shields.io/badge/AI_Agents-LangChain_+_LlamaIndex-blue.svg)](#)
+[![Production Ready](https://img.shields.io/badge/Production-FastAPI_+_Docker-green.svg)](#)
 [![Sponsored by nexageapps](https://img.shields.io/badge/Sponsored%20by-nexageapps-blue.svg)](https://nexageapps.com)
 [![Buy me a book](https://img.shields.io/badge/Buy%20Me%20A%20Book-Support-yellow.svg)](https://buymeacoffee.com/fcc4sbsx5f6)
 

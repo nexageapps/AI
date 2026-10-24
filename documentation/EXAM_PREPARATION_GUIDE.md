@@ -1,4 +1,4 @@
-# Exam Preparation Guide for university Students
+# Exam Preparation Guide
 
 ## Overview
 
@@ -65,119 +65,28 @@ Shows which university courses each lesson supports:
 - Design problems
 - Debugging scenarios
 
-## Course-Specific Guidance
+## Topic-Based Revision Map
 
-### AI Fundamentals (AI Fundamentals)
-Relevant Lessons: B01, B04, B05, B05a, B05b, B07, E08, E09, E10, E11, A03, A10
+Course structures differ between institutions, so revise by **topic**. Use your own syllabus to decide what to prioritise, and these lessons to practise it.
 
-Full course guide: [AI Fundamentals Complete Guide](./courses/AI_FUNDAMENTALS_GUIDE.md)
+| Topic | Lessons | Practise by… |
+|---|---|---|
+| Regression, classification, evaluation | B02–B07 | deriving the loss and gradient by hand; reading a confusion matrix and ROC/PR curve |
+| Trees, ensembles, boosting | B08 | computing information gain / Gini on a small table |
+| Neural nets and backprop | B09, Electives/Course-Companions | forward and backward pass on a 2-layer net with numbers |
+| CNNs and transfer learning | I01–I02 | output-shape and parameter-count calculations |
+| Sequence models, attention, transformers | I03–I06 | tracing scaled dot-product attention on a toy sequence |
+| Embeddings and retrieval | I07, A03 | cosine similarity by hand; recall@k and MRR |
+| Reinforcement learning, search, planning | I08, E03, Electives/Classical-AI | Q-learning update steps; drawing A*/minimax trees |
+| LLM engineering, tuning and alignment | A01–A07, E04 | LoRA parameter counts; the DPO loss; why best-of-N saturates |
+| Agents | AG01–AG15 | drawing the loop; stating where each guardrail lives; explaining a failed trace |
+| Knowledge graphs, logic, expert systems | Electives/Classical-AI | writing triples; proving a simple inference |
 
-Focus Areas (by theme):
-- **Foundations of Intelligence:** Symbolic logic (B01), knowledge representation (KG Playground), expert systems & decision trees (B04), Bayesian/fuzzy reasoning (B07)
-- **Learning & Adaptation:** Genetic algorithms, deep learning (B05, B05a, B05b), reinforcement learning (E10, E11)
-- **Search & Decision Making:** Tree search, A*, adversarial search, MCTS, MDPs
-- **Embodied & Real-World AI:** Graph Neural Networks (A10), self-supervised learning (E09), continual learning (E08)
-
-Mid-Semester Test (Weeks 1–6):
-- Weak vs Strong AI definitions
-- Propositional logic and FOL inference rules
-- Knowledge graphs and RDF triples
-- Expert systems (MYCIN), rule bases, certainty factors
-- Decision trees: ID3, information gain, XGBoost
-- Bayesian inference, Naive Bayes, fuzzy logic
-- Genetic algorithms: selection, crossover, mutation, NEAT
-
-Final Exam (all weeks except guest lectures):
-- All mid-semester topics plus:
-- Deep learning and AlphaGo
-- Uninformed and informed search (BFS, DFS, A*)
-- Minimax, alpha-beta pruning, MCTS
-- Markov Decision Processes and Q-learning
-- Graph Neural Networks
-- Self-supervised learning (pretext tasks, contrastive)
-- Continual learning and data streams
-
-Exam Tips:
-- You may bring one A4 two-sided handwritten notes sheet — use it wisely
-- No calculators allowed
-- Practice drawing search trees and logic proofs by hand
-- Know the difference between Weak AI and Strong AI cold
-- Understand the full pipeline: perception → representation → reasoning → action
-
-### Neural Networks (AI Architecture & Design)
-Relevant Lessons: B09-B15
-
-Focus Areas:
-- CNN architectures
-- Transformer models
-- Language model design
-- System architecture
-
-Exam Tips:
-- Understand architectural choices
-- Know parameter counts
-- Compare different architectures
-- Design systems for specific tasks
-
-### Machine Learning (Advanced AI Topics)
-Relevant Lessons: B06, B12, B14, E01, E10-E11
-
-Focus Areas:
-- Advanced preprocessing
-- Tokenization techniques
-- Research methodology
-- Reinforcement learning
-
-Exam Tips:
-- Read and analyze papers
-- Understand experimental design
-- Know state-of-the-art methods
-- Critical thinking about approaches
-
-### ML Foundations (ML Foundations)
-Relevant Lessons: B02-B08, I01-I03
-
-Focus Areas:
-- Regression and classification
-- Model evaluation
-- Regularization
-- Optimization algorithms
-
-Exam Tips:
-- Master mathematical foundations
-- Calculate metrics from confusion matrices
-- Understand bias-variance tradeoff
-- Know when to apply which technique
-
-### Generalising AI (Generalising AI)
-Relevant Lessons: B11-B13, B15, I09, E11
-
-Focus Areas:
-- Attention mechanisms
-- Transformers
-- Language models
-- Model alignment (RLHF)
-
-Exam Tips:
-- Understand attention calculations
-- Know transformer architecture details
-- Explain generation process
-- Understand alignment techniques
-
-### Deep Learning (Deep Learning)
-Relevant Lessons: B09-B11, I03, I09
-
-Focus Areas:
-- CNNs for computer vision
-- RNNs for sequences
-- Transformers
-- Normalization techniques
-
-Exam Tips:
-- Calculate convolution output sizes
-- Understand recurrence mechanisms
-- Know normalization types
-- Compare architectures
+**Generic exam tips**
+- Practise *by hand* the calculations your course expects (search trees, backprop, shapes, probabilities).
+- Learn the difference between look-alike concepts (precision vs recall, bias vs variance, workflow vs agent, RAG vs fine-tuning).
+- Know your assessment rules (allowed materials, calculators) from your own course page.
+- Turn each lesson's *Checkpoint* into flash-cards; re-answer after 2 days, 1 week and 1 month.
 
 ## How to Use This Guide
 

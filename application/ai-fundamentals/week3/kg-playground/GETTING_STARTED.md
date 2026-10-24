@@ -158,7 +158,7 @@ The system uses **enhanced semantic search** with several smart features:
 
 1. Enter: "The University of Canterbury is located in Christchurch"
 2. Click "Extract Triples"
-3. Add: "The University of Canterbury is located in Auckland"
+3. Add: "The University of Canterbury is located in Springfield"
 4. Click "Extract Triples" again
 
 **What Happens:**

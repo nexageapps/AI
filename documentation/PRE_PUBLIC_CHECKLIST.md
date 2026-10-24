@@ -70,8 +70,7 @@ Use this checklist before making your repository public to ensure everything is 
   - [ ] Google Colab badges work
 
 - [ ] **Documentation Accuracy**
-  - [ ] Course codes are correct (CS712, CS713, CS714, etc.)
-  - [ ] Semester information is accurate
+    - [ ] Semester information is accurate
   - [ ] Prerequisites are clearly stated
   - [ ] Time estimates are reasonable
 

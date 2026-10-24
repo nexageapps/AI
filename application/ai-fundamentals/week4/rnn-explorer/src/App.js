@@ -61,7 +61,7 @@ function App() {
         <header className="app-header">
           <div className="header-icon">AI</div>
           <div className="header-text">
-            <h1 className="app-title">university -- a Master's-level AI programme</h1>
+            <h1 className="app-title">RNN Explorer — AI Learning Lab</h1>
             <p className="app-subtitle">
               <FaBrain style={{ marginRight: 4, verticalAlign: 'middle' }} />
               Recurrent Neural Networks Explorer

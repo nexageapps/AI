@@ -52,30 +52,29 @@ Chemistry in 1911. Marie Curie worked in France and died in 1934.
 ### Example 2: University Information
 **Input Text:**
 ```
-The university (university) is New Zealand's top-ranked public research 
-university. It was founded in 1883 and is located primarily in Auckland. 
-The university has around 45,000 students and is known as Waipapa Taumata Rau 
-in Māori. university ranks #65 in the QS World University Rankings 2026 and leads 
+The Acme University (AU) is Exampleland's top-ranked public research 
+university. It was founded in 1883 and is located primarily in Springfield. 
+Acme University has around 45,000 students and is known as The Hill locally. Acme University ranks highly in national rankings and leads 
 nationally in research output.
 ```
 
 **Expected Triples:**
-- (University Of Auckland, also_known_as, university)
-- (University Of Auckland, is_a, Public Research University)
-- (University Of Auckland, founded_in, 1883)
-- (University Of Auckland, located_in, Auckland)
-- (University Of Auckland, has, 45000 Students)
-- (University Of Auckland, known_as, Waipapa Taumata Rau)
-- (University Of Auckland, ranked_in, QS World University Rankings 2026)
-- (University Of Auckland, leads_in, Research Output)
-- (Auckland, part_of, New Zealand)
+- (Acme University, also_known_as, AU)
+- (Acme University, is_a, Public Research University)
+- (Acme University, founded_in, 1883)
+- (Acme University, located_in, Springfield)
+- (Acme University, has, 45000 Students)
+- (Acme University, known_as, The Hill)
+- (Acme University, ranked_in, National University Rankings 2026)
+- (Acme University, leads_in, Research Output)
+- (Springfield, part_of, Exampleland)
 
 **Try These Questions:**
 - "When was Acme University founded?" → 1883
-- "Where is the university located?" → Auckland
+- "Where is the university located?" → Springfield
 - "How many students does Acme University have?" → 45000 Students
-- "What is university known as in Māori?" → Waipapa Taumata Rau
-- "What is university's ranking?" → Rank 65 / QS World University Rankings 2026
+- "What is Acme University known as locally?" → The Hill
+- "What is university's ranking?" → Rank 3 / National University Rankings 2026
 
 **What You'll Learn:**
 - Parenthetical alias extraction (university)
@@ -285,21 +284,21 @@ Confidence: 96%
 **Input Text:**
 ```
 The University of Canterbury is located in Christchurch. 
-The University of Canterbury is located in Auckland.
+The University of Canterbury is located in Springfield.
 ```
 
 **What Happens:**
 1. Two triples are extracted:
    - (University Of Canterbury, located_in, Christchurch)
-   - (University Of Canterbury, located_in, Auckland)
+   - (University Of Canterbury, located_in, Springfield)
 
 2. Conflict detected:
    - Same subject: "University Of Canterbury"
    - Same predicate: "located_in"
-   - Different objects: "Christchurch" vs "Auckland"
+   - Different objects: "Christchurch" vs "Springfield"
 
 3. Red warning banner appears:
-   - "Conflict: University Of Canterbury has multiple values for located_in: Christchurch, Auckland"
+   - "Conflict: University Of Canterbury has multiple values for located_in: Christchurch, Springfield"
 
 **Why This Matters:**
 - Prevents inconsistent answers in RAG systems

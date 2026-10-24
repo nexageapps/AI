@@ -4,11 +4,11 @@
  * Design philosophy:
  *   Real-world paragraphs like the university description contain facts expressed in
  *   many different grammatical forms — not just "X verb Y" but also:
- *     - parenthetical aliases:  "university (university)"
- *     - participial phrases:    "Known as Waipapa Taumata Rau"
- *     - prepositional phrases:  "located primarily in Auckland"
+ *     - parenthetical aliases:  "Acme University (AU)"
+ *     - participial phrases:    "Known as The Hill"
+ *     - prepositional phrases:  "located primarily in Springfield"
  *     - numeric facts:          "around 45,000 students"
- *     - ranking facts:          "#65 in QS World University Rankings"
+ *     - ranking facts:          "#3 in National University Rankings"
  *     - founding facts:         "founded in 1883"
  *
  *   Strategy:
@@ -16,7 +16,7 @@
  *   2. Split into sentences, then into clauses on "and / , / ; / which / that".
  *   3. For each clause try a priority-ordered list of patterns.
  *   4. Carry the last known subject forward into subject-less clauses.
- *   5. Normalise multi-word entities to CamelCase ("New Zealand" → "NewZealand").
+ *   5. Normalise multi-word entities to CamelCase ("Exampleland" → "NewZealand").
  */
 
 // ── Pattern table ─────────────────────────────────────────────────────────
@@ -33,10 +33,10 @@ const PATTERNS = [
   // "died in 1955" / "died on April 18, 1955"
   { re: /^(.+?)\s+(?:died|passed\s+away)\s+(?:in|on)\s+(.+)$/i,           predicate: 'died_in'       },
   
-  // "located in Auckland" / "located primarily in Auckland" / "based in New York"
+  // "located in Springfield" / "located primarily in Springfield" / "based in New York"
   { re: /^(.+?)\s+(?:is\s+|are\s+)?(?:located|based|situated)\s+(?:\w+\s+)?in\s+(.+)$/i, predicate: 'located_in' },
   
-  // "known as Waipapa Taumata Rau" / "called Einstein"
+  // "known as The Hill" / "called Einstein"
   { re: /^(.+?)\s+(?:is\s+)?(?:known|called|referred\s+to)\s+as\s+(.+)$/i, predicate: 'known_as'      },
   
   // "ranked #N in X" / "ranks #N in X" / "ranked 65th in QS"
@@ -45,7 +45,7 @@ const PATTERNS = [
   // "leads in X" / "leads nationally in X"
   { re: /^(.+?)\s+leads?\s+(?:\w+\s+)?in\s+(.+)$/i,                       predicate: 'leads_in'      },
   
-  // "part of New Zealand" / "member of United Nations"
+  // "part of Exampleland" / "member of United Nations"
   { re: /^(.+?)\s+(?:is\s+|are\s+)?(?:a\s+)?(?:part|member)\s+of\s+(.+)$/i, predicate: 'part_of'    },
   
   // "works in / at / for X" / "employed by X"
@@ -110,7 +110,7 @@ export function extractTriples(text) {
   const triples = [];
   const seen    = new Set();
 
-  // Step 1: extract parenthetical aliases  "university (university)"
+  // Step 1: extract parenthetical aliases  "Acme University (AU)"
   extractAliases(text, triples, seen);
 
   // Step 2: sentence split
@@ -134,10 +134,10 @@ export function extractTriples(text) {
 }
 
 // ── Alias extraction ──────────────────────────────────────────────────────
-// "university (university)" → (UniversityOfAuckland, also_known_as, university)
+// "Acme University (AU)" → (AcmeUniversity, also_known_as, AU)
 // "Albert Einstein (1879-1955)" → (AlbertEinstein, lived_during, 1879-1955)
 function extractAliases(text, triples, seen) {
-  // Pattern 1: Name (Acronym) - e.g., "university (university)"
+  // Pattern 1: Name (Acronym) - e.g., "Acme University (AU)"
   const acronymRe = /([A-Z][^()]{2,40})\s*\(([A-Z][A-Za-z0-9]{1,10})\)/g;
   let m;
   while ((m = acronymRe.exec(text)) !== null) {
@@ -273,18 +273,18 @@ function addTriple(triples, seen, subject, predicate, object) {
 
 /**
  * Normalise a raw phrase to a clean entity label.
- *   "New Zealand"              → "New Zealand"
- *   "university of auckland"   → "University Of Auckland"
- *   "QS World University Rankings 2026" → "QS World University Rankings 2026"
+ *   "Exampleland"              → "Exampleland"
+ *   "acme university"   → "Acme University"
+ *   "National University Rankings 2026" → "National University Rankings 2026"
  *   "45,000 students"          → "45000 Students"
- *   "#65"                      → "Rank 65"
+ *   "#3"                      → "Rank 3"
  *   "March 14, 1879"           → "March 14 1879"
  */
 function normalise(phrase) {
   if (!phrase) return '';
   let p = phrase.trim();
   
-  // Handle rank notation (#65 → Rank 65)
+  // Handle rank notation (#3 → Rank 3)
   p = p.replace(/^#(\d+)/, 'Rank $1');
   
   // Handle ordinal numbers (65th → 65th, 1st → 1st)

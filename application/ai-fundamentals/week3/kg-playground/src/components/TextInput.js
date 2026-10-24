@@ -8,7 +8,7 @@ import './TextInput.css';
  */
 const EXAMPLES = [
   'Einstein was born in Germany and worked in Physics. Germany is part of Europe. Europe is known for Physics.',
-  'university (university) was founded in 1883 and is located in Auckland. Auckland is part of New Zealand.',
+  'Acme University (AU) was founded in 1883 and is located in Springfield. Springfield is part of Exampleland.',
   'Marie Curie was born in Poland and worked in Chemistry. Poland is part of Europe. Marie Curie received the Nobel Prize in 1903.',
   'Newton invented Calculus and studied Mathematics at Cambridge University. Cambridge University is located in England.',
   'Steve Jobs founded Apple in 1976. Apple is located in California. California is part of the United States.',

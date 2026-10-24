@@ -34,12 +34,12 @@
 
 ### Before
 - ❌ Textarea grows to 500px+ height with long paragraphs
-- ❌ Node labels: "AlbertEinstein", "UniversityOfAuckland" (no spaces)
+- ❌ Node labels: "AlbertEinstein", "AcmeUniversity" (no spaces)
 - ❌ Table shows: "GermanBornTheoreticalPhysicistBestKnownFor..." (unreadable)
 
 ### After
 - ✅ Textarea capped at 200px with scrollbar
-- ✅ Node labels: "Albert Einstein", "University Of Auckland" (readable)
+- ✅ Node labels: "Albert Einstein", "Acme University" (readable)
 - ✅ Table shows: "German Born Theoretical Physicist Best Known For Developing The Theory Of Relativity" (properly wrapped)
 
 ## Technical Changes

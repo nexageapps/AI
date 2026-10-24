@@ -20,7 +20,7 @@ Type any sentence (or paste a paragraph) and the app:
 |---------|--------|
 | Triple Extractor | Clause-level matching with subject carry-forward across conjunctions |
 | Supported predicates | `born_in`, `works_in`, `located_in`, `founded_in`, `known_as`, `also_known_as`, `ranked_in`, `leads_in`, `received`, `studies`, `is_a`, and 30+ more |
-| Parenthetical aliases | `university (university)` → auto-adds `also_known_as` triple |
+| Parenthetical aliases | `Acme University (AU)` → auto-adds `also_known_as` triple |
 | Graph | Draggable nodes (mouse + touch), hover tooltips, spring physics, no overlap |
 | QA | **Enhanced semantic search** with fuzzy matching, n-gram overlap, question type detection, confidence scoring, and **multi-hop reasoning** (AND/OR queries) |
 | Conflict Detection | Flags when the same subject+predicate maps to multiple objects |
@@ -41,13 +41,12 @@ Opens at http://localhost:3000
 ## Example input
 
 ```
-university (university) is New Zealand's top-ranked public research university,
-located primarily in Auckland with around 45,000 students. Known as Waipapa Taumata Rau
-in Māori, it was founded in 1883 and leads nationally in research output and global
-rankings, such as #65 in QS World University Rankings 2026.
+Acme University (AU) is Exampleland's top-ranked public research university,
+located primarily in Springfield with around 45,000 students. Known as The Hill locally, it was founded in 1883 and leads nationally in research output and global
+rankings.
 ```
 
-Expected triples include: `(UniversityOfAuckland, located_in, Auckland)`, `(UniversityOfAuckland, founded_in, 1883)`, `(UniversityOfAuckland, also_known_as, university)`, etc.
+Expected triples include: `(AcmeUniversity, located_in, Springfield)`, `(AcmeUniversity, founded_in, 1883)`, `(AcmeUniversity, also_known_as, AU)`, etc.
 
 ## What you learned (Week 3)
 

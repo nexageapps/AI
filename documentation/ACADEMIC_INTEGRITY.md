@@ -165,7 +165,7 @@ This repository is created by a **fellow student** (not a professor, not univers
    - Properly cite any ideas or code you reference
 
 6. **University Policies Apply**
-   - Follow the [university Academic Integrity Policy](https://www.auckland.ac.nz/en/students/academic-information/academic-integrity.html)
+   - Follow your institution's academic integrity policy
    - Understand what constitutes academic misconduct
    - Know the consequences of violations
    - When in doubt, ask YOUR instructors (not me)

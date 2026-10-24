@@ -22,12 +22,12 @@ Extracted Triples:
 
 ### Example 2: Organization
 ```
-Input: "university is located in New Zealand. It was founded in 1883. It has 45000 students."
+Input: "Acme University is located in Exampleland. It was founded in 1883. It has 45000 students."
 
 Extracted Triples:
-1. (University Of Auckland, located_in, New Zealand)
-2. (University Of Auckland, founded_in, 1883)
-3. (University Of Auckland, has, 45000 Students)
+1. (Acme University, located_in, Exampleland)
+2. (Acme University, founded_in, 1883)
+3. (Acme University, has, 45000 Students)
 ```
 
 ### Example 3: Multiple Entities
@@ -77,7 +77,7 @@ Extracted Triples:
 ## Tips for Best Results
 
 ✅ **Good**: "Einstein was born in Germany. He studied physics."
-✅ **Good**: "The university is in Auckland. It was founded in 1883."
+✅ **Good**: "The university is in Springfield. It was founded in 1883."
 ❌ **Avoid**: "Einstein and Newton were scientists. He invented relativity." (ambiguous - which "he"?)
 
 ## Technical Implementation

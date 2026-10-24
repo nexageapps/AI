@@ -135,11 +135,11 @@ Answer: Einstein
 
 **Example 2:**
 ```
-Question: "What university is located in Auckland AND was founded in 1883?"
+Question: "What university is located in Springfield AND was founded in 1883?"
 Conditions:
-  - located_in = Auckland
+  - located_in = Springfield
   - founded_in = 1883
-Answer: University Of Auckland
+Answer: Acme University
 ```
 
 **Example 3:**
@@ -184,7 +184,7 @@ The system recognizes these patterns in query parts:
 | `worked/works in X` | `works_at` | "worked in Physics" |
 | `born in X` | `born_in` | "was born in Europe" |
 | `lived/lives in X` | `lives_in` | "lived in France" |
-| `located in X` | `located_in` | "located in Auckland" |
+| `located in X` | `located_in` | "located in Springfield" |
 | `studied X` | `studies` | "studied physics" |
 | `invented/created X` | `invented` | "invented calculus" |
 | `received/won X` | `received` | "received Nobel Prize" |
@@ -280,15 +280,15 @@ Poland is part of Europe. Marie Curie worked in Chemistry.
 ### Example 2: University Information
 **Input Text:**
 ```
-The university is located in Auckland. Auckland is 
-part of New Zealand. university was founded in 1883. The University of 
+The university is located in Springfield. Springfield is 
+part of Exampleland. university was founded in 1883. The University of 
 Canterbury is located in Christchurch. Christchurch is part of 
-New Zealand. UC was founded in 1873.
+Exampleland. UC was founded in 1873.
 ```
 
 **Questions:**
-1. "What university is in New Zealand AND was founded in 1883?" → university
-2. "What is located in Auckland AND founded in the 1800s?" → university
+1. "What university is in Exampleland AND was founded in 1883?" → university
+2. "What is located in Springfield AND founded in the 1800s?" → university
 3. "What was founded in 1873 OR 1883?" → UC, university
 
 ---
@@ -445,12 +445,12 @@ Map {
 
 **✅ Good:**
 - "Who worked in Physics AND was born in Europe?"
-- "What university is in Auckland AND was founded in 1883?"
+- "What university is in Springfield AND was founded in 1883?"
 - "Who received the Nobel Prize OR Fields Medal?"
 
 **❌ Avoid:**
 - "Who worked in Physics and stuff?" (vague)
-- "What about universities in Auckland?" (no clear conditions)
+- "What about universities in Springfield?" (no clear conditions)
 - "Who was born somewhere in Europe and did science?" (too ambiguous)
 
 ### Input Text Requirements

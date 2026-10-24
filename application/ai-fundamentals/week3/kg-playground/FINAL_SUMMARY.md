@@ -10,7 +10,7 @@ The KG Playground is now a comprehensive educational tool that demonstrates mode
 
 ### 1. RDF Triple Extraction
 - **40+ predicate types** supported
-- **Parenthetical alias extraction**: "university (university)"
+- **Parenthetical alias extraction**: "Acme University (AU)"
 - **Year range extraction**: "Einstein (1879-1955)"
 - **Subject carry-forward** across clauses
 - **Pronoun resolution** for better context

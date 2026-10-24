@@ -77,12 +77,12 @@ Einstein studied physics and mathematics at ETH Zurich.
 
 #### Multi-word Entities
 ```
-The university (university) is located in New Zealand. 
-university was founded in 1883 and has around 45000 students.
+The Acme University (AU) is located in Exampleland. 
+Acme University was founded in 1883 and has around 45000 students.
 ```
 
 Questions:
-- "Where is the university?" → New Zealand
+- "Where is the university?" → Exampleland
 - "When was Acme University founded?" → 1883
 - "How many students does Acme University have?" → 45000 Students
 

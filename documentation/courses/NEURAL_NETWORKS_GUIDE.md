@@ -263,7 +263,7 @@ w ← w - α∇L(w)
 
 ### University Resources
 - Neural Networks lecture slides
-- Canvas course materials
+- your course materials
 - Office hours
 - Study groups
 

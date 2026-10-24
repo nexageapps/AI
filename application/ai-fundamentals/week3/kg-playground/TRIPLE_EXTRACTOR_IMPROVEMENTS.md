@@ -32,7 +32,7 @@ The system tracks the last mentioned subject across sentences and automatically 
 15. **Verb tense support**: Better handling of past/present tense variations
 
 ### Improved Alias Extraction
-- **Acronyms**: "university (university)" → also_known_as triple
+- **Acronyms**: "Acme University (AU)" → also_known_as triple
 - **Year ranges**: "Albert Einstein (1879-1955)" → born_in + died_in triples
 - **Birth years**: "Marie Curie (born 1867)" → born_in triple
 

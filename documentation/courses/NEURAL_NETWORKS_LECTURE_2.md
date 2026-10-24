@@ -939,7 +939,7 @@ a = 1 / (1 + np.exp(-z))  # activation (sigmoid)
 
 ### Further Resources
 - Neural Networks Lecture Slides
-- Canvas course materials
+- your course materials
 - Office hours with instructors
 - Study groups and tutorials
 

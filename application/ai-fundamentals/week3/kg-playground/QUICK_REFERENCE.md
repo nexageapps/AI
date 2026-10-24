@@ -67,7 +67,7 @@ at [University]. [Person] worked at [Institution] and received
 ### ✅ DO
 - Use clear, factual sentences
 - Include specific names, dates, and numbers
-- Write "university (university)" for aliases
+- Write "Acme University (AU)" for aliases
 - Separate facts into different sentences
 - Use full names first, then abbreviations
 
@@ -133,7 +133,7 @@ When the same entity has multiple different values for the same property:
 
 ```
 ❌ (Acme University, located_in, Springfield)
-❌ (university, located_in, Wellington)
+❌ (Acme University, located_in, Wellington)
 → Conflict: university can't be in two places
 ```
 
@@ -272,7 +272,7 @@ Prevents LLM hallucination by grounding in verified data.
 
 ## 🌟 Pro Tips
 
-1. **Use parenthetical aliases**: "university (university)" automatically creates alias triples
+1. **Use parenthetical aliases**: "Acme University (AU)" automatically creates alias triples
 2. **Include years in parentheses**: "Einstein (1879-1955)" extracts birth and death years
 3. **Start with full names**: "Albert Einstein" first, then use "Einstein" in later sentences
 4. **One fact per sentence**: Easier for the extractor to parse

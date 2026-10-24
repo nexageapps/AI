@@ -42,7 +42,7 @@ New Answer: Einstein (90% confidence) ✅
 **Updated example buttons** to showcase multi-hop capabilities:
 
 1. **Einstein Example**: Demonstrates 1-hop traversal (Germany → Europe)
-2. **University Example**: Shows hierarchical relationships (Auckland → New Zealand)
+2. **University Example**: Shows hierarchical relationships (Springfield → Exampleland)
 3. **Marie Curie Example**: Multiple conditions with awards
 4. **Newton Example**: Academic affiliations and locations
 5. **Steve Jobs Example**: Company founding and locations
@@ -230,7 +230,7 @@ Features: Multi-hop badge, supporting triples
 
 **AND Queries**:
 - "Who worked in Physics AND was born in Europe?"
-- "What university is in Auckland AND was founded in 1883?"
+- "What university is in Springfield AND was founded in 1883?"
 - "Who received Nobel Prize AND studied at Cambridge?"
 
 **OR Queries**:

@@ -155,7 +155,7 @@ function RDFContent() {
         <div className="edu-example-row">
           <span className="hl-subject">university</span>
           <span className="hl-predicate">located_in</span>
-          <span className="hl-object">Auckland</span>
+          <span className="hl-object">Springfield</span>
         </div>
         <div className="edu-example-row">
           <span className="hl-subject">Python</span>
@@ -304,11 +304,11 @@ function ConflictContent() {
         <div className="conflict-triple bad">
           <span className="hl-subject">UoC</span>
           <span className="hl-predicate">located_in</span>
-          <span className="hl-object">Auckland</span>
+          <span className="hl-object">Springfield</span>
           <span className="conflict-badge bad-badge">Triple 2 — CONFLICT</span>
         </div>
         <div className="conflict-result">
-          Conflict detected: "UoC" has multiple values for "located_in": Christchurch, Auckland
+          Conflict detected: "UoC" has multiple values for "located_in": Christchurch, Springfield
         </div>
       </div>
 
@@ -330,7 +330,7 @@ function ConflictContent() {
         </div>
         <div className="edu-col-item">
           <div className="edu-col-title" style={{ color: '#f59e0b' }}>In this app</div>
-          <p>Try entering: "UoC is located in Christchurch" then add "UoC is located in Auckland" — the conflict banner will appear in the RDF Triples panel.</p>
+          <p>Try entering: "UoC is located in Christchurch" then add "UoC is located in Springfield" — the conflict banner will appear in the RDF Triples panel.</p>
         </div>
       </div>
     </div>

@@ -9,19 +9,19 @@ LLM engineering: calling models reliably, shaping context, retrieval, evaluation
 
 | ID | Lesson | Real use case / lab | Time | Status |
 |---|---|---|---|---|
-| A01 | LLM APIs Structured Output and Cost | Invoice extraction to a validated schema | 3 h | 🚧 planned |
-| A02 | Prompting and Context Engineering | A/B-test prompts; injection basics | 3 h | 🚧 planned |
-| A03 | Retrieval-Augmented Generation | Handbook Q&A with citations | 3 h | 🚧 planned |
+| A01 | [LLM APIs Structured Output and Cost](./A01%20-%20LLM%20APIs%20Structured%20Output%20and%20Cost.ipynb) | Invoice extraction to a validated schema | 3 h | ✅ ready |
+| A02 | [Prompting and Context Engineering](./A02%20-%20Prompting%20and%20Context%20Engineering.ipynb) | A/B-test prompts; injection basics | 3 h | ✅ ready |
+| A03 | [Retrieval-Augmented Generation](./A03%20-%20Retrieval-Augmented%20Generation.ipynb) | Handbook Q&A with citations | 3 h | ✅ ready |
 | A04 | Evaluating LLM Systems | Golden sets, LLM-as-judge, regression gates | 3 h | 🚧 planned |
-| A05 | Fine-tuning SFT LoRA and QLoRA | LoRA from scratch; when not to fine-tune | 3 h | 🚧 planned |
-| A06 | Preference Tuning and RL for LLMs | RLHF to DPO to GRPO on a toy | 3 h | 🚧 planned |
+| A05 | [Fine-tuning SFT LoRA and QLoRA](./A05%20-%20Fine-tuning%20SFT%20LoRA%20and%20QLoRA.ipynb) | LoRA from scratch; when not to fine-tune | 3 h | ✅ ready |
+| A06 | [Preference Tuning and RL for LLMs](./A06%20-%20Preference%20Tuning%20and%20RL%20for%20LLMs.ipynb) | RLHF to DPO to GRPO on a toy | 3 h | ✅ ready |
 | A07 | Reasoning Models and Test-Time Compute | Best-of-N, self-consistency; cost vs accuracy | 3 h | 🚧 planned |
-| A08 | Multimodal Vision Documents and Audio | Receipt extraction with confidence routing | 3 h | 🚧 planned |
-| A09 | Serving Inference Optimization and Cost | Caching, batching, model routing | 3 h | 🚧 planned |
-| A10 | Capstone - Production RAG App with Evals and Guardrails | Internal knowledge assistant with a quality bar | 5 h | 🚧 planned |
+| A08 | [Multimodal Vision Documents and Audio](./A08%20-%20Multimodal%20Vision%20Documents%20and%20Audio.ipynb) | Receipt extraction with confidence routing | 3 h | ✅ ready |
+| A09 | [Serving Inference Optimization and Cost](./A09%20-%20Serving%20Inference%20Optimization%20and%20Cost.ipynb) | Caching, batching, model routing | 3 h | ✅ ready |
+| A10 | [Capstone - Production RAG App with Evals and Guardrails](./A10%20-%20Capstone%20-%20Production%20RAG%20App%20with%20Evals%20and%20Guardrails.ipynb) | Internal knowledge assistant with a quality bar | 5 h | ✅ ready |
 
 **Status key:** ✅ ready = follows the standard lesson template and passes `tools/nbtest.py`; ♻️ retained = useful notebook from the earlier curriculum, being upgraded to the template; 🚧 planned = specified in [CURRICULUM.md](../CURRICULUM.md), not written yet.
-**Progress:** 0 ready · 0 retained · 10 planned (of 10).
+**Progress:** 8 ready · 0 retained · 2 planned (of 10).
 
 
 ## How to work through a lesson

@@ -32,7 +32,7 @@ EXTRA = {
 
 def find(folder, lid):
     best = None
-    for p in sorted((ROOT / folder).glob(f"{lid} - *.ipynb")):
+    for p in sorted(list((ROOT / folder).glob(f"{lid}-*.ipynb")) + list((ROOT / folder).glob(f"{lid} - *.ipynb"))):
         txt = p.read_text(errors="ignore")
         if "✅ Checkpoint" in txt:
             return p, "ready"

@@ -196,3 +196,26 @@ Status legend: ✅ ready · 🆕 new in this revision · ♻️ retained from th
 - API/model facts live in **one place per track** (`agentkit/llm.py` for the model ID; lesson text points to docs, not hard-coded prices, except in the `agentkit.trace.PRICES` table).
 - Re-verify framework versions each term; remove or banner anything that targets a deprecated API.
 - Never commit secrets: `.env` is git-ignored; use `Applied/.env.example` as the template.
+
+## 6. Naming conventions
+
+One rule set, enforced by `python tools/check_names.py` and applied by `python tools/rename_notebooks.py`.
+
+| Thing | Convention | Example |
+|---|---|---|
+| **Lesson notebook** | `<ID>-<kebab-title>.ipynb`: lowercase ASCII, hyphens only, **no spaces, parentheses or underscores** | `AG03-tools-done-right.ipynb` |
+| **Lesson ID** | tier prefix + two digits: `B` Basic · `I` Intermediate · `A` Advanced · `AG` Agents · `AP` Applied · `E` Expert | `A04`, `AG12`, `AP03` |
+| **Capstone** | last lesson of the tier; slug starts with `capstone-` | `AG15-capstone-ship-a-production-agent.ipynb` |
+| **Elective** | legacy ID kept (letter suffix allowed) inside a themed folder | `Electives/Classical-AI/I01a-search-algorithms-bfs-dfs-a-star-mcts.ipynb` |
+| **Tier folder** | `TitleCase`, singular tier name (stable, so published links never move) | `Agents/` |
+| **Elective folders** | `Title-Case-With-Hyphens` | `Electives/Deep-Learning/` |
+| **Helper package / tools** | `snake_case` Python modules; scripts are verbs | `agentkit/trace.py`, `tools/nbtest.py` |
+| **Docs** | `README.md` per folder; other guides `UPPER_SNAKE.md` | `SETUP.md`, `CURRICULUM.md` |
+| **Data / assets** | `data/` and `assets/` next to the notebook, kebab-case files, each small (< 5 MB) | `Basic/data/housing-sample.csv` |
+| **Secrets** | `.env` (git-ignored) and `.env.example` (committed, no values) | |
+
+**Why this shape.** URLs and Colab links never need `%20` escaping; IDs sort in learning order; the ID alone is a stable handle used everywhere (`AG06`), while the slug is just a human hint; titles live in exactly one place (`tools/curriculum.json`) and the filename is *derived* from it, so renaming a lesson is a one-line change plus `rename_notebooks.py --apply`.
+
+**Titles** (shown in READMEs) are written in Title Case and are 2–8 words; filenames are the slug of the title (`&` → `and`).
+
+**Inside a notebook:** the first cell is `# <ID> · <Title>`; sections use the ten template headings in §2; variables `snake_case`; offline replays are named `script`/`policy`; no emojis in code, only in headings.

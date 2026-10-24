@@ -10,18 +10,18 @@ Each lesson is a *project brief*: goals and success metrics, a design, a build, 
 | ID | Lesson | Real use case / lab | Time | Status |
 |---|---|---|---|---|
 | AP01 | Customer-Support Copilot | RAG + tools + escalation; deflection rate | 4 h | 🚧 planned |
-| AP02 | Document Intelligence | Invoices to validated JSON and an exceptions queue | 4 h | 🚧 planned |
-| AP03 | Data-Analyst Agent | Text-to-SQL with read-only guardrails | 4 h | 🚧 planned |
+| AP02 | [Document Intelligence](./AP02%20-%20Document%20Intelligence.ipynb) | Invoices to validated JSON and an exceptions queue | 4 h | ✅ ready |
+| AP03 | [Data-Analyst Agent](./AP03%20-%20Data-Analyst%20Agent.ipynb) | Text-to-SQL with read-only guardrails | 4 h | ✅ ready |
 | AP04 | Deep-Research Assistant | Cited research with a fact-check pass | 4 h | 🚧 planned |
-| AP05 | Code-Review Agent | Find seeded bugs in diffs; precision/recall | 4 h | 🚧 planned |
-| AP06 | Ops Automation via MCP | Triage with audit log and approvals | 4 h | 🚧 planned |
+| AP05 | [Code-Review Agent](./AP05%20-%20Code-Review%20Agent.ipynb) | Find seeded bugs in diffs; precision/recall | 4 h | ✅ ready |
+| AP06 | [Ops Automation via MCP](./AP06%20-%20Ops%20Automation%20via%20MCP.ipynb) | Triage with audit log and approvals | 4 h | ✅ ready |
 | AP07 | Multimodal and Voice Agent | Inspection photos and call transcripts | 4 h | 🚧 planned |
 | AP08 | [Optimizing LLM Pipelines with DSPy](./AP08%20-%20Optimizing%20LLM%20Pipelines%20with%20DSPy.ipynb) | Metric-driven prompt optimization | 3 h | ♻️ retained |
 | AP09 | [Serving AI Applications with FastAPI](./AP09%20-%20Serving%20AI%20Applications%20with%20FastAPI.ipynb) | Streaming, auth, rate limits, cost | 3 h | ♻️ retained |
 | AP10 | [Vector Search in Production](./AP10%20-%20Vector%20Search%20in%20Production.ipynb) | Portfolio capstone: deploy and write the case study | 6 h | ♻️ retained |
 
 **Status key:** ✅ ready = follows the standard lesson template and passes `tools/nbtest.py`; ♻️ retained = useful notebook from the earlier curriculum, being upgraded to the template; 🚧 planned = specified in [CURRICULUM.md](../CURRICULUM.md), not written yet.
-**Progress:** 0 ready · 3 retained · 7 planned (of 10).
+**Progress:** 4 ready · 3 retained · 3 planned (of 10).
 
 
 ## How to work through a lesson

@@ -46,11 +46,11 @@ A **graduate-level, hands-on path** from ML fundamentals to *building, evaluatin
 |---|---|---|---|---|---|---|
 | **Basic**: Learn from data | 10 | 26.5 | 0 | 10 | 0 | [`Basic/`](./Basic) |
 | **Intermediate**: Representations: vision, sequences, language | 10 | 31 | 0 | 7 | 3 | [`Intermediate/`](./Intermediate) |
-| **Advanced**: LLM engineering | 10 | 32 | 0 | 0 | 10 | [`Advanced/`](./Advanced) |
-| **Agents**: Systems that decide and act | 15 | 47 | 1 | 2 | 12 | [`Agents/`](./Agents) |
-| **Applied**: Real briefs, real metrics | 10 | 40 | 0 | 3 | 7 | [`Applied/`](./Applied) |
+| **Advanced**: LLM engineering | 10 | 32 | 8 | 0 | 2 | [`Advanced/`](./Advanced) |
+| **Agents**: Systems that decide and act | 15 | 47 | 13 | 0 | 2 | [`Agents/`](./Agents) |
+| **Applied**: Real briefs, real metrics | 10 | 40 | 4 | 3 | 3 | [`Applied/`](./Applied) |
 | **Expert**: Frontier and research | 10 | 37.5 | 0 | 0 | 10 | [`Expert/`](./Expert) |
-| **Total** | **65** | **214** | **1** | **22** | **42** | |
+| **Total** | **65** | **214** | **25** | **20** | **20** | |
 <!-- STATUS:END -->
 
 Details and per-lesson specs: **[CURRICULUM.md](./CURRICULUM.md)** · week-by-week plan: **[LEARNING_SEQUENCE.md](./LEARNING_SEQUENCE.md)**
@@ -72,6 +72,10 @@ jupyter lab
 ```
 
 **Optional, for LIVE agent runs:** `export ANTHROPIC_API_KEY=sk-ant-...` (or put it in a git-ignored `.env`). Without a key, every agent notebook replays a recorded trace so you can still run and break everything for free. **Never commit keys.**
+
+### Naming convention
+
+Lessons are named **`<ID>-<kebab-title>.ipynb`**, e.g. `AG03-tools-done-right.ipynb`: the ID is a tier letter plus two digits (`B` Basic, `I` Intermediate, `A` Advanced, `AG` Agents, `AP` Applied, `E` Expert), the title is lowercase-hyphenated with no spaces. The last lesson in each tier is the capstone. Full rules in [CURRICULUM.md §6](./CURRICULUM.md#6-naming-conventions); checked by `python tools/check_names.py`.
 
 ### Choose your path
 

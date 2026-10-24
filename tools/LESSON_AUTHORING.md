@@ -5,7 +5,7 @@ How to write (or revise) a lesson so the whole curriculum feels like one course.
 ## Workflow
 
 1. Write the lesson as a **percent-format Python file** (`# %%` code cells, `# %% [markdown]` text cells, `# %% [setup]` = the standard setup cell for LLM/agent lessons). See `tools/nbbuild.py` docstring. Keep sources outside the repo (scratch dir) or commit them under `tools/src/` if you want reviewable diffs.
-2. Build: `python tools/nbbuild.py my_lesson.py "Agents/AG03 - Tools Done Right.ipynb"`
+2. Build: `python tools/nbbuild.py my_lesson.py "Agents/AG03-tools-done-right.ipynb"`
 3. Test offline: `python tools/nbtest.py "Agents/AG03*.ipynb"` (executes every cell with `AGENTKIT_OFFLINE=1`; must PASS).
 4. Re-read the rendered notebook top to bottom as a student: is each step motivated? Does a markdown cell precede each code cell explaining *why*?
 
@@ -15,6 +15,7 @@ How to write (or revise) a lesson so the whole curriculum feels like one course.
 - **LLM calls go through `agentkit`** (`get_llm(script=[...])` / `get_llm(policy=fn)`), so the same cell runs LIVE with a key. In OFFLINE mode the script is a recorded/plausible trace of what Claude does; make it realistic, and make the *tools* and *assertions* do the real work. Never call `anthropic` directly in a way that would fail without a key (showing it in a markdown code block, or a guarded cell, is fine).
 - **No hard-coded model prices or claims about benchmark numbers.** Use `agentkit.trace.PRICES` for cost illustrations. Model IDs only via `agentkit.llm.DEFAULT_MODEL`.
 - **Accuracy over breadth.** Cite only papers/docs you are certain exist (authors, year, title, arXiv id if you are sure). If unsure, omit the citation. Do not invent API signatures: for third-party libraries show a *minimal* snippet and label it "reference: check current docs". Do not state version numbers.
+- **Live-compatibility:** the default model rejects forced `tool_choice` (`any`/`tool`), assistant prefill and `temperature`/`top_p`/`top_k`; steer with prompts, `strict` schemas or structured outputs instead.
 - **Every lab has `assert`s** that would fail if the lab were done wrong, and exercise stubs may be left unfinished only inside commented blocks or `NotImplementedError` functions that are never called by the main flow.
 - **Realistic scenarios**: a named business problem, realistic field names and data, a metric. No `foo/bar`, no toy-only.
 - **Never read or print secrets** (`.env`, env vars). Never modify files outside your assigned outputs. Never delete anything.
@@ -66,4 +67,8 @@ Offline scripts are consumed in order, so write them to match the control flow; 
 # ## 4 · Break it           ## 5 · Exercises (Practice / Stretch / Challenge)
 # ## ✅ Checkpoint (4 Qs, answers in <details>)      ## 📌 Takeaways · 📚 Further reading · Next →
 ```
-Reference exemplar: `Agents/AG02 - The Agent Loop from Scratch.ipynb`.
+Reference exemplar: `Agents/AG02-the-agent-loop-from-scratch.ipynb`.
+
+## Naming (enforced by `tools/check_names.py`)
+
+File: `<ID>-<kebab-title>.ipynb`, e.g. `AG03-tools-done-right.ipynb`. The title comes from `tools/curriculum.json`; do not invent a different one. Full rules: [CURRICULUM.md §6](../CURRICULUM.md#6-naming-conventions).

@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/AI/neural-networks/week4/bpe-explorer/static/css/main.8db8de4f.css",
+    "main.js": "/AI/neural-networks/week4/bpe-explorer/static/js/main.319e09f3.js",
+    "index.html": "/AI/neural-networks/week4/bpe-explorer/index.html",
+    "main.8db8de4f.css.map": "/AI/neural-networks/week4/bpe-explorer/static/css/main.8db8de4f.css.map",
+    "main.319e09f3.js.map": "/AI/neural-networks/week4/bpe-explorer/static/js/main.319e09f3.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8db8de4f.css",
+    "static/js/main.319e09f3.js"
+  ]
+}

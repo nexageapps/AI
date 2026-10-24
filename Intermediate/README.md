@@ -9,12 +9,12 @@ Deep learning for images, sequences and language, ending with the pieces every L
 
 | ID | Lesson | Real use case / lab | Time | Status |
 |---|---|---|---|---|
-| I01 | [Convolutional Neural Networks](./I01%20-%20Convolutional%20Neural%20Networks.ipynb) | Product-photo classifier | 3 h | ♻️ retained |
-| I02 | [Transfer Learning and Fine-tuning](./I02%20-%20Transfer%20Learning%20and%20Fine-tuning.ipynb) | Adapt a pretrained net with 200 images | 3 h | ♻️ retained |
-| I03 | [Recurrent Neural Networks](./I03%20-%20Recurrent%20Neural%20Networks.ipynb) | Sequence forecasting; why RNNs struggle | 3 h | ♻️ retained |
-| I04 | [Attention and Transformers](./I04%20-%20Attention%20and%20Transformers.ipynb) | Implement self-attention; read the heads | 3 h | ♻️ retained |
-| I05 | [Tokenization and Byte Pair Encoding](./I05%20-%20Tokenization%20and%20Byte%20Pair%20Encoding.ipynb) | Build a BPE tokenizer; token-cost quirks | 3 h | ♻️ retained |
-| I06 | [Building a Mini Language Model](./I06%20-%20Building%20a%20Mini%20Language%20Model.ipynb) | A tiny GPT that learns to write | 3 h | ♻️ retained |
+| I01 | [Convolutional Neural Networks](./I01-convolutional-neural-networks.ipynb) | Product-photo classifier | 3 h | ♻️ retained |
+| I02 | [Transfer Learning and Fine-tuning](./I02-transfer-learning-and-fine-tuning.ipynb) | Adapt a pretrained net with 200 images | 3 h | ♻️ retained |
+| I03 | [Recurrent Neural Networks](./I03-recurrent-neural-networks.ipynb) | Sequence forecasting; why RNNs struggle | 3 h | ♻️ retained |
+| I04 | [Attention and Transformers](./I04-attention-and-transformers.ipynb) | Implement self-attention; read the heads | 3 h | ♻️ retained |
+| I05 | [Tokenization and Byte Pair Encoding](./I05-tokenization-and-byte-pair-encoding.ipynb) | Build a BPE tokenizer; token-cost quirks | 3 h | ♻️ retained |
+| I06 | [Building a Mini Language Model](./I06-building-a-mini-language-model.ipynb) | A tiny GPT that learns to write | 3 h | ♻️ retained |
 | I07 | Embeddings and Semantic Search | Help-center search (the base of RAG) | 3 h | 🚧 planned |
 | I08 | [Reinforcement Learning - Q-Learning and DQN](./I08%20-%20Encoder-Decoder%20and%20Seq2Seq%20Models.ipynb) | Reward, policy, exploration: the agent idea | 3 h | ♻️ retained |
 | I09 | Generative Models - VAEs GANs Diffusion | Generate and interpolate; how image models work | 3 h | 🚧 planned |

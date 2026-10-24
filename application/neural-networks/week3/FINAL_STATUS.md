@@ -84,7 +84,7 @@ Each tab now includes:
 #### Integration Files
 1. `.github/workflows/deploy-preprocessing-studio.yml` - GitHub Actions workflow
 2. `README.md` (main) - Added to Live Demos table
-3. `Basic/B05 - Data Preprocessing and Feature Engineering.ipynb` - Added link
+3. `Basic/B05-data-preprocessing-and-feature-engineering.ipynb` - Added link
 4. `index.html` - Added tile with university theme
 
 ### GitHub Actions Workflow

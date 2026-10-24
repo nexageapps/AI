@@ -109,7 +109,7 @@ npm install
 ## Related Lesson
 
 This app demonstrates concepts from:
-**Basic/B05 - Data Preprocessing and Feature Engineering.ipynb**
+**Basic/B05-data-preprocessing-and-feature-engineering.ipynb**
 
 Topics covered:
 1. Handling missing values (Section 1)

@@ -9,16 +9,16 @@ Classical machine learning and the first neural network, built so that you can *
 
 | ID | Lesson | Real use case / lab | Time | Status |
 |---|---|---|---|---|
-| B01 | [Tensors and Linear Algebra for ML](./B01%20-%20Tensors%20and%20Linear%20Algebra%20for%20ML.ipynb) | Customers as vectors; similarity | 2 h | ♻️ retained |
-| B02 | [Linear Regression and Gradient Descent](./B02%20-%20Linear%20Regression%20and%20Gradient%20Descent.ipynb) | Predict house prices; watch GD converge | 2.5 h | ♻️ retained |
-| B03 | [Binary Classification](./B03%20-%20Binary%20Classification.ipynb) | Spam / churn with logistic regression | 2.5 h | ♻️ retained |
-| B04 | [Multi-Class Classification](./B04%20-%20Multi-Class%20Classification.ipynb) | Product-category classification with softmax | 2.5 h | ♻️ retained |
-| B05 | [Data Preprocessing and Feature Engineering](./B05%20-%20Data%20Preprocessing%20and%20Feature%20Engineering.ipynb) | Clean a messy customer table; leak-free pipelines | 2.5 h | ♻️ retained |
-| B06 | [Model Evaluation and Metrics](./B06%20-%20Model%20Evaluation%20and%20Metrics.ipynb) | Precision/recall trade-offs for fraud; ROC/PR | 2.5 h | ♻️ retained |
-| B07 | [Regularization and Overfitting](./B07%20-%20Regularization%20and%20Overfitting.ipynb) | Bias-variance and validation curves | 2.5 h | ♻️ retained |
-| B08 | [Decision Trees and Gradient Boosting](./B08%20-%20Decision%20Trees%20and%20Gradient%20Boosting.ipynb) | Credit-risk model; why trees win on tables | 2.5 h | ♻️ retained |
-| B09 | [Neural Networks from Scratch](./B09%20-%20Neural%20Networks%20from%20Scratch.ipynb) | Backprop in NumPy, then a framework | 3 h | ♻️ retained |
-| B10 | [Capstone - End-to-End ML Project](./B10%20-%20Capstone%20-%20End-to-End%20ML%20Project.ipynb) | Problem, data, model, metrics, write-up | 4 h | ♻️ retained |
+| B01 | [Tensors and Linear Algebra for ML](./B01-tensors-and-linear-algebra-for-ml.ipynb) | Customers as vectors; similarity | 2 h | ♻️ retained |
+| B02 | [Linear Regression and Gradient Descent](./B02-linear-regression-and-gradient-descent.ipynb) | Predict house prices; watch GD converge | 2.5 h | ♻️ retained |
+| B03 | [Binary Classification](./B03-binary-classification.ipynb) | Spam / churn with logistic regression | 2.5 h | ♻️ retained |
+| B04 | [Multi-Class Classification](./B04-multi-class-classification.ipynb) | Product-category classification with softmax | 2.5 h | ♻️ retained |
+| B05 | [Data Preprocessing and Feature Engineering](./B05-data-preprocessing-and-feature-engineering.ipynb) | Clean a messy customer table; leak-free pipelines | 2.5 h | ♻️ retained |
+| B06 | [Model Evaluation and Metrics](./B06-model-evaluation-and-metrics.ipynb) | Precision/recall trade-offs for fraud; ROC/PR | 2.5 h | ♻️ retained |
+| B07 | [Regularization and Overfitting](./B07-regularization-and-overfitting.ipynb) | Bias-variance and validation curves | 2.5 h | ♻️ retained |
+| B08 | [Decision Trees and Gradient Boosting](./B08-decision-trees-and-gradient-boosting.ipynb) | Credit-risk model; why trees win on tables | 2.5 h | ♻️ retained |
+| B09 | [Neural Networks from Scratch](./B09-neural-networks-from-scratch.ipynb) | Backprop in NumPy, then a framework | 3 h | ♻️ retained |
+| B10 | [Capstone - End-to-End ML Project](./B10-capstone-end-to-end-ml-project.ipynb) | Problem, data, model, metrics, write-up | 4 h | ♻️ retained |
 
 **Status key:** ✅ ready = follows the standard lesson template and passes `tools/nbtest.py`; ♻️ retained = useful notebook from the earlier curriculum, being upgraded to the template; 🚧 planned = specified in [CURRICULUM.md](../CURRICULUM.md), not written yet.
 **Progress:** 0 ready · 10 retained · 0 planned (of 10).

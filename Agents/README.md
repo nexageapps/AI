@@ -18,24 +18,24 @@ Shared helper code lives in [`agentkit/`](../agentkit) (about 400 lines, readabl
 
 | ID | Lesson | Real use case / lab | Time | Status |
 |---|---|---|---|---|
-| AG01 | [What Is an Agent - Workflows vs Agents](./AG01%20-%20What%20Is%20an%20Agent%20-%20Workflows%20vs%20Agents.ipynb) | Agent vs workflow for six real tickets | 2 h | ✅ ready |
-| AG02 | [The Agent Loop from Scratch](./AG02%20-%20The%20Agent%20Loop%20from%20Scratch.ipynb) | Order-support agent with no framework | 2 h | ✅ ready |
-| AG03 | [Tools Done Right](./AG03%20-%20Tools%20Done%20Right.ipynb) | Design and lint tool schemas | 3 h | ✅ ready |
-| AG04 | [Planning and Reasoning Patterns](./AG04%20-%20Planning%20and%20Reasoning%20Patterns.ipynb) | ReAct, plan-and-execute, reflection | 3 h | ✅ ready |
-| AG05 | [Memory and Context Engineering](./AG05%20-%20Memory%20and%20Context%20Engineering.ipynb) | A 50-turn assistant inside a token budget | 3 h | ✅ ready |
-| AG06 | [Agentic RAG](./AG06%20-%20Agentic%20RAG.ipynb) | Policy-handbook agent with grading and citations | 3 h | ✅ ready |
-| AG07 | Workflow Patterns | Chaining, routing, parallel, orchestrator, evaluator | 3 h | 🚧 planned |
-| AG08 | [LangGraph State Graphs and Durable Execution](./AG08%20-%20LangGraph%20State%20Graphs%20and%20Durable%20Execution.ipynb) | Graphs with checkpoints; crash and resume | 3 h | ✅ ready |
-| AG09 | [Human-in-the-Loop Permissions and Guardrails](./AG09%20-%20Human-in-the-Loop%20Permissions%20and%20Guardrails.ipynb) | Approval gates and a policy engine | 3 h | ✅ ready |
-| AG10 | MCP Model Context Protocol | Expose a CRM as MCP tools | 3 h | 🚧 planned |
-| AG11 | [Multi-Agent Systems](./AG11%20-%20Multi-Agent%20Systems.ipynb) | Supervisor + workers; the cost multiplier | 3 h | ✅ ready |
-| AG12 | [Coding Agents](./AG12%20-%20Coding%20Agents.ipynb) | Mini coding agent verified by tests | 3.5 h | ✅ ready |
-| AG13 | [Computer-Use and Browser Agents](./AG13%20-%20Computer-Use%20and%20Browser%20Agents.ipynb) | Observe-act loop on a simulated UI | 3 h | ✅ ready |
-| AG14 | [Evaluation Observability and Reliability](./AG14%20-%20Evaluation%20Observability%20and%20Reliability.ipynb) | Traces, evals, regression gates | 3.5 h | ✅ ready |
-| AG15 | [Capstone - Ship a Production Agent](./AG15%20-%20Capstone%20-%20Ship%20a%20Production%20Agent.ipynb) | API + UI + tracing + evals | 6 h | ✅ ready |
+| AG01 | [What Is an Agent - Workflows vs Agents](./AG01-what-is-an-agent-workflows-vs-agents.ipynb) | Agent vs workflow for six real tickets | 2 h | ✅ ready |
+| AG02 | [The Agent Loop from Scratch](./AG02-the-agent-loop-from-scratch.ipynb) | Order-support agent with no framework | 2 h | ✅ ready |
+| AG03 | [Tools Done Right](./AG03-tools-done-right.ipynb) | Design and lint tool schemas | 3 h | ✅ ready |
+| AG04 | [Planning and Reasoning Patterns](./AG04-planning-and-reasoning-patterns.ipynb) | ReAct, plan-and-execute, reflection | 3 h | ✅ ready |
+| AG05 | [Memory and Context Engineering](./AG05-memory-and-context-engineering.ipynb) | A 50-turn assistant inside a token budget | 3 h | ✅ ready |
+| AG06 | [Agentic RAG](./AG06-agentic-rag.ipynb) | Policy-handbook agent with grading and citations | 3 h | ✅ ready |
+| AG07 | [Workflow Patterns](./AG07-workflow-patterns.ipynb) | Chaining, routing, parallel, orchestrator, evaluator | 3 h | ✅ ready |
+| AG08 | [LangGraph State Graphs and Durable Execution](./AG08-langgraph-state-graphs-and-durable-execution.ipynb) | Graphs with checkpoints; crash and resume | 3 h | ✅ ready |
+| AG09 | [Human-in-the-Loop Permissions and Guardrails](./AG09-human-in-the-loop-permissions-and-guardrails.ipynb) | Approval gates and a policy engine | 3 h | ✅ ready |
+| AG10 | [MCP Model Context Protocol](./AG10-mcp-model-context-protocol.ipynb) | Expose a CRM as MCP tools | 3 h | ✅ ready |
+| AG11 | [Multi-Agent Systems](./AG11-multi-agent-systems.ipynb) | Supervisor + workers; the cost multiplier | 3 h | ✅ ready |
+| AG12 | [Coding Agents](./AG12-coding-agents.ipynb) | Mini coding agent verified by tests | 3.5 h | ✅ ready |
+| AG13 | [Computer-Use and Browser Agents](./AG13-computer-use-and-browser-agents.ipynb) | Observe-act loop on a simulated UI | 3 h | ✅ ready |
+| AG14 | [Evaluation Observability and Reliability](./AG14-evaluation-observability-and-reliability.ipynb) | Traces, evals, regression gates | 3.5 h | ✅ ready |
+| AG15 | [Capstone - Ship a Production Agent](./AG15-capstone-ship-a-production-agent.ipynb) | API + UI + tracing + evals | 6 h | ✅ ready |
 
 **Status key:** ✅ ready = follows the standard lesson template and passes `tools/nbtest.py`; ♻️ retained = useful notebook from the earlier curriculum, being upgraded to the template; 🚧 planned = specified in [CURRICULUM.md](../CURRICULUM.md), not written yet.
-**Progress:** 13 ready · 0 retained · 2 planned (of 15).
+**Progress:** 15 ready · 0 retained · 0 planned (of 15).
 
 ## Learning path
 

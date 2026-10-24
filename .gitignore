@@ -1,24 +1,92 @@
-
-archive/ 
-Intermediate/archive
-Expert/archive
-Advanced/archive
-Basic/archive
-.kiro/
-./application/ai-fundamentals/*node_module*
-application/ai-fundamentals/week1/symbolic-logic/*node_module*
-application/ai-fundamentals/week2/neural-network/*node_module*
-application/ai-fundamentals/week3/kg-playground/*node_module*
-application/ai-fundamentals/week6/Neat/neat-explainer-app/*node_module*
-application/ai-fundamentals/week3/data-preprocessing-studio/*node_module*
-application/ai-fundamentals/week3/model-evaluation-dashboard/*node_module*
-application/ai-fundamentals/week4/rnn-explorer/*node_module*
-application/neural-networks/week3/cnn-explorer/*node_module*
-# Secrets (never commit API keys)
+# ───────── Secrets (never commit API keys) ─────────
 .env
 .env.*
 !.env.example
 
-# Python / notebooks
+# ───────── OS / editor ─────────
+.DS_Store
+Thumbs.db
+.idea/
+*.swp
+# keep shared VS Code settings, ignore personal ones
+.vscode/*
+!.vscode/settings.json
+.kiro/
+
+# ───────── Python ─────────
+.venv/
+venv/
+env/
 __pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
 .ipynb_checkpoints/
+
+# ───────── Node / web apps (application/**) ─────────
+node_modules/
+**/node_modules/
+build/
+dist/
+.cache/
+.parcel-cache/
+.next/
+coverage/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ───────── Large data, models & artifacts (download or generate instead) ─────────
+# Datasets are fetched by the notebooks (e.g. torchvision / keras download MNIST on first run).
+Basic/data/
+**/data/MNIST/
+*.npz
+*.npy
+*.parquet
+*.feather
+*.h5
+*.hdf5
+*.keras
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+*.onnx
+*.pkl
+*.pickle
+*.joblib
+*.gguf
+*.bin
+*.tfrecord
+*.mp4
+*.mov
+*.wav
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.7z
+# model / experiment output folders
+checkpoints/
+runs/
+wandb/
+mlruns/
+lightning_logs/
+outputs/
+models/
+vector_store/
+chroma/
+*.faiss
+
+# ───────── Repo housekeeping ─────────
+archive/
+Intermediate/archive
+Expert/archive
+Advanced/archive
+Basic/archive
+.restructure_stage/
+_ai_repo/
+*.tmp
+*.log

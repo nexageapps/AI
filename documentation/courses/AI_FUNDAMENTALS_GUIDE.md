@@ -66,7 +66,7 @@ To pass the course you must obtain at least 50% overall **and** pass both the co
 
 | Repository Resource | Type |
 |---|---|
-| [B01 – Symbolic Logic Fundamentals](../Electives/Classical-AI/B01%20-%20Symbolic%20Logic%20Fundamentals.ipynb) | Notebook |
+| [B01 – Symbolic Logic Fundamentals](../Electives/Classical-AI/B01-symbolic-logic-fundamentals.ipynb) | Notebook |
 | [Symbolic Logic Explorer](https://nexageapps.github.io/AI/symbolic-logic/) | Interactive App |
 
 Key concepts:
@@ -81,7 +81,7 @@ Key concepts:
 
 | Repository Resource | Type |
 |---|---|
-| [B01 – Symbolic Logic Fundamentals](../Electives/Classical-AI/B01%20-%20Symbolic%20Logic%20Fundamentals.ipynb) | Notebook |
+| [B01 – Symbolic Logic Fundamentals](../Electives/Classical-AI/B01-symbolic-logic-fundamentals.ipynb) | Notebook |
 | [Symbolic Logic Explorer](https://nexageapps.github.io/AI/symbolic-logic/) | Interactive App |
 | [Wumpus World](https://nexageapps.github.io/AI/wumpus) | Interactive App |
 
@@ -115,8 +115,8 @@ Study focus:
 
 | Repository Resource | Type |
 |---|---|
-| [B04b – Expert Systems and Knowledge Bases](../Electives/Classical-AI/B04b%20-%20Expert%20Systems%20and%20Knowledge%20Bases.ipynb) | Notebook *(new)* |
-| [B04a – Decision Trees and XGBoost](../Basic/B08%20-%20Decision%20Trees%20and%20Gradient%20Boosting.ipynb) | Notebook *(new)* |
+| [B04b – Expert Systems and Knowledge Bases](../Electives/Classical-AI/B04b-expert-systems-and-knowledge-bases.ipynb) | Notebook *(new)* |
+| [B04a – Decision Trees and XGBoost](../Basic/B08-decision-trees-and-gradient-boosting.ipynb) | Notebook *(new)* |
 
 Study focus:
 - IF-THEN rule bases and inference engines
@@ -131,7 +131,7 @@ Study focus:
 
 | Repository Resource | Type |
 |---|---|
-| [B05d – Soft Computing: Bayesian and Fuzzy Logic](../Electives/Classical-AI/B05d%20-%20Soft%20Computing%20(Bayesian%20and%20Fuzzy%20Logic).ipynb) | Notebook *(new)* |
+| [B05d – Soft Computing: Bayesian and Fuzzy Logic](../Electives/Classical-AI/B05d-soft-computing-bayesian-and-fuzzy-logic.ipynb) | Notebook *(new)* |
 
 Study focus:
 - Bayes' theorem and probabilistic inference
@@ -148,7 +148,7 @@ Study focus:
 
 | Repository Resource | Type |
 |---|---|
-| [I13a – Genetic Algorithms and Evolutionary Computing](../Electives/Classical-AI/I13a%20-%20Genetic%20Algorithms%20and%20Evolutionary%20Computing.ipynb) | Notebook *(new)* |
+| [I13a – Genetic Algorithms and Evolutionary Computing](../Electives/Classical-AI/I13a-genetic-algorithms-and-evolutionary-computing.ipynb) | Notebook *(new)* |
 | [I13 – Multi-Task and Meta-Learning](../Intermediate/I13%20-%20Multi-Task%20and%20Meta-Learning.ipynb) | Notebook |
 
 Study focus:
@@ -176,9 +176,9 @@ Use this week to:
 | Repository Resource | Type |
 |---|---|
 | [I01a – Search Algorithms: BFS, DFS, A*, MCTS](../Intermediate/I01a%20-%20Search%20Algorithms%20(BFS%2C%20DFS%2C%20A-Star%2C%20MCTS).ipynb) | Notebook *(new)* |
-| [B05 – Neural Network Fundamentals](../Basic/B09%20-%20Neural%20Networks%20from%20Scratch.ipynb) | Notebook |
-| [B05a – Neural Networks Theory](../Electives/University-Courses/B05a%20-%20Neural%20Networks%20Theory.ipynb) | Notebook |
-| [B05b – Training and Optimization](../Electives/University-Courses/B05b%20-%20Training%20and%20Optimization.ipynb) | Notebook |
+| [B05 – Neural Network Fundamentals](../Basic/B09-neural-networks-from-scratch.ipynb) | Notebook |
+| [B05a – Neural Networks Theory](../Electives/University-Courses/B05a-neural-networks-theory.ipynb) | Notebook |
+| [B05b – Training and Optimization](../Electives/University-Courses/B05b-training-and-optimization.ipynb) | Notebook |
 | [Neural Network Trainer](https://nexageapps.github.io/AI/nn-trainer/) | Interactive App |
 | [Mountain Explorer (Gradient Descent)](https://nexageapps.github.io/AI/gradient-descent) | Interactive App |
 
@@ -217,10 +217,10 @@ Study focus:
 | Repository Resource | Type |
 |---|---|
 <<<<<<< HEAD
-| [B09b – Graph Neural Networks](../Electives/Deep-Learning/B09b%20-%20Graph%20Neural%20Networks.ipynb) | Notebook |
+| [B09b – Graph Neural Networks](../Electives/Deep-Learning/B09b-graph-neural-networks.ipynb) | Notebook |
 | [A10 – ML Pipeline Architecture](../Advanced/A10%20-%20ML%20Pipeline%20Architecture.ipynb) | Notebook |
 =======
-| [I15a – Graph Neural Networks](../Electives/Deep-Learning/I15a%20-%20Graph%20Neural%20Networks.ipynb) | Notebook *(new)* |
+| [I15a – Graph Neural Networks](../Electives/Deep-Learning/I15a-graph-neural-networks.ipynb) | Notebook *(new)* |
 >>>>>>> copilot/sub-pr-4
 | [E14 – Efficient and Green AI](../Expert/E14%20-%20Efficient%20and%20Green%20AI.ipynb) | Notebook |
 
@@ -240,9 +240,9 @@ Study focus:
 
 | Repository Resource | Type |
 |---|---|
-| [E08a – Data Streams and Continual Learning](../Electives/Research/E08a%20-%20Data%20Streams%20and%20Continual%20Learning.ipynb) | Notebook *(new)* |
+| [E08a – Data Streams and Continual Learning](../Electives/Research/E08a-data-streams-and-continual-learning.ipynb) | Notebook *(new)* |
 | [E09 – Self-Supervised and Contrastive Learning](../Expert/E09%20-%20Self-Supervised%20and%20Contrastive%20Learning.ipynb) | Notebook |
-| [E08 – Continual and Lifelong Learning](../Electives/Research/E08%20-%20Continual%20and%20Lifelong%20Learning.ipynb) | Notebook |
+| [E08 – Continual and Lifelong Learning](../Electives/Research/E08-continual-and-lifelong-learning.ipynb) | Notebook |
 | [A12 – Monitoring and Observability](../Advanced/A12%20-%20Monitoring%20and%20Observability.ipynb) | Notebook |
 
 Study focus:

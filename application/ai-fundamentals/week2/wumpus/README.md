@@ -4,7 +4,7 @@ Interactive visualization of the Wumpus World problem from AI Fundamentals Week 
 
 **🔗 Related Resources:**
 - [Symbolic Logic Explorer](https://nexageapps.github.io/AI/symbolic-logic/) — Learn the propositional and first-order logic that powers the Wumpus agent
-- [B01 - Symbolic Logic Fundamentals](../../../Electives/Classical-AI/B01%20-%20Symbolic%20Logic%20Fundamentals.ipynb) — Notebook covering logic theory
+- [B01 - Symbolic Logic Fundamentals](../../../Electives/Classical-AI/B01-symbolic-logic-fundamentals.ipynb) — Notebook covering logic theory
 
 ## Overview
 

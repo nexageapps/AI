@@ -44,7 +44,7 @@
 - **Challenge:** Visualization is slow or unclear
   - **Solution:** Reduce grid resolution for faster plotting, use contour plots instead of scatter plots for cleaner visualization, save frames and create animation.
 
-**Repository Resources:** [B05 - Neural Networks](../Basic/B09%20-%20Neural%20Networks%20from%20Scratch.ipynb), [B05a - Neural Networks Theory](../Basic/B05a%20-%20Neural%20Networks%20Theory.ipynb), [Lecture 2 Guide](./courses/NEURAL_NETWORKS_LECTURE_2.md)
+**Repository Resources:** [B05 - Neural Networks](../Basic/B09-neural-networks-from-scratch.ipynb), [B05a - Neural Networks Theory](../Basic/B05a-neural-networks-theory.ipynb), [Lecture 2 Guide](./courses/NEURAL_NETWORKS_LECTURE_2.md)
 
 **Extension Ideas:**
 - Add more activation functions (Leaky ReLU, ELU) and compare their learning dynamics
@@ -90,7 +90,7 @@
 - **Challenge:** Learning rate tuning is tedious
   - **Solution:** Implement simple learning rate schedule (e.g., decay by 0.1 every N epochs). Show how this improves convergence.
 
-**Repository Resources:** [B02 - Gradient Descent](../Basic/B02%20-%20Gradient%20Descent.ipynb), [B05 - Neural Networks](../Basic/B09%20-%20Neural%20Networks%20from%20Scratch.ipynb), [Lecture 3 Guide](./courses/Neural Networks_LECTURE_3.md), [I01 - Advanced Optimizers](../Intermediate/I01%20-%20Advanced%20Optimizers.ipynb)
+**Repository Resources:** [B02 - Gradient Descent](../Basic/B02%20-%20Gradient%20Descent.ipynb), [B05 - Neural Networks](../Basic/B09-neural-networks-from-scratch.ipynb), [Lecture 3 Guide](./courses/Neural Networks_LECTURE_3.md), [I01 - Advanced Optimizers](../Intermediate/I01%20-%20Advanced%20Optimizers.ipynb)
 
 **Extension Ideas:**
 - Implement momentum and Nesterov momentum variants
@@ -136,7 +136,7 @@
 - **Challenge:** Interpreting what filters learn is difficult
   - **Solution:** Compare filters across layers to see progression from simple to complex. Visualize images that maximally activate each filter. Read papers on CNN visualization.
 
-**Repository Resources:** [B09 - Convolutional Neural Networks](../Intermediate/I01%20-%20Convolutional%20Neural%20Networks.ipynb), [B14 - Projects](../Basic/B14%20-%20Projects.ipynb)
+**Repository Resources:** [B09 - Convolutional Neural Networks](../Intermediate/I01-convolutional-neural-networks.ipynb), [B14 - Projects](../Basic/B14%20-%20Projects.ipynb)
 
 **Extension Ideas:**
 - Implement Grad-CAM to visualize which image regions are important for predictions
@@ -182,7 +182,7 @@
 - **Challenge:** Attention heatmaps are hard to interpret
   - **Solution:** Use clear color schemes (white=high attention, dark=low). Add labels showing input/output tokens. Normalize heatmaps for consistent color scale across examples.
 
-**Repository Resources:** [B11 - Attention and Transformers](../Intermediate/I04%20-%20Attention%20and%20Transformers.ipynb), [B13 - Mini Language Model](../Basic/B13%20-%20Mini%20Language%20Model.ipynb)
+**Repository Resources:** [B11 - Attention and Transformers](../Intermediate/I04-attention-and-transformers.ipynb), [B13 - Mini Language Model](../Basic/B13%20-%20Mini%20Language%20Model.ipynb)
 
 **Extension Ideas:**
 - Implement multi-head attention and visualize different attention heads

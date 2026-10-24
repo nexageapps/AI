@@ -274,10 +274,10 @@ Before the course starts, review:
 
 | Course Topic | Repository Lessons | Notes |
 |--------------|-------------------|-------|
-| Semantic Representation | [B11 - Attention & Transformers](../../Intermediate/I04%20-%20Attention%20and%20Transformers.ipynb) | Word2Vec concepts, embeddings |
+| Semantic Representation | [B11 - Attention & Transformers](../../Intermediate/I04-attention-and-transformers.ipynb) | Word2Vec concepts, embeddings |
 | Pretraining | [A01 - Fine-tuning LLMs](../../Advanced/A01%20-%20Fine-tuning%20Large%20Language%20Models.ipynb) | Understanding pre-training process |
 | Post-training | [A02 - Prompt Engineering](../../Advanced/A02%20-%20Prompt%20Engineering%20and%20In-Context%20Learning.ipynb) | RLHF, instruction tuning |
-| Word Vectors Tutorial | [B11 - Attention & Transformers](../../Intermediate/I04%20-%20Attention%20and%20Transformers.ipynb) | Practical implementation |
+| Word Vectors Tutorial | [B11 - Attention & Transformers](../../Intermediate/I04-attention-and-transformers.ipynb) | Practical implementation |
 
 ### Week 3-4: Information Retrieval & Question Answering
 
@@ -292,7 +292,7 @@ Before the course starts, review:
 | Course Topic | Repository Lessons | Notes |
 |--------------|-------------------|-------|
 | Summarization | [A02 - Prompt Engineering](../../Advanced/A02%20-%20Prompt%20Engineering%20and%20In-Context%20Learning.ipynb) | Abstractive summarization |
-| LLM Generation | [B13 - Mini Language Model](../../Intermediate/I06%20-%20Building%20a%20Mini%20Language%20Model.ipynb) | Text generation fundamentals |
+| LLM Generation | [B13 - Mini Language Model](../../Intermediate/I06-building-a-mini-language-model.ipynb) | Text generation fundamentals |
 
 ### Week 6: Knowledge Representation
 
@@ -305,8 +305,8 @@ Before the course starts, review:
 
 | Course Topic | Repository Lessons | Notes |
 |--------------|-------------------|-------|
-| Time Series Forecasting | [B10 - RNNs](../../Intermediate/I03%20-%20Recurrent%20Neural%20Networks.ipynb) | Sequence modeling |
-| LSTM/GRU | [B10a - RNNs](../../Electives/University-Courses/B10a%20-%20Recurrent%20Neural%20Networks.ipynb) | Advanced sequence models |
+| Time Series Forecasting | [B10 - RNNs](../../Intermediate/I03-recurrent-neural-networks.ipynb) | Sequence modeling |
+| LSTM/GRU | [B10a - RNNs](../../Electives/University-Courses/B10a-recurrent-neural-networks.ipynb) | Advanced sequence models |
 
 ### Week 8: Ethics & Safety
 
@@ -326,11 +326,11 @@ Before the course starts, review:
 
 | Concept | Repository Lessons | Importance |
 |---------|-------------------|------------|
-| Neural Network Basics | [B05 - Neural Networks](../../Basic/B09%20-%20Neural%20Networks%20from%20Scratch.ipynb) | Foundation |
-| RNNs | [B10 - RNNs](../../Intermediate/I03%20-%20Recurrent%20Neural%20Networks.ipynb) | Sequence modeling |
-| Attention & Transformers | [B11 - Attention & Transformers](../../Intermediate/I04%20-%20Attention%20and%20Transformers.ipynb) | Core NLP architecture |
-| Tokenization | [B12 - BPE](../../Intermediate/I05%20-%20Tokenization%20and%20Byte%20Pair%20Encoding.ipynb) | Text preprocessing |
-| Language Models | [B13 - Mini LM](../../Intermediate/I06%20-%20Building%20a%20Mini%20Language%20Model.ipynb) | Understanding LLMs |
+| Neural Network Basics | [B05 - Neural Networks](../../Basic/B09-neural-networks-from-scratch.ipynb) | Foundation |
+| RNNs | [B10 - RNNs](../../Intermediate/I03-recurrent-neural-networks.ipynb) | Sequence modeling |
+| Attention & Transformers | [B11 - Attention & Transformers](../../Intermediate/I04-attention-and-transformers.ipynb) | Core NLP architecture |
+| Tokenization | [B12 - BPE](../../Intermediate/I05-tokenization-and-byte-pair-encoding.ipynb) | Text preprocessing |
+| Language Models | [B13 - Mini LM](../../Intermediate/I06-building-a-mini-language-model.ipynb) | Understanding LLMs |
 
 ---
 

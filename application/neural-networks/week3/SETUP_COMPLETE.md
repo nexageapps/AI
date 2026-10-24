@@ -132,7 +132,7 @@ Students can:
 4. `application/neural-networks/week3/data-preprocessing-studio/package.json`
 5. `application/neural-networks/week3/data-preprocessing-studio/public/index.html`
 6. `README.md` (main repository)
-7. `Basic/B05 - Data Preprocessing and Feature Engineering.ipynb`
+7. `Basic/B05-data-preprocessing-and-feature-engineering.ipynb`
 8. `.github/workflows/deploy-preprocessing-studio.yml`
 
 ## Next Steps

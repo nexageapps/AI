@@ -12,7 +12,7 @@ Interactive propositional and first-order logic app for AI Fundamentals.
 - **Playground** — Build custom expressions with ∧, ∨, →, ↔, ¬ operators
 
 ## Related Resources
-- [B01 - Symbolic Logic Fundamentals](../../../Electives/Classical-AI/B01%20-%20Symbolic%20Logic%20Fundamentals.ipynb) — Companion notebook
+- [B01 - Symbolic Logic Fundamentals](../../../Electives/Classical-AI/B01-symbolic-logic-fundamentals.ipynb) — Companion notebook
 - [Wumpus World](https://nexageapps.github.io/AI/wumpus/) — See FOL reasoning in action
 
 ## Run locally

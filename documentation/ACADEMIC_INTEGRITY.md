@@ -1,5 +1,8 @@
 # Academic Integrity Policy
 
+> **Independence notice:** this is personal learning material shared as open-source study notes. It is not from, reviewed by, or endorsed by the University of Auckland or any other institution, and contains no official course content.
+
+
 ---
 
 **IMPORTANT DISCLAIMER:** This is a **personal learning project** created by an independent student currently studying AI at university. This repository is **NOT officially affiliated with, endorsed by, or sponsored by the university**. It is not official course material, not created by university faculty, and does not represent the views or policies of the university.

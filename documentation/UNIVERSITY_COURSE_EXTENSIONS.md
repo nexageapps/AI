@@ -76,7 +76,7 @@ An interactive React application demonstrating symbolic logic and knowledge repr
 - **Challenge**: Understanding why A* is faster
   - **Solution**: Visualize the heuristic values. See how A* prioritizes cells closer to the goal. Compare explored cell counts.
 
-**Repository Resources**: [B01](../Basic/B01%20-%20Arithmetic.ipynb) (Fundamentals), [B05](../Basic/B09%20-%20Neural%20Networks%20from%20Scratch.ipynb) (Data Structures), [B14](../Basic/B14%20-%20Projects.ipynb) (Project Guidance)
+**Repository Resources**: [B01](../Basic/B01%20-%20Arithmetic.ipynb) (Fundamentals), [B05](../Basic/B09-neural-networks-from-scratch.ipynb) (Data Structures), [B14](../Basic/B14%20-%20Projects.ipynb) (Project Guidance)
 
 **Extension Ideas**:
 - Add different heuristic functions (Euclidean, Chebyshev) and compare performance
@@ -120,7 +120,7 @@ An interactive React application demonstrating symbolic logic and knowledge repr
 - **Challenge**: Knowledge base design and completeness
   - **Solution**: Start small with 5-10 facts and 3-5 rules. Test thoroughly. Document what the system knows and doesn't know.
 
-**Repository Resources**: [B04](../Basic/B04%20-%20Multi-Class%20Classification.ipynb) (Logic and Classification), [B05](../Basic/B09%20-%20Neural%20Networks%20from%20Scratch.ipynb) (Reasoning), [B14](../Basic/B14%20-%20Projects.ipynb) (Project Guidance)
+**Repository Resources**: [B04](../Basic/B04-multi-class-classification.ipynb) (Logic and Classification), [B05](../Basic/B09-neural-networks-from-scratch.ipynb) (Reasoning), [B14](../Basic/B14%20-%20Projects.ipynb) (Project Guidance)
 
 **Extension Ideas**:
 - Add learning from examples - let the system discover new rules from data
@@ -164,7 +164,7 @@ An interactive React application demonstrating symbolic logic and knowledge repr
 - **Challenge**: Performance optimization and search depth
   - **Solution**: Profile your code to find bottlenecks. Use memoization to cache evaluated positions. Start with depth 4-6, increase gradually.
 
-**Repository Resources**: [B05](../Basic/B09%20-%20Neural%20Networks%20from%20Scratch.ipynb) (Algorithm Design), [B14](../Basic/B14%20-%20Projects.ipynb) (Project Guidance)
+**Repository Resources**: [B05](../Basic/B09-neural-networks-from-scratch.ipynb) (Algorithm Design), [B14](../Basic/B14%20-%20Projects.ipynb) (Project Guidance)
 
 **Extension Ideas**:
 - Implement iterative deepening to search as deep as time allows

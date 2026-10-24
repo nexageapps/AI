@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/AI/neural-networks/week3/cnn-explorer/static/css/main.40d093aa.css",
+    "main.js": "/AI/neural-networks/week3/cnn-explorer/static/js/main.dc210bef.js",
+    "index.html": "/AI/neural-networks/week3/cnn-explorer/index.html",
+    "main.40d093aa.css.map": "/AI/neural-networks/week3/cnn-explorer/static/css/main.40d093aa.css.map",
+    "main.dc210bef.js.map": "/AI/neural-networks/week3/cnn-explorer/static/js/main.dc210bef.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.40d093aa.css",
+    "static/js/main.dc210bef.js"
+  ]
+}

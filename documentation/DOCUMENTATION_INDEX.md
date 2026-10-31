@@ -3,15 +3,21 @@
 | Start here | Purpose |
 |---|---|
 | [../README.md](../README.md) | Overview + auto-generated status of all 177 lessons |
+| [QUICK_REFERENCE.md](./QUICK_REFERENCE.md) | Fast lookup: commands, structure, standards |
 | [CURRICULUM.md](./CURRICULUM.md) | The standard pattern, lesson template, and spec for every lesson |
 | [LEARNING_SEQUENCE.md](./LEARNING_SEQUENCE.md) | Week-by-week paths (full, agentic fast track, research) |
 | [../tools/LESSON_AUTHORING.md](../tools/LESSON_AUTHORING.md) | How to write/test a lesson; `agentkit` cheat-sheet |
 
-| 🚀 Viral & Latest (2025) | Purpose |
+| Viral & Latest (2025) | Purpose |
 |---|---|
 | [VIRAL_CURRICULUM_UPDATE_2025.md](./VIRAL_CURRICULUM_UPDATE_2025.md) | Latest tech stack & viral content strategy |
 | [IMPLEMENTATION_PLAN.md](./IMPLEMENTATION_PLAN.md) | 30-day roadmap to 10K+ GitHub stars |
 | [applied/](./applied/) | LlamaIndex, DSPy, Haystack, FastAPI production guides |
+
+| Structure & Organization | Purpose |
+|---|---|
+| [REPOSITORY_STRUCTURE.md](./REPOSITORY_STRUCTURE.md) | Complete directory structure and organization |
+| [PROJECT_ORGANIZATION_COMPLETE.md](./PROJECT_ORGANIZATION_COMPLETE.md) | Cleanup summary and what was changed |
 
 | Guide | Purpose |
 |---|---|

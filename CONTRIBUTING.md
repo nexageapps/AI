@@ -7,12 +7,12 @@ This is **open-source study material**: free to use, fork, translate and improve
 |---|---|
 | Fix a typo / unclear sentence | Edit the notebook or doc and open a PR |
 | Report a broken cell or wrong claim | Open an issue with the lesson ID (`AG06`), the cell, and what you expected |
-| Suggest or write a lesson | Open a *lesson proposal* issue first; specs live in [CURRICULUM.md](./CURRICULUM.md) |
+| Suggest or write a lesson | Open a *lesson proposal* issue first; specs live in [CURRICULUM.md](./documentation/CURRICULUM.md) |
 | Improve an exercise or checkpoint | PR; keep the 3-tier Practice / Stretch / Challenge structure |
 | Update something outdated (an API, a model, a library) | PR; say what changed and link the changelog |
 
 ## Ground rules for lessons
-1. Follow the **template** and **naming convention** in [CURRICULUM.md](./CURRICULUM.md) (§2, §6): files are `<ID>-<kebab-title>.ipynb`.
+1. Follow the **template** and **naming convention** in [CURRICULUM.md](./documentation/CURRICULUM.md) (§2, §6): files are `<ID>-<kebab-title>.ipynb`.
 2. The lesson must **run offline, free, on CPU** (`python tools/nbtest.py "<path>"` passes); LLM parts go through `agentkit` so they also run live.
 3. Be **accurate**: cite only sources you have checked; label simulated results as simulated; never present toy numbers as benchmark results.
 4. **No secrets, no personal data, no copyrighted material** you don't have the right to share. Synthetic data only.

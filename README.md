@@ -10,11 +10,11 @@
 
 From ML Fundamentals → LLMs & RAG → AI Agents → Production Deployment. Hands-on lessons with PyTorch, LangChain, LlamaIndex, DSPy, FastAPI & more.
 
-[Curriculum](./CURRICULUM.md) • [Quick Start](#quick-start) • [Student Guide](./documentation/STUDENT_GUIDE.md) • [Exam Prep](./documentation/EXAM_PREPARATION_GUIDE.md) • [LinkedIn](https://www.linkedin.com/in/karthik-arjun-a5b4a258/) • [Support Project](https://buymeacoffee.com/fcc4sbsx5f6)
+[Curriculum](./documentation/CURRICULUM.md) • [Quick Start](#quick-start) • [Student Guide](./documentation/STUDENT_GUIDE.md) • [Exam Prep](./documentation/EXAM_PREPARATION_GUIDE.md) • [LinkedIn](https://www.linkedin.com/in/karthik-arjun-a5b4a258/) • [Support Project](https://buymeacoffee.com/fcc4sbsx5f6)
 
 [![Python](https://img.shields.io/badge/Python-3.10+-orange.svg)](https://www.python.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](./LICENSE)
-[![Lessons](https://img.shields.io/badge/Lessons-65-brightgreen.svg)](./CURRICULUM.md)
+[![Lessons](https://img.shields.io/badge/Lessons-177-brightgreen.svg)](./documentation/CURRICULUM.md)
 [![AI Agents](https://img.shields.io/badge/AI_Agents-LangChain_+_LlamaIndex-blue.svg)](#)
 [![Production Ready](https://img.shields.io/badge/Production-FastAPI_+_Docker-green.svg)](#)
 [![Sponsored by nexageapps](https://img.shields.io/badge/Sponsored%20by-nexageapps-blue.svg)](https://nexageapps.com)
@@ -51,7 +51,7 @@ A **comprehensive AI engineering curriculum** from ML fundamentals to production
 
 | | |
 |---|---|
-| **Pattern** | Basic **10** · Intermediate **10** · Advanced **10** · Agents **15** · Applied **10** · Expert **10** = **65 core lessons** (≈ 215 h) |
+| **Pattern** | Basic **18** · Intermediate **26** · Advanced **15** · Agents **18** · Applied **35** · Expert **26** · Electives **39** = **177 lessons** (≈ 500+ h) |
 | **Every lesson** | real scenario → objectives → concept → build from scratch → use the real tool → **break it** → exercises (Practice/Stretch/Challenge) → checkpoint |
 | **Hands-on** | runs **offline, free, no GPU**; agent lessons also run **live against Claude** with one environment variable |
 | **Honest** | the table below is generated from the files on disk, so it can never promise lessons that don't exist |
@@ -110,7 +110,7 @@ jupyter lab
 
 ### Naming convention
 
-Lessons are named **`<ID>-<kebab-title>.ipynb`**, e.g. `AG03-tools-done-right.ipynb`: the ID is a tier letter plus two digits (`B` Basic, `I` Intermediate, `A` Advanced, `AG` Agents, `AP` Applied, `E` Expert), the title is lowercase-hyphenated with no spaces. The last lesson in each tier is the capstone. Full rules in [CURRICULUM.md §6](./CURRICULUM.md#6-naming-conventions); checked by `python tools/check_names.py`.
+Lessons are named **`<ID>-<kebab-title>.ipynb`**, e.g. `AG03-tools-done-right.ipynb`: the ID is a tier letter plus two digits (`B` Basic, `I` Intermediate, `A` Advanced, `AG` Agents, `AP` Applied, `E` Expert), the title is lowercase-hyphenated with no spaces. The last lesson in each tier is the capstone. Full rules in [CURRICULUM.md §6](./documentation/CURRICULUM.md#6-naming-conventions); checked by `python tools/check_names.py`.
 
 ### Choose your path
 
@@ -146,7 +146,7 @@ AI/
 ├── tools/                # curriculum.json (source of truth), nbbuild.py, nbtest.py, gen_readmes.py, LESSON_AUTHORING.md
 ├── application/          # interactive browser demos (source + deploy guides)
 ├── documentation/        # student guide, exam prep, course guides, integrity & security policies
-└── CURRICULUM.md  LEARNING_SEQUENCE.md  README.md
+└── documentation/CURRICULUM.md  documentation/LEARNING_SEQUENCE.md  README.md
 ```
 
 ---

@@ -1,8 +1,8 @@
-# Wumpus World - AI Fundamentals
+# Wumpus World - Interactive AI Demo
 
-Interactive visualization of the Wumpus World problem from AI Fundamentals Week 2: Symbolic Logic.
+Interactive visualization of the Wumpus World problem: a classic AI problem demonstrating symbolic logic, knowledge representation, and reasoning under uncertainty.
 
-**🔗 Related Resources:**
+**Related Resources:**
 - [Symbolic Logic Explorer](https://nexageapps.github.io/AI/symbolic-logic/) — Learn the propositional and first-order logic that powers the Wumpus agent
 - [B01 - Symbolic Logic Fundamentals](../../../Electives/Classical-AI/B01-symbolic-logic-fundamentals.ipynb) — Notebook covering logic theory
 
@@ -18,7 +18,7 @@ This React application visualizes a 4x4 grid representing the Wumpus World envir
 ## Setup
 
 ```bash
-cd application/ai-fundamentals/week2/wumpus
+cd application/demos/wumpus-world
 npm install
 npm start
 ```
@@ -26,8 +26,6 @@ npm start
 The application will open at `http://localhost:3000`
 
 ## Grid Layout
-
-The grid matches the lecture material (W2L1_SymbolicLogic_v2.pdf):
 
 ```
 Row 4: [stench]    [empty]     [breeze]    [pit]
@@ -72,4 +70,3 @@ Row 1: [agent]     [breeze]    [pit]       [breeze]
 ## References
 
 - https://github.com/nexageapps/AI/
-- https://github.com/zhangxinyu-xyz/wumpus-world-uoa

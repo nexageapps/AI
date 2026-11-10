@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="./logo/logo_v1.png" width="220" height="220" alt="AI & ML Roadmap Logo" style="border-radius: 50%; object-fit: cover; box-shadow: 0 4px 12px rgba(0,0,0,0.15);"/>
+<img src="./logo/logo_v1.png" width="220" height="220" alt="AI Engineering Logo"/>
 
 # AI Engineering: From Foundations to Production Agents
 
@@ -8,229 +8,599 @@
 
 **Open-source AI engineering curriculum for building intelligent systems.**
 
-From ML Fundamentals → LLMs & RAG → AI Agents → Production Deployment. Hands-on lessons with PyTorch, LangChain, LlamaIndex, DSPy, FastAPI & more.
+From ML Fundamentals → LLMs & RAG → AI Agents → Production Deployment
 
-[Curriculum](./documentation/CURRICULUM.md) • [Quick Start](#quick-start) • [Student Guide](./documentation/STUDENT_GUIDE.md) • [Exam Prep](./documentation/EXAM_PREPARATION_GUIDE.md) • [LinkedIn](https://www.linkedin.com/in/karthik-arjun-a5b4a258/) • [Support Project](https://buymeacoffee.com/fcc4sbsx5f6)
+[**Get Started**](#quick-start) • [Curriculum](./documentation/CURRICULUM.md) • [Live Demos](https://nexageapps.github.io/AI/) • [Student Guide](./documentation/STUDENT_GUIDE.md)
 
-[![Python](https://img.shields.io/badge/Python-3.10+-orange.svg)](https://www.python.org/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](./LICENSE)
+[![Python](https://img.shields.io/badge/Python-3.10+-3776AB?logo=python&logoColor=white)](https://www.python.org/)
+[![License](https://img.shields.io/badge/License-MIT-green.svg)](./LICENSE)
 [![Lessons](https://img.shields.io/badge/Lessons-177-brightgreen.svg)](./documentation/CURRICULUM.md)
-[![AI Agents](https://img.shields.io/badge/AI_Agents-LangChain_+_LlamaIndex-blue.svg)](#)
-[![Production Ready](https://img.shields.io/badge/Production-FastAPI_+_Docker-green.svg)](#)
-[![Sponsored by nexageapps](https://img.shields.io/badge/Sponsored%20by-nexageapps-blue.svg)](https://nexageapps.com)
-[![Buy me a book](https://img.shields.io/badge/Buy%20Me%20A%20Book-Support-yellow.svg)](https://buymeacoffee.com/fcc4sbsx5f6)
+[![Stars](https://img.shields.io/github/stars/nexageapps/AI?style=social)](https://github.com/nexageapps/AI/stargazers)
 
 </div>
 
 ---
 
-## Open-Source Study Material
-
-This repository is **free, open-source educational material** (MIT). Use it to teach yourself, run a study group or a course; fork it, translate it, send improvements. See [CONTRIBUTING.md](./CONTRIBUTING.md) and the [Code of Conduct](./CODE_OF_CONDUCT.md). If it helps you, please cite it ([CITATION.cff](./CITATION.cff)) and star the repo.
-
----
-
-## Important Disclaimer
-
-This is an **independent learning project**, shared openly as educational material. Use responsibly and follow your institution's academic integrity policies. See [Academic Integrity Policy](./documentation/ACADEMIC_INTEGRITY.md) for details.
-
----
-
-## What Is This?
-
-A **comprehensive AI engineering curriculum** from ML fundamentals to production AI agents and intelligent systems.
-
-### What You'll Build
-
-- **AI Agents** with LangChain, LangGraph, and LlamaIndex
-- **RAG Systems** with vector databases (Pinecone, Weaviate, Chroma)
-- **Production APIs** with FastAPI and modern deployment
-- **LLM Applications** with prompt engineering and DSPy
-- **Real Projects** from notebooks to deployed systems
-
-### Learning Path
-
-Basic ML → Deep Learning → LLMs & RAG → AI Agents → Production Systems → Advanced Research
-
-### Pattern
-
-| | |
-|---|---|
-| **Structure** | Basic **18** · Intermediate **26** · Advanced **15** · Agents **18** · Applied **35** · Expert **26** · Electives **39** = **177 lessons** (≈ 500+ h) |
-| **Every Lesson** | real scenario → objectives → concept → build from scratch → use the real tool → **break it** → exercises (Practice/Stretch/Challenge) → checkpoint |
-| **Hands-On** | runs **offline, free, no GPU**; agent lessons also run **live against Claude** with one environment variable |
-| **Honest** | the table below is generated from the files on disk, so it can never promise lessons that don't exist |
-
-### Status (auto-generated)
-
-<!-- STATUS:START -->
-| Tier | Lessons | Hours | Ready | Retained | Planned | Folder |
-|---|---|---|---|---|---|---|
-| **Basic**: Learn from data | 18 | 48 | 0 | 18 | 0 | [`Basic/`](./Basic) |
-| **Intermediate**: Vision, sequences, language | 26 | 78 | 0 | 26 | 0 | [`Intermediate/`](./Intermediate) |
-| **Advanced**: LLM engineering | 15 | 48 | 15 | 0 | 0 | [`Advanced/`](./Advanced) |
-| **Agents**: AI agent systems | 18 | 56 | 18 | 0 | 0 | [`Agents/`](./Agents) |
-| **Applied**: Production frameworks | 35 | 140 | 10 | 5 | 20 | [`Applied/`](./Applied) |
-| **Expert**: Research frontiers | 26 | 92 | 0 | 0 | 26 | [`Expert/`](./Expert) |
-| **Electives**: Specialized topics | 39 | 117 | 0 | 39 | 0 | [`Electives/`](./Electives) |
-| **Total** | **177** | **579** | **43** | **88** | **46** | |
-<!-- STATUS:END -->
-
-### Tech Stack Covered
+## 🎯 What You'll Learn
 
 ```
-▸ Foundations          ▸ AI Agents              ▸ Production
-├─ PyTorch              ├─ LangChain              ├─ FastAPI
-├─ TensorFlow           ├─ LangGraph              ├─ Docker
-├─ scikit-learn         ├─ LlamaIndex             ├─ Kubernetes
-├─ NumPy/Pandas         ├─ DSPy                   ├─ CI/CD
-└─ Transformers         └─ CrewAI                 └─ Monitoring
-
-▸ Vector DBs           ▸ LLMs                   ▸ Frameworks
-├─ Pinecone             ├─ OpenAI                 ├─ Haystack  
-├─ Weaviate             ├─ Anthropic Claude       ├─ Semantic Kernel
-├─ Qdrant               ├─ Open Source LLMs       └─ Guardrails AI
-└─ Chroma               └─ Fine-tuning            
+┌─────────────────────────────────────────────────────────────────┐
+│                    YOUR LEARNING JOURNEY                        │
+├─────────────────────────────────────────────────────────────────┤
+│                                                                 │
+│  BASIC (18 lessons)          →  Build ML fundamentals          │
+│  ├─ Linear Regression            Train your first model        │
+│  ├─ Neural Networks              Understand backpropagation    │
+│  └─ CNNs & Transformers          Master deep learning          │
+│                                                                 │
+│  INTERMEDIATE (26 lessons)   →  Advanced architectures         │
+│  ├─ Computer Vision              Object detection & more       │
+│  ├─ NLP & Embeddings             Text understanding            │
+│  └─ Sequence Models              Time series & RNNs            │
+│                                                                 │
+│  ADVANCED (15 lessons)       →  LLMs & Production             │
+│  ├─ Fine-tuning LLMs             Adapt models to your needs    │
+│  ├─ RAG Systems                  Knowledge-augmented AI        │
+│  └─ Prompt Engineering           Optimize LLM outputs          │
+│                                                                 │
+│  AGENTS (18 lessons)         →  AI that takes action          │
+│  ├─ LangChain Fundamentals       Build your first agent       │
+│  ├─ LangGraph Workflows          Multi-step reasoning         │
+│  └─ Production Agents            Deploy to the real world     │
+│                                                                 │
+│  APPLIED (35 lessons)        →  Modern frameworks             │
+│  ├─ LlamaIndex                   Data framework for LLMs      │
+│  ├─ DSPy                         Programming with LLMs        │
+│  ├─ Vector Databases             Pinecone, Weaviate, Qdrant   │
+│  └─ FastAPI Deployment           Production-ready APIs        │
+│                                                                 │
+│  EXPERT (26 lessons)         →  Research frontiers           │
+│  └─ Cutting-edge techniques      Stay ahead of the curve      │
+│                                                                 │
+│  📊 Total: 177 lessons • 579 hours • 7 modules                │
+└─────────────────────────────────────────────────────────────────┘
 ```
 
 ---
 
-## Quick Start
+## 🚀 Quick Start
 
 ```bash
+# Clone the repository
 git clone https://github.com/nexageapps/AI.git && cd AI
-python -m venv .venv && source .venv/bin/activate      # Windows: .venv\Scripts\activate
+
+# Setup virtual environment
+python -m venv .venv && source .venv/bin/activate  # Windows: .venv\Scripts\activate
+
+# Install dependencies
 pip install -r requirements.txt
+
+# Launch Jupyter
 jupyter lab
 ```
 
-**Optional, for LIVE agent runs:** `export ANTHROPIC_API_KEY=sk-ant-...` (or put it in a git-ignored `.env`). Without a key, every agent notebook replays a recorded trace so you can still run and break everything for free. **Never commit keys.**
-
-### Naming Convention
-
-Lessons are named **`<ID>-<kebab-title>.ipynb`**, e.g. `AG03-tools-done-right.ipynb`: the ID is a tier letter plus two digits (`B` Basic, `I` Intermediate, `A` Advanced, `AG` Agents, `AP` Applied, `E` Expert), the title is lowercase-hyphenated with no spaces. The last lesson in each tier is the capstone. Full rules in [CURRICULUM.md §6](./documentation/CURRICULUM.md#6-naming-conventions); checked by `python tools/check_names.py`.
-
-### Choose Your Path
-
-| You are… | Do this | Time |
-|---|---|---|
-| New to ML | Basic → Intermediate → Advanced → Agents | ~220 h |
-| Know ML, want to build agents (**fast track**) | A01 → A04, then **AG01 → AG18**, then AP01–AP10 | ~110 h |
-| Know LLM APIs already | AG02 → AG18 → Applied | ~90 h |
-| Want research | Basic (skim) → Intermediate → Advanced A05–A07 → Expert | ~150 h |
-
-### Recommended Weekly Rhythm (8 h/week)
-
-Two 3-hour lesson sessions + one 2-hour review/project block. One lesson = one session; the capstone of each tier gets a full week.
+**For live agent lessons:** Set `ANTHROPIC_API_KEY` environment variable. Without it, lessons replay recorded traces—you can still learn and experiment for free.
 
 ---
 
-## Curriculum Tiers
+## 📚 Learning Paths
 
-| Tier | Folder | Lessons |
-|---|---|---|
-| Basic · Learn from data | [`Basic/`](./Basic) | B01–B18 |
-| Intermediate · Vision, sequences, language | [`Intermediate/`](./Intermediate) | I01–I26 |
-| Advanced · LLM engineering | [`Advanced/`](./Advanced) | A01–A15 |
-| **Agents · AI agent systems** | [`Agents/`](./Agents) | AG01–AG18 |
-| **Applied · Production frameworks** | [`Applied/`](./Applied) | AP01–AP35 |
-| Expert · Research frontiers | [`Expert/`](./Expert) | E01–E26 |
-| Electives · Specialized topics | [`Electives/`](./Electives) | Optional |
+Choose your path based on your background:
 
-### Project Structure
+```
+┌─────────────────────────────────────────────────────────────────────────┐
+│ PATH 1: Complete Beginner (579 hours)                                  │
+│ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━│
+│                                                                         │
+│  Start ──→ Basic ──→ Intermediate ──→ Advanced ──→ Agents ──→ Applied │
+│                                                                         │
+│  Learn everything from scratch to production deployment                │
+└─────────────────────────────────────────────────────────────────────────┘
+
+┌─────────────────────────────────────────────────────────────────────────┐
+│ PATH 2: ML Engineer → AI Agents (110 hours) ⚡ FAST TRACK             │
+│ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━│
+│                                                                         │
+│  Start ──→ Advanced (A01-A04) ──→ Agents (AG01-AG18) ──→ Applied      │
+│                                                                         │
+│  Skip basics, focus on LLMs and agent systems                          │
+└─────────────────────────────────────────────────────────────────────────┘
+
+┌─────────────────────────────────────────────────────────────────────────┐
+│ PATH 3: LLM Developer → Production (90 hours) 🎯 PRACTICAL            │
+│ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━│
+│                                                                         │
+│  Start ──→ Agents (AG02-AG18) ──→ Applied (AP01-AP35)                 │
+│                                                                         │
+│  You know LLM APIs, learn production frameworks                        │
+└─────────────────────────────────────────────────────────────────────────┘
+
+┌─────────────────────────────────────────────────────────────────────────┐
+│ PATH 4: Research Track (150 hours) 🔬 ACADEMIC                        │
+│ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━│
+│                                                                         │
+│  Start ──→ Basic (skim) ──→ Intermediate ──→ Advanced ──→ Expert      │
+│                                                                         │
+│  Deep dive into theory and cutting-edge research                       │
+└─────────────────────────────────────────────────────────────────────────┘
+```
+
+---
+
+## 🛠️ Tech Stack
+
+### The Complete AI Engineering Toolkit
+
+```
+┌─────────────────────┬─────────────────────┬─────────────────────┐
+│   FOUNDATIONS       │    AI AGENTS        │    PRODUCTION       │
+├─────────────────────┼─────────────────────┼─────────────────────┤
+│                     │                     │                     │
+│  PyTorch            │  LangChain          │  FastAPI            │
+│  TensorFlow         │  LangGraph          │  Docker             │
+│  scikit-learn       │  LlamaIndex         │  Kubernetes         │
+│  NumPy/Pandas       │  DSPy               │  GitHub Actions     │
+│  Transformers       │  CrewAI             │  Prometheus         │
+│  Jupyter            │  Semantic Kernel    │  Grafana            │
+│                     │  Haystack           │  Redis              │
+│                     │                     │                     │
+├─────────────────────┼─────────────────────┼─────────────────────┤
+│   VECTOR STORES     │    LLM PROVIDERS    │    FRAMEWORKS       │
+├─────────────────────┼─────────────────────┼─────────────────────┤
+│                     │                     │                     │
+│  Pinecone           │  OpenAI GPT-4       │  Guardrails AI      │
+│  Weaviate           │  Anthropic Claude   │  LangSmith          │
+│  Qdrant             │  Google Gemini      │  LangFuse           │
+│  Chroma             │  Cohere             │  Weights & Biases   │
+│  FAISS              │  Open-source LLMs   │  MLflow             │
+│                     │                     │                     │
+└─────────────────────┴─────────────────────┴─────────────────────┘
+```
+
+---
+
+## 📊 Curriculum Overview
+
+```
+╔══════════════════════════════════════════════════════════════════╗
+║                    CURRICULUM STATUS                             ║
+╠══════════════════════════════════════════════════════════════════╣
+║                                                                  ║
+║  Module          │ Lessons │ Hours │ Status                     ║
+║ ════════════════════════════════════════════════════════════════║
+║                                                                  ║
+║  Basic           │   18    │  48   │ ████████████████░░ 90%     ║
+║  Intermediate    │   26    │  78   │ ████████████████░░ 85%     ║
+║  Advanced        │   15    │  48   │ ████████████████████ 100%  ║
+║  Agents          │   18    │  56   │ ████████████████████ 100%  ║
+║  Applied         │   35    │ 140   │ ████████░░░░░░░░░░ 40%     ║
+║  Expert          │   26    │  92   │ ░░░░░░░░░░░░░░░░░░ 0%      ║
+║  Electives       │   39    │ 117   │ ████████████████████ 100%  ║
+║                                                                  ║
+║ ────────────────────────────────────────────────────────────────║
+║  TOTAL           │  177    │ 579   │ ████████████░░░░░░ 62%     ║
+║                                                                  ║
+╚══════════════════════════════════════════════════════════════════╝
+```
+
+### Module Details
+
+| Tier | Focus | Key Topics | Folder |
+|------|-------|------------|--------|
+| **Basic** | ML Fundamentals | Regression, Neural Networks, CNNs, Transformers | [`Basic/`](./Basic) |
+| **Intermediate** | Deep Learning | Computer Vision, NLP, Sequence Models, GANs | [`Intermediate/`](./Intermediate) |
+| **Advanced** | LLM Engineering | Fine-tuning, RAG, Prompt Engineering, Evaluation | [`Advanced/`](./Advanced) |
+| **Agents** | AI Agent Systems | LangChain, LangGraph, Tools, Memory, Multi-agent | [`Agents/`](./Agents) |
+| **Applied** | Production | LlamaIndex, DSPy, Vector DBs, FastAPI, Deployment | [`Applied/`](./Applied) |
+| **Expert** | Research | Frontier models, RLHF, Alignment, Interpretability | [`Expert/`](./Expert) |
+| **Electives** | Specialized | Classical AI, Domain-specific applications | [`Electives/`](./Electives) |
+
+---
+
+## 🎮 Interactive Demos
+
+**Play with AI concepts in your browser** → [**Launch All Demos**](https://nexageapps.github.io/AI/)
+
+### Visual Learning Tools
+
+```
+┌──────────────────────────────────────────────────────────────────┐
+│                    INTERACTIVE DEMOS                             │
+├──────────────────────────────────────────────────────────────────┤
+│                                                                  │
+│  🎯 Symbolic AI                                                  │
+│  └─ Wumpus World                    Logic & reasoning           │
+│                                                                  │
+│  📈 Optimization                                                 │
+│  ├─ Mountain Explorer               Gradient descent            │
+│  └─ Blindfold Hill                  Learning rate tuning        │
+│                                                                  │
+│  🧠 Neural Networks                                              │
+│  ├─ Neural Network Trainer          Backpropagation             │
+│  ├─ CNN Explorer                    Convolution visualization   │
+│  └─ Data Preprocessing Studio       Feature engineering         │
+│                                                                  │
+│  💬 Language Models                                              │
+│  ├─ Knowledge Graph Playground      RDF & semantic search       │
+│  ├─ RNN Explorer                    Sequence modeling           │
+│  ├─ Transformer Explorer            Self-attention mechanism    │
+│  └─ BPE Explorer                    Tokenization                │
+│                                                                  │
+└──────────────────────────────────────────────────────────────────┘
+```
+
+### Demo Gallery
+
+<table>
+<tr>
+<td width="33%">
+<h4>🎯 Wumpus World</h4>
+<img src="https://via.placeholder.com/300x200/00467F/ffffff?text=Wumpus+World" alt="Wumpus World" width="100%"/>
+<p><strong>Learn:</strong> Symbolic logic, knowledge representation</p>
+<p><a href="https://nexageapps.github.io/AI/wumpus">▶ Play Demo</a></p>
+</td>
+<td width="33%">
+<h4>📈 Gradient Descent</h4>
+<img src="https://via.placeholder.com/300x200/0066CC/ffffff?text=Mountain+Explorer" alt="Mountain Explorer" width="100%"/>
+<p><strong>Learn:</strong> Optimization, learning rates</p>
+<p><a href="https://nexageapps.github.io/AI/gradient-descent">▶ Play Demo</a></p>
+</td>
+<td width="33%">
+<h4>🧠 CNN Explorer</h4>
+<img src="https://via.placeholder.com/300x200/4CAF50/ffffff?text=CNN+Explorer" alt="CNN Explorer" width="100%"/>
+<p><strong>Learn:</strong> Convolution, pooling, feature maps</p>
+<p><a href="https://nexageapps.github.io/AI/neural-networks/week3/cnn-explorer/">▶ Play Demo</a></p>
+</td>
+</tr>
+<tr>
+<td width="33%">
+<h4>💡 Knowledge Graphs</h4>
+<img src="https://via.placeholder.com/300x200/FF9800/ffffff?text=KG+Playground" alt="KG Playground" width="100%"/>
+<p><strong>Learn:</strong> RDF triples, semantic reasoning</p>
+<p><a href="https://nexageapps.github.io/AI/ai-fundamentals/week3/kg-playground/">▶ Play Demo</a></p>
+</td>
+<td width="33%">
+<h4>🔄 Transformer</h4>
+<img src="https://via.placeholder.com/300x200/9C27B0/ffffff?text=Transformer" alt="Transformer" width="100%"/>
+<p><strong>Learn:</strong> Self-attention, Q/K/V matrices</p>
+<p><a href="https://nexageapps.github.io/AI/neural-networks/week4/transformer-explorer/">▶ Play Demo</a></p>
+</td>
+<td width="33%">
+<h4>✂️ BPE Tokenization</h4>
+<img src="https://via.placeholder.com/300x200/F44336/ffffff?text=BPE+Explorer" alt="BPE Explorer" width="100%"/>
+<p><strong>Learn:</strong> Byte pair encoding, subwords</p>
+<p><a href="https://nexageapps.github.io/AI/neural-networks/week4/bpe-explorer/">▶ Play Demo</a></p>
+</td>
+</tr>
+</table>
+
+[**View All 14+ Demos →**](https://nexageapps.github.io/AI/)
+
+---
+
+## 💡 Why This Curriculum?
+
+### Every Lesson Follows a Proven Pattern
+
+```
+┌─────────────────────────────────────────────────────────────┐
+│                   LESSON STRUCTURE                          │
+├─────────────────────────────────────────────────────────────┤
+│                                                             │
+│  1. Real Scenario                                           │
+│     "You're building a chatbot that needs to remember..."   │
+│                                                             │
+│  2. Learning Objectives                                     │
+│     Clear, measurable goals for the lesson                  │
+│                                                             │
+│  3. Concept Explanation                                     │
+│     Theory with visualizations and examples                 │
+│                                                             │
+│  4. Build From Scratch                                      │
+│     Implement the concept yourself in Python                │
+│                                                             │
+│  5. Use Real Tools                                          │
+│     Apply industry-standard libraries                       │
+│                                                             │
+│  6. Break It                                                │
+│     Understand limitations and edge cases                   │
+│                                                             │
+│  7. Three-Tier Exercises                                    │
+│     ├─ Practice: Solidify understanding                     │
+│     ├─ Stretch: Apply to new problems                       │
+│     └─ Challenge: Push your limits                          │
+│                                                             │
+│  8. Checkpoint                                              │
+│     Self-assessment questions                               │
+│                                                             │
+└─────────────────────────────────────────────────────────────┘
+```
+
+### Key Features
+
+```
+✓  Runs offline, free, no GPU required
+✓  Production-ready code examples
+✓  Industry-standard tools and frameworks
+✓  Hands-on exercises at every step
+✓  Progressive difficulty curve
+✓  Clear learning objectives
+✓  Self-paced with checkpoints
+✓  Open-source and free forever
+```
+
+---
+
+## 🗂️ Project Structure
 
 ```
 AI/
-├── Basic/ Intermediate/ Advanced/           # 59 lessons: ML fundamentals to LLMs
-├── Agents/ Applied/                         # 53 lessons: AI agents and production
-├── Expert/                                  # 26 lessons: Research frontiers
-├── Electives/                               # 39 lessons: Specialized topics
 │
-├── agentkit/                                # Shared library for agent lessons
-├── tools/                                   # Build, test, and curriculum tools
-├── application/                             # Interactive demos and visualizations
-├── documentation/                           # Guides, curriculum, and policies
-└── README.md  LICENSE  requirements.txt
+├─── Basic/                      # 18 lessons: ML fundamentals
+│    ├─ B01-symbolic-logic.ipynb
+│    ├─ B02-linear-regression.ipynb
+│    ├─ B05-neural-networks.ipynb
+│    └─ ... (B01-B18)
+│
+├─── Intermediate/               # 26 lessons: Deep learning
+│    ├─ I01-cnns.ipynb
+│    ├─ I03-rnns.ipynb
+│    └─ ... (I01-I26)
+│
+├─── Advanced/                   # 15 lessons: LLMs & RAG
+│    ├─ A01-fine-tuning-llms.ipynb
+│    ├─ A03-rag.ipynb
+│    └─ ... (A01-A15)
+│
+├─── Agents/                     # 18 lessons: AI agents
+│    ├─ AG01-intro-to-agents.ipynb
+│    ├─ AG08-langgraph.ipynb
+│    └─ ... (AG01-AG18)
+│
+├─── Applied/                    # 35 lessons: Production
+│    ├─ AP01-llamaindex.ipynb
+│    ├─ AP07-dspy.ipynb
+│    └─ ... (AP01-AP35)
+│
+├─── Expert/                     # 26 lessons: Research
+│    └─ ... (E01-E26)
+│
+├─── Electives/                  # 39 lessons: Specialized
+│    ├─ Classical-AI/
+│    └─ Domain-Specific/
+│
+├─── agentkit/                   # Shared agent library
+├─── tools/                      # Testing & build tools
+├─── application/                # Interactive demos
+├─── documentation/              # All guides
+│    ├─ CURRICULUM.md
+│    ├─ LEARNING_SEQUENCE.md
+│    ├─ QUICK_REFERENCE.md
+│    └─ STUDENT_GUIDE.md
+│
+└─── README.md                   # You are here
 ```
 
 ---
 
-## Live Demos & Interactive Applications
+## 📖 Documentation Hub
 
-Interactive demonstrations of AI concepts through hands-on web applications. All demos are playable in your browser.
+```
+┌──────────────────────────────────────────────────────────┐
+│              ESSENTIAL DOCUMENTATION                     │
+├──────────────────────────────────────────────────────────┤
+│                                                          │
+│  📚 Core Documents                                       │
+│  ├─ CURRICULUM.md            Complete lesson catalog    │
+│  ├─ LEARNING_SEQUENCE.md     Week-by-week plans        │
+│  ├─ QUICK_REFERENCE.md       Fast command lookup       │
+│  └─ STUDENT_GUIDE.md         Study strategies          │
+│                                                          │
+│  🚀 Getting Started                                      │
+│  ├─ Applied/SETUP.md         Environment setup         │
+│  ├─ Applied/GETTING_STARTED  Your first agent          │
+│  └─ CONTRIBUTING.md          How to contribute         │
+│                                                          │
+│  🎯 Specialized Guides                                   │
+│  ├─ PROJECT_IDEAS.md         Practice projects         │
+│  ├─ EXAM_PREPARATION.md      Study for assessments     │
+│  └─ PROGRESS_TRACKER.md      Track your journey        │
+│                                                          │
+└──────────────────────────────────────────────────────────┘
+```
+
+[**Browse All Documentation →**](./documentation/)
+
+---
+
+## 🤝 Contributing
+
+We welcome contributions from the community!
+
+### Ways to Contribute
+
+```
+┌─────────────────────────────────────────────────────────┐
+│  How to Help                                            │
+├─────────────────────────────────────────────────────────┤
+│                                                         │
+│  🐛 Report Issues                                       │
+│     Found a bug? Open an issue                          │
+│                                                         │
+│  📝 Fix Typos                                           │
+│     Edit the file and submit a PR                       │
+│                                                         │
+│  💡 Suggest Lessons                                     │
+│     Propose new topics via issues                       │
+│                                                         │
+│  🔧 Improve Code                                        │
+│     Better examples, clearer explanations               │
+│                                                         │
+│  🌍 Translate                                           │
+│     Help make this accessible worldwide                 │
+│                                                         │
+│  ⭐ Star the Repo                                       │
+│     Show your support!                                  │
+│                                                         │
+└─────────────────────────────────────────────────────────┘
+```
+
+**Read the full guide:** [CONTRIBUTING.md](./CONTRIBUTING.md)
+
+### Quality Standards
+
+All lessons must:
+- Follow the template in [CURRICULUM.md](./documentation/CURRICULUM.md)
+- Pass automated tests: `python tools/nbtest.py`
+- Run offline without API keys (traces for LLM lessons)
+- Include Practice/Stretch/Challenge exercises
+
+---
+
+## 📜 License & Academic Integrity
+
+### MIT License - Use Freely
+
+This repository is **free, open-source educational material**. You can:
+- ✓ Learn from it
+- ✓ Teach from it
+- ✓ Fork and modify it
+- ✓ Use it in your courses
+- ✓ Build upon it
+
+### Academic Integrity Guidelines
+
+```
+✓ APPROPRIATE USE                     ✗ INAPPROPRIATE USE
+────────────────────────────────────────────────────────
+Learning concepts                     Copying for assignments
+Understanding implementations         Submitting as your own work
+Preparing for exams                   Using in closed-book tests
+Getting inspiration                   Violating academic policies
+Building original projects            Direct plagiarism
+```
+
+**Read full policy:** [ACADEMIC_INTEGRITY.md](./documentation/ACADEMIC_INTEGRITY.md)
+
+---
+
+## 🌟 Support This Project
+
+If this curriculum helps you, consider:
+
+```
+┌────────────────────────────────────────────┐
+│   WAYS TO SUPPORT                          │
+├────────────────────────────────────────────┤
+│                                            │
+│  ⭐ Star the repository on GitHub          │
+│  🔗 Share with your network                │
+│  💡 Contribute lessons or fixes            │
+│  📣 Write about your learning journey      │
+│  ☕ Buy me a book                           │
+│                                            │
+└────────────────────────────────────────────┘
+```
 
 <div align="center">
-  <a href="https://nexageapps.github.io/AI/">
-    <img src="./landingpage/game_landingPage.png" alt="AI Interactive Demos Landing Page" width="100%" style="border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);"/>
-  </a>
-  <p><em>Interactive AI demos — playable in your browser</em></p>
+
+[![Star on GitHub](https://img.shields.io/github/stars/nexageapps/AI?style=social)](https://github.com/nexageapps/AI/stargazers)
+[![Buy Me A Book](https://img.shields.io/badge/Buy%20Me%20A%20Book-Support-yellow.svg)](https://buymeacoffee.com/fcc4sbsx5f6)
+
+**Connect:** [LinkedIn](https://www.linkedin.com/in/karthik-arjun-a5b4a258/) • [Discord](https://discord.com/channels/1482175575488598109/1482175576168206590) • [GitHub](https://github.com/nexageapps/AI)
+
+**Sponsored by** [nexageapps](https://nexageapps.com)
+
 </div>
 
-### Symbolic AI & Logic
+---
 
-| Demo | Concept | Notebook | Link |
-|------|---------|----------|------|
-| **Wumpus World** | Symbolic logic, knowledge representation | [B01 - Symbolic Logic](./Electives/Classical-AI/) | [Play](https://nexageapps.github.io/AI/wumpus) |
+## 🎓 Who Is This For?
 
-### Optimization & Neural Networks
-
-| Demo | Concept | Notebook | Link |
-|------|---------|----------|------|
-| **Mountain Explorer** | Gradient descent, optimization | [B02 - Linear Regression](./Basic/) | [Play](https://nexageapps.github.io/AI/gradient-descent) |
-| **Blindfold Hill** | Learning rate, convergence | [B02 - Linear Regression](./Basic/) | [Play](https://nexageapps.github.io/AI/neural-networks/week2/blindfold-hill) |
-| **Neural Network Trainer** | Forward/backward propagation | [B05 - Neural Networks](./Basic/) | [Play](https://nexageapps.github.io/AI/nn-trainer/) |
-| **CNN Explorer** | Convolution, pooling, feature maps | [I01 - CNNs](./Intermediate/) | [Play](https://nexageapps.github.io/AI/neural-networks/week3/cnn-explorer/) |
-
-### Data & Preprocessing
-
-| Demo | Concept | Notebook | Link |
-|------|---------|----------|------|
-| **Data Preprocessing Studio** | Missing values, scaling, encoding | [B06 - Data Preprocessing](./Basic/) | [Play](https://nexageapps.github.io/AI/neural-networks/week3/data-preprocessing-studio) |
-| **Model Evaluation Dashboard** | Metrics, confusion matrix, ROC/AUC | [B07 - Model Evaluation](./Basic/) | TBD |
-
-### Knowledge & Language Models
-
-| Demo | Concept | Notebook | Link |
-|------|---------|----------|------|
-| **Knowledge Graph Playground** | RDF triples, knowledge graphs, RAG | [A03 - RAG](./Advanced/) | [Play](https://nexageapps.github.io/AI/ai-fundamentals/week3/kg-playground/) |
-| **RNN Explorer** | RNN, LSTM, GRU, sequence modeling | [I03 - RNNs](./Intermediate/) | [Play](https://nexageapps.github.io/AI/ai-fundamentals/week4/rnn-explorer/) |
-| **Transformer Explorer** | Self-attention, multi-head attention | [I04 - Transformers](./Intermediate/) | [Play](https://nexageapps.github.io/AI/neural-networks/week4/transformer-explorer/) |
-| **BPE Explorer** | Tokenization, byte pair encoding | [I05 - BPE](./Intermediate/) | [Play](https://nexageapps.github.io/AI/neural-networks/week4/bpe-explorer/) |
-
-**[View All Demos](https://nexageapps.github.io/AI/)** • Explore [`application/`](./application/) for source code and deployment guides.
+```
+┌───────────────────────────────────────────────────────────────┐
+│                     TARGET AUDIENCE                           │
+├───────────────────────────────────────────────────────────────┤
+│                                                               │
+│  🎓 Computer Science Students                                │
+│     Supplement your coursework with practical projects        │
+│                                                               │
+│  💼 Software Engineers                                        │
+│     Transition into AI/ML engineering roles                   │
+│                                                               │
+│  🔬 Data Scientists                                           │
+│     Expand into deep learning and LLMs                        │
+│                                                               │
+│  🚀 Founders & Product Managers                               │
+│     Understand AI capabilities and limitations                │
+│                                                               │
+│  👨‍🏫 Educators                                                 │
+│     Use as curriculum for your courses                        │
+│                                                               │
+│  🌍 Self-Learners                                             │
+│     Master AI at your own pace                                │
+│                                                               │
+└───────────────────────────────────────────────────────────────┘
+```
 
 ---
 
-## Contributing & Quality Bar
+## 🗺️ Roadmap
 
-A lesson is **ready** only if it follows the template and `python tools/nbtest.py "<path>"` passes offline. See [tools/LESSON_AUTHORING.md](./tools/LESSON_AUTHORING.md). After adding or changing lessons run `python tools/gen_readmes.py` to refresh the status tables. See also [CONTRIBUTING](./CONTRIBUTING.md) and [SECURITY](./documentation/SECURITY.md).
+### Current Status
+- ✅ 43 production-ready lessons
+- ✅ 88 retained lessons from previous versions
+- ✅ 14+ interactive demos
+- ✅ Complete LangChain & LangGraph curriculum
+- ✅ Full Advanced (LLMs) track
 
----
+### Coming Soon
+- 🔄 Complete Applied module (LlamaIndex, DSPy, Haystack)
+- 🔄 Expert module (Research frontiers)
+- 🔄 More interactive visualizations
+- 🔄 Video tutorials for complex topics
+- 🔄 Multi-language support
 
-## Academic Integrity
-
-### Appropriate Use
-
-- Learning concepts and understanding implementations
-- Preparing for lectures and exams
-- Using as inspiration for original projects
-- Understanding different approaches
-
-### Inappropriate Use
-
-- Copying code for assignments without understanding
-- Submitting repository code as your own work
-- Using during closed-book assessments
-- Violating your institution's policies
-
-**[Full Academic Integrity Policy](./documentation/ACADEMIC_INTEGRITY.md)**
+[**View Detailed Roadmap →**](./documentation/VIRAL_CURRICULUM_UPDATE_2025.md)
 
 ---
 
-## Support & Community
+## 📞 Get Help
 
-Open-source AI education built for learners worldwide.
+```
+┌──────────────────────────────────────────┐
+│          COMMUNITY & SUPPORT             │
+├──────────────────────────────────────────┤
+│                                          │
+│  💬 Questions?                           │
+│     Open a GitHub issue                  │
+│                                          │
+│  🐛 Found a bug?                         │
+│     Report via issues                    │
+│                                          │
+│  💡 Have an idea?                        │
+│     Start a discussion                   │
+│                                          │
+│  🤝 Want to chat?                        │
+│     Join our Discord                     │
+│                                          │
+└──────────────────────────────────────────┘
+```
 
-[LinkedIn](https://www.linkedin.com/in/karthik-arjun-a5b4a258/) • [Discord](https://discord.com/channels/1482175575488598109/1482175576168206590) • [Buy me a book](https://buymeacoffee.com/fcc4sbsx5f6)
+---
 
-MIT License: see [LICENSE](./LICENSE).
+<div align="center">
+
+## 🚀 Ready to Start?
+
+**Choose your path and begin your AI engineering journey today!**
+
+[**📚 Browse Curriculum**](./documentation/CURRICULUM.md) • [**🎮 Try Demos**](https://nexageapps.github.io/AI/) • [**⚡ Quick Start**](#quick-start)
+
+---
+
+**Made with ❤️ for the AI community** • **177 lessons • 579 hours • Forever free**
+
+⭐ **Star this repo to support the project!** ⭐
+
+</div>

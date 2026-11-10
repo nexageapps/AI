@@ -4,6 +4,7 @@
 |---|---|
 | [../README.md](../README.md) | Overview + auto-generated status of all 177 lessons |
 | [QUICK_REFERENCE.md](./QUICK_REFERENCE.md) | Fast lookup: commands, structure, standards |
+| [LEARNING_ARCHITECTURE.md](./LEARNING_ARCHITECTURE.md) | Visual guide with ASCII diagrams and architecture |
 | [CURRICULUM.md](./CURRICULUM.md) | The standard pattern, lesson template, and spec for every lesson |
 | [LEARNING_SEQUENCE.md](./LEARNING_SEQUENCE.md) | Week-by-week paths (full, agentic fast track, research) |
 | [../tools/LESSON_AUTHORING.md](../tools/LESSON_AUTHORING.md) | How to write/test a lesson; `agentkit` cheat-sheet |

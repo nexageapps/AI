@@ -10,9 +10,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: write
-  pages: write
-  id-token: write
+  contents: read
 
 concurrency:
   group: "pages"
@@ -35,8 +33,8 @@ jobs:
       bpe-explorer: ${{ steps.filter.outputs.bpe-explorer }}
       index:      ${{ steps.filter.outputs.index }}
     steps:
-      - uses: actions/checkout@v4
-      - uses: dorny/paths-filter@v2
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262  # v4.4.0
+      - uses: dorny/paths-filter@4512585405083f25c027a35db413c2b3b9006d50  # v2.11.1
         id: filter
         with:
           filters: |
@@ -69,10 +67,14 @@ jobs:
     needs: detect-changes
     if: always() && !cancelled() && needs.detect-changes.result == 'success' && (needs.detect-changes.outputs.index == 'true' || github.event_name == 'workflow_dispatch')
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pages: write
+      id-token: write
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262  # v4.4.0
       - run: mkdir -p deploy-temp && cp index.html deploy-temp/
-      - uses: peaceiris/actions-gh-pages@v4
+      - uses: peaceiris/actions-gh-pages@84c30a85c19949d7eee79c4ff27748b70285e453  # v4.1.0
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./deploy-temp
@@ -84,9 +86,13 @@ jobs:
     needs: [detect-changes, deploy-index]
     if: always() && !cancelled() && needs.detect-changes.result == 'success' && (needs.detect-changes.outputs.wumpus == 'true' || github.event_name == 'workflow_dispatch')
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pages: write
+      id-token: write
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262  # v4.4.0
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020  # v4.4.0
         with:
           node-version: '18'
           cache: 'npm'
@@ -95,7 +101,7 @@ jobs:
         working-directory: application/ai-fundamentals/week2/wumpus
       - run: npm run build
         working-directory: application/ai-fundamentals/week2/wumpus
-      - uses: peaceiris/actions-gh-pages@v4
+      - uses: peaceiris/actions-gh-pages@84c30a85c19949d7eee79c4ff27748b70285e453  # v4.1.0
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./application/ai-fundamentals/week2/wumpus/build
@@ -108,9 +114,13 @@ jobs:
     needs: [detect-changes, deploy-wumpus]
     if: always() && !cancelled() && needs.detect-changes.result == 'success' && (needs.detect-changes.outputs.nn-trainer == 'true' || github.event_name == 'workflow_dispatch')
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pages: write
+      id-token: write
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262  # v4.4.0
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020  # v4.4.0
         with:
           node-version: '20'
           cache: 'npm'
@@ -119,7 +129,7 @@ jobs:
         working-directory: application/neural-networks/week2/nn-learning-game
       - run: npm run build
         working-directory: application/neural-networks/week2/nn-learning-game
-      - uses: peaceiris/actions-gh-pages@v4
+      - uses: peaceiris/actions-gh-pages@84c30a85c19949d7eee79c4ff27748b70285e453  # v4.1.0
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./application/neural-networks/week2/nn-learning-game/dist
@@ -132,9 +142,13 @@ jobs:
     needs: [detect-changes, deploy-nn-trainer]
     if: always() && !cancelled() && needs.detect-changes.result == 'success' && (needs.detect-changes.outputs.gradient == 'true' || github.event_name == 'workflow_dispatch')
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pages: write
+      id-token: write
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262  # v4.4.0
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020  # v4.4.0
         with:
           node-version: '18'
           cache: 'npm'
@@ -143,7 +157,7 @@ jobs:
         working-directory: application/neural-networks/week2/gradient-descent-game
       - run: npm run build
         working-directory: application/neural-networks/week2/gradient-descent-game
-      - uses: peaceiris/actions-gh-pages@v4
+      - uses: peaceiris/actions-gh-pages@84c30a85c19949d7eee79c4ff27748b70285e453  # v4.1.0
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./application/neural-networks/week2/gradient-descent-game/docs
@@ -156,16 +170,20 @@ jobs:
     needs: [detect-changes, deploy-gradient]
     if: always() && !cancelled() && needs.detect-changes.result == 'success' && (needs.detect-changes.outputs.kg-playground == 'true' || github.event_name == 'workflow_dispatch')
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pages: write
+      id-token: write
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262  # v4.4.0
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020  # v4.4.0
         with:
           node-version: '20'
       - run: npm install
         working-directory: application/ai-fundamentals/week3/kg-playground
       - run: npm run build
         working-directory: application/ai-fundamentals/week3/kg-playground
-      - uses: peaceiris/actions-gh-pages@v4
+      - uses: peaceiris/actions-gh-pages@84c30a85c19949d7eee79c4ff27748b70285e453  # v4.1.0
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./application/ai-fundamentals/week3/kg-playground/build
@@ -178,14 +196,18 @@ jobs:
     needs: [detect-changes, deploy-kg-playground]
     if: always() && !cancelled() && needs.detect-changes.result == 'success' && (needs.detect-changes.outputs.model-eval == 'true' || github.event_name == 'workflow_dispatch')
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pages: write
+      id-token: write
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262  # v4.4.0
       - name: Prepare static files
         run: |
           mkdir -p deploy-model-eval
           cp application/ai-fundamentals/week3/model-evaluation-dashboard/index.html deploy-model-eval/
           cp application/ai-fundamentals/week3/model-evaluation-dashboard/app.js deploy-model-eval/
-      - uses: peaceiris/actions-gh-pages@v4
+      - uses: peaceiris/actions-gh-pages@84c30a85c19949d7eee79c4ff27748b70285e453  # v4.1.0
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./deploy-model-eval
@@ -198,9 +220,13 @@ jobs:
     needs: [detect-changes, deploy-model-eval]
     if: always() && !cancelled() && needs.detect-changes.result == 'success' && (needs.detect-changes.outputs.symbolic-logic == 'true' || github.event_name == 'workflow_dispatch')
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pages: write
+      id-token: write
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262  # v4.4.0
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020  # v4.4.0
         with:
           node-version: '18'
           cache: 'npm'
@@ -209,7 +235,7 @@ jobs:
         working-directory: application/ai-fundamentals/week1/symbolic-logic
       - run: npm run build
         working-directory: application/ai-fundamentals/week1/symbolic-logic
-      - uses: peaceiris/actions-gh-pages@v4
+      - uses: peaceiris/actions-gh-pages@84c30a85c19949d7eee79c4ff27748b70285e453  # v4.1.0
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./application/ai-fundamentals/week1/symbolic-logic/build
@@ -222,9 +248,13 @@ jobs:
     needs: [detect-changes, deploy-symbolic-logic]
     if: always() && !cancelled() && needs.detect-changes.result == 'success' && (needs.detect-changes.outputs.neural-network == 'true' || github.event_name == 'workflow_dispatch')
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pages: write
+      id-token: write
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262  # v4.4.0
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020  # v4.4.0
         with:
           node-version: '18'
           cache: 'npm'
@@ -233,7 +263,7 @@ jobs:
         working-directory: application/ai-fundamentals/week2/neural-network
       - run: npm run build
         working-directory: application/ai-fundamentals/week2/neural-network
-      - uses: peaceiris/actions-gh-pages@v4
+      - uses: peaceiris/actions-gh-pages@84c30a85c19949d7eee79c4ff27748b70285e453  # v4.1.0
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./application/ai-fundamentals/week2/neural-network/build
@@ -246,9 +276,13 @@ jobs:
     needs: [detect-changes, deploy-neural-network]
     if: always() && !cancelled() && needs.detect-changes.result == 'success' && (needs.detect-changes.outputs.rnn-explorer == 'true' || github.event_name == 'workflow_dispatch')
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pages: write
+      id-token: write
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262  # v4.4.0
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020  # v4.4.0
         with:
           node-version: '18'
           cache: 'npm'
@@ -257,7 +291,7 @@ jobs:
         working-directory: application/ai-fundamentals/week4/rnn-explorer
       - run: npm run build
         working-directory: application/ai-fundamentals/week4/rnn-explorer
-      - uses: peaceiris/actions-gh-pages@v4
+      - uses: peaceiris/actions-gh-pages@84c30a85c19949d7eee79c4ff27748b70285e453  # v4.1.0
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./application/ai-fundamentals/week4/rnn-explorer/build
@@ -270,9 +304,13 @@ jobs:
     needs: [detect-changes, deploy-rnn-explorer]
     if: always() && !cancelled() && needs.detect-changes.result == 'success' && (needs.detect-changes.outputs.cnn-explorer == 'true' || github.event_name == 'workflow_dispatch')
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pages: write
+      id-token: write
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262  # v4.4.0
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020  # v4.4.0
         with:
           node-version: '18'
           cache: 'npm'
@@ -281,7 +319,7 @@ jobs:
         working-directory: application/neural-networks/week3/cnn-explorer
       - run: npm run build
         working-directory: application/neural-networks/week3/cnn-explorer
-      - uses: peaceiris/actions-gh-pages@v4
+      - uses: peaceiris/actions-gh-pages@84c30a85c19949d7eee79c4ff27748b70285e453  # v4.1.0
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./application/neural-networks/week3/cnn-explorer/build
@@ -294,9 +332,13 @@ jobs:
     needs: [detect-changes, deploy-cnn-explorer]
     if: always() && !cancelled() && needs.detect-changes.result == 'success' && (needs.detect-changes.outputs.transformer-explorer == 'true' || github.event_name == 'workflow_dispatch')
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pages: write
+      id-token: write
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262  # v4.4.0
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020  # v4.4.0
         with:
           node-version: '18'
           cache: 'npm'
@@ -305,7 +347,7 @@ jobs:
         working-directory: application/neural-networks/week4/transformer-explorer
       - run: npm run build
         working-directory: application/neural-networks/week4/transformer-explorer
-      - uses: peaceiris/actions-gh-pages@v4
+      - uses: peaceiris/actions-gh-pages@84c30a85c19949d7eee79c4ff27748b70285e453  # v4.1.0
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./application/neural-networks/week4/transformer-explorer/build
@@ -318,9 +360,13 @@ jobs:
     needs: [detect-changes, deploy-transformer-explorer]
     if: always() && !cancelled() && needs.detect-changes.result == 'success' && (needs.detect-changes.outputs.bpe-explorer == 'true' || github.event_name == 'workflow_dispatch')
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pages: write
+      id-token: write
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262  # v4.4.0
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020  # v4.4.0
         with:
           node-version: '18'
           cache: 'npm'
@@ -329,7 +375,7 @@ jobs:
         working-directory: application/neural-networks/week4/bpe-explorer
       - run: npm run build
         working-directory: application/neural-networks/week4/bpe-explorer
-      - uses: peaceiris/actions-gh-pages@v4
+      - uses: peaceiris/actions-gh-pages@84c30a85c19949d7eee79c4ff27748b70285e453  # v4.1.0
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./application/neural-networks/week4/bpe-explorer/build

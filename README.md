@@ -23,67 +23,29 @@ From ML Fundamentals → LLMs & RAG → AI Agents → Production Deployment
 
 ## Learning Journey
 
-```
-╔══════════════════════════════════════════════════════════════════════════╗
-║                       AI ENGINEERING CURRICULUM                          ║
-║                          177 Lessons • 579 Hours                         ║
-╠══════════════════════════════════════════════════════════════════════════╣
-║                                                                          ║
-║  LAYER 1: FOUNDATIONS                              [18 lessons • 48h]   ║
-║  ┌────────────────────────────────────────────────────────────────────┐ ║
-║  │ Basic Machine Learning                                             │ ║
-║  │ • Linear Regression        • Classification    • Neural Networks   │ ║
-║  │ • Gradient Descent         • Backpropagation   • CNNs              │ ║
-║  │ • Loss Functions           • Optimization      • Transformers      │ ║
-║  └────────────────────────────────────────────────────────────────────┘ ║
-║                                 │                                        ║
-║                                 ▼                                        ║
-║  LAYER 2: DEEP LEARNING                            [26 lessons • 78h]   ║
-║  ┌────────────────────────────────────────────────────────────────────┐ ║
-║  │ Intermediate Architectures                                         │ ║
-║  │ • Computer Vision          • Object Detection   • Segmentation     │ ║
-║  │ • NLP & Embeddings         • Sequence Models    • Attention        │ ║
-║  │ • Transfer Learning        • Fine-tuning        • Evaluation       │ ║
-║  └────────────────────────────────────────────────────────────────────┘ ║
-║                                 │                                        ║
-║                                 ▼                                        ║
-║  LAYER 3: LLM ENGINEERING                          [15 lessons • 48h]   ║
-║  ┌────────────────────────────────────────────────────────────────────┐ ║
-║  │ Advanced Language Models                                           │ ║
-║  │ • Fine-tuning LLMs         • RAG Systems        • Vector DBs       │ ║
-║  │ • Prompt Engineering       • Context Windows    • Embeddings       │ ║
-║  │ • Model Evaluation         • Safety & Bias      • Optimization     │ ║
-║  └────────────────────────────────────────────────────────────────────┘ ║
-║                                 │                                        ║
-║                    ┌────────────┴────────────┐                          ║
-║                    ▼                         ▼                          ║
-║  LAYER 4A: AI AGENTS              LAYER 4B: PRODUCTION FRAMEWORKS       ║
-║  [18 lessons • 56h]                [35 lessons • 140h]                  ║
-║  ┌──────────────────────────┐     ┌──────────────────────────┐         ║
-║  │ Autonomous Systems       │     │ Modern AI Stack          │         ║
-║  │ • LangChain Basics       │     │ • LlamaIndex             │         ║
-║  │ • LangGraph Workflows    │     │ • DSPy                   │         ║
-║  │ • Memory & State         │     │ • Haystack               │         ║
-║  │ • Tool Use               │     │ • Vector Databases       │         ║
-║  │ • Multi-Agent Systems    │     │ • FastAPI & Deployment   │         ║
-║  │ • Production Deployment  │     │ • Monitoring & Ops       │         ║
-║  └──────────────────────────┘     └──────────────────────────┘         ║
-║                    │                         │                          ║
-║                    └────────────┬────────────┘                          ║
-║                                 ▼                                        ║
-║  LAYER 5: RESEARCH FRONTIERS                       [26 lessons • 92h]   ║
-║  ┌────────────────────────────────────────────────────────────────────┐ ║
-║  │ Expert Topics                                                      │ ║
-║  │ • Latest Research          • Model Alignment    • Interpretability │ ║
-║  │ • RLHF & Training          • Multimodal AI      • Efficiency       │ ║
-║  │ • Custom Architectures     • Paper Implementation                  │ ║
-║  └────────────────────────────────────────────────────────────────────┘ ║
-║                                                                          ║
-║  ELECTIVES: Specialized Topics                     [39 lessons • 117h]  ║
-║  ┌────────────────────────────────────────────────────────────────────┐ ║
-║  │ Classical AI • Domain-Specific Applications • Legacy Frameworks    │ ║
-║  └────────────────────────────────────────────────────────────────────┘ ║
-╚══════════════════════════════════════════════════════════════════════════╝
+The complete AI Engineering curriculum visualized:
+
+```mermaid
+graph TB
+    Start([Start Here]) --> Basic[Basic: ML Fundamentals<br/>18 lessons • 48h]
+    Basic --> Intermediate[Intermediate: Deep Learning<br/>26 lessons • 78h]
+    Intermediate --> Advanced[Advanced: LLM Engineering<br/>15 lessons • 48h]
+    Advanced --> Split{Choose Path}
+    Split --> Agents[Agents: AI Systems<br/>18 lessons • 56h]
+    Split --> Applied[Applied: Production<br/>35 lessons • 140h]
+    Agents --> Production[Production Ready]
+    Applied --> Production
+    Production --> Expert[Expert: Research<br/>26 lessons • 92h]
+    Expert --> End([AI Engineer])
+    
+    style Start fill:#e1f5e1
+    style Basic fill:#fff3cd
+    style Intermediate fill:#cfe2ff
+    style Advanced fill:#d1ecf1
+    style Agents fill:#f8d7da
+    style Applied fill:#d4edda
+    style Expert fill:#e2d9f3
+    style End fill:#d5f4e6
 ```
 
 ---
@@ -105,159 +67,315 @@ pip install -r requirements.txt
 jupyter lab
 ```
 
-**For live agent lessons:** Set `ANTHROPIC_API_KEY` environment variable. Without it, lessons replay recorded traces so you can still learn for free.
+**For live agent lessons:** Set `ANTHROPIC_API_KEY` environment variable. Without it, lessons replay recorded traces.
 
 ---
 
 ## Learning Paths
 
+### Path Overview
+
+```mermaid
+%%{init: {'theme':'base', 'themeVariables': { 'fontSize':'16px'}}}%%
+flowchart LR
+    subgraph Path1["Path 1: Complete Journey (579h)"]
+        P1A[Basic] --> P1B[Intermediate]
+        P1B --> P1C[Advanced]
+        P1C --> P1D[Agents]
+        P1D --> P1E[Applied]
+        P1E --> P1F[Expert]
+    end
+    
+    subgraph Path2["Path 2: Fast Track (110h)"]
+        P2A[Advanced<br/>A01-A04] --> P2B[Agents<br/>AG01-AG18]
+        P2B --> P2C[Applied<br/>AP01-AP10]
+    end
+    
+    subgraph Path3["Path 3: LLM to Prod (90h)"]
+        P3A[Agents<br/>AG02-AG18] --> P3B[Applied<br/>AP01-AP35]
+    end
+    
+    subgraph Path4["Path 4: Research (150h)"]
+        P4A[Basic<br/>skim] --> P4B[Intermediate]
+        P4B --> P4C[Advanced<br/>A05-A07]
+        P4C --> P4D[Expert]
+    end
+    
+    style Path1 fill:#e3f2fd
+    style Path2 fill:#fff3e0
+    style Path3 fill:#f3e5f5
+    style Path4 fill:#e8f5e9
 ```
-═══════════════════════════════════════════════════════════════════════════
-PATH 1: COMPLETE JOURNEY                                      [579 hours]
-═══════════════════════════════════════════════════════════════════════════
 
-START
-  │
-  ├──► BASIC (6 weeks)
-  │    ├─ Linear Regression & Neural Networks
-  │    ├─ CNNs & Computer Vision Basics  
-  │    └─ Transformers Introduction
-  │
-  ├──► INTERMEDIATE (9 weeks)
-  │    ├─ Advanced Computer Vision
-  │    ├─ NLP & Text Processing
-  │    └─ Sequence Models & Attention
-  │
-  ├──► ADVANCED (5 weeks)
-  │    ├─ LLM Fine-tuning
-  │    ├─ RAG Systems
-  │    └─ Prompt Engineering
-  │
-  ├──► AGENTS (6 weeks)
-  │    ├─ LangChain Fundamentals
-  │    ├─ LangGraph Workflows
-  │    └─ Production Agent Systems
-  │
-  ├──► APPLIED (12 weeks)
-  │    ├─ LlamaIndex & DSPy
-  │    ├─ Vector Databases
-  │    └─ FastAPI Deployment
-  │
-  └──► EXPERT (9 weeks)
-       └─ Research Frontiers & Cutting Edge
-END (47 weeks total)
+### Detailed Path 1: Complete Beginner (579 hours)
 
-═══════════════════════════════════════════════════════════════════════════
-PATH 2: FAST TRACK TO AGENTS                                  [110 hours]
-═══════════════════════════════════════════════════════════════════════════
-
-START (You know ML fundamentals)
-  │
-  ├──► ADVANCED: A01-A04 (2 weeks)
-  │    └─ LLM Fundamentals & RAG
-  │
-  ├──► AGENTS: AG01-AG18 (6 weeks)
-  │    └─ Complete Agent Development
-  │
-  └──► APPLIED: AP01-AP10 (4 weeks)
-       └─ Production Skills
-END (12 weeks total)
-
-═══════════════════════════════════════════════════════════════════════════
-PATH 3: LLM DEVELOPER TO PRODUCTION                            [90 hours]
-═══════════════════════════════════════════════════════════════════════════
-
-START (You know LLM APIs)
-  │
-  ├──► AGENTS: AG02-AG18 (5 weeks)
-  │    └─ Agent Systems & Workflows
-  │
-  └──► APPLIED: AP01-AP35 (7 weeks)
-       └─ Production Frameworks
-END (12 weeks total)
-
-═══════════════════════════════════════════════════════════════════════════
-PATH 4: RESEARCH TRACK                                        [150 hours]
-═══════════════════════════════════════════════════════════════════════════
-
-START
-  │
-  ├──► BASIC: Skim (2 weeks)
-  │
-  ├──► INTERMEDIATE (9 weeks)
-  │
-  ├──► ADVANCED: A05-A07 (2 weeks)
-  │
-  └──► EXPERT (9 weeks)
-END (22 weeks total)
+```mermaid
+gantt
+    title Complete Learning Journey (47 weeks)
+    dateFormat YYYY-MM-DD
+    axisFormat %W
+    
+    section Foundations
+    Basic ML Fundamentals           :a1, 2024-01-01, 6w
+    
+    section Deep Learning
+    Intermediate CNNs, RNNs         :a2, after a1, 9w
+    
+    section LLMs
+    Advanced LLM Engineering        :a3, after a2, 5w
+    
+    section Agents
+    Agents LangChain, LangGraph     :a4, after a3, 6w
+    
+    section Production
+    Applied LlamaIndex, DSPy        :a5, after a4, 12w
+    
+    section Research
+    Expert Frontiers                :a6, after a5, 9w
 ```
 
 ---
 
 ## Technology Stack
 
-```
-╔══════════════════════════════════════════════════════════════════════════╗
-║                          COMPLETE TECH STACK                             ║
-╠═══════════════════════╦═══════════════════════╦══════════════════════════╣
-║                       ║                       ║                          ║
-║   FOUNDATIONS         ║   AI AGENTS           ║   PRODUCTION             ║
-║                       ║                       ║                          ║
-║   • PyTorch           ║   • LangChain         ║   • FastAPI              ║
-║   • TensorFlow        ║   • LangGraph         ║   • Docker               ║
-║   • scikit-learn      ║   • LlamaIndex        ║   • Kubernetes           ║
-║   • NumPy/Pandas      ║   • DSPy              ║   • GitHub Actions       ║
-║   • Transformers      ║   • CrewAI            ║   • Prometheus           ║
-║   • Jupyter           ║   • Semantic Kernel   ║   • Grafana              ║
-║                       ║   • Haystack          ║   • Redis                ║
-║                       ║                       ║   • PostgreSQL           ║
-║                       ║                       ║                          ║
-╠═══════════════════════╬═══════════════════════╬══════════════════════════╣
-║                       ║                       ║                          ║
-║   VECTOR STORES       ║   LLM PROVIDERS       ║   FRAMEWORKS             ║
-║                       ║                       ║                          ║
-║   • Pinecone          ║   • OpenAI GPT-4      ║   • Guardrails AI        ║
-║   • Weaviate          ║   • Anthropic Claude  ║   • LangSmith            ║
-║   • Qdrant            ║   • Google Gemini     ║   • LangFuse             ║
-║   • Chroma            ║   • Cohere            ║   • Weights & Biases     ║
-║   • FAISS             ║   • Open-source LLMs  ║   • MLflow               ║
-║                       ║                       ║                          ║
-╚═══════════════════════╩═══════════════════════╩══════════════════════════╝
+```mermaid
+graph TD
+    subgraph Foundations
+        F1[PyTorch]
+        F2[TensorFlow]
+        F3[scikit-learn]
+        F4[NumPy/Pandas]
+    end
+    
+    subgraph Agents["AI Agents"]
+        A1[LangChain]
+        A2[LangGraph]
+        A3[LlamaIndex]
+        A4[DSPy]
+        A5[CrewAI]
+    end
+    
+    subgraph VectorDB["Vector Databases"]
+        V1[Pinecone]
+        V2[Weaviate]
+        V3[Qdrant]
+        V4[Chroma]
+    end
+    
+    subgraph LLMs["LLM Providers"]
+        L1[OpenAI GPT-4]
+        L2[Anthropic Claude]
+        L3[Google Gemini]
+        L4[Open Source]
+    end
+    
+    subgraph Production
+        P1[FastAPI]
+        P2[Docker]
+        P3[Kubernetes]
+        P4[CI/CD]
+    end
+    
+    Foundations --> Agents
+    Agents --> VectorDB
+    Agents --> LLMs
+    Agents --> Production
+    
+    style Foundations fill:#e3f2fd
+    style Agents fill:#fff3e0
+    style VectorDB fill:#f3e5f5
+    style LLMs fill:#e8f5e9
+    style Production fill:#fce4ec
 ```
 
 ---
 
-## Curriculum Status
+## Curriculum Architecture
 
+### System Design View
+
+```mermaid
+C4Context
+    title AI Engineering Curriculum - System Context
+    
+    Person(student, "Student", "Learns AI/ML from basics to production")
+    
+    System_Boundary(curriculum, "AI Curriculum") {
+        System(basic, "Basic Module", "ML Fundamentals")
+        System(intermediate, "Intermediate", "Deep Learning")
+        System(advanced, "Advanced", "LLMs & RAG")
+        System(agents, "Agents", "AI Agent Systems")
+        System(applied, "Applied", "Production Frameworks")
+        System(expert, "Expert", "Research Frontiers")
+    }
+    
+    System_Ext(demos, "Interactive Demos", "Browser-based visualizations")
+    System_Ext(tools, "Tools & Tests", "nbtest, gen_readmes")
+    
+    Rel(student, basic, "Starts with")
+    Rel(basic, intermediate, "Progresses to")
+    Rel(intermediate, advanced, "Advances to")
+    Rel(advanced, agents, "Learns")
+    Rel(advanced, applied, "Learns")
+    Rel(agents, expert, "Masters")
+    Rel(applied, expert, "Masters")
+    Rel(student, demos, "Practices with")
+    Rel(student, tools, "Tests with")
 ```
-╔══════════════════════════════════════════════════════════════════════════╗
-║                          MODULE COMPLETION                               ║
-╠════════════════════╦════════╦═══════╦══════════════════════════════════╣
-║ Module             ║ Lessons║ Hours ║ Progress                         ║
-╠════════════════════╬════════╬═══════╬══════════════════════════════════╣
-║ Basic              ║   18   ║  48   ║ [████████████████░░] 90%         ║
-║ Intermediate       ║   26   ║  78   ║ [███████████████░░░] 85%         ║
-║ Advanced           ║   15   ║  48   ║ [████████████████████] 100%      ║
-║ Agents             ║   18   ║  56   ║ [████████████████████] 100%      ║
-║ Applied            ║   35   ║ 140   ║ [████████░░░░░░░░░░░] 40%        ║
-║ Expert             ║   26   ║  92   ║ [░░░░░░░░░░░░░░░░░░░] 0%         ║
-║ Electives          ║   39   ║ 117   ║ [████████████████████] 100%      ║
-╠════════════════════╬════════╬═══════╬══════════════════════════════════╣
-║ TOTAL              ║  177   ║ 579   ║ [████████████░░░░░░░] 62%        ║
-╚════════════════════╩════════╩═══════╩══════════════════════════════════╝
+
+### Module Completion Status
+
+```mermaid
+%%{init: {'theme':'base'}}%%
+pie title Curriculum Progress (177 lessons)
+    "Basic (90%)" : 16
+    "Intermediate (85%)" : 22
+    "Advanced (100%)" : 15
+    "Agents (100%)" : 18
+    "Applied (40%)" : 14
+    "Expert (0%)" : 0
+    "Electives (100%)" : 39
 ```
 
-### Module Breakdown
+---
 
-| Tier | Focus | Key Topics | Status | Folder |
-|------|-------|------------|--------|--------|
-| **Basic** | ML Fundamentals | Regression, Neural Networks, CNNs, Transformers | 90% Complete | [`Basic/`](./Basic) |
-| **Intermediate** | Deep Learning | Computer Vision, NLP, Sequence Models, GANs | 85% Complete | [`Intermediate/`](./Intermediate) |
-| **Advanced** | LLM Engineering | Fine-tuning, RAG, Prompt Engineering, Evaluation | 100% Complete | [`Advanced/`](./Advanced) |
-| **Agents** | AI Agent Systems | LangChain, LangGraph, Tools, Memory, Multi-agent | 100% Complete | [`Agents/`](./Agents) |
-| **Applied** | Production | LlamaIndex, DSPy, Vector DBs, FastAPI, Deployment | 40% Complete | [`Applied/`](./Applied) |
-| **Expert** | Research | Frontier models, RLHF, Alignment, Interpretability | Planned | [`Expert/`](./Expert) |
-| **Electives** | Specialized | Classical AI, Domain-specific applications | 100% Available | [`Electives/`](./Electives) |
+## AI Agent Architecture
+
+```mermaid
+graph TB
+    User[User Input] --> Agent[Agent Orchestrator]
+    
+    Agent --> Plan[Planning Layer]
+    Agent --> Memory[Memory System]
+    Agent --> Tools[Tool Execution]
+    
+    subgraph Memory System
+        M1[Conversation Buffer]
+        M2[Vector Store]
+        M3[Entity Memory]
+    end
+    
+    subgraph Tools
+        T1[Web Search]
+        T2[Database Query]
+        T3[API Calls]
+        T4[File Operations]
+    end
+    
+    Plan --> LLM[Large Language Model]
+    Memory --> LLM
+    Tools --> LLM
+    
+    LLM --> Response[Response Generation]
+    Response --> Action{Next Action?}
+    
+    Action -->|Yes| Agent
+    Action -->|No| Output[Final Output]
+    
+    style User fill:#e3f2fd
+    style Agent fill:#fff3e0
+    style LLM fill:#f3e5f5
+    style Output fill:#e8f5e9
+```
+
+---
+
+## RAG System Architecture
+
+```mermaid
+sequenceDiagram
+    participant User
+    participant Query as Query Processing
+    participant Embed as Embedding Model
+    participant VectorDB as Vector Database
+    participant Retriever as Retrieval System
+    participant LLM as Large Language Model
+    participant Response as Response Generator
+    
+    User->>Query: Ask question
+    Query->>Embed: Convert to embedding
+    Embed->>VectorDB: Search similar vectors
+    VectorDB->>Retriever: Return top-k documents
+    Retriever->>LLM: Context + Query
+    LLM->>Response: Generate answer
+    Response->>User: Return grounded response
+    
+    Note over VectorDB: Pinecone, Weaviate,<br/>Qdrant, Chroma
+    Note over LLM: GPT-4, Claude,<br/>Gemini, OSS Models
+```
+
+---
+
+## Lesson Flow Architecture
+
+```mermaid
+stateDiagram-v2
+    [*] --> RealScenario: Start Lesson
+    
+    RealScenario --> Objectives: Understand Context
+    Objectives --> Concept: Clear Goals Set
+    Concept --> BuildFromScratch: Theory Learned
+    BuildFromScratch --> UseTools: Implementation Done
+    UseTools --> BreakIt: Tools Mastered
+    BreakIt --> Exercises: Limits Understood
+    
+    state Exercises {
+        [*] --> Practice
+        Practice --> Stretch
+        Stretch --> Challenge
+        Challenge --> [*]
+    }
+    
+    Exercises --> Checkpoint: Exercises Complete
+    Checkpoint --> [*]: Lesson Complete
+    
+    note right of RealScenario
+        Real-world problem
+        that needs solving
+    end note
+    
+    note right of Checkpoint
+        Self-assessment
+        questions
+    end note
+```
+
+---
+
+## Production Deployment Pipeline
+
+```mermaid
+graph LR
+    subgraph Development
+        D1[Code] --> D2[Test Locally]
+        D2 --> D3[nbtest.py]
+    end
+    
+    subgraph CI/CD
+        D3 --> C1[GitHub Actions]
+        C1 --> C2[Run Tests]
+        C2 --> C3[Build Docker]
+    end
+    
+    subgraph Deployment
+        C3 --> P1[Container Registry]
+        P1 --> P2[Kubernetes]
+        P2 --> P3[Load Balancer]
+    end
+    
+    subgraph Monitoring
+        P3 --> M1[Prometheus]
+        M1 --> M2[Grafana]
+        M2 --> M3[Alerts]
+    end
+    
+    M3 -->|Issues| D1
+    
+    style Development fill:#e3f2fd
+    style CI/CD fill:#fff3e0
+    style Deployment fill:#f3e5f5
+    style Monitoring fill:#e8f5e9
+```
 
 ---
 
@@ -265,54 +383,27 @@ END (22 weeks total)
 
 **Explore AI concepts visually** → [**Launch All Demos**](https://nexageapps.github.io/AI/)
 
-```
-╔══════════════════════════════════════════════════════════════════════════╗
-║                        INTERACTIVE LEARNING TOOLS                        ║
-╠══════════════════════════════════════════════════════════════════════════╣
-║                                                                          ║
-║  [1] SYMBOLIC AI & LOGIC                                                ║
-║  ┌────────────────────────────────────────────────────────────────────┐ ║
-║  │ • Wumpus World                   Logic & Knowledge Representation  │ ║
-║  │   → Learn: Symbolic reasoning, uncertainty, planning               │ ║
-║  └────────────────────────────────────────────────────────────────────┘ ║
-║                                                                          ║
-║  [2] OPTIMIZATION & TRAINING                                            ║
-║  ┌────────────────────────────────────────────────────────────────────┐ ║
-║  │ • Mountain Explorer               Gradient Descent Visualization   │ ║
-║  │   → Learn: Optimization, learning rates, convergence               │ ║
-║  │                                                                     │ ║
-║  │ • Blindfold Hill                  Learning Rate Tuning             │ ║
-║  │   → Learn: Hyperparameter effects, local minima                    │ ║
-║  └────────────────────────────────────────────────────────────────────┘ ║
-║                                                                          ║
-║  [3] NEURAL NETWORKS                                                    ║
-║  ┌────────────────────────────────────────────────────────────────────┐ ║
-║  │ • Neural Network Trainer          Forward & Backward Propagation   │ ║
-║  │   → Learn: Backprop, activations, weight updates                   │ ║
-║  │                                                                     │ ║
-║  │ • CNN Explorer                    Convolutional Neural Networks    │ ║
-║  │   → Learn: Convolution, pooling, feature maps                      │ ║
-║  │                                                                     │ ║
-║  │ • Data Preprocessing Studio       Feature Engineering              │ ║
-║  │   → Learn: Scaling, encoding, missing values                       │ ║
-║  └────────────────────────────────────────────────────────────────────┘ ║
-║                                                                          ║
-║  [4] LANGUAGE MODELS                                                    ║
-║  ┌────────────────────────────────────────────────────────────────────┐ ║
-║  │ • Knowledge Graph Playground      RDF & Semantic Search            │ ║
-║  │   → Learn: Triples, knowledge graphs, RAG                          │ ║
-║  │                                                                     │ ║
-║  │ • RNN Explorer                    Sequence Modeling                │ ║
-║  │   → Learn: RNN, LSTM, GRU, gates                                   │ ║
-║  │                                                                     │ ║
-║  │ • Transformer Explorer            Self-Attention Mechanism         │ ║
-║  │   → Learn: Q/K/V matrices, multi-head attention                    │ ║
-║  │                                                                     │ ║
-║  │ • BPE Explorer                    Tokenization                     │ ║
-║  │   → Learn: Byte pair encoding, subwords                            │ ║
-║  └────────────────────────────────────────────────────────────────────┘ ║
-║                                                                          ║
-╚══════════════════════════════════════════════════════════════════════════╝
+### Demo Categories
+
+```mermaid
+mindmap
+  root((Interactive<br/>Demos))
+    Symbolic AI
+      Wumpus World
+      Logic Systems
+    Optimization
+      Gradient Descent
+      Learning Rates
+      Convergence
+    Neural Networks
+      NN Trainer
+      CNN Explorer
+      Data Preprocessing
+    Language Models
+      Knowledge Graphs
+      RNN Explorer
+      Transformers
+      BPE Tokenizer
 ```
 
 ### Featured Demonstrations
@@ -324,21 +415,21 @@ END (22 weeks total)
 <img src="https://via.placeholder.com/300x200/2C3E50/ECF0F1?text=Wumpus+World" alt="Wumpus World" width="100%"/>
 <p><strong>Symbolic Logic & Reasoning</strong></p>
 <p>Knowledge representation, uncertainty</p>
-<p><a href="https://nexageapps.github.io/AI/wumpus">► Launch Demo</a></p>
+<p><a href="https://nexageapps.github.io/AI/wumpus">Launch Demo</a></p>
 </td>
 <td width="33%" align="center">
 <h4>Gradient Descent</h4>
 <img src="https://via.placeholder.com/300x200/34495E/ECF0F1?text=Mountain+Explorer" alt="Mountain Explorer" width="100%"/>
 <p><strong>Optimization Fundamentals</strong></p>
 <p>Learning rates, convergence</p>
-<p><a href="https://nexageapps.github.io/AI/gradient-descent">► Launch Demo</a></p>
+<p><a href="https://nexageapps.github.io/AI/gradient-descent">Launch Demo</a></p>
 </td>
 <td width="33%" align="center">
 <h4>CNN Explorer</h4>
 <img src="https://via.placeholder.com/300x200/16A085/ECF0F1?text=CNN+Explorer" alt="CNN Explorer" width="100%"/>
 <p><strong>Convolutional Networks</strong></p>
 <p>Feature maps, pooling, filters</p>
-<p><a href="https://nexageapps.github.io/AI/neural-networks/week3/cnn-explorer/">► Launch Demo</a></p>
+<p><a href="https://nexageapps.github.io/AI/neural-networks/week3/cnn-explorer/">Launch Demo</a></p>
 </td>
 </tr>
 <tr>
@@ -347,131 +438,75 @@ END (22 weeks total)
 <img src="https://via.placeholder.com/300x200/D35400/ECF0F1?text=KG+Playground" alt="KG Playground" width="100%"/>
 <p><strong>Semantic Reasoning</strong></p>
 <p>RDF triples, graph queries</p>
-<p><a href="https://nexageapps.github.io/AI/ai-fundamentals/week3/kg-playground/">► Launch Demo</a></p>
+<p><a href="https://nexageapps.github.io/AI/ai-fundamentals/week3/kg-playground/">Launch Demo</a></p>
 </td>
 <td width="33%" align="center">
 <h4>Transformer</h4>
 <img src="https://via.placeholder.com/300x200/8E44AD/ECF0F1?text=Transformer" alt="Transformer" width="100%"/>
 <p><strong>Self-Attention</strong></p>
 <p>Q/K/V matrices, multi-head attention</p>
-<p><a href="https://nexageapps.github.io/AI/neural-networks/week4/transformer-explorer/">► Launch Demo</a></p>
+<p><a href="https://nexageapps.github.io/AI/neural-networks/week4/transformer-explorer/">Launch Demo</a></p>
 </td>
 <td width="33%" align="center">
 <h4>BPE Tokenization</h4>
 <img src="https://via.placeholder.com/300x200/C0392B/ECF0F1?text=BPE+Explorer" alt="BPE Explorer" width="100%"/>
 <p><strong>Subword Encoding</strong></p>
 <p>Byte pair encoding, vocabulary</p>
-<p><a href="https://nexageapps.github.io/AI/neural-networks/week4/bpe-explorer/">► Launch Demo</a></p>
+<p><a href="https://nexageapps.github.io/AI/neural-networks/week4/bpe-explorer/">Launch Demo</a></p>
 </td>
 </tr>
 </table>
 
-[**View All 14+ Demonstrations →**](https://nexageapps.github.io/AI/)
+[**View All 14+ Demonstrations**](https://nexageapps.github.io/AI/)
 
 ---
 
-## Why This Curriculum
+## Lesson Design Pattern
 
-```
-╔══════════════════════════════════════════════════════════════════════════╗
-║                        LESSON DESIGN PATTERN                             ║
-╠══════════════════════════════════════════════════════════════════════════╣
-║                                                                          ║
-║  [STEP 1] REAL-WORLD SCENARIO                                           ║
-║  ┌────────────────────────────────────────────────────────────────────┐ ║
-║  │ "You're building a customer service chatbot that needs to           │ ║
-║  │  remember conversation context across multiple interactions..."     │ ║
-║  └────────────────────────────────────────────────────────────────────┘ ║
-║                                  │                                       ║
-║                                  ▼                                       ║
-║  [STEP 2] LEARNING OBJECTIVES                                           ║
-║  ┌────────────────────────────────────────────────────────────────────┐ ║
-║  │ ✓ Understand context windows and token limits                       │ ║
-║  │ ✓ Implement conversation memory systems                             │ ║
-║  │ ✓ Use vector stores for long-term memory                            │ ║
-║  │ ✓ Handle context overflow gracefully                                │ ║
-║  └────────────────────────────────────────────────────────────────────┘ ║
-║                                  │                                       ║
-║                                  ▼                                       ║
-║  [STEP 3] CONCEPT EXPLANATION                                           ║
-║  ┌────────────────────────────────────────────────────────────────────┐ ║
-║  │ Theory → Visualizations → Mathematical Foundations → Examples       │ ║
-║  └────────────────────────────────────────────────────────────────────┘ ║
-║                                  │                                       ║
-║                                  ▼                                       ║
-║  [STEP 4] BUILD FROM SCRATCH                                            ║
-║  ┌────────────────────────────────────────────────────────────────────┐ ║
-║  │ class ConversationMemory:                                           │ ║
-║  │     def __init__(self, max_tokens=2000):                            │ ║
-║  │         self.history = []                                           │ ║
-║  │         self.max_tokens = max_tokens                                │ ║
-║  │                                                                     │ ║
-║  │     def add_message(self, role, content):                           │ ║
-║  │         # Your implementation here                                  │ ║
-║  │         pass                                                        │ ║
-║  └────────────────────────────────────────────────────────────────────┘ ║
-║                                  │                                       ║
-║                                  ▼                                       ║
-║  [STEP 5] USE PRODUCTION TOOLS                                          ║
-║  ┌────────────────────────────────────────────────────────────────────┐ ║
-║  │ from langchain.memory import ConversationBufferMemory              │ ║
-║  │ from langchain.chains import ConversationChain                      │ ║
-║  │                                                                     │ ║
-║  │ memory = ConversationBufferMemory()                                 │ ║
-║  │ chain = ConversationChain(llm=llm, memory=memory)                   │ ║
-║  └────────────────────────────────────────────────────────────────────┘ ║
-║                                  │                                       ║
-║                                  ▼                                       ║
-║  [STEP 6] BREAK IT & UNDERSTAND LIMITS                                  ║
-║  ┌────────────────────────────────────────────────────────────────────┐ ║
-║  │ What happens when:                                                  │ ║
-║  │ • Conversation exceeds token limit?                                 │ ║
-║  │ • Multiple users share the same session?                            │ ║
-║  │ • Context needs to persist across restarts?                         │ ║
-║  │ • You need semantic search over history?                            │ ║
-║  └────────────────────────────────────────────────────────────────────┘ ║
-║                                  │                                       ║
-║                                  ▼                                       ║
-║  [STEP 7] THREE-TIER EXERCISES                                          ║
-║  ┌──────────────────┬──────────────────┬──────────────────────────────┐ ║
-║  │ [PRACTICE]       │ [STRETCH]        │ [CHALLENGE]                  │ ║
-║  │ Solidify basics  │ Apply to new     │ Push your limits             │ ║
-║  │                  │ problems         │                              │ ║
-║  │ • Implement      │ • Add TTL to     │ • Build hybrid memory        │ ║
-║  │   basic memory   │   messages       │   system combining           │ ║
-║  │ • Test with      │ • Add semantic   │   buffer + vector store      │ ║
-║  │   sample conv    │   search         │ • Implement smart            │ ║
-║  │                  │ • Handle errors  │   summarization              │ ║
-║  └──────────────────┴──────────────────┴──────────────────────────────┘ ║
-║                                  │                                       ║
-║                                  ▼                                       ║
-║  [STEP 8] CHECKPOINT & ASSESSMENT                                       ║
-║  ┌────────────────────────────────────────────────────────────────────┐ ║
-║  │ □ Can you explain how conversation memory works?                    │ ║
-║  │ □ When would you choose buffer vs. vector memory?                   │ ║
-║  │ □ What are the tradeoffs of each approach?                          │ ║
-║  │ □ How do you handle context overflow?                               │ ║
-║  └────────────────────────────────────────────────────────────────────┘ ║
-║                                                                          ║
-╚══════════════════════════════════════════════════════════════════════════╝
+Every lesson follows this proven structure:
 
-              Each lesson: 2-4 hours • Hands-on • Production-ready
+```mermaid
+flowchart TD
+    A[1. Real-World Scenario] --> B[2. Learning Objectives]
+    B --> C[3. Concept Explanation]
+    C --> D[4. Build From Scratch]
+    D --> E[5. Use Production Tools]
+    E --> F[6. Break It & Understand Limits]
+    F --> G[7. Three-Tier Exercises]
+    
+    G --> G1[Practice:<br/>Solidify Basics]
+    G --> G2[Stretch:<br/>Apply to New Problems]
+    G --> G3[Challenge:<br/>Push Your Limits]
+    
+    G1 --> H[8. Checkpoint & Assessment]
+    G2 --> H
+    G3 --> H
+    
+    H --> I{Pass?}
+    I -->|Yes| J[Next Lesson]
+    I -->|No| K[Review & Retry]
+    K --> D
+    
+    style A fill:#e3f2fd
+    style B fill:#fff3e0
+    style C fill:#f3e5f5
+    style D fill:#e8f5e9
+    style E fill:#fce4ec
+    style F fill:#f0f4c3
+    style H fill:#c5e1a5
+    style J fill:#b2dfdb
 ```
 
 ### Core Principles
 
-```
-┌──────────────────────────────────────────────────────────────────┐
-│ ✓  Runs offline, free, no GPU required                           │
-│ ✓  Production-ready code examples                                │
-│ ✓  Industry-standard tools and frameworks                        │
-│ ✓  Hands-on exercises at every step                              │
-│ ✓  Progressive difficulty curve                                  │
-│ ✓  Clear, measurable learning objectives                         │
-│ ✓  Self-paced with checkpoints                                   │
-│ ✓  Open-source and free forever                                  │
-└──────────────────────────────────────────────────────────────────┘
-```
+- **Runs offline, free, no GPU required**
+- **Production-ready code examples**
+- **Industry-standard tools and frameworks**
+- **Hands-on exercises at every step**
+- **Progressive difficulty curve**
+- **Clear, measurable learning objectives**
+- **Self-paced with checkpoints**
+- **Open-source and free forever**
 
 ---
 
@@ -480,166 +515,141 @@ END (22 weeks total)
 ```
 AI/
 │
-├─── Basic/                           # 18 lessons: ML fundamentals
-│    ├─ B01-tensors-and-linear-algebra.ipynb
-│    ├─ B02-linear-regression.ipynb
-│    ├─ B05-neural-networks.ipynb
-│    ├─ B09-cnns.ipynb
-│    └─ B11-transformers.ipynb
+├── Basic/                           # 18 lessons: ML fundamentals
+├── Intermediate/                    # 26 lessons: Deep learning
+├── Advanced/                        # 15 lessons: LLMs & RAG
+├── Agents/                          # 18 lessons: AI agents
+├── Applied/                         # 35 lessons: Production
+├── Expert/                          # 26 lessons: Research
+├── Electives/                       # 39 lessons: Specialized
 │
-├─── Intermediate/                    # 26 lessons: Deep learning
-│    ├─ I01-advanced-cnns.ipynb
-│    ├─ I03-rnns-and-lstms.ipynb
-│    ├─ I04-attention-mechanisms.ipynb
-│    └─ I10-capstone.ipynb
+├── agentkit/                        # Shared library for agents
+├── tools/                           # Build, test, curriculum tools
+├── application/                     # Interactive demos
+├── documentation/                   # All guides
+│   ├── diagrams/                    # Excalidraw & Mermaid sources
+│   ├── CURRICULUM.md
+│   ├── LEARNING_SEQUENCE.md
+│   └── QUICK_REFERENCE.md
 │
-├─── Advanced/                        # 15 lessons: LLMs & RAG
-│    ├─ A01-fine-tuning-llms.ipynb
-│    ├─ A03-rag-systems.ipynb
-│    ├─ A04-prompt-engineering.ipynb
-│    └─ A10-capstone.ipynb
-│
-├─── Agents/                          # 18 lessons: AI agents
-│    ├─ AG01-intro-to-agents.ipynb
-│    ├─ AG03-tools-and-function-calling.ipynb
-│    ├─ AG08-langgraph-fundamentals.ipynb
-│    ├─ AG11-multi-agent-systems.ipynb
-│    └─ AG18-capstone.ipynb
-│
-├─── Applied/                         # 35 lessons: Production
-│    ├─ AP01-llamaindex-intro.ipynb
-│    ├─ AP07-dspy-fundamentals.ipynb
-│    ├─ AP20-vector-db-production.ipynb
-│    ├─ AP31-fastapi-deployment.ipynb
-│    └─ AP35-capstone.ipynb
-│
-├─── Expert/                          # 26 lessons: Research
-│    ├─ E01-rlhf-and-alignment.ipynb
-│    ├─ E10-interpretability.ipynb
-│    └─ E26-capstone.ipynb
-│
-├─── Electives/                       # 39 lessons: Specialized
-│    ├─ Classical-AI/
-│    ├─ Domain-Specific/
-│    └─ Legacy-Frameworks/
-│
-├─── agentkit/                        # Shared library for agents
-│    ├─ __init__.py
-│    ├─ agent.py
-│    ├─ tools.py
-│    └─ tests/
-│
-├─── tools/                           # Build, test, curriculum tools
-│    ├─ curriculum.json
-│    ├─ nbtest.py
-│    ├─ gen_readmes.py
-│    └─ check_names.py
-│
-├─── application/                     # Interactive demos
-│    ├─ ai-fundamentals/
-│    ├─ neural-networks/
-│    └─ README.md
-│
-├─── documentation/                   # All guides
-│    ├─ CURRICULUM.md
-│    ├─ LEARNING_SEQUENCE.md
-│    ├─ LEARNING_ARCHITECTURE.md
-│    ├─ QUICK_REFERENCE.md
-│    └─ STUDENT_GUIDE.md
-│
-└─── README.md                        # This file
+└── README.md                        # This file
 ```
 
 ---
 
-## Documentation
+## Module Dependencies
 
+```mermaid
+graph LR
+    subgraph Prerequisites
+        P1[Python Basics]
+        P2[Math Fundamentals]
+    end
+    
+    P1 --> Basic
+    P2 --> Basic
+    
+    Basic --> Intermediate
+    Intermediate --> Advanced
+    
+    Advanced --> Agents
+    Advanced --> Applied
+    
+    Agents -.->|Optional| Applied
+    Applied -.->|Optional| Agents
+    
+    Agents --> Expert
+    Applied --> Expert
+    
+    style Basic fill:#90caf9
+    style Intermediate fill:#ffcc80
+    style Advanced fill:#ce93d8
+    style Agents fill:#a5d6a7
+    style Applied fill:#ef9a9a
+    style Expert fill:#bcaaa4
 ```
-╔══════════════════════════════════════════════════════════════════════════╗
-║                        DOCUMENTATION HUB                                 ║
-╠══════════════════════════════════════════════════════════════════════════╣
-║                                                                          ║
-║  CORE DOCUMENTS                                                          ║
-║  ┌────────────────────────────────────────────────────────────────────┐ ║
-║  │ • CURRICULUM.md              Complete lesson catalog                │ ║
-║  │ • LEARNING_SEQUENCE.md       Week-by-week study plans              │ ║
-║  │ • LEARNING_ARCHITECTURE.md   Visual diagrams & architecture        │ ║
-║  │ • QUICK_REFERENCE.md         Fast command lookup                   │ ║
-║  │ • STUDENT_GUIDE.md           Study strategies & tips               │ ║
-║  └────────────────────────────────────────────────────────────────────┘ ║
-║                                                                          ║
-║  GETTING STARTED                                                         ║
-║  ┌────────────────────────────────────────────────────────────────────┐ ║
-║  │ • Applied/SETUP.md           Environment setup guide               │ ║
-║  │ • Applied/GETTING_STARTED    Your first agent tutorial             │ ║
-║  │ • CONTRIBUTING.md            How to contribute                     │ ║
-║  └────────────────────────────────────────────────────────────────────┘ ║
-║                                                                          ║
-║  SPECIALIZED GUIDES                                                      ║
-║  ┌────────────────────────────────────────────────────────────────────┐ ║
-║  │ • PROJECT_IDEAS.md           Practice projects                     │ ║
-║  │ • EXAM_PREPARATION.md        Study for assessments                 │ ║
-║  │ • PROGRESS_TRACKER.md        Track your journey                    │ ║
-║  └────────────────────────────────────────────────────────────────────┘ ║
-║                                                                          ║
-╚══════════════════════════════════════════════════════════════════════════╝
-```
-
-[**Browse All Documentation →**](./documentation/)
 
 ---
 
-## Contributing
+## Contributing Workflow
 
-```
-╔══════════════════════════════════════════════════════════════════════════╗
-║                       WAYS TO CONTRIBUTE                                 ║
-╠══════════════════════════════════════════════════════════════════════════╣
-║                                                                          ║
-║  [1] REPORT ISSUES                                                       ║
-║  ┌────────────────────────────────────────────────────────────────────┐ ║
-║  │ Found a bug or error? Open an issue on GitHub                       │ ║
-║  └────────────────────────────────────────────────────────────────────┘ ║
-║                                                                          ║
-║  [2] FIX TYPOS & IMPROVE DOCS                                           ║
-║  ┌────────────────────────────────────────────────────────────────────┐ ║
-║  │ Edit the file directly and submit a pull request                    │ ║
-║  └────────────────────────────────────────────────────────────────────┘ ║
-║                                                                          ║
-║  [3] SUGGEST NEW LESSONS                                                ║
-║  ┌────────────────────────────────────────────────────────────────────┐ ║
-║  │ Propose topics via GitHub issues (use lesson proposal template)     │ ║
-║  └────────────────────────────────────────────────────────────────────┘ ║
-║                                                                          ║
-║  [4] IMPROVE CODE EXAMPLES                                              ║
-║  ┌────────────────────────────────────────────────────────────────────┐ ║
-║  │ Better implementations, clearer explanations, more examples         │ ║
-║  └────────────────────────────────────────────────────────────────────┘ ║
-║                                                                          ║
-║  [5] CREATE TRANSLATIONS                                                ║
-║  ┌────────────────────────────────────────────────────────────────────┐ ║
-║  │ Help make this accessible to non-English speakers                   │ ║
-║  └────────────────────────────────────────────────────────────────────┘ ║
-║                                                                          ║
-║  [6] STAR THE REPOSITORY                                                ║
-║  ┌────────────────────────────────────────────────────────────────────┐ ║
-║  │ Show your support and help others discover this project             │ ║
-║  └────────────────────────────────────────────────────────────────────┘ ║
-║                                                                          ║
-╚══════════════════════════════════════════════════════════════════════════╝
+```mermaid
+gitGraph
+    commit id: "Initial Curriculum"
+    branch feature/new-lesson
+    checkout feature/new-lesson
+    commit id: "Draft Lesson AG19"
+    commit id: "Add Exercises"
+    commit id: "Test with nbtest.py"
+    checkout main
+    merge feature/new-lesson tag: "v1.1.0"
+    commit id: "Update README"
+    branch bugfix/ag03-typo
+    checkout bugfix/ag03-typo
+    commit id: "Fix Typo"
+    checkout main
+    merge bugfix/ag03-typo
+    commit id: "Deploy"
 ```
 
-**Read the full guide:** [CONTRIBUTING.md](./CONTRIBUTING.md)
+### Contribution Process
 
-### Quality Standards
+1. **Fork** the repository
+2. **Create** a feature branch
+3. **Write** or improve lessons
+4. **Test** with `python tools/nbtest.py`
+5. **Submit** a pull request
 
+[**Read Full Contributing Guide**](./CONTRIBUTING.md)
+
+---
+
+## Quality Standards
+
+```mermaid
+flowchart LR
+    A[Write Lesson] --> B{Follows<br/>Template?}
+    B -->|No| A
+    B -->|Yes| C[Run nbtest.py]
+    
+    C --> D{Tests<br/>Pass?}
+    D -->|No| E[Fix Issues]
+    E --> C
+    D -->|Yes| F[Update README]
+    
+    F --> G[Submit PR]
+    G --> H{Code<br/>Review}
+    H -->|Changes Needed| E
+    H -->|Approved| I[Merge]
+    
+    style A fill:#e3f2fd
+    style C fill:#fff3e0
+    style F fill:#f3e5f5
+    style I fill:#e8f5e9
 ```
-All lessons must:
-├─ Follow the template in CURRICULUM.md
-├─ Pass automated tests: python tools/nbtest.py
-├─ Run offline without API keys (use traces for LLM lessons)
-├─ Include Practice/Stretch/Challenge exercises
-└─ Have clear learning objectives and checkpoints
+
+---
+
+## Learning Progress Tracker
+
+```mermaid
+journey
+    title Student Learning Journey
+    section Week 1-6
+      Learn ML Basics: 3: Student
+      Neural Networks: 4: Student
+      First Model: 5: Student
+    section Week 7-15
+      CNNs & Vision: 4: Student
+      NLP & Text: 4: Student
+      Transformers: 5: Student
+    section Week 16-20
+      Fine-tune LLMs: 5: Student
+      Build RAG: 5: Student
+    section Week 21-26
+      Create Agents: 5: Student
+      LangGraph: 4: Student
+      Production: 5: Student
 ```
 
 ---
@@ -648,80 +658,75 @@ All lessons must:
 
 ### MIT License - Free to Use
 
-```
-╔══════════════════════════════════════════════════════════════════════════╗
-║                              LICENSE                                     ║
-╠══════════════════════════════════════════════════════════════════════════╣
-║                                                                          ║
-║  This repository is FREE, OPEN-SOURCE educational material (MIT).       ║
-║                                                                          ║
-║  YOU CAN:                              YOU CANNOT:                       ║
-║  ┌──────────────────────────────┐     ┌──────────────────────────────┐ ║
-║  │ ✓ Learn from it              │     │ ✗ Claim it as your own       │ ║
-║  │ ✓ Teach with it              │     │ ✗ Remove attribution         │ ║
-║  │ ✓ Fork and modify it         │     │ ✗ Violate academic policies  │ ║
-║  │ ✓ Use in your courses        │     │ ✗ Submit as coursework       │ ║
-║  │ ✓ Build upon it              │     │   without understanding      │ ║
-║  │ ✓ Share it                   │     │                              │ ║
-║  └──────────────────────────────┘     └──────────────────────────────┘ ║
-║                                                                          ║
-╚══════════════════════════════════════════════════════════════════════════╝
-```
+This repository is **free, open-source educational material** (MIT).
 
-### Academic Integrity
-
-```
-APPROPRIATE USE                        INAPPROPRIATE USE
-┌──────────────────────────────┐      ┌──────────────────────────────┐
-│ • Learning concepts           │      │ • Copying for assignments    │
-│ • Understanding               │      │ • Submitting as your work    │
-│   implementations             │      │ • Using in closed-book tests │
-│ • Preparing for exams         │      │ • Violating academic honesty │
-│ • Building original projects  │      │ • Direct plagiarism          │
-│ • Getting inspiration         │      │                              │
-└──────────────────────────────┘      └──────────────────────────────┘
+```mermaid
+graph TD
+    A[AI Curriculum<br/>MIT License] --> B{You Can}
+    A --> C{You Cannot}
+    
+    B --> B1[Learn from it]
+    B --> B2[Teach with it]
+    B --> B3[Fork & modify]
+    B --> B4[Use in courses]
+    B --> B5[Build upon it]
+    
+    C --> C1[Claim as yours]
+    C --> C2[Remove attribution]
+    C --> C3[Violate policies]
+    C --> C4[Submit as coursework<br/>without understanding]
+    
+    style A fill:#e3f2fd
+    style B fill:#e8f5e9
+    style C fill:#ffcdd2
 ```
 
 **Full policy:** [ACADEMIC_INTEGRITY.md](./documentation/ACADEMIC_INTEGRITY.md)
 
 ---
 
+## Roadmap
+
+```mermaid
+timeline
+    title Curriculum Development Roadmap
+    2024 Q1 : Basic & Intermediate : Complete curriculum : 14+ demos
+    2024 Q2 : Advanced & Agents : LangChain/LangGraph : Production ready
+    2024 Q3 : Applied Module : LlamaIndex : DSPy : Vector DBs
+    2024 Q4 : Expert Module : Research topics : Paper implementations
+    2025 Q1 : Translations : Video tutorials : Community showcase
+```
+
+[**View Detailed Roadmap**](./documentation/VIRAL_CURRICULUM_UPDATE_2025.md)
+
+---
+
 ## Support This Project
 
-```
-╔══════════════════════════════════════════════════════════════════════════╗
-║                         SHOW YOUR SUPPORT                                ║
-╠══════════════════════════════════════════════════════════════════════════╣
-║                                                                          ║
-║  ┌────────────────────────────────────────────────────────────────────┐ ║
-║  │ [★] Star the repository on GitHub                                  │ ║
-║  │     Help others discover this resource                             │ ║
-║  └────────────────────────────────────────────────────────────────────┘ ║
-║                                                                          ║
-║  ┌────────────────────────────────────────────────────────────────────┐ ║
-║  │ [↗] Share with your network                                        │ ║
-║  │     Spread the word on social media                                │ ║
-║  └────────────────────────────────────────────────────────────────────┘ ║
-║                                                                          ║
-║  ┌────────────────────────────────────────────────────────────────────┐ ║
-║  │ [≡] Contribute lessons or fixes                                    │ ║
-║  │     Help improve the curriculum                                    │ ║
-║  └────────────────────────────────────────────────────────────────────┘ ║
-║                                                                          ║
-║  ┌────────────────────────────────────────────────────────────────────┐ ║
-║  │ [◆] Write about your experience                                    │ ║
-║  │     Share your learning journey                                    │ ║
-║  └────────────────────────────────────────────────────────────────────┘ ║
-║                                                                          ║
-║  ┌────────────────────────────────────────────────────────────────────┐ ║
-║  │ [☕] Buy me a book                                                  │ ║
-║  │     Support continued development                                  │ ║
-║  └────────────────────────────────────────────────────────────────────┘ ║
-║                                                                          ║
-╚══════════════════════════════════════════════════════════════════════════╝
-```
-
 <div align="center">
+
+```mermaid
+mindmap
+  root((Support<br/>Options))
+    Star Repository
+      Help visibility
+      Show appreciation
+    Share
+      Social media
+      Blog posts
+      Word of mouth
+    Contribute
+      Fix bugs
+      Add lessons
+      Improve docs
+    Translate
+      Spanish
+      Chinese
+      Others
+    Sponsor
+      Buy me a book
+      GitHub Sponsors
+```
 
 [![Star on GitHub](https://img.shields.io/github/stars/nexageapps/AI?style=social)](https://github.com/nexageapps/AI/stargazers)
 [![Buy Me A Book](https://img.shields.io/badge/Buy%20Me%20A%20Book-Support-yellow.svg)](https://buymeacoffee.com/fcc4sbsx5f6)
@@ -734,93 +739,27 @@ APPROPRIATE USE                        INAPPROPRIATE USE
 
 ---
 
-## Who Is This For
+## Target Audience
 
-```
-╔══════════════════════════════════════════════════════════════════════════╗
-║                           TARGET AUDIENCE                                ║
-╠══════════════════════════════════════════════════════════════════════════╣
-║                                                                          ║
-║  [→] COMPUTER SCIENCE STUDENTS                                          ║
-║      Supplement coursework with hands-on projects and practical skills  ║
-║                                                                          ║
-║  [→] SOFTWARE ENGINEERS                                                 ║
-║      Transition into AI/ML engineering roles with production examples   ║
-║                                                                          ║
-║  [→] DATA SCIENTISTS                                                    ║
-║      Expand skillset into deep learning, LLMs, and AI agents            ║
-║                                                                          ║
-║  [→] PRODUCT MANAGERS & FOUNDERS                                        ║
-║      Understand AI capabilities, limitations, and implementation        ║
-║                                                                          ║
-║  [→] EDUCATORS & INSTRUCTORS                                            ║
-║      Use as complete curriculum or supplement for your courses          ║
-║                                                                          ║
-║  [→] SELF-LEARNERS & CAREER CHANGERS                                    ║
-║      Master AI engineering at your own pace, from zero to production    ║
-║                                                                          ║
-╚══════════════════════════════════════════════════════════════════════════╝
-```
-
----
-
-## Roadmap
-
-### Current Status
-
-```
-COMPLETED
-├─ 43 production-ready lessons
-├─ 88 retained lessons from previous curriculum
-├─ 14+ interactive web demonstrations
-├─ Complete LangChain & LangGraph curriculum
-├─ Full Advanced track (LLMs, RAG, prompting)
-└─ Comprehensive documentation
-
-IN PROGRESS
-├─ Applied module (LlamaIndex, DSPy, Haystack)
-├─ Expert module (Research frontiers)
-└─ Additional interactive visualizations
-
-PLANNED
-├─ Video tutorials for complex topics
-├─ More production deployment examples
-├─ Multi-language support (Spanish, Chinese, etc.)
-└─ Community showcase of projects built with this curriculum
-```
-
-[**View Detailed Roadmap →**](./documentation/VIRAL_CURRICULUM_UPDATE_2025.md)
-
----
-
-## Get Help
-
-```
-╔══════════════════════════════════════════════════════════════════════════╗
-║                      COMMUNITY & SUPPORT                                 ║
-╠══════════════════════════════════════════════════════════════════════════╣
-║                                                                          ║
-║  QUESTIONS ABOUT LESSONS                                                 ║
-║  ┌────────────────────────────────────────────────────────────────────┐ ║
-║  │ Open a GitHub issue with the lesson ID (e.g., "AG03 question")     │ ║
-║  └────────────────────────────────────────────────────────────────────┘ ║
-║                                                                          ║
-║  FOUND A BUG OR ERROR                                                    ║
-║  ┌────────────────────────────────────────────────────────────────────┐ ║
-║  │ Report via GitHub issues with details: lesson, cell, expected       │ ║
-║  └────────────────────────────────────────────────────────────────────┘ ║
-║                                                                          ║
-║  FEATURE SUGGESTIONS                                                     ║
-║  ┌────────────────────────────────────────────────────────────────────┐ ║
-║  │ Start a GitHub discussion to propose new lessons or features        │ ║
-║  └────────────────────────────────────────────────────────────────────┘ ║
-║                                                                          ║
-║  GENERAL CHAT                                                            ║
-║  ┌────────────────────────────────────────────────────────────────────┐ ║
-║  │ Join our Discord community to connect with other learners           │ ║
-║  └────────────────────────────────────────────────────────────────────┘ ║
-║                                                                          ║
-╚══════════════════════════════════════════════════════════════════════════╝
+```mermaid
+mindmap
+  root((Who Is<br/>This For))
+    Students
+      CS Undergrads
+      Graduate Students
+      Self-Learners
+    Professionals
+      Software Engineers
+      Data Scientists
+      ML Engineers
+    Educators
+      University Instructors
+      Bootcamp Teachers
+      Online Educators
+    Leaders
+      CTOs
+      Product Managers
+      Technical Founders
 ```
 
 ---
@@ -831,16 +770,18 @@ PLANNED
 
 **177 lessons • 579 hours • Zero to production AI engineer**
 
-```
-┌───────────────────────────────────────────────────────────┐
-│                                                           │
-│  Choose your path and begin building AI systems today    │
-│                                                           │
-│  [1] Browse Curriculum                                    │
-│  [2] Try Interactive Demos                                │
-│  [3] Start with Quick Start Guide                         │
-│                                                           │
-└───────────────────────────────────────────────────────────┘
+```mermaid
+graph LR
+    A[Read Curriculum] --> B[Try Demos]
+    B --> C[Start Learning]
+    C --> D[Build Projects]
+    D --> E[Master AI Engineering]
+    
+    style A fill:#e3f2fd
+    style B fill:#fff3e0
+    style C fill:#f3e5f5
+    style D fill:#e8f5e9
+    style E fill:#c5e1a5
 ```
 
 [**Browse Curriculum**](./documentation/CURRICULUM.md) • [**Try Demos**](https://nexageapps.github.io/AI/) • [**Quick Start**](#quick-start)

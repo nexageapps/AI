@@ -26,6 +26,7 @@ From ML Fundamentals → LLMs & RAG → AI Agents → Production Deployment
 The complete AI Engineering curriculum visualized:
 
 ```mermaid
+%%{init: {'theme':'base', 'themeVariables': {'primaryColor':'#0366d6','primaryTextColor':'#fff','primaryBorderColor':'#0366d6','lineColor':'#6a737d','secondaryColor':'#f6f8fa','tertiaryColor':'#fafbfc','noteTextColor':'#24292e','noteBkgColor':'#fff5b1','textColor':'#24292e','fontSize':'16px'}}}%%
 graph TB
     Start([Start Here]) --> Basic[Basic: ML Fundamentals<br/>18 lessons • 48h]
     Basic --> Intermediate[Intermediate: Deep Learning<br/>26 lessons • 78h]
@@ -38,14 +39,15 @@ graph TB
     Production --> Expert[Expert: Research<br/>26 lessons • 92h]
     Expert --> End([AI Engineer])
     
-    style Start fill:#e1f5e1
-    style Basic fill:#fff3cd
-    style Intermediate fill:#cfe2ff
-    style Advanced fill:#d1ecf1
-    style Agents fill:#f8d7da
-    style Applied fill:#d4edda
-    style Expert fill:#e2d9f3
-    style End fill:#d5f4e6
+    style Start fill:#28a745,stroke:#22863a,stroke-width:2px,color:#fff
+    style Basic fill:#0366d6,stroke:#044289,stroke-width:2px,color:#fff
+    style Intermediate fill:#6f42c1,stroke:#5a32a3,stroke-width:2px,color:#fff
+    style Advanced fill:#d73a49,stroke:#cb2431,stroke-width:2px,color:#fff
+    style Agents fill:#f66a0a,stroke:#e36209,stroke-width:2px,color:#fff
+    style Applied fill:#6f42c1,stroke:#5a32a3,stroke-width:2px,color:#fff
+    style Expert fill:#0366d6,stroke:#044289,stroke-width:2px,color:#fff
+    style Production fill:#28a745,stroke:#22863a,stroke-width:2px,color:#fff
+    style End fill:#28a745,stroke:#22863a,stroke-width:2px,color:#fff
 ```
 
 ---
@@ -76,7 +78,7 @@ jupyter lab
 ### Path Overview
 
 ```mermaid
-%%{init: {'theme':'base', 'themeVariables': { 'fontSize':'16px'}}}%%
+%%{init: {'theme':'base', 'themeVariables': {'primaryColor':'#0366d6','primaryTextColor':'#fff','primaryBorderColor':'#0366d6','lineColor':'#6a737d','secondaryColor':'#0366d6','fontSize':'16px'}}}%%
 flowchart LR
     subgraph Path1["Path 1: Complete Journey (579h)"]
         P1A[Basic] --> P1B[Intermediate]
@@ -101,10 +103,10 @@ flowchart LR
         P4C --> P4D[Expert]
     end
     
-    style Path1 fill:#e3f2fd
-    style Path2 fill:#fff3e0
-    style Path3 fill:#f3e5f5
-    style Path4 fill:#e8f5e9
+    style Path1 fill:#0366d6,stroke:#044289,color:#fff
+    style Path2 fill:#6f42c1,stroke:#5a32a3,color:#fff
+    style Path3 fill:#d73a49,stroke:#cb2431,color:#fff
+    style Path4 fill:#28a745,stroke:#22863a,color:#fff
 ```
 
 ### Detailed Path 1: Complete Beginner (579 hours)
@@ -139,6 +141,7 @@ gantt
 ## Technology Stack
 
 ```mermaid
+%%{init: {'theme':'base', 'themeVariables': {'primaryColor':'#0366d6','primaryTextColor':'#fff','primaryBorderColor':'#0366d6'}}}%%
 graph TD
     subgraph Foundations
         F1[PyTorch]
@@ -181,11 +184,11 @@ graph TD
     Agents --> LLMs
     Agents --> Production
     
-    style Foundations fill:#e3f2fd
-    style Agents fill:#fff3e0
-    style VectorDB fill:#f3e5f5
-    style LLMs fill:#e8f5e9
-    style Production fill:#fce4ec
+    style Foundations fill:#0366d6,stroke:#044289,color:#fff
+    style Agents fill:#6f42c1,stroke:#5a32a3,color:#fff
+    style VectorDB fill:#d73a49,stroke:#cb2431,color:#fff
+    style LLMs fill:#28a745,stroke:#22863a,color:#fff
+    style Production fill:#f66a0a,stroke:#e36209,color:#fff
 ```
 
 ---
@@ -226,7 +229,7 @@ C4Context
 ### Module Completion Status
 
 ```mermaid
-%%{init: {'theme':'base'}}%%
+%%{init: {'theme':'base', 'themeVariables': {'primaryColor':'#0366d6','primaryTextColor':'#fff','pie1':'#28a745','pie2':'#0366d6','pie3':'#6f42c1','pie4':'#d73a49','pie5':'#f66a0a','pie6':'#6a737d','pie7':'#ffd33d'}}}%%
 pie title Curriculum Progress (177 lessons)
     "Basic (90%)" : 16
     "Intermediate (85%)" : 22
@@ -242,6 +245,7 @@ pie title Curriculum Progress (177 lessons)
 ## AI Agent Architecture
 
 ```mermaid
+%%{init: {'theme':'base', 'themeVariables': {'primaryColor':'#0366d6','primaryTextColor':'#fff','primaryBorderColor':'#0366d6'}}}%%
 graph TB
     User[User Input] --> Agent[Agent Orchestrator]
     
@@ -249,13 +253,13 @@ graph TB
     Agent --> Memory[Memory System]
     Agent --> Tools[Tool Execution]
     
-    subgraph Memory System
+    subgraph MemSys[Memory System]
         M1[Conversation Buffer]
         M2[Vector Store]
         M3[Entity Memory]
     end
     
-    subgraph Tools
+    subgraph ToolSys[Tools]
         T1[Web Search]
         T2[Database Query]
         T3[API Calls]
@@ -272,10 +276,12 @@ graph TB
     Action -->|Yes| Agent
     Action -->|No| Output[Final Output]
     
-    style User fill:#e3f2fd
-    style Agent fill:#fff3e0
-    style LLM fill:#f3e5f5
-    style Output fill:#e8f5e9
+    style User fill:#0366d6,stroke:#044289,color:#fff
+    style Agent fill:#6f42c1,stroke:#5a32a3,color:#fff
+    style LLM fill:#d73a49,stroke:#cb2431,color:#fff
+    style Output fill:#28a745,stroke:#22863a,color:#fff
+    style MemSys fill:#f66a0a,stroke:#e36209,color:#fff
+    style ToolSys fill:#0366d6,stroke:#044289,color:#fff
 ```
 
 ---
@@ -283,6 +289,7 @@ graph TB
 ## RAG System Architecture
 
 ```mermaid
+%%{init: {'theme':'base', 'themeVariables': {'primaryColor':'#0366d6','primaryTextColor':'#fff','primaryBorderColor':'#0366d6','actorBkg':'#0366d6','actorTextColor':'#fff','actorLineColor':'#044289','signalColor':'#24292e','signalTextColor':'#24292e','labelBoxBkgColor':'#fafbfc','labelBoxBorderColor':'#d1d5da','labelTextColor':'#24292e','loopTextColor':'#24292e','noteBorderColor':'#0366d6','noteBkgColor':'#f1f8ff','noteTextColor':'#24292e'}}}%%
 sequenceDiagram
     participant User
     participant Query as Query Processing
@@ -309,6 +316,7 @@ sequenceDiagram
 ## Lesson Flow Architecture
 
 ```mermaid
+%%{init: {'theme':'base', 'themeVariables': {'primaryColor':'#0366d6','primaryTextColor':'#fff','primaryBorderColor':'#0366d6','lineColor':'#6a737d','tertiaryColor':'#f1f8ff','tertiaryTextColor':'#24292e','tertiaryBorderColor':'#0366d6','noteBkgColor':'#fff5b1','noteTextColor':'#24292e','noteBorderColor':'#d73a49'}}}%%
 stateDiagram-v2
     [*] --> RealScenario: Start Lesson
     

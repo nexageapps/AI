@@ -10,4 +10,4 @@ uvicorn>=0.29
 dspy>=2.5                # AP08 (package was formerly 'dspy-ai')
 chromadb>=0.5            # AP10 (alternative local vector store)
 pinecone>=5.0            # AP10 (formerly 'pinecone-client')
-streamlit>=1.35
+streamlit>=1.67.0

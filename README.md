@@ -418,56 +418,66 @@ mindmap
 
 ### Featured Demonstrations
 
-<table>
-<tr>
-<td width="33%" align="center">
-<h4>Wumpus World</h4>
-<img src="https://via.placeholder.com/300x200/2C3E50/ECF0F1?text=Wumpus+World" alt="Wumpus World" width="100%"/>
-<p><strong>Symbolic Logic & Reasoning</strong></p>
-<p>Knowledge representation, uncertainty</p>
-<p><a href="https://nexageapps.github.io/AI/wumpus">Launch Demo</a></p>
-</td>
-<td width="33%" align="center">
-<h4>Gradient Descent</h4>
-<img src="https://via.placeholder.com/300x200/34495E/ECF0F1?text=Mountain+Explorer" alt="Mountain Explorer" width="100%"/>
-<p><strong>Optimization Fundamentals</strong></p>
-<p>Learning rates, convergence</p>
-<p><a href="https://nexageapps.github.io/AI/gradient-descent">Launch Demo</a></p>
-</td>
-<td width="33%" align="center">
-<h4>CNN Explorer</h4>
-<img src="https://via.placeholder.com/300x200/16A085/ECF0F1?text=CNN+Explorer" alt="CNN Explorer" width="100%"/>
-<p><strong>Convolutional Networks</strong></p>
-<p>Feature maps, pooling, filters</p>
-<p><a href="https://nexageapps.github.io/AI/neural-networks/week3/cnn-explorer/">Launch Demo</a></p>
-</td>
-</tr>
-<tr>
-<td width="33%" align="center">
-<h4>Knowledge Graphs</h4>
-<img src="https://via.placeholder.com/300x200/D35400/ECF0F1?text=KG+Playground" alt="KG Playground" width="100%"/>
-<p><strong>Semantic Reasoning</strong></p>
-<p>RDF triples, graph queries</p>
-<p><a href="https://nexageapps.github.io/AI/ai-fundamentals/week3/kg-playground/">Launch Demo</a></p>
-</td>
-<td width="33%" align="center">
-<h4>Transformer</h4>
-<img src="https://via.placeholder.com/300x200/8E44AD/ECF0F1?text=Transformer" alt="Transformer" width="100%"/>
-<p><strong>Self-Attention</strong></p>
-<p>Q/K/V matrices, multi-head attention</p>
-<p><a href="https://nexageapps.github.io/AI/neural-networks/week4/transformer-explorer/">Launch Demo</a></p>
-</td>
-<td width="33%" align="center">
-<h4>BPE Tokenization</h4>
-<img src="https://via.placeholder.com/300x200/C0392B/ECF0F1?text=BPE+Explorer" alt="BPE Explorer" width="100%"/>
-<p><strong>Subword Encoding</strong></p>
-<p>Byte pair encoding, vocabulary</p>
-<p><a href="https://nexageapps.github.io/AI/neural-networks/week4/bpe-explorer/">Launch Demo</a></p>
-</td>
-</tr>
-</table>
+```mermaid
+%%{init: {'theme':'base', 'themeVariables': {'primaryColor':'#0366d6','primaryTextColor':'#fff','primaryBorderColor':'#0366d6'}}}%%
+graph TB
+    subgraph Symbolic["🎯 Symbolic AI"]
+        S1["Wumpus World<br/>Logic & Knowledge<br/>Representation"]
+    end
+    
+    subgraph Optimization["📈 Optimization"]
+        O1["Mountain Explorer<br/>Gradient Descent<br/>Visualization"]
+        O2["Blindfold Hill<br/>Learning Rate<br/>Tuning"]
+    end
+    
+    subgraph Neural["🧠 Neural Networks"]
+        N1["NN Trainer<br/>Backpropagation<br/>Interactive"]
+        N2["CNN Explorer<br/>Convolution<br/>Feature Maps"]
+        N3["Data Studio<br/>Preprocessing<br/>Engineering"]
+    end
+    
+    subgraph Language["💬 Language Models"]
+        L1["Knowledge Graph<br/>RDF & Semantic<br/>Search"]
+        L2["RNN Explorer<br/>LSTM/GRU<br/>Sequences"]
+        L3["Transformer<br/>Self-Attention<br/>Mechanism"]
+        L4["BPE Explorer<br/>Tokenization<br/>Subwords"]
+    end
+    
+    style Symbolic fill:#0366d6,stroke:#044289,color:#fff
+    style Optimization fill:#6f42c1,stroke:#5a32a3,color:#fff
+    style Neural fill:#d73a49,stroke:#cb2431,color:#fff
+    style Language fill:#28a745,stroke:#22863a,color:#fff
+    
+    style S1 fill:#f1f8ff,stroke:#0366d6,color:#24292e
+    style O1 fill:#f1f8ff,stroke:#6f42c1,color:#24292e
+    style O2 fill:#f1f8ff,stroke:#6f42c1,color:#24292e
+    style N1 fill:#f1f8ff,stroke:#d73a49,color:#24292e
+    style N2 fill:#f1f8ff,stroke:#d73a49,color:#24292e
+    style N3 fill:#f1f8ff,stroke:#d73a49,color:#24292e
+    style L1 fill:#f1f8ff,stroke:#28a745,color:#24292e
+    style L2 fill:#f1f8ff,stroke:#28a745,color:#24292e
+    style L3 fill:#f1f8ff,stroke:#28a745,color:#24292e
+    style L4 fill:#f1f8ff,stroke:#28a745,color:#24292e
+```
 
-[**View All 14+ Demonstrations**](https://nexageapps.github.io/AI/)
+<div align="center">
+
+| Demo | Concept | What You'll Learn | Launch |
+|------|---------|-------------------|--------|
+| **🎯 Wumpus World** | Symbolic Logic | Knowledge representation, reasoning under uncertainty, planning | [▶ Play](https://nexageapps.github.io/AI/wumpus) |
+| **📈 Mountain Explorer** | Gradient Descent | Optimization algorithms, learning rates, convergence patterns | [▶ Play](https://nexageapps.github.io/AI/gradient-descent) |
+| **🔄 Blindfold Hill** | Learning Rate | Hyperparameter tuning, local minima, optimization challenges | [▶ Play](https://nexageapps.github.io/AI/neural-networks/week2/blindfold-hill) |
+| **🧠 Neural Network Trainer** | Backpropagation | Forward pass, backward pass, weight updates, activation functions | [▶ Play](https://nexageapps.github.io/AI/nn-trainer/) |
+| **🔲 CNN Explorer** | Convolutional Networks | Filters, feature maps, pooling, spatial hierarchies | [▶ Play](https://nexageapps.github.io/AI/neural-networks/week3/cnn-explorer/) |
+| **🔧 Data Preprocessing Studio** | Feature Engineering | Missing values, scaling, encoding, feature selection | [▶ Play](https://nexageapps.github.io/AI/neural-networks/week3/data-preprocessing-studio) |
+| **🔗 Knowledge Graph Playground** | Semantic Reasoning | RDF triples, SPARQL queries, knowledge graphs, RAG systems | [▶ Play](https://nexageapps.github.io/AI/ai-fundamentals/week3/kg-playground/) |
+| **🔁 RNN Explorer** | Sequence Models | Recurrent networks, LSTM, GRU, gates, memory cells | [▶ Play](https://nexageapps.github.io/AI/ai-fundamentals/week4/rnn-explorer/) |
+| **🔀 Transformer Explorer** | Self-Attention | Query/Key/Value, multi-head attention, positional encoding | [▶ Play](https://nexageapps.github.io/AI/neural-networks/week4/transformer-explorer/) |
+| **✂️ BPE Explorer** | Tokenization | Byte pair encoding, vocabulary building, subword units | [▶ Play](https://nexageapps.github.io/AI/neural-networks/week4/bpe-explorer/) |
+
+[**🎮 View All 14+ Interactive Demonstrations →**](https://nexageapps.github.io/AI/)
+
+</div>
 
 ---
 

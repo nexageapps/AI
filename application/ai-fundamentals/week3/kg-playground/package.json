@@ -5,7 +5,7 @@
   "homepage": "/AI/ai-fundamentals/week3/kg-playground",
   "dependencies": {
     "react": "^18.2.0",
-    "react-dom": "^18.2.0",
+    "react-dom": "^19.3.1",
     "react-scripts": "5.0.1",
     "react-force-graph-2d": "^1.25.5"
   },

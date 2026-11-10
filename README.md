@@ -353,13 +353,14 @@ stateDiagram-v2
 ## Production Deployment Pipeline
 
 ```mermaid
+%%{init: {'theme':'base', 'themeVariables': {'primaryColor':'#0366d6','primaryTextColor':'#fff','primaryBorderColor':'#0366d6'}}}%%
 graph LR
     subgraph Development
         D1[Code] --> D2[Test Locally]
         D2 --> D3[nbtest.py]
     end
     
-    subgraph CI/CD
+    subgraph CICD[CI/CD]
         D3 --> C1[GitHub Actions]
         C1 --> C2[Run Tests]
         C2 --> C3[Build Docker]
@@ -379,10 +380,10 @@ graph LR
     
     M3 -->|Issues| D1
     
-    style Development fill:#e3f2fd
-    style CI/CD fill:#fff3e0
-    style Deployment fill:#f3e5f5
-    style Monitoring fill:#e8f5e9
+    style Development fill:#0366d6,stroke:#044289,color:#fff
+    style CICD fill:#6f42c1,stroke:#5a32a3,color:#fff
+    style Deployment fill:#d73a49,stroke:#cb2431,color:#fff
+    style Monitoring fill:#28a745,stroke:#22863a,color:#fff
 ```
 
 ---
@@ -394,6 +395,7 @@ graph LR
 ### Demo Categories
 
 ```mermaid
+%%{init: {'theme':'base', 'themeVariables': {'primaryColor':'#0366d6','primaryTextColor':'#fff','primaryBorderColor':'#0366d6','secondaryColor':'#6f42c1','tertiaryColor':'#28a745'}}}%%
 mindmap
   root((Interactive<br/>Demos))
     Symbolic AI
@@ -474,6 +476,7 @@ mindmap
 Every lesson follows this proven structure:
 
 ```mermaid
+%%{init: {'theme':'base', 'themeVariables': {'primaryColor':'#0366d6','primaryTextColor':'#fff','primaryBorderColor':'#0366d6'}}}%%
 flowchart TD
     A[1. Real-World Scenario] --> B[2. Learning Objectives]
     B --> C[3. Concept Explanation]
@@ -495,14 +498,14 @@ flowchart TD
     I -->|No| K[Review & Retry]
     K --> D
     
-    style A fill:#e3f2fd
-    style B fill:#fff3e0
-    style C fill:#f3e5f5
-    style D fill:#e8f5e9
-    style E fill:#fce4ec
-    style F fill:#f0f4c3
-    style H fill:#c5e1a5
-    style J fill:#b2dfdb
+    style A fill:#0366d6,stroke:#044289,color:#fff
+    style B fill:#6f42c1,stroke:#5a32a3,color:#fff
+    style C fill:#d73a49,stroke:#cb2431,color:#fff
+    style D fill:#28a745,stroke:#22863a,color:#fff
+    style E fill:#f66a0a,stroke:#e36209,color:#fff
+    style F fill:#0366d6,stroke:#044289,color:#fff
+    style H fill:#28a745,stroke:#22863a,color:#fff
+    style J fill:#28a745,stroke:#22863a,color:#fff
 ```
 
 ### Core Principles
@@ -548,6 +551,7 @@ AI/
 ## Module Dependencies
 
 ```mermaid
+%%{init: {'theme':'base', 'themeVariables': {'primaryColor':'#0366d6','primaryTextColor':'#fff','primaryBorderColor':'#0366d6'}}}%%
 graph LR
     subgraph Prerequisites
         P1[Python Basics]
@@ -569,12 +573,12 @@ graph LR
     Agents --> Expert
     Applied --> Expert
     
-    style Basic fill:#90caf9
-    style Intermediate fill:#ffcc80
-    style Advanced fill:#ce93d8
-    style Agents fill:#a5d6a7
-    style Applied fill:#ef9a9a
-    style Expert fill:#bcaaa4
+    style Basic fill:#0366d6,stroke:#044289,color:#fff
+    style Intermediate fill:#6f42c1,stroke:#5a32a3,color:#fff
+    style Advanced fill:#d73a49,stroke:#cb2431,color:#fff
+    style Agents fill:#28a745,stroke:#22863a,color:#fff
+    style Applied fill:#f66a0a,stroke:#e36209,color:#fff
+    style Expert fill:#6a737d,stroke:#444d56,color:#fff
 ```
 
 ---
@@ -615,6 +619,7 @@ gitGraph
 ## Quality Standards
 
 ```mermaid
+%%{init: {'theme':'base', 'themeVariables': {'primaryColor':'#0366d6','primaryTextColor':'#fff','primaryBorderColor':'#0366d6'}}}%%
 flowchart LR
     A[Write Lesson] --> B{Follows<br/>Template?}
     B -->|No| A
@@ -630,10 +635,10 @@ flowchart LR
     H -->|Changes Needed| E
     H -->|Approved| I[Merge]
     
-    style A fill:#e3f2fd
-    style C fill:#fff3e0
-    style F fill:#f3e5f5
-    style I fill:#e8f5e9
+    style A fill:#0366d6,stroke:#044289,color:#fff
+    style C fill:#6f42c1,stroke:#5a32a3,color:#fff
+    style F fill:#d73a49,stroke:#cb2431,color:#fff
+    style I fill:#28a745,stroke:#22863a,color:#fff
 ```
 
 ---
@@ -669,6 +674,7 @@ journey
 This repository is **free, open-source educational material** (MIT).
 
 ```mermaid
+%%{init: {'theme':'base', 'themeVariables': {'primaryColor':'#0366d6','primaryTextColor':'#fff','primaryBorderColor':'#0366d6'}}}%%
 graph TD
     A[AI Curriculum<br/>MIT License] --> B{You Can}
     A --> C{You Cannot}
@@ -684,9 +690,9 @@ graph TD
     C --> C3[Violate policies]
     C --> C4[Submit as coursework<br/>without understanding]
     
-    style A fill:#e3f2fd
-    style B fill:#e8f5e9
-    style C fill:#ffcdd2
+    style A fill:#0366d6,stroke:#044289,color:#fff
+    style B fill:#28a745,stroke:#22863a,color:#fff
+    style C fill:#d73a49,stroke:#cb2431,color:#fff
 ```
 
 **Full policy:** [ACADEMIC_INTEGRITY.md](./documentation/ACADEMIC_INTEGRITY.md)
@@ -714,6 +720,7 @@ timeline
 <div align="center">
 
 ```mermaid
+%%{init: {'theme':'base', 'themeVariables': {'primaryColor':'#0366d6','primaryTextColor':'#fff','primaryBorderColor':'#0366d6','secondaryColor':'#6f42c1','tertiaryColor':'#28a745'}}}%%
 mindmap
   root((Support<br/>Options))
     Star Repository
@@ -750,6 +757,7 @@ mindmap
 ## Target Audience
 
 ```mermaid
+%%{init: {'theme':'base', 'themeVariables': {'primaryColor':'#0366d6','primaryTextColor':'#fff','primaryBorderColor':'#0366d6','secondaryColor':'#6f42c1','tertiaryColor':'#28a745'}}}%%
 mindmap
   root((Who Is<br/>This For))
     Students
@@ -779,17 +787,18 @@ mindmap
 **177 lessons • 579 hours • Zero to production AI engineer**
 
 ```mermaid
+%%{init: {'theme':'base', 'themeVariables': {'primaryColor':'#0366d6','primaryTextColor':'#fff','primaryBorderColor':'#0366d6'}}}%%
 graph LR
     A[Read Curriculum] --> B[Try Demos]
     B --> C[Start Learning]
     C --> D[Build Projects]
     D --> E[Master AI Engineering]
     
-    style A fill:#e3f2fd
-    style B fill:#fff3e0
-    style C fill:#f3e5f5
-    style D fill:#e8f5e9
-    style E fill:#c5e1a5
+    style A fill:#0366d6,stroke:#044289,color:#fff
+    style B fill:#6f42c1,stroke:#5a32a3,color:#fff
+    style C fill:#d73a49,stroke:#cb2431,color:#fff
+    style D fill:#f66a0a,stroke:#e36209,color:#fff
+    style E fill:#28a745,stroke:#22863a,color:#fff
 ```
 
 [**Browse Curriculum**](./documentation/CURRICULUM.md) • [**Try Demos**](https://nexageapps.github.io/AI/) • [**Quick Start**](#quick-start)

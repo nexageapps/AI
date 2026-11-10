@@ -26,7 +26,7 @@ From ML Fundamentals → LLMs & RAG → AI Agents → Production Deployment
 The complete AI Engineering curriculum visualized:
 
 ```mermaid
-%%{init: {'theme':'base', 'themeVariables': {'primaryColor':'#0366d6','primaryTextColor':'#fff','primaryBorderColor':'#0366d6','lineColor':'#6a737d','secondaryColor':'#f6f8fa','tertiaryColor':'#fafbfc','noteTextColor':'#24292e','noteBkgColor':'#fff5b1','textColor':'#24292e','fontSize':'16px'}}}%%
+%%{init: {'theme':'base', 'themeVariables': {'primaryColor':'#0366d6','primaryTextColor':'#fff','primaryBorderColor':'#0366d6','lineColor':'#586069','edgeLabelBackground':'#fafbfc','defaultLinkColor':'#586069','secondaryColor':'#f6f8fa','tertiaryColor':'#fafbfc','noteTextColor':'#24292e','noteBkgColor':'#fff5b1','textColor':'#24292e','fontSize':'16px'}}}%%
 graph TB
     Start([Start Here]) --> Basic[Basic: ML Fundamentals<br/>18 lessons • 48h]
     Basic --> Intermediate[Intermediate: Deep Learning<br/>26 lessons • 78h]
@@ -38,6 +38,8 @@ graph TB
     Applied --> Production
     Production --> Expert[Expert: Research<br/>26 lessons • 92h]
     Expert --> End([AI Engineer])
+    
+    linkStyle default stroke:#586069,stroke-width:2px
     
     style Start fill:#28a745,stroke:#22863a,stroke-width:2px,color:#fff
     style Basic fill:#0366d6,stroke:#044289,stroke-width:2px,color:#fff
@@ -78,7 +80,7 @@ jupyter lab
 ### Path Overview
 
 ```mermaid
-%%{init: {'theme':'base', 'themeVariables': {'primaryColor':'#0366d6','primaryTextColor':'#fff','primaryBorderColor':'#0366d6','lineColor':'#6a737d','secondaryColor':'#0366d6','fontSize':'16px'}}}%%
+%%{init: {'theme':'base', 'themeVariables': {'primaryColor':'#0366d6','primaryTextColor':'#fff','primaryBorderColor':'#0366d6','lineColor':'#586069','defaultLinkColor':'#586069','edgeLabelBackground':'#fafbfc','secondaryColor':'#0366d6','fontSize':'16px'}}}%%
 flowchart LR
     subgraph Path1["Path 1: Complete Journey (579h)"]
         P1A[Basic] --> P1B[Intermediate]
@@ -103,10 +105,12 @@ flowchart LR
         P4C --> P4D[Expert]
     end
     
-    style Path1 fill:#0366d6,stroke:#044289,color:#fff
-    style Path2 fill:#6f42c1,stroke:#5a32a3,color:#fff
-    style Path3 fill:#d73a49,stroke:#cb2431,color:#fff
-    style Path4 fill:#28a745,stroke:#22863a,color:#fff
+    linkStyle default stroke:#586069,stroke-width:2px
+    
+    style Path1 fill:#0366d6,stroke:#044289,stroke-width:2px,color:#fff
+    style Path2 fill:#6f42c1,stroke:#5a32a3,stroke-width:2px,color:#fff
+    style Path3 fill:#d73a49,stroke:#cb2431,stroke-width:2px,color:#fff
+    style Path4 fill:#28a745,stroke:#22863a,stroke-width:2px,color:#fff
 ```
 
 ### Detailed Path 1: Complete Beginner (579 hours)
@@ -141,7 +145,7 @@ gantt
 ## Technology Stack
 
 ```mermaid
-%%{init: {'theme':'base', 'themeVariables': {'primaryColor':'#0366d6','primaryTextColor':'#fff','primaryBorderColor':'#0366d6'}}}%%
+%%{init: {'theme':'base', 'themeVariables': {'primaryColor':'#0366d6','primaryTextColor':'#fff','primaryBorderColor':'#0366d6','lineColor':'#586069','defaultLinkColor':'#586069','edgeLabelBackground':'#fafbfc'}}}%%
 graph TD
     subgraph Foundations
         F1[PyTorch]
@@ -184,11 +188,13 @@ graph TD
     Agents --> LLMs
     Agents --> Production
     
-    style Foundations fill:#0366d6,stroke:#044289,color:#fff
-    style Agents fill:#6f42c1,stroke:#5a32a3,color:#fff
-    style VectorDB fill:#d73a49,stroke:#cb2431,color:#fff
-    style LLMs fill:#28a745,stroke:#22863a,color:#fff
-    style Production fill:#f66a0a,stroke:#e36209,color:#fff
+    linkStyle default stroke:#586069,stroke-width:2px
+    
+    style Foundations fill:#0366d6,stroke:#044289,stroke-width:2px,color:#fff
+    style Agents fill:#6f42c1,stroke:#5a32a3,stroke-width:2px,color:#fff
+    style VectorDB fill:#d73a49,stroke:#cb2431,stroke-width:2px,color:#fff
+    style LLMs fill:#28a745,stroke:#22863a,stroke-width:2px,color:#fff
+    style Production fill:#f66a0a,stroke:#e36209,stroke-width:2px,color:#fff
 ```
 
 ---
@@ -245,7 +251,7 @@ pie title Curriculum Progress (177 lessons)
 ## AI Agent Architecture
 
 ```mermaid
-%%{init: {'theme':'base', 'themeVariables': {'primaryColor':'#0366d6','primaryTextColor':'#fff','primaryBorderColor':'#0366d6'}}}%%
+%%{init: {'theme':'base', 'themeVariables': {'primaryColor':'#0366d6','primaryTextColor':'#fff','primaryBorderColor':'#0366d6','lineColor':'#586069','defaultLinkColor':'#586069','edgeLabelBackground':'#fafbfc'}}}%%
 graph TB
     User[User Input] --> Agent[Agent Orchestrator]
     
@@ -276,12 +282,14 @@ graph TB
     Action -->|Yes| Agent
     Action -->|No| Output[Final Output]
     
-    style User fill:#0366d6,stroke:#044289,color:#fff
-    style Agent fill:#6f42c1,stroke:#5a32a3,color:#fff
-    style LLM fill:#d73a49,stroke:#cb2431,color:#fff
-    style Output fill:#28a745,stroke:#22863a,color:#fff
-    style MemSys fill:#f66a0a,stroke:#e36209,color:#fff
-    style ToolSys fill:#0366d6,stroke:#044289,color:#fff
+    linkStyle default stroke:#586069,stroke-width:2px
+    
+    style User fill:#0366d6,stroke:#044289,stroke-width:2px,color:#fff
+    style Agent fill:#6f42c1,stroke:#5a32a3,stroke-width:2px,color:#fff
+    style LLM fill:#d73a49,stroke:#cb2431,stroke-width:2px,color:#fff
+    style Output fill:#28a745,stroke:#22863a,stroke-width:2px,color:#fff
+    style MemSys fill:#f66a0a,stroke:#e36209,stroke-width:2px,color:#fff
+    style ToolSys fill:#0366d6,stroke:#044289,stroke-width:2px,color:#fff
 ```
 
 ---
@@ -353,7 +361,7 @@ stateDiagram-v2
 ## Production Deployment Pipeline
 
 ```mermaid
-%%{init: {'theme':'base', 'themeVariables': {'primaryColor':'#0366d6','primaryTextColor':'#fff','primaryBorderColor':'#0366d6'}}}%%
+%%{init: {'theme':'base', 'themeVariables': {'primaryColor':'#0366d6','primaryTextColor':'#fff','primaryBorderColor':'#0366d6','lineColor':'#586069','defaultLinkColor':'#586069','edgeLabelBackground':'#fafbfc'}}}%%
 graph LR
     subgraph Development
         D1[Code] --> D2[Test Locally]
@@ -380,10 +388,12 @@ graph LR
     
     M3 -->|Issues| D1
     
-    style Development fill:#0366d6,stroke:#044289,color:#fff
-    style CICD fill:#6f42c1,stroke:#5a32a3,color:#fff
-    style Deployment fill:#d73a49,stroke:#cb2431,color:#fff
-    style Monitoring fill:#28a745,stroke:#22863a,color:#fff
+    linkStyle default stroke:#586069,stroke-width:2px
+    
+    style Development fill:#0366d6,stroke:#044289,stroke-width:2px,color:#fff
+    style CICD fill:#6f42c1,stroke:#5a32a3,stroke-width:2px,color:#fff
+    style Deployment fill:#d73a49,stroke:#cb2431,stroke-width:2px,color:#fff
+    style Monitoring fill:#28a745,stroke:#22863a,stroke-width:2px,color:#fff
 ```
 
 ---
@@ -395,7 +405,7 @@ graph LR
 ### Demo Categories
 
 ```mermaid
-%%{init: {'theme':'base', 'themeVariables': {'primaryColor':'#0366d6','primaryTextColor':'#fff','primaryBorderColor':'#0366d6','secondaryColor':'#6f42c1','tertiaryColor':'#28a745'}}}%%
+%%{init: {'theme':'base', 'themeVariables': {'primaryColor':'#0366d6','primaryTextColor':'#fff','primaryBorderColor':'#0366d6','secondaryColor':'#6f42c1','tertiaryColor':'#28a745','lineColor':'#586069'}}}%%
 mindmap
   root((Interactive<br/>Demos))
     Symbolic AI
@@ -419,63 +429,65 @@ mindmap
 ### Featured Demonstrations
 
 ```mermaid
-%%{init: {'theme':'base', 'themeVariables': {'primaryColor':'#0366d6','primaryTextColor':'#fff','primaryBorderColor':'#0366d6'}}}%%
+%%{init: {'theme':'base', 'themeVariables': {'primaryColor':'#0366d6','primaryTextColor':'#fff','primaryBorderColor':'#0366d6','lineColor':'#586069','edgeLabelBackground':'#fafbfc','clusterBkg':'#f6f8fa','clusterBorder':'#d1d5da','defaultLinkColor':'#586069','titleColor':'#24292e','tertiaryColor':'#fafbfc'}}}%%
 graph TB
-    subgraph Symbolic["🎯 Symbolic AI"]
-        S1["Wumpus World<br/>Logic & Knowledge<br/>Representation"]
+    subgraph Symbolic[Symbolic AI]
+        S1[Wumpus World<br/>Logic & Knowledge<br/>Representation]
     end
     
-    subgraph Optimization["📈 Optimization"]
-        O1["Mountain Explorer<br/>Gradient Descent<br/>Visualization"]
-        O2["Blindfold Hill<br/>Learning Rate<br/>Tuning"]
+    subgraph Optimization[Optimization]
+        O1[Mountain Explorer<br/>Gradient Descent<br/>Visualization]
+        O2[Blindfold Hill<br/>Learning Rate<br/>Tuning]
     end
     
-    subgraph Neural["🧠 Neural Networks"]
-        N1["NN Trainer<br/>Backpropagation<br/>Interactive"]
-        N2["CNN Explorer<br/>Convolution<br/>Feature Maps"]
-        N3["Data Studio<br/>Preprocessing<br/>Engineering"]
+    subgraph Neural[Neural Networks]
+        N1[NN Trainer<br/>Backpropagation<br/>Interactive]
+        N2[CNN Explorer<br/>Convolution<br/>Feature Maps]
+        N3[Data Studio<br/>Preprocessing<br/>Engineering]
     end
     
-    subgraph Language["💬 Language Models"]
-        L1["Knowledge Graph<br/>RDF & Semantic<br/>Search"]
-        L2["RNN Explorer<br/>LSTM/GRU<br/>Sequences"]
-        L3["Transformer<br/>Self-Attention<br/>Mechanism"]
-        L4["BPE Explorer<br/>Tokenization<br/>Subwords"]
+    subgraph Language[Language Models]
+        L1[Knowledge Graph<br/>RDF & Semantic<br/>Search]
+        L2[RNN Explorer<br/>LSTM/GRU<br/>Sequences]
+        L3[Transformer<br/>Self-Attention<br/>Mechanism]
+        L4[BPE Explorer<br/>Tokenization<br/>Subwords]
     end
     
-    style Symbolic fill:#0366d6,stroke:#044289,color:#fff
-    style Optimization fill:#6f42c1,stroke:#5a32a3,color:#fff
-    style Neural fill:#d73a49,stroke:#cb2431,color:#fff
-    style Language fill:#28a745,stroke:#22863a,color:#fff
+    linkStyle default stroke:#586069,stroke-width:2px
     
-    style S1 fill:#f1f8ff,stroke:#0366d6,color:#24292e
-    style O1 fill:#f1f8ff,stroke:#6f42c1,color:#24292e
-    style O2 fill:#f1f8ff,stroke:#6f42c1,color:#24292e
-    style N1 fill:#f1f8ff,stroke:#d73a49,color:#24292e
-    style N2 fill:#f1f8ff,stroke:#d73a49,color:#24292e
-    style N3 fill:#f1f8ff,stroke:#d73a49,color:#24292e
-    style L1 fill:#f1f8ff,stroke:#28a745,color:#24292e
-    style L2 fill:#f1f8ff,stroke:#28a745,color:#24292e
-    style L3 fill:#f1f8ff,stroke:#28a745,color:#24292e
-    style L4 fill:#f1f8ff,stroke:#28a745,color:#24292e
+    style Symbolic fill:#0366d6,stroke:#044289,stroke-width:2px,color:#fff
+    style Optimization fill:#6f42c1,stroke:#5a32a3,stroke-width:2px,color:#fff
+    style Neural fill:#d73a49,stroke:#cb2431,stroke-width:2px,color:#fff
+    style Language fill:#28a745,stroke:#22863a,stroke-width:2px,color:#fff
+    
+    style S1 fill:#ffffff,stroke:#0366d6,stroke-width:2px,color:#24292e
+    style O1 fill:#ffffff,stroke:#6f42c1,stroke-width:2px,color:#24292e
+    style O2 fill:#ffffff,stroke:#6f42c1,stroke-width:2px,color:#24292e
+    style N1 fill:#ffffff,stroke:#d73a49,stroke-width:2px,color:#24292e
+    style N2 fill:#ffffff,stroke:#d73a49,stroke-width:2px,color:#24292e
+    style N3 fill:#ffffff,stroke:#d73a49,stroke-width:2px,color:#24292e
+    style L1 fill:#ffffff,stroke:#28a745,stroke-width:2px,color:#24292e
+    style L2 fill:#ffffff,stroke:#28a745,stroke-width:2px,color:#24292e
+    style L3 fill:#ffffff,stroke:#28a745,stroke-width:2px,color:#24292e
+    style L4 fill:#ffffff,stroke:#28a745,stroke-width:2px,color:#24292e
 ```
 
 <div align="center">
 
 | Demo | Concept | What You'll Learn | Launch |
 |------|---------|-------------------|--------|
-| **🎯 Wumpus World** | Symbolic Logic | Knowledge representation, reasoning under uncertainty, planning | [▶ Play](https://nexageapps.github.io/AI/wumpus) |
-| **📈 Mountain Explorer** | Gradient Descent | Optimization algorithms, learning rates, convergence patterns | [▶ Play](https://nexageapps.github.io/AI/gradient-descent) |
-| **🔄 Blindfold Hill** | Learning Rate | Hyperparameter tuning, local minima, optimization challenges | [▶ Play](https://nexageapps.github.io/AI/neural-networks/week2/blindfold-hill) |
-| **🧠 Neural Network Trainer** | Backpropagation | Forward pass, backward pass, weight updates, activation functions | [▶ Play](https://nexageapps.github.io/AI/nn-trainer/) |
-| **🔲 CNN Explorer** | Convolutional Networks | Filters, feature maps, pooling, spatial hierarchies | [▶ Play](https://nexageapps.github.io/AI/neural-networks/week3/cnn-explorer/) |
-| **🔧 Data Preprocessing Studio** | Feature Engineering | Missing values, scaling, encoding, feature selection | [▶ Play](https://nexageapps.github.io/AI/neural-networks/week3/data-preprocessing-studio) |
-| **🔗 Knowledge Graph Playground** | Semantic Reasoning | RDF triples, SPARQL queries, knowledge graphs, RAG systems | [▶ Play](https://nexageapps.github.io/AI/ai-fundamentals/week3/kg-playground/) |
-| **🔁 RNN Explorer** | Sequence Models | Recurrent networks, LSTM, GRU, gates, memory cells | [▶ Play](https://nexageapps.github.io/AI/ai-fundamentals/week4/rnn-explorer/) |
-| **🔀 Transformer Explorer** | Self-Attention | Query/Key/Value, multi-head attention, positional encoding | [▶ Play](https://nexageapps.github.io/AI/neural-networks/week4/transformer-explorer/) |
-| **✂️ BPE Explorer** | Tokenization | Byte pair encoding, vocabulary building, subword units | [▶ Play](https://nexageapps.github.io/AI/neural-networks/week4/bpe-explorer/) |
+| **Wumpus World** | Symbolic Logic | Knowledge representation, reasoning under uncertainty, planning | [Launch Demo](https://nexageapps.github.io/AI/wumpus) |
+| **Mountain Explorer** | Gradient Descent | Optimization algorithms, learning rates, convergence patterns | [Launch Demo](https://nexageapps.github.io/AI/gradient-descent) |
+| **Blindfold Hill** | Learning Rate | Hyperparameter tuning, local minima, optimization challenges | [Launch Demo](https://nexageapps.github.io/AI/neural-networks/week2/blindfold-hill) |
+| **Neural Network Trainer** | Backpropagation | Forward pass, backward pass, weight updates, activation functions | [Launch Demo](https://nexageapps.github.io/AI/nn-trainer/) |
+| **CNN Explorer** | Convolutional Networks | Filters, feature maps, pooling, spatial hierarchies | [Launch Demo](https://nexageapps.github.io/AI/neural-networks/week3/cnn-explorer/) |
+| **Data Preprocessing Studio** | Feature Engineering | Missing values, scaling, encoding, feature selection | [Launch Demo](https://nexageapps.github.io/AI/neural-networks/week3/data-preprocessing-studio) |
+| **Knowledge Graph Playground** | Semantic Reasoning | RDF triples, SPARQL queries, knowledge graphs, RAG systems | [Launch Demo](https://nexageapps.github.io/AI/ai-fundamentals/week3/kg-playground/) |
+| **RNN Explorer** | Sequence Models | Recurrent networks, LSTM, GRU, gates, memory cells | [Launch Demo](https://nexageapps.github.io/AI/ai-fundamentals/week4/rnn-explorer/) |
+| **Transformer Explorer** | Self-Attention | Query/Key/Value, multi-head attention, positional encoding | [Launch Demo](https://nexageapps.github.io/AI/neural-networks/week4/transformer-explorer/) |
+| **BPE Explorer** | Tokenization | Byte pair encoding, vocabulary building, subword units | [Launch Demo](https://nexageapps.github.io/AI/neural-networks/week4/bpe-explorer/) |
 
-[**🎮 View All 14+ Interactive Demonstrations →**](https://nexageapps.github.io/AI/)
+[**View All 14+ Interactive Demonstrations**](https://nexageapps.github.io/AI/)
 
 </div>
 
@@ -486,7 +498,7 @@ graph TB
 Every lesson follows this proven structure:
 
 ```mermaid
-%%{init: {'theme':'base', 'themeVariables': {'primaryColor':'#0366d6','primaryTextColor':'#fff','primaryBorderColor':'#0366d6'}}}%%
+%%{init: {'theme':'base', 'themeVariables': {'primaryColor':'#0366d6','primaryTextColor':'#fff','primaryBorderColor':'#0366d6','lineColor':'#586069','defaultLinkColor':'#586069','edgeLabelBackground':'#fafbfc'}}}%%
 flowchart TD
     A[1. Real-World Scenario] --> B[2. Learning Objectives]
     B --> C[3. Concept Explanation]
@@ -508,14 +520,16 @@ flowchart TD
     I -->|No| K[Review & Retry]
     K --> D
     
-    style A fill:#0366d6,stroke:#044289,color:#fff
-    style B fill:#6f42c1,stroke:#5a32a3,color:#fff
-    style C fill:#d73a49,stroke:#cb2431,color:#fff
-    style D fill:#28a745,stroke:#22863a,color:#fff
-    style E fill:#f66a0a,stroke:#e36209,color:#fff
-    style F fill:#0366d6,stroke:#044289,color:#fff
-    style H fill:#28a745,stroke:#22863a,color:#fff
-    style J fill:#28a745,stroke:#22863a,color:#fff
+    linkStyle default stroke:#586069,stroke-width:2px
+    
+    style A fill:#0366d6,stroke:#044289,stroke-width:2px,color:#fff
+    style B fill:#6f42c1,stroke:#5a32a3,stroke-width:2px,color:#fff
+    style C fill:#d73a49,stroke:#cb2431,stroke-width:2px,color:#fff
+    style D fill:#28a745,stroke:#22863a,stroke-width:2px,color:#fff
+    style E fill:#f66a0a,stroke:#e36209,stroke-width:2px,color:#fff
+    style F fill:#0366d6,stroke:#044289,stroke-width:2px,color:#fff
+    style H fill:#28a745,stroke:#22863a,stroke-width:2px,color:#fff
+    style J fill:#28a745,stroke:#22863a,stroke-width:2px,color:#fff
 ```
 
 ### Core Principles
@@ -629,7 +643,7 @@ gitGraph
 ## Quality Standards
 
 ```mermaid
-%%{init: {'theme':'base', 'themeVariables': {'primaryColor':'#0366d6','primaryTextColor':'#fff','primaryBorderColor':'#0366d6'}}}%%
+%%{init: {'theme':'base', 'themeVariables': {'primaryColor':'#0366d6','primaryTextColor':'#fff','primaryBorderColor':'#0366d6','lineColor':'#586069','defaultLinkColor':'#586069','edgeLabelBackground':'#fafbfc'}}}%%
 flowchart LR
     A[Write Lesson] --> B{Follows<br/>Template?}
     B -->|No| A
@@ -645,10 +659,12 @@ flowchart LR
     H -->|Changes Needed| E
     H -->|Approved| I[Merge]
     
-    style A fill:#0366d6,stroke:#044289,color:#fff
-    style C fill:#6f42c1,stroke:#5a32a3,color:#fff
-    style F fill:#d73a49,stroke:#cb2431,color:#fff
-    style I fill:#28a745,stroke:#22863a,color:#fff
+    linkStyle default stroke:#586069,stroke-width:2px
+    
+    style A fill:#0366d6,stroke:#044289,stroke-width:2px,color:#fff
+    style C fill:#6f42c1,stroke:#5a32a3,stroke-width:2px,color:#fff
+    style F fill:#d73a49,stroke:#cb2431,stroke-width:2px,color:#fff
+    style I fill:#28a745,stroke:#22863a,stroke-width:2px,color:#fff
 ```
 
 ---
@@ -797,18 +813,20 @@ mindmap
 **177 lessons • 579 hours • Zero to production AI engineer**
 
 ```mermaid
-%%{init: {'theme':'base', 'themeVariables': {'primaryColor':'#0366d6','primaryTextColor':'#fff','primaryBorderColor':'#0366d6'}}}%%
+%%{init: {'theme':'base', 'themeVariables': {'primaryColor':'#0366d6','primaryTextColor':'#fff','primaryBorderColor':'#0366d6','lineColor':'#586069','defaultLinkColor':'#586069','edgeLabelBackground':'#fafbfc'}}}%%
 graph LR
     A[Read Curriculum] --> B[Try Demos]
     B --> C[Start Learning]
     C --> D[Build Projects]
     D --> E[Master AI Engineering]
     
-    style A fill:#0366d6,stroke:#044289,color:#fff
-    style B fill:#6f42c1,stroke:#5a32a3,color:#fff
-    style C fill:#d73a49,stroke:#cb2431,color:#fff
-    style D fill:#f66a0a,stroke:#e36209,color:#fff
-    style E fill:#28a745,stroke:#22863a,color:#fff
+    linkStyle default stroke:#586069,stroke-width:2px
+    
+    style A fill:#0366d6,stroke:#044289,stroke-width:2px,color:#fff
+    style B fill:#6f42c1,stroke:#5a32a3,stroke-width:2px,color:#fff
+    style C fill:#d73a49,stroke:#cb2431,stroke-width:2px,color:#fff
+    style D fill:#f66a0a,stroke:#e36209,stroke-width:2px,color:#fff
+    style E fill:#28a745,stroke:#22863a,stroke-width:2px,color:#fff
 ```
 
 [**Browse Curriculum**](./documentation/CURRICULUM.md) • [**Try Demos**](https://nexageapps.github.io/AI/) • [**Quick Start**](#quick-start)

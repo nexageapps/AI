@@ -51,6 +51,8 @@ AG11 multi-agent ─ AG12 coding agents ─ AG13 computer use ─ AG14 eval & ob
 
 **Design principles taught throughout:** start with the simplest thing that works (a single call, then a workflow, then an agent); enforce invariants in code, not prompts; keep a trace of everything; measure before you tune; keep a human in the loop for irreversible actions.
 
+**🎓 Advanced Pattern:** Students interested in production-scale systems should explore the **Knowledge Factory** pattern ([`AG17-CONCEPT-knowledge-factory.md`](./AG17-CONCEPT-knowledge-factory.md))—how to build agent systems that improve over time by accumulating organizational knowledge. Based on [LangChain's production practices](https://www.langchain.com/blog/knowledge-factory).
+
 ## How to work through a lesson
 
 1. Read **Why this matters** and the **objectives**, then predict what the code will do before running it.
@@ -59,6 +61,8 @@ AG11 multi-agent ─ AG12 coding agents ─ AG13 computer use ─ AG14 eval & ob
 4. Answer the **Checkpoint** from memory *before* opening the answers.
 
 **For AG16 (n8n):** Start with the [Quick Start](./N8N_QUICKSTART.md) to get n8n running, then follow the [Learning Guide](./AG16-LEARNING-GUIDE.md) for a structured path.
+
+**Advanced learners:** Optional enhancements introducing the Knowledge Factory pattern are available in [`enhancements/`](./enhancements/)—these show how production agents improve from experience (covered across AG05, AG06, AG14).
 
 ## Setup
 
